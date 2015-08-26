@@ -1,25 +1,131 @@
 apply plugin: 'com.android.application'
+apply plugin: 'com.neenbedankt.android-apt'
+
+def circleCi = Boolean.valueOf(System.getenv('CIRCLECI'))
+
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        // replace with the current version of the Android plugin
+        classpath 'com.android.tools.build:gradle:1.3.0'
+        // the latest version of the android-apt plugin
+        classpath 'com.neenbedankt.gradle.plugins:android-apt:1.4'
+    }
+}
+
+repositories {
+    mavenCentral()
+    mavenLocal()
+    maven {
+        url "https://oss.sonatype.org/content/repositories/snapshots/"
+    }
+}
+
+apt {
+    arguments {
+        resourcePackageName android.defaultConfig.applicationId
+        androidManifestFile variant.outputs[0].processResources.manifestFile
+
+        // If you're using Android NBS flavors you should use the following line instead of hard-coded packageName
+        // resourcePackageName android.defaultConfig.packageName
+
+        // You can set optional annotation processing options here, like these commented options:
+        // logLevel 'INFO'
+        // logFile '/var/log/aa.log'
+    }
+}
 
 android {
-    compileSdkVersion 23
-    buildToolsVersion "23.0.0"
+    compileSdkVersion Integer.parseInt(project.ANDROID_BUILD_SDK_VERSION)
+    buildToolsVersion project.ANDROID_BUILD_TOOLS_VERSION
 
     defaultConfig {
-        applicationId "vn.asiantech.trainingproject"
-        minSdkVersion 15
-        targetSdkVersion 23
+        applicationId "vn.asiantech.LearingEnglish"
+        minSdkVersion 10
+        targetSdkVersion project.ANDROID_BUILD_TARGET_SDK_VERSION
         versionCode 1
         versionName "1.0"
     }
+
+    signingConfigs {
+        if (!circleCi) {
+            release {
+                def signFile = file("../local.properties")
+                def signingProps = new Properties()
+                signingProps.load(new FileInputStream(signFile))
+
+                storeFile file("../keystore/release.jks")
+                storePassword signingProps['storePassword']
+                keyAlias signingProps['keyAlias']
+                keyPassword signingProps['keyPassword']
+            }
+        }
+        debug {
+            storeFile file("../keystore/debug.jks")
+        }
+    }
+
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            if (!circleCi) {
+                signingConfig signingConfigs.release
+            }
+        }
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            applicationVariants.all { variant ->
+                appendVersionNameVersionCode(variant, defaultConfig)
+            }
+            signingConfig signingConfigs.debug
+        }
+    }
+    lintOptions {
+        abortOnError false
+    }
+}
+
+def appendVersionNameVersionCode(variant, defaultConfig) {
+//    print "Debug: "+variant.buildType.name +" --"
+    variant.outputs.each { output ->
+        if (variant.buildType.name == android.buildTypes.debug.name) {
+            if (output.zipAlign) {
+                def file = output.outputFile
+                output.outputFile = new File(file.parentFile, variant.buildType.name + "_" + defaultConfig.applicationId + "_v" + defaultConfig.versionName + "." + defaultConfig.versionCode + ".apk")
+            }
+        } else if (variant.buildType.name == android.buildTypes.release.name) {
+            if (output.zipAlign) {
+                def file = output.outputFile
+                output.outputFile = new File(file.parentFile, variant.buildType.name + "_" + defaultConfig.applicationId + "_v" + defaultConfig.versionName + "." + defaultConfig.versionCode + ".apk")
+            }
         }
     }
 }
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile 'com.android.support:appcompat-v7:23.0.0'
+    apt "org.projectlombok:lombok:1.16.4"
+    provided 'org.projectlombok:lombok:1.16.4'
+    apt "org.androidannotations:androidannotations:3.+"
+    compile 'org.androidannotations:androidannotations-api:3.+'
+    compile 'com.android.support:appcompat-v7:21.+'
+    compile 'com.android.support:support-v4:21.+'
+    compile 'com.nostra13.universalimageloader:universal-image-loader:1.9.3'
+    compile 'com.google.code.gson:gson:2.3.1'
+    compile 'com.mobsandgeeks:android-saripaar:2.0-SNAPSHOT'
+    compile 'com.squareup.retrofit:retrofit:1.9.0'
+    compile 'com.squareup.okhttp:okhttp-urlconnection:2.0.0'
+    compile 'com.squareup.okhttp:okhttp:2.3.0'
+    compile 'com.squareup:otto:1.3.7'
+    testCompile "junit:junit:4.10"
+    testCompile "org.assertj:assertj-core:1.7.0"
+    testCompile "org.robolectric:robolectric:3.0"
+    testCompile('com.squareup:fest-android:1.0.8') {
+        exclude module: 'support-v4'
+    }
+    apply from: "https://bitbucket.org/tientun/gradle-android-ci-check/raw/02df3007dfb56ef37e179c9e3c40cedfdb3c0980/ci.gradle"
 }
