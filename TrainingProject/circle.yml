@@ -1,0 +1,16 @@
+machine:
+  environment:
+    JAVA_OPTS: "-Xmx2048m -XX:MaxPermSize=1024m"
+  timezone: Asia/Saigon
+test:
+  override:
+    - scripts/saddler.sh
+  post:
+    - echo $CIRCLE_TEST_REPORTS
+    - mkdir -p $CIRCLE_TEST_REPORTS/junit/
+    - find . -type d -regex ".*/reports/tests$" -exec cp -r {} $CIRCLE_TEST_REPORTS/junit/ \;
+#deployment:
+#  master:
+#    branch: master
+#    commands:
+#      - ./gradlew assemble uploadDeployGateDebug
