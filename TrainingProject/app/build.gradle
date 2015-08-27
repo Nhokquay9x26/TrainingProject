@@ -38,9 +38,8 @@ apt {
 }
 
 android {
-    compileSdkVersion Integer.parseInt(project.ANDROID_BUILD_SDK_VERSION)
-    buildToolsVersion project.ANDROID_BUILD_TOOLS_VERSION
-
+    compileSdkVersion 23
+    buildToolsVersion '22.0.1'
     defaultConfig {
         applicationId "vn.asiantech.LearingEnglish"
         minSdkVersion 10
@@ -48,7 +47,6 @@ android {
         versionCode 1
         versionName "1.0"
     }
-
     signingConfigs {
         if (!circleCi) {
             release {
@@ -66,7 +64,6 @@ android {
             storeFile file("../keystore/debug.jks")
         }
     }
-
     buildTypes {
         release {
             minifyEnabled false
@@ -86,6 +83,8 @@ android {
     }
     lintOptions {
         abortOnError false
+    }
+    productFlavors {
     }
 }
 
@@ -107,13 +106,18 @@ def appendVersionNameVersionCode(variant, defaultConfig) {
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile fileTree(include: ['*.jar'], dir: 'libs')
     apt "org.projectlombok:lombok:1.16.4"
     provided 'org.projectlombok:lombok:1.16.4'
     apt "org.androidannotations:androidannotations:3.+"
+    testCompile 'junit:junit:4.10'
+    testCompile 'org.assertj:assertj-core:1.7.0'
+    testCompile 'org.robolectric:robolectric:3.0'
+    testCompile('com.squareup:fest-android:1.0.8') {
+        exclude module: 'support-v4'
+    }
+    apply from: "https://bitbucket.org/tientun/gradle-android-ci-check/raw/02df3007dfb56ef37e179c9e3c40cedfdb3c0980/ci.gradle"
     compile 'org.androidannotations:androidannotations-api:3.+'
-    compile 'com.android.support:appcompat-v7:21.+'
-    compile 'com.android.support:support-v4:21.+'
     compile 'com.nostra13.universalimageloader:universal-image-loader:1.9.3'
     compile 'com.google.code.gson:gson:2.3.1'
     compile 'com.mobsandgeeks:android-saripaar:2.0-SNAPSHOT'
@@ -121,11 +125,5 @@ dependencies {
     compile 'com.squareup.okhttp:okhttp-urlconnection:2.0.0'
     compile 'com.squareup.okhttp:okhttp:2.3.0'
     compile 'com.squareup:otto:1.3.7'
-    testCompile "junit:junit:4.10"
-    testCompile "org.assertj:assertj-core:1.7.0"
-    testCompile "org.robolectric:robolectric:3.0"
-    testCompile('com.squareup:fest-android:1.0.8') {
-        exclude module: 'support-v4'
-    }
-    apply from: "https://bitbucket.org/tientun/gradle-android-ci-check/raw/02df3007dfb56ef37e179c9e3c40cedfdb3c0980/ci.gradle"
+    compile 'com.android.support:appcompat-v7:23.0.0'
 }
