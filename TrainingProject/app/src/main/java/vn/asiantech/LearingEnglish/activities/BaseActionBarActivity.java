@@ -9,6 +9,7 @@ import org.androidannotations.annotations.EActivity;
 /**
  * Created by tientun on 3/5/15.
  */
+
 @EActivity
 public abstract class BaseActionBarActivity extends ActionBarActivity {
     protected String tag = this.getClass().getSimpleName();

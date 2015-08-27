@@ -1,10 +1,11 @@
 package vn.asiantech.LearingEnglish.activities;
 
+
+
 import org.androidannotations.annotations.EActivity;
 import org.androidannotations.annotations.OptionsItem;
 
 import vn.asiantech.LearingEnglish.R;
-
 /**
  * Created by tientun on 3/5/15.
  */
