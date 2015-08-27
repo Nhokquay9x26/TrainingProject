@@ -2,4 +2,10 @@
 <resources>
     <color name="main">#377EB0</color>
     <color name="tab_background">#dfe8f1</color>
+    <color name="rl.avatar.background">#00b9e6</color>
+    <color name="button.background">#FFFFFF</color>
+    <color name="button.text.color">#00b9e6</color>
+    <color name="rl.input.background">#FFFFFF</color>
+    <color name="edittext.color">#FFFFFF</color>
+    <color name="edittext.color.line">#00b9e6</color>
 </resources>
