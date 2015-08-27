@@ -2,4 +2,7 @@
 <string name="app_name">Base Project</string>
 
 <string name="hello_world">Hello world!</string>
+    <string name="TextView.text_get_pass">Get Pass</string>
+    <string name="EditText.text_hint_email">Email</string>
+    <string name="Button.text_forgot_pass">Forgot</string>
 </resources>

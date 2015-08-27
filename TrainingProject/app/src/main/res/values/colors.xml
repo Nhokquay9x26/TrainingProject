@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="main">#377EB0</color>
+    <color name="TextView.background_get_pass_color">#00F5FF</color>
+    <color name="EditText.text_email_color">#00F5FF</color>
+    <color name="Button.background_forgot_pass_color">#00F5FF</color>
+
+
 
 </resources>
