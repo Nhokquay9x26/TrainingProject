@@ -1,7 +1,11 @@
 package vn.asiantech.LearingEnglish.activities;
 
+import android.widget.Button;
+import android.widget.TextView;
+
 import org.androidannotations.annotations.EActivity;
 import org.androidannotations.annotations.OptionsItem;
+import org.androidannotations.annotations.*;
 
 import vn.asiantech.LearingEnglish.R;
 
