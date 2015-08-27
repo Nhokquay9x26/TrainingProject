@@ -1,6 +1,5 @@
 package vn.asiantech.LearingEnglish.activities;
 
-import android.util.Log;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -28,6 +27,10 @@ public class LoginActivity extends BaseActionBarActivity{
         String password = "admin";
         if (edtUsername.getText().toString().equals(username)  && edtPassword.getText().toString().equals(password)){
             Toast toast = Toast.makeText(this, "thanh Cong ...", Toast.LENGTH_SHORT);
+            toast.show();
+        }
+        else if (edtUsername.getText().toString().equals("")  || edtPassword.getText().toString().equals("")){
+            Toast toast = Toast.makeText(this, "Nhap day du du lieu ...",Toast.LENGTH_SHORT);
             toast.show();
         }
         else {
