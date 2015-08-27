@@ -35,12 +35,43 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:paddingTop="@dimen/RelativeLayout.layout.padding.top"
+            android:paddingLeft="@dimen/RelativeLayout.layout.padding.left"
+            android:paddingRight="@dimen/RelativeLayout.layout.padding.right"
             android:background="@color/rl.input.background">
 
             <EditText
                 android:id="@+id/edtUsername"
                 android:hint="@string/edittext.hint.username"
                 android:backgroundTint="@color/edittext.color.line"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/edtPassword"
+                android:layout_below="@+id/edtUsername"
+                android:layout_marginTop="@dimen/edittext.margin.top"
+                android:hint="@string/edittext.hint.pass"
+                android:backgroundTint="@color/edittext.color.line"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/btnSignin"
+                android:layout_below="@+id/edtPassword"
+                android:layout_marginTop="@dimen/button.margin.top"
+                android:text="@string/button.text.signin"
+                android:textColor="@color/button.text.color.signin"
+                android:background="@color/rl.avatar.background"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tvForgotPassword"
+                android:layout_below="@+id/btnSignin"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/textview.margin.top.forgot.password"
+                android:text="@string/textview.text.forgot.password"
+                android:textColor="@color/textview.color.forgot.password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 

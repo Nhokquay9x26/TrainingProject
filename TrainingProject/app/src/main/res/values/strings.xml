@@ -4,4 +4,7 @@
 <string name="hello_world">Hello world!</string>
     <string name="button.text.signup">Sign Up</string>
     <string name="edittext.hint.username">Username/ Email Address</string>
+    <string name="edittext.hint.pass">Password</string>
+    <string name="button.text.signin">Sign in</string>
+    <string name="textview.text.forgot.password">Forgot Password?</string>
 </resources>

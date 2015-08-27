@@ -11,5 +11,10 @@
     <dimen name="image.margin.bottom">20dp</dimen>
     <dimen name="image.height">120dp</dimen>
     <dimen name="RelativeLayout.layout.padding.top">30dp</dimen>
+    <dimen name="RelativeLayout.layout.padding.left">23dp</dimen>
+    <dimen name="RelativeLayout.layout.padding.right">23dp</dimen>
+    <dimen name="edittext.margin.top">30dp</dimen>
+    <dimen name="button.margin.top">30dp</dimen>
+    <dimen name="textview.margin.top.forgot.password">30dp</dimen>
 
 </resources>
