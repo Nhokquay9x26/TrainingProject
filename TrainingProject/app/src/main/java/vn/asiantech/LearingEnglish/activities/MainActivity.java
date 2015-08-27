@@ -19,6 +19,5 @@ public class MainActivity extends BaseActionBarActivity {
 
     @Override
     void afterView() {
-
     }
 }
