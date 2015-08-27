@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="main">#377EB0</color>
-
+    <color name="background_header_login">#00b9e6</color>
+    <color name="text_signin">#ffffff</color>
+    <color name="text_forgotPassword">#00b9e6</color>
 </resources>
