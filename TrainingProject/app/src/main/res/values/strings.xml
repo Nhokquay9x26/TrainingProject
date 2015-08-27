@@ -5,4 +5,7 @@
     <string name="TextView.text_get_pass">Get Pass</string>
     <string name="EditText.text_hint_email">Email</string>
     <string name="Button.text_forgot_pass">Forgot</string>
+    <string name="Sign_in">Sign in</string>
+    <string name="username_email">Username / Email Address</string>
+    <string name="password">Password</string>
 </resources>
