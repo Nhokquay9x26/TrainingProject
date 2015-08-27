@@ -2,4 +2,28 @@
     <!-- Default screen margins, per the Android Design guidelines. -->
     <dimen name="activity_horizontal_margin">0dp</dimen>
     <dimen name="activity_vertical_margin">0dp</dimen>
+
+    <dimen name="signup.layoutheight">120dp</dimen>
+
+    <dimen name="signup.margintop">30dp</dimen>
+    <dimen name="signup.marginLeft">23dp</dimen>
+    <dimen name="signup.marginRight">23dp</dimen>
+
+    <dimen name="signup.imager.margintop">10dp</dimen>
+    <dimen name="signup.imager.marginBottom">8dp</dimen>
+
+    <dimen name="signup.edittext.marginleft">22dp</dimen>
+    <dimen name="signup.edittext.marginRight">22dp</dimen>
+    <dimen name="signup.edittext.margintop">1dp</dimen>
+    <dimen name="signup.checkbox.margintop">20dp</dimen>
+    <dimen name="signup.textview.marginleft">10dp</dimen>
+
+    <dimen name="signup.view">1dp</dimen>
+    <dimen name="signup.relativelayout">370dp</dimen>
+
+    <dimen name="signup.button.textsize.signin">7pt</dimen>
+    <dimen name="signup.button.layout.height">45dp</dimen>
+
+    <dimen name="signup.button.textsize.signup">5pt</dimen>
+    <dimen name="signup.button.layout.height.signin">30dp</dimen>
 </resources>

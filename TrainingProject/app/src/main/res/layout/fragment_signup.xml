@@ -1,0 +1,154 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@drawable/ic_splashscreen">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/transparent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/signup.margintop"
+            android:layout_marginLeft="@dimen/signup.marginLeft"
+            android:layout_marginStart="@dimen/signup.margintop"
+            android:layout_marginEnd="@dimen/signup.marginRight"
+            android:layout_marginRight="@dimen/signup.marginRight">
+
+            <RelativeLayout
+                android:id="@+id/reAvatar"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/signup.layoutheight"
+                android:background="@color/blue">
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/ic_avatar"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/signup.imager.margintop"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/textview.tap_to_change_profile_image"
+                    android:layout_centerHorizontal="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="@dimen/signup.imager.marginBottom"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/reEdittext"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/signup.relativelayout"
+                android:layout_below="@+id/reAvatar"
+                android:background="@color/white">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="@dimen/signup.edittext.marginleft"
+                    android:layout_marginRight="@dimen/signup.edittext.marginleft"
+                    android:layout_marginStart="@dimen/signup.edittext.marginRight"
+                    android:layout_marginLeft="@dimen/signup.edittext.marginRight">
+                    <EditText
+                        android:id="@+id/edtUsername"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/edittext.hint.username"
+                        android:layout_marginTop="@dimen/signup.edittext.margintop"
+                        android:backgroundTint="@android:color/holo_blue_light"/>
+
+                    <EditText
+                        android:id="@+id/edtEmail"
+                        android:layout_below="@+id/edtUsername"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/edittext.hint.email"
+                        android:textColorHint="@color/signup.textcolorhint"
+                        android:layout_marginTop="@dimen/signup.edittext.margintop"
+                        android:backgroundTint="@android:color/holo_blue_light"/>
+
+                    <EditText
+                        android:id="@+id/edtPassword"
+                        android:layout_below="@+id/edtEmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/edittext.hint.password"
+                        android:textColorHint="@color/signup.textcolorhint"
+                        android:layout_marginTop="@dimen/signup.edittext.margintop"
+                        android:backgroundTint="@android:color/holo_blue_light"/>
+
+                    <EditText
+                        android:id="@+id/edtConfirmPassword"
+                        android:layout_below="@+id/edtPassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/edittext.hint.confirm_password"
+                        android:textColorHint="@color/signup.textcolorhint"
+                        android:layout_marginTop="@dimen/signup.edittext.margintop"
+                        android:backgroundTint="@android:color/holo_blue_light"/>
+
+                    <EditText
+                        android:id="@+id/edtPromotion"
+                        android:layout_below="@+id/edtConfirmPassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/edittext.hint.promotion_code"
+                        android:textColorHint="@color/signup.textcolorhint"
+                        android:layout_marginTop="@dimen/signup.edittext.margintop"
+                        android:backgroundTint="@android:color/holo_blue_light"/>
+
+                    <CheckBox
+                        android:id="@+id/checkboxEmail"
+                        android:layout_below="@+id/edtPromotion"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:shadowColor="@color/white"
+                        android:layout_marginTop="@dimen/signup.checkbox.margintop" />
+                    <TextView
+                        android:layout_below="@+id/edtPromotion"
+                        android:layout_toEndOf="@+id/checkboxEmail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/signup.textview.marginleft"
+                        android:layout_marginLeft="@dimen/signup.textview.marginleft"
+                        android:layout_marginTop="@dimen/signup.checkbox.margintop"
+                        android:text="@string/textview.hint.via_email"/>
+
+                    <Button
+                        android:id="@+id/btnSignup"
+                        android:layout_below="@+id/checkboxEmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/signup.button.layout.height"
+                        android:text="@string/buton.signup"
+                        android:textSize="@dimen/signup.button.textsize.signin"
+                        android:textColor="@color/white"
+                        android:background="@color/blue"
+                        android:layout_marginTop="@dimen/signup.checkbox.margintop"/>
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/btnSignin"
+                android:layout_alignParentBottom="true"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/signup.button.layout.height.signin"
+                android:text="@string/button.signin"
+                android:textSize="@dimen/signup.button.textsize.signup"
+                android:textColor="@color/blue"
+                android:background="@color/white"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+
+
+</RelativeLayout>
