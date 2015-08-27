@@ -10,6 +10,8 @@ import vn.asiantech.LearingEnglish.core.fragments.Fragment;
  */
 public class BaseFragment extends Fragment {
 
+    private String mTabTitle = null;
+    private int mTabIcon = 0;
     /**
      * Show dialog with OK button
      *
@@ -27,6 +29,24 @@ public class BaseFragment extends Fragment {
                 .setCancelable(false)
                 .create();
         alertDialog.show();
+    }
+
+    public BaseFragment setTabIcon(int resDrawable) {
+        this.mTabIcon = resDrawable;
+        return this;
+    }
+
+    public int getTabIconResource() {
+        return this.mTabIcon;
+    }
+
+    public BaseFragment setTitle(String title) {
+        mTabTitle = title;
+        return this;
+    }
+
+    public String getTitle() {
+        return mTabTitle;
     }
 
     /**
