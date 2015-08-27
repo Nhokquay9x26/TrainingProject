@@ -5,4 +5,9 @@
 
 <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="footer.bar.text.deal">Deals</string>
+    <string name="footer.bar.text.coupons">Coupons</string>
+    <string name="footer.bar.text.stores">Stores</string>
+    <string name="footer.bar.text.price.comparision">Price Comparision</string>
+    <string name="footer.bar.text.more">More</string>
 </resources>

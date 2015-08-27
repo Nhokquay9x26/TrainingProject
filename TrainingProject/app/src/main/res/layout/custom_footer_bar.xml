@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/footer.bar.height"
+    android:background="@color/footer.bar.background"
+    android:orientation="horizontal"
+    android:weightSum="5">
+    /* Tab1 */
+    <LinearLayout
+        android:layout_width="@dimen/layout.zero.dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.8"
+        android:orientation="vertical"
+        android:weightSum="1"
+        >
+
+        <ImageView
+            android:id="@+id/imgDeals"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/layout.zero.dp"
+            android:layout_weight="0.65"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/footer.bar.margintop"
+            android:background="@drawable/ico_deals_white_xhd"
+            />
+
+        <TextView
+            android:id="@+id/tvDeals"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/layout.zero.dp"
+            android:layout_weight="0.35"
+            android:gravity="center"
+            android:text="@string/footer.bar.text.deal"
+            android:textColor="#FFFFFF"
+
+            />
+    </LinearLayout>
+    /* Tab2
+    <LinearLayout
+        android:layout_width="@dimen/layout.zero.dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/layout.zero.dp"
+            android:layout_weight="0.65"
+            android:id="@+id/imgCoupons"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/footer.bar.margintop"
+            android:background="@drawable/ico_coupons_dark_xhd"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/layout.zero.dp"
+            android:layout_weight="0.35"
+            android:text="@string/footer.bar.text.coupons"
+            android:id="@+id/tvCoupons"
+            android:gravity="center"
+
+            />
+    </LinearLayout>
+    /* tab3
+    <LinearLayout
+        android:layout_width="@dimen/layout.zero.dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/layout.zero.dp"
+            android:layout_weight="0.65"
+            android:id="@+id/imgStores"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/footer.bar.margintop"
+            android:background="@drawable/ico_stores_dark_xhd"
+
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/layout.zero.dp"
+            android:layout_weight="0.35"
+            android:text="@string/footer.bar.text.stores"
+            android:id="@+id/tvStores"
+            android:gravity="center"
+
+            />
+    </LinearLayout>
+    /* tab4
+    <LinearLayout
+        android:layout_width="@dimen/layout.zero.dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1.5"
+        android:orientation="vertical">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/layout.zero.dp"
+            android:layout_weight="0.65"
+            android:id="@+id/imgPriceComparision"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/footer.bar.margintop"
+            android:background="@drawable/ico_price_comparison_dark_xhd"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/layout.zero.dp"
+            android:layout_weight="0.35"
+            android:text="@string/footer.bar.text.price.comparision"
+            android:id="@+id/tvPriceComparision"
+            android:gravity="center"
+
+            />
+    </LinearLayout>
+    /* tab5
+    <LinearLayout
+        android:layout_width="@dimen/layout.zero.dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.7"
+        android:orientation="vertical">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/layout.zero.dp"
+            android:layout_weight="0.65"
+            android:id="@+id/imgMore"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/footer.bar.margintop"
+            android:background="@drawable/ico_more_dark_xhd"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/layout.zero.dp"
+            android:layout_weight="0.35"
+            android:text="@string/footer.bar.text.more"
+            android:id="@+id/tvMore"
+            android:gravity="center"
+
+            />
+    </LinearLayout>
+</LinearLayout>
