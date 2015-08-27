@@ -12,7 +12,7 @@
         android:background="@android:color/white">
 
         <TextView
-            android:id="@+id/tvGetPass_fragment_forgot_pass"
+            android:id="@+id/tvGetPass_activity_forgot_pass"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/TextView.background_get_pass_color"
@@ -21,10 +21,10 @@
             android:textColor="@android:color/white" />
 
         <EditText
-            android:id="@+id/edtEmail_fragment_forgot_pass"
+            android:id="@+id/edtEmail_activity_forgot_pass"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/tvGetPass_fragment_forgot_pass"
+            android:layout_below="@+id/tvGetPass_activity_forgot_pass"
             android:hint="@string/EditText.text_hint_email"
             android:inputType="textEmailAddress"
             android:textColor="@color/EditText.text_email_color" />
@@ -32,10 +32,10 @@
         <requestFocus />
 
         <Button
-            android:id="@+id/btnForgot_fragment_forgot_pass"
+            android:id="@+id/btnForgot_activity_forgot_pass"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/edtEmail_fragment_forgot_pass"
+            android:layout_below="@+id/edtEmail_activity_forgot_pass"
             android:layout_centerHorizontal="true"
             android:layout_marginBottom="20dp"
             android:background="@color/Button.background_forgot_pass_color"
