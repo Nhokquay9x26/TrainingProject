@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="main">#377EB0</color>
+    <color name="color.rl.part_of_child_of_one">#0dc2ff</color>
+    <color name="color.tv.of_child_one">#0dc2ff</color>
+    <color name="color.edittext.backgroundtint">#0dc2ff</color>
+    <color name="color.button.forgotPass">#0dc2ff</color>
+    <color name="color.button.change_color_on_click">#9fff67</color>
+
 
 </resources>
