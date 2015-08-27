@@ -14,7 +14,7 @@ import vn.asiantech.LearingEnglish.activities.MainActivity_;
  * Copyright © 2015 AsianTech inc.
  * Created by PhuQuy on 8/26/15.
  */
-@EFragment(R.layout.fragment_splash)
+@EFragment(R.layout.fragment_signup)
 public class SplashFragment extends BaseFragment {
 
     @ViewById(R.id.btnMainActivity)
@@ -24,10 +24,10 @@ public class SplashFragment extends BaseFragment {
     public void afterViews() {
     }
 
-    @Click(R.id.btnMainActivity)
+    @Click(R.id.btnSignup)
     protected void onClick() {
         MainActivity_.intent(getActivity()).start();
-        getActivity().finish();
+        //getActivity().finish();
     }
 
 }
