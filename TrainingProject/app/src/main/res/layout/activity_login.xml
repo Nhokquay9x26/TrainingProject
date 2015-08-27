@@ -37,7 +37,8 @@
             android:layout_height="@dimen/login_edt_height"
             android:layout_below="@+id/edtUsername"
             android:layout_marginTop="@dimen/login_edt_top"
-            android:hint="@string/password" />
+            android:hint="@string/password"
+            android:inputType="textPassword"/>
 
         <Button
             android:id="@+id/btnSignIn"
