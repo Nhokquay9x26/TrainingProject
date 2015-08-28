@@ -7,7 +7,7 @@ import vn.asiantech.LearingEnglish.R;
 /**
  * Created by xuanphu on 27/08/2015.
  */
-@EActivity(R.layout.activity_login)
+@EActivity(R.layout.fragment_testing)
 public class LoginActivity extends BaseActionBarActivity{
 
     @Override

@@ -7,4 +7,10 @@
     <color name="color.white">#FFFFFF</color>
     <color name="color.black">#000000</color>
     <color name="color.no.color">#00000000</color>
+    <color name="color.menubar.testing">#4fd6db</color>
+    <color name="color.title_testing">#51326f</color>
+    <color name="color.detail_time_testing">#efeaf4</color>
+    <color name="color.testing.button_previous">#c7ff85</color>
+    <color name="color.testing.button_submit">#f15928</color>
+    <color name="color.testing.button_next">#c7ff85</color>
 </resources>

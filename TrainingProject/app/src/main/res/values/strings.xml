@@ -4,4 +4,16 @@
     <string name="Sign_in">Sign in</string>
     <string name="username_email">Username / Email Address</string>
     <string name="password">Password</string>
+    <string name="title.testing.menubar">Testing:    Level 1</string>
+    <string name="text.testing.number_question">1/20</string>
+    <string name="text.testing.left_number">5</string>
+    <string name="text.testing.time_left">10:00</string>
+    <string name="choiceA">(A) Open-source</string>
+    <string name="choiceB">(B) Platform-independent</string>
+    <string name="choiceC">(C) Supports various technologies</string>
+    <string name="choiceD">(D) Highly optimized Virtual Machine</string>
+    <string name="text.testing.detail_question">Question 1: What are the advantages of android?</string>
+    <string name="button.testing.previous">Previous</string>
+    <string name="button.testing.submit">Submit</string>
+    <string name="button.testing.next">Next</string>
 </resources>

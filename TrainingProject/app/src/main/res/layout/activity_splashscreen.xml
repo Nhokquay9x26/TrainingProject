@@ -23,7 +23,7 @@
                 android:layout_height="match_parent"
                 android:layout_centerInParent="true"
                 android:background="@color/color.no.color"
-                android:padding="@dimen/image.padding_"
+                android:padding="@dimen/image.padding_20"
                 android:src="@mipmap/logo_small_xhd" />
 
         </RelativeLayout>
@@ -35,7 +35,7 @@
             android:layout_below="@+id/rlCenterSplash"
             android:background="@null"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="@dimen/margin_5"
             android:adjustViewBounds="true"
             android:contentDescription="@null"
             android:src="@anim/horizontal_incremental_loading" />
