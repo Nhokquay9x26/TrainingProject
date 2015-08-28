@@ -2,4 +2,18 @@
     <!-- Default screen margins, per the Android Design guidelines. -->
     <dimen name="activity_horizontal_margin">0dp</dimen>
     <dimen name="activity_vertical_margin">0dp</dimen>
+    <dimen name="button.margintop.signIn">40dp</dimen>
+    <dimen name="button.marginleft.signIn">20dp</dimen>
+    <dimen name="button.marginright.signIn">20dp</dimen>
+    <dimen name="textview.marginbottom.forgetpassword">5dp</dimen>
+    <dimen name="button.layoutheight.signIn">40dp</dimen>
+    <dimen name="linearlayout.layoutwidth">300dp</dimen>
+    <dimen name="linearlayout.layoutheight">400dp</dimen>
+    <dimen name="linearlayout.margintop">50dp</dimen>
+    <dimen name="button.textsize.signup">20sp</dimen>
+    <dimen name="button.layoutwidth.signup">300dp</dimen>
+    <dimen name="button.layoutheight.signup">50dp</dimen>
+    <dimen name="edittext.marginleftright">20dp</dimen>
+    <dimen name="image.margintop">20dp</dimen>
+
 </resources>
