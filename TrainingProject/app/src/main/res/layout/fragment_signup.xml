@@ -13,16 +13,16 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="@dimen/signup.margintop"
-            android:layout_marginLeft="@dimen/signup.marginLeft"
-            android:layout_marginStart="@dimen/signup.margintop"
-            android:layout_marginEnd="@dimen/signup.marginRight"
-            android:layout_marginRight="@dimen/signup.marginRight">
+            android:layout_marginTop="@dimen/relativelayout.signup.layout_margintop"
+            android:layout_marginLeft="@dimen/relativelayout.signup.layout_marginLeft"
+            android:layout_marginStart="@dimen/relativelayout.signup.layout_margintop"
+            android:layout_marginEnd="@dimen/relativelayout.signup.layout_marginRight"
+            android:layout_marginRight="@dimen/relativelayout.signup.layout_marginRight">
 
             <RelativeLayout
                 android:id="@+id/reAvatar"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/signup.layoutheight"
+                android:layout_height="@dimen/relativelayout.signup.layout_height_1"
                 android:background="@color/blue">
 
                 <ImageView
@@ -30,7 +30,7 @@
                     android:layout_height="80dp"
                     android:src="@drawable/ic_avatar"
                     android:layout_centerHorizontal="true"
-                    android:layout_marginTop="@dimen/signup.imager.margintop"/>
+                    android:layout_marginTop="@dimen/imagerview.signup.layout_margintop"/>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -38,29 +38,29 @@
                     android:text="@string/textview.tap_to_change_profile_image"
                     android:layout_centerHorizontal="true"
                     android:layout_alignParentBottom="true"
-                    android:layout_marginBottom="@dimen/signup.imager.marginBottom"/>
+                    android:layout_marginBottom="@dimen/textview.signup.layout_marginBottom"/>
             </RelativeLayout>
 
             <RelativeLayout
                 android:id="@+id/reEdittext"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/signup.relativelayout"
+                android:layout_height="@dimen/relativelayout.signup.layout_height_2"
                 android:layout_below="@+id/reAvatar"
                 android:background="@color/white">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginEnd="@dimen/signup.edittext.marginleft"
-                    android:layout_marginRight="@dimen/signup.edittext.marginleft"
-                    android:layout_marginStart="@dimen/signup.edittext.marginRight"
-                    android:layout_marginLeft="@dimen/signup.edittext.marginRight">
+                    android:layout_marginEnd="@dimen/relativelayout.signup.layout_marginLeft_1"
+                    android:layout_marginRight="@dimen/relativelayout.signup.layout_marginLeft_1"
+                    android:layout_marginStart="@dimen/relativelayout.signup.layout_marginRight_1"
+                    android:layout_marginLeft="@dimen/relativelayout.signup.layout_marginRight_1">
                     <EditText
                         android:id="@+id/edtUsername"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="@string/edittext.hint.username"
-                        android:layout_marginTop="@dimen/signup.edittext.margintop"
+                        android:layout_marginTop="@dimen/relativelayout.signup.edittext.layout_margintop"
                         android:backgroundTint="@android:color/holo_blue_light"/>
 
                     <EditText
@@ -69,8 +69,9 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="@string/edittext.hint.email"
+                        android:inputType="textEmailAddress"
                         android:textColorHint="@color/signup.textcolorhint"
-                        android:layout_marginTop="@dimen/signup.edittext.margintop"
+                        android:layout_marginTop="@dimen/relativelayout.signup.edittext.layout_margintop"
                         android:backgroundTint="@android:color/holo_blue_light"/>
 
                     <EditText
@@ -79,8 +80,9 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="@string/edittext.hint.password"
+                        android:inputType="textPassword"
                         android:textColorHint="@color/signup.textcolorhint"
-                        android:layout_marginTop="@dimen/signup.edittext.margintop"
+                        android:layout_marginTop="@dimen/relativelayout.signup.edittext.layout_margintop"
                         android:backgroundTint="@android:color/holo_blue_light"/>
 
                     <EditText
@@ -90,7 +92,7 @@
                         android:layout_height="wrap_content"
                         android:hint="@string/edittext.hint.confirm_password"
                         android:textColorHint="@color/signup.textcolorhint"
-                        android:layout_marginTop="@dimen/signup.edittext.margintop"
+                        android:layout_marginTop="@dimen/relativelayout.signup.edittext.layout_margintop"
                         android:backgroundTint="@android:color/holo_blue_light"/>
 
                     <EditText
@@ -100,7 +102,7 @@
                         android:layout_height="wrap_content"
                         android:hint="@string/edittext.hint.promotion_code"
                         android:textColorHint="@color/signup.textcolorhint"
-                        android:layout_marginTop="@dimen/signup.edittext.margintop"
+                        android:layout_marginTop="@dimen/relativelayout.signup.edittext.layout_margintop"
                         android:backgroundTint="@android:color/holo_blue_light"/>
 
                     <CheckBox
@@ -110,27 +112,28 @@
                         android:layout_height="wrap_content"
                         android:background="@android:color/transparent"
                         android:shadowColor="@color/white"
-                        android:layout_marginTop="@dimen/signup.checkbox.margintop" />
+                        android:layout_marginTop="@dimen/checkbox.signup.checkbox.layout_margintop" />
                     <TextView
                         android:layout_below="@+id/edtPromotion"
                         android:layout_toEndOf="@+id/checkboxEmail"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="@dimen/signup.textview.marginleft"
-                        android:layout_marginLeft="@dimen/signup.textview.marginleft"
-                        android:layout_marginTop="@dimen/signup.checkbox.margintop"
+                        android:layout_marginStart="@dimen/textview.signup.layout_marginLeft"
+                        android:layout_marginLeft="@dimen/textview.signup.layout_marginLeft"
+                        android:layout_marginTop="@dimen/checkbox.signup.checkbox.layout_margintop"
                         android:text="@string/textview.hint.via_email"/>
 
                     <Button
                         android:id="@+id/btnSignup"
                         android:layout_below="@+id/checkboxEmail"
                         android:layout_width="match_parent"
-                        android:layout_height="@dimen/signup.button.layout.height"
+                        android:layout_height="@dimen/button.signup.layout_height"
                         android:text="@string/buton.signup"
-                        android:textSize="@dimen/signup.button.textsize.signin"
+                        android:textSize="@dimen/button.signup.textsize"
                         android:textColor="@color/white"
                         android:background="@color/blue"
-                        android:layout_marginTop="@dimen/signup.checkbox.margintop"/>
+                        android:layout_marginTop="@dimen/checkbox.signup.checkbox.layout_margintop"/>
+
                 </RelativeLayout>
             </RelativeLayout>
 
@@ -138,9 +141,9 @@
                 android:id="@+id/btnSignin"
                 android:layout_alignParentBottom="true"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/signup.button.layout.height.signin"
+                android:layout_height="@dimen/button.signup.signin.layout_height"
                 android:text="@string/button.signin"
-                android:textSize="@dimen/signup.button.textsize.signup"
+                android:textSize="@dimen/button.signup.signin.textsize"
                 android:textColor="@color/blue"
                 android:background="@color/white"/>
 
