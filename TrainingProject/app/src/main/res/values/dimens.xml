@@ -14,4 +14,8 @@
     <dimen name="login_btn_height">60dp</dimen>
     <dimen name="login_btnSignIn_top">40dp</dimen>
     <dimen name="login_btnSignIn_top_textsize">20sp</dimen>
+    
+    <dimen name="image.loading.circle_">10dp</dimen>
+    <dimen name="relative.splash.center_">90dp</dimen>
+    <dimen name="image.padding_">20dp</dimen>
 </resources>

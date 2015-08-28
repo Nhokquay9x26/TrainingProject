@@ -1,0 +1,44 @@
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@mipmap/splashscreen_xxhd" />
+
+        <RelativeLayout
+            android:id="@+id/rlCenterSplash"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/relative.splash.center_"
+            android:layout_centerInParent="true"
+            android:background="@color/color.white">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:background="@color/color.no.color"
+                android:padding="@dimen/image.padding_"
+                android:src="@mipmap/logo_small_xhd" />
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/imgIncrementingBoxView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rlCenterSplash"
+            android:background="@null"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:adjustViewBounds="true"
+            android:contentDescription="@null"
+            android:src="@anim/horizontal_incremental_loading" />
+
+        </RelativeLayout>
+</merge>

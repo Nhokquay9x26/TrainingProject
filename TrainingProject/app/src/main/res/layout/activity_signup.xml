@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/ll_profile"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/activity.title.height"
+        android:background="@color/signup.ln.backgroud"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/img_profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_profile"
+            android:contentDescription="@string/signup.conten.Descrip"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/signup.sub.margin"
+            android:text="@string/signup.tv.sub"
+            android:textColor="@color/signup.tv.sub.color" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:layout_below="@+id/ll_profile"
+        android:layout_marginBottom="@dimen/activity.layout.margin"
+        android:layout_marginLeft="@dimen/activity.layout.margin"
+        android:layout_marginRight="@dimen/activity.layout.margin"
+        android:layout_marginTop="@dimen/activity.layout.margin">
+
+        <EditText
+            android:id="@+id/edt_username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/activity.signup.hint.user" />
+
+        <EditText
+            android:id="@+id/edt_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/edt_username"
+            android:hint="@string/activity.signup.hint.email"
+            android:inputType="textEmailAddress" />
+
+        <EditText
+            android:id="@+id/edtPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/edt_email"
+            android:hint="@string/activity.signup.hint.password"
+            android:inputType="textPassword" />
+
+        <EditText
+            android:id="@+id/edtConfirm_pass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/edtPassword"
+            android:hint="@string/activity.singup.hint.confirmpass" />
+
+        <EditText
+            android:id="@+id/edtPromotion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/edtConfirm_pass"
+            android:hint="@string/activity.signup.hint.promotion" />
+
+        <CheckBox
+            android:id="@+id/chk_Check"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/edtPromotion" />
+
+        <TextView
+            android:id="@+id/tv_sub"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/signup.tv.heignt"
+            android:layout_below="@+id/edtPromotion"
+            android:layout_toEndOf="@+id/chk_Check"
+            android:layout_toRightOf="@+id/chk_Check"
+            android:gravity="center_vertical"
+            android:text="@string/signup.tv.check" />
+
+        <TextView
+            android:id="@+id/tvButton_signUp"
+            android:layout_width="@dimen/activity.signup.width"
+            android:layout_height="@dimen/activity.signup.height"
+            android:layout_below="@+id/tv_sub"
+            android:layout_centerHorizontal="true"
+            android:background="@color/dialog.backgroud.title"
+            android:gravity="center"
+            android:text="@string/signup.tv.text"
+            android:textColor="@color/signup.text.color.buton"
+            android:textSize="@dimen/signup.tv.size"
+            android:layout_marginTop="@dimen/signup.butonsigup.margintop"/>
+    </RelativeLayout>
+</RelativeLayout>
