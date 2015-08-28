@@ -18,6 +18,7 @@
         </activity>
         <activity android:name=".activities.SplashScreenActivity_">
         </activity>
+        <activity android:name=".activities.TestingActivity_"></activity>
         <activity android:name=".activities.LoginActivity_">
         </activity>
     </application>

@@ -17,7 +17,7 @@ public class TestingFragment extends Fragment {
     private View mView;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        mView = inflater.inflate(R.layout.abc_action_bar_title_item,container,false);
+        mView = inflater.inflate(R.layout.fragment_testing,container,false);
         return mView;
     }
 }
