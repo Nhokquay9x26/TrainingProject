@@ -12,6 +12,6 @@ public class LoginActivity extends BaseActionBarActivity{
 
     @Override
     void afterView() {
-
+        getSupportActionBar().hide();
     }
 }

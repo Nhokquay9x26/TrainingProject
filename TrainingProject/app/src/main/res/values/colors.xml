@@ -4,4 +4,7 @@
     <color name="background_header_login">#00b9e6</color>
     <color name="text_signin">#ffffff</color>
     <color name="text_forgotPassword">#00b9e6</color>
+    <color name="color.white">#FFFFFF</color>
+    <color name="color.black">#000000</color>
+    <color name="color.no.color">#00000000</color>
 </resources>
