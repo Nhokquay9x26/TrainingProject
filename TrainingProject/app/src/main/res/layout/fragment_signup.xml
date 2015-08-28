@@ -1,11 +1,11 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
     android:background="@drawable/ic_splashscreen">
 
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/transparent">
@@ -42,16 +42,19 @@
 
             </RelativeLayout>
 
-            <RelativeLayout
+            <LinearLayout
                 android:id="@+id/reEdittext"
                 android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_below="@+id/reAvatar"
+                android:layout_above="@+id/btnSignin"
                 android:background="@color/white"
-                android:layout_height="@dimen/relativelayout.signup.height.370dp">
+                android:layout_marginBottom="20dp">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:layout_marginBottom="10dp"
                     android:layout_marginEnd="@dimen/relativelayout.signup.marginLeft.22dp"
                     android:layout_marginRight="@dimen/relativelayout.signup.marginLeft.22dp"
                     android:layout_marginStart="@dimen/relativelayout.signup.marginRight.22dp"
@@ -133,7 +136,7 @@
                         android:background="@color/blue"
                         android:layout_marginTop="@dimen/checkbox.signup.margintop.20dp"/>
                 </RelativeLayout>
-            </RelativeLayout>
+            </LinearLayout>
 
             <Button
                 android:id="@+id/btnSignin"
@@ -146,5 +149,5 @@
                 android:background="@color/white"/>
 
         </RelativeLayout>
-    </RelativeLayout>
-</RelativeLayout>
+    </LinearLayout>
+</LinearLayout>
