@@ -6,8 +6,8 @@
     <RelativeLayout
         android:id="@+id/rlMenubarTesting"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/size.menubar.test_48"
-        android:background="@color/color.menubar.testing">
+        android:layout_height="@dimen/rl.testing.rl_menubar_height"
+        android:background="@color/color.testing.menubar">
 
         <ImageView
             android:layout_width="match_parent"
@@ -22,9 +22,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/rlMenubarTesting"
-        android:background="@color/color.detail_time_testing"
-        android:paddingTop="@dimen/padding_15"
-        android:paddingBottom="@dimen/padding_15"
+        android:background="@color/color.testing.detail_time"
+        android:paddingTop="@dimen/rl.testing.rl_detail_time_paddingtop"
+        android:paddingBottom="@dimen/rl.testing.rl_detail_time_paddingbottom"
         >
 
         <TextView
@@ -33,14 +33,14 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/margin.left"
             android:text="@string/text.testing.number_question"
-            android:textSize="@dimen/text.size.number_question" />
+            android:textSize="@dimen/textview.testing.tv_number_question_size" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:text="@string/text.testing.left_number"
-            android:textSize="@dimen/text.size.left_number" />
+            android:textSize="@dimen/textview.testing.tv_left_number_size" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -48,42 +48,46 @@
             android:layout_alignParentRight="true"
             android:layout_marginRight="@dimen/margin.right"
             android:text="@string/text.testing.time_left"
-            android:textSize="@dimen/text.size.time_left" />
+            android:textSize="@dimen/textview.testing.tv_time_left_size" />
     </RelativeLayout>
 
     <RelativeLayout
         android:id="@+id/rlButtonBottom"
         android:layout_width="match_parent"
-        android:layout_marginBottom="@dimen/margin.testing.button_next_ok_previous"
-        android:layout_height="@dimen/size.testing.button_next_ok_previous"
+        android:layout_marginBottom="@dimen/rl.testing.rl_margin_bottom"
+        android:layout_height="@dimen/rl.testing.rl_contains_button_height"
         android:layout_alignParentBottom="true"
         >
 
         <Button
             android:id="@+id/btnPrevious"
-            android:layout_width="@dimen/button.testing.width_btn_previous"
-            android:layout_height="@dimen/button.testing.btn_previous"
+            android:layout_width="@dimen/button.testing.btn_previous_width"
+            android:layout_height="@dimen/button.testing.btn_previous_height"
             android:layout_marginLeft="@dimen/margin.left"
             android:layout_alignParentLeft="true"
-            android:layout_alignLeft="@+id/btnSubmit"
+            android:layout_centerVertical="true"
+            android:textSize="@dimen/button.testing.btn_previous_textsize"
             android:text="@string/button.testing.previous"
             android:background="@color/color.testing.button_previous"
             />
 
         <Button
             android:id="@+id/btnSubmit"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="@dimen/button.testing.btn_submit_width"
+            android:layout_height="@dimen/button.testing.btn_submit_height"
             android:layout_centerInParent="true"
+            android:textSize="@dimen/button.testing.btn_submit_textsize"
             android:background="@color/color.testing.button_submit"
             android:text="@string/button.testing.submit" />
 
         <Button
             android:id="@+id/btnNext"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_width="@dimen/button.testing.btn_next_width"
+            android:layout_height="@dimen/button.testing.btn_next_height"
             android:layout_marginRight="@dimen/margin.right"
             android:layout_alignParentRight="true"
+            android:textSize="@dimen/button.testing.btn_next_textsize"
             android:background="@color/color.testing.button_next"
             android:text="@string/button.testing.next" />
     </RelativeLayout>
@@ -102,8 +106,8 @@
                 android:id="@+id/tvDetailQuestion"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/margin_10"
-                android:layout_marginTop="@dimen/margin_10"
+                android:layout_marginLeft="@dimen/textview.testing.tv_question_left"
+                android:layout_marginTop="@dimen/textview.testing.tv_question_top"
                 android:text="@string/text.testing.detail_question" />
 
             <RadioButton
@@ -111,8 +115,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/tvDetailQuestion"
-                android:layout_marginLeft="@dimen/margin_10"
-                android:layout_marginTop="@dimen/margin_5"
+                android:layout_marginLeft="@dimen/rb.testing.rb_margin_left"
+                android:layout_marginTop="@dimen/rb.testing.rb_margin_top"
                 android:text="@string/choiceA" />
 
             <RadioButton
@@ -120,7 +124,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/rbA"
-                android:layout_marginLeft="@dimen/margin_10"
+                android:layout_marginLeft="@dimen/rb.testing.rb_margin_left"
                 android:text="@string/choiceB" />
 
             <RadioButton
@@ -128,7 +132,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/rbB"
-                android:layout_marginLeft="@dimen/margin_10"
+                android:layout_marginLeft="@dimen/rb.testing.rb_margin_left"
                 android:text="@string/choiceC" />
 
             <RadioButton
@@ -136,7 +140,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/rbC"
-                android:layout_marginLeft="@dimen/margin_10"
+                android:layout_marginLeft="@dimen/rb.testing.rb_margin_left"
                 android:text="@string/choiceD" />
         </RelativeLayout>
     </ScrollView>
