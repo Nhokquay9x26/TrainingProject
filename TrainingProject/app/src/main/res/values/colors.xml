@@ -9,5 +9,5 @@
     <color name="edittext.color">#FFFFFF</color>
     <color name="edittext.color.line">#00b9e6</color>
     <color name="button.text.color.signin">#FFFFFF</color>
-    <color name="textview.color.forgot.password">#00b9e6</color>
+    <color name="textview.color.forgot_password">#00b9e6</color>
 </resources>
