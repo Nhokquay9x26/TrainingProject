@@ -15,6 +15,6 @@
     <dimen name="edittext.username.textsize">20sp</dimen>
     <dimen name="edittext.password.textsize">20sp</dimen>
     <dimen name="linearlayout.marginbottom">100dp</dimen>
-    <dimen name="linearlayout.marginletfandright">30dp</dimen>
+    <dimen name="linearlayout.marginletfandright">150dp</dimen>
 
 </resources>
