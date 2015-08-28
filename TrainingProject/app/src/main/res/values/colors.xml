@@ -2,5 +2,8 @@
 <resources>
     <color name="main">#377EB0</color>
     <color name="footer.bar.background">#50f2ff</color>
+    <color name="header.bar.background">#500000FF</color>
+    <color name="footer.bar.text.white">#FFFFFF</color>
+    <color name="footer.bar.text.black">#000000</color>
 
 </resources>
