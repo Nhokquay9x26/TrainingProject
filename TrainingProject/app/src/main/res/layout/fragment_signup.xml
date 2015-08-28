@@ -26,8 +26,8 @@
                 android:layout_height="@dimen/relativelayout.signup.height.120dp">
 
                 <ImageView
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
+                    android:layout_width="@dimen/img.signup.width.80dp"
+                    android:layout_height="@dimen/img.signup.height.80dp"
                     android:src="@drawable/ic_avatar"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="@dimen/img.signup.margintop.10dp"/>
