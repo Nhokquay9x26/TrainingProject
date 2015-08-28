@@ -1,17 +1,14 @@
 <resources>
     <string name="app_name">Base Project</string>
-
     <string name="hello_world">Hello world!</string>
 
     <string name="textview.tap_to_change_profile_image">Tap to change profile image</string>
-
     <string name="edittext.hint.username">Username</string>
     <string name="edittext.hint.email">Email</string>
     <string name="edittext.hint.password">Password</string>
     <string name="edittext.hint.confirm_password">Confirm Password</string>
     <string name="edittext.hint.promotion_code">Promotion Code</string>
     <string name="textview.hint.via_email">I wish to subscribe to daily deal alert via email</string>
-
     <string name="button.signin">Sign In</string>
     <string name="buton.signup">Sign Up</string>
 
