@@ -4,6 +4,7 @@ import android.support.v4.app.Fragment;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import vn.asiantech.LearingEnglish.fragments.TopFragment;
 
 /**
  * Copyright © 2015 AsianTech inc.
@@ -15,4 +16,5 @@ public class HomePageItem {
     private Fragment fragment;
     private String title;
     private int drawableResource;
+
 }

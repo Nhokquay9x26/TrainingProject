@@ -21,13 +21,11 @@ public class InitializeActivity extends BaseActionBarActivity {
 
     @Override
     void afterView() {
-        if (mSplashFragment == null){
+        if (mSplashFragment == null) {
             mSplashFragment = SplashFragment_.builder().build();
         }
         FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
         ft.add(R.id.frameLayout, mSplashFragment, "SplashFragment");
         ft.commit();
     }
-
-
 }
