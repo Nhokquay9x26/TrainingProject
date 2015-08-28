@@ -12,4 +12,10 @@
     <string name="button.text.signin">Sign in</string>
     <string name="textview.text.forget_password">Forget password?</string>
     <string name="button.text.signup">Sign Up</string>
+    <string name="edittext.hint.username.for.signup">Username</string>
+    <string name="edittext.hint.email.for.signup">Email</string>
+    <string name="edittext.hint.confirmpassword">Confirm Password</string>
+    <string name="textview.text.tap_to_change_profile_image">Tap to change profile image</string>
+    <string name="edittext.hint.promotioncode">Promotion Code</string>
+    <string name="checkbox.text.subsrcibe.via.email">I wish to subscribe to daily deal alert via email</string>
 </resources>

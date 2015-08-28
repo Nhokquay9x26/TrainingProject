@@ -9,11 +9,12 @@
     <dimen name="button.layoutheight.signIn">40dp</dimen>
     <dimen name="linearlayout.margintop">80dp</dimen>
     <dimen name="button.textsize.signup">20sp</dimen>
-    <dimen name="button.layoutheight.signup">50dp</dimen>
+    <dimen name="button.layoutheight.signup">35dp</dimen>
     <dimen name="edittext.marginleftright">20dp</dimen>
     <dimen name="image.margintop">20dp</dimen>
     <dimen name="edittext.username.textsize">20sp</dimen>
     <dimen name="edittext.password.textsize">20sp</dimen>
     <dimen name="linearlayout.marginbottom">100dp</dimen>
     <dimen name="linearlayout.marginletfandright">30dp</dimen>
+    <dimen name="edittext.username.margintop">5dp</dimen>
 </resources>
