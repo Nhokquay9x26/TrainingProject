@@ -22,7 +22,7 @@ public class SplashFragment extends BaseFragment {
     Button mBtnMainActivity;
 
     @FragmentByTag("SignUpFragment")
-    SignUpFragment mSignUpFragment;
+    TopFragment mSignUpFragment;
 
     @AfterViews
     public void afterViews() {
@@ -31,7 +31,7 @@ public class SplashFragment extends BaseFragment {
     @Click(R.id.btnMainActivity)
     protected void onClick() {
         if (mSignUpFragment == null) {
-            mSignUpFragment = SignupFragment_.builder().build();
+            mSignUpFragment = TopFragment_.builder().build();
         }
         FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
         ft.add(R.id.frameLayout, mSignUpFragment, "MainFragment");

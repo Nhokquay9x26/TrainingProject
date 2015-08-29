@@ -36,7 +36,7 @@ public class MainFragment extends BaseFragment implements ViewPager.OnPageChange
     private void initializeAdapterView() {
         ArrayList<HomePageItem> tabItems = new ArrayList<>();
 
-        tabItems.add(new HomePageItem(TopFragment_.builder().build(), "映像授業", R.drawable.bg_tab_home));
+        tabItems.add(new HomePageItem(TopFragment_.builder().build(), "Top", R.drawable.bg_tab_home));
         tabItems.add(new HomePageItem(NoteFragment_.builder().build(), "My BOX", R.drawable.bg_tab_mybox));
         tabItems.add(new HomePageItem(TestFragment_.builder().build(), "質問リスト", R.drawable.bg_tab_questions));
         tabItems.add(new HomePageItem(SettingFragment_.builder().build(), "メニュー", R.drawable.bg_tab_others));
