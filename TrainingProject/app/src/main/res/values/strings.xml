@@ -13,4 +13,8 @@
     <string name="signup.tv.text">Singup</string>
     <string name="signup.tv.check">I wish to subcribe to daily alert via mail</string>
     <string name="signup.conten.Descrip">content</string>
+    <string name="error_invalid_confirm_password">Passwords do not match</string>
+    <string name="error_invalid_password">Password is too short</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="error_invalid_email">This email is</string>
 </resources>

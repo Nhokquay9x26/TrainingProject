@@ -1,8 +1,8 @@
 package vn.asiantech.LearingEnglish.activities;
 
 import android.text.TextUtils;
-import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import org.androidannotations.annotations.Click;
 import org.androidannotations.annotations.EActivity;
@@ -25,6 +25,10 @@ public class SignupActivity extends BaseActionBarActivity {
     EditText mEdtConfirmPass;
     @ViewById(R.id.edtPromotion)
     EditText mEdtPromotion;
+    private boolean mCheckUser;
+    private boolean mCheckPass;
+    private boolean mCheckPromotionCode;
+    private boolean mCheckEmail;
 
 
     @Override
@@ -34,28 +38,73 @@ public class SignupActivity extends BaseActionBarActivity {
 
     @Click(R.id.tvButton_signUp)
     void eventSignUp() {
-       // Toast.makeText(this,"Test",Toast.LENGTH_LONG).show();
+
         createAccount();
 
 
     }
 
     private void createAccount() {
-        View focusView = null;
+        checkUserName();
+        checkEmail();
+        checkPassWord();
+        checkPromotionCode();
+        if (mCheckUser == false || mCheckPass == false || mCheckEmail == false || mCheckPromotionCode == false) {
+            Toast.makeText(this, " Test not OK", Toast.LENGTH_SHORT).show();
+        }
+        if (mCheckUser == true && mCheckPass == true && mCheckEmail == true && mCheckPromotionCode == true) {
+            Toast.makeText(this, " Test  OK", Toast.LENGTH_SHORT).show();
 
-        String Username = mEdtUsername.getText().toString();
+
+        }
+    }
+
+    private void checkUserName() {
+        String UserName = mEdtUsername.getText().toString();
+
+
+        if (TextUtils.isEmpty(UserName)) {
+            mEdtUsername.setError(getString(R.string.error_field_required));
+            mCheckUser = false;
+        } else {
+            mCheckUser = true;
+        }
+
+    }
+
+    private void checkPassWord() {
+
+        String ConfirmPassWord = mEdtConfirmPass.getText().toString();
         String PassWord = mEdtPassword.getText().toString();
-        String ConfirmPass = mEdtConfirmPass.getText().toString();
+        if (TextUtils.isEmpty(PassWord) || (PassWord.length() < 4) || ConfirmPassWord == null || !(PassWord.equals(ConfirmPassWord))) {
+            mEdtPassword.setError(getString(R.string.error_field_required));
+            mEdtConfirmPass.setError(getString(R.string.error_field_required));
+            mCheckPass = false;
+        } else {
+            mCheckPass = true;
+        }
+
+    }
+
+    private void checkEmail() {
         String Email = mEdtEmail.getText().toString();
-        String Promotion = mEdtPromotion.getText().toString();
-        if(TextUtils.isEmpty(Username)){
-            mEdtUsername.setError("Chưa nhập username");
-        }else if(TextUtils.isEmpty(PassWord)){
-            mEdtPassword.setError("Chưa nhập password");
-        }else if(TextUtils.isEmpty(Email)){
-            mEdtEmail.setError("Chưa nhập email");
-        }else if(TextUtils.isEmpty(Promotion)){
-           mEdtPromotion.setError("Chưa nhập promotion code");
+        if (TextUtils.isEmpty(Email) || !(Email.contains("@"))) {
+            mEdtEmail.setError(getString(R.string.error_field_required));
+            mCheckEmail = false;
+        } else {
+            mCheckEmail = true;
+        }
+
+
+    }
+
+    private void checkPromotionCode() {
+        String PromotionCode = mEdtPromotion.getText().toString();
+        if (TextUtils.isEmpty(PromotionCode)) {
+            mEdtPromotion.setError(getString(R.string.error_field_required));
+            mCheckPromotionCode = false;
+        } else {
+            mCheckPromotionCode = true;
         }
     }
 
