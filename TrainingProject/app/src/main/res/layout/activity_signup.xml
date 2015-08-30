@@ -63,7 +63,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/edtPassword"
-            android:hint="@string/activity.singup.hint.confirmpass" />
+            android:hint="@string/activity.singup.hint.confirmpass"
+            android:inputType="textPassword"/>
 
         <EditText
             android:id="@+id/edtPromotion"

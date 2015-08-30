@@ -5,4 +5,12 @@
     <dimen name="image.loading.circle_">10dp</dimen>
     <dimen name="relative.splash.center_">90dp</dimen>
     <dimen name="image.padding_">20dp</dimen>
+    <dimen name="activity.title.height">150dp</dimen>
+    <dimen name="signup.sub.margin">10dp</dimen>
+    <dimen name="activity.layout.margin">10dp</dimen>
+    <dimen name="signup.tv.heignt">30dp</dimen>
+    <dimen name="activity.signup.width">200dp</dimen>
+    <dimen name="activity.signup.height">50dp</dimen>
+    <dimen name="signup.tv.size">20sp</dimen>
+    <dimen name="signup.butonsigup.margintop">15dp</dimen>
 </resources>
