@@ -10,4 +10,7 @@
     <color name="header.background">#2196F3</color>
     <color name="main.background">#40BEBEBE</color>
     <color name="transparent">#00000000</color>
+    <color name="signup_blue_background">#00b9e6</color>
+    <color name="blue">#00b9e6</color>
+    <color name="signup_transparent_color">#a4080808</color>
 </resources>
