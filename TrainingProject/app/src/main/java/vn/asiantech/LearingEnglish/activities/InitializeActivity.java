@@ -16,18 +16,16 @@ import vn.asiantech.LearingEnglish.fragments.SplashFragment_;
 @EActivity(R.layout.activity_initialize)
 public class InitializeActivity extends BaseActionBarActivity {
 
-    @FragmentByTag ("SplashFragment")
+    @FragmentByTag("SplashFragment")
     protected SplashFragment mSplashFragment;
 
     @Override
     void afterView() {
-        if (mSplashFragment == null){
+        if (mSplashFragment == null) {
             mSplashFragment = SplashFragment_.builder().build();
         }
         FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
         ft.add(R.id.frameLayout, mSplashFragment, "SplashFragment");
         ft.commit();
     }
-
-
 }
