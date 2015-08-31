@@ -11,7 +11,10 @@ import vn.asiantech.LearingEnglish.R;
  */
 @EFragment(R.layout.fragment_note)
 public class NoteFragment extends BaseFragment {
+
+
     @AfterViews
     public void init() {
+
     }
 }

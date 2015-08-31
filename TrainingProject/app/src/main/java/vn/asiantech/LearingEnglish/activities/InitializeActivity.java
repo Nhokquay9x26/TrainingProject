@@ -6,6 +6,7 @@ import org.androidannotations.annotations.EActivity;
 import org.androidannotations.annotations.FragmentByTag;
 
 import vn.asiantech.LearingEnglish.R;
+import vn.asiantech.LearingEnglish.core.fragments.Fragment;
 import vn.asiantech.LearingEnglish.fragments.SplashFragment;
 import vn.asiantech.LearingEnglish.fragments.SplashFragment_;
 
@@ -29,5 +30,10 @@ public class InitializeActivity extends BaseActionBarActivity {
         ft.commit();
     }
 
+    public void replaceFragment(Fragment layoutID){
+        FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+        ft.replace(R.id.frameLayout, layoutID);
+        ft.commit();
+    }
 
 }

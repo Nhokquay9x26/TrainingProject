@@ -10,4 +10,13 @@
     <color name="edittext.color.line">#00b9e6</color>
     <color name="button.text.color.signin">#FFFFFF</color>
     <color name="textview.color.forgot_password">#00b9e6</color>
+
+    <color name="rl.background.favorite">#00b9e6</color>
+    <color name="textview.color.favorite.title">#FFFFFF</color>
+    <color name="rl.background.list">#C0C0C0</color>
+    <color name="rl.background.detail">#00b9e6</color>
+    <color name="textview.color.detail.title">#FFFFFF</color>
+    <color name="rl.background.vocabulary">#C0C0C0</color>
+    <color name="rl.img.vocabulary">#FFFFFF</color>
+    <color name="textview.color.mean">#FF0000</color>
 </resources>
