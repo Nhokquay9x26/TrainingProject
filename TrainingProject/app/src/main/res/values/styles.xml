@@ -1,7 +1,18 @@
 <resources>
 
+    <style name="AppTheme" parent="MyMaterialTheme.Base">
+
+    </style>
+
+    <style name="MyMaterialTheme.Base" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="colorPrimaryDark">@color/colorPrimary</item>
+    </style>
+
+
     <!-- Base application theme. -->
-    <style name="MyTheme" parent="Theme.AppCompat.Light.DarkActionBar"></style>
+    <style name="MyTheme" parent="Theme.AppCompat.Light.NoActionBar"></style>
 
     <!--Dialog-->
     <style name="MyTheme.Dialog" parent="MyTheme">
@@ -25,4 +36,11 @@
     <style name="MyTheme.Fullscreen" parent="MyTheme">
         <item name="android:windowFullscreen">true</item>
     </style>
+
+    <style name="style_text_header">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/size_text_header</item>
+    </style>
+
+
 </resources>
