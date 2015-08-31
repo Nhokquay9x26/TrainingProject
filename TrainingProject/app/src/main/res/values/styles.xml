@@ -42,5 +42,7 @@
         <item name="android:textSize">@dimen/size_text_header</item>
     </style>
 
-
+    <style name="DialogForgetPassword" parent="android:Theme.Dialog">
+        <item name="android:windowNoTitle">true</item>
+    </style>
 </resources>
