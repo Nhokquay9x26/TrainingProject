@@ -1,64 +1,113 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/llMain"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/splash_screen"
     android:orientation="vertical">
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:background="@color/background_header_login"
-        android:gravity="center">
-
-        <ImageView
-            android:layout_width="110dp"
-            android:layout_height="110dp"
-            android:src="@drawable/ico_avatar_xhd" />
-    </LinearLayout>
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginBottom="10dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginTop="40dp"
-        android:orientation="vertical">
+        android:background="@color/sign_in.body_layout.background.transparent">
 
-        <EditText
-            android:id="@+id/edtUsername"
+        <RelativeLayout
+            android:id="@+id/rlHeader"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:hint="@string/username_email" />
+            android:layout_height="@dimen/sign_in.hight.header"
+            android:layout_marginLeft="@dimen/margin.relative"
+            android:layout_marginRight="@dimen/margin.relative"
+            android:layout_marginTop="@dimen/margin.relative"
+            android:background="@color/sign_in.header.background">
 
-        <EditText
-            android:id="@+id/edtPassword"
+            <ImageView
+                android:id="@+id/imgIconSignIn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/img_avatar" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlBody"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_below="@+id/edtUsername"
-            android:layout_marginTop="20dp"
-            android:hint="@string/password" />
-
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="70dp"
-            android:layout_below="@+id/edtPassword"
-            android:layout_gravity="center"
-            android:layout_marginTop="50dp"
-            android:background="@color/background_header_login"
-            android:text="@string/Sign_in"
-            android:textAllCaps="false"
-            android:textColor="@color/text_signin"
-            android:textSize="20sp" />
-
-        <TextView
-            android:id="@+id/tvForgotPassword"
-            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true"
-            android:layout_gravity="center"
-            android:text="Forgot Password?"
-            android:textColor="@color/text_forgotPassword" />
+            android:layout_below="@+id/rlHeader"
+            android:layout_marginLeft="@dimen/margin.relative"
+            android:layout_marginRight="@dimen/margin.relative"
+            android:background="@color/sign_in.body_layout.background"
+            android:paddingBottom="@dimen/paddingbottom.textview.llbody">
+
+            <EditText
+                android:id="@+id/edtUserName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="@dimen/magin_left.edittext"
+                android:layout_marginRight="@dimen/magin_right.edittext"
+                android:layout_marginTop="@dimen/magin_top.edittext"
+                android:backgroundTint="@android:color/holo_blue_light"
+                android:hint="@string/edittext.hint.user_name"
+                android:inputType="textEmailAddress" />
+
+            <EditText
+                android:id="@+id/edtPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/edtUserName"
+                android:layout_marginStart="@dimen/magin_left.edittext"
+                android:layout_marginEnd="@dimen/magin_right.edittext"
+                android:layout_marginLeft="@dimen/magin_left.edittext"
+                android:layout_marginRight="@dimen/magin_right.edittext"
+                android:layout_marginTop="@dimen/magin_top.edittext"
+                android:backgroundTint="@android:color/holo_blue_light"
+                android:hint="@string/edittext.hint.password"
+                android:inputType="textPassword" />
+
+            <Button
+                android:id="@+id/btnSignIn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/edtPassword"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="@dimen/magin_left.edittext"
+                android:layout_marginRight="@dimen/magin_right.edittext"
+                android:layout_marginTop="@dimen/magin_top.edittext"
+                android:background="@color/sign_in.header.background"
+                android:text="@string/textview_button.sign_in"
+                android:textAllCaps="false"
+                android:textColor="@color/sign_in.text.button" />
+
+            <TextView
+                android:id="@+id/tvForgotPassWord"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btnSignIn"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/magin_top.edittext"
+                android:text="@string/textview.forgot_password"
+                android:textColor="@color/sign_in.header.background" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rlBody">
+
+            <Button
+                android:id="@+id/btnSignUp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="@dimen/magin_left.edittext"
+                android:layout_marginRight="@dimen/magin_right.edittext"
+                android:layout_marginTop="@dimen/magin_top.edittext"
+                android:background="@color/sign_in.body_layout.background"
+                android:text="@string/textview_button.sign_up"
+                android:textAllCaps="false"
+                android:textColor="@color/sign_in.textview.forgot_password" />
+        </RelativeLayout>
     </RelativeLayout>
 </LinearLayout>
