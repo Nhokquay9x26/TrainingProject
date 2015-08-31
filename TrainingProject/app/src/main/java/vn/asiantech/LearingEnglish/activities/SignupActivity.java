@@ -11,17 +11,18 @@ import org.androidannotations.annotations.ViewById;
 import vn.asiantech.LearingEnglish.R;
 
 /**
+ * @Author MrSon
  * Created by mrson on 28/08/2015.
  */
 @EActivity(R.layout.activity_signup)
 public class SignupActivity extends BaseActionBarActivity {
-    @ViewById(R.id.edt_username)
+    @ViewById(R.id.edtUsername)
     EditText mEdtUsername;
-    @ViewById(R.id.edt_email)
+    @ViewById(R.id.edtEmail)
     EditText mEdtEmail;
     @ViewById(R.id.edtPassword)
     EditText mEdtPassword;
-    @ViewById(R.id.edtConfirm_pass)
+    @ViewById(R.id.edtConfirmPass)
     EditText mEdtConfirmPass;
     @ViewById(R.id.edtPromotion)
     EditText mEdtPromotion;
@@ -29,19 +30,14 @@ public class SignupActivity extends BaseActionBarActivity {
     private boolean mCheckPass;
     private boolean mCheckPromotionCode;
     private boolean mCheckEmail;
-
-
     @Override
     void afterView() {
 
     }
 
-    @Click(R.id.tvButton_signUp)
+    @Click(R.id.tvButtonSignUp)
     void eventSignUp() {
-
         createAccount();
-
-
     }
 
     private void createAccount() {
@@ -49,41 +45,34 @@ public class SignupActivity extends BaseActionBarActivity {
         checkEmail();
         checkPassWord();
         checkPromotionCode();
-        if (mCheckUser == false || mCheckPass == false || mCheckEmail == false || mCheckPromotionCode == false) {
+        if (!mCheckUser || !mCheckPass || !mCheckEmail || !mCheckPromotionCode) {
             Toast.makeText(this, " Test not OK", Toast.LENGTH_SHORT).show();
         }
-        if (mCheckUser == true && mCheckPass == true && mCheckEmail == true && mCheckPromotionCode == true) {
+        if (mCheckUser && mCheckPass && mCheckEmail && mCheckPromotionCode) {
             Toast.makeText(this, " Test  OK", Toast.LENGTH_SHORT).show();
-
-
         }
     }
 
     private void checkUserName() {
         String UserName = mEdtUsername.getText().toString();
-
-
         if (TextUtils.isEmpty(UserName)) {
             mEdtUsername.setError(getString(R.string.error_field_required));
             mCheckUser = false;
         } else {
             mCheckUser = true;
         }
-
     }
 
     private void checkPassWord() {
-
         String ConfirmPassWord = mEdtConfirmPass.getText().toString();
         String PassWord = mEdtPassword.getText().toString();
-        if (TextUtils.isEmpty(PassWord) || (PassWord.length() < 4) || ConfirmPassWord == null || !(PassWord.equals(ConfirmPassWord))) {
+        if (TextUtils.isEmpty(PassWord) || (PassWord.length() < 4) || !(PassWord.equals(ConfirmPassWord))) {
             mEdtPassword.setError(getString(R.string.error_field_required));
             mEdtConfirmPass.setError(getString(R.string.error_field_required));
             mCheckPass = false;
         } else {
             mCheckPass = true;
         }
-
     }
 
     private void checkEmail() {
@@ -94,8 +83,6 @@ public class SignupActivity extends BaseActionBarActivity {
         } else {
             mCheckEmail = true;
         }
-
-
     }
 
     private void checkPromotionCode() {
@@ -107,6 +94,4 @@ public class SignupActivity extends BaseActionBarActivity {
             mCheckPromotionCode = true;
         }
     }
-
-
 }
