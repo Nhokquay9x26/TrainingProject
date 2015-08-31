@@ -12,6 +12,7 @@ import java.util.TimerTask;
 import vn.asiantech.LearingEnglish.R;
 
 /**
+ * @Author TanTv
  * Created by tantv on 27/08/2015.
  */
 
@@ -29,23 +30,19 @@ public class SplashScreenActivity extends BaseActionBarActivity {
         getSupportActionBar().hide();
         //********* box incrementing ***********
         mImgincrementingBoxView.setVisibility(View.GONE);
-        //--------------------------------------
         //Call Method set Timer
         setTimer();
-
     }
 
     /**
      * set Timer Activity Timer = 3s
      */
-
     private void setTimer() {
         mTimer = new Timer();
         mIntent = new Intent(this, LoginActivity_.class);
         mImgincrementingBoxView.setVisibility(View.VISIBLE);
         incrementalHorizontalLoading();
         mTimer.schedule(new TimerTask() {
-
             @Override
             public void run() {
                 startActivity(mIntent);
@@ -57,5 +54,4 @@ public class SplashScreenActivity extends BaseActionBarActivity {
         mMyAnimationDrawable1 = (AnimationDrawable) mImgincrementingBoxView.getDrawable();
         mMyAnimationDrawable1.start();
     }
-
 }
