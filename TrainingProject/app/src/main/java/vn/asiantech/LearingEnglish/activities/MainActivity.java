@@ -31,7 +31,7 @@ public class MainActivity extends BaseActionBarActivity {
             mMainFragment = MainFragment_.builder().build();
         }
         FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-        ft.add(R.id.frameLayout, mMainFragment, "MainFragment");
+        ft.add(R.id.main_container, mMainFragment, "MainFragment");
         ft.commit();
     }
 }
