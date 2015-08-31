@@ -90,7 +90,7 @@
             android:text="@string/signup.tv.check" />
 
         <TextView
-            android:id="@+id/tvButton_signUp"
+            android:id="@+id/tvButtonSignUp"
             android:layout_width="@dimen/activity.signup.width"
             android:layout_height="@dimen/activity.signup.height"
             android:layout_below="@+id/tvSub"
