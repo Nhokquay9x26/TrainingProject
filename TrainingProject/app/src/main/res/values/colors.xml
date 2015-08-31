@@ -5,4 +5,8 @@
     <color name="text_signin">#ffffff</color>
     <color name="text_forgotPassword">#00b9e6</color>
     <color name="white">#FFFFFF</color>
+    <color name="signup_blue_background">#00b9e6</color>
+    <color name="blue">#00b9e6</color>
+    <color name="signup_transparent_color">#a4080808</color>
+
 </resources>
