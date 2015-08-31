@@ -9,32 +9,42 @@
         android:layout_height="@dimen/rl.testing.rl_menubar_height"
         android:background="@color/color.testing.menubar">
 
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_centerInParent="true"
+            android:text="@string/testing.textview.text_title"
+            android:textColor="@color/color.white"
+            android:textSize="@dimen/testing.textview.text_size_title" />
+
+        <ImageView
+            android:layout_width="@dimen/rl.testing.rl_menubar_height"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
             android:background="@color/color.no.color"
-            android:src="@mipmap/ico_testing_title" />
+            android:padding="@dimen/testing.imageview.padding_btn_search"
+            android:src="@mipmap/btn_search_xhd" />
     </RelativeLayout>
 
     <RelativeLayout
         android:id="@+id/rlTimeDetail"
-        android:layout_below="@+id/rlMenubarTesting"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/color.testing.detail_time"
-        android:paddingTop="@dimen/rl.testing.rl_detail_time_paddingtop"
+        android:layout_below="@+id/rlMenubarTesting"
+        android:background="@anim/rectangle_detail_time"
         android:paddingBottom="@dimen/rl.testing.rl_detail_time_paddingbottom"
-        >
+        android:paddingTop="@dimen/rl.testing.rl_detail_time_paddingtop">
 
         <TextView
             android:id="@+id/tvTotalQuestion"
-            android:layout_alignParentLeft="true"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
             android:layout_marginLeft="@dimen/margin.left"
             android:text="@string/text.testing.number_question"
-            android:textSize="@dimen/textview.testing.tv_number_question_size" />
+            android:textSize="@dimen/testing.textview.size_number_question" />
 
         <TextView
             android:id="@+id/tvLeftQuestion"
@@ -42,60 +52,94 @@
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:text="@string/text.testing.left_number"
-            android:textSize="@dimen/textview.testing.tv_left_number_size" />
+            android:textSize="@dimen/testing.textview.size_left_question" />
 
         <TextView
+
             android:id="@+id/tvTimeLeft"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:layout_marginRight="@dimen/margin.right"
             android:text="@string/text.testing.time_left"
-            android:textSize="@dimen/textview.testing.tv_time_left_size" />
+            android:textSize="@dimen/testing.textview.size_time_left" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
     </RelativeLayout>
+
     <android.support.v4.view.ViewPager
         android:id="@+id/viewpager"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@+id/rlButtonBottom"
+        android:layout_above="@+id/viewBottom"
         android:layout_below="@+id/rlTimeDetail" />
 
     <RelativeLayout
         android:id="@+id/rlButtonBottom"
         android:layout_width="match_parent"
         android:layout_height="@dimen/rl.testing.rl_contains_button_height"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="@dimen/rl.testing.rl_margin_bottom">
+        android:layout_above="@+id/viewBottom"
+        android:layout_marginBottom="@dimen/testing.rl.btn_margin_bottom">
 
-        <Button
-            android:id="@+id/btnPrevious"
-            android:layout_width="@dimen/button.testing.btn_previous_width"
-            android:layout_height="@dimen/button.testing.btn_previous_height"
-            android:layout_alignParentLeft="true"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="@dimen/margin.left"
-            android:background="@color/color.testing.button_previous"
-            android:text="@string/button.testing.previous"
-            android:textSize="@dimen/button.testing.btn_previous_textsize" />
+        <View
 
-        <Button
-            android:id="@+id/btnSubmit"
-            android:layout_width="@dimen/button.testing.btn_submit_width"
-            android:layout_height="@dimen/button.testing.btn_submit_height"
+            android:id="@+id/viewLine"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="@dimen/testing.view.viewline_margin_left"
+            android:layout_marginRight="@dimen/testing.view.viewline_margin_right"
+            android:background="@color/color.testing.viewLine" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
             android:layout_centerInParent="true"
-            android:background="@color/color.testing.button_submit"
-            android:text="@string/button.testing.submit"
-            android:textSize="@dimen/button.testing.btn_submit_textsize" />
+            android:orientation="horizontal"
+            android:weightSum="4">
 
-        <Button
-            android:id="@+id/btnNext"
-            android:layout_width="@dimen/button.testing.btn_next_width"
-            android:layout_height="@dimen/button.testing.btn_next_height"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:layout_marginRight="@dimen/margin.right"
-            android:background="@color/color.testing.button_next"
-            android:text="@string/button.testing.next"
-            android:textSize="@dimen/button.testing.btn_next_textsize" />
+
+            <ImageView
+                android:id="@+id/imgPrevious"
+                android:layout_width="@dimen/testing.imageview.img_previous_width"
+                android:layout_height="@dimen/testing.imageview.img_previous_height"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:background="@color/color.no.color"
+                android:scaleType="centerInside"
+                android:src="@mipmap/ico_previous_xhd" />
+
+            <TextView
+                android:id="@+id/tvNumberOfQuestion"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/testing.textview.number_of_question_width"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="2"
+                android:background="@color/color.testing.tv_number_of_question"
+                android:gravity="center"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="@string/testing.textview.number_of_question"
+                android:textSize="@dimen/button.testing.btn_submit_textsize" />
+
+            <ImageView
+                android:id="@+id/imgNext"
+                android:layout_width="@dimen/testing.imageview.img_next_width"
+                android:layout_height="@dimen/testing.imageview.img_next_height"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:background="@color/color.no.color"
+                android:scaleType="centerInside"
+                android:src="@mipmap/ico_next_xhd" />
+        </LinearLayout>
     </RelativeLayout>
+
+    <View
+        android:id="@+id/viewBottom"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/testing.view.height_bottom"
+        android:layout_alignParentBottom="true"
+        android:background="@color/color.testing.menubar" />
+
 </RelativeLayout>

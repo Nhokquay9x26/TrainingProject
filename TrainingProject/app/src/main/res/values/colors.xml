@@ -7,9 +7,11 @@
     <color name="color.white">#FFFFFF</color>
     <color name="color.black">#000000</color>
     <color name="color.no.color">#00000000</color>
-    <color name="color.testing.menubar">#4fd6db</color>
-    <color name="color.testing.detail_time">#0cf2f0</color>
-    <color name="color.testing.button_previous">#c7ff85</color>
-    <color name="color.testing.button_submit">#f15928</color>
-    <color name="color.testing.button_next">#c7ff85</color>
+    <color name="color.testing.menubar">#19bce9</color>
+
+    <color name="color.testing.tv_number_of_question">#68d5f3</color>
+    <color name="color.testing.viewLine">#bfecf8</color>
+    <color name="color.red">#ee5858</color>
+
+
 </resources>

@@ -1,15 +1,16 @@
-package vn.asiantech.LearingEnglish.activities;
+package vn.asiantech.LearingEnglish.adapter;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentStatePagerAdapter;
+import android.support.v4.app.FragmentPagerAdapter;
 
 import java.util.ArrayList;
 
 /**
  * Created by tantv on 28/08/2015.
  */
-public class TestingAdapter extends FragmentStatePagerAdapter {
+
+public class TestingAdapter extends FragmentPagerAdapter {
     private ArrayList<Fragment> mTestingFragment;
     public TestingAdapter(FragmentManager fm,ArrayList<Fragment> testingFragment) {
         super(fm);
@@ -26,4 +27,6 @@ public class TestingAdapter extends FragmentStatePagerAdapter {
     public int getCount() {
         return mTestingFragment.size();
     }
+
+
 }
