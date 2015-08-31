@@ -4,6 +4,7 @@
     <string name="Sign_in">Sign in</string>
     <string name="username_email">Username / Email Address</string>
     <string name="password">Password</string>
+<<<<<<< HEAD
     <string name="signup.tv.sub">Tape to change profile</string>
     <string name="activity.signup.hint.user">Username</string>
     <string name="activity.signup.hint.email">Email</string>
@@ -17,4 +18,10 @@
     <string name="error_invalid_password">Password is too short</string>
     <string name="error_field_required">This field is required</string>
     <string name="error_invalid_email">This email is</string>
+=======
+    <string name="signup">Sign up</string>
+    <string name="fogotpassword">Forgot Password?</string>
+    <string name="title_activity_login_activity">LoginActivity</string>
+    <string name="action_settings">Settings</string>
+>>>>>>> group2-subMaster
 </resources>

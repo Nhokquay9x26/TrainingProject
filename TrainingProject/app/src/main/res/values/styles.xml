@@ -25,4 +25,9 @@
     <style name="MyTheme.Fullscreen" parent="MyTheme">
         <item name="android:windowFullscreen">true</item>
     </style>
+
+    <style name="login_tv_forgot_signUp">
+        <item name="android:textColor">@color/text_forgotPassword</item>
+        <item name="android:gravity">center</item>
+    </style>
 </resources>
