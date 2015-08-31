@@ -14,4 +14,11 @@
     <color name="signup_blue_background">#00b9e6</color>
     <color name="blue">#00b9e6</color>
     <color name="signup_transparent_color">#a4080808</color>
+
+    <color name="sign_in.header.background">#009dd9</color>
+    <color name="sign_in.text.button">#ffffff</color>
+    <color name="sign_in.body_layout.background">#ffffff</color>
+    <color name="sign_in.body_layout.background.transparent">#7f000000</color>
+    <color name="sign_in.textview.forgot_password">#009dd9</color>
+
 </resources>

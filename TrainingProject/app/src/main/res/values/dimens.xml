@@ -19,17 +19,4 @@
     <dimen name="signup_button_login">40dp</dimen>
     <dimen name="signup_edt_paddingLeft">10dp</dimen>
     <dimen name="signup_ll_margin_transparent">20dp</dimen>
-    <dimen name="button.forgot_email_margin_top">20dp</dimen>
-    <dimen name="editText.email_margin_top">20dp</dimen>
-    <dimen name="relativeLayout.header_forget_password_height">40dp</dimen>
-    <dimen name="editText.email_margin_left">20dp</dimen>
-    <dimen name="editText.email_margin_right">20dp</dimen>
-    <dimen name="button.forgot_email_text_size">16sp</dimen>
-    <dimen name="editText.email_height">50dp</dimen>
-    <dimen name="textView.dialog_forget_password_title_size">20sp</dimen>
-    <dimen name="textView.dialog_forget_password_title_margin_left">10dp</dimen>
-    <dimen name="button.forgot_password_width">120dp</dimen>
-    <dimen name="view.below_editText">1dp</dimen>
-    <dimen name="relativeLayout.dialog_forget_password_height">200dp</dimen>
-    <dimen name="button.forgot_password_height">40dp</dimen>
 </resources>
