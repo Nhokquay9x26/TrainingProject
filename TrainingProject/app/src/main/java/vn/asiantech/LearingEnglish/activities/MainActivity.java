@@ -11,8 +11,6 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.astuetz.PagerSlidingTabStrip;
-
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.EActivity;
 import org.androidannotations.annotations.ViewById;
@@ -24,6 +22,7 @@ import vn.asiantech.LearingEnglish.container.TabThreeContainer;
 import vn.asiantech.LearingEnglish.container.TabTwoContainer;
 import vn.asiantech.LearingEnglish.fragments.BaseContainerFragment;
 import vn.asiantech.LearingEnglish.views.HackyViewPager;
+import vn.asiantech.LearingEnglish.views.PagerSlidingTabStrip;
 
 
 @EActivity(R.layout.activity_main)

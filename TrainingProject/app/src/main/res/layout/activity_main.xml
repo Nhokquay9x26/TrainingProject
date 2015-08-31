@@ -16,7 +16,7 @@
         android:layout_weight="1"
         android:layout_height="match_parent" />
 
-    <com.astuetz.PagerSlidingTabStrip
+    <vn.asiantech.LearingEnglish.views.PagerSlidingTabStrip
         android:id="@+id/tabs"
         android:layout_alignParentBottom="true"
         android:layout_width="match_parent"
