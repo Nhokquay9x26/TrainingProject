@@ -13,4 +13,5 @@
     <dimen name="activity.signup.height">50dp</dimen>
     <dimen name="signup.tv.size">20sp</dimen>
     <dimen name="signup.butonsigup.margintop">15dp</dimen>
+
 </resources>
