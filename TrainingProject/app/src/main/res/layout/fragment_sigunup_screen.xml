@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/signup_transparent_color">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/signup_ll_margin_transparent"
+            android:layout_marginLeft="@dimen/signup_ll_margin_transparent"
+            android:layout_marginRight="@dimen/signup_ll_margin_transparent"
+            android:layout_marginTop="@dimen/signup_ll_margin_transparent"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/signup_avatar"
+                android:background="@color/signup_blue_background">
+
+                <ImageView
+                    android:id="@+id/imgAvatar"
+                    android:layout_width="@dimen/img_width"
+                    android:layout_height="@dimen/img_height"
+                    android:layout_centerInParent="true"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ico_avatar_xhd" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/imgAvatar"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/tv_marginTop"
+                    android:text="@string/textview.text.please_tap_to_change_ava"
+                    android:textSize="@dimen/textview.size" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/signup_ll_margin_left"
+                android:layout_marginRight="@dimen/signup_ll_margin_right"
+                android:layout_marginTop="@dimen/signup_ll_margin_top"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/edtUsername"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/signup_editext_hint_username"
+                    android:paddingLeft="@dimen/signup_edt_paddingLeft" />
+
+                <EditText
+                    android:id="@+id/edtEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/signup_editext_hint_email"
+                    android:inputType="textEmailAddress"
+                    android:paddingLeft="@dimen/signup_edt_paddingLeft" />
+
+                <EditText
+                    android:id="@+id/edtPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/signup_editext_hint_pass"
+                    android:inputType="textPassword"
+                    android:paddingLeft="@dimen/signup_edt_paddingLeft" />
+
+                <EditText
+                    android:id="@+id/edtConfirmPass"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/signup_editext_hint_confirmPass"
+                    android:inputType="textPassword"
+                    android:paddingLeft="@dimen/signup_edt_paddingLeft" />
+
+                <EditText
+                    android:id="@+id/edtPromotionCode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/signup_editext_hint_promotionCode"
+                    android:inputType="textVisiblePassword"
+                    android:paddingLeft="@dimen/signup_edt_paddingLeft" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/signup_ll_margin_top"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:shadowColor="@color/blue" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/signup_tv_marlinleft"
+                        android:text="@string/textview.text.notification"
+                        android:textSize="@dimen/textview.size.notification" />
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btnSignUp"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/signup_button_login"
+                    android:layout_marginTop="@dimen/signup_ll_margin_top"
+                    android:background="@color/blue"
+                    android:gravity="center"
+                    android:text="@string/signup_button_login"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

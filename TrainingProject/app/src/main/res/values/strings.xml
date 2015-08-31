@@ -4,4 +4,12 @@
     <string name="Sign_in">Sign in</string>
     <string name="username_email">Username / Email Address</string>
     <string name="password">Password</string>
+    <string name="textview.text.please_tap_to_change_ava">tap to change profile image</string>
+    <string name="signup_editext_hint_username">Username</string>
+    <string name="signup_editext_hint_email">Email</string>
+    <string name="signup_editext_hint_pass">Password</string>
+    <string name="signup_editext_hint_confirmPass">Confirm Password</string>
+    <string name="signup_editext_hint_promotionCode">Promotion Code (if applicable)</string>
+    <string name="textview.text.notification">I wish to subcribe to daily deal alert via email</string>
+    <string name="signup_button_login">Sign up</string>
 </resources>
