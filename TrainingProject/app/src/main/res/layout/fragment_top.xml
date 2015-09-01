@@ -1,0 +1,63 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/top.mau_nen"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rlTopNen"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/relativelayout.top.heigght.118dp"
+        android:background="@color/blue.top">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/textView.top.text"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textView.top.textSize.13pt"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"/>
+
+        <ImageView
+            android:id="@+id/imgTopSearch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_search"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:contentDescription="@null"
+            android:layout_marginEnd="@dimen/img.top.marginLeft.28dp"
+            android:layout_marginRight="@dimen/img.top.marginLeft.28dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/txtNen"
+        android:layout_below="@+id/rlTopNen"
+        android:background="@drawable/bg_top_listview"
+        android:layout_marginBottom="@dimen/relativelayout.top.marginBottom.6dp"
+        android:layout_marginEnd="@dimen/relativelayout.top.marginRight.14dp"
+        android:layout_marginRight="@dimen/relativelayout.top.marginRight.14dp"
+        android:layout_marginTop="@dimen/relativelayout.top.margintop.22dp"
+        android:layout_marginStart="@dimen/relativelayout.top.marginLeft.14dp"
+        android:layout_marginLeft="@dimen/relativelayout.top.marginLeft.14dp">
+
+        <ListView
+            android:id="@+id/lvTop"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@android:color/transparent" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/txtNen"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/textview.top.height.50dp"
+        android:background="@color/blue.top"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>
