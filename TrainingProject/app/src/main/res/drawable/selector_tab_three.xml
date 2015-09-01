@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <selector xmlns:android="http://schemas.android.com/apk/res/android" android:dither="true">
-    <item android:drawable="@drawable/ic_favorite_focus" android:state_pressed="true" />
-    <item android:drawable="@drawable/ic_favorite_focus" android:state_selected="true" />
-    <item android:drawable="@drawable/ic_favorite" />
+    <item android:drawable="@drawable/ic_tab_focus" android:state_pressed="true" />
+    <item android:drawable="@drawable/ic_tab_focus" android:state_selected="true" />
+    <item android:drawable="@drawable/ic_tab" />
 </selector>

@@ -35,6 +35,7 @@ public class LoginActivity extends BaseActionBarActivity {
         final String password = mEdtPassword.getText().toString();
         if (email.length() > 0 && password.length() > 0) {
             MainActivity_.intent(LoginActivity.this).start();
+            finish();
         } else {
             Toast.makeText(getApplicationContext(), MESSAGE_ERROR_LOGIN, Toast.LENGTH_LONG).show();
         }
