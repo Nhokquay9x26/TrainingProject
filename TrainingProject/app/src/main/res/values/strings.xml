@@ -16,4 +16,9 @@
     <string name="signup_editext_hint_promotionCode">Promotion Code (if applicable)</string>
     <string name="textview.text.notification">I wish to subcribe to daily deal alert via email</string>
     <string name="signup_button_login">Sign up</string>
+    <string name="textview_button.sign_in">Sign in</string>
+    <string name="textview_button.sign_up">Sign Up</string>
+    <string name="edittext.hint.user_name">Username/ Email Address</string>
+    <string name="edittext.hint.password">Password</string>
+    <string name="textview.forgot_password">Forgot Password?</string>
 </resources>
