@@ -11,6 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import vn.asiantech.LearingEnglish.R;
+import vn.asiantech.LearingEnglish.fragments.BaseFragment;
 
 /**
  * Created by tientun on 3/5/15.
@@ -80,12 +81,11 @@ public class Fragment extends android.support.v4.app.Fragment {
      * @param fragment
      */
     public void addChildFragment(android.support.v4.app.Fragment fragment) {
-        Log.d("xxx", getView()+"");
         if (getParentFragment() != null && getParentFragment() instanceof Fragment) {
             ((Fragment) getParentFragment()).addChildFragment(fragment);
             return;
         }
-
+        Log.d("xxx",""+getView().getId());
         if (getView().getId() < 0) {
             Log.e(getClass().getSimpleName(), "Please set ID for fragment layout");
             return;
@@ -128,6 +128,28 @@ public class Fragment extends android.support.v4.app.Fragment {
         }
         return isPop;
     }
+
+    /**
+     * Add Fragment no animation
+     * @param fragment
+     */
+
+    public void addChildFragmentNotAnimation(Fragment fragment) {
+        if (getParentFragment() != null && getParentFragment() instanceof BaseFragment) {
+            ((BaseFragment) getParentFragment()).addChildFragmentNotAnimation(fragment);
+            return;
+        }
+        if (getView().getId() < 0) {
+            Log.e(getClass().getSimpleName(), "Please set ID for fragment layout");
+            return;
+        }
+        FragmentTransaction fragmentTransaction = getChildFragmentManager().beginTransaction();
+        fragmentTransaction.add(getView().getId(), fragment, fragment.getClass().getSimpleName());
+        fragmentTransaction.addToBackStack(null);
+        fragmentTransaction.commit();
+        fragList.add(new WeakReference(fragment));
+    }
+
 
     /**
      * Get last child fragment

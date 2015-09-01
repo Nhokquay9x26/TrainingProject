@@ -54,6 +54,4 @@ public class BaseFragment extends Fragment {
                 .create();
         alertDialog.show();
     }
-
-
 }

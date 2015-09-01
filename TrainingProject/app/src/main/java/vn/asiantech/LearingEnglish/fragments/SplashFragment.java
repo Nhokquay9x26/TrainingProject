@@ -1,5 +1,6 @@
 package vn.asiantech.LearingEnglish.fragments;
 
+import android.util.Log;
 import android.widget.Button;
 
 import org.androidannotations.annotations.AfterViews;
@@ -8,7 +9,6 @@ import org.androidannotations.annotations.EFragment;
 import org.androidannotations.annotations.ViewById;
 
 import vn.asiantech.LearingEnglish.R;
-import vn.asiantech.LearingEnglish.activities.MainActivity_;
 
 /**
  * Copyright © 2015 AsianTech inc.
@@ -26,8 +26,11 @@ public class SplashFragment extends BaseFragment {
 
     @Click(R.id.btnMainActivity)
     protected void onClick() {
-        MainActivity_.intent(getActivity()).start();
-        getActivity().finish();
+//        MainActivity_.intent(getActivity()).start();
+//        getActivity().finish();
+        // TODO: 9/1/15
+        Log.d("xxx",""+getView().getId());
+        addChildFragment(TestFragment_.builder().build());
     }
 
 }

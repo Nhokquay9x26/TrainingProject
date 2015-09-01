@@ -18,6 +18,7 @@ public class TopFragment extends BaseFragment {
 
     @Click(R.id.btnTest)
     protected void onClick() {
-        addChildFragment(SettingFragment_.builder().build());
+        PhuQuyFragment fragment = PhuQuyFragment_.builder().build();
+        addChildFragment(fragment);
     }
 }
