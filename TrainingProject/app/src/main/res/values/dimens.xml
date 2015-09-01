@@ -5,4 +5,57 @@
     <dimen name="image.loading.circle_">10dp</dimen>
     <dimen name="relative.splash.center_">90dp</dimen>
     <dimen name="image.padding_">20dp</dimen>
+
+    <dimen name="relativelayout.signup.height.120dp">120dp</dimen>
+    <dimen name="relativelayout.signup.margintop.30dp">30dp</dimen>
+    <dimen name="relativelayout.signup.marginLeft.23dp">23dp</dimen>
+    <dimen name="relativelayout.signup.marginRight.23dp">23dp</dimen>
+    <dimen name="img.signup.height.80dp">80dp</dimen>
+    <dimen name="img.signup.width.80dp">80dp</dimen>
+    <dimen name="img.signup.margintop.10dp">10dp</dimen>
+    <dimen name="textview.signup.marginBottom.8dp">8dp</dimen>
+    <dimen name="relativelayout.signup.marginLeft.22dp">22dp</dimen>
+    <dimen name="relativelayout.signup.marginRight.22dp">22dp</dimen>
+    <dimen name="relativelayout.signup.margintop.5dp">5dp</dimen>
+    <dimen name="checkbox.signup.margintop.20dp">20dp</dimen>
+    <dimen name="textview.signup.marginLeft.10dp">10dp</dimen>
+    <dimen name="relativelayout.signup.height.370dp">370dp</dimen>
+    <dimen name="button.signup.textsize.7pt">7pt</dimen>
+    <dimen name="button.signup.height.45dp">45dp</dimen>
+    <dimen name="button.signup.textsize.5pt">5pt</dimen>
+    <dimen name="button.signup.height.30dp">30dp</dimen>
+
+    <dimen name="relativelayout.top.heigght.118dp">118dp</dimen>
+    <dimen name="textView.top.textSize.13pt">13pt</dimen>
+    <dimen name="img.top.marginLeft.28dp">28dp</dimen>
+    <dimen name="relativelayout.top.marginLeft.14dp">14dp</dimen>
+    <dimen name="relativelayout.top.marginRight.14dp">14dp</dimen>
+    <dimen name="relativelayout.top.margintop.22dp">22dp</dimen>
+    <dimen name="relativelayout.top.marginBottom.6dp">6dp</dimen>
+    <dimen name="drawable.radius">10dp</dimen>
+    <dimen name="drawable.stroke.width.1dp">1dp</dimen>
+    <dimen name="textview.top.height.50dp">50dp</dimen>
+
+    <dimen name="img.item_list_top_width.65dp">65dp</dimen>
+    <dimen name="img.item_list_top_height.65dp">65dp</dimen>
+    <dimen name="relativelayout.item_list_top.height.95dp">95dp</dimen>
+    <dimen name="img.item_list_top.marginLeft.11dp">11dp</dimen>
+    <dimen name="textView.item_list_top.textSize.8pt">10pt</dimen>
+    <dimen name="textView.item_list_top.marginLeft.14dp">14dp</dimen>
+    <dimen name="textView.item_list_top.view.height.1d">1dp</dimen>
+    <dimen name="img.item_list_top.marginRight.11dp">11dp</dimen>
+    <dimen name="img.item_list_top_height.32dp">32dp</dimen>
+    <dimen name="img.item_list_top_width.44dp">44dp</dimen>
+
+    <dimen name="relativelayout.ratings.margintop.25dp">25dp</dimen>
+    <dimen name="textview.ratings.marginRight.10dp">10dp</dimen>
+    <dimen name="textview.ratings.width.97dp">97dp</dimen>
+    <dimen name="textview.ratings.height.33dp">33dp</dimen>
+    <dimen name="relativeLayout.ratings.height.33dp">33dp</dimen>
+    <dimen name="relativelayout.ratings.marginRight.114dp">114dp</dimen>
+
+    <dimen name="textview.list.marginLeft.18dp">18dp</dimen>
+    <dimen name="relativelayout.itemRatings.height.79dp">79dp</dimen>
+    <dimen name="img.itemRatings.marginLeft.25dp">25dp</dimen>
+    <dimen name="textView.itemRatings.marginLeft.23dp">23dp</dimen>
 </resources>

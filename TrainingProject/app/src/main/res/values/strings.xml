@@ -4,4 +4,20 @@
     <string name="Sign_in">Sign in</string>
     <string name="username_email">Username / Email Address</string>
     <string name="password">Password</string>
+
+    <string name="textview.tap_to_change_profile_image">Tap to change profile image</string>
+    <string name="edittext.hint.username">Username</string>
+    <string name="edittext.hint.email">Email</string>
+    <string name="edittext.hint.password">Password</string>
+    <string name="edittext.hint.confirm_password">Confirm Password</string>
+    <string name="edittext.hint.promotion_code">Promotion Code</string>
+    <string name="textview.hint.via_email">I wish to subscribe to daily deal alert via email</string>
+    <string name="button.signin">Sign In</string>
+    <string name="buton.signup">Sign Up</string>
+
+    <string name="textView.top.text">Top</string>
+    <string name="textView.ratings.text">Ratings</string>
+    <string name="textview.retings.rank">Rank</string>
+    <string name="textview.retings.Points">Points</string>
+    <string name="textview.retings.user">User</string>
 </resources>

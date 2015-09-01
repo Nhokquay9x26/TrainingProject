@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <color name="background_tab_pressed">#6633B5E5</color>
     <color name="main">#377EB0</color>
     <color name="background_header_login">#00b9e6</color>
     <color name="text_signin">#ffffff</color>
@@ -7,4 +8,15 @@
     <color name="color.white">#FFFFFF</color>
     <color name="color.black">#000000</color>
     <color name="color.no.color">#00000000</color>
+
+    <color name="transparent">#a4080808</color>
+    <color name="blue">#00b9e6</color>
+    <color name="blue.top">#00b9e6</color>
+    <color name="signup.textcolorhint">#cd787878</color>
+    <color name="white">#ffffff</color>
+    <color name="top.mau_nen">#e8e9ea</color>
+    <color name="top.drawable.stroke">#e8e9ea</color>
+    <color name="black">#000000</color>
+    <color name="textview.ratings.textcolor">#5f6161</color>
+    <color name="relativelayout.ratings.Tint">#e8e9ea</color>
 </resources>
