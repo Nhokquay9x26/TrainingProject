@@ -21,6 +21,6 @@ public class MainActivity extends BaseActionBarActivity {
 
     @Override
     void afterView() {
-        SignupActivity_.intent(MainActivity.this).start();
+        TestFragmentActivity_.intent(MainActivity.this).start();
     }
 }
