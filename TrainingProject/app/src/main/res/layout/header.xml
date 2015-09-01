@@ -16,6 +16,7 @@
         android:orientation="vertical">
 
         <TextView
+            android:gravity="center_horizontal"
             android:id="@+id/tvTitleHeader"
             style="@style/style_text_header"
             android:layout_width="wrap_content"

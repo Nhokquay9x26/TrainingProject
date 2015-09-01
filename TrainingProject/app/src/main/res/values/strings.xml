@@ -4,7 +4,7 @@
     <string name="Sign_in">Sign in</string>
     <string name="username_email">Username / Email Address</string>
     <string name="password">Password</string>
-    <string name="tab_1">Top</string>
+    <string name="tab_1">tab 1</string>
     <string name="tab_2">tab 2</string>
     <string name="tab_3">tab 3</string>
     <string name="tab_4">tab 4</string>
@@ -24,5 +24,8 @@
     <string name="button.send_email_forget_password">Forgot</string>
     <string name="editText.email_hint">Email</string>
     <string name="textView.dialog_forget_password_title">Get pass</string>
+    <string name="textview.text.favorite">Favorite word</string>
+    <string name="textview.text.two">:</string>
+    <string name="textview.text.spell">/spell/</string>
     <string name="textView.top_category_name">Animal</string>
 </resources>

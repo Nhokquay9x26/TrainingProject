@@ -34,7 +34,7 @@ public class SplashScreenActivity extends BaseActionBarActivity implements Anima
                 }catch(InterruptedException e){
                     e.printStackTrace();
                 }finally {
-                    Intent intent = new Intent(getBaseContext(), LoginActivity_.class);
+                    Intent intent = new Intent(getBaseContext(), MainActivity_.class);
                     startActivity(intent);
                     finish();
                 }
