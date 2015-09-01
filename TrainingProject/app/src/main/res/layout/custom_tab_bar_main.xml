@@ -5,13 +5,13 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="55dp"
         android:layout_alignParentBottom="true"
         android:background="@color/custom_tabbar_main_background"
         android:orientation="horizontal">
 
         <LinearLayout
-            android:id="@+id/llTop"
+            android:id="@+id/llHome"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -19,17 +19,17 @@
             android:orientation="vertical">
 
             <ImageView
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_marginTop="5dp"
-                android:background="#fff" />
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:src="@drawable/icon_top_b"
+                android:id="@+id/imgHome"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/img_home"
-                android:text="Top"
-                android:textColor="#fff" />
+                android:text="Home"
+                android:id="@+id/tvHome"/>
 
         </LinearLayout>
 
@@ -42,17 +42,17 @@
             android:orientation="vertical">
 
             <ImageView
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_marginTop="5dp"
-                android:background="#fff" />
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:src="@drawable/icon_favorite_b"
+                android:id="@+id/imgFavorite"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/img_home"
                 android:text="Favorite"
-                android:textColor="#fff" />
+                android:id="@+id/tvFavorite"/>
 
         </LinearLayout>
 
@@ -65,22 +65,22 @@
             android:orientation="vertical">
 
             <ImageView
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_marginTop="5dp"
-                android:background="#fff" />
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:src="@drawable/icon_question_b"
+                android:id="@+id/imgQuestion"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/img_home"
                 android:text="Question"
-                android:textColor="#fff" />
+                android:id="@+id/tvQuestion"/>
 
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/llRatings"
+            android:id="@+id/llSetting"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -88,20 +88,17 @@
             android:orientation="vertical">
 
             <ImageView
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_marginTop="5dp"
-                android:background="#fff" />
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:src="@drawable/icon_seting_b"
+                android:id="@+id/imgSetting"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/img_home"
-                android:text="Ratings"
-                android:textColor="#fff" />
-
+                android:text="Setting"
+                android:id="@+id/tvSetting"/>
         </LinearLayout>
-
     </LinearLayout>
-
 </RelativeLayout>
