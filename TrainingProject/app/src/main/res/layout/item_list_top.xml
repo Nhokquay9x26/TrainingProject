@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/relativelayout.item_list_top.height.95dp"
+    android:background="@color/white">
+
+    <vn.asiantech.LearingEnglish.Views.CircleImageView
+        android:id="@+id/imgTop"
+        android:layout_width="@dimen/img.item_list_top_width.65dp"
+        android:layout_height="@dimen/img.item_list_top_height.65dp"
+        android:layout_marginStart="@dimen/img.item_list_top.marginLeft.11dp"
+        android:layout_marginLeft="@dimen/img.item_list_top.marginLeft.11dp"
+        android:layout_centerVertical="true"
+        android:background="@drawable/img_tab_5_nomal"/>
+
+    <TextView
+        android:id="@+id/txtItemTop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/imgTop"
+        android:layout_toRightOf="@+id/imgTop"
+        android:layout_centerVertical="true"
+        android:textColor="@color/black"
+        android:layout_toStartOf="@+id/imgTopNext"
+        android:layout_toLeftOf="@+id/imgTopNext"
+        android:layout_marginStart="@dimen/textView.item_list_top.marginLeft.14dp"
+        android:layout_marginLeft="@dimen/textView.item_list_top.marginLeft.14dp"
+        android:textSize="@dimen/textView.item_list_top.textSize.8pt" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="textView.item_list_top.view.height.1dp"
+        android:background="@color/black"
+        android:layout_below="@+id/txtItemTop"
+        android:layout_toEndOf="@+id/imgTop"
+        android:layout_toRightOf="@+id/imgTop"
+        android:layout_toStartOf="@+id/imgTopNext"
+        android:layout_toLeftOf="@+id/imgTopNext"
+        android:layout_marginStart="@dimen/textView.item_list_top.marginLeft.14dp"
+        android:layout_marginLeft="@dimen/textView.item_list_top.marginLeft.14dp"/>
+
+    <ImageView
+        android:id="@+id/imgTopNext"
+        android:layout_width="@dimen/img.item_list_top_width.44dp"
+        android:layout_height="@dimen/img.item_list_top_height.32dp"
+        android:background="@drawable/ic_next"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:contentDescription="@null"
+        android:layout_marginEnd="@dimen/img.item_list_top.marginRight.11dp"
+        android:layout_marginRight="@dimen/img.item_list_top.marginRight.11dp"/>
+
+</RelativeLayout>

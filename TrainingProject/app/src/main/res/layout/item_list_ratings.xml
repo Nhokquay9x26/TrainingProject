@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/relativelayout.itemRatings.height.79dp"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/txtRank"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/textview.list.marginLeft.18dp"
+        android:layout_marginLeft="@dimen/textview.list.marginLeft.18dp"/>
+
+    <vn.asiantech.LearingEnglish.Views.CircleImageView
+        android:id="@+id/imgRatings"
+        android:layout_width="@dimen/img.item_list_top_width.65dp"
+        android:layout_height="@dimen/img.item_list_top_height.65dp"
+        android:layout_marginStart="@dimen/img.itemRatings.marginLeft.25dp"
+        android:layout_marginLeft="@dimen/img.itemRatings.marginLeft.25dp"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@+id/txtRank"
+        android:layout_toRightOf="@+id/txtRank"
+        android:background="@drawable/img_tab_5_nomal"/>
+
+    <TextView
+        android:id="@+id/txtItemTop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/imgRatings"
+        android:layout_toRightOf="@+id/imgRatings"
+        android:layout_centerVertical="true"
+        android:textColor="@color/black"
+        android:layout_toLeftOf="@+id/txtRatingsPoints"
+        android:layout_toStartOf="@+id/txtRatingsPoints"
+        android:layout_marginStart="@dimen/textView.itemRatings.marginLeft.23dp"
+        android:layout_marginLeft="@dimen/textView.itemRatings.marginLeft.23dp"
+        android:textSize="@dimen/textView.item_list_top.textSize.8pt" />
+
+    <TextView
+        android:id="@+id/txtRatingsPoints"
+        android:layout_width="@dimen/img.item_list_top_width.44dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"/>
+</RelativeLayout>
