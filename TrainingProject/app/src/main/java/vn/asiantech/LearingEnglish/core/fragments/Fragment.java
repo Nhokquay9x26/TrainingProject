@@ -76,13 +76,16 @@ public class Fragment extends android.support.v4.app.Fragment {
 
     /**
      * Add new fragment to current fragment
+     *
      * @param fragment
      */
     public void addChildFragment(android.support.v4.app.Fragment fragment) {
+        Log.d("xxx", getView()+"");
         if (getParentFragment() != null && getParentFragment() instanceof Fragment) {
             ((Fragment) getParentFragment()).addChildFragment(fragment);
             return;
         }
+
         if (getView().getId() < 0) {
             Log.e(getClass().getSimpleName(), "Please set ID for fragment layout");
             return;
@@ -97,6 +100,7 @@ public class Fragment extends android.support.v4.app.Fragment {
 
     /**
      * Pop back to next fragment
+     *
      * @return
      */
     public boolean popChildFragment() {
@@ -127,6 +131,7 @@ public class Fragment extends android.support.v4.app.Fragment {
 
     /**
      * Get last child fragment
+     *
      * @return fragment
      */
     public android.support.v4.app.Fragment getLastChildFragment() {
@@ -135,8 +140,10 @@ public class Fragment extends android.support.v4.app.Fragment {
         }
         return this;
     }
+
     /**
      * Pop back to first fragment
+     *
      * @return
      */
     public void popChildFragmentToTop() {
@@ -157,6 +164,7 @@ public class Fragment extends android.support.v4.app.Fragment {
 
     /**
      * Get first fragment
+     *
      * @return fragment
      */
     public Fragment getFirstFragment() {

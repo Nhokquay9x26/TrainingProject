@@ -31,23 +31,6 @@ public class BaseFragment extends Fragment {
         alertDialog.show();
     }
 
-    public BaseFragment setTabIcon(int resDrawable) {
-        this.mTabIcon = resDrawable;
-        return this;
-    }
-
-    public int getTabIconResource() {
-        return this.mTabIcon;
-    }
-
-    public BaseFragment setTitle(String title) {
-        mTabTitle = title;
-        return this;
-    }
-
-    public String getTitle() {
-        return mTabTitle;
-    }
 
     /**
      * Show dialog with OK and cancel button
@@ -71,4 +54,6 @@ public class BaseFragment extends Fragment {
                 .create();
         alertDialog.show();
     }
+
+
 }

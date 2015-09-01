@@ -1,9 +1,7 @@
 package vn.asiantech.LearingEnglish.adapter;
 
-import android.content.Context;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentPagerAdapter;
-import android.support.v7.app.ActionBarActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageView;
@@ -23,12 +21,12 @@ import vn.asiantech.LearingEnglish.models.HomePageItem;
  * Created by PhuQuy on 8/27/15.
  */
 public class PagerAdapter extends FragmentPagerAdapter implements PagerSlidingTabStrip.IconTabProvider {
-    private ArrayList<HomePageItem> tabItems = new ArrayList<HomePageItem>();
-    private Context mContext;
+    private ArrayList<HomePageItem> tabItems = new ArrayList<>();
+    private Fragment mContext;
 
-    public PagerAdapter(Context context,
+    public PagerAdapter(Fragment context,
                         ArrayList<HomePageItem> items) {
-        super(((ActionBarActivity) context).getSupportFragmentManager());
+        super(context.getChildFragmentManager());
         this.mContext = context;
         this.tabItems = items;
     }
@@ -61,7 +59,7 @@ public class PagerAdapter extends FragmentPagerAdapter implements PagerSlidingTa
 
     @Override
     public View getView(int position) {
-        View v = LayoutInflater.from(mContext).inflate(R.layout.custom_item_tab, null, false);
+        View v = LayoutInflater.from(mContext.getActivity()).inflate(R.layout.custom_item_tab, null, false);
         TextView title = (TextView) v.findViewById(R.id.title);
         ImageView icon = (ImageView) v.findViewById(R.id.thumb);
 //        TextView notify = (TextView) v.findViewById(R.id.tvNotificationCount);

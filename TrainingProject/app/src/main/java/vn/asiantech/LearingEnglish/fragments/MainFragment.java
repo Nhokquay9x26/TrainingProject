@@ -22,6 +22,7 @@ import vn.asiantech.LearingEnglish.models.HomePageItem;
  */
 @EFragment(R.layout.fragment_main)
 public class MainFragment extends BaseFragment implements ViewPager.OnPageChangeListener {
+
     @ViewById(R.id.viewPager)
     protected ViewPager mViewPager;
     @ViewById(R.id.tabstrip)
@@ -35,21 +36,18 @@ public class MainFragment extends BaseFragment implements ViewPager.OnPageChange
 
     private void initializeAdapterView() {
         ArrayList<HomePageItem> tabItems = new ArrayList<>();
-
         tabItems.add(new HomePageItem(TopFragment_.builder().build(), "映像授業", R.drawable.bg_tab_home));
         tabItems.add(new HomePageItem(NoteFragment_.builder().build(), "My BOX", R.drawable.bg_tab_mybox));
         tabItems.add(new HomePageItem(TestFragment_.builder().build(), "質問リスト", R.drawable.bg_tab_questions));
         tabItems.add(new HomePageItem(SettingFragment_.builder().build(), "メニュー", R.drawable.bg_tab_others));
 
-        mPagerAdapter = new PagerAdapter(getActivity(), tabItems);
+        mPagerAdapter = new PagerAdapter(this, tabItems);
         mViewPager.setVerticalScrollBarEnabled(false);
         mViewPager.setAdapter(mPagerAdapter);
         mPagerAdapter.notifyDataSetChanged();
         mViewPager.setCurrentItem(0, false);
         mViewPager.setOffscreenPageLimit(3);
-//
         mTabSlidingAdapter.setViewPager(mViewPager);
-
         mTabSlidingAdapter.setDividerColor(0x30FFFFFF);
         mTabSlidingAdapter.setIndicatorColor(0x0033b5e5);
         mTabSlidingAdapter.setOnPageChangeListener(this);
