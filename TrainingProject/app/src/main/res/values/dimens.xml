@@ -14,4 +14,12 @@
     <dimen name="button.forgotpassword.text_size">15sp</dimen>
     <dimen name="textview.forgotpassword.margin_top">80dip</dimen>
     <dimen name="textview.forgotpassword.text_size">15sp</dimen>
+    <dimen name="imageview.dialoglogout.padding">15dp</dimen>
+    <dimen name="textview.tvlogout.text_size">20sp</dimen>
+    <dimen name="textview.tvmessagelogout.padding">30dp</dimen>
+    <dimen name="textview.tvmessagelogout.text_size">20sp</dimen>
+    <dimen name="button.btnyeslogout.margin">100dp</dimen>
+    <dimen name="button.btnlogout.text_size">20sp</dimen>
+    <dimen name="button.btnnologout.margin">2sp</dimen>
+    <dimen name="view.layout_height">2dp</dimen>
 </resources>

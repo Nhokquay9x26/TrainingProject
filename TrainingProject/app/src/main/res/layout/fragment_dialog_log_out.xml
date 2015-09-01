@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/imgLogOut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:padding="@dimen/imageview.dialoglogout.padding"
+        android:src="@drawable/ic_dialog_log_out" />
+
+    <TextView
+        android:id="@+id/tvLogOut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/imgLogOut"
+        android:layout_alignTop="@+id/imgLogOut"
+        android:layout_toEndOf="@+id/imgLogOut"
+        android:layout_toRightOf="@+id/imgLogOut"
+        android:gravity="center"
+        android:text="@string/textview.text.log_out"
+        android:textColor="@color/textview.tvlogout.text_color"
+        android:textSize="@dimen/textview.tvlogout.text_size"
+        android:textStyle="bold" />
+
+    <View
+        android:id="@+id/vLogOut"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/view.layout_height"
+        android:layout_below="@+id/tvLogOut"
+        android:background="@color/view.background" />
+
+    <TextView
+        android:id="@+id/tvMessageLogOut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/vLogOut"
+        android:gravity="center"
+        android:padding="@dimen/textview.tvmessagelogout.padding"
+        android:text="@string/textview.text.log_out_question"
+        android:textSize="@dimen/textview.tvmessagelogout.text_size"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btnYesLogOut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvMessageLogOut"
+        android:layout_marginLeft="@dimen/button.btnyeslogout.margin"
+        android:layout_marginStart="@dimen/button.btnyeslogout.margin"
+        android:background="@color/button.btnyeslogout.background"
+        android:text="@string/button.text.btn_yes_log_out"
+        android:textAllCaps="false"
+        android:textSize="@dimen/button.btnlogout.text_size"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btnNoLogOut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvMessageLogOut"
+        android:layout_marginLeft="@dimen/button.btnnologout.margin"
+        android:layout_marginStart="@dimen/button.btnnologout.margin"
+        android:layout_toEndOf="@+id/btnYesLogOut"
+        android:layout_toRightOf="@+id/btnYesLogOut"
+        android:background="@color/button.btnnologout.background"
+        android:text="@string/button.text.btn_no_log_out"
+        android:textAllCaps="false"
+        android:textSize="@dimen/button.btnlogout.text_size"
+        android:textStyle="bold" />
+
+
+</RelativeLayout>

@@ -7,4 +7,8 @@
     <string name="button.click.forgot_password">Send Reset Pasword</string>
     <string name="textview.text.new_to_member">New to Member? Register here</string>
     <string name="edittext.hint.write_your_email_here">Write your email here</string>
+    <string name="textview.text.log_out">Log out</string>
+    <string name="textview.text.log_out_question">Do you close Application ?</string>
+    <string name="button.text.btn_yes_log_out">Yes</string>
+    <string name="button.text.btn_no_log_out">No</string>
 </resources>

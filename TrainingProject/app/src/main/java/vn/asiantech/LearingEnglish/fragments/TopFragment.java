@@ -1,5 +1,7 @@
 package vn.asiantech.LearingEnglish.fragments;
 
+import android.widget.Toast;
+
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.Click;
 import org.androidannotations.annotations.EFragment;
@@ -14,6 +16,7 @@ import vn.asiantech.LearingEnglish.R;
 public class TopFragment extends BaseFragment {
     @AfterViews
     public void init() {
+        Toast.makeText(getActivity(), "jsdnfkjgnsd", Toast.LENGTH_SHORT).show();
     }
 
     @Click(R.id.btnTest)
