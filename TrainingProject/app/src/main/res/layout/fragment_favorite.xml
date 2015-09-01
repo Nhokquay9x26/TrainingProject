@@ -1,43 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-     android:layout_width="match_parent"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
-   <LinearLayout
-       android:id="@+id/llFavorite"
-       android:layout_width="match_parent"
-       android:layout_height="@dimen/favorite.title.height"
-       android:background="@color/favorite.title.background"
-       android:orientation="horizontal"
-      android:gravity="center"
-       >
-
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/favorite.textview.title"
-        android:textColor="@color/favorite.textview.title.color"
-        android:textSize="@dimen/favorite.text.title.size"
-        android:layout_gravity="center"
-
-
-        />
-  </LinearLayout>
     <RelativeLayout
         android:id="@+id/rlFavoriteTest"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/favorite_rl_background"
+        android:layout_below="@id/llFavorite"
         android:layout_margin="@dimen/favorite.rlfavorite.margin"
-        android:layout_below="@id/llFavorite">
+        android:background="@drawable/favorite_rl_background">
+
         <TextView
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-           />
+            android:layout_height="wrap_content" />
+
         <android.support.v7.widget.RecyclerView
             android:id="@+id/recyclerView"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
+            android:layout_height="match_parent" />
 
     </RelativeLayout>
 
