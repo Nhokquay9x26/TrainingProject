@@ -18,9 +18,10 @@ import org.androidannotations.annotations.ViewById;
 import vn.asiantech.LearingEnglish.R;
 import vn.asiantech.LearingEnglish.container.TabFourContainer;
 import vn.asiantech.LearingEnglish.container.TabOneContainer;
-import vn.asiantech.LearingEnglish.container.TabThreeContainer;
+import vn.asiantech.LearingEnglish.container.FavoriteContainer;
 import vn.asiantech.LearingEnglish.container.TabTwoContainer;
 import vn.asiantech.LearingEnglish.fragments.BaseContainerFragment;
+import vn.asiantech.LearingEnglish.fragments.FavoriteFragment_;
 import vn.asiantech.LearingEnglish.views.HackyViewPager;
 import vn.asiantech.LearingEnglish.views.PagerSlidingTabStrip;
 
@@ -165,7 +166,7 @@ public class MainActivity extends BaseActionBarActivity {
                 case 1:
                     return new TabTwoContainer();
                 case 2:
-                    return new TabThreeContainer();
+                    return new FavoriteFragment_();
                 default:
                     return new TabFourContainer();
             }
