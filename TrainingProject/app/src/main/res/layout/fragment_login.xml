@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ic_splashscreen">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btnSignup"
+        android:layout_marginBottom="@dimen/relativeLayout.layout.margin_bottom"
+        android:layout_marginLeft="@dimen/relativeLayout.layout.margin_left"
+        android:layout_marginRight="@dimen/relativeLayout.layout.margin_right"
+        android:layout_marginTop="@dimen/relativeLayout.layout.margin_top">
+
+        <RelativeLayout
+            android:id="@+id/rlAvatar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/rl.avatar.background"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/image.height"
+                android:layout_marginBottom="@dimen/image.margin_bottom"
+                android:layout_marginTop="@dimen/image.margin_top"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_avatar" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/rlAvatar"
+            android:background="@color/rl.input.background"
+            android:paddingLeft="@dimen/relativeLayout.layout.padding_left"
+            android:paddingRight="@dimen/relativeLayout.layout.padding_right"
+            android:paddingTop="@dimen/relativeLayout.layout.padding_top">
+
+            <EditText
+                android:id="@+id/edtUsername"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/edittext.color.line"
+                android:hint="@string/edittext.hint.username" />
+
+            <EditText
+                android:id="@+id/edtPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/edtUsername"
+                android:layout_marginTop="@dimen/edittext.margin.top"
+                android:backgroundTint="@color/edittext.color.line"
+                android:hint="@string/edittext.hint.password" />
+
+            <Button
+                android:id="@+id/btnSignin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/tvForgotPassword"
+                android:layout_marginTop="@dimen/button.margin.top"
+                android:background="@color/rl.avatar.background"
+                android:text="@string/button.text.signin"
+                android:textColor="@color/button.text.color.signin" />
+
+            <TextView
+                android:id="@+id/tvForgotPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="@dimen/textview.margin.bottom.forgot_password"
+                android:layout_marginTop="@dimen/textview.margin.top.forgot_password"
+                android:gravity="center"
+                android:text="@string/textview.text.forgot_password"
+                android:textColor="@color/textview.color.forgot_password" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btnSignup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="@dimen/relativeLayout.layout.margin_left"
+        android:layout_marginRight="@dimen/relativeLayout.layout.margin_right"
+        android:background="@color/button.background"
+        android:text="@string/button.text.signup"
+        android:textColor="@color/button.text.color" />
+</RelativeLayout>
