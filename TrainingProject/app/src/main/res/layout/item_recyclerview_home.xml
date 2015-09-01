@@ -1,0 +1,44 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/item.recycleview.maginleft"
+    android:layout_marginRight="@dimen/item.recycleview.maginright"
+    android:layout_marginTop="@dimen/item.recycleview.magintop">
+
+    <vn.asiantech.LearingEnglish.utils.CircleImageView
+        android:id="@+id/imgAvataItemHome"
+        android:layout_width="@dimen/item.recycleview.with.avata"
+        android:layout_height="@dimen/item.recycleview.with.avata"
+        android:src="@drawable/img_animal" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/imgSelectItemHome"
+        android:layout_toRightOf="@+id/imgAvataItemHome"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvNameItemHome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/item.recycleview.maginleft.textview"
+            android:layout_marginTop="@dimen/item.recycleview.magintop.textview"
+            android:textSize="@dimen/item.recycleview.textsize" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/color.black" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imgSelectItemHome"
+        android:layout_width="@dimen/item.recycleview.with.select"
+        android:layout_height="@dimen/item.recycleview.with.select"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/icon_select" />
+</RelativeLayout>
