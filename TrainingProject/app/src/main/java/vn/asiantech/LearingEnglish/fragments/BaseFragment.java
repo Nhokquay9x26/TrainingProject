@@ -10,6 +10,7 @@ import vn.asiantech.LearingEnglish.core.fragments.Fragment;
  */
 public class BaseFragment extends Fragment {
 
+
     /**
      * Show dialog with OK button
      *
