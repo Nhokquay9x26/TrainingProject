@@ -36,6 +36,7 @@
     <dimen name="textView.dialog_forget_password_title_margin_left">10dp</dimen>
     <dimen name="button.forgot_password_width">120dp</dimen>
     <dimen name="view.below_editText">1dp</dimen>
+    <dimen name="image.header.width_hight">100dp</dimen>
     <dimen name="relativeLayout.dialog_forget_password_height">200dp</dimen>
     <dimen name="button.forgot_password_height">40dp</dimen>
 </resources>

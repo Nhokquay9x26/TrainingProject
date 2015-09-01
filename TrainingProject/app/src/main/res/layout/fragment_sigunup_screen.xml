@@ -30,7 +30,7 @@
                     android:layout_height="@dimen/img_height"
                     android:layout_centerInParent="true"
                     android:scaleType="centerInside"
-                    android:src="@drawable/img_avatar" />
+                    android:src="@drawable/ico_avatar" />
 
                 <TextView
                     android:layout_width="wrap_content"
