@@ -2,4 +2,14 @@
 <string name="app_name">Base Project</string>
 
 <string name="hello_world">Hello world!</string>
+
+    <string name="textView.profile_image">Tap to change profile image</string>
+        <string name="editText.hint.username">Username</string>
+        <string name="editText.hint.password">Password</string>
+        <string name="editText.hint.Email">Email</string>
+        <string name="editText.hint.conFirmPassword">ConFirm Password</string>
+        <string name="editText.hint.proMotionCode">Promotion Code</string>
+        <string name="textView.hint.via_email">I wish to subscribe to daily deal alert via email</string>
+        <string name="buTon.sigUp">Sign Up</string>
+        <string name="button.signIn">Sign In</string>
 </resources>
