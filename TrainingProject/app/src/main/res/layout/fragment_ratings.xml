@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/rlRatingsNen"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/relativelayout.top.heigght.118dp"
+        android:background="@color/blue.top">
+
+        <TextView
+            android:id="@+id/txtRatings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/textView.ratings.text"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textView.top.textSize.13pt"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"/>
+
+        <ImageView
+            android:id="@+id/imgRatingsSearch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_search"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:contentDescription="@null"
+            android:layout_marginEnd="@dimen/img.top.marginLeft.28dp"
+            android:layout_marginRight="@dimen/img.top.marginLeft.28dp"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rlRatingsNen"
+        android:layout_above="@+id/txtRatingsNen"
+        android:background="@drawable/bg_top_listview"
+        android:layout_marginTop="@dimen/relativelayout.ratings.margintop.25dp"
+        android:layout_marginRight="@dimen/textview.ratings.marginRight.10dp"
+        android:layout_marginLeft="@dimen/textview.ratings.marginRight.10dp"
+        android:layout_marginBottom="@dimen/textview.ratings.marginRight.10dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/relativeLayout.ratings.height.33dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:textColor="@color/textview.ratings.textcolor"
+                android:text="@string/textview.retings.rank"
+                android:layout_marginStart="@dimen/textview.ratings.marginRight.10dp"
+                android:layout_marginLeft="@dimen/textview.ratings.marginRight.10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:textColor="@color/textview.ratings.textcolor"
+                android:text="@string/textview.retings.user"
+                android:layout_centerHorizontal="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/textview.retings.Points"
+                android:textColor="@color/textview.ratings.textcolor"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="@dimen/textview.ratings.marginRight.10dp"
+                android:layout_marginEnd="@dimen/textview.ratings.marginRight.10dp"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/drawable.stroke.width.1dp"
+                android:background="@color/relativelayout.ratings.Tint"
+                android:layout_alignParentBottom="true" />
+
+            <View
+                android:layout_width="@dimen/drawable.stroke.width.1dp"
+                android:layout_height="@dimen/relativeLayout.ratings.height.33dp"
+                android:layout_marginLeft="@dimen/textview.ratings.width.97dp"
+                android:layout_marginStart="@dimen/textview.ratings.width.97dp"
+                android:background="@color/relativelayout.ratings.Tint"/>
+            <View
+                android:layout_width="@dimen/drawable.stroke.width.1dp"
+                android:layout_height="@dimen/relativeLayout.ratings.height.33dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="@dimen/relativelayout.ratings.marginRight.114dp"
+                android:layout_marginEnd="@dimen/relativelayout.ratings.marginRight.114dp"
+                android:background="@color/relativelayout.ratings.Tint"/>
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/txtRatingsNen"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/textview.top.height.50dp"
+        android:background="@color/blue.top"
+        android:layout_alignParentBottom="true"/>
+</RelativeLayout>

@@ -1,0 +1,47 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:gravity="center">
+
+
+    <RelativeLayout
+        android:id="@+id/thumbContainer"
+        android:layout_width="50dp"
+        android:layout_height="45dp"
+        android:layout_centerHorizontal="true"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/thumb"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="10dp"
+            android:scaleType="centerInside"
+            android:src="@mipmap/ic_launcher" />
+
+        <!--<TextView-->
+        <!--android:id="@+id/tvNotificationCount"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentRight="true"-->
+        <!--android:gravity="center"-->
+        <!--android:singleLine="true"-->
+        <!--android:textColor="@android:color/white"-->
+        <!--android:textSize="10dp"-->
+        <!--tools:text="5" />-->
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/thumbContainer"
+        android:layout_marginTop="-10dp"
+        android:gravity="center_horizontal"
+        android:singleLine="true"
+        android:textSize="12dp"
+        tools:text="Title" />
+</RelativeLayout>
