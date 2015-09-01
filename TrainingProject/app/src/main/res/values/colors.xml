@@ -7,4 +7,8 @@
     <color name="edittext.background_tint">#0dc2ff</color>
     <color name="button.forgot_pass">#0dc2ff</color>
     <color name="button.change_color_on_click">#9fff67</color>
+    <color name="view.background">#F08000</color>
+    <color name="textview.tvlogout.text_color">#F00800</color>
+    <color name="button.btnyeslogout.background">#0dc2ff</color>
+    <color name="button.btnnologout.background">#0dc2ff</color>
 </resources>
