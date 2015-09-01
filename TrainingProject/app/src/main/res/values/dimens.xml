@@ -78,6 +78,13 @@
     <dimen name="item.recycleview.with.select">50dp</dimen>
     <dimen name="item.recycleview.maginleft.textview">10dp</dimen>
     <dimen name="item.recycleview.magintop.textview">20dp</dimen>
+    <dimen name="activity.main.viewpager.magintop">80dp</dimen>
+    <dimen name="activity.main.viewpager.maginbottom">50dp</dimen>
+    <dimen name="custom.tabbar.main.height.header">80dp</dimen>
+    <dimen name="custom.tabbar.main.textsite">20sp</dimen>
+    <dimen name="custom.tabbar.main.maginright">20dp</dimen>
+    <dimen name="custom.tabbar.main.height.footer">55dp</dimen>
+    <dimen name="custom.tabbar.main.img.tab.magintop">2dp</dimen>
 
 
 </resources>

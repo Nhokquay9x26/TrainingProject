@@ -24,7 +24,6 @@ import vn.asiantech.LearingEnglish.utils.TabBar;
  * @Author TienTun
  * Created by tientun on 3/5/15.
  */
-
 @EActivity(R.layout.activity_main)
 public class MainActivity extends FragmentActivity {
     @ViewById(R.id.viewpagerMain)
@@ -39,8 +38,9 @@ public class MainActivity extends FragmentActivity {
     protected void backAction() {
         finish();
     }
+
     @AfterViews
-    void afterViews(){
+    void afterViews() {
         mAdapter = new ViewPagerAdapter(getSupportFragmentManager());
         mViewPagerMain.setAdapter(mAdapter);
         mTabBarMain.clickTab(0);
@@ -69,8 +69,7 @@ public class MainActivity extends FragmentActivity {
     /**
      * class ViewPagerAdapter
      */
-    public class ViewPagerAdapter extends FragmentStatePagerAdapter{
-
+    public class ViewPagerAdapter extends FragmentStatePagerAdapter {
         public ViewPagerAdapter(FragmentManager fm) {
             super(fm);
         }

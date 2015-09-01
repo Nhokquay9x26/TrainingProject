@@ -20,18 +20,16 @@ import vn.asiantech.LearingEnglish.activities.MainActivity;
 
 public class TabBar extends RelativeLayout implements View.OnClickListener {
     public interface OnTabBarListener {
-        public void onTabClick(int position);
+        void onTabClick(int position);
     }
+
     private static final int COLOR_TEXT_DEFAULT = 0xcc666666;
     private static final int COLOR_TEXT = 0xccffffff;
-
     private View mRootView;
-
-    private View mViewTab1;
-    private View mViewTab2;
-    private View mViewTab3;
-    private View mViewTab4;
-
+    private View mViewTabHome;
+    private View mViewTabFavorite;
+    private View mViewTabQuestion;
+    private View mViewTabSeting;
     private ImageView mImgHome;
     private TextView mTvHome;
     private ImageView mImgFavorite;
@@ -40,9 +38,7 @@ public class TabBar extends RelativeLayout implements View.OnClickListener {
     private TextView mTvQuestion;
     private ImageView mImgSetting;
     private TextView mTvSetting;
-
     private TextView mTvHeader;
-
     private OnTabBarListener mOnTabBarListener;
 
     public TabBar(Context context) {
@@ -64,25 +60,25 @@ public class TabBar extends RelativeLayout implements View.OnClickListener {
         mRootView = LayoutInflater.from(context).inflate(R.layout.custom_tab_bar_main, this, false);
         addView(mRootView);
 
-        mViewTab1 = mRootView.findViewById(R.id.llHome);
-        mViewTab2 = mRootView.findViewById(R.id.llFavorite);
-        mViewTab3 = mRootView.findViewById(R.id.llQuestion);
-        mViewTab4 = mRootView.findViewById(R.id.llSetting);
-        mViewTab1.setOnClickListener(this);
-        mViewTab2.setOnClickListener(this);
-        mViewTab3.setOnClickListener(this);
-        mViewTab4.setOnClickListener(this);
+        mViewTabHome = mRootView.findViewById(R.id.llHome);
+        mViewTabFavorite = mRootView.findViewById(R.id.llFavorite);
+        mViewTabQuestion = mRootView.findViewById(R.id.llQuestion);
+        mViewTabSeting = mRootView.findViewById(R.id.llSetting);
+        mViewTabHome.setOnClickListener(this);
+        mViewTabFavorite.setOnClickListener(this);
+        mViewTabQuestion.setOnClickListener(this);
+        mViewTabSeting.setOnClickListener(this);
 
-        mImgHome =(ImageView)mRootView.findViewById(R.id.imgHome);
-        mTvHome = (TextView)mRootView.findViewById(R.id.tvHome);
-        mImgFavorite =(ImageView)mRootView.findViewById(R.id.imgFavorite);
-        mTvFavorite = (TextView)mRootView.findViewById(R.id.tvFavorite);
-        mImgQuestion =(ImageView)mRootView.findViewById(R.id.imgQuestion);
-        mTvQuestion = (TextView)mRootView.findViewById(R.id.tvQuestion);
-        mImgSetting =(ImageView)mRootView.findViewById(R.id.imgSetting);
-        mTvSetting = (TextView)mRootView.findViewById(R.id.tvSetting);
+        mImgHome = (ImageView) mRootView.findViewById(R.id.imgHome);
+        mTvHome = (TextView) mRootView.findViewById(R.id.tvHome);
+        mImgFavorite = (ImageView) mRootView.findViewById(R.id.imgFavorite);
+        mTvFavorite = (TextView) mRootView.findViewById(R.id.tvFavorite);
+        mImgQuestion = (ImageView) mRootView.findViewById(R.id.imgQuestion);
+        mTvQuestion = (TextView) mRootView.findViewById(R.id.tvQuestion);
+        mImgSetting = (ImageView) mRootView.findViewById(R.id.imgSetting);
+        mTvSetting = (TextView) mRootView.findViewById(R.id.tvSetting);
 
-        mTvHeader = (TextView)mRootView.findViewById(R.id.tvHeader);
+        mTvHeader = (TextView) mRootView.findViewById(R.id.tvHeader);
 
         clickTab(0);
     }
@@ -157,6 +153,5 @@ public class TabBar extends RelativeLayout implements View.OnClickListener {
         } else if (id == R.id.llSetting) {
             clickTab(3);
         }
-
     }
 }
