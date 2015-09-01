@@ -32,7 +32,7 @@ public class SignupActivity extends BaseActionBarActivity {
     private boolean mCheckEmail;
     @Override
     void afterView() {
-
+        getSupportActionBar().hide();
     }
 
     @Click(R.id.tvButtonSignUp)
