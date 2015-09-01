@@ -6,11 +6,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import org.androidannotations.annotations.EFragment;
-
 import vn.asiantech.LearingEnglish.R;
 import vn.asiantech.LearingEnglish.fragments.BaseContainerFragment;
-import vn.asiantech.LearingEnglish.fragments.FavoriteFragment;
+import vn.asiantech.LearingEnglish.fragments.FavoriteFragment_;
 
 
 public class FavoriteContainer extends BaseContainerFragment {
@@ -32,7 +30,7 @@ public class FavoriteContainer extends BaseContainerFragment {
     }
 
     private void initView() {
-        replaceFragment(new FavoriteFragment(), false);
+        replaceFragment(new FavoriteFragment_(), false);
     }
 
     @Override
