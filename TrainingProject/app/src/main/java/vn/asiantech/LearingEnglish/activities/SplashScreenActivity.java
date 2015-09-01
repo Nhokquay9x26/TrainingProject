@@ -39,7 +39,7 @@ public class SplashScreenActivity extends BaseActionBarActivity {
      */
     private void setTimer() {
         mTimer = new Timer();
-        mIntent = new Intent(this, TestingActivity_.class);
+        mIntent = new Intent(this, LoginActivity_.class);
         mImgincrementingBoxView.setVisibility(View.VISIBLE);
         incrementalHorizontalLoading();
         mTimer.schedule(new TimerTask() {
