@@ -1,2 +1,2 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merger version="3"><dataSet config="main"><source path="/Users/phuquy/Documents/ProjectStudio/TrainingProject/TrainingProject/libraryindicator/src/main/assets"/></dataSet><dataSet config="release"><source path="/Users/phuquy/Documents/ProjectStudio/TrainingProject/TrainingProject/libraryindicator/src/release/assets"/></dataSet></merger>
+<merger version="3"><dataSet config="main"><source path="/home/tran/Documents/TrainingProject/TrainingProject/libraryindicator/src/main/assets"/></dataSet><dataSet config="release"><source path="/home/tran/Documents/TrainingProject/TrainingProject/libraryindicator/src/release/assets"/></dataSet></merger>
