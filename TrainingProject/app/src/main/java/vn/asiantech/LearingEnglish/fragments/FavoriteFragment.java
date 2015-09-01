@@ -12,26 +12,27 @@ import java.util.ArrayList;
 import java.util.List;
 
 import vn.asiantech.LearingEnglish.R;
-import vn.asiantech.LearingEnglish.adapter.WordFavorite;
+import vn.asiantech.LearingEnglish.adapter.WordFavoriteAdapter;
+import widget.DividerItemDecoration;
 
 
 @EFragment(R.layout.fragment_favorite)
 public class FavoriteFragment extends BaseFragment {
     @ViewById(R.id.recyclerViewFavorite)
     RecyclerView mRecyclerViewFavorite;
-    private WordFavorite mWordFavoriteAdaper;
+    private WordFavoriteAdapter mWordFavoriteAdaper;
     private RecyclerView.LayoutManager mLayoutManager;
     private List<vn.asiantech.LearingEnglish.models.WordFavorite> mDatas = new ArrayList<>();
-    String mFavorites[] = {"Home", "Welcome", "Tutorial", "Android", "Speed", "School", "Favorite"};
+    String mFavorites[] = {"Home", "Welcome", "Tutorial", "Android", "Speed", "School", "Favorite", "Class", "Program", "Test"};
     @AfterViews
     void afterViews(){
         mRecyclerViewFavorite.setHasFixedSize(true);
         mLayoutManager = new LinearLayoutManager(getActivity(),LinearLayoutManager.VERTICAL,false);
         mRecyclerViewFavorite.setLayoutManager(mLayoutManager);
+        mRecyclerViewFavorite.addItemDecoration(new DividerItemDecoration(getActivity(), DividerItemDecoration.VERTICAL_LIST));
         addData();
-        mWordFavoriteAdaper = new WordFavorite(mDatas,getActivity());
+        mWordFavoriteAdaper = new WordFavoriteAdapter(mDatas,getActivity());
         mRecyclerViewFavorite.setAdapter(mWordFavoriteAdaper);
-        Log.e("aaaaaaaaaaa", ""+ mDatas.size());
 
     }
     private void addData(){

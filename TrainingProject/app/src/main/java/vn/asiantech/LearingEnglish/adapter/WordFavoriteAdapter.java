@@ -18,11 +18,11 @@ import vn.asiantech.LearingEnglish.R;
 /**
  * Created by hoai on 31/08/2015.
  */
-public class WordFavorite extends RecyclerView.Adapter<WordFavorite.RecyclerViewHolder> {
+public class WordFavoriteAdapter extends RecyclerView.Adapter<WordFavoriteAdapter.RecyclerViewHolder> {
 
     private List<vn.asiantech.LearingEnglish.models.WordFavorite> mFavorites = new ArrayList<>();
     private Context mContext;
-    public WordFavorite(List<vn.asiantech.LearingEnglish.models.WordFavorite> mFavorites, Context context) {
+    public WordFavoriteAdapter(List<vn.asiantech.LearingEnglish.models.WordFavorite> mFavorites, Context context) {
         this.mFavorites = mFavorites;
         this.mContext = context;
     }

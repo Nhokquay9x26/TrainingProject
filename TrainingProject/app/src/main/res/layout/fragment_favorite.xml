@@ -4,10 +4,27 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
+    <android.support.v7.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/card_view"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        card_view:cardCornerRadius="10dp"
+        android:layout_marginBottom="@dimen/favorite_card_margin_bottom"
+        android:layout_marginLeft="@dimen/favorite_card_margin_left"
+        android:layout_marginRight="@dimen/favorite_card_margin_right"
+        android:layout_marginTop="@dimen/favorite_card_margin_top">
+
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recyclerViewFavorite"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/favorite_card_margin_bottom"
+        android:layout_marginLeft="@dimen/favorite_card_margin_left"
+        android:layout_marginRight="@dimen/favorite_card_margin_right"
+        android:layout_marginTop="@dimen/favorite_card_margin_top"
         />
+    </android.support.v7.widget.CardView>
 
 </LinearLayout>

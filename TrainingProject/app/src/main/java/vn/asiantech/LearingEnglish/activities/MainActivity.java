@@ -21,6 +21,7 @@ import vn.asiantech.LearingEnglish.container.TabOneContainer;
 import vn.asiantech.LearingEnglish.container.FavoriteContainer;
 import vn.asiantech.LearingEnglish.container.TabTwoContainer;
 import vn.asiantech.LearingEnglish.fragments.BaseContainerFragment;
+import vn.asiantech.LearingEnglish.fragments.FavoriteFragment_;
 import vn.asiantech.LearingEnglish.views.HackyViewPager;
 import vn.asiantech.LearingEnglish.views.PagerSlidingTabStrip;
 
@@ -165,7 +166,7 @@ public class MainActivity extends BaseActionBarActivity {
                 case 1:
                     return new TabTwoContainer();
                 case 2:
-                    return new FavoriteContainer();
+                    return new FavoriteFragment_();
                 default:
                     return new TabFourContainer();
             }
