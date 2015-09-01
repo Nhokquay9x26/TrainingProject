@@ -37,5 +37,8 @@
     <string name="fogotpassword">Forgot Password?</string>
     <string name="title_activity_login_activity">LoginActivity</string>
     <string name="action_settings">Settings</string>
+    <string name="testing.textview.text_tvsubmit">Submit</string>
+    <string name="testresulting.textview.title">Question</string>
+    <string name="testresulting.textview.total">Total:</string>
 
 </resources>

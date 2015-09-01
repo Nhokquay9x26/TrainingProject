@@ -75,7 +75,12 @@
         android:layout_height="match_parent"
         android:layout_above="@+id/viewBottom"
         android:layout_below="@+id/rlTimeDetail" />
-
+    <FrameLayout
+        android:id="@+id/frViewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/viewBottom"
+        android:layout_below="@+id/rlTimeDetail" />
     <RelativeLayout
         android:id="@+id/rlButtonBottom"
         android:layout_width="match_parent"
@@ -133,6 +138,17 @@
                 android:scaleType="centerInside"
                 android:src="@mipmap/ico_next_xhd" />
         </LinearLayout>
+        <Button
+            android:id="@+id/btnSubmit"
+            android:layout_width="80dp"
+            android:layout_height="30dp"
+            android:layout_marginRight="5dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:background="@anim/btn_submit"
+
+
+            />
     </RelativeLayout>
 
     <View

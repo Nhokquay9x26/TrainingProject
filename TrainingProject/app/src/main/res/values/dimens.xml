@@ -70,6 +70,11 @@
     <dimen name="activity.signup.height">50dp</dimen>
     <dimen name="signup.tv.size">20sp</dimen>
     <dimen name="signup.butonsigup.margintop">15dp</dimen>
+    <dimen name="testing.textview.tv_submit_padding_lr">15dp</dimen>
+    <dimen name="testing.textview.tv_submit_padding_bt">10dp</dimen>
+    <dimen name="rl.testresulting.rl_result_menubar_height">50dp</dimen>
+
+    <dimen name="testresulting.textview.title_size">18sp</dimen>
 
 
 </resources>

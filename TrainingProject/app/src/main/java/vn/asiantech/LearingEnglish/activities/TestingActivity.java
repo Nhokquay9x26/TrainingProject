@@ -1,11 +1,18 @@
 package vn.asiantech.LearingEnglish.activities;
 
+
+import android.app.FragmentManager;
+import android.app.FragmentTransaction;
 import android.os.CountDownTimer;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.ViewPager;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import org.androidannotations.annotations.AfterViews;
@@ -18,6 +25,7 @@ import java.util.ArrayList;
 import lombok.Getter;
 import vn.asiantech.LearingEnglish.R;
 import vn.asiantech.LearingEnglish.adapter.TestingAdapter;
+import vn.asiantech.LearingEnglish.fragments.TestResultingFragment_;
 import vn.asiantech.LearingEnglish.fragments.TestingFragment_;
 import vn.asiantech.LearingEnglish.models.DataQuestion;
 import vn.asiantech.LearingEnglish.models.Question;
@@ -58,6 +66,17 @@ public class TestingActivity extends FragmentActivity {
     @ViewById(R.id.tvTotalQuestion)
     TextView mTvTotalQuestion;
 
+    @ViewById(R.id.btnSubmit)
+    Button mBtnSubmit;
+
+    @ViewById(R.id.frViewpager)
+    FrameLayout mFrViewpager;
+
+    @ViewById(R.id.rlButtonBottom)
+    RelativeLayout mRlButtonBottom;
+
+
+
     @AfterViews
     void afterView() {
         getQuestion();
@@ -70,9 +89,20 @@ public class TestingActivity extends FragmentActivity {
         mNumberOfQuestion.setText("1 - " + mArrQuestionDatas.size());
         mTvTotalQuestion.setText("1/" + mArrQuestionDatas.size());
 
-
     }
 
+    @Click(R.id.btnSubmit)
+    void mBtnSubmitClicked(){
+        mRlButtonBottom.setVisibility(View.INVISIBLE);
+        mTvTimeLeft.setVisibility(View.INVISIBLE);
+        mTvTotalQuestion.setVisibility(View.INVISIBLE);
+        mTvLeftQuestion.setText("Total Time: 06:59");
+        TestResultingFragment_ fr = new TestResultingFragment_();
+        FragmentManager fm = getFragmentManager();
+        FragmentTransaction fragmentTransaction = fm.beginTransaction();
+        fragmentTransaction.replace(R.id.frViewpager,fr,"");
+        fragmentTransaction.commit();
+    }
 
     /**
      * Event When Click Button Previous

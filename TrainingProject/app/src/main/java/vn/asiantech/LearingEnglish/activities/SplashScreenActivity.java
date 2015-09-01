@@ -10,6 +10,7 @@ import org.androidannotations.annotations.ViewById;
 import java.util.Timer;
 import java.util.TimerTask;
 import vn.asiantech.LearingEnglish.R;
+import vn.asiantech.LearingEnglish.fragments.TestingFragment_;
 
 /**
  * @Author TanTv
