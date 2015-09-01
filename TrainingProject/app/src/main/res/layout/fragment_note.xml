@@ -4,9 +4,52 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TAB 2" />
+    <RelativeLayout
+        android:id="@+id/rlFavoriteSearch"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@color/rl.background.favorite"
+        android:paddingLeft="@dimen/relativeLayout.layout.padding_left"
+        android:paddingRight="@dimen/relativeLayout.layout.padding_left">
+
+        <TextView
+            android:id="@+id/tvFavoriteTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="@string/textview.text.title.favorite"
+            android:textColor="@color/textview.color.favorite.title"
+            android:textSize="@dimen/textview.size.title.favorite" />
+
+        <ImageView
+            android:id="@+id/imgFavoriteSearch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_search" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_below="@+id/rlFavoriteSearch"
+        android:background="@color/rl.background.list"
+        android:id="@+id/rlFavoriteList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ListView
+            android:id="@+id/lvFavorite"
+            android:layout_marginLeft="@dimen/lv.favorite.margin_left"
+            android:layout_marginRight="@dimen/lv.favorite.margin_right"
+            android:layout_marginTop="@dimen/lv.favorite.margin_top"
+            android:layout_marginBottom="@dimen/lv.favorite.margin_bot"
+            android:background="@drawable/shape_list_favorite"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </ListView>
+    </RelativeLayout>
 
 </LinearLayout>
