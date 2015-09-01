@@ -45,4 +45,14 @@
     <style name="DialogForgetPassword" parent="android:Theme.Dialog">
         <item name="android:windowNoTitle">true</item>
     </style>
+
+    <style name="favorite_textview_size">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:textSize">@dimen/textview.size</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_marginRight">@dimen/signup_ll_margin_right</item>
+    </style>
+
 </resources>
