@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="@dimen/relativeLayout.item_top_height">
-    <ImageView
+    <vn.asiantech.LearingEnglish.views.CircleImageView
         android:id="@+id/imgCategory"
         android:layout_width="@dimen/imageView.category_width"
         android:layout_height="@dimen/imageView.category_height"
@@ -14,8 +14,9 @@
         android:id="@+id/txtCategory"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Animal"
+        android:text="@string/textView.top_category_name"
         android:layout_toRightOf="@+id/imgCategory"
+        android:layout_toEndOf="@+id/imgCategory"
         android:layout_centerVertical="true"
         android:layout_marginLeft="@dimen/textView.category_margin_left"
         android:layout_marginStart="@dimen/textView.category_margin_left"
@@ -27,14 +28,18 @@
         android:layout_height="wrap_content"
         android:src="@drawable/ic_detail"
         android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
         android:layout_centerVertical="true"
         android:layout_marginRight="@dimen/imageView.detail_margin_right"
+        android:contentDescription="@null"
         android:layout_marginEnd="@dimen/imageView.detail_margin_right"/>
     <View
         android:layout_width="wrap_content"
         android:layout_height="@dimen/view.below_editText"
         android:background="@color/View.below_text_category"
         android:layout_toRightOf="@+id/imgCategory"
+        android:layout_toEndOf="@+id/imgCategory"
         android:layout_toLeftOf="@id/imgDetail"
+        android:layout_toStartOf="@id/imgDetail"
         android:layout_below="@+id/txtCategory"/>
 </RelativeLayout>
