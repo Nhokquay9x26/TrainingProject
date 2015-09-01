@@ -45,4 +45,12 @@
     <dimen name="rl.vocabulary.padding.top">25dp</dimen>
     <dimen name="rl.vocabulary.margin.top">10dp</dimen>
     <dimen name="rl.mean.padding">10dp</dimen>s
+    <dimen name="imageview.dialoglogout.padding">15dp</dimen>
+    <dimen name="textview.tvlogout.text_size">20sp</dimen>
+    <dimen name="textview.tvmessagelogout.padding">30dp</dimen>
+    <dimen name="textview.tvmessagelogout.text_size">20sp</dimen>
+    <dimen name="button.btnyeslogout.margin">100dp</dimen>
+    <dimen name="button.btnlogout.text_size">20sp</dimen>
+    <dimen name="button.btnnologout.margin">2sp</dimen>
+    <dimen name="view.layout_height">2dp</dimen>
 </resources>

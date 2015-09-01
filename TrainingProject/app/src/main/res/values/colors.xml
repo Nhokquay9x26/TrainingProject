@@ -25,4 +25,8 @@
     <color name="rl.background.vocabulary">#C0C0C0</color>
     <color name="rl.img.vocabulary">#FFFFFF</color>
     <color name="textview.color.mean">#FF0000</color>
+    <color name="view.background">#F08000</color>
+    <color name="textview.tvlogout.text_color">#F00800</color>
+    <color name="button.btnyeslogout.background">#0dc2ff</color>
+    <color name="button.btnnologout.background">#0dc2ff</color>
 </resources>

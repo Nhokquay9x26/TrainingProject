@@ -18,4 +18,8 @@
 
     <string name="textview.text.title.detail">Detail</string>
     <string name="textview.text.mean">Mean :</string>
+    <string name="textview.text.log_out">Log out</string>
+    <string name="textview.text.log_out_question">Do you close Application ?</string>
+    <string name="button.text.btn_yes_log_out">Yes</string>
+    <string name="button.text.btn_no_log_out">No</string>
 </resources>
