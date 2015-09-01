@@ -42,4 +42,5 @@
     <string name="custom.tabbar.main.text.question">Question</string>
     <string name="custom.tabbar.main.text.setting">Setting</string>
 
+    <string name="favorite.textview.title">Favorite</string>
 </resources>

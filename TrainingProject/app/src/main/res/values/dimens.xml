@@ -85,6 +85,10 @@
     <dimen name="custom.tabbar.main.maginright">20dp</dimen>
     <dimen name="custom.tabbar.main.height.footer">55dp</dimen>
     <dimen name="custom.tabbar.main.img.tab.magintop">2dp</dimen>
+    <dimen name="favorite.title.height">100dp</dimen>
+    <dimen name="favorite.text.title.size">30sp</dimen>
+    <dimen name="favorite.rlfavorite.margin">20dp</dimen>
+    <dimen name="item.favorite.padding">10dp</dimen>
 
 
 </resources>
