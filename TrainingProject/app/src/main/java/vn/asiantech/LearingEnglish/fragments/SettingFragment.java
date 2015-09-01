@@ -7,8 +7,8 @@ import org.androidannotations.annotations.EFragment;
 import vn.asiantech.LearingEnglish.R;
 
 
-@EFragment(R.layout.fragment_four)
-public class TabFourFragment extends BaseFragment {
+@EFragment(R.layout.fragment_setting)
+public class SettingFragment extends BaseFragment {
 
     @Override
     public void onAttach(Activity activity) {

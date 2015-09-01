@@ -20,5 +20,7 @@
     <color name="sign_in.body_layout.background">#ffffff</color>
     <color name="sign_in.body_layout.background.transparent">#7f000000</color>
     <color name="sign_in.textview.forgot_password">#009dd9</color>
+    <color name="text_user_name_setting">#FF3333</color>
+    <color name="view_line_setting">#CCCCCC</color>
 
 </resources>

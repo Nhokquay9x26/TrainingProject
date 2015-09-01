@@ -16,7 +16,7 @@ import org.androidannotations.annotations.EActivity;
 import org.androidannotations.annotations.ViewById;
 
 import vn.asiantech.LearingEnglish.R;
-import vn.asiantech.LearingEnglish.container.TabFourContainer;
+import vn.asiantech.LearingEnglish.container.SettingContainer;
 import vn.asiantech.LearingEnglish.container.TabOneContainer;
 import vn.asiantech.LearingEnglish.container.TabThreeContainer;
 import vn.asiantech.LearingEnglish.container.TabTwoContainer;
@@ -81,7 +81,7 @@ public class MainActivity extends BaseActionBarActivity {
                 } else if (position == 2) {
                     title = getResources().getString(R.string.tab_3);
                 } else {
-                    title = getResources().getString(R.string.tab_4);
+                    title = getResources().getString(R.string.tab_setting);
                 }
                 setHeader(title, HEADER.TYPE_HOME);
             }
@@ -167,7 +167,7 @@ public class MainActivity extends BaseActionBarActivity {
                 case 2:
                     return new TabThreeContainer();
                 default:
-                    return new TabFourContainer();
+                    return new SettingContainer();
             }
         }
 
