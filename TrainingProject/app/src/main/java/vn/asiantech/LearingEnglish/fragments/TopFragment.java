@@ -14,10 +14,6 @@ import org.androidannotations.annotations.*;
 import vn.asiantech.LearingEnglish.R;
 
 @EFragment(R.layout.fragment_top)
-public class TopFragment extends Fragment {
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View v = inflater.inflate(R.layout.fragment_top, container, false);
-        return v;
-    }
+public class TopFragment extends BaseFragment {
+
 }

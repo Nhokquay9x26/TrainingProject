@@ -2,7 +2,27 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:background="@color/colorPrimary">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="HOME"
+            android:textColor="#ffffff"
+            android:layout_centerInParent="true"
+            android:textSize="20sp"
+            android:id="@+id/tvHeader"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_search"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"/>
+    </RelativeLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="55dp"
