@@ -21,6 +21,7 @@ public class MainActivity extends BaseActionBarActivity {
 
     @Override
     void afterView() {
-        SignupActivity_.intent(MainActivity.this).start();
+        SplashScreenActivity_.intent(MainActivity.this).start();
+        //SignupActivity_.intent(MainActivity.this).start();
     }
 }
