@@ -24,6 +24,8 @@ public class FavoriteFragment extends BaseFragment {
     private RecyclerView.LayoutManager mLayoutManager;
     private List<vn.asiantech.LearingEnglish.models.WordFavorite> mDatas = new ArrayList<>();
     String mFavorites[] = {"Home", "Welcome", "Tutorial", "Android", "Speed", "School", "Favorite", "Class", "Program", "Test"};
+    String mSpells[] = {"/hoʊm/", "/'welk m/", "/tju´tɔ:riəl/","/´ændrɔid/","/spi:d/", "/sku:l/", "/ˈfeɪvərɪt , ˈfeɪvrɪt/",
+            "/klɑ:s/", "/´prougræm/", "/test/"};
     @AfterViews
     void afterViews(){
         mRecyclerViewFavorite.setHasFixedSize(true);
@@ -39,6 +41,7 @@ public class FavoriteFragment extends BaseFragment {
         for (int i = 0 ; i < mFavorites.length; i++){
             vn.asiantech.LearingEnglish.models.WordFavorite model = new vn.asiantech.LearingEnglish.models.WordFavorite();
             model.setWord(mFavorites[i]);
+            model.setPronunciation(mSpells[i]);
             mDatas.add(model);
         }
     }
