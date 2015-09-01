@@ -24,4 +24,7 @@
     <string name="button.send_email_forget_password">Forgot</string>
     <string name="editText.email_hint">Email</string>
     <string name="textView.dialog_forget_password_title">Get pass</string>
+    <string name="textview.text.favorite">Favorite word</string>
+    <string name="textview.text.two">:</string>
+    <string name="textview.text.spell">/spell/</string>
 </resources>
