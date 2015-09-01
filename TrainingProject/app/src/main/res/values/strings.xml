@@ -37,5 +37,10 @@
     <string name="fogotpassword">Forgot Password?</string>
     <string name="title_activity_login_activity">LoginActivity</string>
     <string name="action_settings">Settings</string>
+    <string name="custom.tabbar.main.text.home">Home</string>
+    <string name="custom.tabbar.main.text.favorite">Favorite</string>
+    <string name="custom.tabbar.main.text.question">Question</string>
+    <string name="custom.tabbar.main.text.setting">Setting</string>
+
     <string name="favorite.textview.title">Favorite</string>
 </resources>

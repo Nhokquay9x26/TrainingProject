@@ -2,14 +2,11 @@ package vn.asiantech.LearingEnglish.fragments;
 
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.EFragment;
 import org.androidannotations.annotations.ViewById;
-
 import java.util.ArrayList;
 import java.util.List;
-
 import vn.asiantech.LearingEnglish.R;
 import vn.asiantech.LearingEnglish.adapter.FavoriteAdapter;
 import vn.asiantech.LearingEnglish.models.WordsEnglish;
@@ -25,15 +22,12 @@ public class FavoriteFragment extends BaseFragment {
     FavoriteAdapter favoriteAdapter;
     List<WordsEnglish> wordsEnglishs = new ArrayList<WordsEnglish>();
 
-
-
     @AfterViews
     void afterView(){
         fakeData();
         favoriteAdapter = new FavoriteAdapter(getActivity(),wordsEnglishs);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity().getBaseContext()));
         recyclerView.setAdapter(favoriteAdapter);}
-
 
     public void fakeData(){
         WordsEnglish wordsEnglish = new WordsEnglish();
