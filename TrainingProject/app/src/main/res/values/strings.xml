@@ -1,9 +1,10 @@
 <resources>
-<string name="app_name">Base Project</string>
-<string name="hello_world">Hello world!</string>
+    <string name="app_name">Base Project</string>
+    <string name="hello_world">Hello world!</string>
     <string name="Sign_in">Sign in</string>
     <string name="username_email">Username / Email Address</string>
     <string name="password">Password</string>
+
     <string name="title.testing.menubar">Testing:    Level 1</string>
     <string name="text.testing.number_question">1/7</string>
     <string name="text.testing.left_number">5</string>
@@ -18,4 +19,23 @@
 
     <string name="testing.textview.text_title">Question</string>
     <string name="testing.textview.number_of_question">1 - 7</string>
+
+    <string name="signup.tv.sub">Tape to change profile</string>
+    <string name="activity.signup.hint.user">Username</string>
+    <string name="activity.signup.hint.email">Email</string>
+    <string name="activity.signup.hint.password">Password</string>
+    <string name="activity.singup.hint.confirmpass">Confirm Password</string>
+    <string name="activity.signup.hint.promotion">Promotion Code</string>
+    <string name="signup.tv.text">Singup</string>
+    <string name="signup.tv.check">I wish to subcribe to daily alert via mail</string>
+    <string name="signup.conten.Descrip">content</string>
+    <string name="error_invalid_confirm_password">Passwords do not match</string>
+    <string name="error_invalid_password">Password is too short</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="error_invalid_email">This email is</string>
+    <string name="signup">Sign up</string>
+    <string name="fogotpassword">Forgot Password?</string>
+    <string name="title_activity_login_activity">LoginActivity</string>
+    <string name="action_settings">Settings</string>
+
 </resources>

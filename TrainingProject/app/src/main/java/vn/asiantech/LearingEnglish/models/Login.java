@@ -10,6 +10,5 @@ import lombok.Data;
 public class Login {
     private String user_id;
     private String email;
-
     private String token;
 }

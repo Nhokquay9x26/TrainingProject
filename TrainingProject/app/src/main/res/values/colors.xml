@@ -7,11 +7,18 @@
     <color name="color.white">#FFFFFF</color>
     <color name="color.black">#000000</color>
     <color name="color.no.color">#00000000</color>
+
     <color name="color.testing.menubar">#19bce9</color>
 
     <color name="color.testing.tv_number_of_question">#68d5f3</color>
     <color name="color.testing.viewLine">#bfecf8</color>
     <color name="color.red">#ee5858</color>
 
+
+
+    <color name="signup.tv.sub.color">#555555</color>
+    <color name="dialog.backgroud.title">#00b9e6</color>
+    <color name="signup.text.color.buton">#ffffff</color>
+    <color name="signup.ln.backgroud">#00b9e6</color>
 
 </resources>

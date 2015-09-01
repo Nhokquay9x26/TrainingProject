@@ -2,13 +2,12 @@ package vn.asiantech.LearingEnglish.activities;
 
 
 
-import android.content.Intent;
-
 import org.androidannotations.annotations.EActivity;
 import org.androidannotations.annotations.OptionsItem;
 
 import vn.asiantech.LearingEnglish.R;
 /**
+ * @Author TienTun
  * Created by tientun on 3/5/15.
  */
 
@@ -22,6 +21,6 @@ public class MainActivity extends BaseActionBarActivity {
 
     @Override
     void afterView() {
-        startActivity(new Intent(this,SplashScreenActivity_.class));
+        SignupActivity_.intent(MainActivity.this).start();
     }
 }

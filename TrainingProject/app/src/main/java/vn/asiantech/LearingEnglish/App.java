@@ -21,6 +21,7 @@ import vn.asiantech.LearingEnglish.network.core.ApiConfig;
 public class App extends Application {
     private static App instance = null;
 
+
     @Override
     public void onCreate() {
         super.onCreate();
