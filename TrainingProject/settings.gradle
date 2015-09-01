@@ -1,1 +1,1 @@
-include ':app', ':PagerSlidingTabStrip', ':libraryindicator'
+include ':app', ':libraryindicator', ':PagerSlidingTabStrips'
