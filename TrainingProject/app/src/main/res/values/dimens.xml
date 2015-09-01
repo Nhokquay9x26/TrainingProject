@@ -19,4 +19,9 @@
     <dimen name="signup_button_login">40dp</dimen>
     <dimen name="signup_edt_paddingLeft">10dp</dimen>
     <dimen name="signup_ll_margin_transparent">20dp</dimen>
+    <dimen name="magin_left.edittext">15dp</dimen>
+    <dimen name="magin_right.edittext">15dp</dimen>
+    <dimen name="magin_top.edittext">30dp</dimen>
+    <dimen name="paddingbottom.textview.llbody">30dp</dimen>
+    <dimen name="margin.relative">20dp</dimen>
 </resources>
