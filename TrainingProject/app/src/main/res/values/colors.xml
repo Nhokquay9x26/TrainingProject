@@ -2,4 +2,9 @@
 <resources>
     <color name="main">#377EB0</color>
     <color name="tab_background">#dfe8f1</color>
+    <color name="rl.part_of_child_of_one">#0dc2ff</color>
+    <color name="tv.of_child_one">#0dc2ff</color>
+    <color name="edittext.background_tint">#0dc2ff</color>
+    <color name="button.forgot_pass">#0dc2ff</color>
+    <color name="button.change_color_on_click">#9fff67</color>
 </resources>

@@ -1,5 +1,17 @@
 <resources>
     <!-- Default screen margins, per the Android Design guidelines. -->
-    <dimen name="activity_horizontal_margin">0dp</dimen>
-    <dimen name="activity_vertical_margin">0dp</dimen>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="relativelayout.child.forgotpassword.layout_height">400dp</dimen>
+    <dimen name="relativelayout.forgotpassword.margin_left">30dp</dimen>
+    <dimen name="relativelayout.forgotpassword.margin_right">30dp</dimen>
+    <dimen name="relativelayout.forgotpassword.margin_start">30dp</dimen>
+    <dimen name="relativelayout.forgotpassword.margin_end">30dp</dimen>
+    <dimen name="relativelayout.forgotpassword.margin_top">60sp</dimen>
+    <dimen name="relativelayout.partofchild.forgotpassword.layout_height">120dp</dimen>
+    <dimen name="edittext.forgotpassword.text_size">20sp</dimen>
+    <dimen name="edittext.forgotpassword.margin">30dp</dimen>
+    <dimen name="button.forgotpassword.text_size">15sp</dimen>
+    <dimen name="textview.forgotpassword.margin_top">80dip</dimen>
+    <dimen name="textview.forgotpassword.text_size">15sp</dimen>
 </resources>
