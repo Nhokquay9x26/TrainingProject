@@ -24,4 +24,5 @@
     <dimen name="magin_top.edittext">30dp</dimen>
     <dimen name="paddingbottom.textview.llbody">30dp</dimen>
     <dimen name="margin.relative">20dp</dimen>
+    <dimen name="sign_in.hight.header">120dp</dimen>
 </resources>
