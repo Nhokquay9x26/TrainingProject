@@ -13,7 +13,9 @@
         card_view:cardCornerRadius="10dp"
         android:layout_marginBottom="@dimen/favorite_card_margin_bottom"
         android:layout_marginLeft="@dimen/favorite_card_margin_left"
+        android:layout_marginStart="@dimen/favorite_card_margin_left"
         android:layout_marginRight="@dimen/favorite_card_margin_right"
+        android:layout_marginEnd="@dimen/favorite_card_margin_right"
         android:layout_marginTop="@dimen/favorite_card_margin_top">
 
     <android.support.v7.widget.RecyclerView
@@ -22,7 +24,9 @@
         android:layout_height="match_parent"
         android:layout_marginBottom="@dimen/favorite_card_margin_bottom"
         android:layout_marginLeft="@dimen/favorite_card_margin_left"
+        android:layout_marginStart="@dimen/favorite_card_margin_left"
         android:layout_marginRight="@dimen/favorite_card_margin_right"
+        android:layout_marginEnd="@dimen/favorite_card_margin_right"
         android:layout_marginTop="@dimen/favorite_card_margin_top"
         />
     </android.support.v7.widget.CardView>

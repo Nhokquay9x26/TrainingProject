@@ -11,18 +11,22 @@
         android:id="@+id/tvTemp"
         style="@style/favorite_textview_size"
         android:text="@string/textview.text.two"
-        android:layout_toRightOf="@+id/tvWordFavorite"/>
+        android:layout_toRightOf="@+id/tvWordFavorite"
+        android:layout_toEndOf="@+id/tvWordFavorite"/>
     <TextView
         android:id="@+id/tvSpellWord"
         android:layout_toRightOf="@id/tvTemp"
+        android:layout_toEndOf="@id/tvTemp"
         style="@style/favorite_textview_size"
         android:text="@string/textview.text.spell" />
     <ImageView
         android:id="@+id/imgSound"
-        android:layout_width="25dp"
-        android:layout_height="25dp"
+        android:layout_width="@dimen/ic_sound_width"
+        android:layout_height="@dimen/ic_sound_height"
+        android:contentDescription="@string/app_name"
         android:src="@drawable/ic_sound"
         android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
         android:scaleType="centerInside"
         android:layout_centerVertical="true"/>
 

@@ -2,8 +2,6 @@ package vn.asiantech.LearingEnglish.fragments;
 
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
-
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.EFragment;
 import org.androidannotations.annotations.ViewById;
@@ -20,8 +18,6 @@ import widget.DividerItemDecoration;
 public class FavoriteFragment extends BaseFragment {
     @ViewById(R.id.recyclerViewFavorite)
     RecyclerView mRecyclerViewFavorite;
-    private WordFavoriteAdapter mWordFavoriteAdaper;
-    private RecyclerView.LayoutManager mLayoutManager;
     private List<vn.asiantech.LearingEnglish.models.WordFavorite> mDatas = new ArrayList<>();
     String mFavorites[] = {"Home", "Welcome", "Tutorial", "Android", "Speed", "School", "Favorite", "Class", "Program", "Test"};
     String mSpells[] = {"/hoʊm/", "/'welk m/", "/tju´tɔ:riəl/","/´ændrɔid/","/spi:d/", "/sku:l/", "/ˈfeɪvərɪt , ˈfeɪvrɪt/",
@@ -29,12 +25,12 @@ public class FavoriteFragment extends BaseFragment {
     @AfterViews
     void afterViews(){
         mRecyclerViewFavorite.setHasFixedSize(true);
-        mLayoutManager = new LinearLayoutManager(getActivity(),LinearLayoutManager.VERTICAL,false);
-        mRecyclerViewFavorite.setLayoutManager(mLayoutManager);
+        LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity(),LinearLayoutManager.VERTICAL,false);
+        mRecyclerViewFavorite.setLayoutManager(layoutManager);
         mRecyclerViewFavorite.addItemDecoration(new DividerItemDecoration(getActivity(), DividerItemDecoration.VERTICAL_LIST));
         addData();
-        mWordFavoriteAdaper = new WordFavoriteAdapter(mDatas,getActivity());
-        mRecyclerViewFavorite.setAdapter(mWordFavoriteAdaper);
+        WordFavoriteAdapter wordFavoriteAdaper = new WordFavoriteAdapter(mDatas,getActivity());
+        mRecyclerViewFavorite.setAdapter(wordFavoriteAdaper);
 
     }
     private void addData(){
