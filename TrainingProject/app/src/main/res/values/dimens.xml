@@ -53,4 +53,14 @@
     <dimen name="button.btnlogout.text_size">20sp</dimen>
     <dimen name="button.btnnologout.margin">2sp</dimen>
     <dimen name="view.layout_height">2dp</dimen>
+
+    <!-- dimen file item_list_ratings-->
+    <dimen name="relativeLayout.itemRatings.height.79dp">79dp</dimen>
+    <dimen name="textView.list.marginLeft.18dp">18dp</dimen>
+    <dimen name="img.itemRatings.width.65dp">65dp</dimen>
+    <dimen name="img.itemRatings.height.65dp">65dp</dimen>
+    <dimen name="img.itemRatings.marginLeft.25dp">25dp</dimen>
+    <dimen name="textView.itemRatings.marginLeft.23dp">23dp</dimen>
+    <dimen name="textView.itemRatings.textSize.30sp">20sp</dimen>
+    <dimen name="textView.itemRatings.width.44dp">54dp</dimen>
 </resources>
