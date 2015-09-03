@@ -36,7 +36,6 @@
     <dimen name="textView.dialog_forget_password_title_margin_left">10dp</dimen>
     <dimen name="button.forgot_password_width">120dp</dimen>
     <dimen name="view.below_editText">1dp</dimen>
-    <dimen name="image.header.width_hight">100dp</dimen>
     <dimen name="relativeLayout.dialog_forget_password_height">200dp</dimen>
     <dimen name="button.forgot_password_height">40dp</dimen>
     <dimen name="cardView.margin_top_bottom">10dp</dimen>
@@ -61,7 +60,21 @@
     <dimen name="textView.log_out_setting_margin_left">20sp</dimen>
     <dimen name="textView.objects_margin">10dp</dimen>
     <dimen name="imageView.avatar_top_point_width_height">65dp</dimen>
-
-
-
+    <dimen name="favorite_card_margin_bottom">5dp</dimen>
+    <dimen name="favorite_card_margin_left">10dp</dimen>
+    <dimen name="favorite_card_margin_right">10dp</dimen>
+    <dimen name="favorite_card_margin_top">20dp</dimen>
+    <dimen name="ic_sound_width">25dp</dimen>
+    <dimen name="ic_sound_height">25dp</dimen>
+    <dimen name="relativeLayout.item_top_height">80dp</dimen>
+    <dimen name="imageView.category_width">60dp</dimen>
+    <dimen name="imageView.category_height">60dp</dimen>
+    <dimen name="imageView.category_margin_left">20dp</dimen>
+    <dimen name="textView.category_margin_left">20dp</dimen>
+    <dimen name="imageView.detail_margin_right">20dp</dimen>
+    <dimen name="cardView.top_radius">5dp</dimen>
+    <dimen name="cardView.top_margin_top">20dp</dimen>
+    <dimen name="cardView.top_margin_bottom">15dp</dimen>
+    <dimen name="cardView.top_margin_left">10dp</dimen>
+    <dimen name="cardView.top_margin_right">10dp</dimen>
 </resources>

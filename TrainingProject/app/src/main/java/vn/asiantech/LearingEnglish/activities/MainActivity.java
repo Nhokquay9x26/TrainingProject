@@ -7,35 +7,40 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.ViewPager;
+import android.view.LayoutInflater;
+import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
+import android.widget.FrameLayout;
 import android.widget.Toast;
 
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.EActivity;
 import org.androidannotations.annotations.ViewById;
-
 import vn.asiantech.LearingEnglish.R;
 import vn.asiantech.LearingEnglish.container.SettingContainer;
+import vn.asiantech.LearingEnglish.container.FavoriteContainer;
 import vn.asiantech.LearingEnglish.container.TabOneContainer;
-import vn.asiantech.LearingEnglish.container.TabThreeContainer;
 import vn.asiantech.LearingEnglish.container.TabTwoContainer;
 import vn.asiantech.LearingEnglish.fragments.BaseContainerFragment;
 import vn.asiantech.LearingEnglish.views.HackyViewPager;
+import vn.asiantech.LearingEnglish.views.HeaderBar;
 import vn.asiantech.LearingEnglish.views.PagerSlidingTabStrip;
 
 
 @EActivity(R.layout.activity_main)
-public class MainActivity extends BaseActionBarActivity {
+public class MainActivity extends BaseActionBarActivity implements HeaderBar.OnHeaderBarListener{
 
     private static final int PLAY_SERVICES_RESOLUTION_REQUEST = 9000;
     private final String TAG = MainActivity.this.getClass().getName();
     // ViewPagercustomDrawable
+    // ViewPager
     @ViewById(R.id.viewPager)
     protected HackyViewPager mPager;
     // SlidingTab Trip
     @ViewById(R.id.tabs)
     protected PagerSlidingTabStrip mTabs;
+    @ViewById(R.id.framelayoutHeader)
+    protected FrameLayout mFramelayoutHeader;
     private Drawable customDrawable;
     private boolean mDoubleBackToExitPressedOnce;
     private PageAdapter mAdapter;
@@ -43,26 +48,26 @@ public class MainActivity extends BaseActionBarActivity {
     /*
     * init header
     */
-    public static enum HEADER {
-        TYPE_HOME
-    }
-
-    @ViewById(R.id.tvTitleHeader)
-    TextView mTvTitleHeader;
+    protected HeaderBar headerBar;
 
     @AfterViews
     void afterView() {
+        LayoutInflater inflater = LayoutInflater.from(this);
+        View customView = inflater.inflate(R.layout.custom_actionbar, null);
+        // Initilization
+        headerBar = (HeaderBar) customView.findViewById(R.id.header_bar);
+        headerBar.setOnHeaderBarListener(this);
+        mFramelayoutHeader.addView(customView);
         setValue();
         setEvent();
     }
-
 
     private void setValue() {
         mAdapter = new PageAdapter(getSupportFragmentManager());
         mPager.setAdapter(mAdapter);
         mTabs.setViewPager(mPager);
         mPager.setOffscreenPageLimit(4);
-        setHeader(getResources().getString(R.string.tab_1), HEADER.TYPE_HOME);
+        setHeader(getResources().getString(R.string.tab_1));
     }
 
     private void setEvent() {
@@ -73,7 +78,7 @@ public class MainActivity extends BaseActionBarActivity {
 
             @Override
             public void onPageSelected(int position) {
-                String title = null;
+                String title;
                 if (position == 0) {
                     title = getResources().getString(R.string.tab_1);
                 } else if (position == 1) {
@@ -83,7 +88,7 @@ public class MainActivity extends BaseActionBarActivity {
                 } else {
                     title = getResources().getString(R.string.tab_setting);
                 }
-                setHeader(title, HEADER.TYPE_HOME);
+                setHeader(title);
             }
 
             @Override
@@ -165,7 +170,7 @@ public class MainActivity extends BaseActionBarActivity {
                 case 1:
                     return new TabTwoContainer();
                 case 2:
-                    return new TabThreeContainer();
+                    return new FavoriteContainer();
                 default:
                     return new SettingContainer();
             }
@@ -198,17 +203,7 @@ public class MainActivity extends BaseActionBarActivity {
     /*
     * set show/ hide view in header
     */
-    private void setHeader(String title, HEADER type) {
-        mTvTitleHeader.setText(title);
-        switch (type) {
-            case TYPE_HOME:
-
-                break;
-
-            default:
-                break;
-
-
-        }
+    private void setHeader(String title) {
+        headerBar.setTitle(title);
     }
 }

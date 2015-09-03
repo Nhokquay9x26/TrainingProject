@@ -22,11 +22,11 @@
 
             <ImageView
                 android:id="@+id/imgIconSignIn"
-                android:layout_width="@dimen/image.header.width_hight"
-                android:layout_height="@dimen/image.header.width_hight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:layout_centerVertical="true"
-                android:src="@drawable/ico_avatar" />
+                android:src="@drawable/img_avatar" />
         </RelativeLayout>
 
         <RelativeLayout

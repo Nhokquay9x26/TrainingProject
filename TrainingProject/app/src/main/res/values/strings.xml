@@ -33,5 +33,8 @@
     <string name="textView.text.1st">1st</string>
     <string name="textView.text.matiner_jack">Matiner Jack</string>
     <string name="textView.text.100">100</string>
-
+    <string name="textview.text.favorite">Favorite word</string>
+    <string name="textview.text.two">:</string>
+    <string name="textview.text.spell">/spell/</string>
+    <string name="textView.top_category_name">Animal</string>
 </resources>
