@@ -26,4 +26,5 @@
     <color name="colorPrimaryDark">#00b9e6</color>
     <color name="favorite.title.background">#00b9e6</color>
     <color name="favorite.textview.title.color">#ffffff</color>
+    <color name="item.recycleview.home.line">#b2aaaa</color>
 </resources>

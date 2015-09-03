@@ -1,23 +1,14 @@
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginLeft="@dimen/item.recycleview.maginleft"
     android:layout_marginRight="@dimen/item.recycleview.maginright"
     android:layout_marginTop="@dimen/item.recycleview.magintop">
 
-    <vn.asiantech.LearingEnglish.utils.CircleImageView
-        android:id="@+id/imgAvataItemHome"
-        android:layout_width="@dimen/item.recycleview.with.avata"
-        android:layout_height="@dimen/item.recycleview.with.avata"
-        android:src="@drawable/img_animal" />
-
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
-        android:layout_toLeftOf="@+id/imgSelectItemHome"
-        android:layout_toRightOf="@+id/imgAvataItemHome"
         android:orientation="vertical">
 
         <TextView
@@ -28,11 +19,34 @@
             android:layout_marginTop="@dimen/item.recycleview.magintop.textview"
             android:textSize="@dimen/item.recycleview.textsize" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="@color/color.black" />
-    </LinearLayout>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/item.recycleview.maginleft.home.view.with.height"
+            android:layout_below="@+id/tvNameItemHome">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/item.recycleview.maginleft.line"
+                android:background="@color/item.recycleview.home.line" />
+
+            <View
+                android:layout_width="@dimen/item.recycleview.maginleft.home.view.with.height"
+                android:layout_height="@dimen/item.recycleview.maginleft.home.view.with.height"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/item.recycleview.maginleft.home.view.maginright"
+                android:background="@drawable/circle_home" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <vn.asiantech.LearingEnglish.utils.CircleImageView
+        android:id="@+id/imgAvataItemHome"
+        android:layout_width="@dimen/item.recycleview.with.avata"
+        android:layout_height="@dimen/item.recycleview.with.avata"
+        android:src="@drawable/img_animal" />
 
     <ImageView
         android:id="@+id/imgSelectItemHome"

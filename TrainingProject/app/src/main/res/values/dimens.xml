@@ -73,11 +73,11 @@
     <dimen name="item.recycleview.magintop">20dp</dimen>
     <dimen name="item.recycleview.maginright">10dp</dimen>
     <dimen name="item.recycleview.maginleft">10dp</dimen>
-    <dimen name="item.recycleview.with.avata">70dp</dimen>
+    <dimen name="item.recycleview.with.avata">60dp</dimen>
     <dimen name="item.recycleview.textsize">18sp</dimen>
     <dimen name="item.recycleview.with.select">50dp</dimen>
-    <dimen name="item.recycleview.maginleft.textview">10dp</dimen>
-    <dimen name="item.recycleview.magintop.textview">20dp</dimen>
+    <dimen name="item.recycleview.maginleft.textview">70dp</dimen>
+    <dimen name="item.recycleview.magintop.textview">5dp</dimen>
     <dimen name="activity.main.viewpager.magintop">80dp</dimen>
     <dimen name="activity.main.viewpager.maginbottom">50dp</dimen>
     <dimen name="custom.tabbar.main.height.header">80dp</dimen>
@@ -90,6 +90,7 @@
     <dimen name="favorite.rlfavorite.margin">20dp</dimen>
     <dimen name="item.favorite.padding">10dp</dimen>
     <dimen name="favorite.rlhome.margin">20dp</dimen>
-
-
+    <dimen name="item.recycleview.maginleft.line">30dp</dimen>
+    <dimen name="item.recycleview.maginleft.home.view.maginright">57dp</dimen>
+    <dimen name="item.recycleview.maginleft.home.view.with.height">10dp</dimen>
 </resources>

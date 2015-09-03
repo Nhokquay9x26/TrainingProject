@@ -28,27 +28,35 @@ public class TopFragment extends BaseFragment {
     ArrayList<HomeCategory> mArraylist = new ArrayList<>();
 
     @AfterViews
-    void afterViews(){
+    void afterViews() {
         fakedata();
-       // configRecycleView();
-        mHomeAdapter = new HomeAdapter(getActivity(),mArraylist);
+        mHomeAdapter = new HomeAdapter(getActivity(), mArraylist);
         mRecyclerHome.setLayoutManager(new LinearLayoutManager(getActivity().getBaseContext()));
         mRecyclerHome.setAdapter(mHomeAdapter);
     }
-//    private void configRecycleView() {
-//        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getActivity());
-//        linearLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
-//        mRecyclerHome.setLayoutManager(linearLayoutManager);
-//    }
 
+    /**
+     * fakedata
+     */
     private void fakedata() {
         HomeCategory homeCategory = new HomeCategory();
         homeCategory.setMAvataHome(R.drawable.img_animal);
         homeCategory.setMNameHome("Animal");
         mArraylist.add(homeCategory);
+
         HomeCategory homeCategory1 = new HomeCategory();
-        homeCategory1.setMAvataHome(R.drawable.img_animal);
-        homeCategory1.setMNameHome("Animalaaaa");
+        homeCategory1.setMAvataHome(R.drawable.img_vegetables);
+        homeCategory1.setMNameHome("Vegetables");
         mArraylist.add(homeCategory1);
+
+        HomeCategory homeCategory2 = new HomeCategory();
+        homeCategory2.setMAvataHome(R.drawable.img_transport);
+        homeCategory2.setMNameHome("Transport");
+        mArraylist.add(homeCategory2);
+
+        HomeCategory homeCategory3 = new HomeCategory();
+        homeCategory3.setMAvataHome(R.drawable.img_vegetables);
+        homeCategory3.setMNameHome("Vegetables");
+        mArraylist.add(homeCategory3);
     }
 }
