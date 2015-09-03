@@ -1,24 +1,55 @@
-<?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/frameLayoutxxx"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/top.mau_nen"
     android:orientation="vertical">
 
-    <LinearLayout
+    <RelativeLayout
+        android:id="@+id/rlTopNen"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="@dimen/relativeLayout.top.height.118dp"
+        android:background="@color/blue.top">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="TAB 1" />
+            android:text="@string/textView.top.text"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textView.top.textSize.33sp"/>
 
-        <Button
-            android:id="@+id/btnTest"
+        <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Test" />
-    </LinearLayout>
-</FrameLayout>
+            android:background="@drawable/ic_search"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:contentDescription="@null"
+            android:layout_marginEnd="@dimen/img.top.marginLeft.28dp"
+            android:layout_marginRight="@dimen/img.top.marginLeft.28dp"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rlTopNen"
+        android:layout_marginEnd="@dimen/relativeLayout.top.marginRight.14dp"
+        android:layout_marginStart="@dimen/relativeLayout.top.marginLeft.14dp"
+        android:layout_marginRight="@dimen/relativeLayout.top.marginRight.14dp"
+        android:layout_marginLeft="@dimen/relativeLayout.top.marginLeft.14dp"
+        android:layout_marginTop="@dimen/relativeLayout.top.marginTop.22dp"
+        android:layout_marginBottom="@dimen/relativeLayout.top.marginBottom.56dp">
+
+        <ListView
+            android:id="@+id/lvTop"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@android:color/transparent">
+
+        </ListView>
+
+    </RelativeLayout>
+</RelativeLayout>
