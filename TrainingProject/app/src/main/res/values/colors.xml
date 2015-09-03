@@ -23,4 +23,11 @@
     <color name="color.tv_submit">#FFFFFF</color>
     <color name="color.background_list">#e8e9ea</color>
 
+    <color name="custom_tabbar_main_background">#00b9e6</color>
+    <color name="colorPrimary">#00b9e6</color>
+    <color name="colorPrimaryDark">#00b9e6</color>
+    <color name="favorite.title.background">#00b9e6</color>
+    <color name="favorite.textview.title.color">#ffffff</color>
+    <color name="color.background.view">#30000000</color>
+    <color name="color.background.test_resulting">#e8e9ea</color>
 </resources>

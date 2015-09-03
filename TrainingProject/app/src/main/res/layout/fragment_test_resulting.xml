@@ -2,16 +2,14 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#d4c8c8">
-
+    android:background="@color/color.background.test_resulting">
 
     <RelativeLayout
-
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginBottom="10dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
+        android:layout_marginLeft="@dimen/testresulting.margin_left_right"
+        android:layout_marginRight="@dimen/testresulting.margin_left_right"
         android:layout_marginTop="10dp"
         android:background="@anim/listview_test_resulting">
 
@@ -19,23 +17,23 @@
             android:id="@+id/recycleViewResult"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_above="@+id/rlResult" />
+            android:layout_above="@+id/rlResult"
+            android:layout_marginTop="20dp" />
 
         <RelativeLayout
             android:id="@+id/rlResult"
             android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:layout_alignParentBottom="true"
-
-            >
+            android:layout_height="@dimen/testresulting.rl.height_bottom"
+            android:layout_alignParentBottom="true">
 
             <TextView
+                android:id="@+id/tvTotalResult"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_centerHorizontal="true"
                 android:text="@string/testresulting.textview.total"
                 android:textColor="@color/color.red"
-                android:textSize="17sp" />
+                android:textSize="@dimen/testresulting.textview.total_size" />
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -47,13 +45,10 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentBottom="true"
                     android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="10dp"
                     android:background="@color/color.no.color"
-                    android:padding="5dp"
                     android:src="@mipmap/button_share_xhd" />
             </RelativeLayout>
-
         </RelativeLayout>
     </RelativeLayout>
-
-
 </RelativeLayout>
