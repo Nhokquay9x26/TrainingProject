@@ -29,4 +29,11 @@
     <color name="textview.tvlogout.text_color">#F00800</color>
     <color name="button.btnyeslogout.background">#0dc2ff</color>
     <color name="button.btnnologout.background">#0dc2ff</color>
+
+    <color name="blue.top">#00b9e6</color>
+    <color name="top.drawable.stroke">#e8e9ea</color>
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="textView.ratings.textColor">#5f6161</color>
+    <color name="view.ratings">#e8e9ea</color>
 </resources>

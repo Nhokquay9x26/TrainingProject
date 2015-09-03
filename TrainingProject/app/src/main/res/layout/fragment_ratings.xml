@@ -6,7 +6,7 @@
     <RelativeLayout
         android:id="@+id/rlRatings"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/relativeLayout.ratings.height.118dp"
+        android:layout_height="@dimen/relativeLayout.ratings.height.100dp"
         android:background="@color/blue.top">
 
         <TextView
@@ -35,6 +35,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/rlRatings"
+        android:layout_above="@+id/txtRatingsNen"
         android:background="@drawable/shape_list_favorite"
         android:layout_marginTop="@dimen/relativeLayout.ratings.marginTop.25dp"
         android:layout_marginLeft="@dimen/textView.ratings.marginRight.10dp"
@@ -98,4 +99,11 @@
             </View>
         </RelativeLayout>
     </RelativeLayout>
+
+    <TextView
+        android:id="@+id/txtRatingsNen"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/textView.top.height.50dp"
+        android:background="@color/blue.top"
+        android:layout_alignParentBottom="true"/>
 </RelativeLayout>

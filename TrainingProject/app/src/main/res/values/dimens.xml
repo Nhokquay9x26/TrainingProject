@@ -55,7 +55,7 @@
     <dimen name="view.layout_height">2dp</dimen>
 
     <!-- dimen file fragment_ratings-->
-    <dimen name="relativeLayout.ratings.height.118dp">118dp</dimen>
+    <dimen name="relativeLayout.ratings.height.100dp">100dp</dimen>
     <dimen name="textView.ratings.textSize.28sp">28sp</dimen>
     <dimen name="img.ratings.marginRight.28dp">28dp</dimen>
     <dimen name="textView.ratings.marginRight.10dp">10dp</dimen>
@@ -65,5 +65,6 @@
     <dimen name="view.ratings.width.97dp">97dp</dimen>
     <dimen name="View.ratings.marginRight.114dp">114dp</dimen>
     <dimen name="relativeLayout.ratings.marginBottom.6dp">6dp</dimen>
+    <dimen name="textView.top.height.50dp">50dp</dimen>
 
 </resources>
