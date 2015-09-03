@@ -22,4 +22,11 @@
     <string name="textview.text.log_out_question">Do you close Application ?</string>
     <string name="button.text.btn_yes_log_out">Yes</string>
     <string name="button.text.btn_no_log_out">No</string>
+
+    <!-- strings file fragment_ratings-->
+    <string name="textView.ratings.text">Ratings</string>
+    <string name="textView.ratings.rank">Rank</string>
+    <string name="textView.ratings.user">User</string>
+    <string name="textView.ratings.Points">Points</string>
+
 </resources>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/rlRatings"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/relativeLayout.ratings.height.118dp"
+        android:background="@color/blue.top">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/textView.ratings.text"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textView.ratings.textSize.28sp"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_search"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:contentDescription="@null"
+            android:layout_marginEnd="@dimen/img.ratings.marginRight.28dp"
+            android:layout_marginRight="@dimen/img.ratings.marginRight.28dp"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rlRatings"
+        android:background="@drawable/shape_list_favorite"
+        android:layout_marginTop="@dimen/relativeLayout.ratings.marginTop.25dp"
+        android:layout_marginLeft="@dimen/textView.ratings.marginRight.10dp"
+        android:layout_marginRight="@dimen/textView.ratings.marginRight.10dp"
+        android:layout_marginBottom="@dimen/relativeLayout.ratings.marginBottom.6dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/relativeLayout.ratings.height.33dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/textView.ratings.rank"
+                android:layout_marginStart="@dimen/textView.ratings.marginRight.10dp"
+                android:layout_marginLeft="@dimen/textView.ratings.marginRight.10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:text="@string/textView.ratings.user"
+                android:textColor="@color/textView.ratings.textColor" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="@string/textView.ratings.Points"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="@dimen/textView.ratings.marginRight.10dp"
+                android:layout_marginRight="@dimen/textView.ratings.marginRight.10dp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/view.ratings.height.1dp"
+                android:background="@color/view.ratings"
+                android:layout_alignParentBottom="true">
+            </View>
+
+            <View
+                android:layout_width="@dimen/view.ratings.height.1dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/view.ratings.width.97dp"
+                android:layout_marginLeft="@dimen/view.ratings.width.97dp"
+                android:background="@color/view.ratings">
+            </View>
+
+            <View
+                android:layout_width="@dimen/view.ratings.height.1dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:background="@color/view.ratings"
+                android:layout_marginEnd="@dimen/View.ratings.marginRight.114dp"
+                android:layout_marginRight="@dimen/View.ratings.marginRight.114dp">
+            </View>
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>
