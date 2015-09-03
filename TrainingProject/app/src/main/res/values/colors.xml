@@ -21,4 +21,7 @@
     <color name="sign_in.body_layout.background.transparent">#7f000000</color>
     <color name="sign_in.textview.forgot_password">#009dd9</color>
     <color name="black">#000</color>
+    <color name="textView.category">#000000</color>
+    <color name="View.below_text_category">#41000000</color>
+
 </resources>
