@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:background="@color/material_blue_grey_800">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="@dimen/margin.relative"
+        android:layout_marginLeft="@dimen/margin.relative"
+        android:layout_marginRight="@dimen/margin.relative"
+        android:background="@drawable/custom_item_fragment">
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/margin.relative"
+        android:layout_marginBottom="@dimen/margin.relative"
+        android:layout_marginLeft="@dimen/margin.relative"
+        android:layout_marginRight="@dimen/margin.relative"
+        android:background="@drawable/custom_item_fragment">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/margin.relative">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/img_back"
+                android:id="@+id/imgBack" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/imgBack"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:background="@color/sign_in.header.background"
+                android:text="1 - 7"
+                android:id="@+id/tvPage" />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_toRightOf="@+id/tvPage"
+                android:src="@drawable/img_next"
+                android:id="@+id/imgNext" />
+        </RelativeLayout>
+    </RelativeLayout>
+</LinearLayout>
