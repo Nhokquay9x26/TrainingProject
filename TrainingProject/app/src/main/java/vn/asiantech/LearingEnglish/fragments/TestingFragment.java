@@ -101,6 +101,7 @@ public class TestingFragment extends Fragment {
                 }
             }
         }
+
         Log.d("======================","========================");
         int numberQuestion = getArguments().getInt(EXTRA_MESSAGE_NUMBER_QUESTION);
         String question = getArguments().getString(EXTRA_MESSAGE_QUESTION);

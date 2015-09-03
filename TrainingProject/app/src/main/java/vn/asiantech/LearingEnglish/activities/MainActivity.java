@@ -1,5 +1,6 @@
 package vn.asiantech.LearingEnglish.activities;
 
+import android.content.Intent;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
@@ -12,11 +13,14 @@ import org.androidannotations.annotations.EActivity;
 import org.androidannotations.annotations.OptionsItem;
 import org.androidannotations.annotations.ViewById;
 
+import java.util.Timer;
+import java.util.TimerTask;
+
 import vn.asiantech.LearingEnglish.R;
-import vn.asiantech.LearingEnglish.fragments.FavoriteFragment;
+import vn.asiantech.LearingEnglish.fragments.FavoriteFragment_;
 import vn.asiantech.LearingEnglish.fragments.QuestionFragment;
+import vn.asiantech.LearingEnglish.fragments.QuestionFragment_;
 import vn.asiantech.LearingEnglish.fragments.RatingsFragment;
-import vn.asiantech.LearingEnglish.fragments.TopFragment;
 import vn.asiantech.LearingEnglish.fragments.TopFragment_;
 import vn.asiantech.LearingEnglish.utils.TabBar;
 
@@ -50,10 +54,22 @@ public class MainActivity extends FragmentActivity {
                 mViewPagerMain.setCurrentItem(position);
             }
         });
+
+        final Intent mIntent = new Intent(this,TestingActivity_.class);
         mViewPagerMain.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
             public void onPageSelected(int position) {
                 mTabBarMain.clickTab(position);
+
+                if(position==2){
+                    Timer timer = new Timer();
+                    timer.schedule(new TimerTask() {
+                        @Override
+                        public void run() {
+                            startActivity(mIntent);
+                        }
+                    },1000);
+                }
             }
 
             @Override
@@ -62,8 +78,15 @@ public class MainActivity extends FragmentActivity {
 
             @Override
             public void onPageScrollStateChanged(int arg0) {
+
             }
         });
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        mViewPagerMain.setCurrentItem(0,false);
     }
 
     /**
@@ -82,10 +105,10 @@ public class MainActivity extends FragmentActivity {
                     f = new TopFragment_();
                     break;
                 case 1:
-                    f = new FavoriteFragment();
+                    f = new FavoriteFragment_();
                     break;
                 case 2:
-                    f = new QuestionFragment();
+                    f = new QuestionFragment_();
                     break;
                 case 3:
                     f = new RatingsFragment();

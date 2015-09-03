@@ -28,9 +28,9 @@ public class SplashScreenActivity extends BaseActionBarActivity {
 
     @Override
     void afterView() {
-        getSupportActionBar().hide();
+      //  getSupportActionBar().hide();
         //********* box incrementing ***********
-        mImgincrementingBoxView.setVisibility(View.GONE);
+        //mImgincrementingBoxView.setVisibility(View.GONE);
         //Call Method set Timer
         setTimer();
     }
@@ -40,9 +40,9 @@ public class SplashScreenActivity extends BaseActionBarActivity {
      */
     private void setTimer() {
         mTimer = new Timer();
-        mIntent = new Intent(this, LoginActivity_.class);
-        mImgincrementingBoxView.setVisibility(View.VISIBLE);
-        incrementalHorizontalLoading();
+        mIntent = new Intent(this, MainActivity_.class);
+        //mImgincrementingBoxView.setVisibility(View.VISIBLE);
+        //incrementalHorizontalLoading();
         mTimer.schedule(new TimerTask() {
             @Override
             public void run() {

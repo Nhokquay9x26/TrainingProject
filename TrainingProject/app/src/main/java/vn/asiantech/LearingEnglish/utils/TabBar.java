@@ -8,7 +8,10 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import org.androidannotations.annotations.*;
+
 import vn.asiantech.LearingEnglish.R;
+import vn.asiantech.LearingEnglish.activities.MainActivity;
 
 /**
  * @Author XuanPhu

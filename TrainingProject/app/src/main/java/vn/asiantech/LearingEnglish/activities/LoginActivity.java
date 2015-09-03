@@ -21,7 +21,7 @@ public class LoginActivity extends BaseActionBarActivity{
     EditText edtPassword;
     @Override
     void afterView() {
-        getSupportActionBar().hide();
+        //getSupportActionBar().hide();
     }
     @Click
     void btnSignIn(){
