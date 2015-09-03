@@ -8,16 +8,16 @@
     <string name="textview.text.new_to_member">New to Member? Register here</string>
     <string name="edittext.hint.write_your_email_here">Write your email here</string>
 
-    <string name="button.text.signup">Sign Up</string>
-    <string name="edittext.hint.username">Username/ Email Address</string>
-    <string name="edittext.hint.password">Password</string>
-    <string name="button.text.signin">Sign in</string>
-    <string name="textview.text.forgot_password">Forgot Password?</string>
+    <string name="button.SignIn.text.signUp">Sign Up</string>
+    <string name="editText.SignIn.hint.username">Username/ Email Address</string>
+    <string name="editText.SignIn.hint.password">Password</string>
+    <string name="button.SignIn.text.signIn">Sign in</string>
+    <string name="textView.SignIn.text.forgot_password">Forgot Password?</string>
 
-    <string name="textview.text.title.favorite">Favorite</string>
+    <string name="textView.text.title.favorite">Favorite</string>
 
-    <string name="textview.text.title.detail">Detail</string>
-    <string name="textview.text.mean">Mean :</string>
+    <string name="textView.text.title.detail">Detail</string>
+    <string name="textView.text.mean">Mean :</string>
     <string name="textview.text.log_out">Log out</string>
     <string name="textview.text.log_out_question">Do you close Application ?</string>
     <string name="button.text.btn_yes_log_out">Yes</string>

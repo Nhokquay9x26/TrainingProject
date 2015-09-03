@@ -7,24 +7,27 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@+id/btnSignup"
-        android:layout_marginBottom="@dimen/relativeLayout.layout.margin_bottom"
-        android:layout_marginLeft="@dimen/relativeLayout.layout.margin_left"
-        android:layout_marginRight="@dimen/relativeLayout.layout.margin_right"
-        android:layout_marginTop="@dimen/relativeLayout.layout.margin_top">
+        android:layout_above="@+id/btnSignUp"
+        android:layout_marginBottom="@dimen/relativeLayout.SignIn.margin_bottom.30dp"
+        android:layout_marginEnd="@dimen/relativeLayout.SignIn.margin_right.23dp"
+        android:layout_marginLeft="@dimen/relativeLayout.SignIn.margin_left.23dp"
+        android:layout_marginRight="@dimen/relativeLayout.SignIn.margin_right.23dp"
+        android:layout_marginStart="@dimen/relativeLayout.SignIn.margin_left.23dp"
+        android:layout_marginTop="@dimen/relativeLayout.SignIn.margin_top.30dp">
 
         <RelativeLayout
             android:id="@+id/rlAvatar"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/rl.avatar.background"
+            android:layout_height="@dimen/relativeLayout.SignIn.height.120dp"
+            android:background="@color/relativeLayout.SignIn.avatar.background"
             android:gravity="center">
 
             <ImageView
                 android:layout_width="wrap_content"
-                android:layout_height="@dimen/image.height"
-                android:layout_marginBottom="@dimen/image.margin_bottom"
-                android:layout_marginTop="@dimen/image.margin_top"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/image.SignIn.margin_top.10dp"
+                android:contentDescription="@null"
                 android:scaleType="centerInside"
                 android:src="@drawable/ic_avatar" />
 
@@ -34,61 +37,64 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_below="@+id/rlAvatar"
-            android:background="@color/rl.input.background"
-            android:paddingLeft="@dimen/relativeLayout.layout.padding_left"
-            android:paddingRight="@dimen/relativeLayout.layout.padding_right"
-            android:paddingTop="@dimen/relativeLayout.layout.padding_top">
+            android:background="@color/relativeLayout.SignIn.input.background"
+            android:paddingLeft="@dimen/relativeLayout.SignIn.padding_left.23dp"
+            android:paddingRight="@dimen/relativeLayout.SignIn.padding_right.23dp"
+            android:paddingStart="@dimen/relativeLayout.SignIn.padding_right.23dp"
+            android:paddingEnd="@dimen/relativeLayout.SignIn.padding_right.23dp"
+            android:paddingTop="@dimen/relativeLayout.SignIn.padding_top.30dp">
 
             <EditText
                 android:id="@+id/edtUsername"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:backgroundTint="@color/edittext.color.line"
-                android:hint="@string/edittext.hint.username" />
+                android:backgroundTint="@color/editText.SignIn.color.line"
+                android:hint="@string/editText.SignIn.hint.username" />
 
             <EditText
                 android:id="@+id/edtPassword"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/edtUsername"
-                android:layout_marginTop="@dimen/edittext.margin.top"
-                android:backgroundTint="@color/edittext.color.line"
-                android:hint="@string/edittext.hint.password" />
+                android:layout_marginTop="@dimen/editText.SignIn.margin_top"
+                android:backgroundTint="@color/editText.SignIn.color.line"
+                android:hint="@string/editText.SignIn.hint.password"
+                android:inputType="text" />
 
             <Button
-                android:id="@+id/btnSignin"
+                android:id="@+id/btnSignIn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_above="@+id/tvForgotPassword"
                 android:layout_marginTop="@dimen/button.margin.top"
-                android:background="@color/rl.avatar.background"
-                android:text="@string/button.text.signin"
-                android:textColor="@color/button.text.color.signin" />
+                android:background="@color/relativeLayout.SignIn.avatar.background"
+                android:text="@string/button.SignIn.text.signIn"
+                android:textColor="@color/button.SignIn.text.color" />
 
             <TextView
                 android:id="@+id/tvForgotPassword"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
-                android:layout_marginBottom="@dimen/textview.margin.bottom.forgot_password"
-                android:layout_marginTop="@dimen/textview.margin.top.forgot_password"
+                android:layout_marginBottom="@dimen/textView.SignIn.margin.bottom.forgot_password"
+                android:layout_marginTop="@dimen/textView.SignIn.margin.top.forgot_password"
                 android:gravity="center"
-                android:text="@string/textview.text.forgot_password"
-                android:textColor="@color/textview.color.forgot_password" />
+                android:text="@string/textView.SignIn.text.forgot_password"
+                android:textColor="@color/textView.SignIn.color.forgot_password" />
 
         </RelativeLayout>
 
     </RelativeLayout>
 
     <Button
-        android:id="@+id/btnSignup"
+        android:id="@+id/btnSignUp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginLeft="@dimen/relativeLayout.layout.margin_left"
-        android:layout_marginRight="@dimen/relativeLayout.layout.margin_right"
+        android:layout_marginLeft="@dimen/relativeLayout.SignIn.margin_left.23dp"
+        android:layout_marginRight="@dimen/relativeLayout.SignIn.margin_right.23dp"
         android:background="@color/button.background"
-        android:text="@string/button.text.signup"
-        android:textColor="@color/button.text.color" />
+        android:text="@string/button.SignIn.text.signUp"
+        android:textColor="@color/button.SignIn.text.color" />
 </RelativeLayout>

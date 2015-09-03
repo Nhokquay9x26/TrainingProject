@@ -8,25 +8,27 @@
     <color name="button.forgot_pass">#0dc2ff</color>
     <color name="button.change_color_on_click">#9fff67</color>
 
-    <color name="rl.avatar.background">#00b9e6</color>
+    <color name="relativeLayout.SignIn.avatar.background">#00b9e6</color>
     <color name="button.background">#FFFFFF</color>
-    <color name="button.text.color">#00b9e6</color>
-    <color name="rl.input.background">#FFFFFF</color>
-    <color name="edittext.color">#FFFFFF</color>
-    <color name="edittext.color.line">#00b9e6</color>
-    <color name="button.text.color.signin">#FFFFFF</color>
-    <color name="textview.color.forgot_password">#00b9e6</color>
+    <color name="button.SignIn.text.color">#00b9e6</color>
+    <color name="relativeLayout.SignIn.input.background">#FFFFFF</color>
+    <color name="editText.SignIn.color">#FFFFFF</color>
+    <color name="editText.SignIn.color.line">#00b9e6</color>
+    <color name="textView.SignIn.color.forgot_password">#00b9e6</color>
 
-    <color name="rl.background.favorite">#00b9e6</color>
-    <color name="textview.color.favorite.title">#FFFFFF</color>
-    <color name="rl.background.list">#C0C0C0</color>
-    <color name="rl.background.detail">#00b9e6</color>
-    <color name="textview.color.detail.title">#FFFFFF</color>
-    <color name="rl.background.vocabulary">#C0C0C0</color>
-    <color name="rl.img.vocabulary">#FFFFFF</color>
-    <color name="textview.color.mean">#FF0000</color>
+    <color name="relativeLayout.Favorite.background">#00b9e6</color>
+    <color name="textView.Favorite.color.title">#FFFFFF</color>
+    <color name="relativeLayout.Favorite.background.list">#C0C0C0</color>
+    <color name="relativeLayout.Detail.background">#00b9e6</color>
+    <color name="textView.Detail.color.title">#FFFFFF</color>
+    <color name="relativeLayout.Vocabulary.background">#C0C0C0</color>
+    <color name="relativeLayout.Vocabulary.image">#FFFFFF</color>
+    <color name="textView.Mean.color">#FF0000</color>
+
+
     <color name="view.background">#F08000</color>
     <color name="textview.tvlogout.text_color">#F00800</color>
+
     <color name="button.btnyeslogout.background">#0dc2ff</color>
     <color name="button.btnnologout.background">#0dc2ff</color>
 </resources>
