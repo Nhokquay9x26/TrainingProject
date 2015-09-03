@@ -51,6 +51,7 @@
     <dimen name="textView.text.user_name_setting">20sp</dimen>
     <dimen name="view.margin_top">20dp</dimen>
     <dimen name="view.height">1dp</dimen>
+    <dimen name="view.width">1dp</dimen>
     <dimen name="imageView.top_setting_margin_top">20sp</dimen>
     <dimen name="textView.top_setting_margin_top">20sp</dimen>
     <dimen name="textView.top_setting_margin_left">20sp</dimen>
@@ -58,5 +59,9 @@
     <dimen name="textView.aleart_setting_margin_left">20sp</dimen>
     <dimen name="textView.log_out_setting_margin_top">23sp</dimen>
     <dimen name="textView.log_out_setting_margin_left">20sp</dimen>
+    <dimen name="textView.objects_margin">10dp</dimen>
+    <dimen name="imageView.avatar_top_point_width_height">65dp</dimen>
+
+
 
 </resources>

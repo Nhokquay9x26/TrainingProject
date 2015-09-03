@@ -30,7 +30,7 @@ public class MainActivity extends BaseActionBarActivity {
 
     private static final int PLAY_SERVICES_RESOLUTION_REQUEST = 9000;
     private final String TAG = MainActivity.this.getClass().getName();
-    // ViewPager
+    // ViewPagercustomDrawable
     @ViewById(R.id.viewPager)
     protected HackyViewPager mPager;
     // SlidingTab Trip

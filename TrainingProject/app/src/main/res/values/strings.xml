@@ -27,5 +27,11 @@
     <string name="textView.text.top_setting">Toppoin</string>
     <string name="textView.text.aleart_setting">Aleart</string>
     <string name="textView.text.log_out_setting">Log out</string>
+    <string name="textView.text.rank">Rank</string>
+    <string name="textView.text.user">User</string>
+    <string name="textView.text.points">Points</string>
+    <string name="textView.text.1st">1st</string>
+    <string name="textView.text.matiner_jack">Matiner Jack</string>
+    <string name="textView.text.100">100</string>
 
 </resources>
