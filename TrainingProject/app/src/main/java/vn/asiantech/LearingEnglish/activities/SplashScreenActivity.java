@@ -33,9 +33,7 @@ public class SplashScreenActivity extends BaseActionBarActivity implements Anima
                     sleep(TIME_DELAY);
                 }catch(InterruptedException e){
                     e.printStackTrace();
-                }finally {
-                    Intent intent = new Intent(getBaseContext(), MainActivity_.class);
-                    startActivity(intent);
+                }finally {LoginActivity_.intent(SplashScreenActivity.this).start();
                     finish();
                 }
             }
