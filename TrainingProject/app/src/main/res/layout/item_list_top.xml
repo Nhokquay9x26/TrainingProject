@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/relativeLayout.itemTop.height.95dp"
+    android:background="@color/white">
+
+    <vn.asiantech.LearingEnglish.Views.CircleImageView
+        android:id="@+id/imgItemTopImage"
+        android:layout_width="@dimen/img.itemTop.width.65dp"
+        android:layout_height="@dimen/img.itemTop.height.65dp"
+        android:layout_marginStart="@dimen/img.itemTop.marginLeft.11dp"
+        android:layout_marginLeft="@dimen/img.itemTop.marginLeft.11dp"
+        android:layout_centerVertical="true"/>
+
+    <TextView
+        android:id="@+id/txtItemTopUsername"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/imgItemTopImage"
+        android:layout_toEndOf="@+id/imgItemTopImage"
+        android:layout_centerVertical="true"
+        android:textColor="@color/black"
+        android:layout_toLeftOf="@+id/imgTopNext"
+        android:layout_toStartOf="@+id/imgTopNext"
+        android:layout_marginStart="@dimen/textView.itemTop.marginLeft.14dp"
+        android:layout_marginLeft="@dimen/textView.itemTop.marginLeft.14dp"
+        android:textSize="@dimen/textView.itemTop.textSize.30sp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/textView.itemTop.height.5dp"
+        android:layout_below="@+id/txtItemTopUsername"
+        android:layout_toRightOf="@+id/imgItemTopImage"
+        android:layout_toEndOf="@+id/imgItemTopImage"
+        android:layout_toLeftOf="@+id/imgTopNext"
+        android:layout_toStartOf="@+id/imgTopNext">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/textView.itemTop.height.1dp"
+            android:background="@color/top.mau_nen"
+            android:layout_centerVertical="true"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_item_top"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:contentDescription="@null"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/img.itemTop.marginRight.5dp"
+            android:layout_marginEnd="@dimen/img.itemTop.marginRight.5dp"/>
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/imgTopNext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:contentDescription="@null"
+        android:src="@drawable/ic_next_top"
+        android:layout_marginEnd="@dimen/img.itemTop.marginRight.11dp"
+        android:layout_marginRight="@dimen/img.itemTop.marginRight.11dp"
+        android:layout_marginTop="@dimen/img.itemTop.marginTop.37dp"/>
+
+</RelativeLayout>
