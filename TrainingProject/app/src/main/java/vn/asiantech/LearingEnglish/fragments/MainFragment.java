@@ -36,10 +36,10 @@ public class MainFragment extends BaseFragment implements ViewPager.OnPageChange
 
     private void initializeAdapterView() {
         ArrayList<HomePageItem> tabItems = new ArrayList<>();
-        tabItems.add(new HomePageItem(TopFragment_.builder().build(), "TOP", R.drawable.bg_tab_home));
-        tabItems.add(new HomePageItem(NoteFragment_.builder().build(), "NOTE", R.drawable.bg_tab_mybox));
-        tabItems.add(new HomePageItem(TestFragment_.builder().build(), "TEST", R.drawable.bg_tab_questions));
-        tabItems.add(new HomePageItem(SettingFragment_.builder().build(), "SETTING", R.drawable.bg_tab_others));
+        tabItems.add(new HomePageItem(TopFragment_.builder().build(), "TOP", R.mipmap.ic_top));
+        tabItems.add(new HomePageItem(NoteFragment_.builder().build(), "NOTE", R.mipmap.ic_note));
+        tabItems.add(new HomePageItem(TestFragment_.builder().build(), "TEST", R.mipmap.ic_test));
+        tabItems.add(new HomePageItem(SettingFragment_.builder().build(), "SETTING", R.mipmap.ic_setting ));
 
         mPagerAdapter = new PagerAdapter(this, tabItems);
         mViewPager.setVerticalScrollBarEnabled(false);
