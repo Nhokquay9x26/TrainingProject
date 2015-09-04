@@ -38,6 +38,7 @@ import vn.asiantech.LearingEnglish.models.Question;
  * Created by tantv on 28/08/2015.
  */
 
+@SuppressWarnings("ALL")
 @EActivity(R.layout.activity_testing)
 public class TestingActivity extends FragmentActivity {
 

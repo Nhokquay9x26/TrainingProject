@@ -37,6 +37,7 @@ import vn.asiantech.LearingEnglish.utils.TabBar;
  * @Author TienTun
  * Created by tientun on 3/5/15.
  */
+@SuppressWarnings("ALL")
 @EActivity(R.layout.activity_main)
 public class MainActivity extends FragmentActivity {
 

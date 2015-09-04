@@ -24,6 +24,7 @@ import vn.asiantech.LearingEnglish.models.SomeOtherFunction;
  * Created by tantv on 01/09/2015.
  */
 
+@SuppressWarnings("ALL")
 @EFragment(R.layout.fragment_test_resulting)
 public class TestResultingFragment extends Fragment {
 

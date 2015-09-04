@@ -15,6 +15,7 @@ import vn.asiantech.LearingEnglish.models.Question;
 /**
  * Created by tantv on 02/09/2015.
  */
+@SuppressWarnings({"ALL", "DefaultFileTemplate"})
 public class TestResultingAdapter extends RecyclerView.Adapter<TestResultingAdapter.ViewHolder> {
 
     private ArrayList<Question> mQuestions;

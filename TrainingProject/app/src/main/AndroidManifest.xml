@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="vn.asiantech.LearingEnglish">
 
     <application
@@ -11,7 +12,8 @@
         <activity
             android:name=".activities.MainActivity_"
             android:label="@string/app_name"
-            android:uiOptions="splitActionBarWhenNarrow">
+            android:uiOptions="splitActionBarWhenNarrow"
+            tools:ignore="UnusedAttribute">
 
         </activity>
         <activity android:name=".activities.SignupActivity_"></activity>

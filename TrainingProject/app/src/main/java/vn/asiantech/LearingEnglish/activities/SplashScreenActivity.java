@@ -17,6 +17,7 @@ import vn.asiantech.LearingEnglish.fragments.TestingFragment_;
  * Created by tantv on 27/08/2015.
  */
 
+@SuppressWarnings("ALL")
 @EActivity(R.layout.activity_splashscreen)
 public class SplashScreenActivity extends BaseActionBarActivity {
     private Timer mTimer;

@@ -23,6 +23,7 @@ import vn.asiantech.LearingEnglish.models.SomeOtherFunction;
  * Created by tantv on 28/08/2015.
  */
 
+@SuppressWarnings("ALL")
 @EFragment(R.layout.fragment_testing)
 public class TestingFragment extends Fragment {
     private ArrayList<Question> mArrQuestions;
