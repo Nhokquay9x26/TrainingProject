@@ -28,4 +28,13 @@
     <string name="textview.text.two">:</string>
     <string name="textview.text.spell">/spell/</string>
     <string name="textView.top_category_name">Animal</string>
+
+    <string-array name="question_array">
+        <item>When can we meet again?</item>
+        <item>My aunt is going to stay with me?</item>
+        <item>When do you study?</item>
+        <item>Would you prefer lemonade or orange juice?</item>
+        <item>Lets have dinner now?</item>
+    </string-array>
+
 </resources>

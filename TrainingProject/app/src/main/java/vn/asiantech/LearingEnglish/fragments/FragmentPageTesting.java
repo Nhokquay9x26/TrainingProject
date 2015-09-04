@@ -1,19 +1,17 @@
 package vn.asiantech.LearingEnglish.fragments;
 
+import android.content.res.Resources;
 import android.os.Bundle;
+import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-
 import vn.asiantech.LearingEnglish.R;
-import vn.asiantech.LearingEnglish.adapter.TestingAdapter;
-
-import static vn.asiantech.LearingEnglish.adapter.TestingAdapter.*;
 
 public class FragmentPageTesting extends BaseFragment {
     int fragNum;
-
+String[] mQuestion;
     public static FragmentPageTesting init(int val) {
         FragmentPageTesting mFragmentPageTesting = new FragmentPageTesting();
 
@@ -32,6 +30,7 @@ public class FragmentPageTesting extends BaseFragment {
         super.onCreate(savedInstanceState);
         fragNum = getArguments() != null ? getArguments().getInt("val") : 1;
         fragNum++;
+        mQuestion=getResources().getStringArray(R.array.question_array);
     }
 
     /**
@@ -43,11 +42,13 @@ public class FragmentPageTesting extends BaseFragment {
                              Bundle savedInstanceState) {
         View layoutView = inflater.inflate(R.layout.fragment_testing,
                 container, false);
-        View tv = layoutView.findViewById(R.id.tvQuestion);
+        View tvQuestion = layoutView.findViewById(R.id.tvQuestion);
         View tvPageCurrent = layoutView.findViewById(R.id.tvPageCurrent);
         View tvPageTotal = layoutView.findViewById(R.id.tvPageTotal);
-        ((TextView) tv).setText("Câu " + fragNum + ":");
-        ((TextView) tvPageCurrent).setText(""+fragNum+"-");
+        //((TextView) tv).setText("Câu " + fragNum + ":");
+        ((TextView) tvQuestion).setText(Html.fromHtml("<b>"+"<font color=\"#EC48B5\">"
+                + "Câu " + fragNum +": "+ "</font>"+"<b/>"+mQuestion[fragNum-1]));
+        ((TextView) tvPageCurrent).setText("" + fragNum + "-");
         ((TextView) tvPageTotal).setText("10");
         return layoutView;
     }

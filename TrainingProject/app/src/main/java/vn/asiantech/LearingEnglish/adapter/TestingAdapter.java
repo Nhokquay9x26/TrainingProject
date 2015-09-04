@@ -14,7 +14,7 @@ public class TestingAdapter extends FragmentPagerAdapter {
         super(fragmentManager);
     }
 
-   public static final int ITEMS = 10;
+   public static final int ITEMS = 5;
 
     @Override
     public int getCount() {
