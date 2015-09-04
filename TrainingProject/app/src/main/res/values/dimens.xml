@@ -17,52 +17,52 @@
 
     <!--dimen file signin-->
     <dimen name="relativelayout.signin.margin_left.23dp">23dp</dimen>
-    <dimen name="relativeLayout.signIn.margin_top.30dp">50dp</dimen>
-    <dimen name="relativeLayout.signIn.margin_right.23dp">23dp</dimen>
-    <dimen name="relativeLayout.signIn.margin_bottom.30dp">30dp</dimen>
-    <dimen name="image.signIn.margin_top.10dp">10dp</dimen>
-    <dimen name="image.signIn.height.80dp">80dp</dimen>
-    <dimen name="image.signIn.width.80dp">80dp</dimen>
-    <dimen name="relativeLayout.signIn.height.120dp">120dp</dimen>
-    <dimen name="relativeLayout.signIn.padding_top.30dp">30dp</dimen>
-    <dimen name="relativeLayout.signIn.padding_left.23dp">23dp</dimen>
-    <dimen name="relativeLayout.signIn.padding_right.23dp">23dp</dimen>
-    <dimen name="editText.signIn.margin_top">20dp</dimen>
+    <dimen name="relativelayout.signin.margin_top.30dp">50dp</dimen>
+    <dimen name="relativelayout.signin.margin_right.23dp">23dp</dimen>
+    <dimen name="relativelayout.signin.margin_bottom.30dp">30dp</dimen>
+    <dimen name="image.signin.margin_top.10dp">10dp</dimen>
+    <dimen name="image.signin.height.80dp">80dp</dimen>
+    <dimen name="image.signin.width.80dp">80dp</dimen>
+    <dimen name="relativelayout.signin.height.120dp">120dp</dimen>
+    <dimen name="relativelayout.signin.padding_top.30dp">30dp</dimen>
+    <dimen name="relativelayout.signin.padding_left.23dp">23dp</dimen>
+    <dimen name="relativelayout.signin.padding_right.23dp">23dp</dimen>
+    <dimen name="editText.signin.margin_top">20dp</dimen>
     <dimen name="button.margin.top">10dp</dimen>
-    <dimen name="textView.signIn.forgot.password.margin.top.10dp">10dp</dimen>
-    <dimen name="textView.signIn.forgot.password.margin.botton.20dp">20dp</dimen>
+    <dimen name="textView.signin.forgot.password.margin.top.10dp">10dp</dimen>
+    <dimen name="textView.signin.forgot.password.margin.botton.20dp">20dp</dimen>
 
     <!--dimen file favorite-->
-    <dimen name="relativeLayout.Favorite.height.100dp">100dp</dimen>
-    <dimen name="textView.Favorite.size.title.28sp">28sp</dimen>
-    <dimen name="listView.Favorite.margin_left.10dp">10dp</dimen>
-    <dimen name="listView.Favorite.margin_right.10dp">10dp</dimen>
-    <dimen name="listView.Favorite.margin_top.25dp">25dp</dimen>
-    <dimen name="listView.Favorite.margin_bot.6dp">6dp</dimen>
-    <dimen name="linearLayout.Favorite.margin_left.23dp">23dp</dimen>
-    <dimen name="linearLayout.Favorite.margin_right.23dp">23dp</dimen>
-    <dimen name="linearLayout.Favorite.margin.23dp">23dp</dimen>
+    <dimen name="relativelayout.favorite.height.100dp">100dp</dimen>
+    <dimen name="textView.favorite.size.title.28sp">28sp</dimen>
+    <dimen name="listView.favorite.margin_left.10dp">10dp</dimen>
+    <dimen name="listView.favorite.margin_right.10dp">10dp</dimen>
+    <dimen name="listView.favorite.margin_top.25dp">25dp</dimen>
+    <dimen name="listView.favorite.margin_bot.6dp">6dp</dimen>
+    <dimen name="linearLayout.favorite.margin_left.23dp">23dp</dimen>
+    <dimen name="linearLayout.favorite.margin_right.23dp">23dp</dimen>
+    <dimen name="linearLayout.favorite.margin.23dp">23dp</dimen>
     <dimen name="linearLayout.margin.23dp">23dp</dimen>
 
     <!--dimen file detail-->
-    <dimen name="relativeLayout.detail.height.100dp">100dp</dimen>
-    <dimen name="relativeLayout.detail.padding_top.30dp">30dp</dimen>
-    <dimen name="relativeLayout.detail.padding_left.23dp">23dp</dimen>
-    <dimen name="relativeLayout.detail.padding_right.23dp">23dp</dimen>
-    <dimen name="relativeLayout.detail.padding_bottom.10dp">10dp</dimen>
+    <dimen name="relativelayout.detail.height.100dp">100dp</dimen>
+    <dimen name="relativelayout.detail.padding_top.30dp">30dp</dimen>
+    <dimen name="relativelayout.detail.padding_left.23dp">23dp</dimen>
+    <dimen name="relativelayout.detail.padding_right.23dp">23dp</dimen>
+    <dimen name="relativelayout.detail.padding_bottom.10dp">10dp</dimen>
     <dimen name="textView.detail.size.title.28sp">28sp</dimen>
 
-    <dimen name="relativeLayout.detail.margin_left.10dp">10dp</dimen>
-    <dimen name="relativeLayout.detail.margin_right.10dp">10dp</dimen>
-    <dimen name="relativeLayout.detail.margin_top.25dp">25dp</dimen>
-    <dimen name="relativeLayout.detail.margin_bottom.6dp">10dp</dimen>
+    <dimen name="relativelayout.detail.margin_left.10dp">10dp</dimen>
+    <dimen name="relativelayout.detail.margin_right.10dp">10dp</dimen>
+    <dimen name="relativelayout.detail.margin_top.25dp">25dp</dimen>
+    <dimen name="relativelayout.detail.margin_bottom.6dp">10dp</dimen>
 
-    <dimen name="relativeLayout.detail.mean.margin_left.10dp">10dp</dimen>
-    <dimen name="relativeLayout.detail.mean.margin_right.10dp">10dp</dimen>
-    <dimen name="relativeLayout.detail.mean.margin_top.6dp">6dp</dimen>
-    <dimen name="relativeLayout.detail.mean.margin_bottom.6dp">10dp</dimen>
+    <dimen name="relativelayout.detail.mean.margin_left.10dp">10dp</dimen>
+    <dimen name="relativelayout.detail.mean.margin_right.10dp">10dp</dimen>
+    <dimen name="relativelayout.detail.mean.margin_top.6dp">6dp</dimen>
+    <dimen name="relativelayout.detail.mean.margin_bottom.6dp">10dp</dimen>
 
-    <dimen name="relativeLayout.detail.height.word.220dp">220dp</dimen>
+    <dimen name="relativelayout.detail.height.word.220dp">220dp</dimen>
     <dimen name="image.detail.height.150dp">150dp</dimen>
     <dimen name="image.detail.margin.left.30dp">30dp</dimen>
     <dimen name="image.detail.margin.right.30dp">30dp</dimen>

@@ -7,11 +7,11 @@
     <RelativeLayout
         android:id="@+id/rlFavoriteSearch"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/relativeLayout.Favorite.height.100dp"
+        android:layout_height="@dimen/relativelayout.favorite.height.100dp"
         android:background="@color/relativelayout.favorite.background"
-        android:paddingLeft="@dimen/relativeLayout.signIn.padding_left.23dp"
-        android:paddingRight="@dimen/relativeLayout.signIn.padding_right.23dp"
-        android:paddingStart="@dimen/relativeLayout.signIn.padding_left.23dp">
+        android:paddingLeft="@dimen/relativelayout.signin.padding_left.23dp"
+        android:paddingRight="@dimen/relativelayout.signin.padding_right.23dp"
+        android:paddingStart="@dimen/relativelayout.signin.padding_left.23dp">
 
         <TextView
             android:id="@+id/tvFavoriteTitle"
@@ -21,7 +21,7 @@
             android:layout_centerVertical="true"
             android:text="@string/textview.favorite.text.title"
             android:textColor="@color/textview.favorite.color.title"
-            android:textSize="@dimen/textView.Favorite.size.title.28sp" />
+            android:textSize="@dimen/textView.favorite.size.title.28sp" />
 
         <ImageView
             android:id="@+id/imgFavoriteSearch"
@@ -38,19 +38,19 @@
         android:id="@+id/rlFavoriteList"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/rlFavoriteSearch"
+        android:layout_below="@+id/rlfavoriteSearch"
         android:background="@color/relativelayout.favorite.background.list">
 
         <ListView
             android:id="@+id/lvFavorite"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginBottom="@dimen/listView.Favorite.margin_bot.6dp"
-            android:layout_marginEnd="@dimen/listView.Favorite.margin_right.10dp"
-            android:layout_marginLeft="@dimen/listView.Favorite.margin_left.10dp"
-            android:layout_marginRight="@dimen/listView.Favorite.margin_right.10dp"
-            android:layout_marginStart="@dimen/listView.Favorite.margin_left.10dp"
-            android:layout_marginTop="@dimen/listView.Favorite.margin_top.25dp"
+            android:layout_marginBottom="@dimen/listView.favorite.margin_bot.6dp"
+            android:layout_marginEnd="@dimen/listView.favorite.margin_right.10dp"
+            android:layout_marginLeft="@dimen/listView.favorite.margin_left.10dp"
+            android:layout_marginRight="@dimen/listView.favorite.margin_right.10dp"
+            android:layout_marginStart="@dimen/listView.favorite.margin_left.10dp"
+            android:layout_marginTop="@dimen/listView.favorite.margin_top.25dp"
             android:background="@drawable/shape_list_favorite"/>
 
     </RelativeLayout>

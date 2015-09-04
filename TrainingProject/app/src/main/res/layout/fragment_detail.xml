@@ -6,11 +6,11 @@
     <RelativeLayout
         android:id="@+id/rlDetailSearch"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/relativeLayout.detail.height.100dp"
+        android:layout_height="@dimen/relativelayout.detail.height.100dp"
         android:background="@color/relativelayout.detail.background"
-        android:paddingLeft="@dimen/relativeLayout.detail.padding_left.23dp"
-        android:paddingRight="@dimen/relativeLayout.detail.padding_right.23dp"
-        android:paddingStart="@dimen/relativeLayout.detail.padding_left.23dp">
+        android:paddingLeft="@dimen/relativelayout.detail.padding_left.23dp"
+        android:paddingRight="@dimen/relativelayout.detail.padding_right.23dp"
+        android:paddingStart="@dimen/relativelayout.detail.padding_left.23dp">
 
         <TextView
             android:id="@+id/tvDetailTitle"
@@ -43,11 +43,11 @@
         <RelativeLayout
             android:id="@+id/rlWord"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/relativeLayout.detail.height.word.220dp"
-            android:layout_marginBottom="@dimen/relativeLayout.detail.margin_bottom.6dp"
-            android:layout_marginLeft="@dimen/relativeLayout.detail.margin_left.10dp"
-            android:layout_marginRight="@dimen/relativeLayout.detail.margin_right.10dp"
-            android:layout_marginTop="@dimen/relativeLayout.detail.margin_top.25dp"
+            android:layout_height="@dimen/relativelayout.detail.height.word.220dp"
+            android:layout_marginBottom="@dimen/relativelayout.detail.margin_bottom.6dp"
+            android:layout_marginLeft="@dimen/relativelayout.detail.margin_left.10dp"
+            android:layout_marginRight="@dimen/relativelayout.detail.margin_right.10dp"
+            android:layout_marginTop="@dimen/relativelayout.detail.margin_top.25dp"
             android:background="@drawable/shape_detail">
 
             <ImageView
@@ -101,10 +101,10 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_below="@+id/rlWord"
-            android:layout_marginBottom="@dimen/relativeLayout.detail.mean.margin_bottom.6dp"
-            android:layout_marginLeft="@dimen/relativeLayout.detail.mean.margin_left.10dp"
-            android:layout_marginRight="@dimen/relativeLayout.detail.mean.margin_right.10dp"
-            android:layout_marginTop="@dimen/relativeLayout.detail.mean.margin_top.6dp"
+            android:layout_marginBottom="@dimen/relativelayout.detail.mean.margin_bottom.6dp"
+            android:layout_marginLeft="@dimen/relativelayout.detail.mean.margin_left.10dp"
+            android:layout_marginRight="@dimen/relativelayout.detail.mean.margin_right.10dp"
+            android:layout_marginTop="@dimen/relativelayout.detail.mean.margin_top.6dp"
             android:background="@drawable/shape_detail"
             android:paddingLeft="@dimen/textView.detail.mean.padding.left.10dp"
             android:paddingRight="@dimen/textView.detail.mean.padding.right.10dp"
