@@ -90,4 +90,5 @@
     <dimen name="textview.tvturnon.padding">30dp</dimen>
     <dimen name="textview.tvturnon.text_size">20sp</dimen>
     <dimen name="tooglebutton.tbturnon.margin_top">100dp</dimen>
+    <dimen name="shape.padding">1dp</dimen>
 </resources>

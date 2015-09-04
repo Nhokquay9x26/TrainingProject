@@ -41,4 +41,6 @@
     <color name="textview.text_color">#000000</color>
     <color name="textview.tvaleart.text_color">#F00800</color>
     <color name="view.background1">#F08000</color>
+    <color name="shape.bg_edttime.solid">#ffffff</color>
+    <color name="shape.bg_edttime.stroke">#5b607e</color>
 </resources>
