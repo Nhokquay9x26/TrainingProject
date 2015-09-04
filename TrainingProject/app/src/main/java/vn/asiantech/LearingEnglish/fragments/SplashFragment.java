@@ -33,7 +33,7 @@ public class SplashFragment extends BaseFragment {
                     MainActivity_.intent(getActivity()).start();
                 } else {
                     FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
-                    ft.replace(R.id.frameLayout, mTutorialFragment, "SplashFragment");
+                    ft.replace(R.id.frameLayout, mTutorialFragment, "TutorialFragment");
                     ft.commit();
                 }
             }
