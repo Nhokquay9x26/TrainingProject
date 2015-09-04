@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="@dimen/relativeLayout.itemRatings.height.79dp">
+
+    <TextView
+        android:id="@+id/txtItemRatingsRank"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/textView.list.marginLeft.18dp"
+        android:layout_marginLeft="@dimen/textView.list.marginLeft.18dp"/>
+
+    <vn.asiantech.LearingEnglish.Views.CircleImageView
+        android:id="@+id/imgItemRatingsImage"
+        android:layout_width="@dimen/img.itemRatings.width.65dp"
+        android:layout_height="@dimen/img.itemRatings.height.65dp"
+        android:layout_toRightOf="@+id/txtItemRatingsRank"
+        android:layout_toEndOf="@+id/txtItemRatingsRank"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/img.itemRatings.marginLeft.25dp"
+        android:layout_marginLeft="@dimen/img.itemRatings.marginLeft.25dp"/>
+
+    <TextView
+        android:id="@+id/txtItemRatingsUser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/imgItemRatingsImage"
+        android:layout_toEndOf="@+id/imgItemRatingsImage"
+        android:layout_toLeftOf="@+id/txtRatingsPoints"
+        android:layout_toStartOf="@+id/txtRatingsPoints"
+        android:layout_centerVertical="true"
+        android:textColor="@color/black"
+        android:textSize="@dimen/textView.itemRatings.textSize.30sp"
+        android:layout_marginStart="@dimen/img.itemRatings.marginLeft.25dp"
+        android:layout_marginLeft="@dimen/textView.itemRatings.marginLeft.23dp" />
+
+    <TextView
+        android:id="@+id/txtRatingsPoints"
+        android:layout_height="wrap_content"
+        android:layout_width="@dimen/textView.itemRatings.width.44dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"/>
+
+</RelativeLayout>
