@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="5">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginEnd="@dimen/cardView.margin_left_right"
+        android:layout_marginLeft="@dimen/cardView.margin_left_right"
+        android:layout_marginRight="@dimen/cardView.margin_left_right"
+        android:layout_marginStart="@dimen/cardView.margin_left_right"
+        android:layout_marginTop="@dimen/cardView.top_margin_top"
+        android:layout_weight="3"
+        android:orientation="vertical"
+        card_view:cardCornerRadius="@dimen/cardView.top_radius">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imgVocabulary"
+                android:layout_width="@dimen/imageview.detail_vocabulary_width"
+                android:layout_height="@dimen/imageview.detail_vocabulary_height"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/imageview.vocabulary_margin_top"
+                android:contentDescription="@null"
+                android:scaleType="fitXY"
+                android:src="@drawable/cloud" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/linearlayout.vocabulary_margin_top"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/imgBack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@null"
+                    android:src="@drawable/ic_back" />
+
+                <TextView
+                    android:id="@+id/tvVocabulary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/textview.detail_vocabulary_margin_left_right"
+                    android:layout_marginRight="@dimen/textview.detail_vocabulary_margin_left_right"
+                    android:text="@string/textview.detail_vocabulary"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/textview.vocabulary_detail_size" />
+
+                <ImageView
+                    android:id="@+id/imgNext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@null"
+                    android:src="@drawable/ic_next" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="@dimen/cardView.margin_top_bottom"
+        android:layout_marginEnd="@dimen/cardView.margin_left_right"
+        android:layout_marginLeft="@dimen/cardView.margin_left_right"
+        android:layout_marginRight="@dimen/cardView.margin_left_right"
+        android:layout_marginStart="@dimen/cardView.margin_left_right"
+        android:layout_marginTop="@dimen/cardView.margin_top_bottom"
+        android:layout_weight="2"
+        card_view:cardCornerRadius="@dimen/cardView.top_radius">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/relativelayout.detail_vocabulary_bottom_margin">
+
+            <TextView
+                android:id="@+id/tvMean"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/textview.detail_vocabulary_mean_margin_top"
+                android:text="@string/textview.mean"
+                android:textColor="@color/red"
+                android:textSize="@dimen/textview.mean_size" />
+
+            <TextView
+                android:id="@+id/tvMeanVocabulary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvMean"
+                android:text="@string/textview.mean_vocabulary"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textview.detail_vocabulary_size" />
+
+            <TextView
+                android:id="@+id/tvExample"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvMeanVocabulary"
+                android:text="@string/textview.detail_vocabulary.example"
+                android:textSize="@dimen/textview.dtail_vocabulary_example_size" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginEnd="@dimen/imageview.sound_margin_right"
+                android:layout_marginRight="@dimen/imageview.sound_margin_right"
+                android:layout_marginTop="@dimen/imageview.sound_margin_top"
+                android:contentDescription="@null"
+                android:src="@drawable/ic_sound" />
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+</LinearLayout>
