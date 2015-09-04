@@ -7,13 +7,13 @@ import vn.asiantech.LearingEnglish.R;
 
 /**
  * @author DaoQuocViet
- * Created by nhokquay9x26 on 02/09/2015.
+ * Created by nhokquay9x26 on 04/09/2015.
  */
-@EFragment(R.layout.fragment_login)
-public class LoginFragment extends BaseFragment{
+@EFragment(R.layout.fragment_detail)
+public class DetailFragment extends BaseFragment {
 
     @AfterViews
-    public void init(){
+    public void init() {
 
     }
 }
