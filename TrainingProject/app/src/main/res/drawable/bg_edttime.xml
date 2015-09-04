@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <solid android:color="@color/shape.bg_edttime.solid" />
+    <stroke
+        android:width="@dimen/shape.padding"
+        android:color="@color/shape.bg_edttime.stroke" />
+    <padding
+        android:bottom="@dimen/shape.padding"
+        android:left="@dimen/shape.padding"
+        android:right="@dimen/shape.padding"
+        android:top="@dimen/shape.padding" />
+</shape>
+
+

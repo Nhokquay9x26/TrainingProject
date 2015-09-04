@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/imgAleart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:padding="@dimen/imageview.dialogaleart.padding"
+        android:contentDescription="@null"
+        android:src="@drawable/ic_aleart" />
+
+    <TextView
+        android:id="@+id/tvAleart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/imgAleart"
+        android:layout_alignTop="@+id/imgAleart"
+        android:layout_toEndOf="@+id/imgAleart"
+        android:layout_toRightOf="@+id/imgAleart"
+        android:gravity="center"
+        android:text="@string/textview.text.aleart"
+        android:textColor="@color/textview.tvaleart.text_color"
+        android:textSize="@dimen/textview.tvaleart.text_size" />
+
+    <View
+        android:id="@+id/vAleart"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/view.layout_height1"
+        android:layout_below="@+id/tvAleart"
+        android:background="@color/view.background1" />
+
+    <TextView
+        android:id="@+id/tvTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/vAleart"
+        android:layout_margin="@dimen/textview.tvtime.layout_margin"
+        android:gravity="center"
+        android:padding="@dimen/textview.tvtime.padding"
+        android:text="@string/textview.text.aleart_time"
+        android:textSize="@dimen/textview.tvtime.text_size" />
+
+    <EditText
+        android:id="@+id/edtTime"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/edittext.edt_time.layout_height"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/vAleart"
+        android:layout_marginEnd="@dimen/edittext.edttime.layout_margin_end"
+        android:layout_marginRight="@dimen/edittext.edttime.layout_margin_right"
+        android:layout_marginTop="@dimen/edittext.edttime.layout_margin_top"
+        android:layout_toEndOf="@+id/tvTime"
+        android:layout_toRightOf="@id/tvTime"
+        android:background="@drawable/bg_edttime"
+        android:inputType="time" />
+
+    <TextView
+        android:id="@+id/tvTurnOn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvTime"
+        android:layout_margin="@dimen/textview.tvturnon.layout_margin"
+        android:gravity="center"
+        android:padding="@dimen/textview.tvturnon.padding"
+        android:text="@string/textview.text.aleart_turn_on"
+        android:textSize="@dimen/textview.tvtime.text_size" />
+
+    <com.kyleduo.switchbutton.SwitchButton
+        android:id="@+id/tbTurnOn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edtTime"
+        android:layout_marginTop="@dimen/tooglebutton.tbturnon.margin_top"
+        android:layout_toEndOf="@+id/tvTurnOn"
+        android:layout_toRightOf="@+id/tvTurnOn" />
+
+</RelativeLayout>
+
