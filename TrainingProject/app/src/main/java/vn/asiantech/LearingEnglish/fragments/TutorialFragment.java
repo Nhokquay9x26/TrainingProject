@@ -94,6 +94,7 @@ public class TutorialFragment extends BaseFragment {
     protected void onClick() {
         MainActivity_.intent(getActivity()).start();
         getActivity().finish();
+//        addChildFragment(LoginFragment_.builder().build());
     }
 
     /**
