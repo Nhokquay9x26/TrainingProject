@@ -30,4 +30,7 @@
     <string name="textview.text.aleart">Aleart</string>
     <string name="textview.text.aleart_time">Time :</string>
     <string name="textview.text.aleart_turn_on">Turn on :</string>
+
+    <!-- strings file fragment_top-->
+    <string name="textView.top.text">Top</string>
 </resources>
