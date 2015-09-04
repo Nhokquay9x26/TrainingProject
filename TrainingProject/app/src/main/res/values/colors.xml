@@ -8,22 +8,31 @@
     <color name="button.forgot_pass">#0dc2ff</color>
     <color name="button.change_color_on_click">#9fff67</color>
 
-    <color name="relativeLayout.SignIn.avatar.background">#00b9e6</color>
+    <!--color file signIn-->
+    <color name="relativeLayout.signIn.avatar.background">#00b9e6</color>
     <color name="button.background">#FFFFFF</color>
-    <color name="button.SignIn.text.color">#00b9e6</color>
-    <color name="relativeLayout.SignIn.input.background">#FFFFFF</color>
-    <color name="editText.SignIn.color">#FFFFFF</color>
-    <color name="editText.SignIn.color.line">#00b9e6</color>
-    <color name="textView.SignIn.color.forgot_password">#00b9e6</color>
+    <color name="button.signIn.text.color">#FFFFFF</color>
+    <color name="button.signIn.text.color.SignUp">#00b9e6</color>
+    <color name="relativeLayout.signIn.input.background">#FFFFFF</color>
+    <color name="editText.signIn.color">#FFFFFF</color>
+    <color name="editText.signIn.color.line">#00b9e6</color>
+    <color name="textView.signIn.color.forgot_password">#00b9e6</color>
 
-    <color name="relativeLayout.Favorite.background">#00b9e6</color>
-    <color name="textView.Favorite.color.title">#FFFFFF</color>
-    <color name="relativeLayout.Favorite.background.list">#C0C0C0</color>
-    <color name="relativeLayout.Detail.background">#00b9e6</color>
-    <color name="textView.Detail.color.title">#FFFFFF</color>
+    <!--color file favorite-->
+    <color name="relativeLayout.favorite.background">#00b9e6</color>
+    <color name="textView.favorite.color.title">#FFFFFF</color>
+    <color name="relativeLayout.favorite.background.list">#C0C0C0</color>
+
+    <!--color file detail-->
+    <color name="relativeLayout.detail.background">#00b9e6</color>
+    <color name="textView.detail.color.title">#FFFFFF</color>
+    <color name="relativeLayout.detail.background.vocabulary">#e8e9ea</color>
     <color name="relativeLayout.Vocabulary.background">#C0C0C0</color>
     <color name="relativeLayout.Vocabulary.image">#FFFFFF</color>
     <color name="textView.Mean.color">#FF0000</color>
+    <color name="textView.detail.color.word">#00b9e6</color>
+    <color name="textView.detail.color.mean">#ed166a</color>
+    <color name="textView.detail.color.train">#000000</color>
 
 
     <color name="view.background">#F08000</color>
@@ -31,4 +40,5 @@
 
     <color name="button.btnyeslogout.background">#0dc2ff</color>
     <color name="button.btnnologout.background">#0dc2ff</color>
+    <color name="relativeLayout.detail.background.word">#FFFFFF</color>
 </resources>

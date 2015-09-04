@@ -8,10 +8,10 @@
         android:id="@+id/rlFavoriteSearch"
         android:layout_width="match_parent"
         android:layout_height="@dimen/relativeLayout.Favorite.height.100dp"
-        android:background="@color/relativeLayout.Favorite.background"
-        android:paddingLeft="@dimen/relativeLayout.SignIn.padding_left.23dp"
-        android:paddingRight="@dimen/relativeLayout.SignIn.padding_right.23dp"
-        android:paddingStart="@dimen/relativeLayout.SignIn.padding_left.23dp">
+        android:background="@color/relativeLayout.favorite.background"
+        android:paddingLeft="@dimen/relativeLayout.signIn.padding_left.23dp"
+        android:paddingRight="@dimen/relativeLayout.signIn.padding_right.23dp"
+        android:paddingStart="@dimen/relativeLayout.signIn.padding_left.23dp">
 
         <TextView
             android:id="@+id/tvFavoriteTitle"
@@ -19,8 +19,8 @@
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
-            android:text="@string/textView.text.title.favorite"
-            android:textColor="@color/textView.Favorite.color.title"
+            android:text="@string/textView.favorite.text.title"
+            android:textColor="@color/textView.favorite.color.title"
             android:textSize="@dimen/textView.Favorite.size.title.28sp" />
 
         <ImageView
@@ -39,7 +39,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/rlFavoriteSearch"
-        android:background="@color/relativeLayout.Favorite.background.list">
+        android:background="@color/relativeLayout.favorite.background.list">
 
         <ListView
             android:id="@+id/lvFavorite"
@@ -51,9 +51,8 @@
             android:layout_marginRight="@dimen/listView.Favorite.margin_right.10dp"
             android:layout_marginStart="@dimen/listView.Favorite.margin_left.10dp"
             android:layout_marginTop="@dimen/listView.Favorite.margin_top.25dp"
-            android:background="@drawable/shape_list_favorite">
+            android:background="@drawable/shape_list_favorite"/>
 
-        </ListView>
     </RelativeLayout>
 
 </LinearLayout>
