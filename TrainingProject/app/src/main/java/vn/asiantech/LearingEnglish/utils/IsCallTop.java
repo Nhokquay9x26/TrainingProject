@@ -5,4 +5,5 @@ package vn.asiantech.LearingEnglish.utils;
  */
 public interface IsCallTop {
     void callFragmentAnimal();
+    void callFragmentDetail();
 }

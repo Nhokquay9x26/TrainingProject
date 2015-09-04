@@ -21,7 +21,6 @@ public class TopFragment extends BaseFragment {
         android.support.v4.app.FragmentManager fragmentManager = getFragmentManager();
         android.support.v4.app.FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction().addToBackStack(null);
         fragmentTransaction.replace(R.id.framlayoutTop, mFragment);
-        fragmentTransaction.addToBackStack(null);
         fragmentTransaction.commit();
     }
 

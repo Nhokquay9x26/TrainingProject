@@ -7,7 +7,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@id/llFavorite"
-        android:layout_margin="@dimen/favorite.rlhome.margin"
-        android:background="@drawable/home_rl_background">
+        android:layout_margin="@dimen/favorite.rlhome.margin">
     </FrameLayout>
 </RelativeLayout>

@@ -68,4 +68,9 @@ public class HomeFragment extends BaseFragment implements IsCallTop{
         fragmentTransaction.replace(R.id.framlayoutTop, mFragment);
         fragmentTransaction.commit();
     }
+
+    @Override
+    public void callFragmentDetail() {
+
+    }
 }
