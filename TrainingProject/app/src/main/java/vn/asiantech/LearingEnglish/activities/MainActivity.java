@@ -16,10 +16,9 @@ import android.widget.Toast;
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.EActivity;
 import org.androidannotations.annotations.ViewById;
-
 import vn.asiantech.LearingEnglish.R;
+import vn.asiantech.LearingEnglish.container.SettingContainer;
 import vn.asiantech.LearingEnglish.container.FavoriteContainer;
-import vn.asiantech.LearingEnglish.container.TabFourContainer;
 import vn.asiantech.LearingEnglish.container.TabOneContainer;
 import vn.asiantech.LearingEnglish.container.TabTwoContainer;
 import vn.asiantech.LearingEnglish.fragments.BaseContainerFragment;
@@ -31,6 +30,9 @@ import vn.asiantech.LearingEnglish.views.PagerSlidingTabStrip;
 @EActivity(R.layout.activity_main)
 public class MainActivity extends BaseActionBarActivity implements HeaderBar.OnHeaderBarListener{
 
+    private static final int PLAY_SERVICES_RESOLUTION_REQUEST = 9000;
+    private final String TAG = MainActivity.this.getClass().getName();
+    // ViewPagercustomDrawable
     // ViewPager
     @ViewById(R.id.viewPager)
     protected HackyViewPager mPager;
@@ -84,7 +86,7 @@ public class MainActivity extends BaseActionBarActivity implements HeaderBar.OnH
                 } else if (position == 2) {
                     title = getResources().getString(R.string.tab_3);
                 } else {
-                    title = getResources().getString(R.string.tab_4);
+                    title = getResources().getString(R.string.tab_setting);
                 }
                 setHeader(title);
             }
@@ -170,7 +172,7 @@ public class MainActivity extends BaseActionBarActivity implements HeaderBar.OnH
                 case 2:
                     return new FavoriteContainer();
                 default:
-                    return new TabFourContainer();
+                    return new SettingContainer();
             }
         }
 
