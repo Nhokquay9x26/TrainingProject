@@ -12,13 +12,15 @@
             android:name=".activities.MainActivity_"
             android:label="@string/app_name"
             android:uiOptions="splitActionBarWhenNarrow">
+
+        </activity>
+        <activity android:name=".activities.SignupActivity_"></activity>
+        <activity android:name=".activities.SplashScreenActivity_">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activities.SignupActivity_"></activity>
-        <activity android:name=".activities.SplashScreenActivity_"></activity>
         <activity android:name=".activities.TestingActivity_"></activity>
         <activity android:name=".activities.LoginActivity_"></activity>
         <activity android:name=".activities.TestFragmentActivity_"></activity>

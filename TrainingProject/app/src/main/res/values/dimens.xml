@@ -24,7 +24,7 @@
     <dimen name="rb.testing.rb_margin_top">5dp</dimen>
     <dimen name="rb.testing.rbA_margin_left">10dp</dimen>
     <dimen name="rb.testing.rb_margin_left">10dp</dimen>
-    <dimen name="testing.textview.text_size_title">23sp</dimen>
+    <dimen name="testing.textview.text_size_title">20sp</dimen>
     <dimen name="testing.imageview.padding_btn_search">20dp</dimen>
     <dimen name="testing.view.height_bottom">55dp</dimen>
     <dimen name="testing.rl.btn_margin_bottom">10dp</dimen>

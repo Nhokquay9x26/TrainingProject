@@ -21,16 +21,11 @@ import vn.asiantech.LearingEnglish.fragments.TestingFragment_;
 public class SplashScreenActivity extends BaseActionBarActivity {
     private Timer mTimer;
     private Intent mIntent;
-    private AnimationDrawable mMyAnimationDrawable1;
-
-    @ViewById(R.id.imgIncrementingBoxView)
-    ImageView mImgincrementingBoxView;
+    private boolean isExit ;
 
     @Override
     void afterView() {
-      //  getSupportActionBar().hide();
-        //********* box incrementing ***********
-        //mImgincrementingBoxView.setVisibility(View.GONE);
+
         //Call Method set Timer
         setTimer();
     }
@@ -40,9 +35,9 @@ public class SplashScreenActivity extends BaseActionBarActivity {
      */
     private void setTimer() {
         mTimer = new Timer();
-        mIntent = new Intent(this, MainActivity_.class);
-        //mImgincrementingBoxView.setVisibility(View.VISIBLE);
-        //incrementalHorizontalLoading();
+        mIntent = new Intent(this, LoginActivity_.class);
+        mIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        mIntent.putExtra("Exit me", true);
         mTimer.schedule(new TimerTask() {
             @Override
             public void run() {
@@ -51,8 +46,12 @@ public class SplashScreenActivity extends BaseActionBarActivity {
         }, 3000);
     }
 
-    public void incrementalHorizontalLoading() {
-        mMyAnimationDrawable1 = (AnimationDrawable) mImgincrementingBoxView.getDrawable();
-        mMyAnimationDrawable1.start();
+    @Override
+    protected void onResume() {
+        super.onResume();
+        if (isExit){
+            finish();
+        }
+        isExit = true;
     }
 }
