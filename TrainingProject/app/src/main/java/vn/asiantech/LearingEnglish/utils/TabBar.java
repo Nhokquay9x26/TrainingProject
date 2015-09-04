@@ -39,6 +39,7 @@ public class TabBar extends RelativeLayout implements View.OnClickListener {
     private ImageView mImgSetting;
     private TextView mTvSetting;
     private TextView mTvHeader;
+    private ImageView mImgBackHeader;
     private OnTabBarListener mOnTabBarListener;
 
     public TabBar(Context context) {
@@ -79,6 +80,7 @@ public class TabBar extends RelativeLayout implements View.OnClickListener {
         mTvSetting = (TextView) mRootView.findViewById(R.id.tvSetting);
 
         mTvHeader = (TextView) mRootView.findViewById(R.id.tvHeader);
+        mImgBackHeader = (ImageView)mRootView.findViewById(R.id.imgBackHeader);
 
         clickTab(0);
     }

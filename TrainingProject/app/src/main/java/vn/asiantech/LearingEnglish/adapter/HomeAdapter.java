@@ -2,15 +2,19 @@ package vn.asiantech.LearingEnglish.adapter;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
 
 import vn.asiantech.LearingEnglish.R;
+import vn.asiantech.LearingEnglish.fragments.HomeFragment;
 import vn.asiantech.LearingEnglish.models.HomeCategory;
+import vn.asiantech.LearingEnglish.utils.IsCallTop;
 
 /**
  * @Author xuanphu
@@ -19,10 +23,12 @@ import vn.asiantech.LearingEnglish.models.HomeCategory;
 public class HomeAdapter extends  RecyclerView.Adapter<HomeAdapter.HomeViewHolder>{
     Context mContext;
     private ArrayList<HomeCategory> mArraylist = new ArrayList<>();
+    private IsCallTop mIsCallTop;
 
-    public HomeAdapter(Context mContext, ArrayList<HomeCategory> mArraylist) {
+    public HomeAdapter(Context mContext, ArrayList<HomeCategory> mArraylist, IsCallTop mIsCallTop) {
         this.mContext = mContext;
         this.mArraylist = mArraylist;
+        this.mIsCallTop = mIsCallTop;
     }
 
     @Override
@@ -38,6 +44,12 @@ public class HomeAdapter extends  RecyclerView.Adapter<HomeAdapter.HomeViewHolde
         final HomeCategory homeCategory= mArraylist.get(position);
         holder.imgAvataHome.setImageResource(homeCategory.getMAvataHome());
         holder.tvNameHone.setText(homeCategory.getMNameHome());
+        holder.imgSelecHome.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mIsCallTop.callFragmentAnimal();
+            }
+        });
     }
 
     @Override
@@ -48,10 +60,12 @@ public class HomeAdapter extends  RecyclerView.Adapter<HomeAdapter.HomeViewHolde
     public class HomeViewHolder extends RecyclerView.ViewHolder {
         vn.asiantech.LearingEnglish.utils.CircleImageView imgAvataHome;
         TextView tvNameHone;
+        ImageView imgSelecHome;
         public HomeViewHolder(View itemView) {
             super(itemView);
             imgAvataHome = (vn.asiantech.LearingEnglish.utils.CircleImageView)itemView.findViewById(R.id.imgAvataItemHome);
             tvNameHone = (TextView)itemView.findViewById(R.id.tvNameItemHome);
+            imgSelecHome = (ImageView)itemView.findViewById(R.id.imgSelectItemHome);
         }
     }
 

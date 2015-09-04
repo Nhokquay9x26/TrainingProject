@@ -93,4 +93,7 @@
     <dimen name="favorite.rlfavorite.margin">20dp</dimen>
     <dimen name="item.favorite.padding">10dp</dimen>
     <dimen name="favorite.rlhome.margin">20dp</dimen>
+    <dimen name="item.recycle.animal.imgAvata.width.heght">50dp</dimen>
+    <dimen name="item.recycle.animal.tvName.maginleft">20dp</dimen>
+    <dimen name="custom.tabbar.main.imgBack.header">20dp</dimen>
 </resources>
