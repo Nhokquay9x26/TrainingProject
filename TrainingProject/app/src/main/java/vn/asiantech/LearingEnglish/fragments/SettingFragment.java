@@ -15,21 +15,21 @@ import vn.asiantech.LearingEnglish.adapter.SettingAdapter;
 import vn.asiantech.LearingEnglish.models.SettingModel;
 
 /**
+ * @author mrson
  * Created by mrson on 04/09/2015.
  */
 @EFragment(R.layout.fragment_setting)
 public class SettingFragment extends BaseFragment{
     @ViewById(R.id.recycleViewSetting)
     RecyclerView recyclerViewSetting;
-    SettingAdapter settingAdapter;
-    List<SettingModel> settingModels = new ArrayList<SettingModel>();
+    private final List<SettingModel> settingModels = new ArrayList<>();
     @AfterViews
     void afterViews(){
         fakeData();
-        settingAdapter = new SettingAdapter(getActivity(),settingModels);
+        SettingAdapter settingAdapter = new SettingAdapter(getActivity(), settingModels);
         recyclerViewSetting.setLayoutManager(new LinearLayoutManager(getActivity().getBaseContext()));
         recyclerViewSetting.setAdapter(settingAdapter);}
-    public void fakeData(){
+    private void fakeData(){
         SettingModel settingModel = new SettingModel();
         settingModel.setProfilNameSetting("Nguyen thai Son");
         settingModel.setProfileSetting(R.drawable.img_profile_test);

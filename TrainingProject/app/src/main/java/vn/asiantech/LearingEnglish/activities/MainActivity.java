@@ -1,5 +1,7 @@
 package vn.asiantech.LearingEnglish.activities;
 
+import android.annotation.TargetApi;
+import android.os.Build;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
@@ -20,7 +22,7 @@ import vn.asiantech.LearingEnglish.fragments.TopFragment_;
 import vn.asiantech.LearingEnglish.utils.TabBar;
 
 /**
- * @Author TienTun
+ * @author TienTun
  * Created by tientun on 3/5/15.
  */
 @EActivity(R.layout.activity_main)
@@ -31,8 +33,8 @@ public class MainActivity extends FragmentActivity {
     TabBar mTabBarMain;
     @ViewById(R.id.tvHeader)
     TextView tvHeader;
-    private ViewPagerAdapter mAdapter;
 
+    @TargetApi(Build.VERSION_CODES.HONEYCOMB)
     @OptionsItem(android.R.id.home)
     protected void backAction() {
         finish();
@@ -40,7 +42,7 @@ public class MainActivity extends FragmentActivity {
 
     @AfterViews
     void afterViews() {
-        mAdapter = new ViewPagerAdapter(getSupportFragmentManager());
+        ViewPagerAdapter mAdapter = new ViewPagerAdapter(getSupportFragmentManager());
         mViewPagerMain.setAdapter(mAdapter);
         mTabBarMain.clickTab(0);
         mTabBarMain.setOnTabBarListener(new TabBar.OnTabBarListener() {
@@ -75,7 +77,7 @@ public class MainActivity extends FragmentActivity {
 
         @Override
         public Fragment getItem(int position) {
-            Fragment f = null;
+            Fragment f;
             switch (position) {
                 case 0:
                     f = new TopFragment_();

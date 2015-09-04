@@ -22,21 +22,20 @@ import vn.asiantech.LearingEnglish.models.SettingModel;
  *         Created by mrson on 31/08/2015.
  */
 public class SettingAdapter extends RecyclerView.Adapter<SettingAdapter.ViewHolder> {
-    Context mContext;
-    public List<SettingModel> mList = new ArrayList<SettingModel>();
+    private final Context mContext;
+    private List<SettingModel> mList = new ArrayList<>();
 
 
-    public SettingAdapter(FragmentActivity mContextC, List<SettingModel> mlist) {
+    public SettingAdapter(FragmentActivity mContextC, List<SettingModel> mList) {
         this.mContext = mContextC;
-        this.mList = mlist;
+        this.mList = mList;
     }
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup viewGroup, int viewType) {
         View v = LayoutInflater.from(viewGroup.getContext())
                 .inflate(R.layout.item_recycleview_setting, viewGroup, false);
-        ViewHolder viewHolder = new ViewHolder(v);
-        return viewHolder;
+        return new ViewHolder(v);
     }
 
     @Override
@@ -46,18 +45,8 @@ public class SettingAdapter extends RecyclerView.Adapter<SettingAdapter.ViewHold
         holder.imgProfile.setImageResource(settingModel.getProfileSetting());
         holder.tvNameProfileSetting.setText(settingModel.getProfilNameSetting());
 
-        holder.imgProfile.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(mContext, "click profile", Toast.LENGTH_SHORT).show();
-            }
-        });
-        holder.imgSetting.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(mContext, "click setting", Toast.LENGTH_SHORT).show();
-            }
-        });
+        holder.imgProfile.setOnClickListener(v -> Toast.makeText(mContext, "click profile", Toast.LENGTH_SHORT).show());
+        holder.imgSetting.setOnClickListener(v -> Toast.makeText(mContext, "click setting", Toast.LENGTH_SHORT).show());
 
     }
 
@@ -68,9 +57,9 @@ public class SettingAdapter extends RecyclerView.Adapter<SettingAdapter.ViewHold
 
     class ViewHolder extends RecyclerView.ViewHolder {
 
-        public vn.asiantech.LearingEnglish.utils.CircleImageView imgProfile;
-        public TextView tvNameProfileSetting;
-        public ImageView imgSetting;
+        public final vn.asiantech.LearingEnglish.utils.CircleImageView imgProfile;
+        public final TextView tvNameProfileSetting;
+        public final ImageView imgSetting;
 
         public ViewHolder(View itemView) {
             super(itemView);
