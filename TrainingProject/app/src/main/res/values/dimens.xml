@@ -110,4 +110,23 @@
     <dimen name="textView.itemRatings.marginLeft.23dp">23dp</dimen>
     <dimen name="textView.itemRatings.textSize.30sp">20sp</dimen>
     <dimen name="textView.itemRatings.width.44dp">54dp</dimen>
+
+    <!-- dimen file fragment_signup. -->
+    <dimen name="relativeLayout.signUp.marginTop.30dp">30dp</dimen>
+    <dimen name="relativeLayout.signUp.marginLeft.23dp">23dp</dimen>
+    <dimen name="relativeLayout.signUp.marginRight.23dp">23dp</dimen>
+    <dimen name="relativeLayout.signUp.height.120dp">120dp</dimen>
+    <dimen name="img.signUp.height.80dp">80dp</dimen>
+    <dimen name="img.signUp.width.80dp">80dp</dimen>
+    <dimen name="img.signUp.marginTop.10dp">10dp</dimen>
+    <dimen name="textView.signUp.marginBottom.8dp">8dp</dimen>
+    <dimen name="relativeLayout.signUp.marginBottom.10dp">10dp</dimen>
+    <dimen name="relativeLayout.signUp.marginLeft.22dp">22dp</dimen>
+    <dimen name="relativeLayout.signUp.marginRight.22dp">22dp</dimen>
+    <dimen name="relativeLayout.signUp.marginTop.5dp">5dp</dimen>
+    <dimen name="checkbox.signUp.marginTop.20dp">20dp</dimen>
+    <dimen name="textView.signUp.marginLeft.10dp">10dp</dimen>
+    <dimen name="button.signUp.height.45dp">45dp</dimen>
+    <dimen name="button.signUp.textSize.7pt">7pt</dimen>
+    <dimen name="button.signUp.height.30dp">30dp</dimen>
 </resources>
