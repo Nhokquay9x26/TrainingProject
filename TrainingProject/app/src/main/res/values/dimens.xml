@@ -93,4 +93,12 @@
     <dimen name="favorite.rlfavorite.margin">20dp</dimen>
     <dimen name="item.favorite.padding">10dp</dimen>
     <dimen name="favorite.rlhome.margin">20dp</dimen>
+    <dimen name="setting.item.profile.height">100dp</dimen>
+    <dimen name="setting.rllayout.marginleft">10dp</dimen>
+    <dimen name="setting.rllayout.marginright">10dp</dimen>
+    <dimen name="setting.rllayout.nameprofile.paddingleft">10dp</dimen>
+    <dimen name="setting.rl.profile.marginleft">10dp</dimen>
+    <dimen name="setting.rl.profile.margin.left">10dp</dimen>
+    <dimen name="setting.rl.profile.margin.right">10dp</dimen>
+
 </resources>

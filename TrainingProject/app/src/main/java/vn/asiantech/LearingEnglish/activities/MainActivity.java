@@ -15,7 +15,7 @@ import org.androidannotations.annotations.ViewById;
 import vn.asiantech.LearingEnglish.R;
 import vn.asiantech.LearingEnglish.fragments.FavoriteFragment_;
 import vn.asiantech.LearingEnglish.fragments.QuestionFragment;
-import vn.asiantech.LearingEnglish.fragments.RatingsFragment;
+import vn.asiantech.LearingEnglish.fragments.SettingFragment_;
 import vn.asiantech.LearingEnglish.fragments.TopFragment_;
 import vn.asiantech.LearingEnglish.utils.TabBar;
 
@@ -87,10 +87,10 @@ public class MainActivity extends FragmentActivity {
                     f = new QuestionFragment();
                     break;
                 case 3:
-                    f = new RatingsFragment();
+                    f = new SettingFragment_();
                     break;
                 default:
-                    f = new RatingsFragment();
+                    f = new SettingFragment_();
                     break;
             }
             return f;
