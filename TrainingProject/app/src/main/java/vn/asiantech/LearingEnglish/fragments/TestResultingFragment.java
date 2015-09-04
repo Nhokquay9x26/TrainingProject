@@ -16,7 +16,7 @@ import java.util.ArrayList;
 import vn.asiantech.LearingEnglish.R;
 import vn.asiantech.LearingEnglish.activities.TestingActivity_;
 import vn.asiantech.LearingEnglish.adapter.TestResultingAdapter;
-import vn.asiantech.LearingEnglish.models.DataQuestion;
+import vn.asiantech.LearingEnglish.models.ApplicationData;
 import vn.asiantech.LearingEnglish.models.Question;
 import vn.asiantech.LearingEnglish.models.SomeOtherFunction;
 
@@ -44,7 +44,7 @@ public class TestResultingFragment extends Fragment {
         configRecycleView();
         mQuestionDatas = new ArrayList<Question>();
         mListSelections = new ArrayList<>();
-        DataQuestion.getSelectionTrue(mListSelections);
+        ApplicationData.getSelectionTrue(mListSelections);
         Log.d("Phai", "chay day cho hong");
         if (getActivity() instanceof TestingActivity_) {
             mQuestionDatas = ((TestingActivity_) getActivity()).getMQuestionDatas();

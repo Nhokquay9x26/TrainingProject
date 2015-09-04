@@ -12,4 +12,11 @@ public class Ranking {
     private String mAvatar;
     private String mUserName;
     private int mPoint;
+    public Ranking(int mIdRank,String mAvatar,String mUserName,int mPoint){
+        this.mIdRank = mIdRank;
+        this.mAvatar = mAvatar;
+        this.mUserName = mUserName;
+        this.mPoint = mPoint;
+    }
+
 }

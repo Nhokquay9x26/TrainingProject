@@ -8,6 +8,7 @@ import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.util.Log;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -16,9 +17,11 @@ import org.androidannotations.annotations.EActivity;
 import org.androidannotations.annotations.OptionsItem;
 import org.androidannotations.annotations.ViewById;
 
+import java.util.ArrayList;
 import java.util.Timer;
 import java.util.TimerTask;
 
+import lombok.Getter;
 import vn.asiantech.LearingEnglish.R;
 import vn.asiantech.LearingEnglish.fragments.FavoriteFragment_;
 import vn.asiantech.LearingEnglish.fragments.QuestionFragment;
@@ -26,6 +29,8 @@ import vn.asiantech.LearingEnglish.fragments.QuestionFragment_;
 import vn.asiantech.LearingEnglish.fragments.RatingsFragment;
 import vn.asiantech.LearingEnglish.fragments.RatingsFragment_;
 import vn.asiantech.LearingEnglish.fragments.TopFragment_;
+import vn.asiantech.LearingEnglish.models.ApplicationData;
+import vn.asiantech.LearingEnglish.models.Ranking;
 import vn.asiantech.LearingEnglish.utils.TabBar;
 
 /**
@@ -34,6 +39,10 @@ import vn.asiantech.LearingEnglish.utils.TabBar;
  */
 @EActivity(R.layout.activity_main)
 public class MainActivity extends FragmentActivity {
+
+    @Getter
+    private ArrayList<Ranking> mRankings;
+
     @ViewById(R.id.viewpagerMain)
     ViewPager mViewPagerMain;
     @ViewById(R.id.tabbarMain)
@@ -50,6 +59,7 @@ public class MainActivity extends FragmentActivity {
 
     @AfterViews
     void afterViews() {
+        getRankUser();
         mAdapter = new ViewPagerAdapter(getSupportFragmentManager());
         mViewPagerMain.setAdapter(mAdapter);
         mTabBarMain.clickTab(0);
@@ -75,6 +85,14 @@ public class MainActivity extends FragmentActivity {
                         }
                     }, 1000);
                 }
+                if (position==3){
+                   /* for (int i=0;i<5;i++){
+
+                        Log.d("",mRankings.get(i).getMUserName());
+                        Log.d("",mRankings.get(i).getMPoint()+"");
+
+                    }*/
+                }
             }
 
             @Override
@@ -88,6 +106,10 @@ public class MainActivity extends FragmentActivity {
         });
     }
 
+    private void getRankUser(){
+        mRankings = new ArrayList<Ranking>();
+        mRankings = ApplicationData.getRankUser();
+    }
     @Override
     protected void onResume() {
         super.onResume();

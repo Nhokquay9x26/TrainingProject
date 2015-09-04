@@ -31,7 +31,7 @@ import vn.asiantech.LearingEnglish.R;
 import vn.asiantech.LearingEnglish.adapter.TestingAdapter;
 import vn.asiantech.LearingEnglish.fragments.TestResultingFragment_;
 import vn.asiantech.LearingEnglish.fragments.TestingFragment_;
-import vn.asiantech.LearingEnglish.models.DataQuestion;
+import vn.asiantech.LearingEnglish.models.ApplicationData;
 import vn.asiantech.LearingEnglish.models.Question;
 
 /**
@@ -266,13 +266,13 @@ public class TestingActivity extends FragmentActivity {
      */
     private void getQuestion() {
         mQuestionDatas = new ArrayList<Question>();
-        DataQuestion.getDataQuestion(mQuestionDatas);
+        ApplicationData.getDataQuestion(mQuestionDatas);
 
     }
 
     private void getListSelection() {
         mListSelection = new ArrayList<String>();
-        DataQuestion.getSelectionTrue(mListSelection);
+        ApplicationData.getSelectionTrue(mListSelection);
 
     }
 

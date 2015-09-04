@@ -18,10 +18,10 @@ import vn.asiantech.LearingEnglish.models.Ranking;
  */
 
 public class RatingsAdapter extends RecyclerView.Adapter<RatingsAdapter.ViewHolder> {
-    private ArrayList<Ranking> mRanking;
+    private ArrayList<Ranking> mRankings;
 
     public RatingsAdapter(ArrayList<Ranking> mRanking) {
-        this.mRanking = mRanking;
+        this.mRankings = mRanking;
     }
 
     @Override
@@ -36,29 +36,35 @@ public class RatingsAdapter extends RecyclerView.Adapter<RatingsAdapter.ViewHold
     public void onBindViewHolder(ViewHolder holder, int position) {
         switch (position){
             case 0:{
-                holder.mTvIdRank.setText((position+1)+"st");
+                holder.mTvIdRank.setTextColor(Color.RED);
+                holder.mTvIdRank.setText((position + 1) + "st");
                 holder.mTvUserName.setTextColor(Color.RED);
+                break;
             }
             case 1:{
+                holder.mTvIdRank.setTextColor(Color.GREEN);
                 holder.mTvIdRank.setText((position+1)+"nd");
-                holder.mTvUserName.setTextColor(Color.BLUE);
+                holder.mTvUserName.setTextColor(Color.GREEN);
+                break;
             }
             case 2:{
+                holder.mTvIdRank.setTextColor(Color.BLUE);
                 holder.mTvIdRank.setText((position+1)+"rd");
                 holder.mTvUserName.setTextColor(Color.BLUE);
+                break;
             }
             default:{
                 holder.mTvIdRank.setText((position+1)+"th");
             }
         }
-        holder.mTvUserName.setText(mRanking.get(position).getMUserName());
-        holder.mTvPoint.setText(mRanking.get(position).getMPoint());
+        holder.mTvUserName.setText(mRankings.get(position).getMUserName()+"");
+        holder.mTvPoint.setText(mRankings.get(position).getMPoint()+"");
 
     }
 
     @Override
     public int getItemCount() {
-        return mRanking.size();
+        return mRankings.size();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder{
