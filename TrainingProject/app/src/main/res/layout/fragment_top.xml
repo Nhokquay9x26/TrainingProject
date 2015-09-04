@@ -3,23 +3,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
     <RelativeLayout
-        android:id="@+id/rlFavoriteTest"
+        android:id="@+id/rlHome"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@id/llFavorite"
-        android:layout_margin="@dimen/favorite.rlfavorite.margin"
-        android:background="@drawable/favorite_rl_background">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+        android:layout_margin="@dimen/favorite.rlhome.margin"
+        android:background="@drawable/home_rl_background">
 
         <android.support.v7.widget.RecyclerView
-            android:id="@+id/recyclerView"
+            android:id="@+id/recyclerHome"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-
+            android:layout_height="match_parent"
+            android:scrollbars="vertical" />
     </RelativeLayout>
-
-
 </RelativeLayout>

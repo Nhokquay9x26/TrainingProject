@@ -21,6 +21,10 @@
     <color name="signup.text.color.buton">#ffffff</color>
     <color name="signup.ln.backgroud">#00b9e6</color>
 
+    <color name="custom_tabbar_main_background">#00b9e6</color>
+    <color name="colorPrimary">#00b9e6</color>
+    <color name="colorPrimaryDark">#00b9e6</color>
     <color name="favorite.title.background">#00b9e6</color>
     <color name="favorite.textview.title.color">#ffffff</color>
+    <color name="item.recycleview.home.line">#b2aaaa</color>
 </resources>
