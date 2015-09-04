@@ -53,4 +53,13 @@
     <dimen name="button.btnlogout.text_size">20sp</dimen>
     <dimen name="button.btnnologout.margin">2sp</dimen>
     <dimen name="view.layout_height">2dp</dimen>
+
+    <!-- dimen file fragment_top-->
+    <dimen name="relativeLayout.top.height.118dp">118dp</dimen>
+    <dimen name="textView.top.textSize.33sp">33sp</dimen>
+    <dimen name="img.top.marginLeft.28dp">28dp</dimen>
+    <dimen name="relativeLayout.top.marginBottom.56dp">56dp</dimen>
+    <dimen name="relativeLayout.top.marginRight.14dp">14dp</dimen>
+    <dimen name="relativeLayout.top.marginLeft.14dp">14dp</dimen>
+    <dimen name="relativeLayout.top.marginTop.22dp">22dp</dimen>
 </resources>
