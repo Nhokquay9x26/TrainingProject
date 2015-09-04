@@ -77,4 +77,17 @@
     <dimen name="cardView.top_margin_bottom">15dp</dimen>
     <dimen name="cardView.top_margin_left">10dp</dimen>
     <dimen name="cardView.top_margin_right">10dp</dimen>
+    <dimen name="imageview.detail_vocabulary_height">180dp</dimen>
+    <dimen name="imageview.detail_vocabulary_width">300dp</dimen>
+    <dimen name="imageview.vocabulary_margin_top">20dp</dimen>
+    <dimen name="linearlayout.vocabulary_margin_top">40dp</dimen>
+    <dimen name="textview.detail_vocabulary_margin_left_right">40dp</dimen>
+    <dimen name="textview.vocabulary_detail_size">36sp</dimen>
+    <dimen name="textview.detail_vocabulary_mean_margin_top">20dp</dimen>
+    <dimen name="textview.mean_size">24sp</dimen>
+    <dimen name="textview.detail_vocabulary_size">22sp</dimen>
+    <dimen name="textview.dtail_vocabulary_example_size">18sp</dimen>
+    <dimen name="imageview.sound_margin_right">20dp</dimen>
+    <dimen name="imageview.sound_margin_top">10dp</dimen>
+    <dimen name="relativelayout.detail_vocabulary_bottom_margin">5dp</dimen>
 </resources>
