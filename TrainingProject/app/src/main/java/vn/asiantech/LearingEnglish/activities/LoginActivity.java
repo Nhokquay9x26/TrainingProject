@@ -44,7 +44,7 @@ public class LoginActivity extends BaseActionBarActivity {
         final String email = mEdtUserName.getText().toString();
         final String password = mEdtPassword.getText().toString();
         if (email.length() > 0 && password.length() > 0) {
-            if (email.equals("asiantech@asiantech.vn") && password.equals("123456")) {
+            if (email.equals("abc") && password.equals("123456")) {
                 MainActivity_.intent(LoginActivity.this).start();
                 finish();
             }else{
