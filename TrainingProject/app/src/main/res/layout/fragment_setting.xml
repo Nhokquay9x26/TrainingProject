@@ -55,16 +55,14 @@
             android:layout_height="@dimen/relativelayout.rlone3.layout_height"
             android:background="@color/relativelayout.rlone3.background">
 
-            <com.github.siyamed.shapeimageview.CircularImageView
+            <vn.asiantech.LearingEnglish.Views.CircleImageView
                 android:id="@+id/imgAvatar"
                 android:layout_width="@dimen/imageview.img_avatar.layout_width"
                 android:layout_height="@dimen/imageview.img_avatar.layout_height"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
                 android:layout_centerVertical="true"
-                android:src="@drawable/ic_person"
-                app:siBorderColor="@color/imageview.img_avatar.border_color"
-                app:siBorderWidth="@dimen/imageview.img_avatar.border_width" />
+                android:src="@drawable/ic_person" />
 
             <TextView
                 android:id="@+id/tvNamePerson"
