@@ -100,5 +100,10 @@
     <dimen name="setting.rl.profile.marginleft">10dp</dimen>
     <dimen name="setting.rl.profile.margin.left">10dp</dimen>
     <dimen name="setting.rl.profile.margin.right">10dp</dimen>
+    <dimen name="setting.rl.background.margin">10dp</dimen>
+    <dimen name="setting.rl.top.height">70dp</dimen>
+    <dimen name="setting.top.setting.padding">10dp</dimen>
+    <dimen name="setting.line.height">0.1dp</dimen>
+    <dimen name="setting.line2.height">0.1dp</dimen>
 
 </resources>
