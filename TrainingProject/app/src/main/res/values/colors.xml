@@ -41,4 +41,24 @@
     <color name="button.btnyeslogout.background">#0dc2ff</color>
     <color name="button.btnnologout.background">#0dc2ff</color>
     <color name="relativeLayout.detail.background.word">#FFFFFF</color>
+    <color name="relativelayout.container.background">#30000000</color>
+    <color name="relativelayout.rlone1.background">#0dc2ff</color>
+    <color name="textview.text.tv_setting">#ffffff</color>
+    <color name="imagebutton.img_search.background">#0dc2ff</color>
+    <color name="relativelayout.rlone3.background">#ffffff</color>
+    <color name="imageview.img_avatar.border_color">#ffab0d</color>
+    <color name="textview.tv_name_person.text_color">#ff1a2a</color>
+    <color name="view.background3">#0dc2ff</color>
+    <color name="relativelayout.background">#ffffff</color>
+    <color name="textview.text_color">#000000</color>
+    <color name="textview.tvaleart.text_color">#F00800</color>
+    <color name="view.background1">#F08000</color>
+    <color name="shape.bg_edttime.solid">#ffffff</color>
+    <color name="shape.bg_edttime.stroke">#5b607e</color>
+
+    <!-- color file fragment_top -->
+    <color name="top.mau_nen">#e8e9ea</color>
+    <color name="blue.top">#00b9e6</color>
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
 </resources>

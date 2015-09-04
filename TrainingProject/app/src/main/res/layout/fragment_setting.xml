@@ -1,13 +1,237 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/blabla"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:background="@color/relativelayout.container.background">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TAB 4" />
+    <RelativeLayout
+        android:id="@+id/rlOne1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/relativelayout.rlone1.layout_height"
+        android:background="@color/relativelayout.rlone1.background">
 
-</LinearLayout>
+        <TextView
+            android:id="@+id/tvSetting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerInParent="true"
+            android:text="@string/textview.text.tv_setting"
+            android:textColor="@color/textview.text.tv_setting"
+            android:textSize="@dimen/textview.text.tv_setting"
+            android:textStyle="bold" />
+
+        <ImageButton
+            android:id="@+id/imgBtnSearch"
+            android:layout_width="@dimen/imagebutton.img_search.layout_width"
+            android:layout_height="@dimen/imagebutton.img_search.layout_height"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/imagebutton.img_search.margin"
+            android:layout_marginRight="@dimen/imagebutton.img_search.margin"
+            android:background="@color/imagebutton.img_search.background"
+            android:contentDescription="@null"
+            android:src="@drawable/ic_search" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/rlOne2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rlOne1"
+        android:layout_marginBottom="@dimen/relativelayout.rlone2.margin_bottom_top"
+        android:layout_marginLeft="@dimen/relativelayout.rlone2.margin_left_right"
+        android:layout_marginRight="@dimen/relativelayout.rlone2.margin_left_right"
+        android:layout_marginTop="@dimen/relativelayout.rlone2.margin_bottom_top"
+        android:background="@drawable/bg_layout_setting"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/rlOne3"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/relativelayout.rlone3.layout_height"
+            android:background="@color/relativelayout.rlone3.background">
+
+            <vn.asiantech.LearingEnglish.Views.CircleImageView
+                android:id="@+id/imgAvatar"
+                android:layout_width="@dimen/imageview.img_avatar.layout_width"
+                android:layout_height="@dimen/imageview.img_avatar.layout_height"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_person" />
+
+            <TextView
+                android:id="@+id/tvNamePerson"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/textview.tv_name_person.margin"
+                android:layout_marginStart="@dimen/textview.tv_name_person.margin"
+                android:layout_toEndOf="@+id/imgAvatar"
+                android:layout_toRightOf="@+id/imgAvatar"
+                android:gravity="center"
+                android:text="@string/textview.text.tv_name_person"
+                android:textColor="@color/textview.tv_name_person.text_color"
+                android:textSize="@dimen/textview.text_size" />
+
+            <ImageButton
+                android:id="@+id/imgBtnSetting"
+                android:layout_width="@dimen/imagebutton.img_setting.layout_width"
+                android:layout_height="@dimen/imagebutton.img_setting.layout_height"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@+id/tvNamePerson"
+                android:layout_marginEnd="@dimen/imagebutton.img_setting.margin"
+                android:layout_marginRight="@dimen/imagebutton.img_setting.margin"
+                android:background="@drawable/ic_setting"
+                android:contentDescription="@null" />
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/vView"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/view.layout_height2"
+            android:background="@color/view.background3" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/relativelayout.height"
+            android:background="@color/relativelayout.background">
+
+            <ImageView
+                android:id="@+id/imgSettingToppoin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/imageview.margin_top"
+                android:background="@drawable/ic_toppoin"
+                android:contentDescription="@null" />
+
+            <TextView
+                android:id="@+id/tvSetttingToppoin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/textview.margin_left_start"
+                android:layout_marginStart="@dimen/textview.margin_left_start"
+                android:layout_marginTop="@dimen/textview.margin_top2"
+                android:layout_toEndOf="@+id/imgSettingToppoin"
+                android:layout_toRightOf="@+id/imgSettingToppoin"
+                android:gravity="center"
+                android:text="@string/textview.text.tv_setting_toppoin"
+                android:textColor="@color/textview.text_color"
+                android:textSize="@dimen/textview.text_size" />
+
+            <ImageButton
+                android:id="@+id/imgBtnToppoin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="@dimen/textview.margin_top1"
+                android:background="@drawable/ic_arow"
+                android:contentDescription="@null" />
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/vView1"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/view.layout_height2"
+            android:layout_marginTop="@dimen/view.margin_top"
+            android:background="@color/view.background3" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/relativelayout.height"
+            android:background="@color/relativelayout.background">
+
+            <ImageView
+                android:id="@+id/imgSettingAleart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/imageview.margin_top"
+                android:background="@drawable/ic_aleart"
+                android:contentDescription="@null" />
+
+            <TextView
+                android:id="@+id/tvSettingAleart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/textview.margin_left_start"
+                android:layout_marginStart="@dimen/textview.margin_left_start"
+                android:layout_marginTop="@dimen/textview.margin_top2"
+                android:layout_toEndOf="@+id/imgSettingAleart"
+                android:layout_toRightOf="@+id/imgSettingAleart"
+                android:gravity="center"
+                android:text="@string/textview.text.tv_setting_aleart"
+                android:textColor="@color/textview.text_color"
+                android:textSize="@dimen/textview.text_size" />
+
+            <ImageButton
+                android:id="@+id/imgBtnAleart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="@dimen/textview.margin_top1"
+                android:background="@drawable/ic_arow"
+                android:contentDescription="@null" />
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/vView2"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/view.layout_height2"
+            android:layout_marginTop="@dimen/view.margin_top"
+            android:background="@color/view.background3" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/relativelayout.height"
+            android:background="@color/relativelayout.background">
+
+            <ImageView
+                android:id="@+id/imgSettingLogout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/imageview.margin_top"
+                android:background="@drawable/ic_logout"
+                android:contentDescription="@null" />
+
+            <TextView
+                android:id="@+id/tvSettingLogout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/textview.margin_left_start"
+                android:layout_marginStart="@dimen/textview.margin_left_start"
+                android:layout_marginTop="@dimen/textview.margin_top2"
+                android:layout_toEndOf="@+id/imgSettingLogout"
+                android:layout_toRightOf="@+id/imgSettingLogout"
+                android:gravity="center"
+                android:text="@string/textview.text.tv_setting_logout"
+                android:textColor="@color/textview.text_color"
+                android:textSize="@dimen/textview.text_size" />
+
+            <ImageButton
+                android:id="@+id/imgBtnLogout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="@dimen/textview.margin_top1"
+                android:background="@drawable/ic_arow"
+                android:contentDescription="@null" />
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/vView3"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/view.layout_height2"
+            android:layout_marginTop="@dimen/view.margin_top"
+            android:background="@color/view.background3" />
+    </LinearLayout>
+
+
+</RelativeLayout>
