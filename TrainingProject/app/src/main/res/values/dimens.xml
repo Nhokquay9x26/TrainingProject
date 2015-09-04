@@ -53,6 +53,53 @@
     <dimen name="button.btnlogout.text_size">20sp</dimen>
     <dimen name="button.btnnologout.margin">2sp</dimen>
     <dimen name="view.layout_height">2dp</dimen>
+    <dimen name="relativelayout.rlone1.layout_height">100dp</dimen>
+    <dimen name="textview.text.tv_setting">30sp</dimen>
+    <dimen name="imagebutton.img_search.layout_width">50dp</dimen>
+    <dimen name="imagebutton.img_search.layout_height">50dp</dimen>
+    <dimen name="imagebutton.img_search.margin">30dp</dimen>
+    <dimen name="relativelayout.rlone2.margin_left_right">20dp</dimen>
+    <dimen name="relativelayout.rlone2.margin_bottom_top">10dp</dimen>
+    <dimen name="relativelayout.rlone3.layout_height">100dp</dimen>
+    <dimen name="imageview.img_avatar.layout_width">100dp</dimen>
+    <dimen name="imageview.img_avatar.layout_height">100dp</dimen>
+    <dimen name="imageview.img_avatar.border_width">1dp</dimen>
+    <dimen name="textview.tv_name_person.margin">10dp</dimen>
+    <dimen name="textview.text_size">20sp</dimen>
+    <dimen name="imagebutton.img_setting.layout_width">30dp</dimen>
+    <dimen name="imagebutton.img_setting.layout_height">30dp</dimen>
+    <dimen name="imagebutton.img_setting.margin">20dp</dimen>
+    <dimen name="relativelayout.height">60dp</dimen>
+    <dimen name="imageview.margin_top">10dp</dimen>
+    <dimen name="textview.margin_left_start">20dp</dimen>
+    <dimen name="textview.margin_top1">10dp</dimen>
+    <dimen name="textview.margin_top2">15dp</dimen>
+    <dimen name="view.layout_height2">1dp</dimen>
+    <dimen name="view.margin_top">1dp</dimen>
+    <dimen name="imageview.dialogaleart.padding">15dp</dimen>
+    <dimen name="textview.tvaleart.text_size">20sp</dimen>
+    <dimen name="view.layout_height1">2dp</dimen>
+    <dimen name="edittext.edt_time.layout_height">40dp</dimen>
+    <dimen name="textview.tvtime.layout_margin">20sp</dimen>
+    <dimen name="textview.tvtime.padding">30dp</dimen>
+    <dimen name="textview.tvtime.text_size">20sp</dimen>
+    <dimen name="edittext.edttime.layout_margin_end">60dp</dimen>
+    <dimen name="edittext.edttime.layout_margin_right">60dp</dimen>
+    <dimen name="edittext.edttime.layout_margin_top">40dp</dimen>
+    <dimen name="textview.tvturnon.layout_margin">20sp</dimen>
+    <dimen name="textview.tvturnon.padding">30dp</dimen>
+    <dimen name="textview.tvturnon.text_size">20sp</dimen>
+    <dimen name="tooglebutton.tbturnon.margin_top">100dp</dimen>
+    <dimen name="shape.padding">1dp</dimen>
+
+    <!-- dimen file fragment_top-->
+    <dimen name="relativeLayout.top.height.118dp">118dp</dimen>
+    <dimen name="textView.top.textSize.33sp">33sp</dimen>
+    <dimen name="img.top.marginLeft.28dp">28dp</dimen>
+    <dimen name="relativeLayout.top.marginBottom.56dp">56dp</dimen>
+    <dimen name="relativeLayout.top.marginRight.14dp">14dp</dimen>
+    <dimen name="relativeLayout.top.marginLeft.14dp">14dp</dimen>
+    <dimen name="relativeLayout.top.marginTop.22dp">22dp</dimen>
 
     <!-- dimen file item_list_ratings-->
     <dimen name="relativeLayout.itemRatings.height.79dp">79dp</dimen>

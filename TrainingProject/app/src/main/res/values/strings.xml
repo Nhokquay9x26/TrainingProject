@@ -22,4 +22,15 @@
     <string name="textview.text.log_out_question">Do you close Application ?</string>
     <string name="button.text.btn_yes_log_out">Yes</string>
     <string name="button.text.btn_no_log_out">No</string>
+    <string name="textview.text.tv_setting">Setting</string>
+    <string name="textview.text.tv_name_person">Mr.Bean</string>
+    <string name="textview.text.tv_setting_toppoin">Toppoin</string>
+    <string name="textview.text.tv_setting_aleart">Aleart</string>
+    <string name="textview.text.tv_setting_logout">Log out</string>
+    <string name="textview.text.aleart">Aleart</string>
+    <string name="textview.text.aleart_time">Time :</string>
+    <string name="textview.text.aleart_turn_on">Turn on :</string>
+
+    <!-- strings file fragment_top-->
+    <string name="textView.top.text">Top</string>
 </resources>
