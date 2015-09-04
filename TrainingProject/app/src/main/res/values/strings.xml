@@ -42,4 +42,10 @@
     <string name="custom.tabbar.main.text.setting">Setting</string>
     <string name="listresult.textview.text_question">Question 1:</string>
     <string name="testresulting.textview.total">total: 1/2</string>
+    <string name="ratings.textview.text_rank">Rank</string>
+    <string name="ratings.textview.text_user">User</string>
+    <string name="ratings.textview.text_point">Points</string>
+    <string name="rating.textview.rank_id">1st</string>
+    <string name="ratings.textview.tvName_User">Maniter Jack</string>
+    <string name="ratings.textview.tvPoint">100</string>
 </resources>

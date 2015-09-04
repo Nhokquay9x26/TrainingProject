@@ -25,4 +25,5 @@
     <color name="favorite.textview.title.color">#ffffff</color>
     <color name="color.background.view">#30000000</color>
     <color name="color.background.test_resulting">#e8e9ea</color>
+    <color name="color.viewUnderTop">#30000000</color>
 </resources>

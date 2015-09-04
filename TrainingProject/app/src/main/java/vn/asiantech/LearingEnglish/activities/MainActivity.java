@@ -2,6 +2,7 @@ package vn.asiantech.LearingEnglish.activities;
 
 import android.content.Intent;
 import android.os.Handler;
+
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
@@ -23,6 +24,7 @@ import vn.asiantech.LearingEnglish.fragments.FavoriteFragment_;
 import vn.asiantech.LearingEnglish.fragments.QuestionFragment;
 import vn.asiantech.LearingEnglish.fragments.QuestionFragment_;
 import vn.asiantech.LearingEnglish.fragments.RatingsFragment;
+import vn.asiantech.LearingEnglish.fragments.RatingsFragment_;
 import vn.asiantech.LearingEnglish.fragments.TopFragment_;
 import vn.asiantech.LearingEnglish.utils.TabBar;
 
@@ -114,10 +116,10 @@ public class MainActivity extends FragmentActivity {
                     f = new QuestionFragment_();
                     break;
                 case 3:
-                    f = new RatingsFragment();
+                    f = new RatingsFragment_();
                     break;
                 default:
-                    f = new RatingsFragment();
+                    f = new RatingsFragment_();
                     break;
             }
             return f;

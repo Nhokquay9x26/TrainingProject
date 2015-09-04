@@ -57,7 +57,7 @@
     <dimen name="login_btn_height">60dp</dimen>
     <dimen name="login_btnSignIn_top">40dp</dimen>
     <dimen name="login_btnSignIn_top_textsize">20sp</dimen>
-    
+
     <dimen name="image.loading.circle_">10dp</dimen>
     <dimen name="relative.splash.center_">90dp</dimen>
     <dimen name="image.padding_">20dp</dimen>
@@ -114,6 +114,17 @@
     <dimen name="testresulting.margin_left_right">20dp</dimen>
     <dimen name="testresulting.textview.total_size">17sp</dimen>
     <dimen name="testresulting.rl.height_bottom">70dp</dimen>
+    <dimen name="ratings.linearlayout.top_height">40dp</dimen>
+    <dimen name="ratings.textview.text_rank_size">18sp</dimen>
+    <dimen name="ratings.textview.text_user_size">18sp</dimen>
+    <dimen name="ratings.textview.text_point_size">18sp</dimen>
+    <dimen name="ratings.textview.text_rank_margin_left">10dp</dimen>
+    <dimen name="ratings.textview.text_rank_margin_right">10dp</dimen>
+    <dimen name="ratings.reycleview.margin_bottom">20dp</dimen>
+    <dimen name="ratings.reycleview.margin_top">10dp</dimen>
+    <dimen name="ratings.imageview.avatar_margin_left">20dp</dimen>
+    <dimen name="rating.textview.magrin_lr">20dp</dimen>
+    <dimen name="ratings.textview.text_items">18sp</dimen>
 
 
 </resources>
