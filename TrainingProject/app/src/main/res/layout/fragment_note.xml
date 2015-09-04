@@ -8,7 +8,7 @@
         android:id="@+id/rlFavoriteSearch"
         android:layout_width="match_parent"
         android:layout_height="@dimen/relativeLayout.Favorite.height.100dp"
-        android:background="@color/relativeLayout.favorite.background"
+        android:background="@color/relativelayout.favorite.background"
         android:paddingLeft="@dimen/relativeLayout.signIn.padding_left.23dp"
         android:paddingRight="@dimen/relativeLayout.signIn.padding_right.23dp"
         android:paddingStart="@dimen/relativeLayout.signIn.padding_left.23dp">
@@ -19,8 +19,8 @@
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
-            android:text="@string/textView.favorite.text.title"
-            android:textColor="@color/textView.favorite.color.title"
+            android:text="@string/textview.favorite.text.title"
+            android:textColor="@color/textview.favorite.color.title"
             android:textSize="@dimen/textView.Favorite.size.title.28sp" />
 
         <ImageView
@@ -39,7 +39,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/rlFavoriteSearch"
-        android:background="@color/relativeLayout.favorite.background.list">
+        android:background="@color/relativelayout.favorite.background.list">
 
         <ListView
             android:id="@+id/lvFavorite"

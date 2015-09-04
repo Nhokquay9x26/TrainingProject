@@ -7,7 +7,7 @@
         android:id="@+id/rlDetailSearch"
         android:layout_width="match_parent"
         android:layout_height="@dimen/relativeLayout.detail.height.100dp"
-        android:background="@color/relativeLayout.detail.background"
+        android:background="@color/relativelayout.detail.background"
         android:paddingLeft="@dimen/relativeLayout.detail.padding_left.23dp"
         android:paddingRight="@dimen/relativeLayout.detail.padding_right.23dp"
         android:paddingStart="@dimen/relativeLayout.detail.padding_left.23dp">
@@ -18,8 +18,8 @@
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
-            android:text="@string/textView.detail.text.title"
-            android:textColor="@color/textView.detail.color.title"
+            android:text="@string/textview.detail.text.title"
+            android:textColor="@color/textview.detail.color.title"
             android:textSize="@dimen/textView.detail.size.title.28sp" />
 
         <ImageView
@@ -38,7 +38,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/rlDetailSearch"
-        android:background="@color/relativeLayout.detail.background.vocabulary">
+        android:background="@color/relativelayout.detail.background.vocabulary">
 
         <RelativeLayout
             android:id="@+id/rlWord"
@@ -82,7 +82,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:textColor="@color/textView.detail.color.word"
+                    android:textColor="@color/textview.detail.color.word"
                     android:textSize="@dimen/textView.detail.size.title.28sp"
                     android:textStyle="bold" />
 
@@ -122,8 +122,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/imgSound"
-                android:text="@string/textView.detail.text.mean"
-                android:textColor="@color/textView.detail.color.mean"
+                android:text="@string/textview.detail.text.mean"
+                android:textColor="@color/textview.detail.color.mean"
                 android:textSize="@dimen/textView.detail.size.title.20sp" />
 
             <TextView
@@ -131,7 +131,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/tvMean"
-                android:textColor="@color/textView.detail.color.train"
+                android:textColor="@color/textview.detail.color.train"
                 android:textSize="@dimen/textView.detail.size.title.20sp" />
 
             <TextView
@@ -139,7 +139,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/tvTrain"
-                android:textColor="@color/textView.detail.color.train"
                 android:textSize="@dimen/textView.detail.size.title.20sp" />
 
         </RelativeLayout>

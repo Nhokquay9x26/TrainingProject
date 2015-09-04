@@ -10,16 +10,16 @@
         android:layout_above="@+id/btnSignUp"
         android:layout_marginBottom="@dimen/relativeLayout.signIn.margin_bottom.30dp"
         android:layout_marginEnd="@dimen/relativeLayout.signIn.margin_right.23dp"
-        android:layout_marginLeft="@dimen/relativeLayout.signIn.margin_left.23dp"
+        android:layout_marginLeft="@dimen/relativelayout.signin.margin_left.23dp"
         android:layout_marginRight="@dimen/relativeLayout.signIn.margin_right.23dp"
-        android:layout_marginStart="@dimen/relativeLayout.signIn.margin_left.23dp"
+        android:layout_marginStart="@dimen/relativelayout.signin.margin_left.23dp"
         android:layout_marginTop="@dimen/relativeLayout.signIn.margin_top.30dp">
 
         <RelativeLayout
             android:id="@+id/rlAvatar"
             android:layout_width="match_parent"
             android:layout_height="@dimen/relativeLayout.signIn.height.120dp"
-            android:background="@color/relativeLayout.signIn.avatar.background"
+            android:background="@color/relativelayout.signin.avatar.backgrounds"
             android:gravity="center">
 
             <ImageView
@@ -37,7 +37,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_below="@+id/rlAvatar"
-            android:background="@color/relativeLayout.signIn.input.background"
+            android:background="@color/relativelayout.signin.input.background"
             android:paddingEnd="@dimen/relativeLayout.signIn.padding_right.23dp"
             android:paddingLeft="@dimen/relativeLayout.signIn.padding_left.23dp"
             android:paddingRight="@dimen/relativeLayout.signIn.padding_right.23dp"
@@ -48,8 +48,8 @@
                 android:id="@+id/edtUsername"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:backgroundTint="@color/editText.signIn.color.line"
-                android:hint="@string/editText.signIn.hint.username" />
+                android:backgroundTint="@color/edittext.signin.color.line"
+                android:hint="@string/edittext.signin.hint.username" />
 
             <EditText
                 android:id="@+id/edtPassword"
@@ -57,8 +57,8 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/edtUsername"
                 android:layout_marginTop="@dimen/editText.signIn.margin_top"
-                android:backgroundTint="@color/editText.signIn.color.line"
-                android:hint="@string/editText.signIn.hint.password"
+                android:backgroundTint="@color/edittext.signin.color.line"
+                android:hint="@string/edittext.signin.hint.password"
                 android:inputType="text" />
 
             <Button
@@ -67,9 +67,9 @@
                 android:layout_height="wrap_content"
                 android:layout_above="@+id/tvForgotPassword"
                 android:layout_marginTop="@dimen/button.margin.top"
-                android:background="@color/relativeLayout.signIn.avatar.background"
-                android:text="@string/button.signIn.text"
-                android:textColor="@color/button.signIn.text.color" />
+                android:background="@color/relativelayout.signin.avatar.backgrounds"
+                android:text="@string/button.signin.text"
+                android:textColor="@color/button.signin.text.color" />
 
             <TextView
                 android:id="@+id/tvForgotPassword"
@@ -79,8 +79,8 @@
                 android:layout_marginBottom="@dimen/textView.signIn.forgot.password.margin.botton.20dp"
                 android:layout_marginTop="@dimen/textView.signIn.forgot.password.margin.top.10dp"
                 android:gravity="center"
-                android:text="@string/textView.signIn.text.forgot_password"
-                android:textColor="@color/textView.signIn.color.forgot_password" />
+                android:text="@string/textview.signin.text.forgot_password"
+                android:textColor="@color/textview.signin.color.forgot_password" />
 
         </RelativeLayout>
 
@@ -92,9 +92,9 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginLeft="@dimen/relativeLayout.signIn.margin_left.23dp"
+        android:layout_marginLeft="@dimen/relativelayout.signin.margin_left.23dp"
         android:layout_marginRight="@dimen/relativeLayout.signIn.margin_right.23dp"
         android:background="@color/button.background"
-        android:text="@string/button.signIn.text.signUp"
-        android:textColor="@color/button.signIn.text.color.SignUp" />
+        android:text="@string/button.signin.text.signup"
+        android:textColor="@color/button.signin.text.color.signup" />
 </RelativeLayout>
