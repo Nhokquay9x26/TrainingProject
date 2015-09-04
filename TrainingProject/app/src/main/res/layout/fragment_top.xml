@@ -7,21 +7,18 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/rlTopNen"
         android:layout_marginEnd="@dimen/relativeLayout.top.marginRight.14dp"
-        android:layout_marginStart="@dimen/relativeLayout.top.marginLeft.14dp"
-        android:layout_marginRight="@dimen/relativeLayout.top.marginRight.14dp"
         android:layout_marginLeft="@dimen/relativeLayout.top.marginLeft.14dp"
-        android:layout_marginTop="@dimen/relativeLayout.top.marginTop.22dp"
-        android:layout_marginBottom="@dimen/relativeLayout.top.marginBottom.6dp">
+        android:layout_marginRight="@dimen/relativeLayout.top.marginRight.14dp"
+        android:layout_marginStart="@dimen/relativeLayout.top.marginLeft.14dp"
+        android:layout_marginTop="@dimen/relativeLayout.top.marginTop.22dp">
 
         <ListView
             android:id="@+id/lvTop"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@drawable/shape_list_favorite"
-            android:divider="@android:color/transparent">
-        </ListView>
+            android:divider="@android:color/transparent"/>
 
     </RelativeLayout>
 </RelativeLayout>

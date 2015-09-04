@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/PagerSlidingTabStrip/PagerSlidingTabStrip.iml" filepath="$PROJECT_DIR$/PagerSlidingTabStrip/PagerSlidingTabStrip.iml" />
       <module fileurl="file://$PROJECT_DIR$/PagerSlidingTabStrips/PagerSlidingTabStrips.iml" filepath="$PROJECT_DIR$/PagerSlidingTabStrips/PagerSlidingTabStrips.iml" />
       <module fileurl="file://$PROJECT_DIR$/TrainingProject.iml" filepath="$PROJECT_DIR$/TrainingProject.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
