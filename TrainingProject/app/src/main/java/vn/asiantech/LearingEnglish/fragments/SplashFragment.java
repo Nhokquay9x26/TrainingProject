@@ -1,26 +1,15 @@
 package vn.asiantech.LearingEnglish.fragments;
 
-import android.content.Context;
-import android.support.v4.view.PagerAdapter;
-import android.support.v4.view.ViewPager;
-import android.util.Log;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.ImageView;
-import android.widget.RelativeLayout;
-
-import com.viewpagerindicator.CirclePageIndicator;
-import com.viewpagerindicator.PageIndicator;
+import android.os.Handler;
+import android.support.v4.app.FragmentTransaction;
 
 import org.androidannotations.annotations.AfterViews;
-import org.androidannotations.annotations.Click;
 import org.androidannotations.annotations.EFragment;
-import org.androidannotations.annotations.ViewById;
+import org.androidannotations.annotations.FragmentByTag;
 
 import vn.asiantech.LearingEnglish.R;
 import vn.asiantech.LearingEnglish.activities.MainActivity_;
+import vn.asiantech.LearingEnglish.network.core.ApiClient;
 
 /**
  * Copyright © 2015 AsianTech inc.
@@ -29,111 +18,26 @@ import vn.asiantech.LearingEnglish.activities.MainActivity_;
 @EFragment(R.layout.fragment_splash)
 public class SplashFragment extends BaseFragment {
 
-    @ViewById(R.id.btnStartActivity)
-    Button mBtnMainActivity;
-    @ViewById(R.id.viewPager)
-    ViewPager mViewPager;
-    @ViewById(R.id.circle)
-    CirclePageIndicator mIndicator;
-    private MyInfinitePagerAdapter mAdapter;
+    @FragmentByTag("TutorialFragment")
+    protected TutorialFragment mTutorialFragment;
 
     @AfterViews
     public void afterViews() {
-        mAdapter = new MyInfinitePagerAdapter(getActivity());
-        mViewPager.setAdapter(mAdapter);
-        mIndicator.setViewPager(mViewPager);
-        mIndicator.setOnPageChangeListener(new PageIndicator() {
+        if (mTutorialFragment == null){
+            mTutorialFragment = TutorialFragment_.builder().build();
+        }
+        new Handler().postDelayed(new Runnable() {
             @Override
-            public void setViewPager(ViewPager view) {
-
-            }
-
-            @Override
-            public void setViewPager(ViewPager view, int initialPosition) {
-
-            }
-
-            @Override
-            public void setCurrentItem(int item) {
-
-            }
-
-            @Override
-            public void setOnPageChangeListener(ViewPager.OnPageChangeListener listener) {
-
-            }
-
-            @Override
-            public void notifyDataSetChanged() {
-
-            }
-
-            @Override
-            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
-
-            }
-
-            @Override
-            public void onPageSelected(int position) {
-                Log.d("xxx", "" + position);
-                if (position == 2) {
-                    mBtnMainActivity.setVisibility(View.VISIBLE);
+            public void run() {
+                if (ApiClient.getInstance().isAuthenticated()) {
+                    MainActivity_.intent(getActivity()).start();
                 } else {
-                    mBtnMainActivity.setVisibility(View.GONE);
+                    FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
+                    ft.replace(R.id.frameLayout, mTutorialFragment, "SplashFragment");
+                    ft.commit();
                 }
             }
-
-            @Override
-            public void onPageScrollStateChanged(int state) {
-
-            }
-        });
-    }
-
-    @Click(R.id.btnStartActivity)
-    protected void onClick() {
-        MainActivity_.intent(getActivity()).start();
-        getActivity().finish();
-    }
-
-    /**
-     * Build Adapter to custom viewpager
-     */
-    class MyInfinitePagerAdapter extends PagerAdapter {
-        private int[] mImages = new int[]{
-                R.drawable.bg_login_one,
-                R.drawable.bg_login_two,
-                R.drawable.bg_login_three,
-        };
-        private LayoutInflater mLayoutInflater;
-
-        public MyInfinitePagerAdapter(Context context) {
-            mLayoutInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        }
-
-        @Override
-        public int getCount() {
-            return mImages.length;
-        }
-
-        @Override
-        public boolean isViewFromObject(View view, Object object) {
-            return view == object;
-        }
-
-        @Override
-        public Object instantiateItem(ViewGroup container, final int position) {
-            View itemView = mLayoutInflater.inflate(R.layout.complex_page_layout, container, false);
-            final ImageView imageView = (ImageView) itemView.findViewById(R.id.imgBanner);
-            imageView.setImageResource(mImages[position]);
-            container.addView(itemView);
-            return itemView;
-        }
-
-        @Override
-        public void destroyItem(ViewGroup container, int position, Object object) {
-            container.removeView((RelativeLayout) object);
-        }
+        }, 0);
     }
 
 }
