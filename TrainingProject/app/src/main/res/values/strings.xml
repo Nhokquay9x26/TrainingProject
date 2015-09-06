@@ -33,4 +33,9 @@
 
     <!-- strings file fragment_top-->
     <string name="textView.top.text">Top</string>
+
+    <!-- strings file fragment_test-->
+    <string name="textview.test.text">Test</string>
+
+
 </resources>

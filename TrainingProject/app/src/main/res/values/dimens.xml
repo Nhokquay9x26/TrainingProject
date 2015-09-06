@@ -110,4 +110,14 @@
     <dimen name="textView.itemRatings.marginLeft.23dp">23dp</dimen>
     <dimen name="textView.itemRatings.textSize.30sp">20sp</dimen>
     <dimen name="textView.itemRatings.width.44dp">54dp</dimen>
+
+    <!--  dimen file fragment_test-->
+    <dimen name="relativelayout.test.height_100dp">100dp</dimen>
+    <dimen name="textview.test.textsize_28sp">28sp</dimen>
+    <dimen name="img.test.margin_right_28dp">28dp</dimen>
+    <dimen name="relativelayout.test.margin_right_14dp">14dp</dimen>
+    <dimen name="relativelayout.test.margin_left_14dp">14dp</dimen>
+    <dimen name="relativelayout.test.margin_top_22dp">22dp</dimen>
+    <dimen name="relativelayout.test.margin_bottom_6dp">6dp</dimen>
+
 </resources>
