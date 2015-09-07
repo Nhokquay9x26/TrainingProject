@@ -105,5 +105,12 @@
     <dimen name="setting.top.setting.padding">10dp</dimen>
     <dimen name="setting.line.height">0.1dp</dimen>
     <dimen name="setting.line2.height">0.1dp</dimen>
+    <dimen name="custom.dialog.alert.text.size">20sp</dimen>
+    <dimen name="custom.dialog.rl.margin">10dp</dimen>
+    <dimen name="custom.dialog.edit.text.time.height">40dp</dimen>
+    <dimen name="custom.dialog.edit.text.time.width">100dp</dimen>
+    <dimen name="custom.dialog.rl.main.padding">10dp</dimen>
+    <dimen name="custom.dialog.edit.time.margin">10dp</dimen>
+    <dimen name="custom.dialog.edit.turn.on.margin">10dp</dimen>
 
 </resources>

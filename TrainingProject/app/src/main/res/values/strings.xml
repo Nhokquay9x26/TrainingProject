@@ -43,4 +43,7 @@
     <string name="custom.tabbar.main.text.setting">Setting</string>
 
     <string name="favorite.textview.title">Favorite</string>
+    <string name="custom.dialog.alert.text">Alert</string>
+    <string name="custom.dialog.text.time">Time</string>
+    <string name="custom.dialog.text.title">Turn on</string>
 </resources>
