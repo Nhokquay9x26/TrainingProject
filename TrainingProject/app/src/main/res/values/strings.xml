@@ -42,4 +42,15 @@
     <string name="textview.ratings.user">User</string>
     <string name="textview.ratings.points">Points</string>
 
+    <!-- strings file fragment_signup-->
+    <string name="textview.profile_image">Tap to change profile image</string>
+    <string name="edittext.hint.username">Username</string>
+    <string name="edittext.hint.password">Password</string>
+    <string name="edittext.hint.email">Email</string>
+    <string name="edittext.hint.confirmpassword">ConFirm Password</string>
+    <string name="edittext.hint.promotioncode">Promotion Code</string>
+    <string name="textview.hint.via_email">I wish to subscribe to daily deal alert via email</string>
+    <string name="button.sigup">Sign Up</string>
+    <string name="button.signin">Sign In</string>
+
 </resources>
