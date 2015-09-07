@@ -37,7 +37,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/rlRatings"
-        android:layout_above="@+id/txtRatingsNen"
+        android:layout_above="@+id/tvRatingsNen"
         android:background="@drawable/shape_list_favorite"
         android:layout_marginTop="@dimen/relativelayout.ratings.margin_top_25dp"
         android:layout_marginLeft="@dimen/textview.ratings.margin_right_10dp"
@@ -113,7 +113,7 @@
 
     </RelativeLayout>
     <TextView
-        android:id="@+id/txtRatingsNen"
+        android:id="@+id/tvRatingsNen"
         android:layout_width="match_parent"
         android:layout_height="@dimen/textview.top.height_50dp"
         android:background="@color/blue.top"
