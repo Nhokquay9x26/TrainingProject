@@ -6,13 +6,13 @@ import org.androidannotations.annotations.EFragment;
 import vn.asiantech.LearingEnglish.R;
 
 /**
- * @author DaoQuocViet
- * Created by nhokquay9x26 on 02/09/2015.
+ * Copyright © 2015 AsianTech inc.
+ * Created by PhuQuy on 9/4/15.
  */
 @EFragment(R.layout.fragment_login)
-public class LoginFragment extends BaseFragment{
+public class LoginFragment extends BaseFragment {
     @AfterViews
-    public void init(){
+    void initialize() {
 
     }
 }

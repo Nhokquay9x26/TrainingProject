@@ -122,13 +122,16 @@
     <dimen name="shape.padding">1dp</dimen>
 
     <!-- dimen file fragment_top-->
-    <dimen name="relativeLayout.top.height.118dp">118dp</dimen>
-    <dimen name="textView.top.textSize.33sp">33sp</dimen>
-    <dimen name="img.top.marginLeft.28dp">28dp</dimen>
-    <dimen name="relativeLayout.top.marginBottom.56dp">56dp</dimen>
-    <dimen name="relativeLayout.top.marginRight.14dp">14dp</dimen>
-    <dimen name="relativeLayout.top.marginLeft.14dp">14dp</dimen>
-    <dimen name="relativeLayout.top.marginTop.22dp">22dp</dimen>
+    <dimen name="relativelayout.top.height_100dp">100dp</dimen>
+    <dimen name="textview.top.textsize_33sp">33sp</dimen>
+    <dimen name="textview.top.textsize_28sp">28sp</dimen>
+    <dimen name="img.top.margin_right_28dp">28dp</dimen>
+    <dimen name="img.top.margin_left_28dp">28dp</dimen>
+    <dimen name="relativelayout.top.margin_bottom_6dp">6dp</dimen>
+    <dimen name="relativelayout.top.margin_right_14dp">14dp</dimen>
+    <dimen name="relativelayout.top.margin_left_14dp">14dp</dimen>
+    <dimen name="relativelayout.top.margin_top_22dp">22dp</dimen>
+
 
     <!-- dimen file item_list_ratings-->
     <dimen name="relativeLayout.itemRatings.height.79dp">79dp</dimen>
@@ -139,4 +142,18 @@
     <dimen name="textView.itemRatings.marginLeft.23dp">23dp</dimen>
     <dimen name="textView.itemRatings.textSize.30sp">20sp</dimen>
     <dimen name="textView.itemRatings.width.44dp">54dp</dimen>
+
+    <!-- dimen file item_list_top-->
+    <dimen name="relativelayout.itemtop.height_95dp">95dp</dimen>
+    <dimen name="img.itemtop.width_65dp">65dp</dimen>
+    <dimen name="img.itemtop.height_65dp">65dp</dimen>
+    <dimen name="img.itemtop.margin_left_11dp">11dp</dimen>
+    <dimen name="textview.itemtop.margin_left_14dp">14dp</dimen>
+    <dimen name="textview.itemtop.textsize_30sp">15sp</dimen>
+    <dimen name="textview.itemtop.height_5dp">5dp</dimen>
+    <dimen name="textview.itemtop.height_1dp">1dp</dimen>
+    <dimen name="img.itemtop.margin_top_32dp">43dp</dimen>
+    <dimen name="img.itemtop.margin_right_11dp">11dp</dimen>
+    <dimen name="img.itemtop.margin_right_5dp">5dp</dimen>
+
 </resources>
