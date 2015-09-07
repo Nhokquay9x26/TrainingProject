@@ -21,7 +21,7 @@
     <!--color file favorite-->
     <color name="relativelayout.favorite.background">#00b9e6</color>
     <color name="textview.favorite.color.title">#FFFFFF</color>
-    <color name="relativelayout.favorite.background.list">#C0C0C0</color>
+    <color name="relativelayout.favorite.background.list">#e8e9ea</color>
 
     <!--color file detail-->
     <color name="relativelayout.detail.background">#00b9e6</color>

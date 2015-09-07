@@ -7,7 +7,7 @@
     <RelativeLayout
         android:id="@+id/rlTop"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/relativelayout.top.height_100dp"
+        android:layout_height="@dimen/relativelayout.top.height_48dp"
         android:background="@color/blue.top">
 
         <TextView

@@ -33,11 +33,11 @@
     <dimen name="textView.signin.forgot.password.margin.botton.20dp">20dp</dimen>
 
     <!--dimen file favorite-->
-    <dimen name="relativelayout.favorite.height.100dp">100dp</dimen>
+    <dimen name="relativelayout.favorite.height.48dp">48dp</dimen>
     <dimen name="textView.favorite.size.title.28sp">28sp</dimen>
-    <dimen name="listView.favorite.margin_left.10dp">10dp</dimen>
-    <dimen name="listView.favorite.margin_right.10dp">10dp</dimen>
-    <dimen name="listView.favorite.margin_top.25dp">25dp</dimen>
+    <dimen name="listView.favorite.margin_left.14dp">14dp</dimen>
+    <dimen name="listView.favorite.margin_right.14dp">14dp</dimen>
+    <dimen name="listView.favorite.margin_top.22dp">22dp</dimen>
     <dimen name="listView.favorite.margin_bot.6dp">6dp</dimen>
     <dimen name="linearlayout.favorite.margin_left.23dp">23dp</dimen>
     <dimen name="linearlayout.favorite.margin_right.23dp">23dp</dimen>
@@ -45,7 +45,7 @@
     <dimen name="linearlayout.margin.23dp">23dp</dimen>
 
     <!--dimen file detail-->
-    <dimen name="relativelayout.detail.height.100dp">100dp</dimen>
+    <dimen name="relativelayout.detail.height.48dp">48dp</dimen>
     <dimen name="relativelayout.detail.padding_top.30dp">30dp</dimen>
     <dimen name="relativelayout.detail.padding_left.23dp">23dp</dimen>
     <dimen name="relativelayout.detail.padding_right.23dp">23dp</dimen>
@@ -54,7 +54,7 @@
 
     <dimen name="relativelayout.detail.margin_left.10dp">10dp</dimen>
     <dimen name="relativelayout.detail.margin_right.10dp">10dp</dimen>
-    <dimen name="relativelayout.detail.margin_top.25dp">25dp</dimen>
+    <dimen name="relativelayout.detail.margin_top.22dp">22dp</dimen>
     <dimen name="relativelayout.detail.margin_bottom.6dp">10dp</dimen>
 
     <dimen name="relativelayout.detail.mean.margin_left.10dp">10dp</dimen>
@@ -78,20 +78,20 @@
     <dimen name="textview.tvlogout.text_size">20sp</dimen>
     <dimen name="textview.tvmessagelogout.padding">30dp</dimen>
     <dimen name="textview.tvmessagelogout.text_size">20sp</dimen>
-    <dimen name="button.btnyeslogout.margin">100dp</dimen>
+    <dimen name="button.btnyeslogout.margin">48dp</dimen>
     <dimen name="button.btnlogout.text_size">20sp</dimen>
     <dimen name="button.btnnologout.margin">2sp</dimen>
     <dimen name="view.layout_height">2dp</dimen>
-    <dimen name="relativelayout.rlone1.layout_height">100dp</dimen>
+    <dimen name="relativelayout.rlone1.layout_height">48dp</dimen>
     <dimen name="textview.text.tv_setting">30sp</dimen>
     <dimen name="imagebutton.img_search.layout_width">50dp</dimen>
     <dimen name="imagebutton.img_search.layout_height">50dp</dimen>
     <dimen name="imagebutton.img_search.margin">30dp</dimen>
     <dimen name="relativelayout.rlone2.margin_left_right">20dp</dimen>
     <dimen name="relativelayout.rlone2.margin_bottom_top">10dp</dimen>
-    <dimen name="relativelayout.rlone3.layout_height">100dp</dimen>
-    <dimen name="imageview.img_avatar.layout_width">100dp</dimen>
-    <dimen name="imageview.img_avatar.layout_height">100dp</dimen>
+    <dimen name="relativelayout.rlone3.layout_height">48dp</dimen>
+    <dimen name="imageview.img_avatar.layout_width">48dp</dimen>
+    <dimen name="imageview.img_avatar.layout_height">48dp</dimen>
     <dimen name="imageview.img_avatar.border_width">1dp</dimen>
     <dimen name="textview.tv_name_person.margin">10dp</dimen>
     <dimen name="textview.text_size">20sp</dimen>
@@ -118,11 +118,11 @@
     <dimen name="textview.tvturnon.layout_margin">20sp</dimen>
     <dimen name="textview.tvturnon.padding">30dp</dimen>
     <dimen name="textview.tvturnon.text_size">20sp</dimen>
-    <dimen name="tooglebutton.tbturnon.margin_top">100dp</dimen>
+    <dimen name="tooglebutton.tbturnon.margin_top">48dp</dimen>
     <dimen name="shape.padding">1dp</dimen>
 
     <!-- dimen file fragment_top-->
-    <dimen name="relativelayout.top.height_100dp">100dp</dimen>
+    <dimen name="relativelayout.top.height_48dp">48dp</dimen>
     <dimen name="textview.top.textsize_33sp">33sp</dimen>
     <dimen name="textview.top.textsize_28sp">28sp</dimen>
     <dimen name="img.top.margin_right_28dp">28dp</dimen>
