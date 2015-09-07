@@ -5,6 +5,8 @@ import android.os.Handler;
 
 import android.annotation.TargetApi;
 import android.os.Build;
+import android.annotation.TargetApi;
+import android.os.Build;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
@@ -27,6 +29,7 @@ import lombok.Getter;
 import vn.asiantech.LearingEnglish.R;
 import vn.asiantech.LearingEnglish.fragments.FavoriteFragment_;
 import vn.asiantech.LearingEnglish.fragments.QuestionFragment;
+import vn.asiantech.LearingEnglish.fragments.SettingFragment_;
 import vn.asiantech.LearingEnglish.fragments.SettingFragment_;
 import vn.asiantech.LearingEnglish.fragments.QuestionFragment_;
 import vn.asiantech.LearingEnglish.fragments.RatingsFragment;
@@ -144,11 +147,9 @@ public class MainActivity extends FragmentActivity {
                     f = new QuestionFragment_();
                     break;
                 case 3:
-                    f = new RatingsFragment_();
                     f = new SettingFragment_();
                     break;
                 default:
-                    f = new RatingsFragment_();
                     f = new SettingFragment_();
                     break;
             }

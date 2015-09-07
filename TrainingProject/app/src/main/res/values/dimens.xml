@@ -100,6 +100,19 @@
     <dimen name="favorite.text.title.size">30sp</dimen>
     <dimen name="favorite.rl.favorite.margin">20dp</dimen>
     <dimen name="item.favorite.padding">10dp</dimen>
+    <dimen name="setting.item.profile.height">100dp</dimen>
+    <dimen name="setting.rllayout.marginleft">10dp</dimen>
+    <dimen name="setting.rllayout.marginright">10dp</dimen>
+    <dimen name="setting.rllayout.nameprofile.paddingleft">10dp</dimen>
+    <dimen name="setting.rl.profile.marginleft">10dp</dimen>
+    <dimen name="setting.rl.profile.margin.left">10dp</dimen>
+    <dimen name="setting.rl.profile.margin.right">10dp</dimen>
+    <dimen name="setting.rl.background.margin">10dp</dimen>
+    <dimen name="setting.rl.top.height">70dp</dimen>
+    <dimen name="setting.top.setting.padding">10dp</dimen>
+    <dimen name="setting.line.height">0.1dp</dimen>
+    <dimen name="setting.line2.height">0.1dp</dimen>
+
     <dimen name="testing.textview.tv_submit_padding_lr">15dp</dimen>
     <dimen name="testing.textview.tv_submit_padding_bt">10dp</dimen>
     <dimen name="rl.testresulting.rl_result_menubar_height">50dp</dimen>
@@ -137,17 +150,6 @@
     <dimen name="testing.button.width_submit">30dp</dimen>
     <dimen name="testing.button.height_submit">30dp</dimen>
     <dimen name="testing.button.margin_right_submit">5dp</dimen>
-    <dimen name="setting.item.profile.height">100dp</dimen>
-    <dimen name="setting.rllayout.marginleft">10dp</dimen>
-    <dimen name="setting.rllayout.marginright">10dp</dimen>
-    <dimen name="setting.rllayout.nameprofile.paddingleft">10dp</dimen>
-    <dimen name="setting.rl.profile.marginleft">10dp</dimen>
-    <dimen name="setting.rl.profile.margin.left">10dp</dimen>
-    <dimen name="setting.rl.profile.margin.right">10dp</dimen>
-    <dimen name="setting.rl.background.margin">10dp</dimen>
-    <dimen name="setting.rl.top.height">70dp</dimen>
-    <dimen name="setting.top.setting.padding">10dp</dimen>
-    <dimen name="setting.line.height">0.1dp</dimen>
-    <dimen name="setting.line2.height">0.1dp</dimen>
+
 
 </resources>
