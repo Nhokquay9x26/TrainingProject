@@ -1,12 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:background="@color/top.mau_nen">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TAB 3" />
+    <RelativeLayout
+        android:id="@+id/rlTest"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/relativelayout.test.height_100dp"
+        android:background="@color/blue.top">
 
-</LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/textview.test.text"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textview.test.textsize_28sp"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"/>
+
+        <ImageView
+            android:id="@+id/imgtest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_search"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:contentDescription="@null"
+            android:layout_marginEnd="@dimen/img.test.margin_right_28dp"
+            android:layout_marginRight="@dimen/img.test.margin_right_28dp"/>
+
+    </RelativeLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPagerTest"
+        android:layout_below="@+id/rlTest"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/shape_list_favorite"
+        android:layout_marginEnd="@dimen/relativelayout.test.margin_right_14dp"
+        android:layout_marginStart="@dimen/relativelayout.test.margin_left_14dp"
+        android:layout_marginRight="@dimen/relativelayout.test.margin_right_14dp"
+        android:layout_marginLeft="@dimen/relativelayout.test.margin_left_14dp"
+        android:layout_marginTop="@dimen/relativelayout.test.margin_top_22dp"
+        android:layout_marginBottom="@dimen/relativelayout.test.margin_bottom_6dp"/>
+
+
+</RelativeLayout>

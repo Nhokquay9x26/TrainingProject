@@ -53,4 +53,7 @@
     <string name="button.sigup">Sign Up</string>
     <string name="button.signin">Sign In</string>
 
+    <!-- strings file fragment_test-->
+    <string name="textview.test.text">Test</string>
+
 </resources>
