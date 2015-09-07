@@ -106,9 +106,9 @@
             android:layout_marginRight="@dimen/relativelayout.detail.mean.margin_right.10dp"
             android:layout_marginTop="@dimen/relativelayout.detail.mean.margin_top.6dp"
             android:background="@drawable/shape_detail"
-            android:paddingLeft="@dimen/textView.detail.mean.padding.left.10dp"
-            android:paddingRight="@dimen/textView.detail.mean.padding.right.10dp"
-            android:paddingTop="@dimen/textView.detail.mean.padding.top.10dp">
+            android:paddingLeft="@dimen/textView.detail.mean.padding_left.10dp"
+            android:paddingRight="@dimen/textView.detail.mean.padding_right.10dp"
+            android:paddingTop="@dimen/textView.detail.mean.padding_top">
 
             <ImageView
                 android:id="@+id/imgSound"

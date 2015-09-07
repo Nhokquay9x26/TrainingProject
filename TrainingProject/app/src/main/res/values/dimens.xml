@@ -39,10 +39,10 @@
     <dimen name="listView.favorite.margin_right.10dp">10dp</dimen>
     <dimen name="listView.favorite.margin_top.25dp">25dp</dimen>
     <dimen name="listView.favorite.margin_bot.6dp">6dp</dimen>
-    <dimen name="linearLayout.favorite.margin_left.23dp">23dp</dimen>
-    <dimen name="linearLayout.favorite.margin_right.23dp">23dp</dimen>
-    <dimen name="linearLayout.favorite.margin.23dp">23dp</dimen>
-    <dimen name="linearLayout.margin.23dp">23dp</dimen>
+    <dimen name="linearlayout.favorite.margin_left.23dp">23dp</dimen>
+    <dimen name="linearlayout.favorite.margin_right.23dp">23dp</dimen>
+    <dimen name="linearlayout.favorite.margin.23dp">23dp</dimen>
+    <dimen name="linearlayout.margin.23dp">23dp</dimen>
 
     <!--dimen file detail-->
     <dimen name="relativelayout.detail.height.100dp">100dp</dimen>
@@ -70,9 +70,9 @@
     <dimen name="image.detail.margin.bottom.25dp">25dp</dimen>
     <dimen name="linearLayout.detail.height.control.50dp">50dp</dimen>
     <dimen name="textView.detail.size.title.20sp">20dp</dimen>
-    <dimen name="textView.detail.mean.padding.left.10dp">10dp</dimen>
-    <dimen name="textView.detail.mean.padding.right.10dp">10dp</dimen>
-    <dimen name="textView.detail.mean.padding.top.10dp">10dp</dimen>
+    <dimen name="textView.detail.mean.padding_left.10dp">10dp</dimen>
+    <dimen name="textView.detail.mean.padding_right.10dp">10dp</dimen>
+    <dimen name="textView.detail.mean.padding_top">10dp</dimen>
 
     <dimen name="imageview.dialoglogout.padding">15dp</dimen>
     <dimen name="textview.tvlogout.text_size">20sp</dimen>

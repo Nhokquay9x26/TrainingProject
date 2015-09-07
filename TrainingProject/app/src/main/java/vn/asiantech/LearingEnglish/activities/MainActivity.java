@@ -3,6 +3,7 @@ package vn.asiantech.LearingEnglish.activities;
 import android.support.v4.app.FragmentTransaction;
 
 import org.androidannotations.annotations.EActivity;
+import org.androidannotations.annotations.Extra;
 import org.androidannotations.annotations.FragmentByTag;
 import org.androidannotations.annotations.OptionsItem;
 
@@ -16,6 +17,9 @@ import vn.asiantech.LearingEnglish.fragments.MainFragment_;
 
 @EActivity(R.layout.activity_main)
 public class MainActivity extends BaseActionBarActivity {
+
+    @Extra
+    protected int mSum;
 
     @FragmentByTag("MainFragment")
     protected MainFragment mMainFragment;

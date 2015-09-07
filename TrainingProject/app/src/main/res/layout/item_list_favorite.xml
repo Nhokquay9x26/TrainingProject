@@ -5,7 +5,7 @@
 
     <LinearLayout
         android:weightSum="4"
-        android:layout_margin="@dimen/linearLayout.margin.23dp"
+        android:layout_margin="@dimen/linearlayout.margin.23dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
