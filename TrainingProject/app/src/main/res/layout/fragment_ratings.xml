@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/top.mau_nen">
+
+    <RelativeLayout
+        android:id="@+id/rlRatings"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/relativelayout.ratings.height_48dp"
+        android:background="@color/blue.top">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/textview.ratings.text"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textview.ratings.textsize_28sp"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"/>
+
+        <ImageView
+            android:id="@+id/imgSearchRatings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_search"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:contentDescription="@null"
+            android:layout_marginEnd="@dimen/img.ratings.margin_right_28dp"
+            android:layout_marginRight="@dimen/img.ratings.margin_right_28dp"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rlRatings"
+        android:layout_above="@+id/txtRatingsNen"
+        android:background="@drawable/shape_list_favorite"
+        android:layout_marginTop="@dimen/relativelayout.ratings.margin_top_25dp"
+        android:layout_marginLeft="@dimen/textview.ratings.margin_right_10dp"
+        android:layout_marginRight="@dimen/textview.ratings.margin_right_10dp"
+        android:layout_marginBottom="@dimen/relativelayout.ratings.margin_bottom_6dp">
+
+        <RelativeLayout
+            android:id="@+id/rldanhmuc"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/relativelayout.ratings.height_33dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/textview.ratings.rank"
+                android:textColor="@color/textview.ratings.textcolor"
+                android:layout_marginStart="@dimen/textview.ratings.margin_right_10dp"
+                android:layout_marginLeft="@dimen/textview.ratings.margin_right_10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:text="@string/textview.ratings.user"
+                android:textColor="@color/textview.ratings.textcolor" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="@string/textview.ratings.points"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:textColor="@color/textview.ratings.textcolor"
+                android:layout_marginEnd="@dimen/textview.ratings.margin_right_10dp"
+                android:layout_marginRight="@dimen/textview.ratings.margin_right_10dp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/view.ratings.height_1dp"
+                android:background="@color/view.ratings"
+                android:layout_alignParentBottom="true">
+            </View>
+
+            <View
+                android:layout_width="@dimen/view.ratings.height_1dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/view.ratings.width_97dp"
+                android:layout_marginLeft="@dimen/view.ratings.width_97dp"
+                android:background="@color/view.ratings">
+            </View>
+
+            <View
+                android:layout_width="@dimen/view.ratings.height_1dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:background="@color/view.ratings"
+                android:layout_marginEnd="@dimen/View.ratings.margin_right_114dp"
+                android:layout_marginRight="@dimen/View.ratings.margin_right_114dp">
+            </View>
+        </RelativeLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/lvRatings"
+            android:layout_below="@+id/rldanhmuc"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </android.support.v7.widget.RecyclerView>
+
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/txtRatingsNen"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/textview.top.height_50dp"
+        android:background="@color/blue.top"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>
