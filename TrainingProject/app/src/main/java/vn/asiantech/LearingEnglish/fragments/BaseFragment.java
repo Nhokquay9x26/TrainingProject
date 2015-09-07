@@ -1,15 +1,19 @@
 package vn.asiantech.LearingEnglish.fragments;
 
+import android.app.Activity;
+
+import vn.asiantech.LearingEnglish.container.SettingContainer;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 
 import vn.asiantech.LearingEnglish.core.fragments.Fragment;
 
-/**
- * Created by tientun on 3/5/15.
- */
 public class BaseFragment extends Fragment {
 
+    @Override
+    public void onAttach(Activity activity) {
+        super.onAttach(activity);
+    }
     /**
      * Show dialog with OK button
      *
@@ -18,6 +22,12 @@ public class BaseFragment extends Fragment {
      */
     protected void showDialog(String msg, DialogInterface.OnClickListener onClickListener) {
 
+    public void replaceFragment(Fragment fragment){
+        android.support.v4.app.Fragment fragmentFarent = getParentFragment();
+        if(fragmentFarent instanceof SettingContainer){
+            ((SettingContainer) fragmentFarent).replaceFragment(fragment, false);
+        }
+    }
         if (null == getActivity()) {
             return;
         }

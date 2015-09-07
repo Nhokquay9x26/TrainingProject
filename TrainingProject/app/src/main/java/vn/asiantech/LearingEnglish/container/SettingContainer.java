@@ -8,9 +8,9 @@ import android.view.ViewGroup;
 
 import vn.asiantech.LearingEnglish.R;
 import vn.asiantech.LearingEnglish.fragments.BaseContainerFragment;
-import vn.asiantech.LearingEnglish.fragments.TabFourFragment_;
+import vn.asiantech.LearingEnglish.fragments.SettingFragment_;
 
-public class TabFourContainer extends BaseContainerFragment {
+public class SettingContainer extends BaseContainerFragment {
     private boolean mIsViewInited;
 
     @Override
@@ -29,7 +29,7 @@ public class TabFourContainer extends BaseContainerFragment {
     }
 
     private void initView() {
-        replaceFragment(new TabFourFragment_(), false);
+        replaceFragment(new SettingFragment_(), false);
     }
 
     @Override

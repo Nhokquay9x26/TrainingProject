@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:id="@+id/llViewTopPoint"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/tvId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/textView.objects_margin"
+            android:layout_weight="2"
+            android:gravity="start"
+            android:layout_gravity="center_vertical"
+            android:text="@string/textView.text.1st"/>
+        <ImageView
+            android:id="@+id/imgAvatarTopPoint"
+            android:layout_width="@dimen/imageView.avatar_top_point_width_height"
+            android:layout_height="@dimen/imageView.avatar_top_point_width_height"
+            android:layout_margin="@dimen/textView.objects_margin"
+            android:layout_weight="1"
+            android:background="@null"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/ico_avatar"/>
+
+        <TextView
+            android:id="@+id/tvNameTopPoint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:layout_gravity="center_vertical"
+            android:textColor="@color/header.background"
+            android:text="@string/textView.text.matiner_jack"/>
+
+        <TextView
+            android:id="@+id/tvTopPoint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/textView.objects_margin"
+            android:layout_weight="2"
+            android:gravity="end"
+            android:layout_gravity="center_vertical"
+            android:text="@string/textView.text.100"/>
+    </LinearLayout>
+        <View
+            android:layout_below="@+id/llViewTopPoint"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/view.height"
+            android:background="@color/view_line_setting"/>
+        </RelativeLayout>
