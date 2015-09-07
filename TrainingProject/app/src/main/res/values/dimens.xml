@@ -113,4 +113,18 @@
     <dimen name="textView.itemRatings.marginLeft.23dp">23dp</dimen>
     <dimen name="textView.itemRatings.textSize.30sp">20sp</dimen>
     <dimen name="textView.itemRatings.width.44dp">54dp</dimen>
+
+    <!-- dimen file item_list_top-->
+    <dimen name="relativelayout.itemtop.height_95dp">95dp</dimen>
+    <dimen name="img.itemtop.width_65dp">65dp</dimen>
+    <dimen name="img.itemtop.height_65dp">65dp</dimen>
+    <dimen name="img.itemtop.margin_left_11dp">11dp</dimen>
+    <dimen name="textview.itemtop.margin_left_14dp">14dp</dimen>
+    <dimen name="textview.itemtop.textsize_30sp">15sp</dimen>
+    <dimen name="textview.itemtop.height_5dp">5dp</dimen>
+    <dimen name="textview.itemtop.height_1dp">1dp</dimen>
+    <dimen name="img.itemtop.margin_top_32dp">43dp</dimen>
+    <dimen name="img.itemtop.margin_right_11dp">11dp</dimen>
+    <dimen name="img.itemtop.margin_right_5dp">5dp</dimen>
+
 </resources>
