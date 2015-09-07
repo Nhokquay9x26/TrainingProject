@@ -34,7 +34,7 @@
     <string name="textview.text.aleart_turn_on">Turn on :</string>
 
     <!-- strings file fragment_top-->
-    <string name="textView.top.text">Top</string>
+    <string name="textview.top.text">Top</string>
 
 
     <!-- strings file fragment_ratings-->
