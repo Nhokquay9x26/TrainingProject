@@ -29,6 +29,9 @@
 
 
 
+        <activity android:name=".activities.LoginActivity_">
+        </activity>
+
 
     </application>
 

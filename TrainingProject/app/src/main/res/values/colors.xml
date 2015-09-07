@@ -17,7 +17,7 @@
     <color name="signup.ln.backgroud">#00b9e6</color>
     <color name="color.tv_submit">#FFFFFF</color>
     <color name="color.background_list">#e8e9ea</color>
-    <color name="item.recycleview.home.line">#b2aaaa</color>
+
     <color name="custom_tabbar_main_background">#00b9e6</color>
     <color name="colorPrimary">#00b9e6</color>
     <color name="colorPrimaryDark">#00b9e6</color>
@@ -26,6 +26,10 @@
     <color name="color.background.view">#30000000</color>
     <color name="color.background.test_resulting">#e8e9ea</color>
     <color name="color.viewUnderTop">#30000000</color>
+
+
+
+    <color name="item.recycleview.home.line">#b2aaaa</color>
     <color name="setting.name.profile.color">#FF6699</color>
     <color name="setting.line.color">#bbbbbb</color>
     <color name="setting.line2.color">#bbbbbb</color>
