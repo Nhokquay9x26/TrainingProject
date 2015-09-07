@@ -98,7 +98,7 @@
     <dimen name="custom.tabbar.main.img.tab.magintop">2dp</dimen>
     <dimen name="favorite.title.height">100dp</dimen>
     <dimen name="favorite.text.title.size">30sp</dimen>
-    <dimen name="favorite.rlfavorite.margin">20dp</dimen>
+    <dimen name="favorite.rl.favorite.margin">20dp</dimen>
     <dimen name="item.favorite.padding">10dp</dimen>
     <dimen name="testing.textview.tv_submit_padding_lr">15dp</dimen>
     <dimen name="testing.textview.tv_submit_padding_bt">10dp</dimen>
@@ -134,12 +134,20 @@
     <dimen name="testing.progressbar.height">30dp</dimen>
     <dimen name="testing.progressbar.margin_right">50dp</dimen>
     <dimen name="testing.view.height_line">0.5dp</dimen>
-    <dimen name="testing.ll.weight_sum">4</dimen>
-    <dimen name="testing.ll.weight_imageview">1</dimen>
-    <dimen name="testing.ll.weight_textview">2</dimen>
     <dimen name="testing.button.width_submit">30dp</dimen>
     <dimen name="testing.button.height_submit">30dp</dimen>
     <dimen name="testing.button.margin_right_submit">5dp</dimen>
-
+    <dimen name="setting.item.profile.height">100dp</dimen>
+    <dimen name="setting.rllayout.marginleft">10dp</dimen>
+    <dimen name="setting.rllayout.marginright">10dp</dimen>
+    <dimen name="setting.rllayout.nameprofile.paddingleft">10dp</dimen>
+    <dimen name="setting.rl.profile.marginleft">10dp</dimen>
+    <dimen name="setting.rl.profile.margin.left">10dp</dimen>
+    <dimen name="setting.rl.profile.margin.right">10dp</dimen>
+    <dimen name="setting.rl.background.margin">10dp</dimen>
+    <dimen name="setting.rl.top.height">70dp</dimen>
+    <dimen name="setting.top.setting.padding">10dp</dimen>
+    <dimen name="setting.line.height">0.1dp</dimen>
+    <dimen name="setting.line2.height">0.1dp</dimen>
 
 </resources>

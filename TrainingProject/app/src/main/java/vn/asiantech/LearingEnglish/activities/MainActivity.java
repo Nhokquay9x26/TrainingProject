@@ -3,6 +3,8 @@ package vn.asiantech.LearingEnglish.activities;
 import android.content.Intent;
 import android.os.Handler;
 
+import android.annotation.TargetApi;
+import android.os.Build;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
@@ -25,6 +27,7 @@ import lombok.Getter;
 import vn.asiantech.LearingEnglish.R;
 import vn.asiantech.LearingEnglish.fragments.FavoriteFragment_;
 import vn.asiantech.LearingEnglish.fragments.QuestionFragment;
+import vn.asiantech.LearingEnglish.fragments.SettingFragment_;
 import vn.asiantech.LearingEnglish.fragments.QuestionFragment_;
 import vn.asiantech.LearingEnglish.fragments.RatingsFragment;
 import vn.asiantech.LearingEnglish.fragments.RatingsFragment_;
@@ -34,7 +37,7 @@ import vn.asiantech.LearingEnglish.models.Ranking;
 import vn.asiantech.LearingEnglish.utils.TabBar;
 
 /**
- * @Author TienTun
+ * @author TienTun
  * Created by tientun on 3/5/15.
  */
 @SuppressWarnings("ALL")
@@ -53,6 +56,7 @@ public class MainActivity extends FragmentActivity {
     private ViewPagerAdapter mAdapter;
     private Boolean mIsExit = false;
 
+    @TargetApi(Build.VERSION_CODES.HONEYCOMB)
     @OptionsItem(android.R.id.home)
     protected void backAction() {
         finish();
@@ -62,6 +66,7 @@ public class MainActivity extends FragmentActivity {
     void afterViews() {
         getRankUser();
         mAdapter = new ViewPagerAdapter(getSupportFragmentManager());
+        ViewPagerAdapter mAdapter = new ViewPagerAdapter(getSupportFragmentManager());
         mViewPagerMain.setAdapter(mAdapter);
         mTabBarMain.clickTab(0);
         mTabBarMain.setOnTabBarListener(new TabBar.OnTabBarListener() {
@@ -127,7 +132,7 @@ public class MainActivity extends FragmentActivity {
 
         @Override
         public Fragment getItem(int position) {
-            Fragment f = null;
+            Fragment f;
             switch (position) {
                 case 0:
                     f = new TopFragment_();
@@ -140,9 +145,11 @@ public class MainActivity extends FragmentActivity {
                     break;
                 case 3:
                     f = new RatingsFragment_();
+                    f = new SettingFragment_();
                     break;
                 default:
                     f = new RatingsFragment_();
+                    f = new SettingFragment_();
                     break;
             }
             return f;

@@ -26,4 +26,7 @@
     <color name="color.background.view">#30000000</color>
     <color name="color.background.test_resulting">#e8e9ea</color>
     <color name="color.viewUnderTop">#30000000</color>
+    <color name="setting.name.profile.color">#FF6699</color>
+    <color name="setting.line.color">#bbbbbb</color>
+    <color name="setting.line2.color">#bbbbbb</color>
 </resources>

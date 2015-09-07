@@ -19,20 +19,19 @@ import vn.asiantech.LearingEnglish.models.WordsEnglish;
 public class FavoriteFragment extends BaseFragment {
     @ViewById(R.id.recyclerView)
     RecyclerView recyclerView;
-    FavoriteAdapter favoriteAdapter;
-    List<WordsEnglish> wordsEnglishs = new ArrayList<WordsEnglish>();
+    private final List<WordsEnglish> wordEnglishs = new ArrayList<>();
 
     @AfterViews
     void afterView(){
         fakeData();
-        favoriteAdapter = new FavoriteAdapter(getActivity(),wordsEnglishs);
+        FavoriteAdapter favoriteAdapter = new FavoriteAdapter(getActivity(), wordEnglishs);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity().getBaseContext()));
         recyclerView.setAdapter(favoriteAdapter);}
 
-    public void fakeData(){
+    private void fakeData(){
         WordsEnglish wordsEnglish = new WordsEnglish();
         wordsEnglish.setNewWord("Rice");
         wordsEnglish.setSpellingWord("/Rai/");
-        wordsEnglishs.add(wordsEnglish);
+        wordEnglishs.add(wordsEnglish);
     }
 }
