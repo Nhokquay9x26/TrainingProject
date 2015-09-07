@@ -13,6 +13,5 @@ import vn.asiantech.LearingEnglish.R;
 public class LoginFragment extends BaseFragment {
     @AfterViews
     void initialize() {
-
     }
 }

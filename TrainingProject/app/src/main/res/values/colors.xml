@@ -8,27 +8,38 @@
     <color name="button.forgot_pass">#0dc2ff</color>
     <color name="button.change_color_on_click">#9fff67</color>
 
-    <color name="rl.avatar.background">#00b9e6</color>
+    <!--color file signIn-->
+    <color name="relativelayout.signin.avatar.backgrounds">#00b9e6</color>
     <color name="button.background">#FFFFFF</color>
-    <color name="button.text.color">#00b9e6</color>
-    <color name="rl.input.background">#FFFFFF</color>
-    <color name="edittext.color">#FFFFFF</color>
-    <color name="edittext.color.line">#00b9e6</color>
-    <color name="button.text.color.signin">#FFFFFF</color>
-    <color name="textview.color.forgot_password">#00b9e6</color>
+    <color name="button.signin.text.color">#FFFFFF</color>
+    <color name="button.signin.text.color.signup">#00b9e6</color>
+    <color name="relativelayout.signin.input.background">#FFFFFF</color>
+    <color name="edittext.signin.color">#FFFFFF</color>
+    <color name="edittext.signin.color.line">#00b9e6</color>
+    <color name="textview.signin.color.forgot_password">#00b9e6</color>
 
-    <color name="rl.background.favorite">#00b9e6</color>
-    <color name="textview.color.favorite.title">#FFFFFF</color>
-    <color name="rl.background.list">#C0C0C0</color>
-    <color name="rl.background.detail">#00b9e6</color>
-    <color name="textview.color.detail.title">#FFFFFF</color>
-    <color name="rl.background.vocabulary">#C0C0C0</color>
-    <color name="rl.img.vocabulary">#FFFFFF</color>
-    <color name="textview.color.mean">#FF0000</color>
+    <!--color file favorite-->
+    <color name="relativelayout.favorite.background">#00b9e6</color>
+    <color name="textview.favorite.color.title">#FFFFFF</color>
+    <color name="relativelayout.favorite.background.list">#C0C0C0</color>
+
+    <!--color file detail-->
+    <color name="relativelayout.detail.background">#00b9e6</color>
+    <color name="textview.detail.color.title">#FFFFFF</color>
+    <color name="relativelayout.detail.background.vocabulary">#e8e9ea</color>
+    <color name="relativelayout.vocabulary.background">#C0C0C0</color>
+    <color name="relativelayout.vocabulary.image">#FFFFFF</color>
+    <color name="textview.mean.color">#FF0000</color>
+    <color name="textview.detail.color.word">#00b9e6</color>
+    <color name="textview.detail.color.mean">#ed166a</color>
+    <color name="textview.detail.color.train">#000000</color>
+
     <color name="view.background">#F08000</color>
     <color name="textview.tvlogout.text_color">#F00800</color>
+
     <color name="button.btnyeslogout.background">#0dc2ff</color>
     <color name="button.btnnologout.background">#0dc2ff</color>
+    <color name="relativeLayout.detail.background.word">#FFFFFF</color>
     <color name="relativelayout.container.background">#30000000</color>
     <color name="relativelayout.rlone1.background">#0dc2ff</color>
     <color name="textview.text.tv_setting">#ffffff</color>
