@@ -77,11 +77,11 @@
             android:textSize="@dimen/testing.textview.size_time_left" />
         <ProgressBar
             android:id="@+id/progressBarTimer"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
+            android:layout_width="@dimen/testing.progressbar.width"
+            android:layout_height="@dimen/testing.progressbar.height"
             android:layout_alignParentRight="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginRight="50dp"
+            android:layout_marginRight="@dimen/testing.progressbar.margin_right"
 
             />
 
@@ -115,7 +115,7 @@
         <View
             android:id="@+id/viewLine"
             android:layout_width="match_parent"
-            android:layout_height="0.5dp"
+            android:layout_height="@dimen/testing.view.height_line"
             android:layout_marginLeft="@dimen/testing.view.viewline_margin_left"
             android:layout_marginRight="@dimen/testing.view.viewline_margin_right"
             android:background="@color/color.testing.viewLine" />
@@ -125,13 +125,13 @@
             android:layout_height="match_parent"
             android:layout_centerInParent="true"
             android:orientation="horizontal"
-            android:weightSum="4">
+            android:weightSum="@dimen/testing.ll.weight_sum">
             <ImageView
                 android:id="@+id/imgPrevious"
                 android:layout_width="@dimen/testing.imageview.img_previous_width"
                 android:layout_height="@dimen/testing.imageview.img_previous_height"
                 android:layout_gravity="center_vertical"
-                android:layout_weight="1"
+                android:layout_weight="@dimen/testing.ll.weight_imageview"
                 android:background="@color/color.no.color"
                 android:scaleType="centerInside"
                 android:src="@mipmap/ico_previous_xhd" />
@@ -141,7 +141,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="@dimen/testing.textview.number_of_question_width"
                 android:layout_gravity="center_vertical"
-                android:layout_weight="2"
+                android:layout_weight="@dimen/testing.ll.weight_textview"
                 android:background="@color/color.testing.tv_number_of_question"
                 android:gravity="center"
                 android:paddingLeft="10dp"
@@ -154,7 +154,7 @@
                 android:layout_width="@dimen/testing.imageview.img_next_width"
                 android:layout_height="@dimen/testing.imageview.img_next_height"
                 android:layout_gravity="center_vertical"
-                android:layout_weight="1"
+                android:layout_weight="@dimen/testing.ll.weight_imageview"
                 android:background="@color/color.no.color"
                 android:scaleType="centerInside"
                 android:src="@mipmap/ico_next_xhd" />
@@ -162,11 +162,11 @@
 
         <Button
             android:id="@+id/btnSubmit"
-            android:layout_width="80dp"
-            android:layout_height="30dp"
+            android:layout_width="@dimen/testing.button.width_submit"
+            android:layout_height="@dimen/testing.button.height_submit"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
-            android:layout_marginRight="5dp"
+            android:layout_marginRight="@dimen/testing.button.margin_right_submit"
             android:background="@anim/btn_submit"
 
 

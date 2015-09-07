@@ -1,16 +1,12 @@
 package vn.asiantech.LearingEnglish.activities;
 
 import android.content.Intent;
-import android.graphics.drawable.AnimationDrawable;
-import android.view.View;
-import android.widget.ImageView;
+
 import org.androidannotations.annotations.EActivity;
-import org.androidannotations.annotations.ViewById;
 
 import java.util.Timer;
 import java.util.TimerTask;
 import vn.asiantech.LearingEnglish.R;
-import vn.asiantech.LearingEnglish.fragments.TestingFragment_;
 
 /**
  * @Author TanTv
@@ -22,7 +18,7 @@ import vn.asiantech.LearingEnglish.fragments.TestingFragment_;
 public class SplashScreenActivity extends BaseActionBarActivity {
     private Timer mTimer;
     private Intent mIntent;
-    private boolean isExit ;
+    private boolean mIsExit;
 
     @Override
     void afterView() {
@@ -50,9 +46,9 @@ public class SplashScreenActivity extends BaseActionBarActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        if (isExit){
+        if (mIsExit){
             finish();
         }
-        isExit = true;
+        mIsExit = true;
     }
 }

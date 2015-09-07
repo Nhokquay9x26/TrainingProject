@@ -125,6 +125,21 @@
     <dimen name="ratings.imageview.avatar_margin_left">20dp</dimen>
     <dimen name="rating.textview.magrin_lr">20dp</dimen>
     <dimen name="ratings.textview.text_items">14sp</dimen>
+    <dimen name="ratings.rl.height_top">60dp</dimen>
+    <dimen name="rating.imageview.avatar_height">40dp</dimen>
+    <dimen name="rating.imageview.avatar_width">40dp</dimen>
+    <dimen name="ratings.textview.tvname_margin_left">10dp</dimen>
+    <dimen name="ratings.view.height_line">1dp</dimen>
+    <dimen name="testing.progressbar.width">30dp</dimen>
+    <dimen name="testing.progressbar.height">30dp</dimen>
+    <dimen name="testing.progressbar.margin_right">50dp</dimen>
+    <dimen name="testing.view.height_line">0.5dp</dimen>
+    <dimen name="testing.ll.weight_sum">4</dimen>
+    <dimen name="testing.ll.weight_imageview">1</dimen>
+    <dimen name="testing.ll.weight_textview">2</dimen>
+    <dimen name="testing.button.width_submit">30dp</dimen>
+    <dimen name="testing.button.height_submit">30dp</dimen>
+    <dimen name="testing.button.margin_right_submit">5dp</dimen>
 
 
 </resources>
