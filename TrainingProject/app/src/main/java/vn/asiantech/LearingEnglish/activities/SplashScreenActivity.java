@@ -1,11 +1,8 @@
 package vn.asiantech.LearingEnglish.activities;
 
 import android.content.Intent;
-import android.graphics.drawable.AnimationDrawable;
-import android.view.View;
-import android.widget.ImageView;
+
 import org.androidannotations.annotations.EActivity;
-import org.androidannotations.annotations.ViewById;
 
 import java.util.Timer;
 import java.util.TimerTask;
@@ -16,20 +13,16 @@ import vn.asiantech.LearingEnglish.R;
  * Created by tantv on 27/08/2015.
  */
 
+@SuppressWarnings("ALL")
 @EActivity(R.layout.activity_splashscreen)
 public class SplashScreenActivity extends BaseActionBarActivity {
     private Timer mTimer;
     private Intent mIntent;
-    private AnimationDrawable mMyAnimationDrawable1;
-
-    @ViewById(R.id.imgIncrementingBoxView)
-    ImageView mImgincrementingBoxView;
+    private boolean mIsExit;
 
     @Override
     void afterView() {
-        getSupportActionBar().hide();
-        //********* box incrementing ***********
-        mImgincrementingBoxView.setVisibility(View.GONE);
+
         //Call Method set Timer
         setTimer();
     }
@@ -40,8 +33,8 @@ public class SplashScreenActivity extends BaseActionBarActivity {
     private void setTimer() {
         mTimer = new Timer();
         mIntent = new Intent(this, LoginActivity_.class);
-        mImgincrementingBoxView.setVisibility(View.VISIBLE);
-        incrementalHorizontalLoading();
+        mIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        mIntent.putExtra("Exit me", true);
         mTimer.schedule(new TimerTask() {
             @Override
             public void run() {
@@ -50,8 +43,12 @@ public class SplashScreenActivity extends BaseActionBarActivity {
         }, 3000);
     }
 
-    public void incrementalHorizontalLoading() {
-        mMyAnimationDrawable1 = (AnimationDrawable) mImgincrementingBoxView.getDrawable();
-        mMyAnimationDrawable1.start();
+    @Override
+    protected void onResume() {
+        super.onResume();
+        if (mIsExit){
+            finish();
+        }
+        mIsExit = true;
     }
 }

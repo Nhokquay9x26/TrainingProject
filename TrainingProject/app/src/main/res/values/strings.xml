@@ -4,7 +4,6 @@
     <string name="Sign_in">Sign in</string>
     <string name="username_email">Username / Email Address</string>
     <string name="password">Password</string>
-
     <string name="title.testing.menubar">Testing:    Level 1</string>
     <string name="text.testing.number_question">1/7</string>
     <string name="text.testing.left_number">5</string>
@@ -41,6 +40,12 @@
     <string name="custom.tabbar.main.text.favorite">Favorite</string>
     <string name="custom.tabbar.main.text.question">Question</string>
     <string name="custom.tabbar.main.text.setting">Setting</string>
-
-    <string name="favorite.textview.title">Favorite</string>
+    <string name="listresult.textview.text_question">Question 1:</string>
+    <string name="testresulting.textview.total">total: 1/2</string>
+    <string name="ratings.textview.text_rank">Rank</string>
+    <string name="ratings.textview.text_user">User</string>
+    <string name="ratings.textview.text_point">Points</string>
+    <string name="rating.textview.rank_id">1st</string>
+    <string name="ratings.textview.tvName_User">Maniter Jack</string>
+    <string name="ratings.textview.tvPoint">100</string>
 </resources>

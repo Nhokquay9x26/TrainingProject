@@ -1,0 +1,57 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="vn.asiantech.LearingEnglish.list_results">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/listresult.rl.height_item">
+
+        <TextView
+            android:id="@+id/tvListQuestion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/listresult.textview.magrin_left"
+            android:text="@string/listresult.textview.text_question"
+            android:textColor="@color/color.red"
+            android:textSize="@dimen/listresult.textview.textsize_question" />
+
+        <TextView
+            android:id="@+id/tvSelection"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/tvListQuestion"
+            android:text="B"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/imgCheckTrue"
+            android:layout_width="@dimen/listresult.imageview.size_check_true_false"
+            android:layout_height="@dimen/listresult.imageview.size_check_true_false"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/listresult.textview.magrin_right"
+            android:padding="15dp"
+            android:src="@drawable/button_check_true" />
+
+        <ImageView
+            android:id="@+id/imgCheckFalse"
+            android:layout_width="@dimen/listresult.imageview.size_check_true_false"
+            android:layout_height="@dimen/listresult.imageview.size_check_true_false"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/listresult.textview.magrin_right"
+            android:padding="15dp"
+            android:src="@drawable/button_check_false" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/color.background.view" />
+    </RelativeLayout>
+</RelativeLayout>
