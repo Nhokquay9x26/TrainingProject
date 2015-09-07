@@ -7,7 +7,7 @@
     <RelativeLayout
         android:id="@+id/rlFavoriteSearch"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/relativelayout.favorite.height.100dp"
+        android:layout_height="@dimen/relativelayout.favorite.height.48dp"
         android:background="@color/relativelayout.favorite.background"
         android:paddingLeft="@dimen/relativelayout.signin.padding_left.23dp"
         android:paddingRight="@dimen/relativelayout.signin.padding_right.23dp"
@@ -31,14 +31,14 @@
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
             android:scaleType="centerCrop"
-            android:src="@drawable/ic_search" />
+            android:src="@drawable/ic_search"
+            android:contentDescription="null" />
     </RelativeLayout>
 
     <RelativeLayout
         android:id="@+id/rlFavoriteList"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/rlfavoriteSearch"
         android:background="@color/relativelayout.favorite.background.list">
 
         <ListView
@@ -46,11 +46,11 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginBottom="@dimen/listView.favorite.margin_bot.6dp"
-            android:layout_marginEnd="@dimen/listView.favorite.margin_right.10dp"
-            android:layout_marginLeft="@dimen/listView.favorite.margin_left.10dp"
-            android:layout_marginRight="@dimen/listView.favorite.margin_right.10dp"
-            android:layout_marginStart="@dimen/listView.favorite.margin_left.10dp"
-            android:layout_marginTop="@dimen/listView.favorite.margin_top.25dp"
+            android:layout_marginEnd="@dimen/listView.favorite.margin_right.14dp"
+            android:layout_marginLeft="@dimen/listView.favorite.margin_left.14dp"
+            android:layout_marginRight="@dimen/listView.favorite.margin_right.14dp"
+            android:layout_marginStart="@dimen/listView.favorite.margin_left.14dp"
+            android:layout_marginTop="@dimen/listView.favorite.margin_top.22dp"
             android:background="@drawable/shape_list_favorite"/>
 
     </RelativeLayout>

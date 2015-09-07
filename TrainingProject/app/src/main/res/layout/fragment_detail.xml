@@ -6,7 +6,7 @@
     <RelativeLayout
         android:id="@+id/rlDetailSearch"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/relativelayout.detail.height.100dp"
+        android:layout_height="@dimen/relativelayout.detail.height.48dp"
         android:background="@color/relativelayout.detail.background"
         android:paddingLeft="@dimen/relativelayout.detail.padding_left.23dp"
         android:paddingRight="@dimen/relativelayout.detail.padding_right.23dp"
@@ -47,7 +47,7 @@
             android:layout_marginBottom="@dimen/relativelayout.detail.margin_bottom.6dp"
             android:layout_marginLeft="@dimen/relativelayout.detail.margin_left.10dp"
             android:layout_marginRight="@dimen/relativelayout.detail.margin_right.10dp"
-            android:layout_marginTop="@dimen/relativelayout.detail.margin_top.25dp"
+            android:layout_marginTop="@dimen/relativelayout.detail.margin_top.22dp"
             android:background="@drawable/shape_detail">
 
             <ImageView
