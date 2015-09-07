@@ -9,6 +9,7 @@ import org.androidannotations.annotations.FragmentByTag;
 
 import vn.asiantech.LearingEnglish.R;
 import vn.asiantech.LearingEnglish.activities.MainActivity_;
+import vn.asiantech.LearingEnglish.core.fragments.BaseFragment;
 import vn.asiantech.LearingEnglish.network.core.ApiClient;
 
 /**

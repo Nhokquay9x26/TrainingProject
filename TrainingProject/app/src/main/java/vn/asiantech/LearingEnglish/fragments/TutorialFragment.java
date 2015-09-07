@@ -21,6 +21,7 @@ import org.androidannotations.annotations.ViewById;
 
 import vn.asiantech.LearingEnglish.R;
 import vn.asiantech.LearingEnglish.activities.MainActivity_;
+import vn.asiantech.LearingEnglish.core.fragments.BaseFragment;
 
 /**
  * Copyright © 2015 AsianTech inc.
@@ -78,6 +79,7 @@ public class TutorialFragment extends BaseFragment {
                 Log.d("xxx", "" + position);
                 if (position == 2) {
                     mBtnMainActivity.setVisibility(View.VISIBLE);
+                    addChildFragment(LoginFragment_.builder().build());
                 } else {
                     mBtnMainActivity.setVisibility(View.GONE);
                 }
@@ -94,7 +96,6 @@ public class TutorialFragment extends BaseFragment {
     protected void onClick() {
         MainActivity_.intent(getActivity()).start();
         getActivity().finish();
-//        addChildFragment(LoginFragment_.builder().build());
     }
 
     /**

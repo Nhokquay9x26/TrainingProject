@@ -13,6 +13,6 @@ import vn.asiantech.LearingEnglish.R;
 public class TopFragment extends BaseFragment {
     @AfterViews
     public void init() {
+        addChildFragment(LoginFragment_.builder().build());
     }
-
 }

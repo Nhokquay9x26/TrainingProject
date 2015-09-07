@@ -3,6 +3,7 @@ package vn.asiantech.LearingEnglish.fragments;
 import org.androidannotations.annotations.EFragment;
 
 import vn.asiantech.LearingEnglish.R;
+import vn.asiantech.LearingEnglish.core.fragments.BaseFragment;
 
 /**
  * Created by nguyentrinh on 01/09/2015.

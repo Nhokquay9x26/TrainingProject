@@ -4,6 +4,7 @@ import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.EFragment;
 
 import vn.asiantech.LearingEnglish.R;
+import vn.asiantech.LearingEnglish.core.fragments.BaseFragment;
 
 /**
  * Copyright © 2015 AsianTech inc.
