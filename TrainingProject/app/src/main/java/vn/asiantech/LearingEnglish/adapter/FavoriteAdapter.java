@@ -26,12 +26,12 @@ import vn.asiantech.LearingEnglish.models.WordsEnglish;
 @SuppressWarnings("deprecation")
 public class FavoriteAdapter extends  RecyclerView.Adapter<FavoriteAdapter.ViewHolder> implements TextToSpeech.OnInitListener{
     Context mcontext;
-    public List<WordsEnglish> mList= new ArrayList<>();
+    public List<WordsEnglish> mListWord= new ArrayList<>();
     TextToSpeech textToSpeech;
 
     public FavoriteAdapter(FragmentActivity mcontext, List<WordsEnglish> mlist) {
         this.mcontext = mcontext;
-        this.mList = mlist;
+        this.mListWord = mlist;
     }
 
     @Override
@@ -44,7 +44,7 @@ public class FavoriteAdapter extends  RecyclerView.Adapter<FavoriteAdapter.ViewH
 
     @Override
     public void onBindViewHolder(final ViewHolder holder, final int position) {
-        final WordsEnglish wordsEnglish= mList.get(position);
+        final WordsEnglish wordsEnglish= mListWord.get(position);
         textToSpeech = new TextToSpeech(mcontext,this);
         holder.tvFavoriteWord.setText(wordsEnglish.getNewWord());
         holder.tvSpellWord.setText(wordsEnglish.getSpellingWord());
@@ -63,7 +63,7 @@ public class FavoriteAdapter extends  RecyclerView.Adapter<FavoriteAdapter.ViewH
 
     @Override
     public int getItemCount() {
-        return mList.size();
+        return mListWord.size();
     }
 
     @Override
