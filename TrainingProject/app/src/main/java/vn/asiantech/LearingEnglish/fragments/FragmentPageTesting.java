@@ -6,19 +6,29 @@ import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
+
+import java.io.Serializable;
+
 import vn.asiantech.LearingEnglish.R;
+import vn.asiantech.LearingEnglish.adapter.TestingAdapter;
+import vn.asiantech.LearingEnglish.adapter.ViewPager;
 
 public class FragmentPageTesting extends BaseFragment {
     int fragNum;
-String[] mQuestion;
-    public static FragmentPageTesting init(int val) {
+    String[] mQuestion;
+    ViewPager mViewPager;
+    private static TestingAdapter.OnChangePager mListener;
+
+    public static FragmentPageTesting init(int val, TestingAdapter.OnChangePager listener) {
         FragmentPageTesting mFragmentPageTesting = new FragmentPageTesting();
 
         // Supply val input as an argument.
         Bundle args = new Bundle();
         args.putInt("val", val);
         mFragmentPageTesting.setArguments(args);
+        mListener = listener;
         return mFragmentPageTesting;
     }
 
@@ -30,7 +40,7 @@ String[] mQuestion;
         super.onCreate(savedInstanceState);
         fragNum = getArguments() != null ? getArguments().getInt("val") : 1;
         fragNum++;
-        mQuestion=getResources().getStringArray(R.array.question_array);
+        mQuestion = getResources().getStringArray(R.array.question_array);
     }
 
     /**
@@ -46,10 +56,25 @@ String[] mQuestion;
         View tvPageCurrent = layoutView.findViewById(R.id.tvPageCurrent);
         View tvPageTotal = layoutView.findViewById(R.id.tvPageTotal);
         //((TextView) tv).setText("Câu " + fragNum + ":");
-        ((TextView) tvQuestion).setText(Html.fromHtml("<b>"+"<font color=\"#EC48B5\">"
-                + "Câu " + fragNum +": "+ "</font>"+"<b/>"+mQuestion[fragNum-1]));
+        ((TextView) tvQuestion).setText(Html.fromHtml("<b>" + "<font color=\"#EC48B5\">"
+                + "Câu " + fragNum + ": " + "</font>" + "<b/>" + mQuestion[fragNum - 1]));
         ((TextView) tvPageCurrent).setText("" + fragNum + "-");
-        ((TextView) tvPageTotal).setText("10");
+        ((TextView) tvPageTotal).setText("5");
+
+        ImageView imgBack = (ImageView) layoutView.findViewById(R.id.imgBack);
+        imgBack.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+//                mViewPager.setCurrentItem(mViewPager.getCurrentItem() - 1);
+                mListener.onChange(-1);
+            }
+        });
+        ImageView imgNext = (ImageView) layoutView.findViewById(R.id.imgNext);
+        imgNext.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+//                mViewPager.setCurrentItem(mViewPager.getCurrentItem() + 1);
+                mListener.onChange(1);
+            }
+        });
         return layoutView;
     }
 
@@ -57,4 +82,5 @@ String[] mQuestion;
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
     }
+
 }
