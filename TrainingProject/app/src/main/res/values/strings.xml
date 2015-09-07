@@ -35,4 +35,11 @@
 
     <!-- strings file fragment_top-->
     <string name="textview.top.text">Top</string>
+
+    <!-- strings file fragment_ratings-->
+    <string name="textview.ratings.text">Ratings</string>
+    <string name="textview.ratings.rank">Rank</string>
+    <string name="textview.ratings.user">User</string>
+    <string name="textview.ratings.points">Points</string>
+
 </resources>
