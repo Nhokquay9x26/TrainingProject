@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/top.mau_nen">
+
+    <RelativeLayout
+        android:id="@+id/rlQuestion"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/relativelayout.viewpager.height_92dp"
+        android:background="@drawable/shape_list_favorite">
+
+        <TextView
+            android:id="@+id/tvViewpagerQuestion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/view.viewpager.margin_left_10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginLeft="@dimen/view.viewpager.margin_left_10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="@dimen/textview.viewpager.margin_top_20dp"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_below="@+id/rlQuestion"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/shape_list_favorite"
+        android:layout_marginTop="@dimen/relativelayout.viewpager.margin_top_10dp">
+
+        <RadioGroup
+            android:id="@+id/radioGroupTest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/radiobutton.viewpager.margin_left_40dp"
+            android:layout_marginLeft="@dimen/radiobutton.viewpager.margin_left_40dp"
+            android:layout_marginTop="@dimen/radiobutton.viewpager.margin_top_22dp">
+
+            <RadioButton
+                android:id="@+id/radioA"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/radiobutton.viewpager.A" />
+
+            <RadioButton
+                android:id="@+id/radioB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/radiobutton.viewpager.B" />
+
+            <RadioButton
+                android:id="@+id/radioC"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/radiobutton.viewpager.C" />
+
+            <RadioButton
+                android:id="@+id/radioD"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/radiobutton.viewpager.D" />
+
+        </RadioGroup>
+
+        <RelativeLayout
+            android:layout_toRightOf="@+id/radioGroupTest"
+            android:layout_toEndOf="@+id/radioGroupTest"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/textview.viewpager.margin_left_10dp"
+            android:layout_marginRight="@dimen/textview.viewpager.margin_left_10dp"
+            android:layout_marginStart="@dimen/img.viewpager.margin_right_5dp"
+            android:layout_marginLeft="@dimen/img.viewpager.margin_right_5dp"
+            android:layout_marginTop="@dimen/radiobutton.viewpager.margin_top_29dp">
+
+            <TextView
+                android:id="@+id/tvAnswerA"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/tvAnswerB"
+                android:layout_below="@+id/tvAnswerA"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/relativelayout.viewpager.margin_top_20dp"/>
+
+            <TextView
+                android:id="@+id/tvAnswerC"
+                android:layout_below="@+id/tvAnswerB"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/relativelayout.viewpager.margin_top_20dp"/>
+
+            <TextView
+                android:id="@+id/tvAnswerD"
+                android:layout_below="@+id/tvAnswerC"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/relativelayout.viewpager.margin_top_20dp"/>
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/viewViewpager"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/view.viewpager.height_1dp"
+            android:background="@color/view.ratings"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/view.viewpager.margin_bottom_78dp"
+            android:layout_marginStart="@dimen/view.viewpager.margin_left_10dp"
+            android:layout_marginLeft="@dimen/view.viewpager.margin_left_10dp"
+            android:layout_marginEnd="@dimen/view.viewpager.margin_right_10dp"
+            android:layout_marginRight="@dimen/view.viewpager.margin_right_10dp">
+        </View>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/view.viewpager.margin_top_22dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/view.viewpager.margin_bottom_50dp">
+
+            <RelativeLayout
+                android:id="@+id/rlSnippet"
+                android:layout_width="@dimen/textview.viewpager.width_57dp"
+                android:layout_height="@dimen/textview.viewpager.height_22dp"
+                android:background="@color/blue.top"
+                android:layout_centerHorizontal="true">
+
+                <TextView
+                    android:id="@+id/tvTestBack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/view.viewpager.margin_left_10dp"
+                    android:layout_marginLeft="@dimen/view.viewpager.margin_left_10dp" />
+
+                <TextView
+                    android:id="@+id/tvTestAdvance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:text="@string/radiobutton.viewpager.text_10"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="@dimen/view.viewpager.margin_right_10dp"
+                    android:layout_marginRight="@dimen/view.viewpager.margin_right_10dp" />
+
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/imgTestBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_snippet"
+                android:layout_toLeftOf="@+id/rlSnippet"
+                android:layout_toStartOf="@+id/rlSnippet"
+                android:contentDescription="@null"
+                android:layout_marginEnd="@dimen/img.viewpager.margin_right_5dp"
+                android:layout_marginRight="@dimen/img.viewpager.margin_right_5dp"/>
+
+            <ImageView
+                android:id="@+id/imgTestAdvance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_convenient"
+                android:layout_toRightOf="@+id/rlSnippet"
+                android:layout_toEndOf="@+id/rlSnippet"
+                android:contentDescription="@null"
+                android:layout_marginLeft="@dimen/img.viewpager.margin_right_5dp"
+                android:layout_marginStart="@dimen/img.viewpager.margin_right_5dp"/>
+
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>
