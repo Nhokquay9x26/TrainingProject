@@ -63,4 +63,8 @@
     <string name="radiobutton.viewpager.D">D :</string>
     <string name="radiobutton.viewpager.text_10">10</string>
 
+    <!-- strings file fragment_result-->
+    <string name="textview.result.text">Result</string>
+    <string name="textview.result.text_total">Total :</string>
+
 </resources>
