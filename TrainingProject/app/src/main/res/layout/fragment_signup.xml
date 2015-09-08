@@ -7,7 +7,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/transparent">
+        android:background="@color/relativelayout.login.background.25">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -47,15 +47,13 @@
                 android:layout_height="match_parent"
                 android:layout_below="@+id/rlAvatar"
                 android:layout_above="@+id/btnSignIn"
-                android:background="@color/white"
-                android:layout_marginBottom="@dimen/checkbox.signup.margin_top_20dp">
+                android:background="@color/white">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginRight="@dimen/relativelayout.signup.margin_right_22dp"
-                    android:layout_marginLeft="@dimen/relativelayout.signup.margin_right_22dp"
-                    android:layout_marginBottom="@dimen/relativelayout.signup.margin_bottom_10dp">
+                    android:layout_marginLeft="@dimen/relativelayout.signup.margin_right_22dp">
 
                     <EditText
                         android:id="@+id/edtUserName"
@@ -104,8 +102,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:background="@android:color/transparent"
-                        android:layout_below="@+id/edtPromotionCode"
-                        android:layout_marginTop="@dimen/checkbox.signup.margin_top_20dp"/>
+                        android:layout_below="@+id/edtPromotionCode"/>
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -115,20 +112,16 @@
                         android:layout_toEndOf="@id/checkBoxEmail"
                         android:layout_toRightOf="@+id/checkBoxEmail"
                         android:layout_marginStart="@dimen/textview.signup.margin_left_10dp"
-                        android:layout_marginLeft="@dimen/textview.signup.margin_left_10dp"
-                        android:layout_marginTop="@dimen/checkbox.signup.margin_top_20dp"/>
+                        android:layout_marginLeft="@dimen/textview.signup.margin_left_10dp"/>
 
                     <Button
                         android:id="@+id/btnSignUp"
                         android:layout_width="match_parent"
-                        android:layout_below="@+id/checkBoxEmail"
-                        android:layout_height="@dimen/button.signup.height_45dp"
-                        android:textSize="@dimen/button.signup.textsize_7pt"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
                         android:text="@string/button.sigup"
-                        android:textAllCaps="false"
                         android:textColor="@color/white"
-                        android:background="@color/blue"
-                        android:layout_marginTop="@dimen/checkbox.signup.margin_top_20dp"/>
+                        android:background="@color/blue"/>
 
                 </RelativeLayout>
             </LinearLayout>
@@ -137,11 +130,11 @@
                 android:id="@+id/btnSignIn"
                 android:layout_width="match_parent"
                 android:layout_alignParentBottom="true"
+                android:layout_marginTop="@dimen/button.signup.margin_top.20dp"
                 android:text="@string/button.signin"
                 android:textColor="@color/blue"
                 android:background="@color/white"
-                android:textAllCaps="false"
-                android:layout_height="@dimen/button.signup.height_30dp" />
+                android:layout_height="wrap_content" />
 
         </RelativeLayout>
     </LinearLayout>

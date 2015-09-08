@@ -17,6 +17,8 @@
     <color name="edittext.signin.color">#FFFFFF</color>
     <color name="edittext.signin.color.line">#00b9e6</color>
     <color name="textview.signin.color.forgot_password">#00b9e6</color>
+    <color name="relativelayout.login.background.25">#40000000</color>
+
 
     <!--color file favorite-->
     <color name="relativelayout.favorite.background">#00b9e6</color>
@@ -67,5 +69,6 @@
     <color name="transparent">#a4080808</color>
     <color name="blue">#00b9e6</color>
     <color name="signup.textcolorhint">#cd787878</color>
+    <color name="textview.detail.color.error">#FF0000</color>
 
 </resources>
