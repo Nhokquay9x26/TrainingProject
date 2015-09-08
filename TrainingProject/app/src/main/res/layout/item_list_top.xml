@@ -13,7 +13,7 @@
         android:layout_marginStart="@dimen/img.itemtop.margin_left_11dp" />
 
     <TextView
-        android:id="@+id/txtItemTopUsername"
+        android:id="@+id/tvItemTopUsername"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
@@ -29,7 +29,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="@dimen/textview.itemtop.height_5dp"
-        android:layout_below="@+id/txtItemTopUsername"
+        android:layout_below="@+id/tvItemTopUsername"
         android:layout_toEndOf="@+id/imgItemTopImage"
         android:layout_toLeftOf="@+id/imgTopNext"
         android:layout_toRightOf="@+id/imgItemTopImage"
