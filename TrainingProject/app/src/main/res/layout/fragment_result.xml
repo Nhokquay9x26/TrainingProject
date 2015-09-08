@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/top.mau_nen">
+
+    <RelativeLayout
+        android:id="@+id/rlResult"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/relativelayout.result.height_48dp"
+        android:background="@color/blue.top">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/textview.result.text"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textview.result.textsize_28sp"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"/>
+
+        <ImageView
+            android:id="@+id/imgResultSearch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_search"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:contentDescription="@null"
+            android:layout_marginEnd="@dimen/img.result.margin_right_28dp"
+            android:layout_marginRight="@dimen/img.result.margin_right_28dp"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rlResult"
+        android:layout_above="@+id/tvResultNen"
+        android:background="@drawable/shape_list_favorite"
+        android:layout_marginEnd="@dimen/relativelayout.result.margin_right_14dp"
+        android:layout_marginStart="@dimen/relativelayout.result.margin_left_14dp"
+        android:layout_marginRight="@dimen/relativelayout.result.margin_right_14dp"
+        android:layout_marginLeft="@dimen/relativelayout.result.margin_left_14dp"
+        android:layout_marginTop="@dimen/relativelayout.result.margin_top_22dp"
+        android:layout_marginBottom="@dimen/relativelayout.result.margin_bottom_6dp">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/lvResult"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/tvResultTotal"
+            android:layout_marginTop="@dimen/relativelayout.result.margin_top_10dp">
+        </android.support.v7.widget.RecyclerView>
+
+        <TextView
+            android:id="@+id/tvResultTotal"
+            android:layout_alignParentBottom="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/textview.detail.color.mean"
+            android:layout_marginTop="@dimen/relativelayout.result.margin_top_10dp"
+            android:layout_marginBottom="@dimen/relativelayout.result.margin_bottom_80dp"
+            android:text="@string/textview.result.text_total"/>
+
+        <ImageView
+            android:id="@+id/imgResultShare"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_share"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/relativelayout.result.margin_bottom_25dp" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tvResultNen"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/textview.top.height_50dp"
+        android:background="@color/blue.top"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>
