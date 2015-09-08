@@ -37,6 +37,10 @@
     <string name="textview.text.two">:</string>
     <string name="textview.text.spell">/spell/</string>
     <string name="textView.top_category_name">Animal</string>
+    <string name="textview.detail_vocabulary">Cloud</string>
+    <string name="textview.mean_vocabulary">Cloud /klad/: Mây, đám mây...</string>
+    <string name="textview.mean">Mean:</string>
+    <string name="textview.detail_vocabulary.example">- the sun had disappeared behind a cloud</string>
     <string name="massage_empty_login">Please type your username/email and password</string>
     <string name="massage_error_login">username or password is incorrect</string>
 
