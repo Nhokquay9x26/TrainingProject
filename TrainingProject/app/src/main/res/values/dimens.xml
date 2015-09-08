@@ -7,6 +7,13 @@
     <dimen name="size_text_header">15sp</dimen>
     <dimen name="header_padding">10dp</dimen>
     <dimen name="signup_avatar">100dp</dimen>
+    <dimen name="relative.hight.question">100dp</dimen>
+    <dimen name="textview.text.margin_left_right.question">20dp</dimen>
+    <dimen name="textview.text.margin_top_bottom.question">20dp</dimen>
+    <dimen name="textview.text.margin_left_right.answer">20dp</dimen>
+    <dimen name="textview.text.margin_top_bottom.answer">10dp</dimen>
+    <dimen name="textview.text.size.question">14sp</dimen>
+    <dimen name="textview.text.size.answer">12sp</dimen>
     <dimen name="signup_ll_margin_left">20dp</dimen>
     <dimen name="signup_ll_margin_right">20dp</dimen>
     <dimen name="signup_ll_margin_top">20dp</dimen>
@@ -74,7 +81,7 @@
     <dimen name="imageView.detail_margin_right">20dp</dimen>
     <dimen name="cardView.top_radius">5dp</dimen>
     <dimen name="cardView.top_margin_top">20dp</dimen>
-    <dimen name="cardView.top_margin_bottom">15dp</dimen>
+    <dimen name="cardView.top_margin_bottom">10dp</dimen>
     <dimen name="cardView.top_margin_left">10dp</dimen>
     <dimen name="cardView.top_margin_right">10dp</dimen>
     <dimen name="imageview.detail_vocabulary_height">180dp</dimen>
@@ -90,4 +97,5 @@
     <dimen name="imageview.sound_margin_right">20dp</dimen>
     <dimen name="imageview.sound_margin_top">10dp</dimen>
     <dimen name="relativelayout.detail_vocabulary_bottom_margin">5dp</dimen>
+    <dimen name="image.header.width_hight">100dp</dimen>
 </resources>

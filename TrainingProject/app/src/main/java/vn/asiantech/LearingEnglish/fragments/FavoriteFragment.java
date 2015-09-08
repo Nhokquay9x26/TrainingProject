@@ -2,6 +2,7 @@ package vn.asiantech.LearingEnglish.fragments;
 
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.EFragment;
 import org.androidannotations.annotations.ViewById;
@@ -20,21 +21,23 @@ public class FavoriteFragment extends BaseFragment {
     RecyclerView mRecyclerViewFavorite;
     private List<vn.asiantech.LearingEnglish.models.WordFavorite> mDatas = new ArrayList<>();
     String mFavorites[] = {"Home", "Welcome", "Tutorial", "Android", "Speed", "School", "Favorite", "Class", "Program", "Test"};
-    String mSpells[] = {"/hoʊm/", "/'welk m/", "/tju´tɔ:riəl/","/´ændrɔid/","/spi:d/", "/sku:l/", "/ˈfeɪvərɪt , ˈfeɪvrɪt/",
+    String mSpells[] = {"/hoʊm/", "/'welk m/", "/tju´tɔ:riəl/", "/´ændrɔid/", "/spi:d/", "/sku:l/", "/ˈfeɪvərɪt , ˈfeɪvrɪt/",
             "/klɑ:s/", "/´prougræm/", "/test/"};
+
     @AfterViews
-    void afterViews(){
+    void afterViews() {
         mRecyclerViewFavorite.setHasFixedSize(true);
-        LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity(),LinearLayoutManager.VERTICAL,false);
+        LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL, false);
         mRecyclerViewFavorite.setLayoutManager(layoutManager);
         mRecyclerViewFavorite.addItemDecoration(new DividerItemDecoration(getActivity(), DividerItemDecoration.VERTICAL_LIST));
         addData();
-        WordFavoriteAdapter wordFavoriteAdaper = new WordFavoriteAdapter(mDatas,getActivity());
+        WordFavoriteAdapter wordFavoriteAdaper = new WordFavoriteAdapter(mDatas, getActivity());
         mRecyclerViewFavorite.setAdapter(wordFavoriteAdaper);
 
     }
-    private void addData(){
-        for (int i = 0 ; i < mFavorites.length; i++){
+
+    private void addData() {
+        for (int i = 0; i < mFavorites.length; i++) {
             vn.asiantech.LearingEnglish.models.WordFavorite model = new vn.asiantech.LearingEnglish.models.WordFavorite();
             model.setWord(mFavorites[i]);
             model.setPronunciation(mSpells[i]);

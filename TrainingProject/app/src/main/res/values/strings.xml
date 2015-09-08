@@ -41,4 +41,15 @@
     <string name="textview.mean_vocabulary">Cloud /klad/: Mây, đám mây...</string>
     <string name="textview.mean">Mean:</string>
     <string name="textview.detail_vocabulary.example">- the sun had disappeared behind a cloud</string>
+    <string name="massage_empty_login">Please type your username/email and password</string>
+    <string name="massage_error_login">username or password is incorrect</string>
+
+    <string-array name="question_array">
+        <item>When can we meet again?</item>
+        <item>My aunt is going to stay with me?</item>
+        <item>When do you study?</item>
+        <item>Would you prefer lemonade or orange juice?</item>
+        <item>Lets have dinner now?</item>
+    </string-array>
+
 </resources>
