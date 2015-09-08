@@ -228,5 +228,10 @@
     <dimen name="relativelayout.result.margin_bottom_25dp">25dp</dimen>
     <dimen name="relativelayout.result.margin_top_10dp">15dp</dimen>
 
+    <!--  dimen file item_list_result. -->
+    <dimen name="textview.itemresult.margin_left_5dp">5dp</dimen>
+    <dimen name="textview.itemresult.margin_left_18dp">18dp</dimen>
+    <dimen name="relativelayout.itemresult.height_79dp">79dp</dimen>
+    <dimen name="img.itemresult.margin_right_30dp">30dp</dimen>
 
 </resources>
