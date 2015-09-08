@@ -80,7 +80,7 @@
     <dimen name="imageview.detail_vocabulary_height">180dp</dimen>
     <dimen name="imageview.detail_vocabulary_width">300dp</dimen>
     <dimen name="imageview.vocabulary_margin_top">20dp</dimen>
-    <dimen name="linearlayout.vocabulary_margin_top">40dp</dimen>
+    <dimen name="linearlayout.vocabulary_margin_top">20dp</dimen>
     <dimen name="textview.detail_vocabulary_margin_left_right">40dp</dimen>
     <dimen name="textview.vocabulary_detail_size">36sp</dimen>
     <dimen name="textview.detail_vocabulary_mean_margin_top">20dp</dimen>

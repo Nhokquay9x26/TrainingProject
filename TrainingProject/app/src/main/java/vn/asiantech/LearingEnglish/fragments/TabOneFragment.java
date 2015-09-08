@@ -23,7 +23,7 @@ public class TabOneFragment extends BaseFragment {
     @AfterViews
     void AfterView() {
         setValue();
-        TopAdapter adapter = new TopAdapter(getActivity(), mListTop);
+        TopAdapter adapter = new TopAdapter(this, mListTop);
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getActivity());
         mRvListTop.setLayoutManager(layoutManager);
         mRvListTop.setAdapter(adapter);
