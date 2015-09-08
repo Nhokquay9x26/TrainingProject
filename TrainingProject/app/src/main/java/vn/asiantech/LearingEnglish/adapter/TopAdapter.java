@@ -10,9 +10,7 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 import vn.asiantech.LearingEnglish.R;
-import vn.asiantech.LearingEnglish.container.TabOneContainer;
 import vn.asiantech.LearingEnglish.core.fragments.Fragment;
-import vn.asiantech.LearingEnglish.fragments.WordDetailContainerFragment_;
 import vn.asiantech.LearingEnglish.models.Top;
 import vn.asiantech.LearingEnglish.views.CircleImageView;
 
@@ -20,10 +18,12 @@ public class TopAdapter extends RecyclerView.Adapter<TopAdapter.TopViewHolder> {
 
     private Fragment mFragment;
     private ArrayList<Top> mListTop;
+    private OnTopListenner mOnTopListenner;
 
-    public TopAdapter(Fragment mFragment, ArrayList<Top> mListTop) {
+    public TopAdapter(Fragment mFragment, ArrayList<Top> mListTop, OnTopListenner listener) {
         this.mFragment = mFragment;
         this.mListTop = mListTop;
+        mOnTopListenner = listener;
     }
 
     @Override
@@ -33,9 +33,17 @@ public class TopAdapter extends RecyclerView.Adapter<TopAdapter.TopViewHolder> {
     }
 
     @Override
-    public void onBindViewHolder(TopViewHolder holder, int position) {
+    public void onBindViewHolder(TopViewHolder holder, final int position) {
         holder.mImgCategory.setImageResource(mListTop.get(position).getImgCategory());
         holder.mTxtCategory.setText(mListTop.get(position).getCategory());
+        holder.mImgDetail.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(mOnTopListenner != null){
+                    mOnTopListenner.OnClickItem(position);
+                }
+            }
+        });
     }
 
     @Override
@@ -54,16 +62,10 @@ public class TopAdapter extends RecyclerView.Adapter<TopAdapter.TopViewHolder> {
             mImgCategory = (CircleImageView) itemView.findViewById(R.id.imgCategory);
             mTxtCategory = (TextView) itemView.findViewById(R.id.txtCategory);
             mImgDetail = (ImageView) itemView.findViewById(R.id.imgDetail);
-            mImgDetail.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    android.support.v4.app.Fragment fragmentParent = mFragment.getParentFragment();
-                    if (fragmentParent instanceof TabOneContainer) {
-                        ((TabOneContainer) fragmentParent).replaceFragment(new WordDetailContainerFragment_(), false);
-                    }
 
-                }
-            });
         }
+    }
+    public interface OnTopListenner{
+        void OnClickItem(int position);
     }
 }
