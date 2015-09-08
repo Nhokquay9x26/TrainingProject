@@ -24,4 +24,5 @@
     <color name="black">#000</color>
     <color name="textView.category">#000000</color>
     <color name="View.below_text_category">#41000000</color>
+    <color name="red">#ff0000</color>
 </resources>
