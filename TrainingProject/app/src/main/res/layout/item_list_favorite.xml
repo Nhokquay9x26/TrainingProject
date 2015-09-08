@@ -4,10 +4,10 @@
     android:layout_height="match_parent">
 
     <LinearLayout
-        android:weightSum="4"
-        android:layout_margin="@dimen/linearlayout.margin.23dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/linearlayout.margin.23dp"
+        android:weightSum="4">
 
         <TextView
             android:id="@+id/tvVocabulary"
@@ -20,7 +20,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:src="@drawable/ic_sound" />
+            android:src="@drawable/ic_sound"
+            android:contentDescription="@null" />
 
     </LinearLayout>
 

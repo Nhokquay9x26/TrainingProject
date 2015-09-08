@@ -12,11 +12,11 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="@dimen/relativelayout.signup.margin_top_30dp"
-            android:layout_marginStart="@dimen/relativelayout.signup.margin_left_23dp"
-            android:layout_marginLeft="@dimen/relativelayout.signup.margin_left_23dp"
             android:layout_marginEnd="@dimen/relativelayout.signup.margin_right_23dp"
-            android:layout_marginRight="@dimen/relativelayout.signup.margin_right_23dp">
+            android:layout_marginLeft="@dimen/relativelayout.signup.margin_left_23dp"
+            android:layout_marginRight="@dimen/relativelayout.signup.margin_right_23dp"
+            android:layout_marginStart="@dimen/relativelayout.signup.margin_left_23dp"
+            android:layout_marginTop="@dimen/relativelayout.signup.margin_top_30dp">
 
             <RelativeLayout
                 android:id="@+id/rlAvatar"
@@ -27,101 +27,101 @@
                 <ImageView
                     android:layout_width="@dimen/img.signup.height_80dp"
                     android:layout_height="@dimen/img.signup.width_80dp"
-                    android:background="@drawable/ic_avatar"
                     android:layout_centerHorizontal="true"
-                    android:contentDescription="@null"
-                    android:layout_marginTop="@dimen/img.signup.margin_top_10dp"/>
+                    android:layout_marginTop="@dimen/img.signup.margin_top_10dp"
+                    android:background="@drawable/ic_avatar"
+                    android:contentDescription="@null" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentBottom="true"
                     android:layout_centerHorizontal="true"
-                    android:text="@string/textview.profile_image"
-                    android:layout_marginBottom="@dimen/textview.signup.margin_bottom_8dp"/>
+                    android:layout_marginBottom="@dimen/textview.signup.margin_bottom_8dp"
+                    android:text="@string/textview.profile_image" />
 
             </RelativeLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_below="@+id/rlAvatar"
                 android:layout_above="@+id/btnSignIn"
+                android:layout_below="@+id/rlAvatar"
                 android:background="@color/white">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginRight="@dimen/relativelayout.signup.margin_right_22dp"
-                    android:layout_marginLeft="@dimen/relativelayout.signup.margin_right_22dp">
+                    android:layout_marginLeft="@dimen/relativelayout.signup.margin_right_22dp"
+                    android:layout_marginRight="@dimen/relativelayout.signup.margin_right_22dp">
 
                     <EditText
                         android:id="@+id/edtUserName"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="@string/edittext.hint.username"
-                        android:layout_marginTop="@dimen/relativelayout.signup.margin_top_5dp"/>
+                        android:layout_marginTop="@dimen/relativelayout.signup.margin_top_5dp"
+                        android:hint="@string/edittext.hint.username" />
 
                     <EditText
                         android:id="@+id/edtEmail"
-                        android:inputType="textEmailAddress"
-                        android:layout_below="@+id/edtUserName"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_below="@+id/edtUserName"
                         android:hint="@string/edittext.hint.email"
-                        android:textColorHint="@color/signup.textcolorhint"/>
+                        android:inputType="textEmailAddress"
+                        android:textColorHint="@color/signup.textcolorhint" />
 
                     <EditText
                         android:id="@+id/edtPassword"
-                        android:inputType="textPassword"
-                        android:layout_below="@+id/edtEmail"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_below="@+id/edtEmail"
                         android:hint="@string/edittext.hint.password"
-                        android:textColorHint="@color/signup.textcolorhint"/>
+                        android:inputType="textPassword"
+                        android:textColorHint="@color/signup.textcolorhint" />
 
                     <EditText
                         android:id="@+id/edtConfirmPassword"
-                        android:inputType="textPassword"
-                        android:layout_below="@+id/edtPassword"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_below="@+id/edtPassword"
                         android:hint="@string/edittext.hint.confirmpassword"
-                        android:textColorHint="@color/signup.textcolorhint"/>
+                        android:inputType="textPassword"
+                        android:textColorHint="@color/signup.textcolorhint" />
 
                     <EditText
                         android:id="@+id/edtPromotionCode"
-                        android:layout_below="@+id/edtConfirmPassword"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_below="@+id/edtConfirmPassword"
                         android:hint="@string/edittext.hint.promotioncode"
-                        android:textColorHint="@color/signup.textcolorhint"/>
+                        android:textColorHint="@color/signup.textcolorhint" />
 
                     <CheckBox
                         android:id="@+id/checkBoxEmail"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:background="@android:color/transparent"
-                        android:layout_below="@+id/edtPromotionCode"/>
+                        android:layout_below="@+id/edtPromotionCode"
+                        android:background="@android:color/transparent" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_below="@+id/edtPromotionCode"
-                        android:text="@string/textview.hint.via_email"
+                        android:layout_marginLeft="@dimen/textview.signup.margin_left_10dp"
+                        android:layout_marginStart="@dimen/textview.signup.margin_left_10dp"
                         android:layout_toEndOf="@id/checkBoxEmail"
                         android:layout_toRightOf="@+id/checkBoxEmail"
-                        android:layout_marginStart="@dimen/textview.signup.margin_left_10dp"
-                        android:layout_marginLeft="@dimen/textview.signup.margin_left_10dp"/>
+                        android:text="@string/textview.hint.via_email" />
 
                     <Button
                         android:id="@+id/btnSignUp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_alignParentBottom="true"
+                        android:background="@color/blue"
                         android:text="@string/button.sigup"
-                        android:textColor="@color/white"
-                        android:background="@color/blue"/>
+                        android:textColor="@color/white" />
 
                 </RelativeLayout>
             </LinearLayout>
@@ -129,12 +129,12 @@
             <Button
                 android:id="@+id/btnSignIn"
                 android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
                 android:layout_marginTop="@dimen/button.signup.margin_top.20dp"
-                android:text="@string/button.signin"
-                android:textColor="@color/blue"
                 android:background="@color/white"
-                android:layout_height="wrap_content" />
+                android:text="@string/button.signin"
+                android:textColor="@color/blue" />
 
         </RelativeLayout>
     </LinearLayout>
