@@ -198,4 +198,24 @@
     <dimen name="relativelayout.test.margin_bottom_6dp">6dp</dimen>
 
 
+    <!-- dimen file custom_viewpager-->
+    <dimen name="relativelayout.viewpager.height_92dp">92dp</dimen>
+    <dimen name="relativelayout.viewpager.margin_top_10dp">10dp</dimen>
+    <dimen name="relativelayout.viewpager.margin_top_20dp">13dp</dimen>
+    <dimen name="textview.viewpager.margin_top_20dp">20dp</dimen>
+    <dimen name="radiobutton.viewpager.margin_top_22dp">22dp</dimen>
+    <dimen name="radiobutton.viewpager.margin_top_29dp">29dp</dimen>
+    <dimen name="radiobutton.viewpager.margin_left_40dp">40dp</dimen>
+    <dimen name="textview.viewpager.margin_left_10dp">10dp</dimen>
+    <dimen name="view.viewpager.height_1dp">1dp</dimen>
+    <dimen name="view.viewpager.margin_bottom_78dp">78dp</dimen>
+    <dimen name="view.viewpager.margin_left_10dp">10dp</dimen>
+    <dimen name="view.viewpager.margin_right_10dp">10dp</dimen>
+    <dimen name="view.viewpager.margin_top_22dp">22dp</dimen>
+    <dimen name="view.viewpager.margin_bottom_50dp">50dp</dimen>
+    <dimen name="textview.viewpager.width_57dp">57dp</dimen>
+    <dimen name="textview.viewpager.height_22dp">22dp</dimen>
+    <dimen name="img.viewpager.margin_right_5dp">5dp</dimen>
+
+
 </resources>

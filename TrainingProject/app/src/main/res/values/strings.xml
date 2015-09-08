@@ -56,4 +56,11 @@
     <!-- strings file fragment_test-->
     <string name="textview.test.text">Test</string>
 
+    <!-- strings file custom_viewpager-->
+    <string name="radiobutton.viewpager.A">A :</string>
+    <string name="radiobutton.viewpager.B">B :</string>
+    <string name="radiobutton.viewpager.C">C :</string>
+    <string name="radiobutton.viewpager.D">D :</string>
+    <string name="radiobutton.viewpager.text_10">10</string>
+
 </resources>
