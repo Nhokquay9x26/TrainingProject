@@ -14,7 +14,7 @@ import vn.asiantech.LearingEnglish.activities.MainActivity_;
 public class AleartReceiver extends BroadcastReceiver {
     @Override
     public void onReceive(Context context, Intent intent) {
-        createNotification(context, "Time Up", "5 second", "Aleart");
+        createNotification(context,"Time Up", "5 second", "You should study English right now");
     }
 
     public void createNotification(Context context, String msg, String msgText, String msgAleart) {

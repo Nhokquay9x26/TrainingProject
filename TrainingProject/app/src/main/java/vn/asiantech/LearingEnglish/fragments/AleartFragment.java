@@ -6,13 +6,10 @@ import android.app.PendingIntent;
 import android.app.TimePickerDialog;
 import android.content.Context;
 import android.content.Intent;
-import android.support.v4.app.NotificationCompat;
 import android.support.v7.widget.SwitchCompat;
 import android.widget.CompoundButton;
 import android.widget.TextView;
 import android.widget.TimePicker;
-import android.widget.Toast;
-
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.Click;
 import org.androidannotations.annotations.EFragment;
@@ -20,7 +17,6 @@ import org.androidannotations.annotations.ViewById;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
-import java.util.GregorianCalendar;
 import java.util.Locale;
 
 import vn.asiantech.LearingEnglish.R;
@@ -34,6 +30,7 @@ public class AleartFragment extends BaseFragment{
     Calendar mCal;
     int mHour;
     int mMinute;
+    public static final int TIME_HOUR = 12;
     @ViewById(R.id.tvViewTime)
     TextView mTvViewTime;
 
@@ -52,17 +49,14 @@ public class AleartFragment extends BaseFragment{
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean isChecked) {
                 if (isChecked) {
-                  /*  Long alearTime = new GregorianCalendar().getTimeInMillis() + 5*1000;
+                    mCal.set(Calendar.HOUR_OF_DAY, mHour);
+                    mCal.set(Calendar.MINUTE, mMinute);
                     Intent aleartIntent = new Intent(getActivity(), AleartReceiver.class);
                     AlarmManager alarmManager = (AlarmManager)
-                           getActivity().getSystemService(Context.ALARM_SERVICE);
-                    alarmManager.set(AlarmManager.RTC_WAKEUP, alearTime,
+                            getActivity().getSystemService(Context.ALARM_SERVICE);
+                    alarmManager.set(AlarmManager.RTC_WAKEUP, mCal.getTimeInMillis(),
                             PendingIntent.getBroadcast(getActivity(), 1, aleartIntent, PendingIntent.FLAG_UPDATE_CURRENT));
-*/
 
-
-                }else {
-                    //Toast.makeText(getActivity(), "Turn Off", Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -85,10 +79,14 @@ public class AleartFragment extends BaseFragment{
                 mHour = hour;
                 mMinute = minute;
                 int countHour = hour;
-                if(countHour > 12){
-                    countHour -= 12;
+                if(countHour > TIME_HOUR){
+                    countHour -= TIME_HOUR;
                 }
-                mTvViewTime.setText(countHour + ":" + minute + (hour > 12 ?" PM" : " AM"));
+                if(hour > TIME_HOUR){
+                    mTvViewTime.setText(countHour + ":" + minute + " PM");
+                }else {
+                    mTvViewTime.setText(countHour + ":" + minute + " AM");
+                }
                 mTvViewTime.setTag(s);
 
                 mCal.set(Calendar.HOUR_OF_DAY, hour);
@@ -96,10 +94,10 @@ public class AleartFragment extends BaseFragment{
             }
         };
 
-        String s=mTvViewTime.getTag()+"";
-        String strArr[]=s.split(":");
-        int intHour=Integer.parseInt(strArr[0]);
-        int intMinute=Integer.parseInt(strArr[1]);
+        String s = mTvViewTime.getTag()+"";
+        String strArr[] = s.split(":");
+        int intHour = Integer.parseInt(strArr[0]);
+        int intMinute = Integer.parseInt(strArr[1]);
         TimePickerDialog time = new TimePickerDialog(getActivity(), callback, intHour, intMinute, true);
         time.show();
 

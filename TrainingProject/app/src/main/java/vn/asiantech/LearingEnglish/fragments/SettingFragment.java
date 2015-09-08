@@ -45,7 +45,6 @@ public class SettingFragment extends BaseFragment {
         buider.setPositiveButton(R.string.text_yes, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
-                //getActivity().getFragmentManager().beginTransaction().remove().commit();
                 getActivity().finish();
             }
         });

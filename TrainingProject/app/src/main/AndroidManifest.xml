@@ -20,6 +20,7 @@
         <activity android:name=".activities.MainActivity_"></activity>
         <activity android:name=".activities.LoginActivity_"></activity>
         <activity android:name=".activities.SignUpActivity_"></activity>
+        <receiver android:name=".eventbus.AleartReceiver"/>
     </application>
 
 </manifest>
