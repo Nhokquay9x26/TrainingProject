@@ -46,4 +46,8 @@
     <string name="textOn.text">On</string>
     <string name="textOff.text">Off</string>
     <string name="button.text_alarm">Alarm</string>
+    <string name="textview.detail_vocabulary">Cloud</string>
+    <string name="textview.mean_vocabulary">Cloud /klad/: Mây, đám mây...</string>
+    <string name="textview.mean">Mean:</string>
+    <string name="textview.detail_vocabulary.example">- the sun had disappeared behind a cloud</string>
 </resources>
