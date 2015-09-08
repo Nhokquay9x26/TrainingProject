@@ -129,7 +129,7 @@ dependencies {
     testCompile('com.squareup:fest-android:1.0.8') {
         exclude module: 'support-v4'
     }
-    apply from: "https://bitbucket.org/tientun/gradle-android-ci-check/raw/02df3007dfb56ef37e179c9e3c40cedfdb3c0980/ci.gradle"
     compile 'com.android.support:recyclerview-v7:22.2.1'
     compile 'com.android.support:cardview-v7:22.2.1'
+    compile "com.android.support:appcompat-v7:21.0.+"
 }

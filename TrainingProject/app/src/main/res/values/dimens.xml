@@ -77,4 +77,19 @@
     <dimen name="cardView.top_margin_bottom">15dp</dimen>
     <dimen name="cardView.top_margin_left">10dp</dimen>
     <dimen name="cardView.top_margin_right">10dp</dimen>
+    <dimen name="aleart_margin_top">10dp</dimen>
+    <dimen name="textView.time_aleart_margin_top">30dp</dimen>
+    <dimen name="textView.view_time_margin_left">30dp</dimen>
+    <dimen name="textView.textSize_time_aleart">18sp</dimen>
+    <dimen name="textView.textSize_turn_on">18sp</dimen>
+    <dimen name="editText.time_aleart_margin_left">40dp</dimen>
+    <dimen name="editText.time_aleart_margin_top">20dp</dimen>
+    <dimen name="textView.turn_on_margin_top">50dp</dimen>
+    <dimen name="textView.aleart_margin_left">30dp</dimen>
+    <dimen name="textView.aleart_margin_top">20dp</dimen>
+    <dimen name="textView.textSize_aleart">20sp</dimen>
+    <dimen name="view.aleart_margin_top">10dp</dimen>
+    <dimen name="view.aleart_height">30dp</dimen>
+
+
 </resources>

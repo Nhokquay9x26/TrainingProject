@@ -49,10 +49,10 @@ public class AdapterTopPoint extends RecyclerView.Adapter<AdapterTopPoint.TopPoi
 
     @Override
     public void onBindViewHolder(TopPointViewHolder holder, int position) {
-        holder.mTvId.setText(mTopPoints.get(position).getmId());
-        holder.mImgAvatar.setImageResource(mTopPoints.get(position).getmPhotoId());
-        holder.mTvName.setText(mTopPoints.get(position).getmName());
-        holder.mTvTopPoint.setText((mTopPoints.get(position).getmPoint())+"");
+        holder.mTvId.setText(mTopPoints.get(position).getMId());
+        holder.mImgAvatar.setImageResource(mTopPoints.get(position).getMPhotoId());
+        holder.mTvName.setText(mTopPoints.get(position).getMName());
+        holder.mTvTopPoint.setText((mTopPoints.get(position).getMPoint())+"");
     }
 
     @Override
