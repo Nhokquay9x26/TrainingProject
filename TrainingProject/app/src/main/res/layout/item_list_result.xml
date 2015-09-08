@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:gravity="center"
+    android:layout_height="@dimen/relativelayout.itemresult.height_79dp">
+
+    <TextView
+        android:id="@+id/tvItemResultSnippet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/textview.itemresult.margin_left_18dp"
+        android:layout_marginLeft="@dimen/textview.itemresult.margin_left_18dp"/>
+
+    <TextView
+        android:id="@+id/tvItemResultUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/tvItemResultSnippet"
+        android:layout_toEndOf="@+id/tvItemResultSnippet"
+        android:layout_marginStart="@dimen/textview.itemresult.margin_left_5dp"
+        android:layout_marginLeft="@dimen/textview.itemresult.margin_left_5dp" />
+
+    <ImageView
+        android:id="@+id/imgItemResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:contentDescription="@null"
+        android:layout_marginEnd="@dimen/img.itemresult.margin_right_30dp"
+        android:layout_marginRight="@dimen/img.itemresult.margin_right_30dp"/>
+
+</RelativeLayout>
