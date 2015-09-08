@@ -55,8 +55,7 @@ public class FragmentPageTesting extends BaseFragment {
         View tvQuestion = layoutView.findViewById(R.id.tvQuestion);
         View tvPageCurrent = layoutView.findViewById(R.id.tvPageCurrent);
         View tvPageTotal = layoutView.findViewById(R.id.tvPageTotal);
-        //((TextView) tv).setText("Câu " + fragNum + ":");
-        ((TextView) tvQuestion).setText(Html.fromHtml("<b>" + "<font color=\"#EC48B5\">"
+        ((TextView) tvQuestion).setText(Html.fromHtml("<b>" + "<font color=\"#ed166a\">"
                 + "Câu " + fragNum + ": " + "</font>" + "<b/>" + mQuestion[fragNum - 1]));
         ((TextView) tvPageCurrent).setText("" + fragNum + "-");
         ((TextView) tvPageTotal).setText("5");
@@ -64,14 +63,12 @@ public class FragmentPageTesting extends BaseFragment {
         ImageView imgBack = (ImageView) layoutView.findViewById(R.id.imgBack);
         imgBack.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-//                mViewPager.setCurrentItem(mViewPager.getCurrentItem() - 1);
                 mListener.onChange(-1);
             }
         });
         ImageView imgNext = (ImageView) layoutView.findViewById(R.id.imgNext);
         imgNext.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-//                mViewPager.setCurrentItem(mViewPager.getCurrentItem() + 1);
                 mListener.onChange(1);
             }
         });

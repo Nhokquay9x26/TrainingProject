@@ -17,8 +17,6 @@ import vn.asiantech.LearingEnglish.utils.Utils;
  */
 @EActivity(R.layout.activity_login)
 public class LoginActivity extends BaseActionBarActivity {
-    final static String MESSAGE_EMPTY_LOGIN = "Please type your username/email and password!";
-    final static String MESSAGE_ERROR_LOGIN = "username or password is incorrect";
 
     @ViewById(R.id.tvForgotPassWord)
     TextView mTvForgotPassWord;
@@ -43,11 +41,13 @@ public class LoginActivity extends BaseActionBarActivity {
     void clickSignIn() {
         final String email = mEdtUserName.getText().toString();
         final String password = mEdtPassword.getText().toString();
+        final String MESSAGE_EMPTY_LOGIN = getResources().getString(R.string.massage_empty_login);
+        final String MESSAGE_ERROR_LOGIN = getResources().getString(R.string.massage_error_login);
         if (email.length() > 0 && password.length() > 0) {
-            if (email.equals("abc") && password.equals("123456")) {
+            if (email.equals("asiantech@asiantech.vn") && password.equals("123456")) {
                 MainActivity_.intent(LoginActivity.this).start();
                 finish();
-            }else{
+            } else {
                 Toast.makeText(getApplicationContext(), MESSAGE_ERROR_LOGIN, Toast.LENGTH_LONG).show();
             }
         } else {
