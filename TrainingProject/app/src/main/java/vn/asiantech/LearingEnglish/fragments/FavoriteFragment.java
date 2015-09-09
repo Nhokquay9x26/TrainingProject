@@ -38,8 +38,8 @@ public class FavoriteFragment extends BaseFragment {
     private void addData() {
         for (int i = 0; i < mFavorites.length; i++) {
             vn.asiantech.LearingEnglish.models.WordFavorite model = new vn.asiantech.LearingEnglish.models.WordFavorite();
-            model.setWord(mFavorites[i]);
-            model.setPronunciation(mSpells[i]);
+            model.setMWord(mFavorites[i]);
+            model.setMPronunciation(mSpells[i]);
             mDatas.add(model);
         }
     }
