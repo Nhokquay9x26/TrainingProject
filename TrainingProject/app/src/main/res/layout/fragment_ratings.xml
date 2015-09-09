@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="@dimen/testresulting.margin_left_right"
+        android:layout_marginRight="@dimen/testresulting.margin_left_right"
+        android:layout_marginTop="10dp"
+        android:background="@anim/listview_test_resulting">
+
+        <LinearLayout
+            android:id="@+id/llTop"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/ratings.linearlayout.top_height">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/ratings.textview.text_rank_margin_left"
+                android:layout_weight="40"
+                android:gravity="start"
+                android:text="@string/ratings.textview.text_rank"
+                android:textSize="@dimen/ratings.textview.text_rank_size" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_weight="1"
+                android:background="@color/color.viewUnderTop" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:layout_weight="40"
+                android:gravity="center"
+                android:text="@string/ratings.textview.text_user"
+                android:textSize="@dimen/ratings.textview.text_user_size" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_weight="1"
+                android:background="@color/color.viewUnderTop" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:layout_marginRight="@dimen/ratings.textview.text_rank_margin_right"
+                android:layout_weight="40"
+                android:gravity="end"
+                android:text="@string/ratings.textview.text_point"
+                android:textSize="@dimen/ratings.textview.text_point_size" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/viewUnderTop"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/llTop"
+            android:background="@color/color.viewUnderTop" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycleRatings"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/viewUnderTop"
+            android:layout_marginBottom="@dimen/ratings.reycleview.margin_bottom"
+            android:layout_marginTop="@dimen/ratings.reycleview.margin_top" />
+    </RelativeLayout>
+</RelativeLayout>

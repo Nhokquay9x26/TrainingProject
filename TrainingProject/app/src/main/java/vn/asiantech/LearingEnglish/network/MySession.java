@@ -18,7 +18,7 @@ public class MySession extends SessionStore<Login> {
     @Override
     protected Map<String, String> saveSession(Login data) {
         Map<String, String> session = new HashMap<>();
-        session.put("key1", data.getToken());
+//        session.put("key1", data.getToken());
         return session;
     }
 
@@ -26,9 +26,9 @@ public class MySession extends SessionStore<Login> {
     protected Login restoreSession(Map<String, ?> savedSession) {
         Login login = new Login();
         try {
-            login.setToken((String) savedSession.get("key1"));
-            login.setEmail((String) savedSession.get("key2"));
-            login.setUser_id((String) savedSession.get("key3"));
+//            login.setToken((String) savedSession.get("key1"));
+//            login.setEmail((String) savedSession.get("key2"));
+//            login.setUser_id((String) savedSession.get("key3"));
         } catch (NullPointerException e) {
             e.printStackTrace();
         } catch (NumberFormatException e) {
@@ -40,7 +40,7 @@ public class MySession extends SessionStore<Login> {
     @Override
     protected Map<String, String> getHeader(Login data) {
         Map<String, String> header = new HashMap<>();
-        header.put(HEADER_AUTH, AUTH_PREFIX + data.getToken());
+//        header.put(HEADER_AUTH, AUTH_PREFIX + data.getToken());
         return header;
     }
 
@@ -52,7 +52,7 @@ public class MySession extends SessionStore<Login> {
     @Override
     public boolean checkAuthenticated(Login data) {
         try {
-            return data.getToken() != null;
+            return true;
         } catch (NullPointerException e) {
             return false;
         }

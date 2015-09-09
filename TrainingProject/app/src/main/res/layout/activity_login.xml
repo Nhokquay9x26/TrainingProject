@@ -1,64 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="150dp"
+        android:layout_height="@dimen/login_header"
         android:background="@color/background_header_login"
         android:gravity="center">
 
         <ImageView
-            android:layout_width="110dp"
-            android:layout_height="110dp"
+            android:layout_width="@dimen/login_img_header"
+            android:layout_height="@dimen/login_img_header"
             android:src="@drawable/ico_avatar_xhd" />
     </LinearLayout>
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginBottom="10dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginBottom="@dimen/login_rl_bottom"
+        android:layout_marginLeft="@dimen/login_rl_right"
+        android:layout_marginRight="@dimen/login_rl_left"
+        android:layout_marginTop="@dimen/login_rl_top"
         android:orientation="vertical">
 
         <EditText
             android:id="@+id/edtUsername"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="@dimen/login_edt_height"
             android:hint="@string/username_email" />
 
         <EditText
             android:id="@+id/edtPassword"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="@dimen/login_edt_height"
             android:layout_below="@+id/edtUsername"
-            android:layout_marginTop="20dp"
-            android:hint="@string/password" />
+            android:layout_marginTop="@dimen/login_edt_top"
+            android:hint="@string/password"
+            android:inputType="textPassword"/>
 
         <Button
+            android:id="@+id/btnSignIn"
             android:layout_width="match_parent"
-            android:layout_height="70dp"
+            android:layout_height="@dimen/login_btn_height"
             android:layout_below="@+id/edtPassword"
             android:layout_gravity="center"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="@dimen/login_btnSignIn_top"
             android:background="@color/background_header_login"
             android:text="@string/Sign_in"
             android:textAllCaps="false"
             android:textColor="@color/text_signin"
-            android:textSize="20sp" />
+            android:textSize="@dimen/login_btnSignIn_top_textsize"
+            tools:ignore="UnusedAttribute" />
 
         <TextView
             android:id="@+id/tvForgotPassword"
+            style="@style/login_tv_forgot_signUp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btnSignIn"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/login_tv_fogot"
+            android:text="@string/fogotpassword" />
+
+        <TextView
+            android:id="@+id/tvSignup"
+            style="@style/login_tv_forgot_signUp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
-            android:layout_gravity="center"
-            android:text="Forgot Password?"
-            android:textColor="@color/text_forgotPassword" />
+            android:text="@string/signup" />
     </RelativeLayout>
 </LinearLayout>
