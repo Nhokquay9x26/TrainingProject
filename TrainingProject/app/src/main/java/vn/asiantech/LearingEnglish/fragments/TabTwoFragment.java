@@ -1,13 +1,10 @@
 package vn.asiantech.LearingEnglish.fragments;
 
-import android.media.Image;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.ImageView;
 
 
 import org.androidannotations.annotations.EFragment;
@@ -20,7 +17,6 @@ import vn.asiantech.LearingEnglish.adapter.TestingAdapter;
 public class TabTwoFragment extends BaseFragment implements TestingAdapter.OnChangePager{
     TestingAdapter mAdapter;
     ViewPager mPager;
-    static final int ITEMS = 5;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

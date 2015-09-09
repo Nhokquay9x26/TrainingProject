@@ -1,6 +1,5 @@
 package vn.asiantech.LearingEnglish.fragments;
 
-import android.content.res.Resources;
 import android.os.Bundle;
 import android.text.Html;
 import android.view.LayoutInflater;
@@ -9,16 +8,12 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import java.io.Serializable;
-
 import vn.asiantech.LearingEnglish.R;
 import vn.asiantech.LearingEnglish.adapter.TestingAdapter;
-import vn.asiantech.LearingEnglish.adapter.ViewPager;
 
 public class FragmentPageTesting extends BaseFragment {
     int fragNum;
     String[] mQuestion;
-    ViewPager mViewPager;
     private static TestingAdapter.OnChangePager mListener;
 
     public static FragmentPageTesting init(int val, TestingAdapter.OnChangePager listener) {
