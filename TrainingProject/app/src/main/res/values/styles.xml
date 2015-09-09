@@ -1,7 +1,10 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="MyTheme" parent="Theme.AppCompat.Light.DarkActionBar"></style>
+    <style name="MyTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+    </style>
 
     <!--Dialog-->
     <style name="MyTheme.Dialog" parent="MyTheme">
@@ -24,5 +27,10 @@
     <!--Fullscreen-->
     <style name="MyTheme.Fullscreen" parent="MyTheme">
         <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <style name="login_tv_forgot_signUp">
+        <item name="android:textColor">@color/text_forgotPassword</item>
+        <item name="android:gravity">center</item>
     </style>
 </resources>

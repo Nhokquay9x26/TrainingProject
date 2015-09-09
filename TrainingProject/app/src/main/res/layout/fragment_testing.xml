@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/rlQuestion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="@dimen/testing.rl.margin_left_question"
+                android:layout_marginTop="20dp"
+                android:background="@anim/rectangle_question"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/tvDetailQuestion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/testing.textview.tv_question_left"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/text.testing.detail_question"
+                    android:textSize="@dimen/testing.textview.text_size_screen_testing" />
+            </RelativeLayout>
+
+            <RadioGroup
+                android:id="@+id/rbGroupSelection"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/rlQuestion"
+                android:layout_marginLeft="@dimen/testing.rbGroup.margin_left"
+                android:layout_marginRight="@dimen/testing.rbGroup.margin_right"
+                android:layout_marginTop="20dp"
+                android:background="@anim/rectangle_answer"
+                android:padding="10dp"
+                android:textSize="@dimen/testing.textview.text_size_screen_testing">
+
+                <RadioButton
+                    android:id="@+id/rbA"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/rb.testing.rb_margin_left"
+                    android:layout_marginTop="@dimen/rb.testing.rb_margin_top"
+                    android:text="@string/choiceA" />
+
+                <RadioButton
+                    android:id="@+id/rbB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rbA"
+                    android:layout_marginLeft="@dimen/rb.testing.rb_margin_left"
+                    android:text="@string/choiceB" />
+
+                <RadioButton
+                    android:id="@+id/rbC"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rbB"
+                    android:layout_marginLeft="@dimen/rb.testing.rb_margin_left"
+                    android:text="@string/choiceC" />
+
+                <RadioButton
+                    android:id="@+id/rbD"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rbC"
+                    android:layout_marginLeft="@dimen/rb.testing.rb_margin_left"
+                    android:text="@string/choiceD" />
+            </RadioGroup>
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

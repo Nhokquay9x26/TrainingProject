@@ -1,12 +1,55 @@
 <resources>
-<string name="app_name">Base Project</string>
+    <string name="app_name">Base Project</string>
 
-<string name="hello_world">Hello world!</string>
+    <string name="hello_world">Hello world!</string>
     <string name="TextView.text_get_pass">Get Pass</string>
     <string name="EditText.text_hint_email">Email</string>
     <string name="Button.text_forgot_pass">Forgot</string>
+    <string name="activity_forgot_pass_Text_Warring">Plese enter your email!</string>
     <string name="Sign_in">Sign in</string>
     <string name="username_email">Username / Email Address</string>
     <string name="password">Password</string>
-<string name="activity_forgot_pass_Text_Warring">Plese enter your email!</string>
+    <string name="title.testing.menubar">Testing:    Level 1</string>
+    <string name="text.testing.number_question">1/7</string>
+    <string name="text.testing.left_number">5</string>
+    <string name="text.testing.time_left">10:00</string>
+    <string name="choiceA">(A) Open-source</string>
+    <string name="choiceB">(B) Platform-independent</string>
+    <string name="choiceC">(C) Supports various technologies</string>
+    <string name="choiceD">(D) Highly optimized Virtual Machine</string>
+    <string name="text.testing.detail_question">Question 1: What are the advantages of android?</string>
+
+
+    <string name="testing.textview.text_title">Question</string>
+    <string name="testing.textview.number_of_question">1 - 7</string>
+
+    <string name="signup.tv.sub">Tape to change profile</string>
+    <string name="activity.signup.hint.user">Username</string>
+    <string name="activity.signup.hint.email">Email</string>
+    <string name="activity.signup.hint.password">Password</string>
+    <string name="activity.singup.hint.confirmpass">Confirm Password</string>
+    <string name="activity.signup.hint.promotion">Promotion Code</string>
+    <string name="signup.tv.text">Singup</string>
+    <string name="signup.tv.check">I wish to subcribe to daily alert via mail</string>
+    <string name="signup.conten.Descrip">content</string>
+    <string name="error_invalid_confirm_password">Passwords do not match</string>
+    <string name="error_invalid_password">Password is too short</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="error_invalid_email">This email is</string>
+    <string name="signup">Sign up</string>
+    <string name="fogotpassword">Forgot Password?</string>
+    <string name="title_activity_login_activity">LoginActivity</string>
+    <string name="action_settings">Settings</string>
+    <string name="custom.tabbar.main.text.home">Home</string>
+    <string name="custom.tabbar.main.text.favorite">Favorite</string>
+    <string name="custom.tabbar.main.text.question">Question</string>
+    <string name="custom.tabbar.main.text.setting">Setting</string>
+    <string name="listresult.textview.text_question">Question 1:</string>
+    <string name="testresulting.textview.total">total: 1/2</string>
+    <string name="ratings.textview.text_rank">Rank</string>
+    <string name="ratings.textview.text_user">User</string>
+    <string name="ratings.textview.text_point">Points</string>
+    <string name="rating.textview.rank_id">1st</string>
+    <string name="ratings.textview.tvName_User">Maniter Jack</string>
+    <string name="ratings.textview.tvPoint">100</string>
 </resources>

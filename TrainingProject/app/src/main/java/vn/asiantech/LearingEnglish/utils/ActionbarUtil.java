@@ -16,7 +16,6 @@ public final class ActionbarUtil {
 
     /**
      * Disable actionbar show/hide animation
-     *
      * @param actionBar
      */
 

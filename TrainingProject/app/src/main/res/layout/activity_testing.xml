@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:id="@+id/rlMenubarTesting"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/rl.testing.rl_menubar_height"
+        android:background="@color/color.testing.menubar">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_centerInParent="true"
+            android:text="@string/testing.textview.text_title"
+            android:textColor="@color/color.white"
+            android:textSize="@dimen/testing.textview.text_size_title" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/custom.tabbar.main.maginright"
+            android:src="@drawable/icon_search" />
+
+        <TextView
+            android:id="@+id/tvTotalQuestion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="@dimen/margin.left"
+            android:textSize="@dimen/testing.textview.size_time_of_question"
+            android:text="@string/text.testing.number_question" />
+
+        <TextView
+            android:id="@+id/tvLeftQuestion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+
+            android:text="@string/text.testing.left_number"
+            android:textSize="@dimen/testing.textview.size_left_question" />
+        <TextView
+            android:id="@+id/tvLeftQuestionCopy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:text="@string/text.testing.left_number"
+            android:textSize="@dimen/testing.textview.size_left_question" />
+
+        <TextView
+
+            android:id="@+id/tvTimeLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="@dimen/margin.right"
+            android:text="@string/text.testing.time_left"
+            android:textSize="@dimen/testing.textview.size_time_left" />
+        <TextView
+
+            android:id="@+id/tvTimeLeftCopy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="@dimen/margin.right"
+            android:text="@string/text.testing.time_left"
+            android:textSize="@dimen/testing.textview.size_time_left" />
+        <ProgressBar
+            android:id="@+id/progressBarTimer"
+            android:layout_width="@dimen/testing.progressbar.width"
+            android:layout_height="@dimen/testing.progressbar.height"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="@dimen/testing.progressbar.margin_right"
+
+            />
+
+
+    </RelativeLayout>
+
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/tabbarBottom"
+        android:layout_below="@+id/rlMenubarTesting"
+        />
+
+    <FrameLayout
+        android:id="@+id/frViewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/tabbarBottom"
+        android:layout_below="@+id/rlMenubarTesting"
+        />
+
+    <RelativeLayout
+        android:id="@+id/rlButtonBottom"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/rl.testing.rl_contains_button_height"
+        android:layout_above="@+id/tabbarBottom"
+        android:layout_marginBottom="@dimen/testing.rl.btn_margin_bottom">
+
+        <View
+            android:id="@+id/viewLine"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/testing.view.height_line"
+            android:layout_marginLeft="@dimen/testing.view.viewline_margin_left"
+            android:layout_marginRight="@dimen/testing.view.viewline_margin_right"
+            android:background="@color/color.testing.viewLine" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:orientation="horizontal"
+            android:weightSum="4">
+            <ImageView
+                android:id="@+id/imgPrevious"
+                android:layout_width="@dimen/testing.imageview.img_previous_width"
+                android:layout_height="@dimen/testing.imageview.img_previous_height"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:background="@color/color.no.color"
+                android:scaleType="centerInside"
+                android:src="@mipmap/ico_previous_xhd" />
+
+            <TextView
+                android:id="@+id/tvNumberOfQuestion"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/testing.textview.number_of_question_width"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="2"
+                android:background="@color/color.testing.tv_number_of_question"
+                android:gravity="center"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="@string/testing.textview.number_of_question"
+                android:textSize="@dimen/button.testing.btn_submit_textsize" />
+
+            <ImageView
+                android:id="@+id/imgNext"
+                android:layout_width="@dimen/testing.imageview.img_next_width"
+                android:layout_height="@dimen/testing.imageview.img_next_height"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:background="@color/color.no.color"
+                android:scaleType="centerInside"
+                android:src="@mipmap/ico_next_xhd" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnSubmit"
+            android:layout_width="@dimen/testing.button.width_submit"
+            android:layout_height="@dimen/testing.button.height_submit"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/testing.button.margin_right_submit"
+            android:background="@anim/btn_submit"
+
+
+            />
+    </RelativeLayout>
+
+    <vn.asiantech.LearingEnglish.utils.TabBar
+        android:id="@+id/tabbarBottom"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/testing.view.height_bottom"
+        android:layout_alignParentBottom="true"
+        android:background="@color/color.testing.menubar" />
+
+</RelativeLayout>
