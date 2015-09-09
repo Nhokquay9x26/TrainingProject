@@ -9,12 +9,11 @@
         android:layout_height="@dimen/custom.tabbar.main.height.header"
         android:background="@color/colorPrimary">
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="@dimen/custom.tabbar.main.imgBack.width.height"
+            android:layout_height="@dimen/custom.tabbar.main.imgBack.width.height"
             android:id="@+id/imgBackHeader"
             android:src="@drawable/icon_back"
             android:layout_centerVertical="true"
-            android:visibility="gone"
             android:layout_marginLeft="@dimen/custom.tabbar.main.imgBack.header"/>
         <TextView
             android:id="@+id/tvHeader"

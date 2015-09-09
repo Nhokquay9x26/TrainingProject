@@ -2,7 +2,6 @@ package vn.asiantech.LearingEnglish.adapter;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,9 +11,9 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 import vn.asiantech.LearingEnglish.R;
-import vn.asiantech.LearingEnglish.fragments.HomeFragment;
 import vn.asiantech.LearingEnglish.models.HomeCategory;
 import vn.asiantech.LearingEnglish.utils.IsCallTop;
+import vn.asiantech.LearingEnglish.utils.TabBar;
 
 /**
  * @Author xuanphu
@@ -22,12 +21,12 @@ import vn.asiantech.LearingEnglish.utils.IsCallTop;
  */
 public class HomeAdapter extends  RecyclerView.Adapter<HomeAdapter.HomeViewHolder>{
     Context mContext;
-    private ArrayList<HomeCategory> mArraylist = new ArrayList<>();
+    private ArrayList<HomeCategory> mArraylists = new ArrayList<>();
     private IsCallTop mIsCallTop;
 
-    public HomeAdapter(Context mContext, ArrayList<HomeCategory> mArraylist, IsCallTop mIsCallTop) {
+    public HomeAdapter(Context mContext, ArrayList<HomeCategory> mArraylists, IsCallTop mIsCallTop) {
         this.mContext = mContext;
-        this.mArraylist = mArraylist;
+        this.mArraylists = mArraylists;
         this.mIsCallTop = mIsCallTop;
     }
 
@@ -41,7 +40,7 @@ public class HomeAdapter extends  RecyclerView.Adapter<HomeAdapter.HomeViewHolde
 
     @Override
     public void onBindViewHolder(HomeViewHolder holder, int position) {
-        final HomeCategory homeCategory= mArraylist.get(position);
+        final HomeCategory homeCategory= mArraylists.get(position);
         holder.imgAvataHome.setImageResource(homeCategory.getMAvataHome());
         holder.tvNameHone.setText(homeCategory.getMNameHome());
         holder.imgSelecHome.setOnClickListener(new View.OnClickListener() {
@@ -54,7 +53,7 @@ public class HomeAdapter extends  RecyclerView.Adapter<HomeAdapter.HomeViewHolde
 
     @Override
     public int getItemCount() {
-        return mArraylist.size();
+        return mArraylists.size();
     }
 
     public class HomeViewHolder extends RecyclerView.ViewHolder {

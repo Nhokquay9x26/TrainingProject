@@ -18,11 +18,11 @@ import vn.asiantech.LearingEnglish.models.AnimalCategory;
  */
 public class AnimalAdapter extends RecyclerView.Adapter<AnimalAdapter.AnimalViewHolder> {
     Context mContext;
-    private ArrayList<AnimalCategory> mArraylist = new ArrayList<>();
+    private ArrayList<AnimalCategory> mArraylists = new ArrayList<>();
 
     public AnimalAdapter(Context mContext, ArrayList<AnimalCategory> mArraylist) {
         this.mContext = mContext;
-        this.mArraylist = mArraylist;
+        this.mArraylists = mArraylist;
     }
     @Override
     public AnimalViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
@@ -34,14 +34,14 @@ public class AnimalAdapter extends RecyclerView.Adapter<AnimalAdapter.AnimalView
 
     @Override
     public void onBindViewHolder(AnimalViewHolder holder, int position) {
-        final AnimalCategory animalCategory= mArraylist.get(position);
+        final AnimalCategory animalCategory= mArraylists.get(position);
         holder.imgAvataAnimal.setImageResource(animalCategory.getMAvataAnimal());
         holder.tvNameAnimal.setText(animalCategory.getMNameAnimal());
     }
 
     @Override
     public int getItemCount() {
-        return mArraylist.size();
+        return mArraylists.size();
     }
 
     public class AnimalViewHolder extends RecyclerView.ViewHolder {

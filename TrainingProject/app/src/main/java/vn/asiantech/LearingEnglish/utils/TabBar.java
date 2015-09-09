@@ -1,6 +1,7 @@
 package vn.asiantech.LearingEnglish.utils;
 
 import android.content.Context;
+import android.support.v4.app.FragmentManager;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,10 +9,7 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import org.androidannotations.annotations.*;
-
 import vn.asiantech.LearingEnglish.R;
-import vn.asiantech.LearingEnglish.activities.MainActivity;
 
 /**
  * @Author XuanPhu
@@ -39,8 +37,10 @@ public class TabBar extends RelativeLayout implements View.OnClickListener {
     private ImageView mImgSetting;
     private TextView mTvSetting;
     private TextView mTvHeader;
-    private ImageView mImgBackHeader;
+    private Context mContext;
+    public ImageView mImgBackHeader;
     private OnTabBarListener mOnTabBarListener;
+    int posit=0;
 
     public TabBar(Context context) {
         super(context);
@@ -103,21 +103,21 @@ public class TabBar extends RelativeLayout implements View.OnClickListener {
 
     public void clickTab(int position) {
         setColorDefault();
-
         switch (position) {
             case 0:
                 mImgHome.setImageResource(R.drawable.icon_top_w);
                 mTvHome.setTextColor(COLOR_TEXT);
-                mTvHeader.setText("Home");
+                setText("Home");
                 if (mOnTabBarListener != null) {
                     mOnTabBarListener.onTabClick(0);
                 }
+                posit = 1;
                 break;
 
             case 1:
                 mImgFavorite.setImageResource(R.drawable.icon_favorite_w);
                 mTvFavorite.setTextColor(COLOR_TEXT);
-                mTvHeader.setText("Favorite");
+                setText("Favorite");
                 if (mOnTabBarListener != null) {
                     mOnTabBarListener.onTabClick(1);
                 }
@@ -126,7 +126,7 @@ public class TabBar extends RelativeLayout implements View.OnClickListener {
             case 2:
                 mImgQuestion.setImageResource(R.drawable.icon_question_w);
                 mTvQuestion.setTextColor(COLOR_TEXT);
-                mTvHeader.setText("Question");
+                setText("Question");
                 if (mOnTabBarListener != null) {
                     mOnTabBarListener.onTabClick(2);
                 }
@@ -135,7 +135,7 @@ public class TabBar extends RelativeLayout implements View.OnClickListener {
             case 3:
                 mImgSetting.setImageResource(R.drawable.icon_seting_w);
                 mTvSetting.setTextColor(COLOR_TEXT);
-                mTvHeader.setText("Setting");
+                setText("Setting");
                 if (mOnTabBarListener != null) {
                     mOnTabBarListener.onTabClick(3);
                 }
@@ -148,12 +148,18 @@ public class TabBar extends RelativeLayout implements View.OnClickListener {
         int id = v.getId();
         if (id == R.id.llHome) {
             clickTab(0);
+            posit=0;
         } else if (id == R.id.llFavorite) {
             clickTab(1);
+            posit=1;
         } else if (id == R.id.llQuestion) {
             clickTab(2);
         } else if (id == R.id.llSetting) {
             clickTab(3);
         }
+    }
+
+   public void setText(String text){
+        mTvHeader.setText(text);
     }
 }

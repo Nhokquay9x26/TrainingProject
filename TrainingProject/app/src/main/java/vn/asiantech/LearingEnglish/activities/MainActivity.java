@@ -5,6 +5,7 @@ import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.util.Log;
 import android.widget.TextView;
 
 import org.androidannotations.annotations.AfterViews;
@@ -43,6 +44,7 @@ public class MainActivity extends FragmentActivity {
         mAdapter = new ViewPagerAdapter(getSupportFragmentManager());
         mViewPagerMain.setAdapter(mAdapter);
         mTabBarMain.clickTab(0);
+        mViewPagerMain.setOffscreenPageLimit(mAdapter.getCount());
         mTabBarMain.setOnTabBarListener(new TabBar.OnTabBarListener() {
             @Override
             public void onTabClick(int position) {
@@ -87,9 +89,6 @@ public class MainActivity extends FragmentActivity {
                     f = new QuestionFragment();
                     break;
                 case 3:
-                    f = new RatingsFragment();
-                    break;
-                default:
                     f = new RatingsFragment();
                     break;
             }

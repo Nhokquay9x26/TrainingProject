@@ -3,52 +3,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpagerDetail"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/fragment.detail.viewpager.height"></android.support.v4.view.ViewPager>
+
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="270dp"
-        android:background="@drawable/home_rl_background"
-        android:id="@+id/topDetail">
-        <ImageView
-            android:id="@+id/imgAvataDetail"
-            android:layout_width="180dp"
-            android:layout_height="150dp"
-            android:layout_centerHorizontal="true"
-            android:layout_margin="20dp"
-            android:src="@drawable/img_animal" />
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginBottom="20dp">
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="30dp"
-                android:src="@drawable/icon_left" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="Lion"
-                android:textSize="30sp"
-                android:id="@+id/tvNameDetail"/>
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="30dp"
-                android:src="@drawable/icon_right" />
-        </LinearLayout>
-    </RelativeLayout>
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/home_rl_background"
-        android:layout_below="@+id/topDetail">
-    </RelativeLayout>
+        android:layout_height="@dimen/fragment.detail.rl.height"
+        android:layout_below="@+id/viewpagerDetail"
+        android:layout_marginTop="@dimen/fragment.detail.rl.magintop"
+        android:background="@drawable/home_rl_background"></RelativeLayout>
 </RelativeLayout>

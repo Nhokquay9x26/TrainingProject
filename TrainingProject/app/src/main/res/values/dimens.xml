@@ -77,7 +77,7 @@
     <dimen name="item.recycleview.home.textsize">18sp</dimen>
     <dimen name="item.recycleview.home.with.select">50dp</dimen>
     <dimen name="item.recycleview.home.maginleft.textview">70dp</dimen>
-    <dimen name="item.recycleview.home.magintop.textview">5dp</dimen>
+    <dimen name="item.recycleview.home.magintop.textview">4dp</dimen>
     <dimen name="item.recycleview.home.maginleft.line">30dp</dimen>
     <dimen name="item.recycleview.home.maginleft.view.maginright">57dp</dimen>
     <dimen name="item.recycleview.home.maginleft.view.with.height">10dp</dimen>
@@ -95,5 +95,16 @@
     <dimen name="favorite.rlhome.margin">20dp</dimen>
     <dimen name="item.recycle.animal.imgAvata.width.heght">50dp</dimen>
     <dimen name="item.recycle.animal.tvName.maginleft">20dp</dimen>
-    <dimen name="custom.tabbar.main.imgBack.header">20dp</dimen>
+    <dimen name="custom.tabbar.main.imgBack.header">10dp</dimen>
+    <dimen name="fragment.detail.viewpager.height">270dp</dimen>
+    <dimen name="fragment.detail.rl.height">150dp</dimen>
+    <dimen name="fragment.detail.rl.magintop">10dp</dimen>
+    <dimen name="item.fragment.detail.rl.height">270dp</dimen>
+    <dimen name="item.fragment.detail.avata.with">250dp</dimen>
+    <dimen name="item.fragment.detail.avata.height">200dp</dimen>
+    <dimen name="item.fragment.detail.avata.magin">10dp</dimen>
+    <dimen name="item.fragment.detail.rl.with">200dp</dimen>
+    <dimen name="item.fragment.detail.rl.maginbottom">5dp</dimen>
+    <dimen name="item.fragment.detail.name.size">30sp</dimen>
+    <dimen name="custom.tabbar.main.imgBack.width.height">25dp</dimen>
 </resources>

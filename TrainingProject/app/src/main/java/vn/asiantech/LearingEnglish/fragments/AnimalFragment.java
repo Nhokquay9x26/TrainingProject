@@ -3,7 +3,6 @@ package vn.asiantech.LearingEnglish.fragments;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
-import android.view.MotionEvent;
 import android.view.View;
 
 import org.androidannotations.annotations.*;
@@ -13,33 +12,41 @@ import java.util.ArrayList;
 import vn.asiantech.LearingEnglish.R;
 import vn.asiantech.LearingEnglish.adapter.AnimalAdapter;;
 import vn.asiantech.LearingEnglish.models.AnimalCategory;
-import vn.asiantech.LearingEnglish.utils.IsCallTop;
 import vn.asiantech.LearingEnglish.utils.RecyclerItemClickListener;
+import vn.asiantech.LearingEnglish.utils.TabBar;
 
 /**
  * @Author xuanphu
  * Created by xuanphu on 04/09/2015.
  */
 @EFragment(R.layout.fragment_animal)
-public class AnimalFragment extends BaseFragment{
+public class AnimalFragment extends BaseFragment implements TabBar.OnTabBarListener {
     @ViewById(R.id.recyclerAnimal)
     RecyclerView mRecyclerAnimal;
     AnimalAdapter mAnimalAdapter;
-    ArrayList<AnimalCategory> mArraylist = new ArrayList<>();
-    public AnimalFragment(){
+    ArrayList<AnimalCategory> mArraylists = new ArrayList<>();
+
+    public AnimalFragment() {
         fakedata();
     }
 
     @AfterViews
     void afterViews() {
-        mAnimalAdapter = new AnimalAdapter(getActivity(), mArraylist);
+//        TabBar.mImgBackHeader.setVisibility(View.VISIBLE);
+//        TabBar.mImgBackHeader.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                    getActivity().onBackPressed();
+//            }
+//        });
+        mAnimalAdapter = new AnimalAdapter(getActivity(), mArraylists);
         mRecyclerAnimal.setLayoutManager(new LinearLayoutManager(getActivity().getBaseContext()));
         mRecyclerAnimal.setAdapter(mAnimalAdapter);
         mRecyclerAnimal.addOnItemTouchListener(new RecyclerItemClickListener(getActivity(), mRecyclerAnimal, new RecyclerItemClickListener.OnItemClickListener() {
 
             @Override
             public void onItemClick(View view, int position) {
-                DetailFragment mFragment = new DetailFragment(mArraylist,position);
+                DetailFragment mFragment = new DetailFragment(mArraylists, position);
                 android.support.v4.app.FragmentManager fragmentManager = getFragmentManager();
                 android.support.v4.app.FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction().addToBackStack(null);
                 fragmentTransaction.replace(R.id.framlayoutTop, mFragment);
@@ -52,19 +59,29 @@ public class AnimalFragment extends BaseFragment{
 
             }
         }));
-
     }
 
     private void fakedata() {
         AnimalCategory animalCategory = new AnimalCategory();
         animalCategory.setMAvataAnimal(R.drawable.img_animal);
         animalCategory.setMNameAnimal("Lion");
-        mArraylist.add(animalCategory);
+        mArraylists.add(animalCategory);
 
         AnimalCategory animalCategory1 = new AnimalCategory();
         animalCategory1.setMAvataAnimal(R.drawable.img_tiger);
         animalCategory1.setMNameAnimal("Tiger");
-        mArraylist.add(animalCategory1);
+        mArraylists.add(animalCategory1);
+
+        AnimalCategory animalCategory2 = new AnimalCategory();
+        animalCategory2.setMAvataAnimal(R.drawable.img_animal);
+        animalCategory2.setMNameAnimal("Cat Big");
+        mArraylists.add(animalCategory2);
     }
+
+    @Override
+    public void onTabClick(int position) {
+
+    }
+
 }
 
