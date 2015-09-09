@@ -112,6 +112,7 @@
                 android:textSize="@dimen/textview.dtail_vocabulary_example_size" />
 
             <ImageView
+                android:id="@+id/imgSpeaker"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"

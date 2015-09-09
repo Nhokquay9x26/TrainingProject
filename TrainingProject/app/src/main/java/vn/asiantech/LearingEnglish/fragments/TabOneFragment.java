@@ -16,7 +16,7 @@ import vn.asiantech.LearingEnglish.models.Top;
 
 
 @EFragment(R.layout.fragment_top)
-public class TabOneFragment extends BaseFragment implements TopAdapter.OnTopListenner{
+public class TabOneFragment extends BaseFragment implements TopAdapter.OnTopListener{
     private ArrayList<Top> mListTop;
     @ViewById(R.id.rvListTop)
     RecyclerView mRvListTop;

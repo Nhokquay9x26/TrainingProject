@@ -1,24 +1,28 @@
 package vn.asiantech.LearingEnglish.adapter;
 
 import android.content.Context;
+import android.speech.tts.TextToSpeech;
 import android.support.v4.view.PagerAdapter;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import java.util.List;
+import java.util.Locale;
 
 import vn.asiantech.LearingEnglish.R;
 import vn.asiantech.LearingEnglish.models.WordDetail;
 
-public class WordDetailAdapter extends PagerAdapter {
+public class WordDetailAdapter extends PagerAdapter implements TextToSpeech.OnInitListener,
+        View.OnClickListener {
     private List<WordDetail> mWordDetails;
     private LayoutInflater mLayoutInflater;
     private OnWordDetailListener mListener;
+    private Context mContext;
+    private TextToSpeech mTextToSpeech;
 
     /**
      * constructor of class customDetailTopNew
@@ -26,8 +30,9 @@ public class WordDetailAdapter extends PagerAdapter {
     public WordDetailAdapter(Context context, List<WordDetail> wordDetails,
                              OnWordDetailListener listener) {
         super();
+        this.mContext = context;
         this.mWordDetails = wordDetails;
-        mLayoutInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        mLayoutInflater = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         this.mListener = listener;
     }
 
@@ -44,6 +49,23 @@ public class WordDetailAdapter extends PagerAdapter {
         return view == object;
     }
 
+    @Override
+    public void onInit(int i) {
+        if (i != TextToSpeech.ERROR) {
+            mTextToSpeech.setLanguage(Locale.US);
+        }
+    }
+
+    @Override
+    public void onClick(View view) {
+        if (view.getId() == R.id.imgNext) {
+            mListener.onClickNext();
+        }
+        if (view.getId() == R.id.imgBack) {
+            mListener.onClickBack();
+        }
+    }
+
     private class ViewHolder {
         private ImageView mImgVocabulary;
         private TextView mTxtVocabulary;
@@ -51,6 +73,7 @@ public class WordDetailAdapter extends PagerAdapter {
         private TextView mTxtExample;
         private ImageView mImgNext;
         private ImageView mImgBack;
+        private ImageView mImgSpeaker;
     }
 
     @Override
@@ -65,29 +88,36 @@ public class WordDetailAdapter extends PagerAdapter {
             viewHolder.mTxtExample = (TextView) view.findViewById(R.id.tvExample);
             viewHolder.mImgNext = (ImageView) view.findViewById(R.id.imgNext);
             viewHolder.mImgBack = (ImageView) view.findViewById(R.id.imgBack);
+            viewHolder.mImgSpeaker = (ImageView) view.findViewById(R.id.imgSpeaker);
             view.setTag(viewHolder);
         } else {
             viewHolder = (ViewHolder) view.getTag();
         }
         WordDetail wordDetail = mWordDetails.get(position);
+        mTextToSpeech = new TextToSpeech(mContext, this);
+        setValue(viewHolder, wordDetail);
+        setEvent(viewHolder);
+        container.addView(view);
+        return view;
+    }
+
+    private void setEvent(final ViewHolder viewHolder) {
+        viewHolder.mImgNext.setOnClickListener(this);
+        viewHolder.mImgBack.setOnClickListener(this);
+        viewHolder.mImgSpeaker.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mTextToSpeech.speak(viewHolder.mTxtVocabulary.getText().toString(),
+                        TextToSpeech.QUEUE_FLUSH, null);
+            }
+        });
+    }
+
+    private void setValue(ViewHolder viewHolder, WordDetail wordDetail) {
         viewHolder.mImgVocabulary.setImageResource(wordDetail.getImage());
         viewHolder.mTxtVocabulary.setText(wordDetail.getWord());
         viewHolder.mTxtMeanVocabulary.setText(wordDetail.getMean());
         viewHolder.mTxtExample.setText(wordDetail.getExample());
-        viewHolder.mImgNext.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                mListener.onClickNext();
-            }
-        });
-        viewHolder.mImgBack.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                mListener.onClickBack();
-            }
-        });
-        container.addView(view);
-        return view;
     }
 
     @Override
