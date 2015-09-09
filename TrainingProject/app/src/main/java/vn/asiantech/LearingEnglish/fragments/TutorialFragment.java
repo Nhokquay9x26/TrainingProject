@@ -17,9 +17,11 @@ import com.viewpagerindicator.PageIndicator;
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.Click;
 import org.androidannotations.annotations.EFragment;
+import org.androidannotations.annotations.FragmentByTag;
 import org.androidannotations.annotations.ViewById;
 
 import vn.asiantech.LearingEnglish.R;
+import vn.asiantech.LearingEnglish.activities.InitializeActivity_;
 import vn.asiantech.LearingEnglish.activities.MainActivity_;
 
 /**
@@ -36,6 +38,9 @@ public class TutorialFragment extends BaseFragment {
     @ViewById(R.id.circle)
     CirclePageIndicator mIndicator;
     private MyInfinitePagerAdapter mAdapter;
+
+    @FragmentByTag("LoginFragment")
+    protected LoginFragment mLoginFragment;
 
     @AfterViews
     public void afterViews() {
@@ -92,8 +97,12 @@ public class TutorialFragment extends BaseFragment {
 
     @Click(R.id.btnStartActivity)
     protected void onClick() {
-        MainActivity_.intent(getActivity()).start();
-        getActivity().finish();
+//        MainActivity_.intent(getActivity()).start();
+//        getActivity().finish();
+        if (mLoginFragment == null) {
+            mLoginFragment = LoginFragment_.builder().build();
+        }
+        ((InitializeActivity_) getActivity()).replaceFragment(mLoginFragment);
 //        addChildFragment(LoginFragment_.builder().build());
     }
 
