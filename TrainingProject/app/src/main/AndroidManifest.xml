@@ -27,12 +27,6 @@
         <activity android:name=".activities.TestingActivity_"></activity>
         <activity android:name=".activities.LoginActivity_"></activity>
         <activity android:name=".activities.TestFragmentActivity_"></activity>
-
-
-        <activity android:name=".activities.LoginActivity_"></activity>
-
-
-        >>>>>>> group2-subMaster
     </application>
 
 </manifest>
