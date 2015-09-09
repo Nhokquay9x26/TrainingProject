@@ -1,20 +1,14 @@
 package vn.asiantech.LearingEnglish.activities;
 
+import android.annotation.TargetApi;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Handler;
-
-import android.annotation.TargetApi;
-import android.os.Build;
-import android.annotation.TargetApi;
-import android.os.Build;
-import android.annotation.TargetApi;
-import android.os.Build;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.ViewPager;
-import android.util.Log;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -30,12 +24,7 @@ import java.util.TimerTask;
 import lombok.Getter;
 import vn.asiantech.LearingEnglish.R;
 import vn.asiantech.LearingEnglish.fragments.FavoriteFragment_;
-import vn.asiantech.LearingEnglish.fragments.QuestionFragment;
-import vn.asiantech.LearingEnglish.fragments.SettingFragment_;
-import vn.asiantech.LearingEnglish.fragments.SettingFragment_;
 import vn.asiantech.LearingEnglish.fragments.QuestionFragment_;
-import vn.asiantech.LearingEnglish.fragments.RatingsFragment;
-import vn.asiantech.LearingEnglish.fragments.RatingsFragment_;
 import vn.asiantech.LearingEnglish.fragments.SettingFragment_;
 import vn.asiantech.LearingEnglish.fragments.TopFragment_;
 import vn.asiantech.LearingEnglish.models.ApplicationData;
@@ -70,6 +59,7 @@ public class MainActivity extends FragmentActivity {
 
     @AfterViews
     void afterViews() {
+
         getRankUser();
         mAdapter = new ViewPagerAdapter(getSupportFragmentManager());
         ViewPagerAdapter mAdapter = new ViewPagerAdapter(getSupportFragmentManager());

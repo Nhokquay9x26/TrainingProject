@@ -5,15 +5,18 @@ import android.graphics.Color;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import org.androidannotations.annotations.AfterViews;
+import org.androidannotations.annotations.Click;
 import org.androidannotations.annotations.EFragment;
 import org.androidannotations.annotations.ViewById;
 
 import java.util.ArrayList;
 
 import vn.asiantech.LearingEnglish.R;
+import vn.asiantech.LearingEnglish.activities.TestingActivity;
 import vn.asiantech.LearingEnglish.activities.TestingActivity_;
 import vn.asiantech.LearingEnglish.adapter.TestResultingAdapter;
 import vn.asiantech.LearingEnglish.models.ApplicationData;
@@ -40,6 +43,9 @@ public class TestResultingFragment extends Fragment {
     @ViewById(R.id.tvTotalResult)
     TextView mTvTotalResult;
 
+    @ViewById(R.id.imgShare)
+    ImageView mImgShare;
+
     @AfterViews
     void afterView() {
         configRecycleView();
@@ -59,6 +65,13 @@ public class TestResultingFragment extends Fragment {
         // specify an adapter (see also next example)
         mAdapter = new TestResultingAdapter(mQuestionDatas, mListSelections, mIsResultUser);
         mRecycleViewResult.setAdapter(mAdapter);
+    }
+
+    @Click(R.id.imgShare)
+    void imgShareClicked() {
+        if (getActivity() instanceof TestingActivity_) {
+            ((TestingActivity_) getActivity()).shareFaceBook();
+        }
     }
 
     /**

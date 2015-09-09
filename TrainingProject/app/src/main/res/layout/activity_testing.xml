@@ -168,8 +168,6 @@
             android:layout_centerVertical="true"
             android:layout_marginRight="@dimen/testing.button.margin_right_submit"
             android:background="@anim/btn_submit"
-
-
             />
     </RelativeLayout>
 

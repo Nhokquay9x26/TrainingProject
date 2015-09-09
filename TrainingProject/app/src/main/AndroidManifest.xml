@@ -3,6 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="vn.asiantech.LearingEnglish">
 
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:name=".App"
         android:allowBackup="true"
@@ -27,12 +30,19 @@
         <activity android:name=".activities.LoginActivity_"></activity>
         <activity android:name=".activities.TestFragmentActivity_"></activity>
 
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:label="@string/app_name" />
 
-
-        <activity android:name=".activities.LoginActivity_">
-        </activity>
-
-
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/app_id" />
+        <provider
+            android:name="com.facebook.FacebookContentProvider"
+            android:authorities="com.facebook.app.FacebookContentProvider516249385207670"
+            android:exported="true" />
     </application>
 
 </manifest>

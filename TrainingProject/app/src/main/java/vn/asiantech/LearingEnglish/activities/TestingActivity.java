@@ -3,11 +3,19 @@ package vn.asiantech.LearingEnglish.activities;
 
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
+import android.content.Context;
+import android.content.Intent;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
+import android.content.pm.Signature;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.os.CountDownTimer;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.ViewPager;
+import android.util.Base64;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -18,12 +26,27 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.facebook.CallbackManager;
+import com.facebook.FacebookCallback;
+import com.facebook.FacebookException;
+import com.facebook.FacebookSdk;
+import com.facebook.appevents.AppEventsLogger;
+import com.facebook.login.LoginManager;
+import com.facebook.login.LoginResult;
+import com.facebook.share.ShareApi;
+import com.facebook.share.model.SharePhoto;
+import com.facebook.share.model.SharePhotoContent;
+
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.Click;
 import org.androidannotations.annotations.EActivity;
 import org.androidannotations.annotations.ViewById;
 
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -43,14 +66,16 @@ import vn.asiantech.LearingEnglish.models.Question;
 public class TestingActivity extends FragmentActivity {
 
     private int mPositionCurrent;
-    @Getter
-    private int mLeftRight = 0;
     private ArrayList<Fragment> mFragmentTestings;
     private static boolean isCheckTimerStop = true;
     private long mSaveRemainingTime;
     private TestingAdapter mAdapterTesting;
+
+    @Getter
+    private int mLeftRight = 0;
+
     @Setter @Getter
-    private boolean isCheckDisable;
+    private boolean mIsCheckDisable;
 
     @Getter
     private long mRemainingTime;
@@ -104,6 +129,9 @@ public class TestingActivity extends FragmentActivity {
     @ViewById(R.id.tvLeftQuestionCopy)
     TextView mTvLeftQuestionCopy;
 
+    CallbackManager callbackManager;
+    LoginManager loginManager;
+
 
     @AfterViews
     void afterView() {
@@ -120,11 +148,91 @@ public class TestingActivity extends FragmentActivity {
         setOnClickViewPager();
         mNumberOfQuestion.setText("1 - " + mQuestionDatas.size());
         mTvTotalQuestion.setText("1/" + mQuestionDatas.size());
+        //showHashKey(this);
+
+    }
+
+    public static void showHashKey(Context context) {
+        try {
+            PackageInfo info = context.getPackageManager().getPackageInfo(
+                    "vn.asiantech.LearingEnglish", PackageManager.GET_SIGNATURES); //Your            package name here
+            for (Signature signature : info.signatures) {
+                MessageDigest md = MessageDigest.getInstance("SHA");
+                md.update(signature.toByteArray());
+                Log.i("KeyHash:", Base64.encodeToString(md.digest(), Base64.DEFAULT));
+            }
+        } catch (PackageManager.NameNotFoundException e) {
+        } catch (NoSuchAlgorithmException e) {
+        }
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        // Logs 'install' and 'app activate' App Events.
+        AppEventsLogger.activateApp(this);
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        AppEventsLogger.deactivateApp(this);
+    }
+
+    public void shareFaceBook() {
+        final Context context = getBaseContext();
+        List<String> permissionNeeds = Arrays.asList("publish_actions");
+        FacebookSdk.sdkInitialize(getApplicationContext());
+        callbackManager = CallbackManager.Factory.create();
+        loginManager = LoginManager.getInstance();
+        loginManager.logInWithPublishPermissions(this, permissionNeeds);
+
+        loginManager.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
+            @Override
+            public void onSuccess(LoginResult loginResult) {
+                //  Toast.makeText(context,"Login Success",Toast.LENGTH_SHORT).show();
+                Log.d("Success", "success");
+                sharePhotoToFacebook();
+                toastMakeText("Share OK.");
+            }
+
+            @Override
+            public void onCancel() {
+                Log.d("Success", "on Cancel");
+            }
+
+            @Override
+            public void onError(FacebookException error) {
+                //Toast.makeText(context,"Error",Toast.LENGTH_SHORT).show();
+                Log.d("Error", "error");
+            }
+        });
+
+
+    }
+
+    public void toastMakeText(String text) {
+        Toast.makeText(this, text, Toast.LENGTH_SHORT).show();
+    }
+
+    void sharePhotoToFacebook() {
+        Bitmap image = BitmapFactory.decodeResource(getResources(), R.drawable.ic_launcher);
+        SharePhoto photo = new SharePhoto.Builder().setBitmap(image).setCaption("Anh ơi, vì em là con gái. Nên những suy tư chỉ giấu kín trong lòng. Nếu yêu em, anh cũng yêu, nét thầm con gái nhé ... Nếu có cãi nhau em chưa chịu làm lành.").build();
+        SharePhotoContent content = new SharePhotoContent.Builder().addPhoto(photo).build();
+        ShareApi.share(content, null);
+
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        callbackManager.onActivityResult(requestCode, resultCode, data);
 
     }
 
     @Click(R.id.btnSubmit)
     void mBtnSubmitClicked() {
+
 
         if (isCheckTimerStop) {
             mSaveRemainingTime = mRemainingTime;

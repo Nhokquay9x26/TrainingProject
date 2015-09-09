@@ -147,10 +147,9 @@
     <dimen name="testing.progressbar.height">30dp</dimen>
     <dimen name="testing.progressbar.margin_right">50dp</dimen>
     <dimen name="testing.view.height_line">0.5dp</dimen>
-    <dimen name="testing.button.width_submit">30dp</dimen>
+    <dimen name="testing.button.width_submit">90dp</dimen>
     <dimen name="testing.button.height_submit">30dp</dimen>
     <dimen name="testing.button.margin_right_submit">5dp</dimen>
-
 
 
 </resources>
