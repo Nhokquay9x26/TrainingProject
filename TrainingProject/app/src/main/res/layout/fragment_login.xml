@@ -78,7 +78,7 @@
                 android:layout_height="wrap_content"
                 android:layout_above="@+id/btnSignIn"
                 android:layout_weight="1"
-                android:textColor="@color/textview.detail.color.error" />
+                android:textColor="@color/textview.signin.color.error" />
 
             <Button
                 android:id="@+id/btnSignIn"
