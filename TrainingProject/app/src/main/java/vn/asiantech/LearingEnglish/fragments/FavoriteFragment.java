@@ -14,7 +14,6 @@ import vn.asiantech.LearingEnglish.R;
 import vn.asiantech.LearingEnglish.adapter.WordFavoriteAdapter;
 import vn.asiantech.LearingEnglish.widget.DividerItemDecoration;
 
-
 @EFragment(R.layout.fragment_favorite)
 public class FavoriteFragment extends BaseFragment {
     @ViewById(R.id.recyclerViewFavorite)

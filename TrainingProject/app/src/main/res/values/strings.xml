@@ -52,6 +52,9 @@
     <string name="textview.detail_vocabulary.example">- the sun had disappeared behind a cloud</string>
     <string name="massage_empty_login">Please type your username/email and password</string>
     <string name="massage_error_login">username or password is incorrect</string>
+    <string name="title_time_up">Time Up</string>
+    <string name="title_aleart">Learning English</string>
+    <string name="content_aleart">You should study English right now!</string>
 
     <string-array name="question_array">
         <item>When can we meet again?</item>
