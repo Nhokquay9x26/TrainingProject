@@ -7,24 +7,30 @@
     <color name="color.white">#FFFFFF</color>
     <color name="color.black">#000000</color>
     <color name="color.no.color">#00000000</color>
-
     <color name="color.testing.menubar">#19bce9</color>
-
     <color name="color.testing.tv_number_of_question">#68d5f3</color>
     <color name="color.testing.viewLine">#bfecf8</color>
     <color name="color.red">#ee5858</color>
-
-
-
     <color name="signup.tv.sub.color">#555555</color>
     <color name="dialog.backgroud.title">#00b9e6</color>
     <color name="signup.text.color.buton">#ffffff</color>
     <color name="signup.ln.backgroud">#00b9e6</color>
+    <color name="color.tv_submit">#FFFFFF</color>
+    <color name="color.background_list">#e8e9ea</color>
 
     <color name="custom_tabbar_main_background">#00b9e6</color>
     <color name="colorPrimary">#00b9e6</color>
     <color name="colorPrimaryDark">#00b9e6</color>
     <color name="favorite.title.background">#00b9e6</color>
     <color name="favorite.textview.title.color">#ffffff</color>
+    <color name="color.background.view">#30000000</color>
+    <color name="color.background.test_resulting">#e8e9ea</color>
+    <color name="color.viewUnderTop">#30000000</color>
+
+
+
     <color name="item.recycleview.home.line">#b2aaaa</color>
+    <color name="setting.name.profile.color">#FF6699</color>
+    <color name="setting.line.color">#bbbbbb</color>
+    <color name="setting.line2.color">#bbbbbb</color>
 </resources>

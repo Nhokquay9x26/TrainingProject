@@ -23,28 +23,28 @@ import vn.asiantech.LearingEnglish.models.WordsEnglish;
  * @author mrson
  * Created by mrson on 31/08/2015.
  */
+@SuppressWarnings("deprecation")
 public class FavoriteAdapter extends  RecyclerView.Adapter<FavoriteAdapter.ViewHolder> implements TextToSpeech.OnInitListener{
     Context mcontext;
-    public List<WordsEnglish> mlist= new ArrayList<WordsEnglish>();
+    public List<WordsEnglish> mListWords= new ArrayList<>();
     TextToSpeech textToSpeech;
 
     public FavoriteAdapter(FragmentActivity mcontext, List<WordsEnglish> mlist) {
         this.mcontext = mcontext;
-        this.mlist = mlist;
+        this.mListWords = mlist;
     }
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup viewGroup, int viewType) {
         View v = LayoutInflater.from(viewGroup.getContext())
                 .inflate(R.layout.item_recycle_favorite, viewGroup, false);
-        ViewHolder viewHolder = new ViewHolder(v);
 
-        return viewHolder;
+        return new ViewHolder(v);
     }
 
     @Override
     public void onBindViewHolder(final ViewHolder holder, final int position) {
-        final WordsEnglish wordsEnglish= mlist.get(position);
+        final WordsEnglish wordsEnglish= mListWords.get(position);
         textToSpeech = new TextToSpeech(mcontext,this);
         holder.tvFavoriteWord.setText(wordsEnglish.getNewWord());
         holder.tvSpellWord.setText(wordsEnglish.getSpellingWord());
@@ -55,7 +55,7 @@ public class FavoriteAdapter extends  RecyclerView.Adapter<FavoriteAdapter.ViewH
             public void onClick(View v) {
                 Toast.makeText(mcontext,"click listen",Toast.LENGTH_SHORT).show();
 
-                toSpeed(wordsEnglish.getNewWord().toString());
+                toSpeed(wordsEnglish.getNewWord());
 
             }
         });
@@ -63,7 +63,7 @@ public class FavoriteAdapter extends  RecyclerView.Adapter<FavoriteAdapter.ViewH
 
     @Override
     public int getItemCount() {
-        return mlist.size();
+        return mListWords.size();
     }
 
     @Override
@@ -73,7 +73,9 @@ public class FavoriteAdapter extends  RecyclerView.Adapter<FavoriteAdapter.ViewH
         }
 
     }
+    @SuppressWarnings("deprecation")
     public void toSpeed(String toSpeak){
+        //noinspection deprecation
         textToSpeech.speak(toSpeak, TextToSpeech.QUEUE_FLUSH, null);
     }
 

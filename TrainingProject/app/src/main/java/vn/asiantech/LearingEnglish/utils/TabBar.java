@@ -16,6 +16,7 @@ import vn.asiantech.LearingEnglish.R;
  * Created by xuanphu on 31/08/2015.
  */
 
+@SuppressWarnings("ALL")
 public class TabBar extends RelativeLayout implements View.OnClickListener {
     public interface OnTabBarListener {
         void onTabClick(int position);

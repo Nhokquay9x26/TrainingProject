@@ -18,16 +18,16 @@
     <dimen name="rl.testing.rl_detail_time_paddingbottom">15dp</dimen>
 
     <dimen name="rl.testing.rl_contains_button_height">50dp</dimen>
-    <dimen name="rl.testing.rl_menubar_height">50dp</dimen>
+    <dimen name="rl.testing.rl_menubar_height">80dp</dimen>
     <dimen name="testing.textview.tv_question_left">5dp</dimen>
 
 
     <dimen name="rb.testing.rb_margin_top">5dp</dimen>
     <dimen name="rb.testing.rbA_margin_left">10dp</dimen>
     <dimen name="rb.testing.rb_margin_left">10dp</dimen>
-    <dimen name="testing.textview.text_size_title">23sp</dimen>
-    <dimen name="testing.imageview.padding_btn_search">13dp</dimen>
-    <dimen name="testing.view.height_bottom">48dp</dimen>
+    <dimen name="testing.textview.text_size_title">20sp</dimen>
+    <dimen name="testing.imageview.padding_btn_search">20dp</dimen>
+    <dimen name="testing.view.height_bottom">55dp</dimen>
     <dimen name="testing.rl.btn_margin_bottom">10dp</dimen>
     <dimen name="testing.view.viewline_margin_left">30dp</dimen>
     <dimen name="testing.view.viewline_margin_right">30dp</dimen>
@@ -38,9 +38,9 @@
     <dimen name="testing.imageview.img_previous_height">40dp</dimen>
     <dimen name="testing.imageview.img_next_width">40dp</dimen>
     <dimen name="testing.imageview.img_next_height">40dp</dimen>
-    <dimen name="testing.textview.size_number_question">18sp</dimen>
-    <dimen name="testing.textview.size_left_question">18sp</dimen>
-    <dimen name="testing.textview.size_time_left">18sp</dimen>
+
+    <dimen name="testing.textview.size_left_question">16sp</dimen>
+    <dimen name="testing.textview.size_time_left">16sp</dimen>
     <dimen name="testing.textview.text_size_screen_testing">15sp</dimen>
     <dimen name="testing.rbGroup.margin_left">25dp</dimen>
     <dimen name="testing.rbGroup.margin_right">25dp</dimen>
@@ -58,7 +58,7 @@
     <dimen name="login_btn_height">60dp</dimen>
     <dimen name="login_btnSignIn_top">40dp</dimen>
     <dimen name="login_btnSignIn_top_textsize">20sp</dimen>
-    
+
     <dimen name="image.loading.circle_">10dp</dimen>
     <dimen name="relative.splash.center_">90dp</dimen>
     <dimen name="image.padding_">20dp</dimen>
@@ -81,6 +81,14 @@
     <dimen name="item.recycleview.home.maginleft.line">30dp</dimen>
     <dimen name="item.recycleview.home.maginleft.view.maginright">57dp</dimen>
     <dimen name="item.recycleview.home.maginleft.view.with.height">10dp</dimen>
+    <dimen name="item.recycleview.magintop">20dp</dimen>
+    <dimen name="item.recycleview.maginright">10dp</dimen>
+    <dimen name="item.recycleview.maginleft">10dp</dimen>
+    <dimen name="item.recycleview.with.avata">70dp</dimen>
+    <dimen name="item.recycleview.textsize">18sp</dimen>
+    <dimen name="item.recycleview.with.select">50dp</dimen>
+    <dimen name="item.recycleview.maginleft.textview">10dp</dimen>
+    <dimen name="item.recycleview.magintop.textview">20dp</dimen>
     <dimen name="activity.main.viewpager.magintop">80dp</dimen>
     <dimen name="activity.main.viewpager.maginbottom">50dp</dimen>
     <dimen name="header.text.hight">80dp</dimen>
@@ -90,7 +98,7 @@
     <dimen name="custom.tabbar.main.img.tab.magintop">2dp</dimen>
     <dimen name="favorite.title.height">100dp</dimen>
     <dimen name="favorite.text.title.size">30sp</dimen>
-    <dimen name="favorite.rlfavorite.margin">20dp</dimen>
+    <dimen name="favorite.rl.favorite.margin">20dp</dimen>
     <dimen name="item.favorite.padding">10dp</dimen>
     <dimen name="favorite.rlhome.margin">20dp</dimen>
     <dimen name="item.recycle.animal.imgAvata.width.heght">50dp</dimen>
@@ -108,4 +116,57 @@
     <dimen name="fragment.home.recycle.magin.top">100dp</dimen>
     <dimen name="fragment.animal.recycle.magin">20dp</dimen>
     <dimen name="fragment.detail.rl.magin">20dp</dimen>
+    <dimen name="setting.item.profile.height">100dp</dimen>
+    <dimen name="setting.rllayout.marginleft">10dp</dimen>
+    <dimen name="setting.rllayout.marginright">10dp</dimen>
+    <dimen name="setting.rllayout.nameprofile.paddingleft">10dp</dimen>
+    <dimen name="setting.rl.profile.marginleft">10dp</dimen>
+    <dimen name="setting.rl.profile.margin.left">10dp</dimen>
+    <dimen name="setting.rl.profile.margin.right">10dp</dimen>
+    <dimen name="setting.rl.background.margin">10dp</dimen>
+    <dimen name="setting.rl.top.height">70dp</dimen>
+    <dimen name="setting.top.setting.padding">10dp</dimen>
+    <dimen name="setting.line.height">0.1dp</dimen>
+    <dimen name="setting.line2.height">0.1dp</dimen>
+
+    <dimen name="testing.textview.tv_submit_padding_lr">15dp</dimen>
+    <dimen name="testing.textview.tv_submit_padding_bt">10dp</dimen>
+    <dimen name="rl.testresulting.rl_result_menubar_height">50dp</dimen>
+
+    <dimen name="testresulting.textview.title_size">18sp</dimen>
+    <dimen name="testing.textview.size_time_of_question">16sp</dimen>
+    <dimen name="listresult.textview.textsize_question">15sp</dimen>
+    <dimen name="listresult.imageview.size_check_true_false">60dp</dimen>
+    <dimen name="listresult.rl.height_item">60dp</dimen>
+    <dimen name="listresult.textview.magrin_left">20dp</dimen>
+    <dimen name="listresult.textview.magrin_right">10dp</dimen>
+    <dimen name="testresulting.margin_left_right">20dp</dimen>
+    <dimen name="testresulting.textview.total_size">17sp</dimen>
+    <dimen name="testresulting.rl.height_bottom">70dp</dimen>
+    <dimen name="ratings.linearlayout.top_height">40dp</dimen>
+    <dimen name="ratings.textview.text_rank_size">14sp</dimen>
+    <dimen name="ratings.textview.text_user_size">14sp</dimen>
+    <dimen name="ratings.textview.text_point_size">14sp</dimen>
+    <dimen name="ratings.textview.text_rank_margin_left">10dp</dimen>
+    <dimen name="ratings.textview.text_rank_margin_right">10dp</dimen>
+    <dimen name="ratings.reycleview.margin_bottom">20dp</dimen>
+    <dimen name="ratings.reycleview.margin_top">10dp</dimen>
+    <dimen name="ratings.imageview.avatar_margin_left">20dp</dimen>
+    <dimen name="rating.textview.magrin_lr">20dp</dimen>
+    <dimen name="ratings.textview.text_items">14sp</dimen>
+    <dimen name="ratings.rl.height_top">60dp</dimen>
+    <dimen name="rating.imageview.avatar_height">40dp</dimen>
+    <dimen name="rating.imageview.avatar_width">40dp</dimen>
+    <dimen name="ratings.textview.tvname_margin_left">10dp</dimen>
+    <dimen name="ratings.view.height_line">1dp</dimen>
+    <dimen name="testing.progressbar.width">30dp</dimen>
+    <dimen name="testing.progressbar.height">30dp</dimen>
+    <dimen name="testing.progressbar.margin_right">50dp</dimen>
+    <dimen name="testing.view.height_line">0.5dp</dimen>
+    <dimen name="testing.button.width_submit">30dp</dimen>
+    <dimen name="testing.button.height_submit">30dp</dimen>
+    <dimen name="testing.button.margin_right_submit">5dp</dimen>
+
+
+
 </resources>

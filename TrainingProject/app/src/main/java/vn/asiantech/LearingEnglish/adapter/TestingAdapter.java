@@ -19,7 +19,6 @@ public class TestingAdapter extends FragmentPagerAdapter {
 
     @Override
     public Fragment getItem(int position) {
-
         return mTestingFragment.get(position);
     }
 
