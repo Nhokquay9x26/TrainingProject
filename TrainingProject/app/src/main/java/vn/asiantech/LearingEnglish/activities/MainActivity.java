@@ -16,19 +16,21 @@ import android.widget.Toast;
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.EActivity;
 import org.androidannotations.annotations.ViewById;
+
 import vn.asiantech.LearingEnglish.R;
 import vn.asiantech.LearingEnglish.container.SettingContainer;
 import vn.asiantech.LearingEnglish.container.FavoriteContainer;
 import vn.asiantech.LearingEnglish.container.TabOneContainer;
 import vn.asiantech.LearingEnglish.container.TabTwoContainer;
 import vn.asiantech.LearingEnglish.fragments.BaseContainerFragment;
+import vn.asiantech.LearingEnglish.fragments.BaseFragment;
 import vn.asiantech.LearingEnglish.views.HackyViewPager;
 import vn.asiantech.LearingEnglish.views.HeaderBar;
 import vn.asiantech.LearingEnglish.views.PagerSlidingTabStrip;
 
 
 @EActivity(R.layout.activity_main)
-public class MainActivity extends BaseActionBarActivity implements HeaderBar.OnHeaderBarListener{
+public class MainActivity extends BaseActionBarActivity implements HeaderBar.OnHeaderBarListener, BaseFragment.OnBaseFragmentListener {
 
     private static final int PLAY_SERVICES_RESOLUTION_REQUEST = 9000;
     private final String TAG = MainActivity.this.getClass().getName();
@@ -48,15 +50,15 @@ public class MainActivity extends BaseActionBarActivity implements HeaderBar.OnH
     /*
     * init header
     */
-    protected HeaderBar headerBar;
+    protected HeaderBar mHeaderBar;
 
     @AfterViews
     void afterView() {
         LayoutInflater inflater = LayoutInflater.from(this);
         View customView = inflater.inflate(R.layout.custom_actionbar, null);
         // Initilization
-        headerBar = (HeaderBar) customView.findViewById(R.id.header_bar);
-        headerBar.setOnHeaderBarListener(this);
+        mHeaderBar = (HeaderBar) customView.findViewById(R.id.header_bar);
+        mHeaderBar.setOnHeaderBarListener(this);
         mFramelayoutHeader.addView(customView);
         setValue();
         setEvent();
@@ -200,10 +202,20 @@ public class MainActivity extends BaseActionBarActivity implements HeaderBar.OnH
         }
     }
 
+    @Override
+    public void setHeaderTitle(String title) {
+        setHeader(title);
+    }
+
+    @Override
+    public void setTypeHeaderBar(HeaderBar.HeaderBarType type) {
+        mHeaderBar.setType(type);
+    }
+
     /*
-    * set show/ hide view in header
-    */
+        * set show/ hide view in header
+        */
     private void setHeader(String title) {
-        headerBar.setTitle(title);
+        mHeaderBar.setTitle(title);
     }
 }
