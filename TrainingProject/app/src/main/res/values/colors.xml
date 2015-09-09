@@ -66,9 +66,9 @@
     <color name="textview.ratings.textcolor">#5f6161</color>
     <color name="view.ratings">#e8e9ea</color>
 
-    <color name="transparent">#a4080808</color>
+    <color name="transparent">#40000000</color>
     <color name="blue">#00b9e6</color>
     <color name="signup.textcolorhint">#cd787878</color>
-    <color name="textview.detail.color.error">#FF0000</color>
+    <color name="textview.signin.color.error">#FF0000</color>
 
 </resources>

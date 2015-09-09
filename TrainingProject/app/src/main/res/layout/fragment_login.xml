@@ -7,6 +7,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@color/transparent">
         android:background="@color/relativelayout.login.background.25">
 
     </RelativeLayout>
@@ -20,12 +21,12 @@
         android:layout_marginLeft="@dimen/relativelayout.signin.margin_left.23dp"
         android:layout_marginRight="@dimen/relativelayout.signin.margin_right.23dp"
         android:layout_marginStart="@dimen/relativelayout.signin.margin_left.23dp"
-        android:layout_marginTop="@dimen/relativelayout.signin.margin_top.30dp">
+        android:layout_marginTop="@dimen/relativelayout.signin.margin_top.50dp">
 
-        <RelativeLayout
+        <LinearLayout
             android:id="@+id/rlAvatar"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/relativelayout.signin.height.120dp"
+            android:layout_height="wrap_content"
             android:background="@color/relativelayout.signin.avatar.backgrounds"
             android:gravity="center">
 
@@ -33,28 +34,31 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
+                android:layout_marginBottom="@dimen/image.signin.margin_bottom.10dp"
                 android:layout_marginTop="@dimen/image.signin.margin_top.10dp"
                 android:contentDescription="@null"
                 android:scaleType="centerInside"
                 android:src="@drawable/ic_avatar" />
 
-        </RelativeLayout>
+        </LinearLayout>
 
-        <RelativeLayout
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_below="@+id/rlAvatar"
             android:background="@color/relativelayout.signin.input.background"
+            android:orientation="vertical"
             android:paddingEnd="@dimen/relativelayout.signin.padding_right.23dp"
             android:paddingLeft="@dimen/relativelayout.signin.padding_left.23dp"
             android:paddingRight="@dimen/relativelayout.signin.padding_right.23dp"
             android:paddingStart="@dimen/relativelayout.signin.padding_right.23dp"
-            android:paddingTop="@dimen/relativelayout.signin.padding_top.30dp">
+            android:weightSum="3">
 
             <EditText
                 android:id="@+id/edtUsername"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:backgroundTint="@color/edittext.signin.color.line"
                 android:hint="@string/edittext.signin.hint.username" />
 
@@ -63,23 +67,23 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/edtUsername"
-                android:layout_marginTop="@dimen/editText.signin.margin_top"
+                android:layout_weight="1"
                 android:backgroundTint="@color/edittext.signin.color.line"
                 android:hint="@string/edittext.signin.hint.password"
-                android:inputType="textPassword" />
+                android:inputType="text" />
 
             <TextView
                 android:id="@+id/tvError"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_above="@+id/btnSignIn"
-                android:textColor="@color/textview.detail.color.error" />
+                android:layout_weight="1"
+                android:textColor="@color/textview.signin.color.error" />
 
             <Button
                 android:id="@+id/btnSignIn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_above="@+id/tvForgotPassword"
                 android:layout_marginTop="@dimen/button.margin.top"
                 android:background="@color/relativelayout.signin.avatar.backgrounds"
                 android:text="@string/button.signin.text"
@@ -96,7 +100,7 @@
                 android:text="@string/textview.signin.text.forgot_password"
                 android:textColor="@color/textview.signin.color.forgot_password" />
 
-        </RelativeLayout>
+        </LinearLayout>
 
     </RelativeLayout>
 
