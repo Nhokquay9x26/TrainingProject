@@ -3,15 +3,48 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <android.support.v4.view.ViewPager
-        android:id="@+id/viewpagerDetail"
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/rlHeaderDetail"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/fragment.detail.viewpager.height"></android.support.v4.view.ViewPager>
+        android:layout_height="@dimen/header.text.hight"
+        android:background="@color/colorPrimary">
+
+        <ImageView
+            android:id="@+id/imgBackHeaderDetail"
+            android:layout_width="@dimen/header.imgBack.width.height"
+            android:layout_height="@dimen/header.imgBack.width.height"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/header.imgBack.maginleft"
+            android:src="@drawable/icon_back" />
+
+        <TextView
+            android:id="@+id/tvHeaderDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/header.Detail"
+            android:textColor="@color/color.white"
+            android:textSize="@dimen/header.textsite" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/header.imgsearch.maginright"
+            android:src="@drawable/icon_search" />
+    </RelativeLayout>
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/fragment.detail.rl.height"
-        android:layout_below="@+id/viewpagerDetail"
-        android:layout_marginTop="@dimen/fragment.detail.rl.magintop"
-        android:background="@drawable/home_rl_background"></RelativeLayout>
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rlHeaderDetail"
+        android:layout_margin="@dimen/fragment.detail.rl.magin"
+        android:background="@drawable/home_rl_background">
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewpagerDetail"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </RelativeLayout>
 </RelativeLayout>

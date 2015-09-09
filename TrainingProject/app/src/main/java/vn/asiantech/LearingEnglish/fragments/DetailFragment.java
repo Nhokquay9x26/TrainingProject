@@ -28,6 +28,7 @@ public class DetailFragment extends BaseFragment implements ViewpagerDetailAdapt
     private int mPosition;
     private ViewPager mViewpager;
     private ViewpagerDetailAdapter mAdapter;
+    private ImageView mImgBackHeaderDetail;
 
     public DetailFragment(ArrayList<AnimalCategory> mArraylist, int mPosition) {
         this.mArraylist = mArraylist;
@@ -41,6 +42,13 @@ public class DetailFragment extends BaseFragment implements ViewpagerDetailAdapt
         mAdapter = new ViewpagerDetailAdapter(getActivity(),mArraylist, this);
         mViewpager.setAdapter(mAdapter);
         mViewpager.setCurrentItem(mPosition);
+        mImgBackHeaderDetail = (ImageView)mView.findViewById(R.id.imgBackHeaderDetail);
+        mImgBackHeaderDetail.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                getActivity().onBackPressed();
+            }
+        });
 
         return mView;
     }

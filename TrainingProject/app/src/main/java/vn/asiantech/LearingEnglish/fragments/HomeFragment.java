@@ -1,14 +1,16 @@
 package vn.asiantech.LearingEnglish.fragments;
 
-import android.app.ActionBar;
+/**
+ * @Author xuanphu
+ * Created by xuanphu on 31/08/2015.
+ */
+
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.View;
+import android.widget.ImageView;
 
-import org.androidannotations.annotations.AfterViews;
-import org.androidannotations.annotations.EFragment;
-import org.androidannotations.annotations.ViewById;
+import org.androidannotations.annotations.*;
 
 import java.util.ArrayList;
 
@@ -16,15 +18,11 @@ import vn.asiantech.LearingEnglish.R;
 import vn.asiantech.LearingEnglish.adapter.HomeAdapter;
 import vn.asiantech.LearingEnglish.models.HomeCategory;
 import vn.asiantech.LearingEnglish.utils.IsCallTop;
-import vn.asiantech.LearingEnglish.utils.TabBar;
 
-/**
- * @Author xuanphu
- * Created by xuanphu on 04/09/2015.
- */
 @EFragment(R.layout.fragment_home)
-public class HomeFragment extends BaseFragment implements IsCallTop, TabBar.OnTabBarListener {
-
+public class HomeFragment extends BaseFragment implements IsCallTop {
+    @ViewById(R.id.imgBackHeaderHome)
+    ImageView mImgBackHeaderHome;
     @ViewById(R.id.recyclerHome)
     RecyclerView mRecyclerHome;
     HomeAdapter mHomeAdapter;
@@ -33,9 +31,9 @@ public class HomeFragment extends BaseFragment implements IsCallTop, TabBar.OnTa
     public HomeFragment() {
         fakedata();
     }
-
     @AfterViews
     void afterViews() {
+        mImgBackHeaderHome.setVisibility(View.INVISIBLE);
         mHomeAdapter = new HomeAdapter(getActivity(), mArraylists, this);
         mRecyclerHome.setLayoutManager(new LinearLayoutManager(getActivity().getBaseContext()));
         mRecyclerHome.setAdapter(mHomeAdapter);
@@ -65,7 +63,6 @@ public class HomeFragment extends BaseFragment implements IsCallTop, TabBar.OnTa
         homeCategory3.setMNameHome("Vegetables");
         mArraylists.add(homeCategory3);
     }
-
     @Override
     public void callFragmentAnimal() {
         AnimalFragment_ mFragment = new AnimalFragment_();
@@ -76,8 +73,4 @@ public class HomeFragment extends BaseFragment implements IsCallTop, TabBar.OnTa
 
     }
 
-    @Override
-    public void onTabClick(int position) {
-
-    }
 }

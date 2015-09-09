@@ -1,17 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <RelativeLayout
+
+    <FrameLayout
+        android:id="@+id/framlayoutTop"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@id/llFavorite"
-        android:background="@drawable/home_rl_background">
+        android:layout_height="match_parent">
+
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/rlHeaderHome"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/header.text.hight"
+            android:background="@color/colorPrimary">
+
+            <ImageView
+                android:id="@+id/imgBackHeaderHome"
+                android:layout_width="@dimen/header.imgBack.width.height"
+                android:layout_height="@dimen/header.imgBack.width.height"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/header.imgBack.maginleft"
+                android:src="@drawable/icon_back" />
+
+            <TextView
+                android:id="@+id/tvHeaderHome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/header.home"
+                android:textColor="@color/color.white"
+                android:textSize="@dimen/header.textsite" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/header.imgsearch.maginright"
+                android:src="@drawable/icon_search" />
+        </RelativeLayout>
 
         <android.support.v7.widget.RecyclerView
             android:id="@+id/recyclerHome"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/fragment.home.recycle.magin.bottom.left.right"
+            android:layout_marginLeft="@dimen/fragment.home.recycle.magin.bottom.left.right"
+            android:layout_marginRight="@dimen/fragment.home.recycle.magin.bottom.left.right"
+            android:layout_marginTop="@dimen/fragment.home.recycle.magin.top"
+            android:background="@drawable/home_rl_background"
             android:scrollbars="vertical" />
-    </RelativeLayout>
+    </FrameLayout>
 </RelativeLayout>

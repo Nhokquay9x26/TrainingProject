@@ -5,7 +5,6 @@ import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.ViewPager;
-import android.util.Log;
 import android.widget.TextView;
 
 import org.androidannotations.annotations.AfterViews;
@@ -15,9 +14,9 @@ import org.androidannotations.annotations.ViewById;
 
 import vn.asiantech.LearingEnglish.R;
 import vn.asiantech.LearingEnglish.fragments.FavoriteFragment_;
+import vn.asiantech.LearingEnglish.fragments.HomeFragment_;
 import vn.asiantech.LearingEnglish.fragments.QuestionFragment;
 import vn.asiantech.LearingEnglish.fragments.RatingsFragment;
-import vn.asiantech.LearingEnglish.fragments.TopFragment_;
 import vn.asiantech.LearingEnglish.utils.TabBar;
 
 /**
@@ -30,9 +29,7 @@ public class MainActivity extends FragmentActivity {
     ViewPager mViewPagerMain;
     @ViewById(R.id.tabbarMain)
     TabBar mTabBarMain;
-    @ViewById(R.id.tvHeader)
-    TextView tvHeader;
-    private ViewPagerAdapter mAdapter;
+    ViewPagerAdapter mAdapter;
 
     @OptionsItem(android.R.id.home)
     protected void backAction() {
@@ -80,7 +77,7 @@ public class MainActivity extends FragmentActivity {
             Fragment f = null;
             switch (position) {
                 case 0:
-                    f = new TopFragment_();
+                    f = new HomeFragment_();
                     break;
                 case 1:
                     f = new FavoriteFragment_();

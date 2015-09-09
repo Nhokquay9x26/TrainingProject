@@ -32,13 +32,6 @@ public class AnimalFragment extends BaseFragment implements TabBar.OnTabBarListe
 
     @AfterViews
     void afterViews() {
-//        TabBar.mImgBackHeader.setVisibility(View.VISIBLE);
-//        TabBar.mImgBackHeader.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                    getActivity().onBackPressed();
-//            }
-//        });
         mAnimalAdapter = new AnimalAdapter(getActivity(), mArraylists);
         mRecyclerAnimal.setLayoutManager(new LinearLayoutManager(getActivity().getBaseContext()));
         mRecyclerAnimal.setAdapter(mAnimalAdapter);
@@ -59,6 +52,11 @@ public class AnimalFragment extends BaseFragment implements TabBar.OnTabBarListe
 
             }
         }));
+    }
+
+    @Click
+    void imgBackHeaderAnimal(){
+        getActivity().onBackPressed();
     }
 
     private void fakedata() {
