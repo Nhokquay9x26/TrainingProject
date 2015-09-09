@@ -15,14 +15,14 @@ import vn.asiantech.LearingEnglish.adapter.AdapterTopPoint;
 import vn.asiantech.LearingEnglish.models.TopPoint;
 
 /**
- * Created by sunday on 03/09/2015.
+ *  Created by sunday on 03/09/2015.
  */
 @EFragment(R.layout.fragment_top_point)
 public class TopPointFragment extends BaseFragment{
     private List<TopPoint> mTopPoints = new ArrayList<TopPoint>();
 
     @ViewById(R.id.recyclerViewTopPoint)
-    RecyclerView recyclerViewTopPoint;
+    RecyclerView mRecyclerViewTopPoint;
     @Override
     public void onAttach(Activity activity) {
         super.onAttach(activity);
@@ -31,10 +31,10 @@ public class TopPointFragment extends BaseFragment{
     protected void AfterViews(){
         creatData();
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getActivity());
-        AdapterTopPoint mAdapter = new AdapterTopPoint(mTopPoints, getActivity());
-        //recyclerViewTopPoint.setHasFixedSize(true);
-        recyclerViewTopPoint.setLayoutManager(linearLayoutManager);
-        recyclerViewTopPoint.setAdapter(mAdapter);
+        AdapterTopPoint mAdapter = new AdapterTopPoint(mTopPoints);
+        mRecyclerViewTopPoint.setHasFixedSize(true);
+        mRecyclerViewTopPoint.setLayoutManager(linearLayoutManager);
+        mRecyclerViewTopPoint.setAdapter(mAdapter);
     }
     public void creatData(){
         mTopPoints.add(new TopPoint("1nd", R.drawable.ico_avatar, "MatinerJack", 200));

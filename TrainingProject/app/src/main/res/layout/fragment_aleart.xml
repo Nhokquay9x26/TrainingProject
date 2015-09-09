@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/link_text_material_dark">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/background_light"
+        android:layout_centerInParent="true">
+        <ImageView
+            android:id="@+id/imgAleart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/aleart_margin_top"
+            android:layout_marginLeft="@dimen/textView.aleart_margin_left"
+            android:layout_marginStart="@dimen/textView.aleart_margin_left"
+            android:background="@null"
+            android:src="@drawable/ic_aleart"
+            android:contentDescription="@string/app_name"/>
+        <TextView
+            android:id="@+id/tvAleart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/imgAleart"
+            android:layout_toEndOf="@id/imgAleart"
+            android:layout_marginTop="@dimen/textView.aleart_margin_top"
+            android:layout_marginLeft="@dimen/textView.aleart_margin_left"
+            android:layout_marginStart="@dimen/textView.aleart_margin_left"
+            android:text="@string/textView.text.aleart_setting"
+            android:textSize="@dimen/textView.textSize_aleart"
+            android:textColor="@color/text_user_name_setting"/>
+
+        <View
+            android:id="@+id/viewLineAleart"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/view.height"
+            android:layout_below="@+id/imgAleart"
+            android:layout_marginTop="@dimen/view.aleart_margin_top"
+            android:background="@color/view_line_setting"/>
+
+
+
+        <TextView
+            android:id="@+id/tvTimeAleart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/viewLineAleart"
+            android:layout_marginLeft="@dimen/editText.time_aleart_margin_left"
+            android:layout_marginStart="@dimen/editText.time_aleart_margin_left"
+            android:layout_marginTop="@dimen/textView.time_aleart_margin_top"
+            android:text="@string/textView.text.time_aleart"
+            android:textSize="@dimen/textView.textSize_time_aleart" />
+
+        <TextView
+            android:id="@+id/tvViewTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/tvTimeAleart"
+            android:layout_marginLeft="@dimen/textView.view_time_margin_left"
+            android:layout_marginStart="@dimen/textView.view_time_margin_left"
+            android:layout_toEndOf="@id/tvTimeAleart"
+            android:layout_toRightOf="@+id/tvTimeAleart"
+            android:textSize="@dimen/textView.textSize_time_aleart"
+            android:textColor="@color/text_user_name_setting"
+            android:text="@string/textView.text.view_time" />
+
+        <Button
+            android:id="@+id/btnAlarm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/tvViewTime"
+            android:layout_marginLeft="@dimen/textView.view_time_margin_left"
+            android:layout_marginStart="@dimen/textView.view_time_margin_left"
+            android:layout_toEndOf="@id/tvViewTime"
+            android:layout_toRightOf="@id/tvViewTime"
+            android:text="@string/button.text_alarm"
+            android:background="@color/header.background"/>
+
+        <TextView
+            android:id="@+id/tvTurnOnAleart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/tvTimeAleart"
+            android:layout_alignStart="@id/tvTimeAleart"
+            android:layout_below="@+id/tvTimeAleart"
+            android:layout_marginTop="@dimen/textView.turn_on_margin_top"
+            android:text="@string/textView.text.turn_on_aleart"
+            android:textSize="@dimen/textView.textSize_turn_on" />
+
+        <android.support.v7.widget.SwitchCompat
+            android:id="@+id/switch_aleart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textOn="@string/textOn.text"
+            android:textOff="@string/textOff.text"
+            android:layout_alignBaseline="@id/tvTurnOnAleart"
+            android:layout_alignEnd="@id/btnAlarm"
+            android:layout_alignRight="@id/btnAlarm"
+            android:layout_below="@id/btnAlarm"
+         />
+<View
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/view.aleart_height"
+    android:layout_below="@id/tvTurnOnAleart" />
+    </RelativeLayout>
+
+
+</RelativeLayout>
