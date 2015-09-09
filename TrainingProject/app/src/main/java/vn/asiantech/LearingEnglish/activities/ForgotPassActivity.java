@@ -2,6 +2,7 @@ package vn.asiantech.LearingEnglish.activities;
 
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import org.androidannotations.annotations.EActivity;
 import org.androidannotations.annotations.*;
@@ -14,10 +15,10 @@ import vn.asiantech.LearingEnglish.R;
 @EActivity(R.layout.activity_forgot_pass)
 public class ForgotPassActivity extends BaseActionBarActivity {
     @ViewById(R.id.btnForgot_activity_forgot_pass)
-    Button btnForgot;
+    Button mBtnForgot;
 
     @ViewById(R.id.edtEmail_activity_forgot_pass)
-    EditText edtEmail;
+    EditText mEdtEmail;
 
     @Override
     void afterView() {
@@ -26,6 +27,12 @@ public class ForgotPassActivity extends BaseActionBarActivity {
 
     @Click(R.id.btnForgot_activity_forgot_pass)
     void forgotPass(){
-        edtEmail.setText("hello");
+        String mEmail = mEdtEmail.getText().toString();
+        if (mEmail.equals("")){
+            Toast.makeText(ForgotPassActivity.this, R.string.activity_forgot_pass_Text_Warring, Toast.LENGTH_SHORT).show();
+        }
+        else {
+            //TODO proccess forgotPass
+        }
     }
 }
