@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/card_view"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginBottom="@dimen/cardView.margin_top_bottom"
@@ -145,7 +144,7 @@
                 android:textSize="@dimen/textView.text.user_name_setting" />
 
             <ImageButton
-                android:id="@+id/imgBtnNextAlarmSetting"
+                android:id="@+id/imgBtnNextAleartSetting"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignBottom="@id/imgAleartSetting"

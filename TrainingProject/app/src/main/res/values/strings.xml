@@ -37,6 +37,15 @@
     <string name="textview.text.two">:</string>
     <string name="textview.text.spell">/spell/</string>
     <string name="textView.top_category_name">Animal</string>
+    <string name="textView.text.time_aleart">Time:</string>
+    <string name="textView.text.view_time">08:30 AM</string>
+    <string name="textView.text.turn_on_aleart">Turn On:</string>
+    <string name="textView.text.close_app">Do you want to log out this application?</string>
+    <string name="text.yes">Yes</string>
+    <string name="text.no">No</string>
+    <string name="textOn.text">On</string>
+    <string name="textOff.text">Off</string>
+    <string name="button.text_alarm">Alarm</string>
     <string name="textview.detail_vocabulary">Cloud</string>
     <string name="textview.mean_vocabulary">Cloud /klad/: Mây, đám mây...</string>
     <string name="textview.mean">Mean:</string>

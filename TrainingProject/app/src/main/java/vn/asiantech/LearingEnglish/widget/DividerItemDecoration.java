@@ -1,4 +1,4 @@
-package widget;
+package vn.asiantech.LearingEnglish.widget;
 
 import android.content.Context;
 import android.content.res.TypedArray;
