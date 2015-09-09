@@ -14,17 +14,17 @@ import vn.asiantech.LearingEnglish.activities.MainActivity_;
 public class AleartReceiver extends BroadcastReceiver {
     @Override
     public void onReceive(Context context, Intent intent) {
-        createNotification(context,"Time Up", "5 second", "You should study English right now");
+        createNotification(context,"Time Up", "You should study English right now", "Learning English");
     }
 
     public void createNotification(Context context, String msg, String msgText, String msgAleart) {
         PendingIntent notifiIntent = PendingIntent.getActivity(context, 0, new Intent(context, MainActivity_.class), 0);
 
         NotificationCompat.Builder buidler = new NotificationCompat.Builder(context)
-                .setSmallIcon(R.drawable.ic_favorite)
+                .setSmallIcon(R.drawable.ic_favorite_focus)
                 .setContentTitle(msg)
                 .setTicker(msgAleart)
-                .setContentText(msgAleart);
+                .setContentText(msgText);
 
         buidler.setContentIntent(notifiIntent);
         buidler.setDefaults(NotificationCompat.DEFAULT_SOUND);

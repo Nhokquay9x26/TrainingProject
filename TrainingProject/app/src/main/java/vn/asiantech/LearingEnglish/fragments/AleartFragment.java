@@ -23,13 +23,13 @@ import vn.asiantech.LearingEnglish.R;
 import vn.asiantech.LearingEnglish.eventbus.AleartReceiver;
 
 /**
- * Created by sunday on 04/09/2015.
+ *  Created by sunday on 04/09/2015.
  */
 @EFragment(R.layout.fragment_aleart)
 public class AleartFragment extends BaseFragment{
-    Calendar mCal;
-    int mHour;
-    int mMinute;
+    private Calendar mCal;
+    private int mHour;
+    private int mMinute;
     public static final int TIME_HOUR = 12;
     @ViewById(R.id.tvViewTime)
     TextView mTvViewTime;
