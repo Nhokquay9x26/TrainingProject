@@ -18,12 +18,12 @@ public class TopAdapter extends RecyclerView.Adapter<TopAdapter.TopViewHolder> {
 
     private Fragment mFragment;
     private ArrayList<Top> mListTop;
-    private OnTopListenner mOnTopListenner;
+    private OnTopListener mOnTopListener;
 
-    public TopAdapter(Fragment mFragment, ArrayList<Top> mListTop, OnTopListenner listener) {
+    public TopAdapter(Fragment mFragment, ArrayList<Top> mListTop, OnTopListener listener) {
         this.mFragment = mFragment;
         this.mListTop = mListTop;
-        mOnTopListenner = listener;
+        mOnTopListener = listener;
     }
 
     @Override
@@ -39,8 +39,8 @@ public class TopAdapter extends RecyclerView.Adapter<TopAdapter.TopViewHolder> {
         holder.mImgDetail.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(mOnTopListenner != null){
-                    mOnTopListenner.OnClickItem(position);
+                if (mOnTopListener != null) {
+                    mOnTopListener.OnClickItem(position);
                 }
             }
         });
@@ -65,7 +65,8 @@ public class TopAdapter extends RecyclerView.Adapter<TopAdapter.TopViewHolder> {
 
         }
     }
-    public interface OnTopListenner{
+
+    public interface OnTopListener {
         void OnClickItem(int position);
     }
 }
