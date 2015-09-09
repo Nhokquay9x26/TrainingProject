@@ -13,22 +13,22 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
             android:text="@string/textview.top.text"
             android:textColor="@color/white"
-            android:textSize="@dimen/textview.top.textsize_28sp"
-            android:layout_centerVertical="true"
-            android:layout_centerHorizontal="true"/>
+            android:textSize="@dimen/textview.top.textsize_28sp" />
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_search"
-            android:layout_alignParentRight="true"
             android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
-            android:contentDescription="@null"
             android:layout_marginEnd="@dimen/img.top.margin_right_28dp"
-            android:layout_marginRight="@dimen/img.top.margin_right_28dp"/>
+            android:layout_marginRight="@dimen/img.top.margin_right_28dp"
+            android:contentDescription="@null"
+            android:src="@drawable/ic_search" />
 
     </RelativeLayout>
 
@@ -36,20 +36,19 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/rlTop"
+        android:layout_marginBottom="@dimen/relativelayout.top.margin_bottom_6dp"
         android:layout_marginEnd="@dimen/relativelayout.top.margin_right_14dp"
-        android:layout_marginStart="@dimen/relativelayout.top.margin_left_14dp"
-        android:layout_marginRight="@dimen/relativelayout.top.margin_right_14dp"
         android:layout_marginLeft="@dimen/relativelayout.top.margin_left_14dp"
-        android:layout_marginTop="@dimen/relativelayout.top.margin_top_22dp"
-        android:layout_marginBottom="@dimen/relativelayout.top.margin_bottom_6dp">
+        android:layout_marginRight="@dimen/relativelayout.top.margin_right_14dp"
+        android:layout_marginStart="@dimen/relativelayout.top.margin_left_14dp"
+        android:layout_marginTop="@dimen/relativelayout.top.margin_top_22dp">
 
         <ListView
             android:id="@+id/lvTop"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@drawable/shape_list_favorite"
-            android:divider="@android:color/transparent">
-        </ListView>
+            android:divider="@android:color/transparent" />
 
     </RelativeLayout>
 </RelativeLayout>

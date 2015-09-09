@@ -49,7 +49,6 @@
                 android:layout_height="match_parent"
                 android:layout_above="@+id/btnSignIn"
                 android:layout_below="@+id/rlAvatar"
-                android:layout_marginBottom="@dimen/checkbox.signup.margin_top_20dp"
                 android:background="@color/white">
 
                 <LinearLayout
@@ -108,7 +107,6 @@
                         android:id="@+id/checkBoxEmail"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/checkbox.signup.margin_top_20dp"
                         android:layout_weight="1"
                         android:background="@android:color/transparent"
                         android:text="@string/textview.hint.via_email" />
@@ -117,7 +115,6 @@
                         android:id="@+id/btnSignUp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/checkbox.signup.margin_top_20dp"
                         android:background="@color/blue"
                         android:text="@string/button.sigup"
                         android:layout_alignParentBottom="true"
@@ -133,6 +130,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
+                android:layout_marginTop="@dimen/button.signup.margin_top.20dp"
                 android:background="@color/white"
                 android:text="@string/button.signin"
                 android:textAllCaps="false"

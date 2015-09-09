@@ -18,6 +18,7 @@
     <!--dimen file signin-->
     <dimen name="relativelayout.signin.margin_left.23dp">23dp</dimen>
     <dimen name="relativelayout.signin.margin_top.50dp">50dp</dimen>
+    <dimen name="relativelayout.signin.margin_top.30dp">30dp</dimen>
     <dimen name="relativelayout.signin.margin_right.23dp">23dp</dimen>
     <dimen name="relativelayout.signin.margin_bottom.30dp">30dp</dimen>
     <dimen name="image.signin.margin_top.10dp">10dp</dimen>
@@ -179,9 +180,11 @@
     <dimen name="relativelayout.signup.margin_left_22dp">22dp</dimen>
     <dimen name="relativelayout.signup.margin_right_22dp">22dp</dimen>
     <dimen name="relativelayout.signup.margin_top_5dp">5dp</dimen>
-    <dimen name="checkbox.signup.margin_top_20dp">20dp</dimen>
+    <dimen name="checkbox.signup.margin_top_10dp">10dp</dimen>
     <dimen name="textview.signup.margin_left_10dp">10dp</dimen>
     <dimen name="button.signup.textsize_7pt">7pt</dimen>
+    <dimen name="button.signup.margin_top.20dp">20dp</dimen>
+    <dimen name="button.signup.textsize.18sp">18sp</dimen>
 
     <!--  dimen file fragment_test. -->
     <dimen name="relativelayout.test.height_100dp">100dp</dimen>
