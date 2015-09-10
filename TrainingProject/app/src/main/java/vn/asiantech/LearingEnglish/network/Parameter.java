@@ -5,7 +5,7 @@ package vn.asiantech.LearingEnglish.network;
  * 敢えてアクセス修飾子を無しにしてます。
  */
 public class Parameter {
-
     static final String EMAIL = "email";
     static final String PASSWORD = "password";
+    static final String NAME = "name";
 }

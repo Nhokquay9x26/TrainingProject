@@ -1,5 +1,6 @@
 package vn.asiantech.LearingEnglish.AlarmServices;
 
+import android.app.Dialog;
 import android.app.Service;
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -12,7 +13,12 @@ import android.os.CountDownTimer;
 import android.os.Handler;
 import android.os.IBinder;
 import android.util.Log;
+import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
+import android.widget.TextView;
 
+import vn.asiantech.LearingEnglish.R;
 import vn.asiantech.LearingEnglish.fragments.SettingFragment;
 
 /**
@@ -20,17 +26,16 @@ import vn.asiantech.LearingEnglish.fragments.SettingFragment;
  */
 public class MyServices extends Service {
     private MyReceiver mMyReceiver;
-    private int i = 0;
-    private int limit = 100;
     private MediaPlayer player;
     private CountDownTimer mCountDownTimer;
     private int second = 0;
     private Handler mHandler = new Handler();
     private Runnable mRunable;
+    private TextView mTvCancleDialog;
+    private Dialog mDialog;
 
     @Override
     public IBinder onBind(Intent intent) {
-
         return null;
     }
 
@@ -38,10 +43,21 @@ public class MyServices extends Service {
     public void onCreate() {
         super.onCreate();
         IntentFilter intentFilter = new IntentFilter(SettingFragment.INTENT_FILTER);
+
         if (mMyReceiver == null) {
             mMyReceiver = new MyReceiver();
             registerReceiver(mMyReceiver, intentFilter);
         }
+
+        mDialog = new Dialog(getApplicationContext());
+        mDialog.requestWindowFeature(Window.FEATURE_LEFT_ICON);
+        mDialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        mDialog.getWindow().setBackgroundDrawableResource(
+                android.R.color.transparent);
+        mDialog.setContentView(R.layout.custom_dialog_alert_turn_off);
+        mDialog.getWindow().setType(WindowManager.LayoutParams.TYPE_SYSTEM_ALERT);
+        mDialog.setTitle("Alert");
+        mDialog.setFeatureDrawableResource(Window.FEATURE_LEFT_ICON, R.drawable.ic_alert);
     }
 
     @Override
@@ -56,22 +72,25 @@ public class MyServices extends Service {
     public void onDestroy() {
         super.onDestroy();
         Log.d("vinhhlb", "stop services");
+        stopService();
+    }
 
-
-        if (player != null && player.isPlaying()) {
-            Log.d("vinhhlb", "cancel player");
-            player.pause();
-            player.stop();
-            player.release();
+    public void stopService() {
+        try {
+            if (player != null && player.isPlaying()) {
+                player.pause();
+                player.stop();
+                player.release();
+            }
+            if (mCountDownTimer != null)
+                mCountDownTimer.cancel();
+            second = 0;
+            mHandler.removeCallbacks(mRunable);
+            if (mMyReceiver != null)
+                unregisterReceiver(mMyReceiver);
+        } catch (Exception e) {
+            e.printStackTrace();
         }
-        if (mCountDownTimer != null)
-            mCountDownTimer.cancel();
-
-        mHandler.removeCallbacks(mRunable);
-        if (mMyReceiver != null)
-            unregisterReceiver(mMyReceiver);
-
-
     }
 
     @Override
@@ -86,8 +105,13 @@ public class MyServices extends Service {
         mCountDownTimer = new CountDownTimer(Long.MAX_VALUE, 1000) {
             @Override
             public void onTick(long millisUntilFinished) {
+                Log.d("vinhhlb", "" + second);
                 if (second == maxTime) {
                     postDelaymer();
+                    if (!mDialog.isShowing()) {
+                        showDialogAlarmp();
+                    }
+                    mCountDownTimer.cancel();
                 } else
                     second++;
             }
@@ -106,7 +130,6 @@ public class MyServices extends Service {
                 startAlarm();
             }
         };
-
         mHandler.postDelayed(mRunable, 1000);
     }
 
@@ -118,16 +141,6 @@ public class MyServices extends Service {
             player.start();
     }
 
-    public void stopAlarm() {
-        if (mCountDownTimer != null) {
-            mCountDownTimer.cancel();
-        }
-        if (player != null && player.isPlaying()) {
-            player.stop();
-            player.release();
-        }
-    }
-
     public class MyReceiver extends BroadcastReceiver {
         @Override
         public void onReceive(Context context, Intent intent) {
@@ -135,7 +148,6 @@ public class MyServices extends Service {
                 if (intent.getExtras().getInt("KEY_MAX_VALUE") == 0) {
                     // turn off
                     Log.d("vinhhlb", "turn off");
-                    stopAlarm();
                 } else {
                     //turn on
                     Log.d("vinhhlb", "turn on");
@@ -145,4 +157,21 @@ public class MyServices extends Service {
         }
     }
 
+    public void showDialogAlarmp() {
+        if (!mDialog.isShowing())
+            mDialog.show();
+        mTvCancleDialog = (TextView) mDialog.findViewById(R.id.tvCancleDialog);
+        mTvCancleDialog.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (mDialog.isShowing()) {
+                    stopSelf();
+                    stopService();
+                    if (mDialog.isShowing()) {
+                        mDialog.dismiss();
+                    }
+                }
+            }
+        });
+    }
 }

@@ -3,6 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+
     <RelativeLayout
         android:id="@+id/rlMenubarTesting"
         android:layout_width="match_parent"
@@ -12,45 +13,45 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
             android:layout_centerInParent="true"
             android:text="@string/testing.textview.text_title"
             android:textColor="@color/color.white"
             android:textSize="@dimen/testing.textview.text_size_title" />
 
         <ImageView
-            android:layout_width="@dimen/rl.testing.rl_menubar_height"
-            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
-            android:layout_marginRight="5dp"
-            android:background="@color/color.no.color"
-            android:padding="@dimen/testing.imageview.padding_btn_search"
-            android:src="@mipmap/btn_search_xhd" />
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:id="@+id/rlTimeDetail"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/rlMenubarTesting"
-        android:background="@anim/rectangle_detail_time"
-        android:paddingBottom="@dimen/rl.testing.rl_detail_time_paddingbottom"
-        android:paddingTop="@dimen/rl.testing.rl_detail_time_paddingtop">
+            android:layout_marginRight="@dimen/header.imgsearch.maginright"
+            android:src="@drawable/icon_search" />
 
         <TextView
             android:id="@+id/tvTotalQuestion"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
             android:layout_marginLeft="@dimen/margin.left"
-            android:text="@string/text.testing.number_question"
-            android:textSize="@dimen/testing.textview.size_number_question" />
+            android:textSize="@dimen/testing.textview.size_time_of_question"
+            android:text="@string/text.testing.number_question" />
 
         <TextView
             android:id="@+id/tvLeftQuestion"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+
+            android:text="@string/text.testing.left_number"
+            android:textSize="@dimen/testing.textview.size_left_question" />
+        <TextView
+            android:id="@+id/tvLeftQuestionCopy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
             android:text="@string/text.testing.left_number"
             android:textSize="@dimen/testing.textview.size_left_question" />
 
@@ -60,34 +61,61 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
             android:layout_marginRight="@dimen/margin.right"
             android:text="@string/text.testing.time_left"
             android:textSize="@dimen/testing.textview.size_time_left" />
+        <TextView
 
-        <ImageView
+            android:id="@+id/tvTimeLeftCopy"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="@dimen/margin.right"
+            android:text="@string/text.testing.time_left"
+            android:textSize="@dimen/testing.textview.size_time_left" />
+        <ProgressBar
+            android:id="@+id/progressBarTimer"
+            android:layout_width="@dimen/testing.progressbar.width"
+            android:layout_height="@dimen/testing.progressbar.height"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="@dimen/testing.progressbar.margin_right"
+
+            />
+
+
     </RelativeLayout>
+
 
     <android.support.v4.view.ViewPager
         android:id="@+id/viewpager"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@+id/viewBottom"
-        android:layout_below="@+id/rlTimeDetail" />
+        android:layout_above="@+id/tabbarBottom"
+        android:layout_below="@+id/rlMenubarTesting"
+        />
+
+    <FrameLayout
+        android:id="@+id/frViewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/tabbarBottom"
+        android:layout_below="@+id/rlMenubarTesting"
+        />
 
     <RelativeLayout
         android:id="@+id/rlButtonBottom"
         android:layout_width="match_parent"
         android:layout_height="@dimen/rl.testing.rl_contains_button_height"
-        android:layout_above="@+id/viewBottom"
+        android:layout_above="@+id/tabbarBottom"
         android:layout_marginBottom="@dimen/testing.rl.btn_margin_bottom">
 
         <View
-
             android:id="@+id/viewLine"
             android:layout_width="match_parent"
-            android:layout_height="0.5dp"
+            android:layout_height="@dimen/testing.view.height_line"
             android:layout_marginLeft="@dimen/testing.view.viewline_margin_left"
             android:layout_marginRight="@dimen/testing.view.viewline_margin_right"
             android:background="@color/color.testing.viewLine" />
@@ -98,8 +126,6 @@
             android:layout_centerInParent="true"
             android:orientation="horizontal"
             android:weightSum="4">
-
-
             <ImageView
                 android:id="@+id/imgPrevious"
                 android:layout_width="@dimen/testing.imageview.img_previous_width"
@@ -133,10 +159,22 @@
                 android:scaleType="centerInside"
                 android:src="@mipmap/ico_next_xhd" />
         </LinearLayout>
+
+        <Button
+            android:id="@+id/btnSubmit"
+            android:layout_width="@dimen/testing.button.width_submit"
+            android:layout_height="@dimen/testing.button.height_submit"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/testing.button.margin_right_submit"
+            android:background="@anim/btn_submit"
+
+
+            />
     </RelativeLayout>
 
-    <View
-        android:id="@+id/viewBottom"
+    <vn.asiantech.LearingEnglish.utils.TabBar
+        android:id="@+id/tabbarBottom"
         android:layout_width="match_parent"
         android:layout_height="@dimen/testing.view.height_bottom"
         android:layout_alignParentBottom="true"

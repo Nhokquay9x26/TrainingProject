@@ -2,6 +2,8 @@ package vn.asiantech.LearingEnglish.fragments;
 
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
+
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.EFragment;
 import org.androidannotations.annotations.ViewById;
@@ -10,6 +12,7 @@ import java.util.List;
 import vn.asiantech.LearingEnglish.R;
 import vn.asiantech.LearingEnglish.adapter.FavoriteAdapter;
 import vn.asiantech.LearingEnglish.models.WordsEnglish;
+import vn.asiantech.LearingEnglish.utils.TabBar;
 
 /**
  * @author mrs
