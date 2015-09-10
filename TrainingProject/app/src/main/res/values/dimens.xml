@@ -2,6 +2,9 @@
     <!-- Default screen margins, per the Android Design guidelines. -->
     <dimen name="activity_horizontal_margin">0dp</dimen>
     <dimen name="activity_vertical_margin">0dp</dimen>
+    <dimen name="activity_forgot_pass_margin">30dp</dimen>
+    <dimen name="activity_forgot_pass.btnForgot.margin">20dp</dimen>
+    <dimen name="activity_forgot_pass_TextView.padding">10dp</dimen>
     <dimen name="margin.left">8dp</dimen>
     <dimen name="margin.right">8dp</dimen>
     <dimen name="imageview.splash.logo">20dp</dimen>
@@ -166,7 +169,5 @@
     <dimen name="testing.button.width_submit">30dp</dimen>
     <dimen name="testing.button.height_submit">30dp</dimen>
     <dimen name="testing.button.margin_right_submit">5dp</dimen>
-
-
 
 </resources>

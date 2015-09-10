@@ -1,14 +1,13 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:layout_centerInParent="true">
+    android:layout_height="match_parent">
 
     <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="30dp"
+        android:layout_marginLeft="@dimen/activity_forgot_pass_margin"
         android:layout_centerInParent="true"
-        android:layout_marginRight="30dp"
+        android:layout_marginRight="@dimen/activity_forgot_pass_margin"
         android:background="@android:color/white">
 
         <TextView
@@ -16,7 +15,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/TextView.background_get_pass_color"
-            android:padding="10dp"
+            android:padding="@dimen/activity_forgot_pass_TextView.padding"
             android:text="@string/TextView.text_get_pass"
             android:textColor="@android:color/white" />
 
@@ -37,10 +36,10 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/edtEmail_activity_forgot_pass"
             android:layout_centerHorizontal="true"
-            android:layout_marginBottom="20dp"
+            android:layout_marginBottom="@dimen/activity_forgot_pass.btnForgot.margin"
             android:background="@color/Button.background_forgot_pass_color"
-            android:paddingLeft="20dp"
-            android:paddingRight="20dp"
+            android:paddingLeft="@dimen/activity_forgot_pass.btnForgot.margin"
+            android:paddingRight="@dimen/activity_forgot_pass.btnForgot.margin"
             android:text="@string/Button.text_forgot_pass"
             android:textColor="@android:color/white" />
     </RelativeLayout>
