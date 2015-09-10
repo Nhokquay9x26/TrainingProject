@@ -66,5 +66,7 @@
     <!-- strings file fragment_result-->
     <string name="textview.result.text">Result</string>
     <string name="textview.result.text_total">Total :</string>
+    <string name="textview_text_error_empty">Chưa nhập username hoặc password</string>
+    <string name="textview_text_error">Đăng nhập thất bại</string>
 
 </resources>
