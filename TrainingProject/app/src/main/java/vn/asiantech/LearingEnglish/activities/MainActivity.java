@@ -8,6 +8,7 @@ import org.androidannotations.annotations.FragmentByTag;
 import org.androidannotations.annotations.OptionsItem;
 
 import vn.asiantech.LearingEnglish.R;
+import vn.asiantech.LearingEnglish.core.fragments.Fragment;
 import vn.asiantech.LearingEnglish.fragments.MainFragment;
 import vn.asiantech.LearingEnglish.fragments.MainFragment_;
 
@@ -36,6 +37,12 @@ public class MainActivity extends BaseActionBarActivity {
         }
         FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
         ft.add(R.id.main_container, mMainFragment, "MainFragment");
+        ft.commit();
+    }
+
+    public void replaceFragment(Fragment layoutID){
+        FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+        ft.replace(R.id.frameLayout, layoutID);
         ft.commit();
     }
 }
