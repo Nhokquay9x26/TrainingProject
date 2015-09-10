@@ -1,23 +1,16 @@
 package vn.asiantech.LearingEnglish.adapter;
 
-import android.app.Activity;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import org.androidannotations.annotations.FragmentByTag;
-
 import java.util.ArrayList;
 
 import vn.asiantech.LearingEnglish.R;
-import vn.asiantech.LearingEnglish.activities.InitializeActivity_;
-import vn.asiantech.LearingEnglish.fragments.DetailFragment;
-import vn.asiantech.LearingEnglish.fragments.DetailFragment_;
-import vn.asiantech.LearingEnglish.fragments.SignUpFragment;
-import vn.asiantech.LearingEnglish.fragments.SignUpFragment_;
 import vn.asiantech.LearingEnglish.models.Top;
 
 /**
@@ -56,6 +49,13 @@ public class TopAdapter extends RecyclerView.Adapter<TopAdapter.TopViewHolder> {
         holder.mImgImage.setImageResource(mArrTops.get(position).getImage());
         holder.mTvCategory.setText(mArrTops.get(position).getCategory());
         holder.mTopNext.setImageResource(mArrTops.get(position).getNext());
+
+        holder.mTopNext.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.d("TAG", "ABC");
+            }
+        });
     }
 
     @Override

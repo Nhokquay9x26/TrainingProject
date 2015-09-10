@@ -49,10 +49,10 @@ public class TopFragment extends BaseFragment {
     }
 
     public void creatData2() {
-        mArrTop.add(new Top(R.drawable.ic_avatar, "hello", R.drawable.ic_sound));
-        mArrTop.add(new Top(R.drawable.ic_avatar, "hello", R.drawable.ic_sound));
-        mArrTop.add(new Top(R.drawable.ic_avatar, "hello", R.drawable.ic_sound));
-        mArrTop.add(new Top(R.drawable.ic_avatar, "hello", R.drawable.ic_sound));
-        mArrTop.add(new Top(R.drawable.ic_avatar, "hello", R.drawable.ic_sound));
+        mArrTop.add(new Top(R.drawable.ic_avatar, "hello", R.drawable.ic_next_top));
+        mArrTop.add(new Top(R.drawable.ic_avatar, "hello", R.drawable.ic_next_top));
+        mArrTop.add(new Top(R.drawable.ic_avatar, "hello", R.drawable.ic_next_top));
+        mArrTop.add(new Top(R.drawable.ic_avatar, "hello", R.drawable.ic_next_top));
+        mArrTop.add(new Top(R.drawable.ic_avatar, "hello", R.drawable.ic_next_top));
     }
 }
