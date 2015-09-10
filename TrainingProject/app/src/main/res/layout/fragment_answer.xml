@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:cardView="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cvAnswer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+   >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rvAnswer"
+            android:layout_width="match_parent"
+            android:layout_height="450dp">
+
+        </android.support.v7.widget.RecyclerView>
+
+        <TextView
+            android:id="@+id/tvTotal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/imgShare"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/textview.text.margin_top_bottom.answer"
+            android:text="Total:"
+            android:textColor="@color/textview.text.pink.question"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvNumberTotal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/tvTotal"
+            android:layout_above="@+id/imgShare"
+            android:layout_marginBottom="@dimen/textview.text.margin_top_bottom.answer"
+            android:text="10"
+            android:textColor="@color/textview.text.pink.question"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/imgShare"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/textview.text.margin_top_bottom.answer"
+            android:src="@drawable/img_share" />
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>

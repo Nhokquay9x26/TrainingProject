@@ -1,34 +1,28 @@
 package vn.asiantech.LearingEnglish.adapter;
 
-import android.app.Activity;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
-import android.support.v4.view.ViewPager;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.ImageView;
-import android.widget.TextView;
 
 import vn.asiantech.LearingEnglish.R;
 import vn.asiantech.LearingEnglish.fragments.FragmentPageTesting;
+import vn.asiantech.LearingEnglish.fragments.FragmentPageTesting_;
 
 /**
  * Created by ThanhITBK on 9/4/2015.
  */
 public class TestingAdapter extends FragmentPagerAdapter {
-    private ViewPager mViewPager;
-    private Activity mActivity;
-    FragmentPageTesting fragment;
+    public static int ITEMS;
+    private FragmentPageTesting mFragmentPageTesting;
     private OnChangePager mOnChangePager;
 
-    public TestingAdapter(FragmentManager fragmentManager, FragmentPageTesting fragment, OnChangePager onChangePager) {
+    public TestingAdapter(FragmentManager fragmentManager, FragmentPageTesting_ fragmentPageTesting,
+                          OnChangePager onChangePager, int countQuestion) {
         super(fragmentManager);
-        this.fragment=fragment;
+        this.mFragmentPageTesting = fragmentPageTesting;
         mOnChangePager = onChangePager;
+        this.ITEMS = countQuestion;
     }
-
-    public static final int ITEMS = 5;
 
     @Override
     public int getCount() {
@@ -37,9 +31,12 @@ public class TestingAdapter extends FragmentPagerAdapter {
 
     @Override
     public Fragment getItem(int position) {
-        return fragment.init(position, mOnChangePager);
+        return mFragmentPageTesting.init(position, mOnChangePager);
     }
-    public interface OnChangePager{
+
+    public interface OnChangePager {
         void onChange(int i);
     }
+
+
 }
