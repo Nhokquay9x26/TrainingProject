@@ -10,4 +10,9 @@ import lombok.Data;
 public class AnimalCategory {
     private int mAvataAnimal;
     private String mNameAnimal;
+    private String mExample;
+    private boolean mFavorite;
+    private String mSpelling;
+    private String mMeans;
+
 }

@@ -2,22 +2,16 @@ package vn.asiantech.LearingEnglish.fragments;
 
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.TextView;
-
-import org.androidannotations.annotations.EFragment;
 
 import java.util.ArrayList;
 
 import vn.asiantech.LearingEnglish.R;
 import vn.asiantech.LearingEnglish.adapter.ViewpagerDetailAdapter;
 import vn.asiantech.LearingEnglish.models.AnimalCategory;
-import vn.asiantech.LearingEnglish.models.DetailCategory;
-import vn.asiantech.LearingEnglish.utils.TabBar;
 
 /**
  * @

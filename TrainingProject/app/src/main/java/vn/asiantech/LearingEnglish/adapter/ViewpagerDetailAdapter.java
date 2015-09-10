@@ -45,12 +45,22 @@ public class ViewpagerDetailAdapter extends PagerAdapter {
     public Object instantiateItem(ViewGroup container, int position) {
         ImageView imgAvataDetail;
         TextView tvNameDetail;
+        TextView tvExample;
+        TextView tvSpelling;
+        TextView tvMeans;
+        TextView tvNameVocabulary;
+
         inflater = (LayoutInflater) mContext
                 .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         View itemView = inflater.inflate(R.layout.item_fragment_detail, container,
                 false);
         imgAvataDetail = (ImageView) itemView.findViewById(R.id.imgAvataDetail);
         tvNameDetail = (TextView) itemView.findViewById(R.id.tvNameDetail);
+        tvExample = (TextView)itemView.findViewById(R.id.tvExample);
+        tvSpelling = (TextView)itemView.findViewById(R.id.tvSpelling);
+        tvNameVocabulary = (TextView)itemView.findViewById(R.id.tvNameVocabulary);
+        tvMeans = (TextView)itemView.findViewById(R.id.tvMean);
+
 
         imgLeft = (ImageView)itemView.findViewById(R.id.imgSelecLeftDetail);
         imgRight = (ImageView)itemView.findViewById(R.id.imgSelecRightDetail);
@@ -69,6 +79,10 @@ public class ViewpagerDetailAdapter extends PagerAdapter {
 
         imgAvataDetail.setImageResource(mArraylists.get(position).getMAvataAnimal());
         tvNameDetail.setText(mArraylists.get(position).getMNameAnimal());
+        tvMeans.setText(mArraylists.get(position).getMMeans());
+        tvExample.setText(mArraylists.get(position).getMExample());
+        tvSpelling.setText(mArraylists.get(position).getMSpelling());
+        tvNameVocabulary.setText(mArraylists.get(position).getMNameAnimal());
 
         ((ViewPager) container).addView(itemView);
         return itemView;
