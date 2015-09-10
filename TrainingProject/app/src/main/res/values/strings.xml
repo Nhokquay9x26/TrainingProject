@@ -1,21 +1,8 @@
 <resources>
     <string name="app_name">Base Project</string>
     <string name="hello_world">Hello world!</string>
-    <
-    <
-    <
-    <
-    <
-    <
-    < HEAD
     <!--LIVE APP ID-->
     <string name="app_id">516249385207670</string>
-    =======
-    <string name="TextView.text_get_pass">Get Pass</string>
-    <string name="EditText.text_hint_email">Email</string>
-    <string name="Button.text_forgot_pass">Forgot</string>
-    <string name="activity_forgot_pass_Text_Warring">Plese enter your email!</string>
-    >>>>>>> 8526a9a13813071bb555467d4dbd5296e25740ee
     <string name="Sign_in">Sign in</string>
     <string name="username_email">Username / Email Address</string>
     <string name="password">Password</string>
@@ -59,8 +46,4 @@
     <string name="rating.textview.rank_id">1st</string>
     <string name="ratings.textview.tvName_User">Maniter Jack</string>
     <string name="ratings.textview.tvPoint">100</string>
-    <string name="favorite.textview.title">Favorite</string>
-    <string name="header.animal">Animal</string>
-    <string name="header.home">Home</string>
-    <string name="header.Detail">Detail</string>
 </resources>

@@ -19,7 +19,11 @@
 -->
 
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/messenger_send_button" style="@style/MessengerButton.Blue.Small">
-    <TextView android:text="@string/messenger_send_button_text"
+    android:id="@+id/messenger_send_button"
+    style="@style/MessengerButton.Blue.Small">
+
+    <TextView
+        android:text="@string/messenger_send_button_text"
         style="@style/MessengerButtonText.Blue.Small" />
-</FrameLayout><!-- From: file:/home/tantv/AppCode/TrainingProject/TrainingProject/facebook/res/layout/messenger_button_send_blue_small.xml -->
+</FrameLayout>
+<!-- From: file:/home/tantv/AppCode/TrainingProject/TrainingProject/facebook/res/layout/messenger_button_send_blue_small.xml -->

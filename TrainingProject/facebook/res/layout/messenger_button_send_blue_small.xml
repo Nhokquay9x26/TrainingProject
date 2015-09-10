@@ -19,8 +19,10 @@
 -->
 
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/messenger_send_button" style="@style/MessengerButton.Blue.Small">
+    android:id="@+id/messenger_send_button"
+    style="@style/MessengerButton.Blue.Small">
 
-    <TextView android:text="@string/messenger_send_button_text"
+    <TextView
+        android:text="@string/messenger_send_button_text"
         style="@style/MessengerButtonText.Blue.Small" />
 </FrameLayout>

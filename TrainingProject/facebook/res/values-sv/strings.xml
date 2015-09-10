@@ -30,14 +30,9 @@
     <string name="com_facebook_loginview_cancel_action">Avbryt</string>
     <string name="com_facebook_loading">Laddar ...</string>
     <string name="com_facebook_internet_permission_error_title">AndroidManifest-fel</string>
-    <string name="com_facebook_internet_permission_error_message">Webbinloggning kräver
-        internetbehörighet
-    </string>
-    <string name="com_facebook_tooltip_default">Nyhet! Du bestämmer – välj vilken info du vill dela
-        med appar.
-    </string>
-    <string name="com_facebook_image_download_unknown_error">Oväntat fel vid hämtning av en bild.
-    </string>
+    <string name="com_facebook_internet_permission_error_message">Webbinloggning kräver internetbehörighet</string>
+    <string name="com_facebook_tooltip_default">Nyhet! Du bestämmer – välj vilken info du vill dela med appar.</string>
+    <string name="com_facebook_image_download_unknown_error">Oväntat fel vid hämtning av en bild.</string>
     <string name="com_facebook_share_button_text">Dela</string>
     <string name="com_facebook_send_button_text">Skicka</string>
 </resources>

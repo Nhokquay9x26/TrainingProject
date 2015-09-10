@@ -5,15 +5,12 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
 
 import vn.asiantech.LearingEnglish.R;
 import vn.asiantech.LearingEnglish.models.HomeCategory;
-import vn.asiantech.LearingEnglish.utils.IsCallTop;
-import vn.asiantech.LearingEnglish.utils.TabBar;
 
 /**
  * @Author xuanphu
@@ -21,13 +18,11 @@ import vn.asiantech.LearingEnglish.utils.TabBar;
  */
 public class HomeAdapter extends  RecyclerView.Adapter<HomeAdapter.HomeViewHolder>{
     Context mContext;
-    private ArrayList<HomeCategory> mArraylists = new ArrayList<>();
-    private IsCallTop mIsCallTop;
+    private ArrayList<HomeCategory> mArraylist = new ArrayList<>();
 
-    public HomeAdapter(Context mContext, ArrayList<HomeCategory> mArraylists, IsCallTop mIsCallTop) {
+    public HomeAdapter(Context mContext, ArrayList<HomeCategory> mArraylist) {
         this.mContext = mContext;
-        this.mArraylists = mArraylists;
-        this.mIsCallTop = mIsCallTop;
+        this.mArraylist = mArraylist;
     }
 
     @Override
@@ -40,31 +35,23 @@ public class HomeAdapter extends  RecyclerView.Adapter<HomeAdapter.HomeViewHolde
 
     @Override
     public void onBindViewHolder(HomeViewHolder holder, int position) {
-        final HomeCategory homeCategory = mArraylists.get(position);
+        final HomeCategory homeCategory= mArraylist.get(position);
         holder.imgAvataHome.setImageResource(homeCategory.getMAvataHome());
         holder.tvNameHone.setText(homeCategory.getMNameHome());
-        holder.imgSelecHome.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                mIsCallTop.callFragmentAnimal();
-            }
-        });
     }
 
     @Override
     public int getItemCount() {
-        return mArraylists.size();
+        return mArraylist.size();
     }
 
     public class HomeViewHolder extends RecyclerView.ViewHolder {
         vn.asiantech.LearingEnglish.utils.CircleImageView imgAvataHome;
         TextView tvNameHone;
-        ImageView imgSelecHome;
         public HomeViewHolder(View itemView) {
             super(itemView);
             imgAvataHome = (vn.asiantech.LearingEnglish.utils.CircleImageView)itemView.findViewById(R.id.imgAvataItemHome);
             tvNameHone = (TextView)itemView.findViewById(R.id.tvNameItemHome);
-            imgSelecHome = (ImageView) itemView.findViewById(R.id.imgSelectItemHome);
         }
     }
 

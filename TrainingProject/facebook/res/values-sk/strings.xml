@@ -29,17 +29,10 @@
     <string name="com_facebook_loginview_log_out_action">Odhlásiť sa</string>
     <string name="com_facebook_loginview_cancel_action">Zrušiť</string>
     <string name="com_facebook_loading">Načítava sa...</string>
-    <string name="com_facebook_internet_permission_error_title">Chyba súboru AndroidManifest
-    </string>
-    <string name="com_facebook_internet_permission_error_message">Na prihlásenie sa v rozhraní
-        WebView sa vyžaduje povolenie pre INTERNET
-    </string>
-    <string name="com_facebook_tooltip_default">Novinka! Máte to pod kontrolou: vyberte, ktoré
-        informácie chcete zdieľať s aplikáciami.
-    </string>
-    <string name="com_facebook_image_download_unknown_error">Pri sťahovaní obrázka sa vyskytla
-        neočakávaná chyba.
-    </string>
+    <string name="com_facebook_internet_permission_error_title">Chyba súboru AndroidManifest</string>
+    <string name="com_facebook_internet_permission_error_message">Na prihlásenie sa v rozhraní WebView sa vyžaduje povolenie pre INTERNET</string>
+    <string name="com_facebook_tooltip_default">Novinka! Máte to pod kontrolou: vyberte, ktoré informácie chcete zdieľať s aplikáciami.</string>
+    <string name="com_facebook_image_download_unknown_error">Pri sťahovaní obrázka sa vyskytla neočakávaná chyba.</string>
     <string name="com_facebook_share_button_text">Zdieľať</string>
     <string name="com_facebook_send_button_text">Odoslať</string>
 </resources>

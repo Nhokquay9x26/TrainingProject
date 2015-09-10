@@ -29,18 +29,10 @@
     <string name="com_facebook_loginview_log_out_action">Log af</string>
     <string name="com_facebook_loginview_cancel_action">Annuller</string>
     <string name="com_facebook_loading">Indlæser ...</string>
-    <string name="com_facebook_internet_permission_error_title">Fejl i forbindelse med
-        AndroidManifest
-    </string>
-    <string name="com_facebook_internet_permission_error_message">WebView-login kræver tilladelse
-        til INTERNET
-    </string>
-    <string name="com_facebook_tooltip_default">Nyhed! Du har styringen – vælg de oplysninger, som
-        du vil dele med apps.
-    </string>
-    <string name="com_facebook_image_download_unknown_error">Der opstod en uventet fejl under
-        download af et billede.
-    </string>
+    <string name="com_facebook_internet_permission_error_title">Fejl i forbindelse med AndroidManifest</string>
+    <string name="com_facebook_internet_permission_error_message">WebView-login kræver tilladelse til INTERNET</string>
+    <string name="com_facebook_tooltip_default">Nyhed! Du har styringen – vælg de oplysninger, som du vil dele med apps.</string>
+    <string name="com_facebook_image_download_unknown_error">Der opstod en uventet fejl under download af et billede.</string>
     <string name="com_facebook_share_button_text">Del</string>
     <string name="com_facebook_send_button_text">Send</string>
 </resources>

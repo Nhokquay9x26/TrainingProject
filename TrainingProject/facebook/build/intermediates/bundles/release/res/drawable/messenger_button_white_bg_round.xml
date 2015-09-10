@@ -20,7 +20,11 @@
 
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:drawable="@drawable/messenger_button_send_round_shadow" />
-    <item android:top="1dp" android:bottom="2dp" android:left="1dp" android:right="1dp">
+    <item
+        android:top="1dp"
+        android:bottom="2dp"
+        android:left="1dp"
+        android:right="1dp">
         <selector>
             <item android:state_pressed="true">
                 <shape android:shape="oval">
@@ -36,7 +40,14 @@
         </selector>
     </item>
 
-    <item android:top="1dp" android:bottom="2dp" android:left="1dp" android:right="1dp">
-        <bitmap android:src="@drawable/messenger_bubble_large_blue" android:gravity="center" />
+    <item
+        android:top="1dp"
+        android:bottom="2dp"
+        android:left="1dp"
+        android:right="1dp">
+        <bitmap
+            android:src="@drawable/messenger_bubble_large_blue"
+            android:gravity="center" />
     </item>
-</layer-list><!-- From: file:/home/tantv/AppCode/TrainingProject/TrainingProject/facebook/res/drawable/messenger_button_white_bg_round.xml -->
+</layer-list>
+<!-- From: file:/home/tantv/AppCode/TrainingProject/TrainingProject/facebook/res/drawable/messenger_button_white_bg_round.xml -->

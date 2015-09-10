@@ -30,15 +30,9 @@
     <string name="com_facebook_loginview_cancel_action">Annuleren</string>
     <string name="com_facebook_loading">Laden…</string>
     <string name="com_facebook_internet_permission_error_title">AndroidManifest Error</string>
-    <string name="com_facebook_internet_permission_error_message">Voor aanmelding via webweergave is
-        de toestemming INTERNET vereist
-    </string>
-    <string name="com_facebook_tooltip_default">Nieuw! Jij hebt de controle. Kies welke informatie
-        je met apps wilt delen.
-    </string>
-    <string name="com_facebook_image_download_unknown_error">Onverwachte fout tijdens het downloaden
-        van een afbeelding.
-    </string>
+    <string name="com_facebook_internet_permission_error_message">Voor aanmelding via webweergave is de toestemming INTERNET vereist</string>
+    <string name="com_facebook_tooltip_default">Nieuw! Jij hebt de controle. Kies welke informatie je met apps wilt delen.</string>
+    <string name="com_facebook_image_download_unknown_error">Onverwachte fout tijdens het downloaden van een afbeelding.</string>
     <string name="com_facebook_share_button_text">Delen</string>
     <string name="com_facebook_send_button_text">Verzenden</string>
 </resources>

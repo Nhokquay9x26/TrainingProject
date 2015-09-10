@@ -37,4 +37,5 @@
             <solid android:color="@color/com_facebook_button_background_color" />
         </shape>
     </item>
-</selector><!-- From: file:/home/tantv/AppCode/TrainingProject/TrainingProject/facebook/res/drawable/com_facebook_button_background.xml -->
+</selector>
+<!-- From: file:/home/tantv/AppCode/TrainingProject/TrainingProject/facebook/res/drawable/com_facebook_button_background.xml -->
