@@ -187,7 +187,7 @@
     <dimen name="button.signup.textsize.18sp">18sp</dimen>
 
     <!--  dimen file fragment_test. -->
-    <dimen name="relativelayout.test.height_100dp">100dp</dimen>
+    <dimen name="relativelayout.test.height_48dp">48dp</dimen>
     <dimen name="textview.test.textsize_28sp">28sp</dimen>
     <dimen name="img.test.margin_right_28dp">28dp</dimen>
     <dimen name="relativelayout.test.margin_right_14dp">14dp</dimen>
