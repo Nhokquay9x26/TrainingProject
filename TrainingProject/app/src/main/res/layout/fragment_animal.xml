@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/rlHeaderAnimal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/header.text.hight"
+        android:background="@color/colorPrimary">
+
+        <ImageView
+            android:id="@+id/imgBackHeaderAnimal"
+            android:layout_width="@dimen/header.imgBack.width.height"
+            android:layout_height="@dimen/header.imgBack.width.height"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/header.imgBack.maginleft"
+            android:src="@drawable/icon_back" />
+
+        <TextView
+            android:id="@+id/tvHeaderAnimal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/header.animal"
+            android:textColor="@color/color.white"
+            android:textSize="@dimen/header.textsite" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/header.imgsearch.maginright"
+            android:src="@drawable/icon_search" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rlHeaderAnimal">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerAnimal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/fragment.animal.recycle.magin"
+            android:background="@drawable/home_rl_background"
+            android:scrollbars="vertical" />
+    </RelativeLayout>
+</RelativeLayout>

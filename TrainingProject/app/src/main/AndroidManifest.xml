@@ -20,6 +20,7 @@
             tools:ignore="UnusedAttribute">
 
         </activity>
+        <admin></admin>
         <activity android:name=".activities.SignupActivity_"></activity>
         <activity android:name=".activities.SplashScreenActivity_">
             <intent-filter>
@@ -27,6 +28,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".activities.ForgotPassActivity_"></activity>
         <activity android:name=".activities.TestingActivity_"></activity>
         <activity android:name=".activities.LoginActivity_"></activity>
         <activity android:name=".activities.TestFragmentActivity_"></activity>

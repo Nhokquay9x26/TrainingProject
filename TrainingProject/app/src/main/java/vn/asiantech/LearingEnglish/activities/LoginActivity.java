@@ -1,5 +1,6 @@
 package vn.asiantech.LearingEnglish.activities;
 
+import android.content.Intent;
 import android.os.Handler;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -43,6 +44,12 @@ public class LoginActivity extends BaseActionBarActivity{
             Toast toast = Toast.makeText(this, "User or Pass not correct ...", Toast.LENGTH_SHORT);
             toast.show();
         }
+    }
+
+    @Click
+    void tvSignup() {
+        Intent intent = new Intent(this, SignupActivity_.class);
+        startActivity(intent);
     }
 
     @Override
