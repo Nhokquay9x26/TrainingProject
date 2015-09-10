@@ -30,10 +30,9 @@
             android:background="@color/relativelayout.signin.avatar.backgrounds"
             android:gravity="center">
 
-            <ImageView
+            <vn.asiantech.LearingEnglish.Views.CircleImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
                 android:layout_marginBottom="@dimen/image.signin.margin_bottom.10dp"
                 android:layout_marginTop="@dimen/image.signin.margin_top.10dp"
                 android:contentDescription="@null"
@@ -66,7 +65,6 @@
                 android:id="@+id/edtPassword"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/edtUsername"
                 android:layout_weight="1"
                 android:backgroundTint="@color/edittext.signin.color.line"
                 android:hint="@string/edittext.signin.hint.password"
@@ -76,7 +74,6 @@
                 android:id="@+id/tvError"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_above="@+id/btnSignIn"
                 android:layout_weight="1"
                 android:textColor="@color/textview.signin.color.error" />
 

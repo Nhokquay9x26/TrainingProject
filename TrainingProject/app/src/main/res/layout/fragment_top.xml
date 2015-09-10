@@ -43,7 +43,7 @@
         android:layout_marginStart="@dimen/relativelayout.top.margin_left_14dp"
         android:layout_marginTop="@dimen/relativelayout.top.margin_top_22dp">
 
-        <ListView
+        <android.support.v7.widget.RecyclerView
             android:id="@+id/lvTop"
             android:layout_width="match_parent"
             android:layout_height="match_parent"

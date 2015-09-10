@@ -13,6 +13,8 @@
     <string name="edittext.signin.hint.password">Password</string>
     <string name="button.signin.text">Sign in</string>
     <string name="textview.signin.text.forgot_password">Forgot Password?</string>
+    <string name="textview_text_error_empty">Please input username or password</string>
+    <string name="textview_text_error">Login Fail</string>
 
     <string name="textview.favorite.text.title">Favorite</string>
 
@@ -66,7 +68,6 @@
     <!-- strings file fragment_result-->
     <string name="textview.result.text">Result</string>
     <string name="textview.result.text_total">Total :</string>
-    <string name="textview_text_error_empty">Chưa nhập username hoặc password</string>
-    <string name="textview_text_error">Đăng nhập thất bại</string>
+
 
 </resources>
