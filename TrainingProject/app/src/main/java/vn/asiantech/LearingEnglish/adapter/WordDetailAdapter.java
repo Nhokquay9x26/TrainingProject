@@ -68,9 +68,9 @@ public class WordDetailAdapter extends PagerAdapter implements TextToSpeech.OnIn
 
     private class ViewHolder {
         private ImageView mImgVocabulary;
-        private TextView mTxtVocabulary;
-        private TextView mTxtMeanVocabulary;
-        private TextView mTxtExample;
+        private TextView mTvVocabulary;
+        private TextView mTvMeanVocabulary;
+        private TextView mTvExample;
         private ImageView mImgNext;
         private ImageView mImgBack;
         private ImageView mImgSpeaker;
@@ -83,9 +83,9 @@ public class WordDetailAdapter extends PagerAdapter implements TextToSpeech.OnIn
         if (view != null) {
             viewHolder = new ViewHolder();
             viewHolder.mImgVocabulary = (ImageView) view.findViewById(R.id.imgVocabulary);
-            viewHolder.mTxtVocabulary = (TextView) view.findViewById(R.id.tvVocabulary);
-            viewHolder.mTxtMeanVocabulary = (TextView) view.findViewById(R.id.tvMeanVocabulary);
-            viewHolder.mTxtExample = (TextView) view.findViewById(R.id.tvExample);
+            viewHolder.mTvVocabulary = (TextView) view.findViewById(R.id.tvVocabulary);
+            viewHolder.mTvMeanVocabulary = (TextView) view.findViewById(R.id.tvMeanVocabulary);
+            viewHolder.mTvExample = (TextView) view.findViewById(R.id.tvExample);
             viewHolder.mImgNext = (ImageView) view.findViewById(R.id.imgNext);
             viewHolder.mImgBack = (ImageView) view.findViewById(R.id.imgBack);
             viewHolder.mImgSpeaker = (ImageView) view.findViewById(R.id.imgSpeaker);
@@ -107,7 +107,7 @@ public class WordDetailAdapter extends PagerAdapter implements TextToSpeech.OnIn
         viewHolder.mImgSpeaker.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mTextToSpeech.speak(viewHolder.mTxtVocabulary.getText().toString(),
+                mTextToSpeech.speak(viewHolder.mTvVocabulary.getText().toString(),
                         TextToSpeech.QUEUE_FLUSH, null);
             }
         });
@@ -115,9 +115,9 @@ public class WordDetailAdapter extends PagerAdapter implements TextToSpeech.OnIn
 
     private void setValue(ViewHolder viewHolder, WordDetail wordDetail) {
         viewHolder.mImgVocabulary.setImageResource(wordDetail.getImage());
-        viewHolder.mTxtVocabulary.setText(wordDetail.getWord());
-        viewHolder.mTxtMeanVocabulary.setText(wordDetail.getMean());
-        viewHolder.mTxtExample.setText(wordDetail.getExample());
+        viewHolder.mTvVocabulary.setText(wordDetail.getWord());
+        viewHolder.mTvMeanVocabulary.setText(wordDetail.getMean());
+        viewHolder.mTvExample.setText(wordDetail.getExample());
     }
 
     @Override
