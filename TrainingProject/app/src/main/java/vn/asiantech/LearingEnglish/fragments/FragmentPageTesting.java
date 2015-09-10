@@ -21,20 +21,13 @@ public class FragmentPageTesting extends BaseFragment {
     private String[] mQuestion;
 
     @ViewById(R.id.tvQuestion)
-    TextView tvQuestion;
+    TextView mTvQuestion;
 
     @ViewById(R.id.tvPageCurrent)
-    TextView tvPageCurrent;
+    TextView mTvPageCurrent;
 
     @ViewById(R.id.tvPageTotal)
-    TextView tvPageTotal;
-
-    @ViewById(R.id.imgBack)
-    ImageView imgBack;
-
-    @ViewById(R.id.imgNext)
-    ImageView imgNext;
-
+    TextView mTvPageTotal;
 
     @Click(R.id.imgBack)
     void clickBack() {
@@ -75,10 +68,10 @@ public class FragmentPageTesting extends BaseFragment {
      */
     @AfterViews
     public void AfterViews() {
-        tvQuestion.setText(Html.fromHtml("<b>" + "<font color=\"#ed166a\">"
+        mTvQuestion.setText(Html.fromHtml("<b>" + "<font color=\"#ed166a\">"
                 + "Câu " + mFragmentNumber + ": " + "</font>" + "<b/>" + mQuestion[mFragmentNumber - 1]));
-        tvPageCurrent.setText("" + mFragmentNumber + "-");
-        tvPageTotal.setText(Integer.toString(mQuestion.length));
+        mTvPageCurrent.setText("" + mFragmentNumber + "-");
+        mTvPageTotal.setText(Integer.toString(mQuestion.length));
     }
 
     @Override
