@@ -44,7 +44,7 @@
         android:layout_marginTop="@dimen/relativelayout.top.margin_top_22dp">
 
         <android.support.v7.widget.RecyclerView
-            android:id="@+id/lvTop"
+            android:id="@+id/recycleViewTop"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@drawable/shape_list_favorite"
