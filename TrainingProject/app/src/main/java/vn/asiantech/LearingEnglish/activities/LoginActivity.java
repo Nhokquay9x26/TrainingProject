@@ -9,7 +9,11 @@ import org.androidannotations.annotations.Click;
 import org.androidannotations.annotations.EActivity;
 import org.androidannotations.annotations.ViewById;
 
+import retrofit.RetrofitError;
 import vn.asiantech.LearingEnglish.R;
+import vn.asiantech.LearingEnglish.models.Login;
+import vn.asiantech.LearingEnglish.network.apis.AuthApi;
+import vn.asiantech.LearingEnglish.network.core.Callback;
 import vn.asiantech.LearingEnglish.utils.Utils;
 
 /**
@@ -44,12 +48,22 @@ public class LoginActivity extends BaseActionBarActivity {
         final String MESSAGE_EMPTY_LOGIN = getResources().getString(R.string.massage_empty_login);
         final String MESSAGE_ERROR_LOGIN = getResources().getString(R.string.massage_error_login);
         if (email.length() > 0 && password.length() > 0) {
-            if (email.equals("asiantech@asiantech.vn") && password.equals("123456")) {
-                MainActivity_.intent(LoginActivity.this).start();
-                finish();
-            } else {
-                Toast.makeText(getApplicationContext(), MESSAGE_ERROR_LOGIN, Toast.LENGTH_LONG).show();
-            }
+            AuthApi.login("huongta1507@gmail.com", "123456", new Callback<Login>() {
+                @Override
+                public void success(Login login) {
+                    if(!login.getError()){
+                        MainActivity_.intent(LoginActivity.this).start();
+                        finish();
+                    }else{
+                        //show toast
+                    }
+                }
+
+                @Override
+                public void failure(RetrofitError error, vn.asiantech.LearingEnglish.network.Error myError) {
+
+                }
+            });
         } else {
             Toast.makeText(getApplicationContext(), MESSAGE_EMPTY_LOGIN, Toast.LENGTH_LONG).show();
         }
