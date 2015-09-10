@@ -1,6 +1,11 @@
 <resources>
     <string name="app_name">Base Project</string>
+
     <string name="hello_world">Hello world!</string>
+    <string name="TextView.text_get_pass">Get Pass</string>
+    <string name="EditText.text_hint_email">Email</string>
+    <string name="Button.text_forgot_pass">Forgot</string>
+    <string name="activity_forgot_pass_Text_Warring">Plese enter your email!</string>
     <string name="Sign_in">Sign in</string>
     <string name="username_email">Username / Email Address</string>
     <string name="password">Password</string>
@@ -13,7 +18,6 @@
     <string name="choiceC">(C) Supports various technologies</string>
     <string name="choiceD">(D) Highly optimized Virtual Machine</string>
     <string name="text.testing.detail_question">Question 1: What are the advantages of android?</string>
-
 
 
     <string name="testing.textview.text_title">Question</string>
