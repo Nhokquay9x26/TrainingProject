@@ -28,8 +28,16 @@ public class WordDetailContainerFragment extends BaseFragment
         mViewPager.setAdapter(adapter);
     }
 
+    @Override
+    public void onResume() {
+        super.onResume();
+        if (mOnBaseFragmentListener != null) {
+            mOnBaseFragmentListener.setHeaderTitle(getArguments().getString("title"));
+        }
+    }
+
     private void getData() {
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 5; i++) {
             WordDetail wordDetail = new WordDetail(R.drawable.cloud, "Cloud " + (i + 1),
                     "Cloud /klaud/: Mây, đám mây...", "- the sun had disappeared behind a cloud");
             mWordDetails.add(wordDetail);

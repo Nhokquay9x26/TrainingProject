@@ -1,5 +1,6 @@
 package vn.asiantech.LearingEnglish.fragments;
 
+import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
@@ -16,7 +17,7 @@ import vn.asiantech.LearingEnglish.models.Top;
 
 
 @EFragment(R.layout.fragment_top)
-public class TabOneFragment extends BaseFragment implements TopAdapter.OnTopListener{
+public class TabOneFragment extends BaseFragment implements TopAdapter.OnTopListener {
     private ArrayList<Top> mListTop;
     @ViewById(R.id.rvListTop)
     RecyclerView mRvListTop;
@@ -30,10 +31,18 @@ public class TabOneFragment extends BaseFragment implements TopAdapter.OnTopList
         mRvListTop.setAdapter(adapter);
     }
 
+    @Override
+    public void onResume() {
+        super.onResume();
+        if (mOnBaseFragmentListener != null) {
+            mOnBaseFragmentListener.setHeaderTitle(getResources().getString(R.string.tab_1));
+        }
+    }
+
     private void setValue() {
         mListTop = new ArrayList<>();
         for (int i = 0; i < 4; i++) {
-            Top top = new Top(R.drawable.img_avatar, "Animal");
+            Top top = new Top(R.drawable.img_avatar, "Animal " + (i + 1));
             mListTop.add(top);
         }
     }
@@ -42,7 +51,11 @@ public class TabOneFragment extends BaseFragment implements TopAdapter.OnTopList
     public void OnClickItem(int position) {
         android.support.v4.app.Fragment fragmentParent = getParentFragment();
         if (fragmentParent instanceof TabOneContainer) {
-            ((TabOneContainer) fragmentParent).replaceFragment(new WordDetailContainerFragment_(), false);
+            WordDetailContainerFragment_ fragment = new WordDetailContainerFragment_();
+            Bundle bundle = new Bundle();
+            bundle.putString("title", mListTop.get(position).getCategory());
+            fragment.setArguments(bundle);
+            ((TabOneContainer) fragmentParent).replaceFragment(fragment, true);
         }
     }
 
