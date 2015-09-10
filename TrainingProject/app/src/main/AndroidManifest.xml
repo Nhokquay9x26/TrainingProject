@@ -25,9 +25,6 @@
 
         <service android:name=".AlarmServices.MyServices" />
 
-        <receiver android:name=".activities.MyBroadcastAlarm">
-
-        </receiver>
         <receiver android:name=".AlarmServices.MyServices$MyReceiver" />
 
     </application>
