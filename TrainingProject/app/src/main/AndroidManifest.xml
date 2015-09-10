@@ -20,6 +20,7 @@
             tools:ignore="UnusedAttribute">
 
         </activity>
+        <admin></admin>
         <activity android:name=".activities.SignupActivity_"></activity>
         <activity android:name=".activities.SplashScreenActivity_">
             <intent-filter>
@@ -27,9 +28,19 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".activities.ForgotPassActivity_"></activity>
         <activity android:name=".activities.TestingActivity_"></activity>
         <activity android:name=".activities.LoginActivity_"></activity>
         <activity android:name=".activities.TestFragmentActivity_"></activity>
+
+        <
+        <
+        <
+        <
+        <
+        <
+
+        < HEAD
 
         <activity
             android:name="com.facebook.FacebookActivity"
@@ -44,6 +55,8 @@
             android:name="com.facebook.FacebookContentProvider"
             android:authorities="com.facebook.app.FacebookContentProvider516249385207670"
             android:exported="true" />
+        =======
+        >>>>>>> 8526a9a13813071bb555467d4dbd5296e25740ee
     </application>
 
 </manifest>
