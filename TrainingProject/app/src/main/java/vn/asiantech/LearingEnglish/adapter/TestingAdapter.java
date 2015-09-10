@@ -6,6 +6,7 @@ import android.support.v4.app.FragmentPagerAdapter;
 
 import vn.asiantech.LearingEnglish.R;
 import vn.asiantech.LearingEnglish.fragments.FragmentPageTesting;
+import vn.asiantech.LearingEnglish.fragments.FragmentPageTesting_;
 
 /**
  * Created by ThanhITBK on 9/4/2015.
@@ -15,7 +16,7 @@ public class TestingAdapter extends FragmentPagerAdapter {
     private FragmentPageTesting mFragmentPageTesting;
     private OnChangePager mOnChangePager;
 
-    public TestingAdapter(FragmentManager fragmentManager, FragmentPageTesting fragmentPageTesting,
+    public TestingAdapter(FragmentManager fragmentManager, FragmentPageTesting_ fragmentPageTesting,
                           OnChangePager onChangePager, int countQuestion) {
         super(fragmentManager);
         this.mFragmentPageTesting = fragmentPageTesting;

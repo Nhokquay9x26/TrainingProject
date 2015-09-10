@@ -4,13 +4,7 @@
     android:id="@+id/cvAnswer"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginBottom="@dimen/cardView.top_margin_bottom"
-    android:layout_marginEnd="@dimen/cardView.top_margin_right"
-    android:layout_marginLeft="@dimen/cardView.top_margin_left"
-    android:layout_marginRight="@dimen/cardView.top_margin_right"
-    android:layout_marginStart="@dimen/cardView.top_margin_left"
-    android:layout_marginTop="@dimen/cardView.top_margin_top"
-    cardView:cardCornerRadius="@dimen/cardView.top_radius">
+   >
 
     <RelativeLayout
         android:layout_width="match_parent"

@@ -111,4 +111,11 @@
     <dimen name="imageview.sound_margin_top">10dp</dimen>
     <dimen name="relativelayout.detail_vocabulary_bottom_margin">5dp</dimen>
     <dimen name="image.header.width_hight">100dp</dimen>
+
+    <dimen name="relative.margin_bottom.question">10dp</dimen>
+    <dimen name="relative.margin_left.question">10dp</dimen>
+    <dimen name="relative.margin_right.question">10dp</dimen>
+    <dimen name="relative.margin_end.question">10dp</dimen>
+    <dimen name="relative.margin_start.question">10dp</dimen>
+    <dimen name="relative.margin_top.question">20dp</dimen>
 </resources>
