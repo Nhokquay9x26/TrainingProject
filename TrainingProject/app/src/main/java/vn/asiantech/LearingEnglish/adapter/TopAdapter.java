@@ -18,12 +18,12 @@ public class TopAdapter extends RecyclerView.Adapter<TopAdapter.TopViewHolder> {
 
     private Fragment mFragment;
     private ArrayList<Top> mListTop;
-    private OnTopListenner mOnTopListenner;
+    private OnTopListener mOnTopListener;
 
-    public TopAdapter(Fragment mFragment, ArrayList<Top> mListTop, OnTopListenner listener) {
+    public TopAdapter(Fragment mFragment, ArrayList<Top> mListTop, OnTopListener listener) {
         this.mFragment = mFragment;
         this.mListTop = mListTop;
-        mOnTopListenner = listener;
+        mOnTopListener = listener;
     }
 
     @Override
@@ -35,12 +35,12 @@ public class TopAdapter extends RecyclerView.Adapter<TopAdapter.TopViewHolder> {
     @Override
     public void onBindViewHolder(TopViewHolder holder, final int position) {
         holder.mImgCategory.setImageResource(mListTop.get(position).getImgCategory());
-        holder.mTxtCategory.setText(mListTop.get(position).getCategory());
+        holder.mTvCategory.setText(mListTop.get(position).getCategory());
         holder.mImgDetail.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(mOnTopListenner != null){
-                    mOnTopListenner.OnClickItem(position);
+                if (mOnTopListener != null) {
+                    mOnTopListener.OnClickItem(position);
                 }
             }
         });
@@ -54,18 +54,19 @@ public class TopAdapter extends RecyclerView.Adapter<TopAdapter.TopViewHolder> {
 
     public class TopViewHolder extends RecyclerView.ViewHolder {
         private CircleImageView mImgCategory;
-        private TextView mTxtCategory;
+        private TextView mTvCategory;
         private ImageView mImgDetail;
 
         public TopViewHolder(View itemView) {
             super(itemView);
             mImgCategory = (CircleImageView) itemView.findViewById(R.id.imgCategory);
-            mTxtCategory = (TextView) itemView.findViewById(R.id.txtCategory);
+            mTvCategory = (TextView) itemView.findViewById(R.id.tvCategory);
             mImgDetail = (ImageView) itemView.findViewById(R.id.imgDetail);
 
         }
     }
-    public interface OnTopListenner{
+
+    public interface OnTopListener {
         void OnClickItem(int position);
     }
 }

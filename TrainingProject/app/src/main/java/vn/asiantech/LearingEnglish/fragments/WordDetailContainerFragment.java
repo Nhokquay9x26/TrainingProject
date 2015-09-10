@@ -13,7 +13,8 @@ import vn.asiantech.LearingEnglish.adapter.WordDetailAdapter;
 import vn.asiantech.LearingEnglish.models.WordDetail;
 
 @EFragment(R.layout.fragment_word_detail_container)
-public class WordDetailContainerFragment extends BaseFragment {
+public class WordDetailContainerFragment extends BaseFragment
+        implements WordDetailAdapter.OnWordDetailListener {
 
     @ViewById(R.id.viewPager)
     ViewPager mViewPager;
@@ -23,15 +24,37 @@ public class WordDetailContainerFragment extends BaseFragment {
     void afterView() {
         getData();
         WordDetailAdapter adapter = new WordDetailAdapter(getActivity(),
-                mWordDetails);
+                mWordDetails, this);
         mViewPager.setAdapter(adapter);
     }
 
+    @Override
+    public void onResume() {
+        super.onResume();
+        if (mOnBaseFragmentListener != null) {
+            mOnBaseFragmentListener.setHeaderTitle(getArguments().getString("title"));
+        }
+    }
+
     private void getData() {
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 5; i++) {
             WordDetail wordDetail = new WordDetail(R.drawable.cloud, "Cloud " + (i + 1),
                     "Cloud /klaud/: Mây, đám mây...", "- the sun had disappeared behind a cloud");
             mWordDetails.add(wordDetail);
+        }
+    }
+
+    @Override
+    public void onClickNext() {
+        if (mViewPager.getCurrentItem() != mWordDetails.size() - 1) {
+            mViewPager.setCurrentItem(mViewPager.getCurrentItem() + 1);
+        }
+    }
+
+    @Override
+    public void onClickBack() {
+        if (mViewPager.getCurrentItem() != 0) {
+            mViewPager.setCurrentItem(mViewPager.getCurrentItem() - 1);
         }
     }
 }

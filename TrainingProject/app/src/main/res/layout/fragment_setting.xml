@@ -3,11 +3,11 @@
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginBottom="@dimen/cardView.margin_top_bottom"
-    android:layout_marginLeft="@dimen/cardView.margin_left_right"
-    android:layout_marginRight="@dimen/cardView.margin_left_right"
-    android:layout_marginTop="@dimen/cardView.margin_top_bottom"
-    card_view:cardCornerRadius="@dimen/cardView.card_corner_radius">
+    android:layout_marginBottom="@dimen/cardview.margin_top_bottom"
+    android:layout_marginLeft="@dimen/cardview.margin_left_right"
+    android:layout_marginRight="@dimen/cardview.margin_left_right"
+    android:layout_marginTop="@dimen/cardview.margin_top_bottom"
+    card_view:cardCornerRadius="@dimen/cardview.card_corner_radius">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -31,14 +31,14 @@
                 android:id="@+id/tvUserNameSetting"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/textView.user_name_setting_margin_left"
-                android:layout_marginStart="@dimen/textView.user_name_setting_margin_left"
-                android:layout_marginTop="@dimen/textView.user_name_setting_margin_top"
+                android:layout_marginLeft="@dimen/textview.user_name_setting_margin_left"
+                android:layout_marginStart="@dimen/textview.user_name_setting_margin_left"
+                android:layout_marginTop="@dimen/textview.user_name_setting_margin_top"
                 android:layout_toEndOf="@id/imgAvatarSetting"
                 android:layout_toRightOf="@+id/imgAvatarSetting"
                 android:text="@string/tab_setting"
                 android:textColor="@color/text_user_name_setting"
-                android:textSize="@dimen/textView.text.user_name_setting" />
+                android:textSize="@dimen/textview.text.user_name_setting" />
 
             <ImageView
                 android:id="@+id/imgBtnSettingMain"
@@ -84,13 +84,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/viewFirstLineSetting"
-                android:layout_marginLeft="@dimen/textView.top_setting_margin_left"
-                android:layout_marginStart="@dimen/textView.top_setting_margin_left"
-                android:layout_marginTop="@dimen/textView.top_setting_margin_top"
+                android:layout_marginLeft="@dimen/textview.top_setting_margin_left"
+                android:layout_marginStart="@dimen/textview.top_setting_margin_left"
+                android:layout_marginTop="@dimen/textview.top_setting_margin_top"
                 android:layout_toEndOf="@id/imgTopSetting"
                 android:layout_toRightOf="@+id/imgTopSetting"
                 android:text="@string/textView.text.top_setting"
-                android:textSize="@dimen/textView.text.user_name_setting" />
+                android:textSize="@dimen/textview.text.user_name_setting" />
 
 
             <ImageButton
@@ -135,13 +135,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/viewSecondLineSetting"
-                android:layout_marginLeft="@dimen/textView.aleart_setting_margin_left"
-                android:layout_marginStart="@dimen/textView.aleart_setting_margin_left"
-                android:layout_marginTop="@dimen/textView.aleart_setting_margin_top"
+                android:layout_marginLeft="@dimen/textview.aleart_setting_margin_left"
+                android:layout_marginStart="@dimen/textview.aleart_setting_margin_left"
+                android:layout_marginTop="@dimen/textview.aleart_setting_margin_top"
                 android:layout_toEndOf="@id/imgAleartSetting"
                 android:layout_toRightOf="@+id/imgAleartSetting"
                 android:text="@string/textView.text.aleart_setting"
-                android:textSize="@dimen/textView.text.user_name_setting" />
+                android:textSize="@dimen/textview.text.user_name_setting" />
 
             <ImageButton
                 android:id="@+id/imgBtnNextAleartSetting"
@@ -187,11 +187,11 @@
                 android:layout_below="@id/viewThirdLineSetting"
                 android:layout_marginLeft="@dimen/textView.log_out_setting_margin_left"
                 android:layout_marginStart="@dimen/textView.log_out_setting_margin_left"
-                android:layout_marginTop="@dimen/textView.log_out_setting_margin_top"
+                android:layout_marginTop="@dimen/textview.log_out_setting_margin_top"
                 android:layout_toEndOf="@id/imgLogOutSetting"
                 android:layout_toRightOf="@+id/imgLogOutSetting"
                 android:text="@string/textView.text.log_out_setting"
-                android:textSize="@dimen/textView.text.user_name_setting" />
+                android:textSize="@dimen/textview.text.user_name_setting" />
 
             <ImageButton
                 android:id="@+id/imgBtnNextLogOutSetting"

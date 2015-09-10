@@ -1,6 +1,7 @@
 package vn.asiantech.LearingEnglish.adapter;
 
 import android.content.Context;
+import android.speech.tts.TextToSpeech;
 import android.support.v4.view.PagerAdapter;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,27 +11,33 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import java.util.List;
+import java.util.Locale;
 
 import vn.asiantech.LearingEnglish.R;
 import vn.asiantech.LearingEnglish.models.WordDetail;
 
-public class WordDetailAdapter extends PagerAdapter {
+public class WordDetailAdapter extends PagerAdapter implements TextToSpeech.OnInitListener,
+        View.OnClickListener {
     private List<WordDetail> mWordDetails;
     private LayoutInflater mLayoutInflater;
+    private OnWordDetailListener mListener;
     private Context mContext;
+    private TextToSpeech mTextToSpeech;
 
     /**
-     * contrustor of class customDetaiTopNew
+     * constructor of class customDetailTopNew
      */
-    public WordDetailAdapter(Context context, List<WordDetail> wordDetails) {
+    public WordDetailAdapter(Context context, List<WordDetail> wordDetails,
+                             OnWordDetailListener listener) {
         super();
         this.mContext = context;
         this.mWordDetails = wordDetails;
         mLayoutInflater = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        this.mListener = listener;
     }
 
     /*
-    * return size of arraylist
+    * return size of arrayList
      */
     @Override
     public int getCount() {
@@ -39,14 +46,34 @@ public class WordDetailAdapter extends PagerAdapter {
 
     @Override
     public boolean isViewFromObject(View view, Object object) {
-        return view == ((LinearLayout) object);
+        return view == object;
+    }
+
+    @Override
+    public void onInit(int i) {
+        if (i != TextToSpeech.ERROR) {
+            mTextToSpeech.setLanguage(Locale.US);
+        }
+    }
+
+    @Override
+    public void onClick(View view) {
+        if (view.getId() == R.id.imgNext) {
+            mListener.onClickNext();
+        }
+        if (view.getId() == R.id.imgBack) {
+            mListener.onClickBack();
+        }
     }
 
     private class ViewHolder {
-        ImageView mImgVocabulary;
-        TextView mTxtVocabulary;
-        TextView mTxtMeanVocabulary;
-        TextView mTxtExample;
+        private ImageView mImgVocabulary;
+        private TextView mTvVocabulary;
+        private TextView mTvMeanVocabulary;
+        private TextView mTvExample;
+        private ImageView mImgNext;
+        private ImageView mImgBack;
+        private ImageView mImgSpeaker;
     }
 
     @Override
@@ -56,24 +83,51 @@ public class WordDetailAdapter extends PagerAdapter {
         if (view != null) {
             viewHolder = new ViewHolder();
             viewHolder.mImgVocabulary = (ImageView) view.findViewById(R.id.imgVocabulary);
-            viewHolder.mTxtVocabulary = (TextView) view.findViewById(R.id.tvVocabulary);
-            viewHolder.mTxtMeanVocabulary = (TextView) view.findViewById(R.id.tvMeanVocabulary);
-            viewHolder.mTxtExample = (TextView) view.findViewById(R.id.tvExample);
+            viewHolder.mTvVocabulary = (TextView) view.findViewById(R.id.tvVocabulary);
+            viewHolder.mTvMeanVocabulary = (TextView) view.findViewById(R.id.tvMeanVocabulary);
+            viewHolder.mTvExample = (TextView) view.findViewById(R.id.tvExample);
+            viewHolder.mImgNext = (ImageView) view.findViewById(R.id.imgNext);
+            viewHolder.mImgBack = (ImageView) view.findViewById(R.id.imgBack);
+            viewHolder.mImgSpeaker = (ImageView) view.findViewById(R.id.imgSpeaker);
             view.setTag(viewHolder);
         } else {
             viewHolder = (ViewHolder) view.getTag();
         }
         WordDetail wordDetail = mWordDetails.get(position);
-        viewHolder.mImgVocabulary.setImageResource(wordDetail.getImage());
-        viewHolder.mTxtVocabulary.setText(wordDetail.getWord());
-        viewHolder.mTxtMeanVocabulary.setText(wordDetail.getMean());
-        viewHolder.mTxtExample.setText(wordDetail.getExample());
+        mTextToSpeech = new TextToSpeech(mContext, this);
+        setValue(viewHolder, wordDetail);
+        setEvent(viewHolder);
         container.addView(view);
         return view;
+    }
+
+    private void setEvent(final ViewHolder viewHolder) {
+        viewHolder.mImgNext.setOnClickListener(this);
+        viewHolder.mImgBack.setOnClickListener(this);
+        viewHolder.mImgSpeaker.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mTextToSpeech.speak(viewHolder.mTvVocabulary.getText().toString(),
+                        TextToSpeech.QUEUE_FLUSH, null);
+            }
+        });
+    }
+
+    private void setValue(ViewHolder viewHolder, WordDetail wordDetail) {
+        viewHolder.mImgVocabulary.setImageResource(wordDetail.getImage());
+        viewHolder.mTvVocabulary.setText(wordDetail.getWord());
+        viewHolder.mTvMeanVocabulary.setText(wordDetail.getMean());
+        viewHolder.mTvExample.setText(wordDetail.getExample());
     }
 
     @Override
     public void destroyItem(ViewGroup container, int position, Object object) {
         container.removeView((LinearLayout) object);
+    }
+
+    public interface OnWordDetailListener {
+        void onClickNext();
+
+        void onClickBack();
     }
 }

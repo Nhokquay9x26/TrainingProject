@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="@dimen/relativeLayout.item_top_height">
+    android:layout_height="@dimen/relativelayout.item_top_height">
     <vn.asiantech.LearingEnglish.views.CircleImageView
         android:id="@+id/imgCategory"
-        android:layout_width="@dimen/imageView.category_width"
-        android:layout_height="@dimen/imageView.category_height"
+        android:layout_width="@dimen/imageview.category_width"
+        android:layout_height="@dimen/imageview.category_height"
         android:src="@drawable/img_avatar"
         android:layout_centerVertical="true"
-        android:layout_marginLeft="@dimen/imageView.category_margin_left"
-        android:layout_marginStart="@dimen/imageView.category_margin_left"/>
+        android:layout_marginLeft="@dimen/imageview.category_margin_left"
+        android:layout_marginStart="@dimen/imageview.category_margin_left"/>
     <TextView
-        android:id="@+id/txtCategory"
+        android:id="@+id/tvCategory"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/textView.top_category_name"
         android:layout_toRightOf="@+id/imgCategory"
         android:layout_toEndOf="@+id/imgCategory"
         android:layout_centerVertical="true"
-        android:layout_marginLeft="@dimen/textView.category_margin_left"
-        android:layout_marginStart="@dimen/textView.category_margin_left"
+        android:layout_marginLeft="@dimen/textview.category_margin_left"
+        android:layout_marginStart="@dimen/textview.category_margin_left"
         android:textSize="16sp"
         android:textColor="@color/textView.category"/>
     <ImageView
@@ -30,9 +30,9 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
         android:layout_centerVertical="true"
-        android:layout_marginRight="@dimen/imageView.detail_margin_right"
+        android:layout_marginRight="@dimen/imageview.detail_margin_right"
         android:contentDescription="@null"
-        android:layout_marginEnd="@dimen/imageView.detail_margin_right"/>
+        android:layout_marginEnd="@dimen/imageview.detail_margin_right"/>
     <View
         android:layout_width="wrap_content"
         android:layout_height="@dimen/view.below_editText"
@@ -41,5 +41,5 @@
         android:layout_toEndOf="@+id/imgCategory"
         android:layout_toLeftOf="@id/imgDetail"
         android:layout_toStartOf="@id/imgDetail"
-        android:layout_below="@+id/txtCategory"/>
+        android:layout_below="@+id/tvCategory"/>
 </RelativeLayout>
