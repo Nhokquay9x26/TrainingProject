@@ -4,11 +4,15 @@
     android:layout_height="match_parent"
     android:background="#eafbff"
     >
-    <ImageView
+    <!--<ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_centerInParent="true"
         android:padding="50dp"
         android:src="@drawable/loading"
-        />
+        />-->
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycleQuestion"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 </RelativeLayout>

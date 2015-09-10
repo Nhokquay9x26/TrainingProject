@@ -1,6 +1,8 @@
 package vn.asiantech.LearingEnglish.activities;
 
 import android.annotation.TargetApi;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Handler;
@@ -72,29 +74,11 @@ public class MainActivity extends FragmentActivity {
             }
         });
 
-        final Intent mIntent = new Intent(this, TestingActivity_.class);
+
         mViewPagerMain.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
             public void onPageSelected(int position) {
                 mTabBarMain.clickTab(position);
-
-                if (position == 2) {
-                    Timer timer = new Timer();
-                    timer.schedule(new TimerTask() {
-                        @Override
-                        public void run() {
-                            startActivity(mIntent);
-                        }
-                    }, 1000);
-                }
-                if (position==3){
-                   /* for (int i=0;i<5;i++){
-
-                        Log.d("",mRankings.get(i).getMUserName());
-                        Log.d("",mRankings.get(i).getMPoint()+"");
-
-                    }*/
-                }
             }
 
             @Override
@@ -111,11 +95,6 @@ public class MainActivity extends FragmentActivity {
     private void getRankUser(){
         mRankings = new ArrayList<Ranking>();
         mRankings = ApplicationData.getRankUser();
-    }
-    @Override
-    protected void onResume() {
-        super.onResume();
-        mViewPagerMain.setCurrentItem(0, false);
     }
 
     /**

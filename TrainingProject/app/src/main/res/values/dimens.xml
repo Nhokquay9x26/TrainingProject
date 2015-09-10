@@ -150,6 +150,8 @@
     <dimen name="testing.button.width_submit">90dp</dimen>
     <dimen name="testing.button.height_submit">30dp</dimen>
     <dimen name="testing.button.margin_right_submit">5dp</dimen>
+    <dimen name="question.rl.height">80dp</dimen>
+    <dimen name="question.textview.size">15sp</dimen>
 
 
 </resources>

@@ -16,7 +16,6 @@ import org.androidannotations.annotations.ViewById;
 import java.util.ArrayList;
 
 import vn.asiantech.LearingEnglish.R;
-import vn.asiantech.LearingEnglish.activities.TestingActivity;
 import vn.asiantech.LearingEnglish.activities.TestingActivity_;
 import vn.asiantech.LearingEnglish.adapter.TestResultingAdapter;
 import vn.asiantech.LearingEnglish.models.ApplicationData;
@@ -52,7 +51,6 @@ public class TestResultingFragment extends Fragment {
         mQuestionDatas = new ArrayList<Question>();
         mListSelections = new ArrayList<>();
         ApplicationData.getSelectionTrue(mListSelections);
-        Log.d("Phai", "chay day cho hong");
         if (getActivity() instanceof TestingActivity_) {
             mQuestionDatas = ((TestingActivity_) getActivity()).getMQuestionDatas();
         }
@@ -69,6 +67,7 @@ public class TestResultingFragment extends Fragment {
 
     @Click(R.id.imgShare)
     void imgShareClicked() {
+
         if (getActivity() instanceof TestingActivity_) {
             ((TestingActivity_) getActivity()).shareFaceBook();
         }
@@ -111,6 +110,7 @@ public class TestResultingFragment extends Fragment {
 
     }
 
+
     /**
      * Config recyclerView
      */
@@ -134,4 +134,7 @@ public class TestResultingFragment extends Fragment {
         }
         return count;
     }
+
+
 }
+
