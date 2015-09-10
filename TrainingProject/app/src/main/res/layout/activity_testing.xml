@@ -24,7 +24,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
-            android:layout_marginRight="@dimen/custom.tabbar.main.maginright"
+            android:layout_marginRight="@dimen/header.imgsearch.maginright"
             android:src="@drawable/icon_search" />
 
         <TextView

@@ -1,15 +1,10 @@
 <resources>
-<<<<<<< HEAD
-<string name="app_name">Base Project</string>
-
-<string name="hello_world">Hello world!</string>
+    <string name="app_name">Base Project</string>
+    <string name="hello_world">Hello world!</string>
     <string name="TextView.text_get_pass">Get Pass</string>
     <string name="EditText.text_hint_email">Email</string>
     <string name="Button.text_forgot_pass">Forgot</string>
-=======
-    <string name="app_name">Base Project</string>
-    <string name="hello_world">Hello world!</string>
->>>>>>> group2-subMaster
+    <string name="activity_forgot_pass_Text_Warring">Plese enter your email!</string>
     <string name="Sign_in">Sign in</string>
     <string name="username_email">Username / Email Address</string>
     <string name="password">Password</string>
@@ -22,12 +17,8 @@
     <string name="choiceC">(C) Supports various technologies</string>
     <string name="choiceD">(D) Highly optimized Virtual Machine</string>
     <string name="text.testing.detail_question">Question 1: What are the advantages of android?</string>
-
-
-
     <string name="testing.textview.text_title">Question</string>
     <string name="testing.textview.number_of_question">1 - 7</string>
-
     <string name="signup.tv.sub">Tape to change profile</string>
     <string name="activity.signup.hint.user">Username</string>
     <string name="activity.signup.hint.email">Email</string>
@@ -57,4 +48,8 @@
     <string name="rating.textview.rank_id">1st</string>
     <string name="ratings.textview.tvName_User">Maniter Jack</string>
     <string name="ratings.textview.tvPoint">100</string>
+    <string name="favorite.textview.title">Favorite</string>
+    <string name="header.animal">Animal</string>
+    <string name="header.home">Home</string>
+    <string name="header.Detail">Detail</string>
 </resources>
