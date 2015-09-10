@@ -26,7 +26,7 @@ public interface Api {
      * -----------------------------------*/
 
     @FormUrlEncoded
-    @POST("/v1/login")
+    @POST("/login")
     void login(@Field(Parameter.EMAIL) String studentId,
                @Field(Parameter.PASSWORD) String password,
                Callback<Login> callback);

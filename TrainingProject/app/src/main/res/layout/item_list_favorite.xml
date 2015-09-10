@@ -24,7 +24,7 @@
         android:layout_width="@dimen/ic_sound_width"
         android:layout_height="@dimen/ic_sound_height"
         android:contentDescription="@string/app_name"
-        android:src="@drawable/ic_sound"
+        android:src="@drawable/selector_icon_sound"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
         android:scaleType="centerInside"

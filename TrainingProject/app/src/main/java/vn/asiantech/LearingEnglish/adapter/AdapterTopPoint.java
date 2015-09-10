@@ -1,11 +1,13 @@
 package vn.asiantech.LearingEnglish.adapter;
 
+import android.graphics.Color;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+
 import java.util.List;
 
 import vn.asiantech.LearingEnglish.R;
@@ -48,7 +50,10 @@ public class AdapterTopPoint extends RecyclerView.Adapter<AdapterTopPoint.TopPoi
         holder.mTvId.setText(mTopPoints.get(position).getMId());
         holder.mImgAvatar.setImageResource(mTopPoints.get(position).getMPhotoId());
         holder.mTvName.setText(mTopPoints.get(position).getMName());
-        holder.mTvTopPoint.setText((mTopPoints.get(position).getMPoint())+"");
+        holder.mTvTopPoint.setText((mTopPoints.get(position).getMPoint()) + "");
+        if(position == 0){
+            holder.mTvName.setTextColor(Color.RED);
+        }
     }
 
     @Override

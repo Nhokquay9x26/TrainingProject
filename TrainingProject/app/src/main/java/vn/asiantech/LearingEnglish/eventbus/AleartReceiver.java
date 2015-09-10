@@ -14,7 +14,10 @@ import vn.asiantech.LearingEnglish.activities.MainActivity_;
 public class AleartReceiver extends BroadcastReceiver {
     @Override
     public void onReceive(Context context, Intent intent) {
-        createNotification(context,"Time Up", "You should study English right now", "Learning English");
+        final String TITLE_TIME_UP = "Time Up";
+        final String TITLE_ALEART = "You should study English right now";
+        final String CONTENT_ALEART = "Learning English";
+        createNotification(context, TITLE_TIME_UP, TITLE_ALEART, CONTENT_ALEART);
     }
 
     public void createNotification(Context context, String msg, String msgText, String msgAleart) {
@@ -25,7 +28,6 @@ public class AleartReceiver extends BroadcastReceiver {
                 .setContentTitle(msg)
                 .setTicker(msgAleart)
                 .setContentText(msgText);
-
         buidler.setContentIntent(notifiIntent);
         buidler.setDefaults(NotificationCompat.DEFAULT_SOUND);
         buidler.setAutoCancel(true);

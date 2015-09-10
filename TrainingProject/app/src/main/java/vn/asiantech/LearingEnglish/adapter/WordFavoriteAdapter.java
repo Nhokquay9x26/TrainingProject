@@ -16,7 +16,7 @@ import java.util.Locale;
 import vn.asiantech.LearingEnglish.R;
 
 /**
- * Created by hoai on 31/08/2015.
+ *  Created by hoai on 31/08/2015.
  */
 public class WordFavoriteAdapter extends RecyclerView.Adapter<WordFavoriteAdapter.RecyclerViewHolder> {
 
@@ -35,8 +35,8 @@ public class WordFavoriteAdapter extends RecyclerView.Adapter<WordFavoriteAdapte
 
     @Override
     public void onBindViewHolder(RecyclerViewHolder viewHolder, int position) {
-        viewHolder.mTvWord.setText(mFavorites.get(position).getWord());
-        viewHolder.mTvPronunciation.setText(mFavorites.get(position).getPronunciation());
+        viewHolder.mTvWord.setText(mFavorites.get(position).getMWord());
+        viewHolder.mTvPronunciation.setText(mFavorites.get(position).getMPronunciation());
 
     }
 
@@ -53,7 +53,6 @@ public class WordFavoriteAdapter extends RecyclerView.Adapter<WordFavoriteAdapte
         private ImageView mImgSound;
         private TextToSpeech mTextToSpeed;
 
-        int a;
         public RecyclerViewHolder(View convertView) {
             super(convertView);
             mTextToSpeed = new TextToSpeech(mContext, this);
