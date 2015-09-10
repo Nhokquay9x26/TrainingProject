@@ -17,8 +17,8 @@ import vn.asiantech.LearingEnglish.adapter.TestingAdapter;
 @EFragment(R.layout.fragment_testing)
 public class FragmentPageTesting extends BaseFragment {
 
-    int fragNum;
-    String[] mQuestion;
+    private int mFragmentNumber;
+    private String[] mQuestion;
 
     @ViewById(R.id.tvQuestion)
     TextView tvQuestion;
@@ -64,10 +64,11 @@ public class FragmentPageTesting extends BaseFragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        fragNum = getArguments() != null ? getArguments().getInt("val") : 1;
-        fragNum++;
+        mFragmentNumber = getArguments() != null ? getArguments().getInt("val") : 1;
+        mFragmentNumber++;
         mQuestion = getResources().getStringArray(R.array.question_array);
     }
+
     /**
      * The Fragment's UI is a simple text view showing its instance number and
      * an associated list.
@@ -75,8 +76,8 @@ public class FragmentPageTesting extends BaseFragment {
     @AfterViews
     public void AfterViews() {
         tvQuestion.setText(Html.fromHtml("<b>" + "<font color=\"#ed166a\">"
-                + "Câu " + fragNum + ": " + "</font>" + "<b/>" + mQuestion[fragNum - 1]));
-        tvPageCurrent.setText("" + fragNum + "-");
+                + "Câu " + mFragmentNumber + ": " + "</font>" + "<b/>" + mQuestion[mFragmentNumber - 1]));
+        tvPageCurrent.setText("" + mFragmentNumber + "-");
         tvPageTotal.setText(Integer.toString(mQuestion.length));
     }
 

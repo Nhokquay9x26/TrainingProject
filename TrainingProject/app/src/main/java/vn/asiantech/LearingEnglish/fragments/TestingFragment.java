@@ -12,7 +12,7 @@ import vn.asiantech.LearingEnglish.views.HeaderBar;
 
 
 @EFragment(R.layout.fragment_two)
-public class TabTwoFragment extends BaseFragment implements TestingAdapter.OnChangePager {
+public class TestingFragment extends BaseFragment implements TestingAdapter.OnChangePager {
 
     @ViewById(R.id.viewPagerTesting)
     ViewPager mViewPager;
@@ -20,9 +20,9 @@ public class TabTwoFragment extends BaseFragment implements TestingAdapter.OnCha
     @AfterViews
     public void AfterViews() {
         FragmentPageTesting_ mFragmentPageTesting = new FragmentPageTesting_();
-        TestingAdapter adapter = new TestingAdapter(getFragmentManager(),
+        TestingAdapter mTestingAdapter = new TestingAdapter(getFragmentManager(),
                 mFragmentPageTesting, this,getCountQuestion());
-        mViewPager.setAdapter(adapter);
+        mViewPager.setAdapter(mTestingAdapter);
     }
 
     @Override

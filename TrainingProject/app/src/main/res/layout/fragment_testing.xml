@@ -8,24 +8,24 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="@dimen/relative.hight.question"
+        android:layout_marginBottom="@dimen/cardView.top_margin_bottom"
         android:layout_marginEnd="@dimen/cardView.top_margin_right"
         android:layout_marginLeft="@dimen/cardView.top_margin_left"
         android:layout_marginRight="@dimen/cardView.top_margin_right"
         android:layout_marginStart="@dimen/cardView.top_margin_left"
         android:layout_marginTop="@dimen/cardView.top_margin_top"
-        android:layout_marginBottom="@dimen/cardView.top_margin_bottom"
         android:background="@drawable/custom_item_fragment">
 
         <TextView
             android:id="@+id/tvQuestion"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="@dimen/textview.text.size.question"
             android:layout_marginBottom="@dimen/textview.text.margin_top_bottom.question"
-            android:layout_marginTop="@dimen/textview.text.margin_top_bottom.question"
             android:layout_marginLeft="@dimen/textview.text.margin_left_right.question"
             android:layout_marginRight="@dimen/textview.text.margin_left_right.question"
-            android:text="Câu 1: " />
+            android:layout_marginTop="@dimen/textview.text.margin_top_bottom.question"
+            android:text="Câu 1: "
+            android:textSize="@dimen/textview.text.size.question" />
     </RelativeLayout>
 
     <RelativeLayout
@@ -39,16 +39,28 @@
         android:background="@drawable/custom_item_fragment">
 
         <RelativeLayout
-            android:layout_width="wrap_content"
+            android:id="@+id/relativeLayout"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/relativeSetting.margin_bottom"
             android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginBottom="@dimen/margin.relative">
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/btnTime"
+                android:background="@color/header.background"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginRight="@dimen/cardView.margin_left_right"
+                android:text="00:00" />
 
             <ImageView
                 android:id="@+id/imgBack"
                 android:layout_width="@dimen/textview.text.margin_left_right.question"
                 android:layout_height="@dimen/textview.text.margin_left_right.question"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/btnTime"
                 android:src="@drawable/img_back" />
 
             <TextView
@@ -77,61 +89,77 @@
                 android:id="@+id/imgNext"
                 android:layout_width="20dp"
                 android:layout_height="20dp"
+                android:layout_centerVertical="true"
                 android:layout_toRightOf="@+id/tvPageTotal"
                 android:src="@drawable/img_next" />
+
+            <Button
+                android:id="@+id/btnSend"
+                android:background="@color/header.background"
+                android:textColor="@color/primary_text_default_material_dark"
+                android:layout_marginLeft="@dimen/cardView.margin_left_right"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_toRightOf="@+id/imgNext"
+                android:text="Send" />
+
+
         </RelativeLayout>
 
         <RadioGroup
+            android:id="@+id/radioGroupAnswer"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginTop="20dp">
 
             <RadioButton
                 android:id="@+id/tvAnswerA"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="@dimen/textview.text.size.answer"
                 android:layout_marginBottom="@dimen/textview.text.margin_top_bottom.answer"
-                android:layout_marginTop="@dimen/textview.text.margin_top_bottom.answer"
                 android:layout_marginLeft="@dimen/textview.text.margin_left_right.answer"
                 android:layout_marginRight="@dimen/textview.text.margin_left_right.answer"
-                android:text="A: When are you free? " />
+                android:layout_marginTop="@dimen/textview.text.margin_top_bottom.answer"
+                android:text="A: When are you free? "
+                android:textSize="@dimen/textview.text.size.answer" />
 
             <RadioButton
                 android:id="@+id/tvAnswerB"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="@dimen/textview.text.size.answer"
                 android:layout_below="@+id/tvAnswerA"
                 android:layout_marginBottom="@dimen/textview.text.margin_top_bottom.answer"
-                android:layout_marginTop="@dimen/textview.text.margin_top_bottom.answer"
                 android:layout_marginLeft="@dimen/textview.text.margin_left_right.answer"
                 android:layout_marginRight="@dimen/textview.text.margin_left_right.answer"
-                android:text="B: It was two days ago. " />
+                android:layout_marginTop="@dimen/textview.text.margin_top_bottom.answer"
+                android:text="B: It was two days ago. "
+                android:textSize="@dimen/textview.text.size.answer" />
 
             <RadioButton
                 android:id="@+id/tvAnswerC"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="@dimen/textview.text.size.answer"
                 android:layout_below="@+id/tvAnswerB"
                 android:layout_marginBottom="@dimen/textview.text.margin_top_bottom.answer"
-                android:layout_marginTop="@dimen/textview.text.margin_top_bottom.answer"
                 android:layout_marginLeft="@dimen/textview.text.margin_left_right.answer"
                 android:layout_marginRight="@dimen/textview.text.margin_left_right.answer"
-                android:text="C: Can you help me?" />
+                android:layout_marginTop="@dimen/textview.text.margin_top_bottom.answer"
+                android:text="C: Can you help me?"
+                android:textSize="@dimen/textview.text.size.answer" />
 
             <RadioButton
                 android:id="@+id/tvAnswerD"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="@dimen/textview.text.size.answer"
                 android:layout_below="@+id/tvAnswerC"
                 android:layout_marginBottom="@dimen/textview.text.margin_top_bottom.answer"
-                android:layout_marginTop="@dimen/textview.text.margin_top_bottom.answer"
                 android:layout_marginLeft="@dimen/textview.text.margin_left_right.answer"
                 android:layout_marginRight="@dimen/textview.text.margin_left_right.answer"
-                android:text="D: Never" />
+                android:layout_marginTop="@dimen/textview.text.margin_top_bottom.answer"
+                android:text="D: Never"
+                android:textSize="@dimen/textview.text.size.answer" />
         </RadioGroup>
+
+
     </RelativeLayout>
 </LinearLayout>

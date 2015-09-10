@@ -11,17 +11,18 @@ import vn.asiantech.LearingEnglish.fragments.FragmentPageTesting;
  * Created by ThanhITBK on 9/4/2015.
  */
 public class TestingAdapter extends FragmentPagerAdapter {
-    public static int ITEMS ;
-    FragmentPageTesting fragment;
+    public static int ITEMS;
+    private FragmentPageTesting mFragmentPageTesting;
     private OnChangePager mOnChangePager;
 
-    public TestingAdapter(FragmentManager fragmentManager, FragmentPageTesting fragment,
-                          OnChangePager onChangePager,int countQuestion) {
+    public TestingAdapter(FragmentManager fragmentManager, FragmentPageTesting fragmentPageTesting,
+                          OnChangePager onChangePager, int countQuestion) {
         super(fragmentManager);
-        this.fragment = fragment;
+        this.mFragmentPageTesting = fragmentPageTesting;
         mOnChangePager = onChangePager;
-        this.ITEMS=countQuestion;
+        this.ITEMS = countQuestion;
     }
+
     @Override
     public int getCount() {
         return ITEMS;
@@ -29,7 +30,7 @@ public class TestingAdapter extends FragmentPagerAdapter {
 
     @Override
     public Fragment getItem(int position) {
-        return fragment.init(position, mOnChangePager);
+        return mFragmentPageTesting.init(position, mOnChangePager);
     }
 
     public interface OnChangePager {
