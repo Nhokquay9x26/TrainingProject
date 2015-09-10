@@ -34,23 +34,21 @@ public class SignUpFragment extends BaseFragment {
     @ViewById(R.id.checkBoxEmail)
     CheckBox mCheckBoxEmail;
 
-    String mUsername, mPassword, mEmail, mConfirmPassword, mPromotionCode;
-
     @Click(R.id.btnSignUp)
     public void onSignUp() {
-        mUsername = mEdtUsername.getText().toString();
-        mEmail = mEdtEmail.getText().toString();
-        mPassword = mEdtPassword.getText().toString();
-        mConfirmPassword = mEdtConfirmPassword.getText().toString();
-        mPromotionCode = mEdtPromotionCode.getText().toString();
+        String username = mEdtUsername.getText().toString();
+        String email = mEdtEmail.getText().toString();
+        String password = mEdtPassword.getText().toString();
+        String confirmPassword = mEdtConfirmPassword.getText().toString();
+        String promotionCode = mEdtPromotionCode.getText().toString();
 
-        if (mUsername.equals("") || mEmail.equals("") || mPassword.equals("") ||
-                mConfirmPassword.equals("") || mPromotionCode.equals("")) {
-            Toast.makeText(getActivity(), getResources().getString(R.string.textview_text_input_register) , Toast.LENGTH_SHORT).show();
-        } else if(mCheckBoxEmail.isSelected()){
-            Toast.makeText(getActivity(), getResources().getString(R.string.textview_text_register_successfully) , Toast.LENGTH_SHORT).show();
-        }else {
-            Toast.makeText(getActivity(), getResources().getString(R.string.textview_text_register_successfully) , Toast.LENGTH_SHORT).show();
+        if (username.equals("") || email.equals("") || password.equals("") ||
+                confirmPassword.equals("") || promotionCode.equals("")) {
+            Toast.makeText(getActivity(), getResources().getString(R.string.textview_text_input_register), Toast.LENGTH_SHORT).show();
+        } else if (mCheckBoxEmail.isSelected()) {
+            Toast.makeText(getActivity(), getResources().getString(R.string.textview_text_register_successfully), Toast.LENGTH_SHORT).show();
+        } else {
+            Toast.makeText(getActivity(), getResources().getString(R.string.textview_text_register_successfully), Toast.LENGTH_SHORT).show();
         }
     }
 

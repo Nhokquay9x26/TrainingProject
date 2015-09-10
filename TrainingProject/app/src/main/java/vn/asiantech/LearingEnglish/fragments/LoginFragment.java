@@ -29,19 +29,13 @@ public class LoginFragment extends BaseFragment {
     @ViewById(R.id.tvError)
     TextView mTvError;
 
-    String mUsername, mPassword;
-
-    @AfterViews
-    void initialize() {
-    }
-
     @Click(R.id.btnSignIn)
     public void onSignIn() {
-        mUsername = mEdtUsername.getText().toString();
-        mPassword = mEdtPassword.getText().toString();
-        if (mUsername.equals("") || mPassword.equals("")) {
+        String username = mEdtUsername.getText().toString();
+        String password = mEdtPassword.getText().toString();
+        if (username.equals("") || password.equals("")) {
             mTvError.setText(getResources().getString(R.string.textview_text_error_empty));
-        } else if (mUsername.equals("admin") && mPassword.equals("admin")) {
+        } else if (username.equals("admin") && password.equals("admin")) {
             MainActivity_.intent(getActivity()).start();
             getActivity().finish();
         } else {
