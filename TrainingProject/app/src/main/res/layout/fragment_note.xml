@@ -42,7 +42,7 @@
         android:background="@color/relativelayout.favorite.background.list">
 
         <android.support.v7.widget.RecyclerView
-            android:id="@+id/lvFavorite"
+            android:id="@+id/recycleViewFavorite"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginBottom="@dimen/listView.favorite.margin_bot.6dp"

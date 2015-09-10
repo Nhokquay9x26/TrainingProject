@@ -10,13 +10,19 @@
         android:weightSum="4">
 
         <TextView
-            android:id="@+id/tvVocabulary"
+            android:id="@+id/tvEnglish"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="3" />
+            android:layout_weight="2" />
+
+        <TextView
+            android:id="@+id/tvPhonetic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2" />
 
         <ImageView
-            android:id="@+id/imgListening"
+            android:id="@+id/imgSound"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
