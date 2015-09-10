@@ -102,6 +102,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/rlMenubarTesting"
+        android:layout_above="@+id/tabbarBottom"
         />
 
     <RelativeLayout
@@ -170,5 +171,10 @@
             />
     </RelativeLayout>
 
-
+    <View
+        android:id="@+id/tabbarBottom"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/testing.view.height_bottom"
+        android:layout_alignParentBottom="true"
+        android:background="@color/color.testing.menubar" />
 </RelativeLayout>

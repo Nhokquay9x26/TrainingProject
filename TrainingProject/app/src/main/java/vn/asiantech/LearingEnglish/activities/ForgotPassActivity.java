@@ -26,12 +26,11 @@ public class ForgotPassActivity extends BaseActionBarActivity {
     }
 
     @Click(R.id.btnForgot_activity_forgot_pass)
-    void forgotPass(){
+    void forgotPass() {
         String mEmail = mEdtEmail.getText().toString();
-        if (mEmail.equals("")){
+        if (mEmail.equals("")) {
             Toast.makeText(ForgotPassActivity.this, R.string.activity_forgot_pass_Text_Warring, Toast.LENGTH_SHORT).show();
-        }
-        else {
+        } else {
             //TODO proccess forgotPass
         }
     }

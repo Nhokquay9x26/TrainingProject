@@ -38,7 +38,7 @@ public class TabBar extends RelativeLayout implements View.OnClickListener {
     private ImageView mImgSetting;
     private TextView mTvSetting;
     private OnTabBarListener mOnTabBarListener;
-    int posit=0;
+    int posit = 0;
 
     public TabBar(Context context) {
         super(context);
@@ -139,10 +139,10 @@ public class TabBar extends RelativeLayout implements View.OnClickListener {
         int id = v.getId();
         if (id == R.id.llHome) {
             clickTab(0);
-            posit=0;
+            posit = 0;
         } else if (id == R.id.llFavorite) {
             clickTab(1);
-            posit=1;
+            posit = 1;
         } else if (id == R.id.llQuestion) {
             clickTab(2);
         } else if (id == R.id.llSetting) {
