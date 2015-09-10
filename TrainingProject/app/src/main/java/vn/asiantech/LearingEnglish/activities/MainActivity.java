@@ -10,6 +10,7 @@ import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.Toast;
 
@@ -84,7 +85,7 @@ public class MainActivity extends BaseActionBarActivity implements HeaderBar.OnH
                 if (position == 0) {
                     title = getResources().getString(R.string.tab_1);
                 } else if (position == 1) {
-                    title = getResources().getString(R.string.tab_2);
+                    title = getResources().getString(R.string.tab_question);
                 } else if (position == 2) {
                     title = getResources().getString(R.string.tab_3);
                 } else {
@@ -218,4 +219,5 @@ public class MainActivity extends BaseActionBarActivity implements HeaderBar.OnH
     private void setHeader(String title) {
         mHeaderBar.setTitle(title);
     }
+
 }
