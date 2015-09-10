@@ -6,9 +6,11 @@ import android.widget.TextView;
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.Click;
 import org.androidannotations.annotations.EFragment;
+import org.androidannotations.annotations.FragmentByTag;
 import org.androidannotations.annotations.ViewById;
 
 import vn.asiantech.LearingEnglish.R;
+import vn.asiantech.LearingEnglish.activities.InitializeActivity_;
 import vn.asiantech.LearingEnglish.activities.MainActivity_;
 
 /**
@@ -17,6 +19,9 @@ import vn.asiantech.LearingEnglish.activities.MainActivity_;
  */
 @EFragment(R.layout.fragment_login)
 public class LoginFragment extends BaseFragment {
+    @FragmentByTag("SignUpFragment")
+    protected SignUpFragment mSignUpFragment;
+
     @ViewById(R.id.edtUsername)
     EditText mEdtUsername;
     @ViewById(R.id.edtPassword)
@@ -46,5 +51,9 @@ public class LoginFragment extends BaseFragment {
 
     @Click(R.id.btnSignUp)
     public void onSignUp() {
+        if (mSignUpFragment == null) {
+            mSignUpFragment = SignUpFragment_.builder().build();
+        }
+        ((InitializeActivity_) getActivity()).replaceFragment(mSignUpFragment);
     }
 }

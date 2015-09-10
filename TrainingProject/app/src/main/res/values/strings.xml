@@ -54,6 +54,8 @@
     <string name="textview.hint.via_email">I wish to subscribe to daily deal alert via email</string>
     <string name="button.sigup">Sign Up</string>
     <string name="button.signin">Sign In</string>
+    <string name="textview_text_input_register">Please input</string>
+    <string name="textview_text_register_successfully">Register successfully</string>
 
     <!-- strings file fragment_test-->
     <string name="textview.test.text">Test</string>
