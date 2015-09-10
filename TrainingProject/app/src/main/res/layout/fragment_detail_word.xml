@@ -10,14 +10,14 @@
         android:id="@+id/card_view"
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:layout_marginEnd="@dimen/cardView.margin_left_right"
-        android:layout_marginLeft="@dimen/cardView.margin_left_right"
-        android:layout_marginRight="@dimen/cardView.margin_left_right"
-        android:layout_marginStart="@dimen/cardView.margin_left_right"
-        android:layout_marginTop="@dimen/cardView.top_margin_top"
+        android:layout_marginEnd="@dimen/cardview.margin_left_right"
+        android:layout_marginLeft="@dimen/cardview.margin_left_right"
+        android:layout_marginRight="@dimen/cardview.margin_left_right"
+        android:layout_marginStart="@dimen/cardview.margin_left_right"
+        android:layout_marginTop="@dimen/cardview.top_margin_top"
         android:layout_weight="3"
         android:orientation="vertical"
-        card_view:cardCornerRadius="@dimen/cardView.top_radius">
+        card_view:cardCornerRadius="@dimen/cardview.top_radius">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -71,14 +71,14 @@
     <android.support.v7.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:layout_marginBottom="@dimen/cardView.margin_top_bottom"
-        android:layout_marginEnd="@dimen/cardView.margin_left_right"
-        android:layout_marginLeft="@dimen/cardView.margin_left_right"
-        android:layout_marginRight="@dimen/cardView.margin_left_right"
-        android:layout_marginStart="@dimen/cardView.margin_left_right"
-        android:layout_marginTop="@dimen/cardView.margin_top_bottom"
+        android:layout_marginBottom="@dimen/cardview.margin_top_bottom"
+        android:layout_marginEnd="@dimen/cardview.margin_left_right"
+        android:layout_marginLeft="@dimen/cardview.margin_left_right"
+        android:layout_marginRight="@dimen/cardview.margin_left_right"
+        android:layout_marginStart="@dimen/cardview.margin_left_right"
+        android:layout_marginTop="@dimen/cardview.margin_top_bottom"
         android:layout_weight="2"
-        card_view:cardCornerRadius="@dimen/cardView.top_radius">
+        card_view:cardCornerRadius="@dimen/cardview.top_radius">
 
         <RelativeLayout
             android:layout_width="match_parent"

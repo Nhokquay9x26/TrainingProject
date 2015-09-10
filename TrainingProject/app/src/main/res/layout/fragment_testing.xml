@@ -8,12 +8,12 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="@dimen/relative.hight.question"
-        android:layout_marginEnd="@dimen/cardView.top_margin_right"
-        android:layout_marginLeft="@dimen/cardView.top_margin_left"
-        android:layout_marginRight="@dimen/cardView.top_margin_right"
-        android:layout_marginStart="@dimen/cardView.top_margin_left"
-        android:layout_marginTop="@dimen/cardView.top_margin_top"
-        android:layout_marginBottom="@dimen/cardView.top_margin_bottom"
+        android:layout_marginEnd="@dimen/cardview.top_margin_right"
+        android:layout_marginLeft="@dimen/cardview.top_margin_left"
+        android:layout_marginRight="@dimen/cardview.top_margin_right"
+        android:layout_marginStart="@dimen/cardview.top_margin_left"
+        android:layout_marginTop="@dimen/cardview.top_margin_top"
+        android:layout_marginBottom="@dimen/cardview.top_margin_bottom"
         android:background="@drawable/custom_item_fragment">
 
         <TextView
@@ -31,11 +31,11 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginBottom="@dimen/cardView.top_margin_bottom"
-        android:layout_marginEnd="@dimen/cardView.top_margin_right"
-        android:layout_marginLeft="@dimen/cardView.top_margin_left"
-        android:layout_marginRight="@dimen/cardView.top_margin_right"
-        android:layout_marginStart="@dimen/cardView.top_margin_left"
+        android:layout_marginBottom="@dimen/cardview.top_margin_bottom"
+        android:layout_marginEnd="@dimen/cardview.top_margin_right"
+        android:layout_marginLeft="@dimen/cardview.top_margin_left"
+        android:layout_marginRight="@dimen/cardview.top_margin_right"
+        android:layout_marginStart="@dimen/cardview.top_margin_left"
         android:background="@drawable/custom_item_fragment">
 
         <RelativeLayout

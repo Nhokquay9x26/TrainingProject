@@ -60,7 +60,7 @@ public class TopAdapter extends RecyclerView.Adapter<TopAdapter.TopViewHolder> {
         public TopViewHolder(View itemView) {
             super(itemView);
             mImgCategory = (CircleImageView) itemView.findViewById(R.id.imgCategory);
-            mTxtCategory = (TextView) itemView.findViewById(R.id.txtCategory);
+            mTxtCategory = (TextView) itemView.findViewById(R.id.tvCategory);
             mImgDetail = (ImageView) itemView.findViewById(R.id.imgDetail);
 
         }

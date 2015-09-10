@@ -12,13 +12,13 @@
             android:id="@+id/tvId"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="@dimen/textView.objects_margin"
+            android:layout_margin="@dimen/textview.objects_margin"
             android:layout_gravity="center_vertical"
             android:text="@string/textView.text.1st"/>
         <ImageView
             android:id="@+id/imgAvatarTopPoint"
-            android:layout_width="@dimen/imageView.avatar_top_point_width_height"
-            android:layout_height="@dimen/imageView.avatar_top_point_width_height"
+            android:layout_width="@dimen/imageview.avatar_top_point_width_height"
+            android:layout_height="@dimen/imageview.avatar_top_point_width_height"
             android:layout_weight="1"
             android:layout_gravity="start"
             android:background="@null"
@@ -38,7 +38,7 @@
             android:id="@+id/tvTopPoint"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="@dimen/textView.objects_margin"
+            android:layout_margin="@dimen/textview.objects_margin"
             android:layout_weight="2"
             android:gravity="end"
             android:layout_gravity="center_vertical"
@@ -49,5 +49,5 @@
             android:layout_width="match_parent"
             android:layout_height="@dimen/view.height"
             android:background="@color/view_line_setting"
-            android:layout_marginTop="@dimen/textView.objects_margin"/>
+            android:layout_marginTop="@dimen/textview.objects_margin"/>
         </RelativeLayout>
