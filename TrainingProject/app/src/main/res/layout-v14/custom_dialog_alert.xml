@@ -1,32 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:layout_margin="@dimen/custom.dialog.rl.margin">
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/custom.dialog.rl.margin"
+    android:background="@drawable/custom_dialog_alarm_background">
 
     <RelativeLayout
-        android:id="@+id/rlTitle"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+    android:id="@+id/rlTitle"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
 
-        <ImageView
-            android:id="@+id/imgAlertDialog"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_alert" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_toRightOf="@+id/imgAlertDialog"
-            android:text="@string/custom.dialog.alert.text"
-            android:textColor="@color/custom.dialog.alert.text.color"
-            android:textSize="@dimen/custom.dialog.alert.text.size"
-            android:textStyle="bold" />
-
-    </RelativeLayout>
+    <ImageView
+        android:id="@+id/imgAlertDialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_alert" />
 
     <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/imgAlertDialog"
+        android:text="@string/custom.dialog.alert.text"
+        android:textColor="@color/custom.dialog.alert.text.color"
+        android:textSize="@dimen/custom.dialog.alert.text.size"
+        android:textStyle="bold" />
+
+</RelativeLayout>
+
+
+<TextView
         android:id="@+id/tvLine1"
         android:layout_width="match_parent"
         android:layout_height="@dimen/setting.line.height"
@@ -62,13 +64,13 @@
             android:id="@+id/tvTurnOn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignBottom="@+id/switch1"
-            android:layout_alignTop="@+id/switch1"
+            android:layout_alignBottom="@+id/switchTurn"
+            android:layout_alignTop="@+id/switchTurn"
             android:text="@string/custom.dialog.text.title"
             android:textColor="@color/custom.dialog.text.time.color"></TextView>
 
         <Switch
-            android:id="@+id/switch1"
+            android:id="@+id/switchTurn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/edtTime"

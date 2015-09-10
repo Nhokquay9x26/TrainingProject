@@ -33,5 +33,10 @@ public class FavoriteFragment extends BaseFragment {
         wordsEnglish.setNewWord("Rice");
         wordsEnglish.setSpellingWord("/Rai/");
         wordEnglishs.add(wordsEnglish);
+
+        WordsEnglish wordsEnglish1 = new WordsEnglish();
+        wordsEnglish1.setNewWord("Money");
+        wordsEnglish1.setSpellingWord("/Mane/");
+        wordEnglishs.add(wordsEnglish1);
     }
 }

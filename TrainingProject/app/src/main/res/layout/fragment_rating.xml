@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/rl.background"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/lnTitle"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/rating.rl.height"
+        android:background="@color/rating.rl.color"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ratings"
+            android:textColor="@color/rating.rl.title.color"
+            android:textSize="@dimen/rating.rl.title.size"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lnTitle"
+        android:layout_margin="@dimen/rating.rl.magin"
+        android:background="@drawable/rating_rl_background">
+
+        <RelativeLayout
+            android:id="@+id/rlTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/rating.rl.magin"
+            android:gravity="center"
+            android:paddingRight="@dimen/rating.rl.magin"
+            tools:ignore="RtlHardcoded,RtlSymmetry">
+
+            <TextView
+                android:id="@+id/tvRank"
+                android:layout_width="@dimen/rating.rl.width"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignTop="@+id/tvUser"
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical"
+                android:text="Rank"
+                android:textColor="@color/rating.rl.title.rank.color"
+                android:textSize="@dimen/rating.rl.title.size.rank"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:layout_width="0.1dp"
+                android:layout_height="30dp"
+                android:layout_alignEnd="@+id/tvRank"
+                android:layout_alignParentTop="true"
+                android:layout_alignRight="@+id/tvRank"
+                android:layout_marginEnd="18dp"
+                android:layout_marginRight="18dp"
+                android:background="#bbb" />
+
+            <TextView
+                android:id="@+id/tvUser"
+                android:layout_width="@dimen/rating.rl.tilte.user.width"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/tvRank"
+                android:layout_toRightOf="@+id/tvRank"
+                android:text="User"
+                android:textColor="@color/rating.rl.title.rank.color"
+                android:textSize="@dimen/rating.rl.title.size.rank"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/tvPoint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/tvUser"
+                android:layout_alignTop="@+id/tvUser"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/tvUser"
+                android:text="Points"
+                android:textColor="@color/rating.rl.title.rank.color"
+                android:textSize="@dimen/rating.rl.title.size.rank"
+                tools:ignore="HardcodedText,RtlHardcoded" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/setting.line.height"
+            android:layout_below="@+id/rlTitle"
+            android:background="@color/setting.line.color" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rlTitle">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerViewRating"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>
