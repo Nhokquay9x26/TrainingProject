@@ -30,7 +30,7 @@
             android:background="@color/relativelayout.signin.avatar.backgrounds"
             android:gravity="center">
 
-            <vn.asiantech.LearingEnglish.Views.CircleImageView
+            <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/image.signin.margin_bottom.10dp"
