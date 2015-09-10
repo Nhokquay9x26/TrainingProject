@@ -6,7 +6,6 @@ import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.EFragment;
 import org.androidannotations.annotations.ViewById;
 
-
 import vn.asiantech.LearingEnglish.R;
 import vn.asiantech.LearingEnglish.adapter.TestAdapter;
 

@@ -67,4 +67,17 @@
     <string name="textview.result.text">Result</string>
     <string name="textview.result.text_total">Total :</string>
 
+    <string-array name="question_array">
+        <item>When can we meet again?</item>
+        <item>My aunt is going to stay with me?</item>
+        <item>When do you study?</item>
+        <item>Would you prefer lemonade or orange juice?</item>
+        <item>Lets have dinner now?</item>
+        <item>When can we meet again?</item>
+        <item>My aunt is going to stay with me?</item>
+        <item>When do you study?</item>
+        <item>Would you prefer lemonade or orange juice?</item>
+        <item>Lets have dinner now?</item>
+    </string-array>
+
 </resources>
