@@ -232,4 +232,12 @@
     <dimen name="relativelayout.itemresult.height_79dp">79dp</dimen>
     <dimen name="img.itemresult.margin_right_30dp">30dp</dimen>
 
+    <string-array name="question_array">
+        <item>When can we meet again?</item>
+        <item>My aunt is going to stay with me?</item>
+        <item>When do you study?</item>
+        <item>Would you prefer lemonade or orange juice?</item>
+        <item>Lets have dinner now?</item>
+    </string-array>
+
 </resources>
