@@ -79,7 +79,7 @@ public class SignUpActivity extends Activity {
 
             @Override
             public void failure(RetrofitError error, vn.asiantech.LearingEnglish.network.Error myError) {
-                Toast.makeText(getBaseContext(),error + "", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getBaseContext(),myError.getMessage() + "", Toast.LENGTH_SHORT).show();
             }
         });
 
