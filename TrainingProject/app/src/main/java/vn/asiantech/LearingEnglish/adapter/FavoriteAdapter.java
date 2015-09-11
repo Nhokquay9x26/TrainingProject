@@ -20,10 +20,10 @@ import vn.asiantech.LearingEnglish.models.Favorite;
  * @author DaoQuocViet
  *         Created by nhokquay9x26 on 10/09/2015.
  */
-public class FavoriteAdapter extends RecyclerView.Adapter<FavoriteAdapter.FavoriteViewHolder> implements TextToSpeech.OnInitListener{
+public class FavoriteAdapter extends RecyclerView.Adapter<FavoriteAdapter.FavoriteViewHolder> implements TextToSpeech.OnInitListener {
     Context mContext;
     private ArrayList<Favorite> mArrFavorites;
-    TextToSpeech textToSpeech;
+    TextToSpeech mTextToSpeech;
 
     public FavoriteAdapter(ArrayList<Favorite> mArrFavorites, Context mContext) {
         this.mArrFavorites = mArrFavorites;
@@ -32,8 +32,8 @@ public class FavoriteAdapter extends RecyclerView.Adapter<FavoriteAdapter.Favori
 
     @Override
     public void onInit(int status) {
-        if(status != TextToSpeech.ERROR) {
-            textToSpeech.setLanguage(Locale.UK);
+        if (status != TextToSpeech.ERROR) {
+            mTextToSpeech.setLanguage(Locale.UK);
         }
     }
 
@@ -51,7 +51,6 @@ public class FavoriteAdapter extends RecyclerView.Adapter<FavoriteAdapter.Favori
     }
 
 
-
     @Override
     public FavoriteViewHolder onCreateViewHolder(ViewGroup viewGroup, int viewType) {
         View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.item_list_favorite,
@@ -61,7 +60,7 @@ public class FavoriteAdapter extends RecyclerView.Adapter<FavoriteAdapter.Favori
 
     @Override
     public void onBindViewHolder(FavoriteViewHolder holder, final int position) {
-       textToSpeech = new TextToSpeech(mContext,this);
+        mTextToSpeech = new TextToSpeech(mContext, this);
         holder.mTvEnglish.setText(mArrFavorites.get(position).getEnglish());
         holder.mTvPhonetic.setText(mArrFavorites.get(position).getPhonetic());
         holder.mImgSound.setImageResource(mArrFavorites.get(position).getSound());
@@ -85,7 +84,7 @@ public class FavoriteAdapter extends RecyclerView.Adapter<FavoriteAdapter.Favori
     }
 
     @SuppressWarnings("deprecation")
-    public void toSpeed(String toSpeak){
-        textToSpeech.speak(toSpeak, TextToSpeech.QUEUE_FLUSH, null);
+    public void toSpeed(String toSpeak) {
+        mTextToSpeech.speak(toSpeak, TextToSpeech.QUEUE_FLUSH, null);
     }
 }
