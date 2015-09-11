@@ -1,4 +1,4 @@
-package vn.asiantech.LearingEnglish.AlarmServices;
+package vn.asiantech.LearingEnglish.alrmservices;
 
 import android.app.Dialog;
 import android.app.Service;
