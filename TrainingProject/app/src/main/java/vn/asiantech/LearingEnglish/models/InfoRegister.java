@@ -1,7 +1,5 @@
 package vn.asiantech.LearingEnglish.models;
 
-import com.google.gson.annotations.Expose;
-
 import lombok.Data;
 
 /**
@@ -9,9 +7,8 @@ import lombok.Data;
  */
 @Data
 public class InfoRegister {
-    @Expose
+
     private Boolean error;
-    @Expose
     private String message;
 
 }
