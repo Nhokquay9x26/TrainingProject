@@ -1,9 +1,17 @@
 package vn.asiantech.LearingEnglish.activities;
 
 
+import android.app.AlertDialog;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
+import android.content.Context;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.Canvas;
 import android.graphics.Color;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.CountDownTimer;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
@@ -18,12 +26,30 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.facebook.AccessToken;
+import com.facebook.AccessTokenTracker;
+import com.facebook.CallbackManager;
+import com.facebook.FacebookCallback;
+import com.facebook.FacebookException;
+import com.facebook.FacebookSdk;
+import com.facebook.Profile;
+import com.facebook.ProfileTracker;
+import com.facebook.appevents.AppEventsLogger;
+import com.facebook.login.LoginManager;
+import com.facebook.login.LoginResult;
+import com.facebook.share.ShareApi;
+import com.facebook.share.model.SharePhoto;
+import com.facebook.share.model.SharePhotoContent;
+import com.facebook.share.widget.ShareDialog;
+
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.Click;
 import org.androidannotations.annotations.EActivity;
 import org.androidannotations.annotations.ViewById;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -42,68 +68,31 @@ import vn.asiantech.LearingEnglish.models.Question;
 @EActivity(R.layout.activity_testing)
 public class TestingActivity extends FragmentActivity {
 
+    private static final String PERMISSION = "publish_actions";
+    private CallbackManager mCallbackManager;
+    private ShareDialog shareDialog;
+    private ProfileTracker mProfileTracker;
+    private AccessTokenTracker mAccessTokenTracker;
+    public static AccessToken mAccessToken;
     private int mPositionCurrent;
-    @Getter
-    private int mLeftRight = 0;
     private ArrayList<Fragment> mFragmentTestings;
-    private static boolean isCheckTimerStop = true;
+    private boolean mIsCheckTimerStop = true;
     private long mSaveRemainingTime;
     private TestingAdapter mAdapterTesting;
-    @Setter @Getter
-    private boolean isCheckDisable;
-
-    @Getter
-    private long mRemainingTime;
-
-    @Getter
-    private int mFragmentCurrentDisplay = 0;
-
-    @Getter
-    private ArrayList<String> mListSelection;
-
+    private Bitmap bmTestResulting;
     @Getter
     private ArrayList<Question> mQuestionDatas;
-
-    @ViewById(R.id.viewpager)
-    ViewPager mViewPager;
-
-    @ViewById(R.id.tvTimeLeft)
-    TextView mTvTimeLeft;
-
-    @ViewById(R.id.tvLeftQuestion)
-    TextView mTvLeftQuestion;
-
-    @ViewById(R.id.imgPrevious)
-    ImageView mImgPrevious;
-
-    @ViewById(R.id.imgNext)
-    ImageView mImgNext;
-
-    @ViewById(R.id.tvNumberOfQuestion)
-    TextView mNumberOfQuestion;
-
-    @ViewById(R.id.tvTotalQuestion)
-    TextView mTvTotalQuestion;
-
-    @ViewById(R.id.btnSubmit)
-    Button mBtnSubmit;
-
-    @ViewById(R.id.frViewpager)
-    FrameLayout mFrViewpager;
-
-    @ViewById(R.id.rlButtonBottom)
-    RelativeLayout mRlButtonBottom;
-
-    @ViewById(R.id.progressBarTimer)
-    ProgressBar mProgressBarTimer;
-
-
-    @ViewById(R.id.tvTimeLeftCopy)
-    TextView mTvTimeLeftCopy;
-
-    @ViewById(R.id.tvLeftQuestionCopy)
-    TextView mTvLeftQuestionCopy;
-
+    @Getter
+    private int mLeftRight = 0;
+    @Setter
+    @Getter
+    private boolean mIsCheckDisable;
+    @Getter
+    private long mRemainingTime;
+    @Getter
+    private int mFragmentCurrentDisplay = 0;
+    @Getter
+    private ArrayList<String> mListSelection;
 
     @AfterViews
     void afterView() {
@@ -116,20 +105,121 @@ public class TestingActivity extends FragmentActivity {
         newFragmentQuestion();
         mAdapterTesting = new TestingAdapter(getSupportFragmentManager(), mFragmentTestings);
         mViewPager.setAdapter(mAdapterTesting);
-        creatCountDown();
+        createCountDown();
         setOnClickViewPager();
         mNumberOfQuestion.setText("1 - " + mQuestionDatas.size());
         mTvTotalQuestion.setText("1/" + mQuestionDatas.size());
+    }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        // Logs 'install' and 'app activate' App Events.
+        AppEventsLogger.activateApp(this);
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        AppEventsLogger.deactivateApp(this);
+    }
+
+    private boolean isNetworkAvailable() {
+        ConnectivityManager connectivityManager
+                = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
+        return activeNetworkInfo != null && activeNetworkInfo.isConnected();
+    }
+
+    //login
+    private void login() {
+        List<String> permissionNeeds = Arrays.asList("publish_actions");
+        FacebookSdk.sdkInitialize(getApplicationContext());
+        mCallbackManager = CallbackManager.Factory.create();
+        LoginManager.getInstance().logInWithPublishPermissions(this, permissionNeeds);
+        //LoginManager.getInstance().logInWithReadPermissions(this, Arrays.asList("user_friends", "user_photos", "read_custom_friendlists"));
+        LoginManager.getInstance().registerCallback(mCallbackManager,
+                new FacebookCallback<LoginResult>() {
+                    @Override
+                    public void onSuccess(LoginResult loginResult) {
+                        sharePhotoToFacebook();
+                        AccessToken accessToken = loginResult.getAccessToken();
+                        Profile profile = Profile.getCurrentProfile();
+                        if (profile != null) {
+//                            display(profile);
+                            mAccessToken = accessToken;
+                        } else {
+                            Log.d("vinhhlb", "profile null");
+                        }
+                    }
+
+                    @Override
+                    public void onCancel() {
+                        Log.d("vinhhlb", "onCancel ");
+                    }
+
+                    @Override
+                    public void onError(FacebookException exception) {
+                        Log.d("vinhhlb", "onError " + exception.getMessage());
+                    }
+                });
+    }
+
+    public void shareFaceBook() {
+        if (isNetworkAvailable()) {
+            if (hasPublishPermission()) {
+                login();
+            } else {
+                // We need to get new permissions, then complete the action when we get called back.
+                LoginManager.getInstance().logInWithPublishPermissions(
+                        this,
+                        Arrays.asList(PERMISSION));
+            }
+
+        } else {
+            new AlertDialog.Builder(this)
+                    .setTitle("Warning !")
+                    .setMessage("You're offline .\nPlease ! Turn on mobile data or wifi .")
+                    .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int which) {
+
+                        }
+                    })
+                    .setIcon(android.R.drawable.ic_dialog_alert)
+                    .show();
+        }
+    }
+
+    public void toastMakeText(String text) {
+        Toast.makeText(this, text, Toast.LENGTH_SHORT).show();
+    }
+
+    private void sharePhotoToFacebook() {
+        try {
+            Bitmap image = screenShot(mFrViewpager);
+            SharePhoto photo = new SharePhoto.Builder().setBitmap(image).setCaption("Test App").build();
+            SharePhotoContent content = new SharePhotoContent.Builder().addPhoto(photo).build();
+            ShareApi.share(content, null);
+            toastMakeText("Congratulation ! You just share your results on Timeline !");
+        } catch (Exception e) {
+            toastMakeText("Fail");
+        }
+    }
+
+    public Bitmap screenShot(View view) {
+        Bitmap bitmap = Bitmap.createBitmap(view.getWidth(),
+                view.getHeight(), Bitmap.Config.ARGB_8888);
+        Canvas canvas = new Canvas(bitmap);
+        view.draw(canvas);
+        return bitmap;
     }
 
     @Click(R.id.btnSubmit)
     void mBtnSubmitClicked() {
-
-        if (isCheckTimerStop) {
+        if (mIsCheckTimerStop) {
             mSaveRemainingTime = mRemainingTime;
         }
-        isCheckTimerStop = false;
+        mIsCheckTimerStop = false;
         mRlButtonBottom.setVisibility(View.INVISIBLE);
         mTvTimeLeft.setVisibility(View.INVISIBLE);
         mTvTimeLeftCopy.setVisibility(View.INVISIBLE);
@@ -179,6 +269,7 @@ public class TestingActivity extends FragmentActivity {
 
         } else {
             super.onBackPressed();
+
         }
 
     }
@@ -204,6 +295,11 @@ public class TestingActivity extends FragmentActivity {
         }
     }
 
+    //check has public Permission
+    private boolean hasPublishPermission() {
+        AccessToken accessToken = AccessToken.getCurrentAccessToken();
+        return accessToken != null && accessToken.getPermissions().contains("publish_actions");
+    }
     /**
      * Event when slide or click on viewpager
      */
@@ -227,19 +323,19 @@ public class TestingActivity extends FragmentActivity {
                     mTvTotalQuestion.setText((mFragmentCurrentDisplay + 1) + "/" + mQuestionDatas.size());
                     if (mFragmentCurrentDisplay > mPositionCurrent) {
                         // Move Right
-                       // Log.d("tag change page: ", "right " + mFragmentCurrentDisplay + mPositionCurrent);
+                        // Log.d("tag change page: ", "right " + mFragmentCurrentDisplay + mPositionCurrent);
 
-                        Log.d("======================","========================");
+                        Log.d("======================", "========================");
                         mLeftRight = 1;
                         mPositionCurrent = mFragmentCurrentDisplay;
-                        Log.d("mPositionCurrent R: ", mPositionCurrent+"");
+                        Log.d("mPositionCurrent R: ", mPositionCurrent + "");
                     } else if (mFragmentCurrentDisplay < mPositionCurrent) {
                         // Move Left
-                        Log.d("======================","========================");
+                        Log.d("======================", "========================");
                         //Log.d("tag change page: ", "left " + mFragmentCurrentDisplay + mPositionCurrent);
                         mLeftRight = -1;
                         mPositionCurrent = mFragmentCurrentDisplay;
-                        Log.d("mPositionCurrent L: ", mPositionCurrent+"");
+                        Log.d("mPositionCurrent L: ", mPositionCurrent + "");
                     }
                 }
             }
@@ -295,7 +391,7 @@ public class TestingActivity extends FragmentActivity {
     /**
      * CountDown Timer
      */
-    private void creatCountDown() {
+    private void createCountDown() {
         //10min = 600 sec = 600000ms
         new CountDownTimer(300000, 1000) {
             public void onTick(long millisUntilFinished) {
@@ -313,6 +409,13 @@ public class TestingActivity extends FragmentActivity {
         }.start();
     }
 
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        mCallbackManager.onActivityResult(requestCode, resultCode, data);
+
+    }
+
     /**
      * set text
      *
@@ -322,4 +425,43 @@ public class TestingActivity extends FragmentActivity {
         mTvLeftQuestion.setText(number + "");
     }
 
+    @ViewById(R.id.viewpager)
+    ViewPager mViewPager;
+
+    @ViewById(R.id.tvTimeLeft)
+    TextView mTvTimeLeft;
+
+    @ViewById(R.id.tvLeftQuestion)
+    TextView mTvLeftQuestion;
+
+    @ViewById(R.id.imgPrevious)
+    ImageView mImgPrevious;
+
+    @ViewById(R.id.imgNext)
+    ImageView mImgNext;
+
+    @ViewById(R.id.tvNumberOfQuestion)
+    TextView mNumberOfQuestion;
+
+    @ViewById(R.id.tvTotalQuestion)
+    TextView mTvTotalQuestion;
+
+    @ViewById(R.id.btnSubmit)
+    Button mBtnSubmit;
+
+    @ViewById(R.id.frViewpager)
+    FrameLayout mFrViewpager;
+
+    @ViewById(R.id.rlButtonBottom)
+    RelativeLayout mRlButtonBottom;
+
+    @ViewById(R.id.progressBarTimer)
+    ProgressBar mProgressBarTimer;
+
+
+    @ViewById(R.id.tvTimeLeftCopy)
+    TextView mTvTimeLeftCopy;
+
+    @ViewById(R.id.tvLeftQuestionCopy)
+    TextView mTvLeftQuestionCopy;
 }

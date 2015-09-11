@@ -1,6 +1,7 @@
 package vn.asiantech.LearingEnglish.network;
 
 import retrofit.RetrofitError;
+import vn.asiantech.LearingEnglish.models.ForgotPass;
 import vn.asiantech.LearingEnglish.models.InfoLogin;
 import vn.asiantech.LearingEnglish.models.InfoRegister;
 import vn.asiantech.LearingEnglish.network.core.ApiClient;
@@ -13,6 +14,7 @@ public class AuthorApi {
     public AuthorApi() {
     }
 
+    //Function register new account
     public static void registerAccount(String email, String password, String name, final Callback<InfoRegister> callback) {
         ApiClient.call().register(email, password, name, new Callback<InfoRegister>() {
             @Override
@@ -23,6 +25,21 @@ public class AuthorApi {
             @Override
             public void failure(RetrofitError error, Error myError) {
                 callback.failure(error, myError);
+            }
+        });
+    }
+
+    //Function get new password
+    public static void getNewPassWord(String mEmail, final Callback<ForgotPass> mForgotPassCallback) {
+        ApiClient.call().forgotPassWord(mEmail, new Callback<ForgotPass>() {
+            @Override
+            public void success(ForgotPass forgotPass) {
+                mForgotPassCallback.success(forgotPass);
+            }
+
+            @Override
+            public void failure(RetrofitError error, Error myError) {
+                mForgotPassCallback.failure(error, myError);
             }
         });
     }

@@ -20,7 +20,7 @@ import vn.asiantech.LearingEnglish.network.core.Callback;
  * Created by xuanphu on 27/08/2015.
  */
 @EActivity(R.layout.activity_login)
-public class LoginActivity extends BaseActionBarActivity{
+public class LoginActivity extends BaseActionBarActivity {
     public static final String TAG = "ACTIVITY_LOGIN";
     private Boolean mIsExit = false;
 
@@ -48,10 +48,16 @@ public class LoginActivity extends BaseActionBarActivity{
             toast.show();
         }
     }
+
     @Click
-    void tvSignup(){
+    void tvSignup() {
         Intent intent = new Intent(this, SignupActivity_.class);
         startActivity(intent);
+    }
+
+    @Click(R.id.tvForgotPassword)
+    void getNewPassWord() {
+        ForgotPassActivity_.intent(LoginActivity.this).start();
     }
 
     @Override

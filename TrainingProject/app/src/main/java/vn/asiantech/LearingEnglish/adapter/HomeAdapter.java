@@ -40,7 +40,7 @@ public class HomeAdapter extends  RecyclerView.Adapter<HomeAdapter.HomeViewHolde
 
     @Override
     public void onBindViewHolder(HomeViewHolder holder, int position) {
-        final HomeCategory homeCategory= mArraylists.get(position);
+        final HomeCategory homeCategory = mArraylists.get(position);
         holder.imgAvataHome.setImageResource(homeCategory.getMAvataHome());
         holder.tvNameHone.setText(homeCategory.getMNameHome());
         holder.imgSelecHome.setOnClickListener(new View.OnClickListener() {
@@ -64,7 +64,7 @@ public class HomeAdapter extends  RecyclerView.Adapter<HomeAdapter.HomeViewHolde
             super(itemView);
             imgAvataHome = (vn.asiantech.LearingEnglish.utils.CircleImageView)itemView.findViewById(R.id.imgAvataItemHome);
             tvNameHone = (TextView)itemView.findViewById(R.id.tvNameItemHome);
-            imgSelecHome = (ImageView)itemView.findViewById(R.id.imgSelectItemHome);
+            imgSelecHome = (ImageView) itemView.findViewById(R.id.imgSelectItemHome);
         }
     }
 

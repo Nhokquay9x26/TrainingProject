@@ -56,4 +56,14 @@ public class ApplicationData {
     }
 
 
+    public static ArrayList<NumberTesting> getNumberTestings() {
+        ArrayList<NumberTesting> numberTestings = new ArrayList<>();
+        NumberTesting numberTesting;
+        for (int i = 0; i < 19; i++) {
+            numberTesting = new NumberTesting("Level " + (i + 1), "30'");
+            numberTestings.add(numberTesting);
+        }
+        return numberTestings;
+    }
 }
+

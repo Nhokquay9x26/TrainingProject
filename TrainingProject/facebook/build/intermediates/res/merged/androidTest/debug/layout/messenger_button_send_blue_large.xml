@@ -25,5 +25,4 @@
     <TextView
         android:text="@string/messenger_send_button_text"
         style="@style/MessengerButtonText.Blue.Large" />
-</FrameLayout>
-<!-- From: file:/home/mrson/AndroidStudioProjects/TrainningLearEnglish/Group22/TrainingProject/TrainingProject/facebook/res/layout/messenger_button_send_blue_large.xml --><!-- From: file:/home/mrson/AndroidStudioProjects/TrainningLearEnglish/Group22/TrainingProject/TrainingProject/facebook/build/intermediates/bundles/debug/res/layout/messenger_button_send_blue_large.xml -->
+</FrameLayout

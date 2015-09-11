@@ -24,6 +24,7 @@ public class AnimalAdapter extends RecyclerView.Adapter<AnimalAdapter.AnimalView
         this.mContext = mContext;
         this.mArraylists = mArraylist;
     }
+
     @Override
     public AnimalViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View v = LayoutInflater.from(parent.getContext())
@@ -34,7 +35,7 @@ public class AnimalAdapter extends RecyclerView.Adapter<AnimalAdapter.AnimalView
 
     @Override
     public void onBindViewHolder(AnimalViewHolder holder, int position) {
-        final AnimalCategory animalCategory= mArraylists.get(position);
+        final AnimalCategory animalCategory = mArraylists.get(position);
         holder.imgAvataAnimal.setImageResource(animalCategory.getMAvataAnimal());
         holder.tvNameAnimal.setText(animalCategory.getMNameAnimal());
     }
@@ -47,10 +48,11 @@ public class AnimalAdapter extends RecyclerView.Adapter<AnimalAdapter.AnimalView
     public class AnimalViewHolder extends RecyclerView.ViewHolder {
         vn.asiantech.LearingEnglish.utils.CircleImageView imgAvataAnimal;
         TextView tvNameAnimal;
+
         public AnimalViewHolder(View itemView) {
             super(itemView);
-            imgAvataAnimal = (vn.asiantech.LearingEnglish.utils.CircleImageView)itemView.findViewById(R.id.imgAvataItemAnimal);
-            tvNameAnimal = (TextView)itemView.findViewById(R.id.tvNameItemAnimal);
+            imgAvataAnimal = (vn.asiantech.LearingEnglish.utils.CircleImageView) itemView.findViewById(R.id.imgAvataItemAnimal);
+            tvNameAnimal = (TextView) itemView.findViewById(R.id.tvNameItemAnimal);
         }
     }
 }
