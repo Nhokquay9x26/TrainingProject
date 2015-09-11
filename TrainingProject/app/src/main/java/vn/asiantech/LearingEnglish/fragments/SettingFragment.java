@@ -7,6 +7,7 @@ import android.content.DialogInterface;
 import org.androidannotations.annotations.Click;
 import org.androidannotations.annotations.EFragment;
 import vn.asiantech.LearingEnglish.R;
+import vn.asiantech.LearingEnglish.activities.LoginActivity_;
 
 
 @EFragment(R.layout.fragment_setting)
@@ -39,10 +40,10 @@ public class SettingFragment extends BaseFragment {
         buider.setMessage(R.string.textView_text_close_app);
         buider.setIcon(R.drawable.ic_log_out);
 
-
         buider.setPositiveButton(R.string.text_yes, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
+                LoginActivity_.intent(getActivity()).start();
                 getActivity().finish();
             }
         });
