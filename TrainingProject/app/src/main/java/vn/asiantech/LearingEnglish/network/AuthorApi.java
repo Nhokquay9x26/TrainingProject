@@ -1,6 +1,7 @@
 package vn.asiantech.LearingEnglish.network;
 
 import retrofit.RetrofitError;
+import vn.asiantech.LearingEnglish.models.ChangePassWord;
 import vn.asiantech.LearingEnglish.models.ForgotPass;
 import vn.asiantech.LearingEnglish.models.InfoRegister;
 import vn.asiantech.LearingEnglish.network.core.ApiClient;
@@ -39,6 +40,20 @@ public class AuthorApi {
             @Override
             public void failure(RetrofitError error, Error myError) {
                 mForgotPassCallback.failure(error, myError);
+            }
+        });
+    }
+
+    public static void changePassWord(String mEmail, String mPassWordOld, String mPassWordNew, final Callback<ChangePassWord> mChangePassWordCallback) {
+        ApiClient.call().changePassWord(mEmail, mPassWordOld, mPassWordNew, new Callback<ChangePassWord>() {
+            @Override
+            public void success(ChangePassWord changePassWord) {
+                mChangePassWordCallback.success(changePassWord);
+            }
+
+            @Override
+            public void failure(RetrofitError error, Error myError) {
+                mChangePassWordCallback.failure(error, myError);
             }
         });
     }

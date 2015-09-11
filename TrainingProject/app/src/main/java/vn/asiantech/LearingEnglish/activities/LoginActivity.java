@@ -31,19 +31,20 @@ public class LoginActivity extends BaseActionBarActivity {
 
     @Click
     void btnSignIn() {
-        String username = "admin";
-        String password = "admin";
-        if (edtUsername.getText().toString().equals(username) && edtPassword.getText().toString().equals(password)) {
-            Toast toast = Toast.makeText(this, "Successful ...", Toast.LENGTH_SHORT);
-            toast.show();
-            MainActivity_.intent(LoginActivity.this).start();
-        } else if (edtUsername.getText().toString().equals("") || edtPassword.getText().toString().equals("")) {
-            Toast toast = Toast.makeText(this, "Please input full data ...", Toast.LENGTH_SHORT);
-            toast.show();
-        } else {
-            Toast toast = Toast.makeText(this, "User or Pass not correct ...", Toast.LENGTH_SHORT);
-            toast.show();
-        }
+        MainActivity_.intent(LoginActivity.this).start();
+//        String username = "admin";
+//        String password = "admin";
+//        if (edtUsername.getText().toString().equals(username) && edtPassword.getText().toString().equals(password)) {
+//            Toast toast = Toast.makeText(this, "Successful ...", Toast.LENGTH_SHORT);
+//            toast.show();
+//            MainActivity_.intent(LoginActivity.this).start();
+//        } else if (edtUsername.getText().toString().equals("") || edtPassword.getText().toString().equals("")) {
+//            Toast toast = Toast.makeText(this, "Please input full data ...", Toast.LENGTH_SHORT);
+//            toast.show();
+//        } else {
+//            Toast toast = Toast.makeText(this, "User or Pass not correct ...", Toast.LENGTH_SHORT);
+//            toast.show();
+//        }
     }
 
     @Click

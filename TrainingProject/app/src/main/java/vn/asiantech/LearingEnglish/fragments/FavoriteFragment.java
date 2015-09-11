@@ -59,10 +59,10 @@ public class FavoriteFragment extends BaseFragment implements NotifyDataSetChang
 
     @AfterViews
     void afterView() {
-        wordEnglishs = WordsEnglish.listAll(WordsEnglish.class);
-        mAdapter = new FavoriteAdapter(getActivity(), wordEnglishs, this);
+//        wordEnglishs = WordsEnglish.listAll(WordsEnglish.class);
+//        mAdapter = new FavoriteAdapter(getActivity(), wordEnglishs, this);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity().getBaseContext()));
-        recyclerView.setAdapter(mAdapter);
+//        recyclerView.setAdapter(mAdapter);
     }
 
     @Override

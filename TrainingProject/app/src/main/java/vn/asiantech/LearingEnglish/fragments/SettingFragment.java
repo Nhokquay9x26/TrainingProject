@@ -21,6 +21,9 @@ import org.androidannotations.annotations.EFragment;
 
 import vn.asiantech.LearingEnglish.AlarmServices.MyServices;
 import vn.asiantech.LearingEnglish.R;
+import vn.asiantech.LearingEnglish.activities.ChangePassActivity;
+import vn.asiantech.LearingEnglish.activities.ChangePassActivity_;
+import vn.asiantech.LearingEnglish.activities.ForgotPassActivity_;
 import vn.asiantech.LearingEnglish.core.fragments.Fragment;
 
 
@@ -62,6 +65,11 @@ public class SettingFragment extends BaseFragment {
     @SuppressLint("ShowToast")
     @Click(R.id.imgLogout)
     void logOutClick() {
+    }
+
+    @Click(R.id.rlChangePass)
+    void changePassWord() {
+        ChangePassActivity_.intent(getActivity()).start();
     }
 
     @SuppressLint("ShowToast")

@@ -7,6 +7,7 @@ import retrofit.http.GET;
 import retrofit.http.POST;
 import retrofit.http.Query;
 import vn.asiantech.LearingEnglish.models.BaseModel;
+import vn.asiantech.LearingEnglish.models.ChangePassWord;
 import vn.asiantech.LearingEnglish.models.ForgotPass;
 import vn.asiantech.LearingEnglish.models.InfoRegister;
 import vn.asiantech.LearingEnglish.models.Login;
@@ -40,5 +41,12 @@ public interface Api {
     @FormUrlEncoded
     @POST("/forget_pass")
     void forgotPassWord(@Field(Parameter.EMAIL) String mEmail, Callback<ForgotPass> mCallback);
+
+    @FormUrlEncoded
+    @POST("/change_pass")
+    void changePassWord(@Field(Parameter.EMAIL) String mEmail,
+                        @Field(Parameter.PASSWORD_OLD) String mPassWordOld,
+                        @Field(Parameter.PASSWORD_NEW) String mPassWordNew,
+                        Callback<ChangePassWord> mChangePassWordCallback);
 
 }
