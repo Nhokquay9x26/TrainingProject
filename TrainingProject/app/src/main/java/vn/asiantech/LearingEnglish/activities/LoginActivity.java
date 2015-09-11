@@ -48,14 +48,14 @@ public class LoginActivity extends BaseActionBarActivity {
         final String MESSAGE_EMPTY_LOGIN = getResources().getString(R.string.massage_empty_login);
         final String MESSAGE_ERROR_LOGIN = getResources().getString(R.string.massage_error_login);
         if (email.length() > 0 && password.length() > 0) {
-            AuthApi.login("huongta1507@gmail.com", "123456", new Callback<Login>() {
+            AuthApi.login(email.toString(), password.toString(), new Callback<Login>() {
                 @Override
                 public void success(Login login) {
                     if(!login.getError()){
                         MainActivity_.intent(LoginActivity.this).start();
                         finish();
                     }else{
-                        //show toast
+                        Toast.makeText(getApplicationContext(), MESSAGE_ERROR_LOGIN, Toast.LENGTH_LONG).show();
                     }
                 }
 
