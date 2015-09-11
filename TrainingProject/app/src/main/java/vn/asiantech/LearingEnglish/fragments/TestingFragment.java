@@ -76,7 +76,7 @@ public class TestingFragment extends Fragment {
     void afterView() {
 
         if (getActivity() instanceof TestingActivity_) {
-            isCheckDisable = ((TestingActivity_) getActivity()).isCheckDisable();
+            isCheckDisable = ((TestingActivity_) getActivity()).isMIsCheckDisable();
 
         }
         if (isCheckDisable) {
@@ -179,7 +179,7 @@ public class TestingFragment extends Fragment {
 
     public void setDisableRadioButtonGroup() {
         if (getActivity() instanceof TestingActivity_) {
-            ((TestingActivity_) getActivity()).setCheckDisable(true);
+            ((TestingActivity_) getActivity()).setMIsCheckDisable(true);
 
         }
     }

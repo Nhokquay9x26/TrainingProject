@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:padding="@dimen/item.favorite.padding">
+
+    <TextView
+        android:id="@+id/tvRankId"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/rating.user.avatar"
+        android:layout_alignBottom="@+id/imgUserRank"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/imgUserRank"
+        android:gravity="center_vertical"
+        android:padding="@dimen/item.favorite.padding"
+        android:text="1st:"
+        tools:ignore="HardcodedText" />
+
+    <vn.asiantech.LearingEnglish.utils.CircleImageView
+        android:id="@+id/imgUserRank"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/rating.user.avatar"
+        android:layout_toRightOf="@+id/tvRankId"
+        android:padding="@dimen/item.favorite.padding"
+        android:src="@drawable/img_profile_test"
+        tools:ignore="RtlHardcoded" />
+
+    <TextView
+
+        android:id="@+id/tvUsername"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/rating.user.avatar"
+        android:layout_alignBottom="@+id/imgUserRank"
+        android:layout_toRightOf="@+id/imgUserRank"
+        android:gravity="center_vertical"
+        android:text="Nguyen thai son"
+        tools:ignore="HardcodedText,RtlHardcoded" />
+
+    <TextView
+        android:id="@+id/tvPointRating"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/rating.user.avatar"
+        android:layout_alignBottom="@+id/imgUserRank"
+        android:layout_alignParentRight="true"
+        android:gravity="center_vertical"
+        android:padding="@dimen/item.favorite.padding"
+        android:text="100"
+        tools:ignore="HardcodedText,RtlHardcoded" />
+
+</RelativeLayout>

@@ -93,7 +93,7 @@
         android:id="@+id/viewpager"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@+id/tabbarBottom"
+
         android:layout_below="@+id/rlMenubarTesting"
         />
 
@@ -101,15 +101,15 @@
         android:id="@+id/frViewpager"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@+id/tabbarBottom"
         android:layout_below="@+id/rlMenubarTesting"
+        android:layout_above="@+id/tabbarBottom"
         />
 
     <RelativeLayout
         android:id="@+id/rlButtonBottom"
         android:layout_width="match_parent"
         android:layout_height="@dimen/rl.testing.rl_contains_button_height"
-        android:layout_above="@+id/tabbarBottom"
+        android:layout_alignParentBottom="true"
         android:layout_marginBottom="@dimen/testing.rl.btn_margin_bottom">
 
         <View
@@ -168,16 +168,13 @@
             android:layout_centerVertical="true"
             android:layout_marginRight="@dimen/testing.button.margin_right_submit"
             android:background="@anim/btn_submit"
-
-
             />
     </RelativeLayout>
 
-    <vn.asiantech.LearingEnglish.utils.TabBar
+    <View
         android:id="@+id/tabbarBottom"
         android:layout_width="match_parent"
         android:layout_height="@dimen/testing.view.height_bottom"
         android:layout_alignParentBottom="true"
         android:background="@color/color.testing.menubar" />
-
 </RelativeLayout>

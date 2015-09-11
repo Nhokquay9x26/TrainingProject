@@ -1,6 +1,12 @@
 <resources>
     <string name="app_name">Base Project</string>
     <string name="hello_world">Hello world!</string>
+    <!--LIVE APP ID-->
+    <string name="app_id">516249385207670</string>
+    <string name="TextView.text_get_pass">Get Pass</string>
+    <string name="EditText.text_hint_email">Email</string>
+    <string name="Button.text_forgot_pass">Forgot</string>
+    <string name="activity_forgot_pass_Text_Warring">Plese enter your email!</string>
     <string name="Sign_in">Sign in</string>
     <string name="username_email">Username / Email Address</string>
     <string name="password">Password</string>
@@ -13,12 +19,8 @@
     <string name="choiceC">(C) Supports various technologies</string>
     <string name="choiceD">(D) Highly optimized Virtual Machine</string>
     <string name="text.testing.detail_question">Question 1: What are the advantages of android?</string>
-
-
-
     <string name="testing.textview.text_title">Question</string>
     <string name="testing.textview.number_of_question">1 - 7</string>
-
     <string name="signup.tv.sub">Tape to change profile</string>
     <string name="activity.signup.hint.user">Username</string>
     <string name="activity.signup.hint.email">Email</string>
@@ -49,9 +51,22 @@
     <string name="ratings.textview.tvName_User">Maniter Jack</string>
     <string name="ratings.textview.tvPoint">100</string>
     <string name="favorite.textview.title">Favorite</string>
+    <string name="custom.dialog.alert.text">Alert</string>
+    <string name="custom.dialog.text.time">Time</string>
+    <string name="custom.dialog.text.title">Turn on</string>
     <string name="header.animal">Animal</string>
     <string name="header.home">Home</string>
     <string name="header.Detail">Detail</string>
     <string name="header.favorite">Favorite</string>
     <string name="no">Cancel</string>
+    <string name="header.home.question">Questions</string>
+    <string name="dialog.tvCancel">Cancle</string>
+    <string name="setting.title.text">Setting</string>
+    <string name="rangting.text.title">Ratting</string>
+    <string name="alert_forgot_pass_success">Get new password sucess!</string>
+    <string name="alert_new_pass">"New password id: "</string>
+    <string name="alert_email_not_exist">Email does not exist!</string>
+    <string name="alert_get_new_pass_fail">Get new password fail</string>
+    <string name="error">Error</string>
+    <string name="please_wait">Please wait...</string>
 </resources>

@@ -55,7 +55,7 @@ public class AnimalFragment extends BaseFragment {
     }
 
     @Click
-    void imgBackHeaderAnimal(){
+    void imgBackHeaderAnimal() {
         getActivity().onBackPressed();
     }
 

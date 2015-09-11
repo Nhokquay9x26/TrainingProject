@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="url_base">https://api.github.com/users</string>
+    <string name="url_base">http://172.16.100.115:8080/internship/api/index.php</string>
 </resources>

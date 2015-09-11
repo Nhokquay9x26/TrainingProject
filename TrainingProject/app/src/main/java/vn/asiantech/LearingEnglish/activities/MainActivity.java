@@ -3,13 +3,19 @@ package vn.asiantech.LearingEnglish.activities;
 import android.content.Intent;
 
 import android.annotation.TargetApi;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Build;
+import android.os.Handler;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.EActivity;
@@ -56,6 +62,7 @@ public class MainActivity extends FragmentActivity {
 
     @AfterViews
     void afterViews() {
+
         getRankUser();
         mAdapter = new ViewPagerAdapter(getSupportFragmentManager());
         ViewPagerAdapter mAdapter = new ViewPagerAdapter(getSupportFragmentManager());
@@ -69,29 +76,12 @@ public class MainActivity extends FragmentActivity {
             }
         });
 
-        final Intent mIntent = new Intent(this, TestingActivity_.class);
+
         mViewPagerMain.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
             public void onPageSelected(int position) {
                 mTabBarMain.clickTab(position);
 
-//                if (position == 2) {
-//                    Timer timer = new Timer();
-//                    timer.schedule(new TimerTask() {
-//                        @Override
-//                        public void run() {
-//                            startActivity(mIntent);
-//                        }
-//                    }, 1000);
-//                }
-//                if (position==3){
-//                   /* for (int i=0;i<5;i++){
-//
-//                        Log.d("",mRankings.get(i).getMUserName());
-//                        Log.d("",mRankings.get(i).getMPoint()+"");
-//
-//                    }*/
-//                }
             }
 
             @Override
@@ -108,11 +98,6 @@ public class MainActivity extends FragmentActivity {
     private void getRankUser(){
         mRankings = new ArrayList<Ranking>();
         mRankings = ApplicationData.getRankUser();
-    }
-    @Override
-    protected void onResume() {
-        super.onResume();
-        mViewPagerMain.setCurrentItem(0, false);
     }
 
     /**
