@@ -9,10 +9,12 @@ import vn.asiantech.LearingEnglish.fragments.TestPagerFragment;
 
 /**
  * @author DaoQuocViet
- * Created by nhokquay9x26 on 11/09/2015.
+ *         Created by nhokquay9x26 on 11/09/2015.
  */
 
 public class DetailAdapter extends FragmentPagerAdapter {
+
+    public static final int ITEMS = 10;
 
     DetailPagerFragment fragment;
     private OnChangePager mOnChangePager;
@@ -22,8 +24,6 @@ public class DetailAdapter extends FragmentPagerAdapter {
         this.fragment = fragment;
         mOnChangePager = onChangePager;
     }
-
-    public static final int ITEMS = 10;
 
     @Override
     public Fragment getItem(int position) {
