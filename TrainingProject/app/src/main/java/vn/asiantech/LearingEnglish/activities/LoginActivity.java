@@ -51,10 +51,10 @@ public class LoginActivity extends BaseActionBarActivity {
             AuthApi.login(email.toString(), password.toString(), new Callback<Login>() {
                 @Override
                 public void success(Login login) {
-                    if(!login.getError()){
+                    if (!login.getError()) {
                         MainActivity_.intent(LoginActivity.this).start();
                         finish();
-                    }else{
+                    } else {
                         Toast.makeText(getApplicationContext(), MESSAGE_ERROR_LOGIN, Toast.LENGTH_LONG).show();
                     }
                 }

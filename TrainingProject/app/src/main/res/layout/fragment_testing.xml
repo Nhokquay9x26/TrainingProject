@@ -49,9 +49,9 @@
             <Button
                 android:id="@+id/btnTime"
                 android:layout_width="wrap_content"
-                android:layout_height="30dp"
+                android:layout_height="@dimen/button.hight.left_time_and_submit"
                 android:textStyle="bold"
-                android:textSize="12sp"
+                android:textSize="@dimen/button.text.left_time_and_submit"
                 android:layout_marginRight="@dimen/textview.text.margin_left_right.question"
                 android:background="@drawable/custom_button_submit"
                 android:text="00:00"
@@ -59,8 +59,8 @@
 
             <ImageView
                 android:id="@+id/imgBack"
-                android:layout_width="@dimen/textview.text.margin_left_right.question"
-                android:layout_height="@dimen/textview.text.margin_left_right.question"
+                android:layout_width="@dimen/imageview.width_hight.back"
+                android:layout_height="@dimen/imageview.width_hight.back"
                 android:layout_centerVertical="true"
                 android:layout_toRightOf="@+id/btnTime"
                 android:src="@drawable/img_back" />
@@ -70,7 +70,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
-                android:layout_marginLeft="5dp"
+                android:layout_marginLeft="@dimen/textview.margin_left.page_number"
                 android:layout_toRightOf="@+id/imgBack"
                 android:background="@color/sign_in.header.background"
                 android:paddingLeft="10dp"
@@ -81,7 +81,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
-                android:layout_marginRight="5dp"
+                android:layout_marginRight="@dimen/textview.margin_left.page_number"
                 android:layout_toRightOf="@+id/tvPageCurrent"
                 android:background="@color/sign_in.header.background"
                 android:paddingRight="10dp"
@@ -89,8 +89,8 @@
 
             <ImageView
                 android:id="@+id/imgNext"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
+                android:layout_width="@dimen/imageview.width_hight.back"
+                android:layout_height="@dimen/imageview.width_hight.back"
                 android:layout_centerVertical="true"
                 android:layout_toRightOf="@+id/tvPageTotal"
                 android:src="@drawable/img_next" />
@@ -98,8 +98,8 @@
             <Button
                 android:id="@+id/btnSend"
                 android:layout_width="wrap_content"
-                android:layout_height="30dp"
-                android:textSize="12sp"
+                android:layout_height="@dimen/button.hight.left_time_and_submit"
+                android:textSize="@dimen/button.text.left_time_and_submit"
                 android:textStyle="bold"
                 android:layout_marginLeft="@dimen/textview.text.margin_left_right.question"
                 android:layout_toRightOf="@+id/imgNext"
@@ -114,7 +114,7 @@
             android:id="@+id/radioGroupAnswer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp">
+            android:layout_marginTop="@dimen/radiogroup.margin_top.question">
 
             <RadioButton
                 android:id="@+id/tvAnswerA"

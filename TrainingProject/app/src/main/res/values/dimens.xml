@@ -118,4 +118,10 @@
     <dimen name="relative.margin_end.question">10dp</dimen>
     <dimen name="relative.margin_start.question">10dp</dimen>
     <dimen name="relative.margin_top.question">20dp</dimen>
+    <dimen name="button.text.left_time_and_submit">12sp</dimen>
+    <dimen name="button.hight.left_time_and_submit">30dp</dimen>
+    <dimen name="radiogroup.margin_top.question">20dp</dimen>
+    <dimen name="imageview.width_hight.back">20dp</dimen>
+    <dimen name="imageview.width_hight.next">20dp</dimen>
+    <dimen name="textview.margin_left.page_number">5dp</dimen>
 </resources>

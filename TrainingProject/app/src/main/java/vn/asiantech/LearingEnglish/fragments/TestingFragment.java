@@ -21,7 +21,7 @@ public class TestingFragment extends BaseFragment implements TestingAdapter.OnCh
     public void AfterViews() {
         FragmentPageTesting_ mFragmentPageTesting = new FragmentPageTesting_();
         TestingAdapter mTestingAdapter = new TestingAdapter(getFragmentManager(),
-                mFragmentPageTesting, this,getCountQuestion());
+                mFragmentPageTesting, this, getCountQuestion());
         mViewPager.setAdapter(mTestingAdapter);
     }
 
@@ -48,7 +48,8 @@ public class TestingFragment extends BaseFragment implements TestingAdapter.OnCh
             mViewPager.setCurrentItem(mViewPager.getCurrentItem() - 1);
         }
     }
-    private int getCountQuestion(){
+
+    private int getCountQuestion() {
         String[] mQuestion = getResources().getStringArray(R.array.question_array);
         return mQuestion.length;
     }
