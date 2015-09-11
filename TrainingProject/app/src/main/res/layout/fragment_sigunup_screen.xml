@@ -57,6 +57,7 @@
                     android:layout_height="wrap_content"
                     android:hint="@string/signup_editext_hint_username"
                     android:paddingLeft="@dimen/signup_edt_paddingLeft" />
+                <requestFocus/>
 
                 <EditText
                     android:id="@+id/edtEmail"
