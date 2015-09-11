@@ -41,12 +41,12 @@ public class FragmentPageTesting extends BaseFragment {
 
     private static TestingAdapter.OnChangePager mListener;
 
-    public static FragmentPageTesting init(int val, TestingAdapter.OnChangePager listener) {
+    public static FragmentPageTesting init(int page, TestingAdapter.OnChangePager listener) {
 
         FragmentPageTesting_ mFragmentPageTesting = new FragmentPageTesting_();
-        Bundle args = new Bundle();
-        args.putInt("val", val);
-        mFragmentPageTesting.setArguments(args);
+        Bundle bundle = new Bundle();
+        bundle.putInt("page", page);
+        mFragmentPageTesting.setArguments(bundle);
         mListener = listener;
         return mFragmentPageTesting;
     }
@@ -57,7 +57,7 @@ public class FragmentPageTesting extends BaseFragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        mFragmentNumber = getArguments() != null ? getArguments().getInt("val") : 1;
+        mFragmentNumber = getArguments() != null ? getArguments().getInt("page") : 1;
         mFragmentNumber++;
         mQuestion = getResources().getStringArray(R.array.question_array);
     }
