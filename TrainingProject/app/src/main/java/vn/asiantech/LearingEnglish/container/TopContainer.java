@@ -8,10 +8,10 @@ import android.view.ViewGroup;
 
 import vn.asiantech.LearingEnglish.R;
 import vn.asiantech.LearingEnglish.fragments.BaseContainerFragment;
-import vn.asiantech.LearingEnglish.fragments.TabOneFragment_;
+import vn.asiantech.LearingEnglish.fragments.TopFragment_;
 
 
-public class TabOneContainer extends BaseContainerFragment {
+public class TopContainer extends BaseContainerFragment {
     private boolean mIsViewInited;
 
     @Override
@@ -31,7 +31,7 @@ public class TabOneContainer extends BaseContainerFragment {
     }
 
     private void initView() {
-        replaceFragment(new TabOneFragment_(), false);
+        replaceFragment(new TopFragment_(), false);
     }
 
     @Override

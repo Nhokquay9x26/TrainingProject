@@ -12,12 +12,12 @@ import java.util.ArrayList;
 
 import vn.asiantech.LearingEnglish.R;
 import vn.asiantech.LearingEnglish.adapter.TopAdapter;
-import vn.asiantech.LearingEnglish.container.TabOneContainer;
+import vn.asiantech.LearingEnglish.container.TopContainer;
 import vn.asiantech.LearingEnglish.models.Top;
 
 
 @EFragment(R.layout.fragment_top)
-public class TabOneFragment extends BaseFragment implements TopAdapter.OnTopListener {
+public class TopFragment extends BaseFragment implements TopAdapter.OnTopListener {
     private ArrayList<Top> mListTop;
     @ViewById(R.id.rvListTop)
     RecyclerView mRvListTop;
@@ -35,7 +35,7 @@ public class TabOneFragment extends BaseFragment implements TopAdapter.OnTopList
     public void onResume() {
         super.onResume();
         if (mOnBaseFragmentListener != null) {
-            mOnBaseFragmentListener.setHeaderTitle(getResources().getString(R.string.tab_1));
+            mOnBaseFragmentListener.setHeaderTitle(getResources().getString(R.string.tab_top));
         }
     }
 
@@ -50,12 +50,12 @@ public class TabOneFragment extends BaseFragment implements TopAdapter.OnTopList
     @Override
     public void OnClickItem(int position) {
         android.support.v4.app.Fragment fragmentParent = getParentFragment();
-        if (fragmentParent instanceof TabOneContainer) {
+        if (fragmentParent instanceof TopContainer) {
             WordDetailContainerFragment_ fragment = new WordDetailContainerFragment_();
             Bundle bundle = new Bundle();
             bundle.putString("title", mListTop.get(position).getCategory());
             fragment.setArguments(bundle);
-            ((TabOneContainer) fragmentParent).replaceFragment(fragment, true);
+            ((TopContainer) fragmentParent).replaceFragment(fragment, true);
         }
     }
 

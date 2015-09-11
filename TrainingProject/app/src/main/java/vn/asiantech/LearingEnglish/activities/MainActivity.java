@@ -10,7 +10,6 @@ import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.Toast;
 
@@ -21,7 +20,7 @@ import org.androidannotations.annotations.ViewById;
 import vn.asiantech.LearingEnglish.R;
 import vn.asiantech.LearingEnglish.container.SettingContainer;
 import vn.asiantech.LearingEnglish.container.FavoriteContainer;
-import vn.asiantech.LearingEnglish.container.TabOneContainer;
+import vn.asiantech.LearingEnglish.container.TopContainer;
 import vn.asiantech.LearingEnglish.container.TabTwoContainer;
 import vn.asiantech.LearingEnglish.fragments.BaseContainerFragment;
 import vn.asiantech.LearingEnglish.fragments.BaseFragment;
@@ -70,7 +69,7 @@ public class MainActivity extends BaseActionBarActivity implements HeaderBar.OnH
         mPager.setAdapter(mAdapter);
         mTabs.setViewPager(mPager);
         mPager.setOffscreenPageLimit(4);
-        setHeader(getResources().getString(R.string.tab_1));
+        setHeader(getResources().getString(R.string.tab_top));
     }
 
     private void setEvent() {
@@ -83,7 +82,7 @@ public class MainActivity extends BaseActionBarActivity implements HeaderBar.OnH
             public void onPageSelected(int position) {
                 String title;
                 if (position == 0) {
-                    title = getResources().getString(R.string.tab_1);
+                    title = getResources().getString(R.string.tab_top);
                 } else if (position == 1) {
                     title = getResources().getString(R.string.tab_question);
                 } else if (position == 2) {
@@ -169,7 +168,7 @@ public class MainActivity extends BaseActionBarActivity implements HeaderBar.OnH
         public Fragment getItem(int position) {
             switch (position) {
                 case 0:
-                    return new TabOneContainer();
+                    return new TopContainer();
                 case 1:
                     return new TabTwoContainer();
                 case 2:
