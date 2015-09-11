@@ -14,6 +14,8 @@ import vn.asiantech.LearingEnglish.R;
  */
 @EActivity(R.layout.activity_change_password)
 public class ChangePassActivity extends BaseActionBarActivity {
+    @ViewById(R.id.edtEmail)
+    EditText mEdtEmail;
     @ViewById(R.id.edtOldPassWord)
     EditText mEdtOldPassWord;
     @ViewById(R.id.edtNewPassWord)
@@ -30,6 +32,7 @@ public class ChangePassActivity extends BaseActionBarActivity {
 
     @Click(R.id.btnForgot_activity_forgot_pass)
     void forgotPass() {
+        String mEmail = mEdtEmail.getText().toString();
         String mOldPassWord = mEdtOldPassWord.getText().toString();
         String mNewPassWord = mEdtNewPassWord.getText().toString();
         String mConfirmNewPassWord = mEdtConfirmNewPassWord.getText().toString();
