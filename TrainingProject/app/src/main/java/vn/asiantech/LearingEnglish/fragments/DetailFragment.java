@@ -12,6 +12,7 @@ import java.util.ArrayList;
 import vn.asiantech.LearingEnglish.R;
 import vn.asiantech.LearingEnglish.adapter.ViewpagerDetailAdapter;
 import vn.asiantech.LearingEnglish.models.AnimalCategory;
+import vn.asiantech.LearingEnglish.utils.NotifyDataSetChanged;
 
 /**
  * @
@@ -60,4 +61,5 @@ public class DetailFragment extends BaseFragment implements ViewpagerDetailAdapt
             mViewpager.setCurrentItem(mViewpager.getCurrentItem()-1);
         }
     }
+
 }

@@ -110,7 +110,7 @@ def appendVersionNameVersionCode(variant, defaultConfig) {
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile fileTree(include: ['*.jar'], dir: 'libs')
     apt "org.projectlombok:lombok:1.16.4"
     provided 'org.projectlombok:lombok:1.16.4'
     apt "org.androidannotations:androidannotations:3.+"
@@ -138,4 +138,5 @@ dependencies {
         exclude module: 'support-v4'
     }
     //apply from: "https://bitbucket.org/tientun/gradle-android-ci-check/raw/02df3007dfb56ef37e179c9e3c40cedfdb3c0980/ci.gradle"
+    compile 'com.github.satyan:sugar:1.4'
 }

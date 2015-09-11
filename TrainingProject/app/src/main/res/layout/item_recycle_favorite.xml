@@ -1,21 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:padding="@dimen/item.favorite.padding"
    >
     <TextView
         android:id="@+id/tvFavoriteWord"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Clound:"
         android:padding="@dimen/item.favorite.padding"/>
     <TextView
         android:layout_toRightOf="@+id/tvFavoriteWord"
         android:id="@+id/tvFavoriteSpell"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="/speo/"
+        android:padding="@dimen/item.favorite.padding"/>
+    <TextView
+        android:layout_toRightOf="@+id/tvFavoriteSpell"
+        android:id="@+id/tvFavoriteMeans"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:padding="@dimen/item.favorite.padding"/>
     <ImageView
         android:id="@+id/imgFavoriteSpell"
@@ -23,6 +27,14 @@
         android:layout_height="wrap_content"
         android:src="@drawable/ic_listen"
         android:padding="@dimen/item.favorite.padding"
+        android:layout_toRightOf="@+id/tvFavoriteMeans"
+        />
+    <ImageView
+        android:id="@+id/imgDeleteFavorite"
+        android:layout_width="@dimen/item.recycle.favorite.imgdelete.with.height"
+        android:layout_height="@dimen/item.recycle.favorite.imgdelete.with.height"
+        android:src="@drawable/icon_delete_favorite"
+        android:layout_centerVertical="true"
         android:layout_alignParentRight="true"
         />
 

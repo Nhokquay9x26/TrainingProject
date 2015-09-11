@@ -20,7 +20,7 @@ import vn.asiantech.LearingEnglish.utils.TabBar;
  * Created by xuanphu on 04/09/2015.
  */
 @EFragment(R.layout.fragment_animal)
-public class AnimalFragment extends BaseFragment implements TabBar.OnTabBarListener {
+public class AnimalFragment extends BaseFragment {
     @ViewById(R.id.recyclerAnimal)
     RecyclerView mRecyclerAnimal;
     AnimalAdapter mAnimalAdapter;
@@ -82,15 +82,10 @@ public class AnimalFragment extends BaseFragment implements TabBar.OnTabBarListe
         animalCategory2.setMAvataAnimal(R.drawable.img_animal);
         animalCategory2.setMNameAnimal("Cat Big");
         animalCategory2.setMExample(" columbia big cat lily");
-        animalCategory2.setMFavorite(false);
+        animalCategory2.setMFavorite(true);
         animalCategory2.setMMeans("Con meo");
         animalCategory2.setMSpelling("/'taigə/");
         mArraylists.add(animalCategory2);
-    }
-
-    @Override
-    public void onTabClick(int position) {
-
     }
 
 }

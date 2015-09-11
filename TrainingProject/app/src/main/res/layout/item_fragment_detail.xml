@@ -14,8 +14,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
-            android:layout_margin="5dp"
-            android:src="@drawable/icon_favorite_b" />
+            android:layout_margin="@dimen/item.fragment.detail.imgfavorite.magin"
+            android:src="@drawable/icon_unfavorite" />
 
         <ImageView
             android:id="@+id/imgAvataDetail"
@@ -60,18 +60,18 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginTop="280dp">
+        android:layout_marginLeft="@dimen/item.fragment.detail.rl.magin.left.right"
+        android:layout_marginRight="@dimen/item.fragment.detail.rl.magin.left.right"
+        android:layout_marginTop="@dimen/item.fragment.detail.rl.magin.top">
 
         <TextView
             android:id="@+id/tvMeanheader"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Mean:"
-            android:textSize="20sp" />
+            android:textSize="@dimen/item.fragment.detail.tvMeans.size" />
 
         <ImageView
+            android:id="@+id/imgListenDetail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
@@ -81,33 +81,29 @@
             android:id="@+id/tvNameVocabulary"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/tvMeanheader"
-            android:text="Cloud" />
+            android:layout_below="@+id/tvMeanheader" />
 
         <TextView
             android:id="@+id/tvSpelling"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/tvMeanheader"
-            android:layout_marginLeft="10dp"
-            android:layout_toRightOf="@+id/tvNameVocabulary"
-            android:text="/klaud/" />
+            android:layout_marginLeft="@dimen/item.fragmnet.detail.tvSpelling"
+            android:layout_toRightOf="@+id/tvNameVocabulary" />
 
         <TextView
             android:id="@+id/tvMean"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/tvMeanheader"
-            android:layout_marginLeft="10dp"
-            android:layout_toRightOf="@+id/tvSpelling"
-            android:text=":Mây, Đám Mây" />
+            android:layout_marginLeft="@dimen/item.fragmnet.detail.tvSpelling"
+            android:layout_toRightOf="@+id/tvSpelling" />
 
         <TextView
             android:id="@+id/tvExample"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/tvNameVocabulary"
-            android:layout_marginTop="10dp"
-            android:text="- The sun had disappeared behind cloud" />
+            android:layout_marginTop="@dimen/item.fragmnet.detail.tvSpelling" />
     </RelativeLayout>
 </RelativeLayout>

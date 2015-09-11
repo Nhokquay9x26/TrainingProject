@@ -166,7 +166,12 @@
     <dimen name="testing.button.width_submit">30dp</dimen>
     <dimen name="testing.button.height_submit">30dp</dimen>
     <dimen name="testing.button.margin_right_submit">5dp</dimen>
-
+    <dimen name="item.recycle.favorite.imgdelete.with.height">20dp</dimen>
+    <dimen name="item.fragment.detail.imgfavorite.magin">5dp</dimen>
+    <dimen name="item.fragment.detail.rl.magin.left.right">10dp</dimen>
+    <dimen name="item.fragment.detail.rl.magin.top">280dp</dimen>
+    <dimen name="item.fragment.detail.tvMeans.size">20sp</dimen>
+    <dimen name="item.fragmnet.detail.tvSpelling">10dp</dimen>
 
 
 </resources>

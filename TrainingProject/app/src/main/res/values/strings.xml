@@ -52,4 +52,6 @@
     <string name="header.animal">Animal</string>
     <string name="header.home">Home</string>
     <string name="header.Detail">Detail</string>
+    <string name="header.favorite">Favorite</string>
+    <string name="no">Cancel</string>
 </resources>
