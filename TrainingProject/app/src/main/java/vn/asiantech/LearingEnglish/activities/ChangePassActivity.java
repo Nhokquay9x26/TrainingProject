@@ -61,7 +61,11 @@ public class ChangePassActivity extends BaseActionBarActivity {
                 if (mProgressDialog != null) {
                     mProgressDialog.dismiss();
                 }
-                Toast.makeText(ChangePassActivity.this, R.string.toast_change_pass_text_success_text, Toast.LENGTH_LONG).show();
+                if (!changePassWord.getError()) {
+                    Toast.makeText(ChangePassActivity.this, R.string.toast_change_pass_text_success_text, Toast.LENGTH_LONG).show();
+                } else {
+                    Toast.makeText(ChangePassActivity.this, R.string.toast_change_pass_text_faild, Toast.LENGTH_LONG).show();
+                }
             }
 
             @Override
