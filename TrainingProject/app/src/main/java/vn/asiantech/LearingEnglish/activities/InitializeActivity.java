@@ -53,12 +53,6 @@ public class InitializeActivity extends BaseActionBarActivity {
         }, 0);
     }
 
-//    public void replaceFragment(Fragment layoutID){
-//        FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-//        ft.replace(R.id.frameLayout, layoutID);
-//        ft.commit();
-//    }
-
     @Override
     public void onBackPressed() {
         if (mTutorialFragment != null) {

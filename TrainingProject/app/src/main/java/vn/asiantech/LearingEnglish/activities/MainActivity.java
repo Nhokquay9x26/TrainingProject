@@ -40,9 +40,9 @@ public class MainActivity extends BaseActionBarActivity {
         ft.commit();
     }
 
-    public void replaceFragment(Fragment layoutID){
-        FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-        ft.replace(R.id.frameLayout, layoutID);
-        ft.commit();
-    }
+//    public void replaceFragmentMain(Fragment layoutID){
+//        FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+//        ft.replace(R.id.main_container, layoutID);
+//        ft.commit();
+//    }
 }

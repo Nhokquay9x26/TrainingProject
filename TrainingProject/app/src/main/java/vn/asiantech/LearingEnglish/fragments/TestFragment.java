@@ -1,13 +1,17 @@
 package vn.asiantech.LearingEnglish.fragments;
 
 import android.support.v4.view.ViewPager;
+import android.widget.Button;
 
 import org.androidannotations.annotations.AfterViews;
+import org.androidannotations.annotations.Click;
 import org.androidannotations.annotations.EFragment;
+import org.androidannotations.annotations.FragmentByTag;
 import org.androidannotations.annotations.ViewById;
 
 
 import vn.asiantech.LearingEnglish.R;
+import vn.asiantech.LearingEnglish.activities.MainActivity_;
 import vn.asiantech.LearingEnglish.adapter.TestAdapter;
 
 /**
@@ -21,6 +25,10 @@ public class TestFragment extends BaseFragment implements TestAdapter.OnChangePa
     public static final String BACK = "Back";
     static final int ITEMS = 10;
 
+    @FragmentByTag("ResultFragment")
+    ResultFragment mResultFragment;
+    @ViewById(R.id.btnSubmit)
+    Button mBtnSubmit;
     @ViewById(R.id.viewPagerTest)
     ViewPager mViewPager;
 
@@ -52,6 +60,13 @@ public class TestFragment extends BaseFragment implements TestAdapter.OnChangePa
             } else {
                 mViewPager.setCurrentItem(ITEMS - 1);
             }
+        }
+    }
+
+    @Click(R.id.btnSubmit)
+    public void onClickSubmit() {
+        if (mResultFragment == null) {
+            addChildFragment(ResultFragment_.builder().build());
         }
     }
 }

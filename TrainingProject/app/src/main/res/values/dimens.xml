@@ -192,6 +192,7 @@
     <dimen name="img.test.margin_right_28dp">28dp</dimen>
     <dimen name="relativelayout.test.margin_right_14dp">14dp</dimen>
     <dimen name="relativelayout.test.margin_left_14dp">14dp</dimen>
+    <dimen name="img.test.margin_left_20dp">20dp</dimen>
     <dimen name="relativelayout.test.margin_top_22dp">22dp</dimen>
     <dimen name="relativelayout.test.margin_bottom_6dp">6dp</dimen>
 
@@ -233,6 +234,11 @@
     <dimen name="img.itemresult.margin_right_30dp">30dp</dimen>
 
     <string-array name="question_array">
+        <item>When can we meet again?</item>
+        <item>My aunt is going to stay with me?</item>
+        <item>When do you study?</item>
+        <item>Would you prefer lemonade or orange juice?</item>
+        <item>Lets have dinner now?</item>
         <item>When can we meet again?</item>
         <item>My aunt is going to stay with me?</item>
         <item>When do you study?</item>
