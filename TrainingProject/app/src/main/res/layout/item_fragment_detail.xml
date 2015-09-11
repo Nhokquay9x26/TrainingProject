@@ -7,8 +7,15 @@
     <RelativeLayout
         android:id="@+id/topDetail"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/item.fragment.detail.rl.height"
-        android:background="@drawable/home_rl_background">
+        android:layout_height="@dimen/item.fragment.detail.rl.height">
+
+        <ImageView
+            android:id="@+id/imgFavoriteDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_margin="@dimen/item.fragment.detail.imgfavorite.magin"
+            android:src="@drawable/icon_unfavorite" />
 
         <ImageView
             android:id="@+id/imgAvataDetail"
@@ -48,5 +55,55 @@
                 android:layout_alignParentRight="true"
                 android:src="@drawable/icon_right" />
         </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/item.fragment.detail.rl.magin.left.right"
+        android:layout_marginRight="@dimen/item.fragment.detail.rl.magin.left.right"
+        android:layout_marginTop="@dimen/item.fragment.detail.rl.magin.top">
+
+        <TextView
+            android:id="@+id/tvMeanheader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/item.fragment.detail.tvMeans.size" />
+
+        <ImageView
+            android:id="@+id/imgListenDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/ic_listen" />
+
+        <TextView
+            android:id="@+id/tvNameVocabulary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvMeanheader" />
+
+        <TextView
+            android:id="@+id/tvSpelling"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvMeanheader"
+            android:layout_marginLeft="@dimen/item.fragmnet.detail.tvSpelling"
+            android:layout_toRightOf="@+id/tvNameVocabulary" />
+
+        <TextView
+            android:id="@+id/tvMean"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvMeanheader"
+            android:layout_marginLeft="@dimen/item.fragmnet.detail.tvSpelling"
+            android:layout_toRightOf="@+id/tvSpelling" />
+
+        <TextView
+            android:id="@+id/tvExample"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvNameVocabulary"
+            android:layout_marginTop="@dimen/item.fragmnet.detail.tvSpelling" />
     </RelativeLayout>
 </RelativeLayout>

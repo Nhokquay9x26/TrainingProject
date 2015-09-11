@@ -15,7 +15,7 @@ import vn.asiantech.LearingEnglish.R;
  * Created by xuanphu on 27/08/2015.
  */
 @EActivity(R.layout.activity_login)
-public class LoginActivity extends BaseActionBarActivity{
+public class LoginActivity extends BaseActionBarActivity {
     public static final String TAG = "ACTIVITY_LOGIN";
     private Boolean mIsExit = false;
 
@@ -23,24 +23,24 @@ public class LoginActivity extends BaseActionBarActivity{
     EditText edtUsername;
     @ViewById(R.id.edtPassword)
     EditText edtPassword;
+
     @Override
     void afterView() {
         //getSupportActionBar().hide();
     }
+
     @Click
-    void btnSignIn(){
+    void btnSignIn() {
         String username = "admin";
         String password = "admin";
-        if (edtUsername.getText().toString().equals(username)  && edtPassword.getText().toString().equals(password)){
+        if (edtUsername.getText().toString().equals(username) && edtPassword.getText().toString().equals(password)) {
             Toast toast = Toast.makeText(this, "Successful ...", Toast.LENGTH_SHORT);
             toast.show();
             MainActivity_.intent(LoginActivity.this).start();
-        }
-        else if (edtUsername.getText().toString().equals("")  || edtPassword.getText().toString().equals("")){
-            Toast toast = Toast.makeText(this, "Please input full data ...",Toast.LENGTH_SHORT);
+        } else if (edtUsername.getText().toString().equals("") || edtPassword.getText().toString().equals("")) {
+            Toast toast = Toast.makeText(this, "Please input full data ...", Toast.LENGTH_SHORT);
             toast.show();
-        }
-        else {
+        } else {
             Toast toast = Toast.makeText(this, "User or Pass not correct ...", Toast.LENGTH_SHORT);
             toast.show();
         }
@@ -50,6 +50,11 @@ public class LoginActivity extends BaseActionBarActivity{
     void tvSignup() {
         Intent intent = new Intent(this, SignupActivity_.class);
         startActivity(intent);
+    }
+
+    @Click(R.id.tvForgotPassword)
+    void getNewPassWord() {
+        ForgotPassActivity_.intent(LoginActivity.this).start();
     }
 
     @Override

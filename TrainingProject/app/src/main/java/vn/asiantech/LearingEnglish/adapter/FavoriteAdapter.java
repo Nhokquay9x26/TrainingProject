@@ -5,6 +5,7 @@ import android.content.Context;
 import android.speech.tts.TextToSpeech;
 import android.support.v4.app.FragmentActivity;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,6 +19,7 @@ import java.util.Locale;
 
 import vn.asiantech.LearingEnglish.R;
 import vn.asiantech.LearingEnglish.models.WordsEnglish;
+import vn.asiantech.LearingEnglish.utils.NotifyDataSetChanged;
 
 /**
  * @author mrson
@@ -28,11 +30,14 @@ public class FavoriteAdapter extends  RecyclerView.Adapter<FavoriteAdapter.ViewH
     Context mcontext;
     public List<WordsEnglish> mListWords= new ArrayList<>();
     TextToSpeech textToSpeech;
+    NotifyDataSetChanged mNotifyDataSetChanged;
 
-    public FavoriteAdapter(FragmentActivity mcontext, List<WordsEnglish> mlist) {
+    public FavoriteAdapter(Context mcontext, List<WordsEnglish> mListWords, NotifyDataSetChanged mNotifyDataSetChanged) {
         this.mcontext = mcontext;
-        this.mListWords = mlist;
+        this.mListWords = mListWords;
+        this.mNotifyDataSetChanged = mNotifyDataSetChanged;
     }
+
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup viewGroup, int viewType) {
@@ -46,16 +51,23 @@ public class FavoriteAdapter extends  RecyclerView.Adapter<FavoriteAdapter.ViewH
     public void onBindViewHolder(final ViewHolder holder, final int position) {
         final WordsEnglish wordsEnglish= mListWords.get(position);
         textToSpeech = new TextToSpeech(mcontext,this);
-        holder.tvFavoriteWord.setText(wordsEnglish.getNewWord());
-        holder.tvSpellWord.setText(wordsEnglish.getSpellingWord());
+        holder.tvFavoriteWord.setText(wordsEnglish.getmNewWord());
+        holder.tvFavoriteSpellWord.setText(wordsEnglish.getmSpellingWord());
+        holder.tvFavoriteMeans.setText(wordsEnglish.getmMeans());
 
+        holder.imgDelete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mNotifyDataSetChanged.NotifyDataSetChanged(position);
+            }
+        });
 
         holder.imgListen.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(mcontext,"click listen",Toast.LENGTH_SHORT).show();
+                Toast.makeText(mcontext, "click listen", Toast.LENGTH_SHORT).show();
 
-                toSpeed(wordsEnglish.getNewWord());
+                toSpeed(wordsEnglish.getmNewWord());
 
             }
         });
@@ -75,7 +87,6 @@ public class FavoriteAdapter extends  RecyclerView.Adapter<FavoriteAdapter.ViewH
     }
     @SuppressWarnings("deprecation")
     public void toSpeed(String toSpeak){
-        //noinspection deprecation
         textToSpeech.speak(toSpeak, TextToSpeech.QUEUE_FLUSH, null);
     }
 
@@ -83,13 +94,17 @@ public class FavoriteAdapter extends  RecyclerView.Adapter<FavoriteAdapter.ViewH
 
 
         public TextView tvFavoriteWord;
-        public TextView tvSpellWord;
+        public TextView tvFavoriteSpellWord;
+        public TextView tvFavoriteMeans;
         public ImageView imgListen;
+        public ImageView imgDelete;
         public ViewHolder(View itemView) {
             super(itemView);
             tvFavoriteWord = (TextView)itemView.findViewById(R.id.tvFavoriteWord);
-            tvSpellWord = (TextView)itemView.findViewById(R.id.tvFavoriteSpell);
+            tvFavoriteSpellWord = (TextView)itemView.findViewById(R.id.tvFavoriteSpell);
+            tvFavoriteMeans = (TextView)itemView.findViewById(R.id.tvFavoriteMeans);
             imgListen=(ImageView)itemView.findViewById(R.id.imgFavoriteSpell);
+            imgDelete = (ImageView)itemView.findViewById(R.id.imgDeleteFavorite);
 
         }
     }

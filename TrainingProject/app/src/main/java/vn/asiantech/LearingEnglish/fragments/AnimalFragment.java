@@ -20,7 +20,7 @@ import vn.asiantech.LearingEnglish.utils.TabBar;
  * Created by xuanphu on 04/09/2015.
  */
 @EFragment(R.layout.fragment_animal)
-public class AnimalFragment extends BaseFragment implements TabBar.OnTabBarListener {
+public class AnimalFragment extends BaseFragment {
     @ViewById(R.id.recyclerAnimal)
     RecyclerView mRecyclerAnimal;
     AnimalAdapter mAnimalAdapter;
@@ -63,22 +63,29 @@ public class AnimalFragment extends BaseFragment implements TabBar.OnTabBarListe
         AnimalCategory animalCategory = new AnimalCategory();
         animalCategory.setMAvataAnimal(R.drawable.img_animal);
         animalCategory.setMNameAnimal("Lion");
+        animalCategory.setMExample("Three year-old male lions grow manes that vary in color from black to blond");
+        animalCategory.setMFavorite(false);
+        animalCategory.setMMeans("Sư Tử");
+        animalCategory.setMSpelling("/līən/");
         mArraylists.add(animalCategory);
 
         AnimalCategory animalCategory1 = new AnimalCategory();
         animalCategory1.setMAvataAnimal(R.drawable.img_tiger);
         animalCategory1.setMNameAnimal("Tiger");
+        animalCategory1.setMExample(" columbia tiger lily");
+        animalCategory1.setMFavorite(false);
+        animalCategory1.setMMeans("Hổ, Cop");
+        animalCategory1.setMSpelling("/'taigə/");
         mArraylists.add(animalCategory1);
 
         AnimalCategory animalCategory2 = new AnimalCategory();
         animalCategory2.setMAvataAnimal(R.drawable.img_animal);
         animalCategory2.setMNameAnimal("Cat Big");
+        animalCategory2.setMExample(" columbia big cat lily");
+        animalCategory2.setMFavorite(true);
+        animalCategory2.setMMeans("Con meo");
+        animalCategory2.setMSpelling("/'taigə/");
         mArraylists.add(animalCategory2);
-    }
-
-    @Override
-    public void onTabClick(int position) {
-
     }
 
 }

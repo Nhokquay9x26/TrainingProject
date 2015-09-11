@@ -57,6 +57,8 @@
     <string name="header.animal">Animal</string>
     <string name="header.home">Home</string>
     <string name="header.Detail">Detail</string>
+    <string name="header.favorite">Favorite</string>
+    <string name="no">Cancel</string>
     <string name="header.home.question">Questions</string>
     <string name="dialog.tvCancel">Cancle</string>
     <string name="setting.title.text">Setting</string>
@@ -65,5 +67,10 @@
     <string name="activity.change.pass.text.hint.new.pass">New password</string>
     <string name="activity.change.pass.text.hint.confirm.new.pass">Confirm new password</string>
     <string name="activity.change.pass.button.text">Change password</string>
-
+    <string name="alert_forgot_pass_success">Get new password sucess!</string>
+    <string name="alert_new_pass">"New password id: "</string>
+    <string name="alert_email_not_exist">Email does not exist!</string>
+    <string name="alert_get_new_pass_fail">Get new password fail</string>
+    <string name="error">Error</string>
+    <string name="please_wait">Please wait...</string>
 </resources>
