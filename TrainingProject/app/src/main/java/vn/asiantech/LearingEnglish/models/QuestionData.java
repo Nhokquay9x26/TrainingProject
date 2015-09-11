@@ -6,7 +6,7 @@ import lombok.Data;
  * Created by tantv on 28/08/2015.
  */
 @Data
-public class Question {
+public class QuestionData {
 
     private String question;
     private String selectionA;
@@ -15,7 +15,7 @@ public class Question {
     private String selectionD;
     private int selectionUser = 0;
 
-    public Question(String question, String selectionA, String selectionB, String selectionC, String selectionD, int selectionUser) {
+    public QuestionData(String question, String selectionA, String selectionB, String selectionC, String selectionD, int selectionUser) {
         this.question = question;
         this.selectionA = selectionA;
         this.selectionB = selectionB;

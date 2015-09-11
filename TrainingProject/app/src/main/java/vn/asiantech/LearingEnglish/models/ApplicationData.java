@@ -3,7 +3,11 @@ package vn.asiantech.LearingEnglish.models;
 import android.util.Log;
 
 import java.util.ArrayList;
-import java.util.List;
+
+import retrofit.RestAdapter;
+import retrofit.RetrofitError;
+import vn.asiantech.LearingEnglish.network.*;
+import vn.asiantech.LearingEnglish.network.core.Callback;
 
 /**
  * Created by tantv on 28/08/2015.
@@ -25,11 +29,26 @@ public class ApplicationData {
     static String questionD[] = {"of", "timely", "allocated", "No, He is wonderful", "any", "under", "unnecessary"};
     static String selectionTrue[] = {"A", "C", "B", "D", "D", "C", "B"};
 
-    public static void getDataQuestion(ArrayList<Question> questionData) {
-        Question question;
+    public static void getDataQuestion(ArrayList<QuestionData> questionDataData) {
+        QuestionData question;
+        String api = "http://172.16.100.115:8080/internship/api/index.php/";
+        RestAdapter adapter = new RestAdapter.Builder().setEndpoint(api).build();
+        Api testRetrofit = adapter.create(Api.class);
+        testRetrofit.getQuestion(new Callback<ListQuestion>() {
+            @Override
+            public void success(ListQuestion listQuestion) {
+
+            }
+
+            @Override
+            public void failure(RetrofitError error, vn.asiantech.LearingEnglish.network.Error myError) {
+
+            }
+        });
+
         for (int i = 0; i < dataQuestion.length; i++) {
-            question = new Question(dataQuestion[i], questionA[i], questionB[i], questionC[i], questionD[i], 0);
-            questionData.add(question);
+            question = new QuestionData(dataQuestion[i], questionA[i], questionB[i], questionC[i], questionD[i], 0);
+            questionDataData.add(question);
             Log.d("Size1", i + "");
         }
     }

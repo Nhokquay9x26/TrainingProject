@@ -3,10 +3,12 @@ package vn.asiantech.LearingEnglish.network;
 import retrofit.http.DELETE;
 import retrofit.http.Field;
 import retrofit.http.FormUrlEncoded;
+import retrofit.http.GET;
 import retrofit.http.POST;
 import retrofit.http.Query;
 import vn.asiantech.LearingEnglish.models.BaseModel;
 import vn.asiantech.LearingEnglish.models.InfoRegister;
+import vn.asiantech.LearingEnglish.models.ListQuestion;
 import vn.asiantech.LearingEnglish.models.Login;
 import vn.asiantech.LearingEnglish.network.core.Callback;
 
@@ -34,4 +36,6 @@ public interface Api {
                   @Field(Parameter.NAME) String name,
                   Callback<InfoRegister> callback);
 
+    @GET("/question")
+    void getQuestion(Callback<ListQuestion> listQuestionCallback);
 }

@@ -1,6 +1,5 @@
 package vn.asiantech.LearingEnglish.activities;
 
-
 import android.app.AlertDialog;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
@@ -53,12 +52,18 @@ import java.util.List;
 
 import lombok.Getter;
 import lombok.Setter;
+import retrofit.RestAdapter;
+import retrofit.RetrofitError;
 import vn.asiantech.LearingEnglish.R;
 import vn.asiantech.LearingEnglish.adapter.TestingAdapter;
 import vn.asiantech.LearingEnglish.fragments.TestResultingFragment_;
 import vn.asiantech.LearingEnglish.fragments.TestingFragment_;
 import vn.asiantech.LearingEnglish.models.ApplicationData;
-import vn.asiantech.LearingEnglish.models.Question;
+import vn.asiantech.LearingEnglish.models.ListQuestion;
+import vn.asiantech.LearingEnglish.models.QuestionData;
+import vn.asiantech.LearingEnglish.models.SomeOtherFunction;
+import vn.asiantech.LearingEnglish.network.Api;
+import vn.asiantech.LearingEnglish.network.core.Callback;
 
 /**
  * Created by tantv on 28/08/2015.
@@ -67,10 +72,9 @@ import vn.asiantech.LearingEnglish.models.Question;
 @SuppressWarnings("ALL")
 @EActivity(R.layout.activity_testing)
 public class TestingActivity extends FragmentActivity {
-
     private static final String PERMISSION = "publish_actions";
     private CallbackManager mCallbackManager;
-    private ShareDialog shareDialog;
+    private ShareDialog mShareDialog;
     private ProfileTracker mProfileTracker;
     private AccessTokenTracker mAccessTokenTracker;
     public static AccessToken mAccessToken;
@@ -79,20 +83,6 @@ public class TestingActivity extends FragmentActivity {
     private boolean mIsCheckTimerStop = true;
     private long mSaveRemainingTime;
     private TestingAdapter mAdapterTesting;
-    private Bitmap bmTestResulting;
-    @Getter
-    private ArrayList<Question> mQuestionDatas;
-    @Getter
-    private int mLeftRight = 0;
-    @Setter
-    @Getter
-    private boolean mIsCheckDisable;
-    @Getter
-    private long mRemainingTime;
-    @Getter
-    private int mFragmentCurrentDisplay = 0;
-    @Getter
-    private ArrayList<String> mListSelection;
 
     @AfterViews
     void afterView() {
@@ -107,14 +97,14 @@ public class TestingActivity extends FragmentActivity {
         mViewPager.setAdapter(mAdapterTesting);
         createCountDown();
         setOnClickViewPager();
-        mNumberOfQuestion.setText("1 - " + mQuestionDatas.size());
-        mTvTotalQuestion.setText("1/" + mQuestionDatas.size());
+        mNumberOfQuestion.setText("1 - " + mQuestionDataDatas.size());
+        mTvTotalQuestion.setText("1/" + mQuestionDataDatas.size());
+        mTvLeftQuestion.setText(mQuestionDataDatas.size()+"");
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-        // Logs 'install' and 'app activate' App Events.
         AppEventsLogger.activateApp(this);
     }
 
@@ -146,7 +136,6 @@ public class TestingActivity extends FragmentActivity {
                         AccessToken accessToken = loginResult.getAccessToken();
                         Profile profile = Profile.getCurrentProfile();
                         if (profile != null) {
-//                            display(profile);
                             mAccessToken = accessToken;
                         } else {
                             Log.d("vinhhlb", "profile null");
@@ -179,10 +168,9 @@ public class TestingActivity extends FragmentActivity {
         } else {
             new AlertDialog.Builder(this)
                     .setTitle("Warning !")
-                    .setMessage("You're offline .\nPlease ! Turn on mobile data or wifi .")
+                    .setMessage("No conecting network .\nPlease ! Turn on mobile data or wifi .")
                     .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which) {
-
                         }
                     })
                     .setIcon(android.R.drawable.ic_dialog_alert)
@@ -197,7 +185,9 @@ public class TestingActivity extends FragmentActivity {
     private void sharePhotoToFacebook() {
         try {
             Bitmap image = screenShot(mFrViewpager);
-            SharePhoto photo = new SharePhoto.Builder().setBitmap(image).setCaption("Test App").build();
+            ArrayList<Boolean> resultUser = SomeOtherFunction.resultUser(mQuestionDataDatas, mListSelection);
+            String share = "Your result: "+SomeOtherFunction.countResultsTrue(resultUser)+"/"+ resultUser.size();
+            SharePhoto photo = new SharePhoto.Builder().setBitmap(image).setCaption(share).build();
             SharePhotoContent content = new SharePhotoContent.Builder().addPhoto(photo).build();
             ShareApi.share(content, null);
             toastMakeText("Congratulation ! You just share your results on Timeline !");
@@ -220,6 +210,7 @@ public class TestingActivity extends FragmentActivity {
             mSaveRemainingTime = mRemainingTime;
         }
         mIsCheckTimerStop = false;
+        //INVISIBLE CONTROLL
         mRlButtonBottom.setVisibility(View.INVISIBLE);
         mTvTimeLeft.setVisibility(View.INVISIBLE);
         mTvTimeLeftCopy.setVisibility(View.INVISIBLE);
@@ -228,6 +219,8 @@ public class TestingActivity extends FragmentActivity {
         mTvLeftQuestionCopy.setVisibility(View.VISIBLE);
         mTvLeftQuestionCopy.setText("Total Time: " + convertTimeToString(300000 - mSaveRemainingTime));
         mProgressBarTimer.setVisibility(View.INVISIBLE);
+
+        //NEW FRAGMENT
         TestResultingFragment_ fr = new TestResultingFragment_();
         FragmentManager fm = getFragmentManager();
         FragmentTransaction fragmentTransaction = fm.beginTransaction();
@@ -259,21 +252,17 @@ public class TestingActivity extends FragmentActivity {
                 ((TestingFragment_) f).setTextColorFragment(0);
                 Toast.makeText(this, "Clicked" + mFragmentTestings.size(), Toast.LENGTH_SHORT).show();
             }
-
             //set for fragment 1
             f = mAdapterTesting.getItem(1);
             if (f instanceof TestingFragment_) {
                 ((TestingFragment_) f).disableRadioButtonGroup();
                 ((TestingFragment_) f).setTextColorFragment(1);
             }
-
         } else {
             super.onBackPressed();
 
         }
-
     }
-
 
     /**
      * Event When Click Button Previous
@@ -290,7 +279,7 @@ public class TestingActivity extends FragmentActivity {
      */
     @Click(R.id.imgNext)
     void mImgNextClicked() {
-        if (mFragmentCurrentDisplay != mQuestionDatas.size() - 1) {
+        if (mFragmentCurrentDisplay != mQuestionDataDatas.size() - 1) {
             mViewPager.setCurrentItem(mFragmentCurrentDisplay + 1);
         }
     }
@@ -319,20 +308,15 @@ public class TestingActivity extends FragmentActivity {
             public void onPageScrollStateChanged(int state) {
                 if (state == 0) {
                     mFragmentCurrentDisplay = mViewPager.getCurrentItem();
-                    mNumberOfQuestion.setText((mFragmentCurrentDisplay + 1) + " - " + mQuestionDatas.size());
-                    mTvTotalQuestion.setText((mFragmentCurrentDisplay + 1) + "/" + mQuestionDatas.size());
+                    mNumberOfQuestion.setText((mFragmentCurrentDisplay + 1) + " - " + mQuestionDataDatas.size());
+                    mTvTotalQuestion.setText((mFragmentCurrentDisplay + 1) + "/" + mQuestionDataDatas.size());
                     if (mFragmentCurrentDisplay > mPositionCurrent) {
                         // Move Right
-                        // Log.d("tag change page: ", "right " + mFragmentCurrentDisplay + mPositionCurrent);
-
-                        Log.d("======================", "========================");
                         mLeftRight = 1;
                         mPositionCurrent = mFragmentCurrentDisplay;
                         Log.d("mPositionCurrent R: ", mPositionCurrent + "");
                     } else if (mFragmentCurrentDisplay < mPositionCurrent) {
                         // Move Left
-                        Log.d("======================", "========================");
-                        //Log.d("tag change page: ", "left " + mFragmentCurrentDisplay + mPositionCurrent);
                         mLeftRight = -1;
                         mPositionCurrent = mFragmentCurrentDisplay;
                         Log.d("mPositionCurrent L: ", mPositionCurrent + "");
@@ -342,28 +326,50 @@ public class TestingActivity extends FragmentActivity {
         });
     }
 
+
+
     /**
-     * New Fragment from Number of Question
+     * New Fragment from Number of QuestionData
      */
     private void newFragmentQuestion() {
         TestingFragment_ objectTestingFragment_ = new TestingFragment_();
-        for (int i = 0; i < mQuestionDatas.size(); i++) {
+        for (int i = 0; i < mQuestionDataDatas.size(); i++) {
             int numberQuestion = i + 1;
-            String question = mQuestionDatas.get(i).getQuestion();
-            String selectionA = mQuestionDatas.get(i).getSelectionA();
-            String selectionB = mQuestionDatas.get(i).getSelectionB();
-            String selectionC = mQuestionDatas.get(i).getSelectionC();
-            String selectionD = mQuestionDatas.get(i).getSelectionD();
+            String question = mQuestionDataDatas.get(i).getQuestion();
+            String selectionA = mQuestionDataDatas.get(i).getSelectionA();
+            String selectionB = mQuestionDataDatas.get(i).getSelectionB();
+            String selectionC = mQuestionDataDatas.get(i).getSelectionC();
+            String selectionD = mQuestionDataDatas.get(i).getSelectionD();
             mFragmentTestings.add(objectTestingFragment_.newInstance(numberQuestion, question, selectionA, selectionB, selectionC, selectionD));
         }
     }
 
     /**
-     * get Question From Data
+     * get QuestionData From Data
      */
     private void getQuestion() {
-        mQuestionDatas = new ArrayList<Question>();
-        ApplicationData.getDataQuestion(mQuestionDatas);
+        mQuestionDataDatas = new ArrayList<QuestionData>();
+        String api = "http://172.16.100.115:8080/internship/api/index.php/";
+        RestAdapter adapter = new RestAdapter.Builder().setEndpoint(api).build();
+        Api testRetrofit = adapter.create(Api.class);
+        testRetrofit.getQuestion(new Callback<ListQuestion>() {
+            @Override
+            public void success(ListQuestion listQuestion) {
+                QuestionData question;
+                for (int i = 0; i < listQuestion.getQuestion().size(); i++) {
+//                    String selectionA = listQuestion.getQuestion().get(i).getAnswerA()
+                            ;
+//                    question = new QuestionData);
+//                    mQuestionDataDatas.add(question);
+                }
+            }
+
+            @Override
+            public void failure(RetrofitError error, vn.asiantech.LearingEnglish.network.Error myError) {
+
+            }
+        });
+
 
     }
 
@@ -464,4 +470,18 @@ public class TestingActivity extends FragmentActivity {
 
     @ViewById(R.id.tvLeftQuestionCopy)
     TextView mTvLeftQuestionCopy;
+
+    @Getter
+    private ArrayList<QuestionData> mQuestionDataDatas;
+    @Getter
+    private int mLeftRight = 0;
+    @Setter
+    @Getter
+    private boolean mIsCheckDisable;
+    @Getter
+    private long mRemainingTime;
+    @Getter
+    private int mFragmentCurrentDisplay = 0;
+    @Getter
+    private ArrayList<String> mListSelection;
 }

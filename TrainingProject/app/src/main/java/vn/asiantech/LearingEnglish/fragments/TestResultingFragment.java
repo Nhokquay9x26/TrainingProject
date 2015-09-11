@@ -4,7 +4,6 @@ import android.app.Fragment;
 import android.graphics.Color;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -19,7 +18,7 @@ import vn.asiantech.LearingEnglish.R;
 import vn.asiantech.LearingEnglish.activities.TestingActivity_;
 import vn.asiantech.LearingEnglish.adapter.TestResultingAdapter;
 import vn.asiantech.LearingEnglish.models.ApplicationData;
-import vn.asiantech.LearingEnglish.models.Question;
+import vn.asiantech.LearingEnglish.models.QuestionData;
 import vn.asiantech.LearingEnglish.models.SomeOtherFunction;
 
 /**
@@ -32,7 +31,7 @@ public class TestResultingFragment extends Fragment {
 
     private RecyclerView.Adapter mAdapter;
     private RecyclerView.LayoutManager mLayoutManager;
-    private ArrayList<Question> mQuestionDatas;
+    private ArrayList<QuestionData> mQuestionDataDatas;
     private ArrayList<String> mListSelections;
     private ArrayList<Boolean> mIsResultUser;
 
@@ -48,20 +47,20 @@ public class TestResultingFragment extends Fragment {
     @AfterViews
     void afterView() {
         configRecycleView();
-        mQuestionDatas = new ArrayList<Question>();
+        mQuestionDataDatas = new ArrayList<QuestionData>();
         mListSelections = new ArrayList<>();
         ApplicationData.getSelectionTrue(mListSelections);
         if (getActivity() instanceof TestingActivity_) {
-            mQuestionDatas = ((TestingActivity_) getActivity()).getMQuestionDatas();
+            mQuestionDataDatas = ((TestingActivity_) getActivity()).getMQuestionDataDatas();
         }
-        resultUser();
+        mIsResultUser = SomeOtherFunction.resultUser(mQuestionDataDatas,mListSelections);
         SomeOtherFunction.changeTextViewToTwoColor(mTvTotalResult,"Total: ",totalSelectionTrueUser() + "/" + mIsResultUser.size(), Color.RED,Color.BLACK);
         mRecycleViewResult.setHasFixedSize(true);
         // use a linear layout manager
         mLayoutManager = new LinearLayoutManager(getActivity());
         mRecycleViewResult.setLayoutManager(mLayoutManager);
         // specify an adapter (see also next example)
-        mAdapter = new TestResultingAdapter(mQuestionDatas, mListSelections, mIsResultUser);
+        mAdapter = new TestResultingAdapter(mQuestionDataDatas, mListSelections, mIsResultUser);
         mRecycleViewResult.setAdapter(mAdapter);
     }
 
@@ -72,44 +71,6 @@ public class TestResultingFragment extends Fragment {
             ((TestingActivity_) getActivity()).shareFaceBook();
         }
     }
-
-    /**
-     * Calculate return result for user
-     */
-    private void resultUser() {
-        mIsResultUser = new ArrayList<Boolean>();
-        for (int id = 0; id < mQuestionDatas.size(); id++) {
-            String selection;
-            switch (mQuestionDatas.get(id).getSelectionUser()) {
-                case 1: {
-                    selection = "A";
-                    break;
-                }
-                case 2: {
-                    selection = "B";
-                    break;
-                }
-                case 3: {
-                    selection = "C";
-                    break;
-                }
-                case 4: {
-                    selection = "D";
-                    break;
-                }
-                default:
-                    selection = "";
-            }
-            if (selection.equals(mListSelections.get(id))) {
-                mIsResultUser.add(true);
-            } else {
-                mIsResultUser.add(false);
-            }
-            Log.d("Ketqua " + id + ": ", mIsResultUser.get(id) + "");
-        }
-
-    }
-
 
     /**
      * Config recyclerView
@@ -134,7 +95,5 @@ public class TestResultingFragment extends Fragment {
         }
         return count;
     }
-
-
 }
 

@@ -16,7 +16,7 @@ import java.util.ArrayList;
 
 import vn.asiantech.LearingEnglish.R;
 import vn.asiantech.LearingEnglish.activities.TestingActivity_;
-import vn.asiantech.LearingEnglish.models.Question;
+import vn.asiantech.LearingEnglish.models.QuestionData;
 import vn.asiantech.LearingEnglish.models.SomeOtherFunction;
 
 /**
@@ -26,7 +26,8 @@ import vn.asiantech.LearingEnglish.models.SomeOtherFunction;
 @SuppressWarnings("ALL")
 @EFragment(R.layout.fragment_testing)
 public class TestingFragment extends Fragment {
-    private ArrayList<Question> mArrQuestions;
+    private ArrayList<QuestionData> mArrQuestionDatas;
+
     private int mFragmentCurrentDisplay = 0;
     private int mLeftRight = 0;
     private boolean isCheckDisable;
@@ -72,45 +73,40 @@ public class TestingFragment extends Fragment {
         return f;
     }
 
+
     @AfterViews
     void afterView() {
-
         if (getActivity() instanceof TestingActivity_) {
             isCheckDisable = ((TestingActivity_) getActivity()).isMIsCheckDisable();
-
         }
+
         if (isCheckDisable) {
             disableRadioButtonGroup();
             if (getActivity() instanceof TestingActivity_) {
                 mListSelection = ((TestingActivity_) getActivity()).getMListSelection();
                 mFragmentCurrentDisplay = ((TestingActivity_) getActivity()).getMFragmentCurrentDisplay();
-                Log.d("setText LR:  ", "NEW FRAGMENT"+mFragmentCurrentDisplay);
                 mLeftRight = ((TestingActivity_) getActivity()).getMLeftRight();
                 if (mLeftRight == -1) {
-                    if (mFragmentCurrentDisplay!=0){
+                    Log.d("Left", mFragmentCurrentDisplay + "");
+                    if (mFragmentCurrentDisplay != 0) {
                         setTextColorFragment(mFragmentCurrentDisplay - 1);
-                        Log.d("setText Left:  ", "" + mListSelection.get(mFragmentCurrentDisplay - 1));
-                        Log.d("======================","========================");
                     }
                 } else if (mLeftRight == 1) {
-                    if (mFragmentCurrentDisplay!=mListSelection.size()-1){
-                        Log.d("setText Right:  ", "" + mListSelection.get(mFragmentCurrentDisplay+1));
+                    if (mFragmentCurrentDisplay != mListSelection.size() - 1) {
+                        Log.d("Right", mFragmentCurrentDisplay + "");
                         setTextColorFragment(mFragmentCurrentDisplay + 1);
-                        Log.d("======================", "========================");
                     }
-
                 }
             }
         }
 
-        Log.d("======================","========================");
         int numberQuestion = getArguments().getInt(EXTRA_MESSAGE_NUMBER_QUESTION);
         String question = getArguments().getString(EXTRA_MESSAGE_QUESTION);
         String selectionA = getArguments().getString(EXTRA_MESSAGE_SELECTIONA);
         String selectionB = getArguments().getString(EXTRA_MESSAGE_SELECTIONB);
         String selectionC = getArguments().getString(EXTRA_MESSAGE_SELECTIONC);
         String selectionD = getArguments().getString(EXTRA_MESSAGE_SELECTIOND);
-        SomeOtherFunction.changeTextViewToTwoColor(mTvDetailQuestion, "Question " + numberQuestion + ": ", question, Color.RED, Color.BLACK);
+        SomeOtherFunction.changeTextViewToTwoColor(mTvDetailQuestion, "QuestionData " + numberQuestion + ": ", question, Color.RED, Color.BLACK);
         mRbA.setText(selectionA);
         mRbB.setText(selectionB);
         mRbC.setText(selectionC);
@@ -169,8 +165,8 @@ public class TestingFragment extends Fragment {
 
     private int countSelectUser() {
         int count = 0;
-        for (int i = 0; i < mArrQuestions.size(); i++) {
-            if (mArrQuestions.get(i).getSelectionUser() == 0) {
+        for (int i = 0; i < mArrQuestionDatas.size(); i++) {
+            if (mArrQuestionDatas.get(i).getSelectionUser() == 0) {
                 count++;
             }
         }
@@ -204,7 +200,7 @@ public class TestingFragment extends Fragment {
                                                          public void onCheckedChanged(RadioGroup group, int checkedId) {
                                                              if (getActivity() instanceof TestingActivity_) {
                                                                  mFragmentCurrentDisplay = ((TestingActivity_) getActivity()).getMFragmentCurrentDisplay();
-                                                                 mArrQuestions = ((TestingActivity_) getActivity()).getMQuestionDatas();
+                                                                 mArrQuestionDatas = ((TestingActivity_) getActivity()).getMQuestionDataDatas();
                                                              }
 
                                                              int selectionUser = 0;
@@ -212,7 +208,7 @@ public class TestingFragment extends Fragment {
 
                                                                  case R.id.rbA: {
                                                                      selectionUser = 1;
-                                                                     mArrQuestions.get(mFragmentCurrentDisplay).setSelectionUser(selectionUser);
+                                                                     mArrQuestionDatas.get(mFragmentCurrentDisplay).setSelectionUser(selectionUser);
                                                                      if (getActivity() instanceof TestingActivity_) {
                                                                          ((TestingActivity_) getActivity()).setTextViewLeftQuestion(countSelectUser());
                                                                      }
@@ -220,7 +216,7 @@ public class TestingFragment extends Fragment {
                                                                  }
                                                                  case R.id.rbB: {
                                                                      selectionUser = 2;
-                                                                     mArrQuestions.get(mFragmentCurrentDisplay).setSelectionUser(selectionUser);
+                                                                     mArrQuestionDatas.get(mFragmentCurrentDisplay).setSelectionUser(selectionUser);
                                                                      if (getActivity() instanceof TestingActivity_) {
                                                                          ((TestingActivity_) getActivity()).setTextViewLeftQuestion(countSelectUser());
                                                                      }
@@ -228,7 +224,7 @@ public class TestingFragment extends Fragment {
                                                                  }
                                                                  case R.id.rbC: {
                                                                      selectionUser = 3;
-                                                                     mArrQuestions.get(mFragmentCurrentDisplay).setSelectionUser(selectionUser);
+                                                                     mArrQuestionDatas.get(mFragmentCurrentDisplay).setSelectionUser(selectionUser);
                                                                      if (getActivity() instanceof TestingActivity_) {
                                                                          ((TestingActivity_) getActivity()).setTextViewLeftQuestion(countSelectUser());
                                                                      }
@@ -236,7 +232,7 @@ public class TestingFragment extends Fragment {
                                                                  }
                                                                  case R.id.rbD: {
                                                                      selectionUser = 4;
-                                                                     mArrQuestions.get(mFragmentCurrentDisplay).setSelectionUser(selectionUser);
+                                                                     mArrQuestionDatas.get(mFragmentCurrentDisplay).setSelectionUser(selectionUser);
                                                                      if (getActivity() instanceof TestingActivity_) {
                                                                          ((TestingActivity_) getActivity()).setTextViewLeftQuestion(countSelectUser());
                                                                      }

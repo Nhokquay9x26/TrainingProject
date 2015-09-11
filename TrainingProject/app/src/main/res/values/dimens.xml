@@ -172,8 +172,8 @@
     <dimen name="testing.button.width_submit">90dp</dimen>
     <dimen name="testing.button.height_submit">30dp</dimen>
     <dimen name="testing.button.margin_right_submit">5dp</dimen>
-    <dimen name="question.rl.height">80dp</dimen>
-    <dimen name="question.textview.size">15sp</dimen>
+    <dimen name="questionData.rl.height">60dp</dimen>
+    <dimen name="questionData.textview.size">15sp</dimen>
     <dimen name="dialogCancleArlert.textSize">22sp</dimen>
     <dimen name="dialog_Rl_height">100dp</dimen>
 

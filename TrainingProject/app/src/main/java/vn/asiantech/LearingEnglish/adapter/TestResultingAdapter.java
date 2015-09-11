@@ -10,7 +10,7 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 import vn.asiantech.LearingEnglish.R;
-import vn.asiantech.LearingEnglish.models.Question;
+import vn.asiantech.LearingEnglish.models.QuestionData;
 
 /**
  * Created by tantv on 02/09/2015.
@@ -18,12 +18,12 @@ import vn.asiantech.LearingEnglish.models.Question;
 @SuppressWarnings({"ALL", "DefaultFileTemplate"})
 public class TestResultingAdapter extends RecyclerView.Adapter<TestResultingAdapter.ViewHolder> {
 
-    private ArrayList<Question> mQuestions;
+    private ArrayList<QuestionData> mQuestionDatas;
     private ArrayList<String> mListSelections;
     private ArrayList<Boolean> mIsResultUser;
 
-    public TestResultingAdapter(ArrayList<Question> questions,ArrayList<String> listSelections,ArrayList<Boolean> isResultUser){
-        this.mQuestions = questions;
+    public TestResultingAdapter(ArrayList<QuestionData> questionDatas,ArrayList<String> listSelections,ArrayList<Boolean> isResultUser){
+        this.mQuestionDatas = questionDatas;
         this.mListSelections = listSelections;
         this.mIsResultUser = isResultUser;
     }
@@ -39,7 +39,7 @@ public class TestResultingAdapter extends RecyclerView.Adapter<TestResultingAdap
 
     @Override
     public void onBindViewHolder(TestResultingAdapter.ViewHolder holder, int position) {
-        holder.tvQuestion.setText("Question " + (position + 1) + ": ");
+        holder.tvQuestion.setText("QuestionData " + (position + 1) + ": ");
         holder.tvSelection.setText(mListSelections.get(position));
         if (mIsResultUser.get(position)){
             holder.imgCheckFalse.setVisibility(View.INVISIBLE);
@@ -52,7 +52,7 @@ public class TestResultingAdapter extends RecyclerView.Adapter<TestResultingAdap
 
     @Override
     public int getItemCount() {
-        return mQuestions.size();
+        return mQuestionDatas.size();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {

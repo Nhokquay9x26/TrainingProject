@@ -5,8 +5,8 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/question.rl.height"
-        android:background="@color/color.question">
+        android:layout_height="@dimen/questionData.rl.height"
+        android:background="@color/color.questionData">
 
         <TextView
             android:id="@+id/tvQuestionNumber"
@@ -15,7 +15,7 @@
             android:layout_centerVertical="true"
             android:layout_marginLeft="50dp"
             android:text="Test 1: Level 1"
-            android:textSize="@dimen/question.textview.size" />
+            android:textSize="@dimen/questionData.textview.size" />
 
         <View
             android:layout_width="match_parent"

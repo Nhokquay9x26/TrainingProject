@@ -40,7 +40,7 @@
     <string name="action_settings">Settings</string>
     <string name="custom.tabbar.main.text.home">Home</string>
     <string name="custom.tabbar.main.text.favorite">Favorite</string>
-    <string name="custom.tabbar.main.text.question">Question</string>
+    <string name="custom.tabbar.main.text.questionData">Question</string>
     <string name="custom.tabbar.main.text.setting">Setting</string>
     <string name="listresult.textview.text_question">Question 1:</string>
     <string name="testresulting.textview.total">total: 1/2</string>
@@ -57,7 +57,7 @@
     <string name="header.animal">Animal</string>
     <string name="header.home">Home</string>
     <string name="header.Detail">Detail</string>
-    <string name="header.home.question">Questions</string>
+    <string name="header.home.questionData">Questions</string>
     <string name="dialog.tvCancel">Cancle</string>
     <string name="setting.title.text">Setting</string>
     <string name="rangting.text.title">Ratting</string>
