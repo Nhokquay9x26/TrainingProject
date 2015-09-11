@@ -12,4 +12,5 @@ public class Login {
     private String email;
 
     private String token;
+    private String createdAt;
 }

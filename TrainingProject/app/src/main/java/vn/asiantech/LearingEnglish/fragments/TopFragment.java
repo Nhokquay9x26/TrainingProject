@@ -3,6 +3,7 @@ package vn.asiantech.LearingEnglish.fragments;
 import android.app.Activity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.Click;
@@ -23,11 +24,11 @@ import vn.asiantech.LearingEnglish.models.Top;
  * Created by PhuQuy on 8/27/15.
  */
 @EFragment(R.layout.fragment_top)
-public class TopFragment extends BaseFragment {
+public class TopFragment extends BaseFragment implements TopAdapter.onClickItemInterface{
     @ViewById(R.id.recycleViewTop)
     RecyclerView mRecycleTop;
 
-    @FragmentByTag("LoginFragment")
+    @FragmentByTag("mDetailFragment")
     protected DetailFragment mDetailFragment;
 
     private ArrayList<Top> mArrTop = new ArrayList<Top>();
@@ -39,20 +40,28 @@ public class TopFragment extends BaseFragment {
 
     @AfterViews
     void afterviews() {
-        creatData2();
+        creatData();
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getActivity());
-        TopAdapter mAdapter = new TopAdapter(mArrTop);
+        TopAdapter mAdapter = new TopAdapter(mArrTop, this);
         mRecycleTop.setHasFixedSize(true);
         mRecycleTop.setLayoutManager(linearLayoutManager);
         mRecycleTop.setAdapter(mAdapter);
 
     }
 
-    public void creatData2() {
-        mArrTop.add(new Top(R.drawable.ic_avatar, "hello", R.drawable.ic_sound));
-        mArrTop.add(new Top(R.drawable.ic_avatar, "hello", R.drawable.ic_sound));
-        mArrTop.add(new Top(R.drawable.ic_avatar, "hello", R.drawable.ic_sound));
-        mArrTop.add(new Top(R.drawable.ic_avatar, "hello", R.drawable.ic_sound));
-        mArrTop.add(new Top(R.drawable.ic_avatar, "hello", R.drawable.ic_sound));
+    public void creatData() {
+        mArrTop.add(new Top(R.drawable.ic_avatar, "About", R.drawable.ic_next_top));
+        mArrTop.add(new Top(R.drawable.ic_avatar, "Active", R.drawable.ic_next_top));
+        mArrTop.add(new Top(R.drawable.ic_avatar, "Only", R.drawable.ic_next_top));
+        mArrTop.add(new Top(R.drawable.ic_avatar, "Father", R.drawable.ic_next_top));
+        mArrTop.add(new Top(R.drawable.ic_avatar, "Party", R.drawable.ic_next_top));
+    }
+
+    @Override
+    public void clickTopNext() {
+        if(mDetailFragment == null){
+            mDetailFragment = DetailFragment_.builder().build();
+        }
+        addChildFragment(mDetailFragment);
     }
 }
