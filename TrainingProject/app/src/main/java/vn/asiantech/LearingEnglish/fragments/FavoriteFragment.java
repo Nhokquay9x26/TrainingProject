@@ -20,7 +20,7 @@ import vn.asiantech.LearingEnglish.models.Favorite;
  * Created by PhuQuy on 8/27/15.
  */
 @EFragment(R.layout.fragment_note)
-public class NoteFragment extends BaseFragment {
+public class FavoriteFragment extends BaseFragment {
     @ViewById(R.id.recycleViewFavorite)
     RecyclerView mRecycleFavorite;
 
@@ -46,11 +46,13 @@ public class NoteFragment extends BaseFragment {
     }
 
     public void creatData() {
-        mArrFavorite.add(new Favorite("Hello", "hello", R.drawable.ic_sound));
-        mArrFavorite.add(new Favorite("Hello", "hello", R.drawable.ic_sound));
-        mArrFavorite.add(new Favorite("Hello", "hello", R.drawable.ic_sound));
-        mArrFavorite.add(new Favorite("Hello", "hello", R.drawable.ic_sound));
-        mArrFavorite.add(new Favorite("Hello", "hello", R.drawable.ic_sound));
+        mArrFavorite.add(new Favorite("About", "/əˈbaʊt/", R.drawable.ic_sound));
+        mArrFavorite.add(new Favorite("Across", "/əˈkrɒs/", R.drawable.ic_sound));
+        mArrFavorite.add(new Favorite("Active", "/ˈæk.tɪv/", R.drawable.ic_sound));
+        mArrFavorite.add(new Favorite("Bag", "/bæg/", R.drawable.ic_sound));
+        mArrFavorite.add(new Favorite("Father", "/ˈfɑː.ðər /", R.drawable.ic_sound));
+        mArrFavorite.add(new Favorite("Only", "/ˈəʊn.li/", R.drawable.ic_sound));
+        mArrFavorite.add(new Favorite("Party", "/ˈpɑː.ti/", R.drawable.ic_sound));
     }
 }
 

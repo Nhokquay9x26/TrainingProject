@@ -40,7 +40,7 @@ public class TopFragment extends BaseFragment implements TopAdapter.onClickItemI
 
     @AfterViews
     void afterviews() {
-        creatData2();
+        creatData();
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getActivity());
         TopAdapter mAdapter = new TopAdapter(mArrTop, this);
         mRecycleTop.setHasFixedSize(true);
@@ -49,12 +49,12 @@ public class TopFragment extends BaseFragment implements TopAdapter.onClickItemI
 
     }
 
-    public void creatData2() {
-        mArrTop.add(new Top(R.drawable.ic_avatar, "hello", R.drawable.ic_next_top));
-        mArrTop.add(new Top(R.drawable.ic_avatar, "hello", R.drawable.ic_next_top));
-        mArrTop.add(new Top(R.drawable.ic_avatar, "hello", R.drawable.ic_next_top));
-        mArrTop.add(new Top(R.drawable.ic_avatar, "hello", R.drawable.ic_next_top));
-        mArrTop.add(new Top(R.drawable.ic_avatar, "hello", R.drawable.ic_next_top));
+    public void creatData() {
+        mArrTop.add(new Top(R.drawable.ic_avatar, "About", R.drawable.ic_next_top));
+        mArrTop.add(new Top(R.drawable.ic_avatar, "Active", R.drawable.ic_next_top));
+        mArrTop.add(new Top(R.drawable.ic_avatar, "Only", R.drawable.ic_next_top));
+        mArrTop.add(new Top(R.drawable.ic_avatar, "Father", R.drawable.ic_next_top));
+        mArrTop.add(new Top(R.drawable.ic_avatar, "Party", R.drawable.ic_next_top));
     }
 
     @Override
@@ -63,6 +63,5 @@ public class TopFragment extends BaseFragment implements TopAdapter.onClickItemI
             mDetailFragment = DetailFragment_.builder().build();
         }
         addChildFragment(mDetailFragment);
-        Log.d("TAG", "abcd");
     }
 }

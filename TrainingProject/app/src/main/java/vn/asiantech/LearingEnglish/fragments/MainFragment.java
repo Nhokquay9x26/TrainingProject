@@ -38,7 +38,7 @@ public class MainFragment extends BaseFragment implements ViewPager.OnPageChange
     private void initializeAdapterView() {
         ArrayList<HomePageItem> tabItems = new ArrayList<>();
         tabItems.add(new HomePageItem(TopFragment_.builder().build(), "TOP", R.mipmap.ic_top));
-        tabItems.add(new HomePageItem(NoteFragment_.builder().build(), "NOTE", R.mipmap.ic_note));
+        tabItems.add(new HomePageItem(FavoriteFragment_.builder().build(), "NOTE", R.mipmap.ic_note));
         tabItems.add(new HomePageItem(TestFragment_.builder().build(), "TEST", R.mipmap.ic_test));
         tabItems.add(new HomePageItem(SettingFragment_.builder().build(), "SETTING", R.mipmap.ic_setting ));
 
