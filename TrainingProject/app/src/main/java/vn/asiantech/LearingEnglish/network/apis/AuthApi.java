@@ -2,6 +2,7 @@ package vn.asiantech.LearingEnglish.network.apis;
 
 import retrofit.RetrofitError;
 import vn.asiantech.LearingEnglish.models.Login;
+import vn.asiantech.LearingEnglish.models.Register;
 import vn.asiantech.LearingEnglish.network.core.ApiClient;
 import vn.asiantech.LearingEnglish.network.core.Callback;
 
@@ -31,4 +32,19 @@ public class AuthApi {
             }
         });
     }
+
+    public static void register(String name, String email, String password, final Callback<Register> callback) {
+        ApiClient.call().register(name, email, password, new Callback<vn.asiantech.LearingEnglish.models.Register>() {
+            @Override
+            public void success(vn.asiantech.LearingEnglish.models.Register register) {
+                callback.success(register);
+            }
+
+            @Override
+            public void failure(RetrofitError error, vn.asiantech.LearingEnglish.network.Error myError) {
+                callback.failure(error, myError);
+            }
+        });
+    }
+
 }

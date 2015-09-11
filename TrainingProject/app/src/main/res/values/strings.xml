@@ -55,6 +55,9 @@
     <string name="title_time_up">Time Up</string>
     <string name="title_aleart">Learning English</string>
     <string name="content_aleart">You should study English right now!</string>
+    <string name="text_notice_field_sign_up">These fields cannot be empty!</string>
+    <string name="text_notice_confirm_pass_sign_up">Confirm password not match!</string>
+
 
     <string-array name="question_array">
         <item>When can we meet again?</item>
