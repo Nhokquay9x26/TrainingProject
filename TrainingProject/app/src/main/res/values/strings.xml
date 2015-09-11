@@ -49,7 +49,11 @@
     <string name="ratings.textview.tvName_User">Maniter Jack</string>
     <string name="ratings.textview.tvPoint">100</string>
     <string name="favorite.textview.title">Favorite</string>
+    <string name="custom.dialog.alert.text">Alert</string>
+    <string name="custom.dialog.text.time">Time</string>
+    <string name="custom.dialog.text.title">Turn on</string>
     <string name="header.animal">Animal</string>
     <string name="header.home">Home</string>
     <string name="header.Detail">Detail</string>
+    <string name="dialog.tvCancel">Cancle</string>
 </resources>

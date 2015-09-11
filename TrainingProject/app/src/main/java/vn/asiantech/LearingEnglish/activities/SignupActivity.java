@@ -1,6 +1,8 @@
 package vn.asiantech.LearingEnglish.activities;
 
+import android.app.ProgressDialog;
 import android.text.TextUtils;
+import android.util.Log;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -8,7 +10,11 @@ import org.androidannotations.annotations.Click;
 import org.androidannotations.annotations.EActivity;
 import org.androidannotations.annotations.ViewById;
 
+import retrofit.RetrofitError;
 import vn.asiantech.LearingEnglish.R;
+import vn.asiantech.LearingEnglish.models.InfoRegister;
+import vn.asiantech.LearingEnglish.network.AuthorApi;
+import vn.asiantech.LearingEnglish.network.core.Callback;
 
 /**
  * @Author MrSon
@@ -30,6 +36,8 @@ public class SignupActivity extends BaseActionBarActivity {
     private boolean mCheckPass;
     private boolean mCheckPromotionCode;
     private boolean mCheckEmail;
+    private ProgressDialog mProgressDialog;
+
     @Override
     void afterView() {
 
@@ -46,10 +54,13 @@ public class SignupActivity extends BaseActionBarActivity {
         checkPassWord();
         checkPromotionCode();
         if (!mCheckUser || !mCheckPass || !mCheckEmail || !mCheckPromotionCode) {
-            Toast.makeText(this, " Test not OK", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, " Test  NOt ok", Toast.LENGTH_SHORT).show();
         }
         if (mCheckUser && mCheckPass && mCheckEmail && mCheckPromotionCode) {
-            Toast.makeText(this, " Test  OK", Toast.LENGTH_SHORT).show();
+
+            register(mEdtUsername.getText().toString().trim(),
+                    mEdtConfirmPass.getText().toString().trim(),
+                    mEdtEmail.getText().toString().trim());
         }
     }
 
@@ -93,5 +104,29 @@ public class SignupActivity extends BaseActionBarActivity {
         } else {
             mCheckPromotionCode = true;
         }
+    }
+
+    public void register(String name, String pass, String email) {
+        mProgressDialog = new ProgressDialog(this);
+        mProgressDialog.setMessage("Registering .....");
+        mProgressDialog.setCanceledOnTouchOutside(false);
+        mProgressDialog.show();
+        AuthorApi.registerAccount(email, pass, name, new Callback<InfoRegister>() {
+            @Override
+            public void success(InfoRegister infoRegister) {
+                if (infoRegister.getError().toString().equals("false")) {
+                    if (mProgressDialog.isShowing()) {
+                        Toast.makeText(SignupActivity.this, infoRegister.getMessage(), Toast.LENGTH_SHORT).show();
+                        mProgressDialog.dismiss();
+                    }
+                }
+            }
+
+            @Override
+            public void failure(RetrofitError error, vn.asiantech.LearingEnglish.network.Error myError) {
+                mProgressDialog.dismiss();
+                Log.d("vinhhlb","error is "+error);
+            }
+        });
     }
 }

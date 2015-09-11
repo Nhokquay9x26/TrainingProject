@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dialog_Rl_height"
+    android:layout_margin="@dimen/custom.dialog.rl.margin"
+    android:background="@drawable/custom_dialog_alarm_background">
+
+    <RelativeLayout
+        android:id="@+id/rlTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imgAlertDialog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_alert" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/imgAlertDialog"
+            android:layout_toRightOf="@+id/imgAlertDialog"
+            android:text="@string/custom.dialog.alert.text"
+            android:textColor="@color/custom.dialog.alert.text.color"
+            android:textSize="@dimen/custom.dialog.alert.text.size"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tvLine1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/setting.line.height"
+        android:layout_below="@+id/rlTitle"
+        android:background="@color/setting.line.color" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvLine1"
+        android:padding="@dimen/custom.dialog.rl.main.padding">
+
+
+        <TextView android:layout_alignParentBottom="true"
+            android:id="@+id/tvCancleDialog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/edtTime"
+            android:gravity="center"
+            android:text="@string/dialog.tvCancel"
+            android:textSize="@dimen/dialogCancleArlert.textSize"
+            android:textColor="@color/custom.dialog.cancel"
+            />
+    </RelativeLayout>
+</RelativeLayout>

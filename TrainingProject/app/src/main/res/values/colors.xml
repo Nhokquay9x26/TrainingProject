@@ -39,4 +39,14 @@
     <color name="setting.name.profile.color">#FF6699</color>
     <color name="setting.line.color">#bbbbbb</color>
     <color name="setting.line2.color">#bbbbbb</color>
+    <color name="custom.dialog.alert.text.color">#FF6699</color>
+    <color name="shape.dialog.time.background">#fff</color>
+    <color name="custom.dialog.text.time.color">#000000</color>
+    <color name="custom.dialog.text.turn.on.color">#000000</color>
+    <color name="custom.edit.time.background">#fff</color>
+    <color name="rating.rl.color">#00b9e6</color>
+    <color name="rating.rl.title.color">#ffffff</color>
+    <color name="rating.rl.title.rank.color">#000000</color>
+    <color name="rl.background">#EEEEEE</color>
+    <color name="custom.dialog.cancel">#000000</color>
 </resources>
