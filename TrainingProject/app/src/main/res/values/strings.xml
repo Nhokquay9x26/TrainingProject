@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">Base Project</string>
     <string name="hello_world">Hello world!</string>
+    <!--LIVE APP ID-->
+    <string name="app_id">516249385207670</string>
     <string name="TextView.text_get_pass">Get Pass</string>
     <string name="EditText.text_hint_email">Email</string>
     <string name="Button.text_forgot_pass">Forgot</string>
@@ -55,6 +57,7 @@
     <string name="header.animal">Animal</string>
     <string name="header.home">Home</string>
     <string name="header.Detail">Detail</string>
+    <string name="header.home.question">Questions</string>
     <string name="dialog.tvCancel">Cancle</string>
     <string name="setting.title.text">Setting</string>
     <string name="rangting.text.title">Ratting</string>

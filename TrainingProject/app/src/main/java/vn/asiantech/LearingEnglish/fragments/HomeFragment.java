@@ -63,6 +63,7 @@ public class HomeFragment extends BaseFragment implements IsCallTop {
         homeCategory3.setMNameHome("Vegetables");
         mArraylists.add(homeCategory3);
     }
+
     @Override
     public void callFragmentAnimal() {
         AnimalFragment_ mFragment = new AnimalFragment_();

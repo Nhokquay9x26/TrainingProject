@@ -55,7 +55,7 @@ public class AnimalFragment extends BaseFragment implements TabBar.OnTabBarListe
     }
 
     @Click
-    void imgBackHeaderAnimal(){
+    void imgBackHeaderAnimal() {
         getActivity().onBackPressed();
     }
 
