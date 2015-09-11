@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
+    android:id="@+id/frameTest"
     android:layout_height="match_parent"
     android:background="@color/top.mau_nen"
     android:orientation="vertical">
@@ -10,6 +11,17 @@
         android:layout_width="match_parent"
         android:layout_height="@dimen/relativelayout.test.height_48dp"
         android:background="@color/blue.top">
+
+        <Button
+            android:id="@+id/btnSubmit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_result"
+            android:layout_centerVertical="true"
+            android:text="Submit"
+            android:contentDescription="@null"
+            android:layout_marginStart="@dimen/img.test.margin_left_20dp"
+            android:layout_marginLeft="@dimen/img.test.margin_left_20dp"/>
 
         <TextView
             android:layout_width="wrap_content"

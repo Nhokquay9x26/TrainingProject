@@ -9,6 +9,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import org.androidannotations.annotations.AfterViews;
+import org.androidannotations.annotations.Click;
 import org.androidannotations.annotations.EFragment;
 import org.androidannotations.annotations.ViewById;
 
@@ -21,7 +22,7 @@ import vn.asiantech.LearingEnglish.adapter.TestAdapter;
 
 
 @EFragment(R.layout.ratings_custom_viewpaper)
-public class TestPagerFragment extends BaseFragment implements View.OnClickListener {
+public class TestPagerFragment extends BaseFragment {
     int NumFragment;
     String[] mQuestion;
 
@@ -67,9 +68,6 @@ public class TestPagerFragment extends BaseFragment implements View.OnClickListe
         tvTestBack.setText("" + NumFragment);
         tvTestAdvance.setText("10");
 
-        imgBack.setOnClickListener(this);
-        imgNext.setOnClickListener(this);
-
     }
 
     @Override
@@ -77,14 +75,13 @@ public class TestPagerFragment extends BaseFragment implements View.OnClickListe
         super.onActivityCreated(savedInstanceState);
     }
 
-    @Override
-    public void onClick(View view) {
-        switch (view.getId()) {
-            case (R.id.imgTestBack):
-                mListerner.onChange(TestFragment_.BACK);
-                break;
-            case (R.id.imgTestAdvance):
-                mListerner.onChange(TestFragment_.NEXT);
+    @Click(R.id.imgTestBack)
+    public void onClickBack() {
+            mListerner.onChange(TestFragment_.BACK);
         }
+
+    @Click(R.id.imgTestAdvance)
+    public void onClickNext() {
+        mListerner.onChange(TestFragment_.NEXT);
     }
 }
