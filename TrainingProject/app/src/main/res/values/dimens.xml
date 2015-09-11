@@ -176,5 +176,7 @@
     <dimen name="question.textview.size">15sp</dimen>
     <dimen name="dialogCancleArlert.textSize">22sp</dimen>
     <dimen name="dialog_Rl_height">100dp</dimen>
+    <dimen name="change.tv.size">20sp</dimen>
+
 
 </resources>

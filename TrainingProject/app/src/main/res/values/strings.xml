@@ -61,4 +61,9 @@
     <string name="dialog.tvCancel">Cancle</string>
     <string name="setting.title.text">Setting</string>
     <string name="rangting.text.title">Ratting</string>
+    <string name="activity.change.pass.text.hint.old.pass">Old password</string>
+    <string name="activity.change.pass.text.hint.new.pass">New password</string>
+    <string name="activity.change.pass.text.hint.confirm.new.pass">Confirm new password</string>
+    <string name="activity.change.pass.button.text">Change password</string>
+
 </resources>
