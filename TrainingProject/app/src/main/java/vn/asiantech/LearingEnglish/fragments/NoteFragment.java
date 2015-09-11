@@ -6,6 +6,7 @@ import android.support.v7.widget.RecyclerView;
 
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.EFragment;
+import org.androidannotations.annotations.FragmentByTag;
 import org.androidannotations.annotations.ViewById;
 
 import java.util.ArrayList;
@@ -23,8 +24,9 @@ public class NoteFragment extends BaseFragment {
     @ViewById(R.id.recycleViewFavorite)
     RecyclerView mRecycleFavorite;
 
-    private RecyclerView.Adapter mAdapter;
-    private RecyclerView.LayoutManager mLayoutManager;
+    @FragmentByTag("DetailFragment")
+    protected DetailFragment mDetailFragment;
+
     private ArrayList<Favorite> mArrFavorite = new ArrayList<Favorite>();
 
     @Override
@@ -33,23 +35,22 @@ public class NoteFragment extends BaseFragment {
     }
 
     @AfterViews
-    void afterviews(){
+    void afterviews() {
         creatData();
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getActivity());
-        FavoriteAdapter mAdapter = new FavoriteAdapter(mArrFavorite);
+        FavoriteAdapter mAdapter = new FavoriteAdapter(mArrFavorite, getActivity());
         mRecycleFavorite.setHasFixedSize(true);
         mRecycleFavorite.setLayoutManager(linearLayoutManager);
         mRecycleFavorite.setAdapter(mAdapter);
 
     }
 
-    public void creatData(){
+    public void creatData() {
         mArrFavorite.add(new Favorite("Hello", "hello", R.drawable.ic_sound));
         mArrFavorite.add(new Favorite("Hello", "hello", R.drawable.ic_sound));
         mArrFavorite.add(new Favorite("Hello", "hello", R.drawable.ic_sound));
         mArrFavorite.add(new Favorite("Hello", "hello", R.drawable.ic_sound));
         mArrFavorite.add(new Favorite("Hello", "hello", R.drawable.ic_sound));
     }
-
 }
 

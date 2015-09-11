@@ -33,114 +33,13 @@
             android:src="@drawable/ic_search" />
     </RelativeLayout>
 
-    <RelativeLayout
-        android:id="@+id/rlVocabulary"
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPagerDetail"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/rlDetailSearch"
-        android:background="@color/relativelayout.detail.background.vocabulary">
-
-        <RelativeLayout
-            android:id="@+id/rlWord"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/relativelayout.detail.height.word.220dp"
-            android:layout_marginBottom="@dimen/relativelayout.detail.margin_bottom.6dp"
-            android:layout_marginLeft="@dimen/relativelayout.detail.margin_left.10dp"
-            android:layout_marginRight="@dimen/relativelayout.detail.margin_right.10dp"
-            android:layout_marginTop="@dimen/relativelayout.detail.margin_top.22dp"
-            android:background="@drawable/shape_detail">
-
-            <ImageView
-                android:id="@+id/imgWord"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/image.detail.height.150dp"
-                android:layout_marginBottom="@dimen/image.detail.margin.bottom.25dp"
-                android:layout_marginLeft="@dimen/image.detail.margin.left.30dp"
-                android:layout_marginRight="@dimen/image.detail.margin.right.30dp"
-                android:layout_marginTop="@dimen/image.detail.margin.top.10dp"
-                android:src="@drawable/img_word" />
-
-            <LinearLayout
-                android:id="@+id/lnControl"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/linearLayout.detail.height.control.50dp"
-                android:layout_alignParentBottom="true"
-                android:gravity="center"
-                android:orientation="horizontal"
-                android:weightSum="3">
-
-                <ImageView
-                    android:id="@+id/imgBack"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:src="@drawable/ic_back" />
-
-                <TextView
-                    android:id="@+id/tvWord"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:textColor="@color/textview.detail.color.word"
-                    android:textSize="@dimen/textView.detail.size.title.28sp"
-                    android:textStyle="bold" />
-
-                <ImageView
-                    android:id="@+id/imgNext"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:src="@drawable/ic_next" />
-
-            </LinearLayout>
-
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_below="@+id/rlWord"
-            android:layout_marginBottom="@dimen/relativelayout.detail.mean.margin_bottom.6dp"
-            android:layout_marginLeft="@dimen/relativelayout.detail.mean.margin_left.10dp"
-            android:layout_marginRight="@dimen/relativelayout.detail.mean.margin_right.10dp"
-            android:layout_marginTop="@dimen/relativelayout.detail.mean.margin_top.6dp"
-            android:background="@drawable/shape_detail"
-            android:paddingLeft="@dimen/textView.detail.mean.padding_left.10dp"
-            android:paddingRight="@dimen/textView.detail.mean.padding_right.10dp"
-            android:paddingTop="@dimen/textView.detail.mean.padding_top">
-
-            <ImageView
-                android:id="@+id/imgSound"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:src="@drawable/ic_sound" />
-
-            <TextView
-                android:id="@+id/tvMean"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/imgSound"
-                android:text="@string/textview.detail.text.mean"
-                android:textColor="@color/textview.detail.color.mean"
-                android:textSize="@dimen/textView.detail.size.title.20sp" />
-
-            <TextView
-                android:id="@+id/tvTrain"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/tvMean"
-                android:textColor="@color/textview.detail.color.train"
-                android:textSize="@dimen/textView.detail.size.title.20sp" />
-
-            <TextView
-                android:id="@+id/tvExample"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/tvTrain"
-                android:textSize="@dimen/textView.detail.size.title.20sp" />
-
-        </RelativeLayout>
-    </RelativeLayout>
+        android:layout_marginLeft="@dimen/relativelayout.detail.margin_left.10dp"
+        android:layout_marginRight="@dimen/relativelayout.detail.margin_right.10dp"
+        android:layout_marginTop="@dimen/relativelayout.detail.margin_top.22dp"
+        android:background="@drawable/shape_detail"/>
 </RelativeLayout>

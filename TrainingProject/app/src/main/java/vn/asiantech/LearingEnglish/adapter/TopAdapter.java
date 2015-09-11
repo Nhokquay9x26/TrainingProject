@@ -26,6 +26,7 @@ import vn.asiantech.LearingEnglish.models.Top;
  */
 public class TopAdapter extends RecyclerView.Adapter<TopAdapter.TopViewHolder> {
     private ArrayList<Top> mArrTops;
+    private onClickItemInterface mListener;
 
     public static class TopViewHolder extends RecyclerView.ViewHolder {
         private ImageView mImgImage;
@@ -40,8 +41,9 @@ public class TopAdapter extends RecyclerView.Adapter<TopAdapter.TopViewHolder> {
         }
     }
 
-    public TopAdapter(ArrayList<Top> mArrTops) {
+    public TopAdapter(ArrayList<Top> mArrTops, onClickItemInterface listener) {
         this.mArrTops = mArrTops;
+        mListener = listener;
     }
 
     @Override
@@ -56,6 +58,14 @@ public class TopAdapter extends RecyclerView.Adapter<TopAdapter.TopViewHolder> {
         holder.mImgImage.setImageResource(mArrTops.get(position).getImage());
         holder.mTvCategory.setText(mArrTops.get(position).getCategory());
         holder.mTopNext.setImageResource(mArrTops.get(position).getNext());
+        holder.mTopNext.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (mListener != null) {
+                    mListener.clickTopNext();
+                }
+            }
+        });
     }
 
     @Override
@@ -68,4 +78,7 @@ public class TopAdapter extends RecyclerView.Adapter<TopAdapter.TopViewHolder> {
         super.onAttachedToRecyclerView(recyclerView);
     }
 
+    public interface onClickItemInterface {
+        void clickTopNext();
+    }
 }
