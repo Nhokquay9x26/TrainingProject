@@ -20,22 +20,21 @@ import vn.asiantech.LearingEnglish.adapter.TestAdapter;
  * Created by chanh on 09/09/2015.
  */
 
-
 @EFragment(R.layout.ratings_custom_viewpaper)
 public class TestPagerFragment extends BaseFragment {
-    int NumFragment;
+    private int mNumFragment;
     String[] mQuestion;
 
     @ViewById(R.id.imgTestBack)
-    ImageView imgBack;
+    ImageView mImgBack;
     @ViewById(R.id.imgTestAdvance)
-    ImageView imgNext;
+    ImageView mImgNext;
     @ViewById(R.id.tvTestBack)
-    TextView tvTestBack;
+    TextView mTvTestBack;
     @ViewById(R.id.tvViewpagerQuestion)
-    TextView tvQuestion;
+    TextView mIvQuestion;
     @ViewById(R.id.tvTestAdvance)
-    TextView tvTestAdvance;
+    TextView mTvTestAdvance;
 
     private static TestAdapter.OnChangePager mListerner;
 
@@ -53,21 +52,19 @@ public class TestPagerFragment extends BaseFragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        NumFragment = getArguments() != null ? getArguments().getInt("val") : 1;
-        NumFragment++;
+        mNumFragment = getArguments() != null ? getArguments().getInt("val") : 1;
+        mNumFragment++;
         mQuestion = getResources().getStringArray(R.array.question_array);
     }
-
 
     @AfterViews
     public void AfterViews() {
 
-        tvQuestion.setText(Html.fromHtml("<b>" + "<font color=\"#ed166a\">"
-                + "Câu " + NumFragment + ": " + "</font>" + "<b/>" + mQuestion[NumFragment - 1]));
+        mIvQuestion.setText(Html.fromHtml("<b>" + "<font color=\"#ed166a\">"
+                + "Câu " + mNumFragment + ": " + "</font>" + "<b/>" + mQuestion[mNumFragment - 1]));
 
-        tvTestBack.setText("" + NumFragment);
-        tvTestAdvance.setText("10");
-
+        mTvTestBack.setText("" + mNumFragment);
+        mTvTestAdvance.setText("10");
     }
 
     @Override
@@ -77,8 +74,8 @@ public class TestPagerFragment extends BaseFragment {
 
     @Click(R.id.imgTestBack)
     public void onClickBack() {
-            mListerner.onChange(TestFragment_.BACK);
-        }
+        mListerner.onChange(TestFragment_.BACK);
+    }
 
     @Click(R.id.imgTestAdvance)
     public void onClickNext() {

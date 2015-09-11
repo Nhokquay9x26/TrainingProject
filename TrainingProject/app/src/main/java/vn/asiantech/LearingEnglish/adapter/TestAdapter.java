@@ -15,7 +15,8 @@ public class TestAdapter extends FragmentPagerAdapter {
     TestPagerFragment fragment;
     private OnChangePager mOnChangePager;
 
-    public TestAdapter(FragmentManager fm, TestPagerFragment fragment, OnChangePager onChangePager) {
+    public TestAdapter(FragmentManager fm, TestPagerFragment fragment,
+                       OnChangePager onChangePager) {
         super(fm);
         this.fragment = fragment;
         mOnChangePager = onChangePager;

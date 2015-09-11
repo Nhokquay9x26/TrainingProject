@@ -21,8 +21,8 @@ import vn.asiantech.LearingEnglish.adapter.TestAdapter;
 @EFragment(R.layout.fragment_test)
 public class TestFragment extends BaseFragment implements TestAdapter.OnChangePager {
 
-    public static final String NEXT = "Next";
-    public static final String BACK = "Back";
+    public static final String NEXT = "NEXT";
+    public static final String BACK = "BACK";
     static final int ITEMS = 10;
 
     @FragmentByTag("ResultFragment")
