@@ -25,6 +25,7 @@ public class ViewpagerDetailAdapter extends PagerAdapter {
     private ImageView imgLeft;
     private ImageView imgRight;
     private CallBackNext mCallBackNext;
+
     public ViewpagerDetailAdapter(Context mContext, ArrayList<AnimalCategory> mArraylists, CallBackNext mCallBackNext) {
         this.mContext = mContext;
         this.mArraylists = mArraylists;
@@ -52,8 +53,8 @@ public class ViewpagerDetailAdapter extends PagerAdapter {
         imgAvataDetail = (ImageView) itemView.findViewById(R.id.imgAvataDetail);
         tvNameDetail = (TextView) itemView.findViewById(R.id.tvNameDetail);
 
-        imgLeft = (ImageView)itemView.findViewById(R.id.imgSelecLeftDetail);
-        imgRight = (ImageView)itemView.findViewById(R.id.imgSelecRightDetail);
+        imgLeft = (ImageView) itemView.findViewById(R.id.imgSelecLeftDetail);
+        imgRight = (ImageView) itemView.findViewById(R.id.imgSelecRightDetail);
         imgLeft.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -79,8 +80,9 @@ public class ViewpagerDetailAdapter extends PagerAdapter {
         ((ViewPager) container).removeView((RelativeLayout) object);
     }
 
-    public interface CallBackNext{
+    public interface CallBackNext {
         void OnClickNext();
+
         void OnClickBack();
     }
 }

@@ -5,9 +5,11 @@ import android.graphics.Color;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import org.androidannotations.annotations.AfterViews;
+import org.androidannotations.annotations.Click;
 import org.androidannotations.annotations.EFragment;
 import org.androidannotations.annotations.ViewById;
 
@@ -40,13 +42,15 @@ public class TestResultingFragment extends Fragment {
     @ViewById(R.id.tvTotalResult)
     TextView mTvTotalResult;
 
+    @ViewById(R.id.imgShare)
+    ImageView mImgShare;
+
     @AfterViews
     void afterView() {
         configRecycleView();
         mQuestionDatas = new ArrayList<Question>();
         mListSelections = new ArrayList<>();
         ApplicationData.getSelectionTrue(mListSelections);
-        Log.d("Phai", "chay day cho hong");
         if (getActivity() instanceof TestingActivity_) {
             mQuestionDatas = ((TestingActivity_) getActivity()).getMQuestionDatas();
         }
@@ -59,6 +63,14 @@ public class TestResultingFragment extends Fragment {
         // specify an adapter (see also next example)
         mAdapter = new TestResultingAdapter(mQuestionDatas, mListSelections, mIsResultUser);
         mRecycleViewResult.setAdapter(mAdapter);
+    }
+
+    @Click(R.id.imgShare)
+    void imgShareClicked() {
+
+        if (getActivity() instanceof TestingActivity_) {
+            ((TestingActivity_) getActivity()).shareFaceBook();
+        }
     }
 
     /**
@@ -98,6 +110,7 @@ public class TestResultingFragment extends Fragment {
 
     }
 
+
     /**
      * Config recyclerView
      */
@@ -121,4 +134,7 @@ public class TestResultingFragment extends Fragment {
         }
         return count;
     }
+
+
 }
+

@@ -6,8 +6,7 @@ import android.widget.TextView;
 import lombok.Data;
 
 /**
- * @
- * Created by xuanphu on 04/09/2015.
+ * @ Created by xuanphu on 04/09/2015.
  */
 @Data
 public class DetailCategory {

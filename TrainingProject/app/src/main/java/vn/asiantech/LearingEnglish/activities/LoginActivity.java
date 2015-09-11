@@ -45,8 +45,9 @@ public class LoginActivity extends BaseActionBarActivity{
             toast.show();
         }
     }
+
     @Click
-    void tvSignup(){
+    void tvSignup() {
         Intent intent = new Intent(this, SignupActivity_.class);
         startActivity(intent);
     }
