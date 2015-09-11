@@ -61,7 +61,7 @@ public class SignupActivity extends BaseActionBarActivity {
             register(mEdtUsername.getText().toString().trim(),
                     mEdtConfirmPass.getText().toString().trim(),
                     mEdtEmail.getText().toString().trim());
-            MainActivity_.intent(this).start();
+
         }
     }
 
@@ -118,6 +118,7 @@ public class SignupActivity extends BaseActionBarActivity {
                 if (infoRegister.getError().toString().equals("false")) {
                     if (mProgressDialog.isShowing()) {
                         Toast.makeText(SignupActivity.this, infoRegister.getMessage(), Toast.LENGTH_SHORT).show();
+                        MainActivity_.intent(getBaseContext()).start();
                         mProgressDialog.dismiss();
                     }
                 }

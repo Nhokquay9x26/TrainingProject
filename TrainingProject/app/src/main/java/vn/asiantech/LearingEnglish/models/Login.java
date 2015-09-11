@@ -1,3 +1,4 @@
+
 package vn.asiantech.LearingEnglish.models;
 
 import lombok.Data;
@@ -8,8 +9,8 @@ import lombok.Data;
  */
 @Data
 public class Login {
-
     private String user_id;
     private String email;
+
     private String token;
 }

@@ -1,6 +1,7 @@
 package vn.asiantech.LearingEnglish.network;
 
 import retrofit.RetrofitError;
+import vn.asiantech.LearingEnglish.models.InfoLogin;
 import vn.asiantech.LearingEnglish.models.InfoRegister;
 import vn.asiantech.LearingEnglish.network.core.ApiClient;
 import vn.asiantech.LearingEnglish.network.core.Callback;
@@ -25,4 +26,20 @@ public class AuthorApi {
             }
         });
     }
+
+    public static void loginAcount(String email, String password, final Callback<InfoLogin> callback) {
+        ApiClient.call().login(email, password, new Callback<InfoLogin>() {
+            @Override
+            public void success(InfoLogin infoLogin) {
+                callback.success(infoLogin);
+
+            }
+
+            @Override
+            public void failure(RetrofitError error, Error myError) {
+                callback.failure(error, myError);
+            }
+        });
+    }
+
 }
