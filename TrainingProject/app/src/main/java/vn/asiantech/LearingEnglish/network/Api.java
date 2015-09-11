@@ -6,6 +6,7 @@ import retrofit.http.FormUrlEncoded;
 import retrofit.http.POST;
 import retrofit.http.Query;
 import vn.asiantech.LearingEnglish.models.BaseModel;
+import vn.asiantech.LearingEnglish.models.ForgotPass;
 import vn.asiantech.LearingEnglish.models.InfoRegister;
 import vn.asiantech.LearingEnglish.models.Login;
 import vn.asiantech.LearingEnglish.network.core.Callback;
@@ -33,5 +34,9 @@ public interface Api {
                   @Field(Parameter.PASSWORD) String password,
                   @Field(Parameter.NAME) String name,
                   Callback<InfoRegister> callback);
+
+    @FormUrlEncoded
+    @POST("/forget_pass")
+    void forgotPassWord(@Field(Parameter.EMAIL) String mEmail, Callback<ForgotPass> mCallback);
 
 }
