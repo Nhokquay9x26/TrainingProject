@@ -2,18 +2,21 @@ package vn.asiantech.LearingEnglish.fragments;
 
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.EFragment;
 import org.androidannotations.annotations.ViewById;
+
 import java.util.ArrayList;
-import vn.asiantech.LearingEnglish.R;
 import java.util.List;
+
+import vn.asiantech.LearingEnglish.R;
 import vn.asiantech.LearingEnglish.adapter.RatingAdapter;
 import vn.asiantech.LearingEnglish.models.RatingUser;
 /**
  * @author mrs
  * Created by mrson on 31/08/2015.
- * Created by tantv on 03/09/2015.
+
  */
 @EFragment (R.layout.fragment_rating)
 public class RatingsFragment extends BaseFragment {
