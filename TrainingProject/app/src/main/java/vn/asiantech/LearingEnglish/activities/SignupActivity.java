@@ -61,6 +61,7 @@ public class SignupActivity extends BaseActionBarActivity {
             register(mEdtUsername.getText().toString().trim(),
                     mEdtConfirmPass.getText().toString().trim(),
                     mEdtEmail.getText().toString().trim());
+            MainActivity_.intent(this).start();
         }
     }
 
@@ -125,7 +126,7 @@ public class SignupActivity extends BaseActionBarActivity {
             @Override
             public void failure(RetrofitError error, vn.asiantech.LearingEnglish.network.Error myError) {
                 mProgressDialog.dismiss();
-                Log.d("vinhhlb","error is "+error);
+                Log.d("vinhhlb", "error is " + error);
             }
         });
     }

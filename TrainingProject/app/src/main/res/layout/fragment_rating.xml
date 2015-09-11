@@ -18,6 +18,7 @@
             android:layout_height="wrap_content"
             android:textColor="@color/rating.rl.title.color"
             android:textSize="@dimen/rating.rl.title.size"
+            android:text="@string/rangting.text.title"
             android:textStyle="bold"
             tools:ignore="HardcodedText" />
 
