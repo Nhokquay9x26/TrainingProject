@@ -26,4 +26,4 @@
         android:text="@string/messenger_send_button_text"
         style="@style/MessengerButtonText.Blue.Small" />
 </FrameLayout>
-<!-- From: file:/home/tantv/AppCode/TrainingProject/TrainingProject/facebook/res/layout/messenger_button_send_blue_small.xml -->
+<!-- From: file:/home/mrson/AndroidStudioProjects/TrainningLearEnglish/Group22/TrainingProject/TrainingProject/facebook/res/layout/messenger_button_send_blue_small.xml -->
