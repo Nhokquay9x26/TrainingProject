@@ -28,9 +28,6 @@ public class TopFragment extends BaseFragment implements TopAdapter.onClickItemI
     @ViewById(R.id.recycleViewTop)
     RecyclerView mRecycleTop;
 
-    @FragmentByTag("mDetailFragment")
-    protected DetailFragment mDetailFragment;
-
     private ArrayList<Top> mArrTop = new ArrayList<Top>();
 
     @Override
@@ -59,9 +56,6 @@ public class TopFragment extends BaseFragment implements TopAdapter.onClickItemI
 
     @Override
     public void clickTopNext() {
-        if(mDetailFragment == null){
-            mDetailFragment = DetailFragment_.builder().build();
-        }
-        addChildFragment(mDetailFragment);
+        addChildFragment(DetailFragment_.builder().build());
     }
 }
