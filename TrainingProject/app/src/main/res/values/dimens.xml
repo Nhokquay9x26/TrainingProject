@@ -246,4 +246,17 @@
         <item>Lets have dinner now?</item>
     </string-array>
 
+    <string-array name="word_array">
+        <item>Action</item>
+        <item>Across</item>
+        <item>Active</item>
+        <item>Bag</item>
+        <item>Town</item>
+        <item>Tree</item>
+        <item>True</item>
+        <item>Yesterday</item>
+        <item>Zero</item>
+        <item>Young</item>
+    </string-array>
+
 </resources>

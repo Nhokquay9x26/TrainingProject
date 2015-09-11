@@ -36,8 +36,6 @@ public class LoginFragment extends BaseFragment {
     private ProgressDialog mProgressLogin;
     private Boolean mIsExit = false;
 
-    public static final String API = "http://172.16.100.115:8080/internship/api/index.php";
-
     @ViewById(R.id.edtUsername)
     EditText mEdtUsername;
     @ViewById(R.id.edtPassword)
@@ -82,6 +80,7 @@ public class LoginFragment extends BaseFragment {
         mProgressLogin.setCanceledOnTouchOutside(false);
         mProgressLogin.show();
 
+        final String API = "http://172.16.100.115:8080/internship/api/index.php";
         RestAdapter adapter = new RestAdapter.Builder().setEndpoint(API).build();
         Api testRetrofit = adapter.create(Api.class);
         testRetrofit.login(email, password, new vn.asiantech.LearingEnglish.network.core.Callback<Login>() {
