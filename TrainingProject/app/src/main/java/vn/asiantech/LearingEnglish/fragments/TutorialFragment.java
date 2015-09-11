@@ -3,7 +3,6 @@ package vn.asiantech.LearingEnglish.fragments;
 import android.content.Context;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -21,8 +20,6 @@ import org.androidannotations.annotations.FragmentByTag;
 import org.androidannotations.annotations.ViewById;
 
 import vn.asiantech.LearingEnglish.R;
-import vn.asiantech.LearingEnglish.activities.InitializeActivity_;
-import vn.asiantech.LearingEnglish.activities.MainActivity_;
 
 /**
  * Copyright © 2015 AsianTech inc.
@@ -80,7 +77,6 @@ public class TutorialFragment extends BaseFragment {
 
             @Override
             public void onPageSelected(int position) {
-                Log.d("xxx", "" + position);
                 if (position == 2) {
                     mBtnMainActivity.setVisibility(View.VISIBLE);
                 } else {
@@ -97,13 +93,10 @@ public class TutorialFragment extends BaseFragment {
 
     @Click(R.id.btnStartActivity)
     protected void onClick() {
-//        MainActivity_.intent(getActivity()).start();
-//        getActivity().finish();
         if (mLoginFragment == null) {
             mLoginFragment = LoginFragment_.builder().build();
         }
-        ((InitializeActivity_) getActivity()).replaceFragment(mLoginFragment);
-//        addChildFragment(LoginFragment_.builder().build());
+        addChildFragment(mLoginFragment);
     }
 
     /**
@@ -144,5 +137,13 @@ public class TutorialFragment extends BaseFragment {
         public void destroyItem(ViewGroup container, int position, Object object) {
             container.removeView((RelativeLayout) object);
         }
+    }
+
+    public boolean sendBackPressed() {
+        if (getVisibleChildFragment() instanceof BaseFragment) {
+            BaseFragment currentFragment = (BaseFragment) getVisibleChildFragment();
+            return currentFragment.popChildFragment();
+        }
+        return false;
     }
 }

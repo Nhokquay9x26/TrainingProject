@@ -173,4 +173,12 @@ public class Fragment extends android.support.v4.app.Fragment {
         }
         return this;
     }
+
+    public Fragment getVisibleChildFragment() {
+        if (fragList.size() > 0) {
+            return (Fragment) fragList.get(fragList.size() - 1).get();
+        }
+        return this;
+    }
+
 }

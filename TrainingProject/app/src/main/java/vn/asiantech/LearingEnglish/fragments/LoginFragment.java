@@ -10,7 +10,6 @@ import org.androidannotations.annotations.FragmentByTag;
 import org.androidannotations.annotations.ViewById;
 
 import vn.asiantech.LearingEnglish.R;
-import vn.asiantech.LearingEnglish.activities.InitializeActivity_;
 import vn.asiantech.LearingEnglish.activities.MainActivity_;
 
 /**
@@ -28,6 +27,13 @@ public class LoginFragment extends BaseFragment {
     EditText mEdtPassword;
     @ViewById(R.id.tvError)
     TextView mTvError;
+    @ViewById(R.id.tvForgotPassword)
+    TextView mTvForgotPassword;
+
+    @AfterViews
+    public void init() {
+
+    }
 
     @Click(R.id.btnSignIn)
     public void onSignIn() {
@@ -48,6 +54,11 @@ public class LoginFragment extends BaseFragment {
         if (mSignUpFragment == null) {
             mSignUpFragment = SignUpFragment_.builder().build();
         }
-        ((InitializeActivity_) getActivity()).replaceFragment(mSignUpFragment);
+       addChildFragment(mSignUpFragment);
+    }
+
+    @Click(R.id.tvForgotPassword)
+    void onClickForgetPass() {
+        addChildFragment(ForgotPasswordFragment_.builder().build());
     }
 }

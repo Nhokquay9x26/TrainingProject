@@ -10,7 +10,6 @@ import org.androidannotations.annotations.FragmentByTag;
 import org.androidannotations.annotations.ViewById;
 
 import vn.asiantech.LearingEnglish.R;
-import vn.asiantech.LearingEnglish.activities.InitializeActivity_;
 
 /**
  * @author DaoQuocViet
@@ -57,6 +56,6 @@ public class SignUpFragment extends BaseFragment {
         if (mLoginFragment == null) {
             mLoginFragment = LoginFragment_.builder().build();
         }
-        ((InitializeActivity_) getActivity()).replaceFragment(mLoginFragment);
+        addChildFragment(mLoginFragment);
     }
 }
