@@ -1,6 +1,5 @@
 package vn.asiantech.LearingEnglish.adapter;
 
-import android.app.Activity;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,16 +7,9 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import org.androidannotations.annotations.FragmentByTag;
-
 import java.util.ArrayList;
 
 import vn.asiantech.LearingEnglish.R;
-import vn.asiantech.LearingEnglish.activities.InitializeActivity_;
-import vn.asiantech.LearingEnglish.fragments.DetailFragment;
-import vn.asiantech.LearingEnglish.fragments.DetailFragment_;
-import vn.asiantech.LearingEnglish.fragments.SignUpFragment;
-import vn.asiantech.LearingEnglish.fragments.SignUpFragment_;
 import vn.asiantech.LearingEnglish.models.Top;
 
 /**
@@ -27,10 +19,12 @@ import vn.asiantech.LearingEnglish.models.Top;
 public class TopAdapter extends RecyclerView.Adapter<TopAdapter.TopViewHolder> {
     private ArrayList<Top> mArrTops;
 
+    private onClickItemInterface mListener;
     public static class TopViewHolder extends RecyclerView.ViewHolder {
         private ImageView mImgImage;
         private TextView mTvCategory;
         private ImageView mTopNext;
+
 
         public TopViewHolder(View itemView) {
             super(itemView);
@@ -40,8 +34,9 @@ public class TopAdapter extends RecyclerView.Adapter<TopAdapter.TopViewHolder> {
         }
     }
 
-    public TopAdapter(ArrayList<Top> mArrTops) {
+    public TopAdapter(ArrayList<Top> mArrTops, onClickItemInterface listener) {
         this.mArrTops = mArrTops;
+        mListener = listener;
     }
 
     @Override
@@ -56,6 +51,14 @@ public class TopAdapter extends RecyclerView.Adapter<TopAdapter.TopViewHolder> {
         holder.mImgImage.setImageResource(mArrTops.get(position).getImage());
         holder.mTvCategory.setText(mArrTops.get(position).getCategory());
         holder.mTopNext.setImageResource(mArrTops.get(position).getNext());
+        holder.mTopNext.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (mListener != null) {
+                    mListener.clickTopNext();
+                }
+            }
+        });
     }
 
     @Override
@@ -68,4 +71,7 @@ public class TopAdapter extends RecyclerView.Adapter<TopAdapter.TopViewHolder> {
         super.onAttachedToRecyclerView(recyclerView);
     }
 
+    public interface onClickItemInterface {
+        void clickTopNext();
+    }
 }

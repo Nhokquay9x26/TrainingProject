@@ -19,6 +19,8 @@ import vn.asiantech.LearingEnglish.models.Favorite;
 public class FavoriteAdapter extends RecyclerView.Adapter<FavoriteAdapter.FavoriteViewHolder> {
     private ArrayList<Favorite> mArrFavorites;
 
+    private onClickItemInterface mListener;
+
     public static class FavoriteViewHolder extends RecyclerView.ViewHolder {
         private TextView mTvEnglish;
         private TextView mTvPhonetic;
@@ -32,8 +34,9 @@ public class FavoriteAdapter extends RecyclerView.Adapter<FavoriteAdapter.Favori
         }
     }
 
-    public FavoriteAdapter(ArrayList<Favorite> mArrFavorites) {
+    public FavoriteAdapter(ArrayList<Favorite> mArrFavorites, onClickItemInterface listener) {
         this.mArrFavorites = mArrFavorites;
+        mListener = listener;
     }
 
     @Override
@@ -48,6 +51,14 @@ public class FavoriteAdapter extends RecyclerView.Adapter<FavoriteAdapter.Favori
         holder.mTvEnglish.setText(mArrFavorites.get(position).getEnglish());
         holder.mTvPhonetic.setText(mArrFavorites.get(position).getPhonetic());
         holder.mImgSound.setImageResource(mArrFavorites.get(position).getSound());
+        holder.mImgSound.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (mListener != null) {
+                    mListener.clickTopNext();
+                }
+            }
+        });
 
     }
 
@@ -59,5 +70,9 @@ public class FavoriteAdapter extends RecyclerView.Adapter<FavoriteAdapter.Favori
     @Override
     public void onAttachedToRecyclerView(RecyclerView recyclerView) {
         super.onAttachedToRecyclerView(recyclerView);
+    }
+
+    public interface onClickItemInterface {
+        void clickTopNext();
     }
 }
