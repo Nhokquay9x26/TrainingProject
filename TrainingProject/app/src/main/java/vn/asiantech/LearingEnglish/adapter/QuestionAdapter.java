@@ -73,7 +73,7 @@ public class QuestionAdapter extends RecyclerView.Adapter<QuestionAdapter.ViewHo
             Log.d("TAG", "onClick " + getPosition());
             final Intent mIntent = new Intent(mActivity, TestingActivity_.class);
             new AlertDialog.Builder(mActivity)
-                    .setTitle("NOTIFICATION")
+                    .setTitle(" ")
                     .setMessage("Are you ready?")
                     .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
                                 public void onClick(DialogInterface dialog, int which) {
@@ -88,7 +88,7 @@ public class QuestionAdapter extends RecyclerView.Adapter<QuestionAdapter.ViewHo
                             }
 
                     )
-                    .setIcon(android.R.drawable.ic_dialog_info)
+                    .setIcon(R.drawable.ico_start)
                     .show();
         }
     }

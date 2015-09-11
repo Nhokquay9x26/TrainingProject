@@ -76,7 +76,7 @@ public class TestingActivity extends FragmentActivity {
     public static AccessToken mAccessToken;
     private int mPositionCurrent;
     private ArrayList<Fragment> mFragmentTestings;
-    private boolean isCheckTimerStop = true;
+    private boolean mIsCheckTimerStop = true;
     private long mSaveRemainingTime;
     private TestingAdapter mAdapterTesting;
     private Bitmap bmTestResulting;
@@ -194,7 +194,7 @@ public class TestingActivity extends FragmentActivity {
         Toast.makeText(this, text, Toast.LENGTH_SHORT).show();
     }
 
-    void sharePhotoToFacebook() {
+    private void sharePhotoToFacebook() {
         try {
             Bitmap image = screenShot(mFrViewpager);
             SharePhoto photo = new SharePhoto.Builder().setBitmap(image).setCaption("Test App").build();
@@ -216,10 +216,10 @@ public class TestingActivity extends FragmentActivity {
 
     @Click(R.id.btnSubmit)
     void mBtnSubmitClicked() {
-        if (isCheckTimerStop) {
+        if (mIsCheckTimerStop) {
             mSaveRemainingTime = mRemainingTime;
         }
-        isCheckTimerStop = false;
+        mIsCheckTimerStop = false;
         mRlButtonBottom.setVisibility(View.INVISIBLE);
         mTvTimeLeft.setVisibility(View.INVISIBLE);
         mTvTimeLeftCopy.setVisibility(View.INVISIBLE);

@@ -54,4 +54,5 @@
     <string name="header.animal">Animal</string>
     <string name="header.home">Home</string>
     <string name="header.Detail">Detail</string>
+    <string name="header.home.question">Questions</string>
 </resources>

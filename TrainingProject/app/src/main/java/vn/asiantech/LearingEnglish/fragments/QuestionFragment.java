@@ -41,27 +41,7 @@ public class QuestionFragment extends Fragment implements View.OnClickListener {
         mRecycleQuestion.setLayoutManager(mLayoutManager);
         mAdapter = new QuestionAdapter(mNumberTestings, getActivity().getApplicationContext(), getActivity());
         mRecycleQuestion.setAdapter(mAdapter);
-/*
-        final Intent mIntent = new Intent(getActivity(), TestingActivity_.class);
-        new AlertDialog.Builder(getActivity())
-                .setTitle("NOTIFICATION")
-                .setMessage("Are you sure you want to continue test?")
-                .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
-                            public void onClick(DialogInterface dialog, int which) {
-                                startActivity(mIntent);
 
-                            }
-                        }
-                )
-                .setNegativeButton(android.R.string.no, new DialogInterface.OnClickListener() {
-                            public void onClick(DialogInterface dialog, int which) {
-                                // do nothing
-                            }
-                        }
-
-                )
-                .setIcon(android.R.drawable.ic_dialog_info)
-                .show();*/
     }
 
     /**
