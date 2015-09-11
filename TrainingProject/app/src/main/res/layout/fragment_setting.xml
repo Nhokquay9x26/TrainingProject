@@ -19,6 +19,7 @@
             android:textColor="@color/rating.rl.title.color"
             android:textSize="@dimen/rating.rl.title.size"
             android:textStyle="bold"
+            android:text="@string/setting.title.text"
             tools:ignore="HardcodedText" />
 
     </LinearLayout>

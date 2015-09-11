@@ -56,4 +56,6 @@
     <string name="header.home">Home</string>
     <string name="header.Detail">Detail</string>
     <string name="dialog.tvCancel">Cancle</string>
+    <string name="setting.title.text">Setting</string>
+    <string name="rangting.text.title">Ratting</string>
 </resources>
