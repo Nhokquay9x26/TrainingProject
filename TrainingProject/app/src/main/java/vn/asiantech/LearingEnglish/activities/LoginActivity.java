@@ -38,7 +38,7 @@ public class LoginActivity extends BaseActionBarActivity {
 
         if (!edtUsername.getText().toString().equals("")  && !edtPassword.getText().toString().equals("")){
           //  login(edtUsername.getText().toString().trim(), edtPassword.getText().toString().trim());
-            MainActivity_.intent(this).start();
+          MainActivity_.intent(this).start();
         }
         else if (edtUsername.getText().toString().equals("")  || edtPassword.getText().toString().equals("")){
             Toast toast = Toast.makeText(this, "Please input full data ...",Toast.LENGTH_SHORT);
