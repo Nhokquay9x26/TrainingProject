@@ -48,6 +48,6 @@
             android:authorities="com.facebook.app.FacebookContentProvider516249385207670"
             android:exported="true" />
         <service android:name=".AlarmServices.MyServices" />
-        <receiver android:name=".AlarmServices.MyServices$MyReceiver" />
+
     </application>
 </manifest>

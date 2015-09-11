@@ -117,7 +117,7 @@ public class SettingFragment extends BaseFragment {
                     if (!("").equals(timeAlarm.getText().toString().trim())) {
                         Bundle mBunddle = new Bundle();
                         Intent intent = new Intent(getActivity(), MyServices.class);
-                        mBunddle.putInt("KEY_MAX_VALUE", Integer.parseInt(timeAlarm.getText().toString().trim()));
+                        mBunddle.putInt("KEY_MAX_VALUE", (Integer.parseInt(timeAlarm.getText().toString().trim()))*60);
                         intent.putExtras(mBunddle);
                         getActivity().startService(intent);
                     }

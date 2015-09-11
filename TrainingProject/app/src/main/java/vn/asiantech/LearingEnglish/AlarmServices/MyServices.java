@@ -2,30 +2,24 @@ package vn.asiantech.LearingEnglish.AlarmServices;
 
 import android.app.Dialog;
 import android.app.Service;
-import android.content.BroadcastReceiver;
-import android.content.Context;
 import android.content.Intent;
-import android.content.IntentFilter;
 import android.media.MediaPlayer;
 import android.media.RingtoneManager;
 import android.net.Uri;
 import android.os.CountDownTimer;
 import android.os.Handler;
 import android.os.IBinder;
-import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.TextView;
 
 import vn.asiantech.LearingEnglish.R;
-import vn.asiantech.LearingEnglish.fragments.SettingFragment;
 
 /**
  * Created by mrson on 09/09/2015.
  */
 public class MyServices extends Service {
-    private MyReceiver mMyReceiver;
     private MediaPlayer mPlayer;
     private CountDownTimer mCountDownTimer;
     private int mSecond = 0;
@@ -41,12 +35,6 @@ public class MyServices extends Service {
     @Override
     public void onCreate() {
         super.onCreate();
-        IntentFilter intentFilter = new IntentFilter(SettingFragment.INTENT_FILTER);
-
-        if (mMyReceiver == null) {
-            mMyReceiver = new MyReceiver();
-            registerReceiver(mMyReceiver, intentFilter);
-        }
 
         mDialog = new Dialog(getApplicationContext());
         mDialog.requestWindowFeature(Window.FEATURE_LEFT_ICON);
@@ -70,7 +58,6 @@ public class MyServices extends Service {
     @Override
     public void onDestroy() {
         super.onDestroy();
-        Log.d("vinhhlb", "stop services");
         stopService();
     }
 
@@ -85,8 +72,6 @@ public class MyServices extends Service {
                 mCountDownTimer.cancel();
             mSecond = 0;
             mHandler.removeCallbacks(mRunable);
-            if (mMyReceiver != null)
-                unregisterReceiver(mMyReceiver);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -99,7 +84,6 @@ public class MyServices extends Service {
         mCountDownTimer = new CountDownTimer(Long.MAX_VALUE, 1000) {
             @Override
             public void onTick(long millisUntilFinished) {
-                Log.d("vinhhlb", "" + mSecond);
                 if (mSecond == maxTime) {
                     postDelaymer();
                     if (!mDialog.isShowing()) {
@@ -135,21 +119,6 @@ public class MyServices extends Service {
             mPlayer.start();
     }
 
-    public class MyReceiver extends BroadcastReceiver {
-        @Override
-        public void onReceive(Context context, Intent intent) {
-            if (intent != null) {
-                if (intent.getExtras().getInt("KEY_MAX_VALUE") == 0) {
-                    // turn off
-                    Log.d("vinhhlb", "turn off");
-                } else {
-                    //turn on
-                    Log.d("vinhhlb", "turn on");
-                    setUpTimer(intent.getExtras().getInt("KEY_MAX_VALUE"));
-                }
-            }
-        }
-    }
 
     private void showDialogAlarmp() {
         if (!mDialog.isShowing())
