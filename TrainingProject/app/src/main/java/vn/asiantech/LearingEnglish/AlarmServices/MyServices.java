@@ -26,12 +26,11 @@ import vn.asiantech.LearingEnglish.fragments.SettingFragment;
  */
 public class MyServices extends Service {
     private MyReceiver mMyReceiver;
-    private MediaPlayer player;
+    private MediaPlayer mPlayer;
     private CountDownTimer mCountDownTimer;
-    private int second = 0;
-    private Handler mHandler = new Handler();
+    private int mSecond = 0;
+    private final Handler mHandler = new Handler();
     private Runnable mRunable;
-    private TextView mTvCancleDialog;
     private Dialog mDialog;
 
     @Override
@@ -75,27 +74,22 @@ public class MyServices extends Service {
         stopService();
     }
 
-    public void stopService() {
+    private void stopService() {
         try {
-            if (player != null && player.isPlaying()) {
-                player.pause();
-                player.stop();
-                player.release();
+            if (mPlayer != null && mPlayer.isPlaying()) {
+                mPlayer.pause();
+                mPlayer.stop();
+                mPlayer.release();
             }
             if (mCountDownTimer != null)
                 mCountDownTimer.cancel();
-            second = 0;
+            mSecond = 0;
             mHandler.removeCallbacks(mRunable);
             if (mMyReceiver != null)
                 unregisterReceiver(mMyReceiver);
         } catch (Exception e) {
             e.printStackTrace();
         }
-    }
-
-    @Override
-    public boolean onUnbind(Intent intent) {
-        return super.onUnbind(intent);
     }
 
     private void setUpTimer(final int maxTime) {
@@ -105,15 +99,15 @@ public class MyServices extends Service {
         mCountDownTimer = new CountDownTimer(Long.MAX_VALUE, 1000) {
             @Override
             public void onTick(long millisUntilFinished) {
-                Log.d("vinhhlb", "" + second);
-                if (second == maxTime) {
+                Log.d("vinhhlb", "" + mSecond);
+                if (mSecond == maxTime) {
                     postDelaymer();
                     if (!mDialog.isShowing()) {
                         showDialogAlarmp();
                     }
                     mCountDownTimer.cancel();
                 } else
-                    second++;
+                    mSecond++;
             }
 
             @Override
@@ -124,7 +118,7 @@ public class MyServices extends Service {
     }
 
 
-    public void postDelaymer() {
+    private void postDelaymer() {
         mRunable = new Runnable() {
             public void run() {
                 startAlarm();
@@ -134,11 +128,11 @@ public class MyServices extends Service {
     }
 
 
-    public void startAlarm() {
+    private void startAlarm() {
         Uri notification = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
-        player = MediaPlayer.create(getApplicationContext(), notification);
-        if (player != null && !player.isPlaying())
-            player.start();
+        mPlayer = MediaPlayer.create(getApplicationContext(), notification);
+        if (mPlayer != null && !mPlayer.isPlaying())
+            mPlayer.start();
     }
 
     public class MyReceiver extends BroadcastReceiver {
@@ -157,10 +151,10 @@ public class MyServices extends Service {
         }
     }
 
-    public void showDialogAlarmp() {
+    private void showDialogAlarmp() {
         if (!mDialog.isShowing())
             mDialog.show();
-        mTvCancleDialog = (TextView) mDialog.findViewById(R.id.tvCancleDialog);
+        TextView mTvCancleDialog = (TextView) mDialog.findViewById(R.id.tvCancleDialog);
         mTvCancleDialog.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
