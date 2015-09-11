@@ -48,4 +48,6 @@
     <color name="rating.rl.title.rank.color">#000000</color>
     <color name="rl.background">#EEEEEE</color>
     <color name="custom.dialog.cancel">#000000</color>
+    <color name="change.ln.backgroud">#00b9e6</color>
+
 </resources>
