@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/custom.dialog.rl.margin"
+    android:background="@drawable/custom_dialog_alarm_background">
+
+    <RelativeLayout
+        android:id="@+id/rlTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imgAlertDialog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_alert" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/imgAlertDialog"
+            android:text="@string/custom.dialog.alert.text"
+            android:textColor="@color/custom.dialog.alert.text.color"
+            android:textSize="@dimen/custom.dialog.alert.text.size"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tvLine1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/setting.line.height"
+        android:layout_below="@+id/rlTitle"
+        android:background="@color/setting.line.color" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvLine1"
+        android:padding="@dimen/custom.dialog.rl.main.padding">
+
+        <TextView
+            android:id="@+id/tvTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/custom.dialog.text.time"
+            android:textColor="@color/custom.dialog.text.time.color" />
+
+        <EditText
+            android:id="@+id/edtTime"
+            android:layout_width="@dimen/custom.dialog.edit.text.time.width"
+            android:layout_height="@dimen/custom.dialog.edit.text.time.height"
+            android:layout_margin="@dimen/custom.dialog.edit.time.margin"
+            android:layout_toRightOf="@id/tvTime"
+
+            />
+
+        <TextView
+            android:id="@+id/tvTurnOn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/edtTime"
+            android:text="@string/custom.dialog.text.title" />
+
+        <Switch  android:id="@+id/switchTurn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/tvTurnOn"
+            android:layout_toEndOf="@+id/tvTurnOn"
+            android:layout_toRightOf="@+id/tvTurnOn" />
+    </RelativeLayout>
+
+</RelativeLayout>

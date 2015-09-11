@@ -5,7 +5,9 @@
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
     <uses-permission android:name="android.permission.INTERNET" />
+
 
     <application
         android:name=".App"
@@ -20,7 +22,7 @@
             tools:ignore="UnusedAttribute" />
 
 
-        <activity android:name=".activities.SignupActivity_"></activity>
+        <activity android:name=".activities.SignupActivity_"/>
         <activity android:name=".activities.SplashScreenActivity_">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -45,6 +47,7 @@
             android:name="com.facebook.FacebookContentProvider"
             android:authorities="com.facebook.app.FacebookContentProvider516249385207670"
             android:exported="true" />
+        <service android:name=".AlarmServices.MyServices" />
+        <receiver android:name=".AlarmServices.MyServices$MyReceiver" />
     </application>
-
 </manifest>
