@@ -115,7 +115,7 @@
             android:layout_toRightOf="@id/imgAlert"
             android:gravity="center_vertical"
             android:paddingLeft="@dimen/setting.rllayout.nameprofile.paddingleft"
-            android:text="Alert"
+            android:text="Alarm"
             tools:ignore="HardcodedText,RtlHardcoded,RtlSymmetry" />
 
         <ImageView
