@@ -224,7 +224,7 @@ public class TestingActivity extends FragmentActivity {
             mPositionCurrent = mViewPager.getCurrentItem();
             Fragment f;
             for (int i = 0; i < 2; i++) {
-                f = mAdapterTesting.getItem(0);
+                f = mAdapterTesting.getItem(i);
                 //set for fragment 0 and 1
                 if (f instanceof TestingFragment_) {
                     ((TestingFragment_) f).disableRadioButtonGroup();

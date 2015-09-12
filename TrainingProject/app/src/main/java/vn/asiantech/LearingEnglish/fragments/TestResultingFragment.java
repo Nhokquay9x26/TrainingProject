@@ -54,7 +54,7 @@ public class TestResultingFragment extends Fragment {
             mQuestionDatas = ((TestingActivity_) getActivity()).getMQuestionDatas();
             mListSelections = ((TestingActivity_) getActivity()).getMListSelections();
         }
-        FunctionModel.resultUser(mQuestionDatas,mListSelections);
+        mIsResultUser = FunctionModel.resultUser(mQuestionDatas, mListSelections);
         FunctionModel.changeTextViewToTwoColor(mTvTotalResult, "Total: ", totalSelectionTrueUser() + "/" + mIsResultUser.size(), Color.RED, Color.BLACK);
         mRecycleViewResult.setHasFixedSize(true);
         // use a linear layout manager

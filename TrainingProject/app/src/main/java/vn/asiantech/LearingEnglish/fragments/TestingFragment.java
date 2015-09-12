@@ -77,33 +77,25 @@ public class TestingFragment extends Fragment {
 
         if (getActivity() instanceof TestingActivity_) {
             isCheckDisable = ((TestingActivity_) getActivity()).isMIsCheckDisable();
-
         }
         if (isCheckDisable) {
             disableRadioButtonGroup();
             if (getActivity() instanceof TestingActivity_) {
                 mListSelection = ((TestingActivity_) getActivity()).getMListSelections();
                 mFragmentCurrentDisplay = ((TestingActivity_) getActivity()).getMFragmentCurrentDisplay();
-                Log.d("setText LR:  ", "NEW FRAGMENT"+mFragmentCurrentDisplay);
                 mLeftRight = ((TestingActivity_) getActivity()).getMLeftRight();
                 if (mLeftRight == -1) {
                     if (mFragmentCurrentDisplay!=0){
                         setTextColorFragment(mFragmentCurrentDisplay - 1);
-                        Log.d("setText Left:  ", "" + mListSelection.get(mFragmentCurrentDisplay - 1));
-                        Log.d("======================","========================");
                     }
                 } else if (mLeftRight == 1) {
                     if (mFragmentCurrentDisplay!=mListSelection.size()-1){
-                        Log.d("setText Right:  ", "" + mListSelection.get(mFragmentCurrentDisplay+1));
                         setTextColorFragment(mFragmentCurrentDisplay + 1);
-                        Log.d("======================", "========================");
                     }
 
                 }
             }
         }
-
-        Log.d("======================","========================");
         int numberQuestion = getArguments().getInt(EXTRA_MESSAGE_NUMBER_QUESTION);
         String question = getArguments().getString(EXTRA_MESSAGE_QUESTION);
         String selectionA = getArguments().getString(EXTRA_MESSAGE_SELECTIONA);
@@ -116,7 +108,6 @@ public class TestingFragment extends Fragment {
         mRbC.setText(selectionC);
         mRbD.setText(selectionD);
         onCheckRadioGroup();
-
     }
 
     /**
