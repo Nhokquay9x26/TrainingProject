@@ -65,7 +65,7 @@ import vn.asiantech.LearingEnglish.models.Question;
 public class TestingActivity extends FragmentActivity {
     private int mPositionCurrent;
     private ArrayList<Fragment> mFragmentTestings;
-    private static boolean isCheckTimerStop = true;
+    private boolean mIsCheckTimerStop = true;
     private long mSaveRemainingTime;
     private TestingAdapter mAdapterTesting;
     private CallbackManager mCallbackManager;
@@ -135,11 +135,9 @@ public class TestingActivity extends FragmentActivity {
                         public void onClick(DialogInterface dialog, int which) {
                         }
                     })
-                    .setIcon(android.R.drawable.ic_dialog_alert)
+                    .setIcon(R.drawable.ico_warning)
                     .show();
         }
-
-
     }
 
     private boolean isNetworkAvailable() {
@@ -189,10 +187,10 @@ public class TestingActivity extends FragmentActivity {
     }
 
     private void finshTest() {
-        if (isCheckTimerStop) {
+        if (mIsCheckTimerStop) {
             mSaveRemainingTime = mRemainingTime;
         }
-        isCheckTimerStop = false;
+        mIsCheckTimerStop = false;
         mRlButtonBottom.setVisibility(View.INVISIBLE);
         mTvTimeLeft.setVisibility(View.INVISIBLE);
         mTvTimeLeftCopy.setVisibility(View.INVISIBLE);
@@ -328,11 +326,12 @@ public class TestingActivity extends FragmentActivity {
         //10min = 600 sec = 600000ms
         new CountDownTimer(300000, 1000) {
             public void onTick(long millisUntilFinished) {
+                mRemainingTime = millisUntilFinished;
                 if (millisUntilFinished < 10000) {
                     mTvTimeLeft.setTextColor(Color.RED);
                 }
                 mTvTimeLeft.setText(FunctionModel.convertTimeToString(millisUntilFinished));
-                mRemainingTime = millisUntilFinished;
+
             }
 
             public void onFinish() {

@@ -27,7 +27,7 @@
     <dimen name="testing.textview.text_size_title">20sp</dimen>
     <dimen name="testing.imageview.padding_btn_search">20dp</dimen>
     <dimen name="testing.view.height_bottom">55dp</dimen>
-    <dimen name="testing.rl.btn_margin_bottom">10dp</dimen>
+    <dimen name="testing.rl.btn_margin_bottom">60dp</dimen>
     <dimen name="testing.view.viewline_margin_left">30dp</dimen>
     <dimen name="testing.view.viewline_margin_right">30dp</dimen>
 
@@ -150,6 +150,11 @@
     <dimen name="testing.button.width_submit">90dp</dimen>
     <dimen name="testing.button.height_submit">30dp</dimen>
     <dimen name="testing.button.margin_right_submit">5dp</dimen>
+    <dimen name="header.imgsearch.maginright">20dp</dimen>
+    <dimen name="header.text.hight">80dp</dimen>
+    <dimen name="header.textsite">20sp</dimen>
+    <dimen name="questionData.rl.height">60dp</dimen>
+    <dimen name="questionData.textview.size">15sp</dimen>
 
 
 </resources>

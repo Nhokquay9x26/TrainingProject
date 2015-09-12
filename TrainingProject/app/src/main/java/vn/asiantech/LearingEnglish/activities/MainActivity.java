@@ -16,10 +16,7 @@ import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.EActivity;
 import org.androidannotations.annotations.OptionsItem;
 import org.androidannotations.annotations.ViewById;
-
 import java.util.ArrayList;
-import java.util.Timer;
-import java.util.TimerTask;
 
 import lombok.Getter;
 import vn.asiantech.LearingEnglish.R;
@@ -33,7 +30,7 @@ import vn.asiantech.LearingEnglish.utils.TabBar;
 
 /**
  * @author TienTun
- * Created by tientun on 3/5/15.
+ *         Created by tientun on 3/5/15.
  */
 @SuppressWarnings("ALL")
 @EActivity(R.layout.activity_main)
@@ -77,24 +74,6 @@ public class MainActivity extends FragmentActivity {
             @Override
             public void onPageSelected(int position) {
                 mTabBarMain.clickTab(position);
-
-                if (position == 2) {
-                    Timer timer = new Timer();
-                    timer.schedule(new TimerTask() {
-                        @Override
-                        public void run() {
-                            startActivity(mIntent);
-                        }
-                    }, 1000);
-                }
-                if (position==3){
-                   /* for (int i=0;i<5;i++){
-
-                        Log.d("",mRankings.get(i).getMUserName());
-                        Log.d("",mRankings.get(i).getMPoint()+"");
-
-                    }*/
-                }
             }
 
             @Override
@@ -108,14 +87,9 @@ public class MainActivity extends FragmentActivity {
         });
     }
 
-    private void getRankUser(){
+    private void getRankUser() {
         mRankings = new ArrayList<Ranking>();
         mRankings = ApplicationData.getRankUser();
-    }
-    @Override
-    protected void onResume() {
-        super.onResume();
-        mViewPagerMain.setCurrentItem(0, false);
     }
 
     /**

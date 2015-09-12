@@ -4,7 +4,6 @@ import android.app.Fragment;
 import android.graphics.Color;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -18,9 +17,8 @@ import java.util.ArrayList;
 import vn.asiantech.LearingEnglish.R;
 import vn.asiantech.LearingEnglish.activities.TestingActivity_;
 import vn.asiantech.LearingEnglish.adapter.TestResultingAdapter;
-import vn.asiantech.LearingEnglish.models.ApplicationData;
-import vn.asiantech.LearingEnglish.models.Question;
 import vn.asiantech.LearingEnglish.models.FunctionModel;
+import vn.asiantech.LearingEnglish.models.Question;
 
 /**
  * Created by tantv on 01/09/2015.

@@ -56,7 +56,6 @@ public class TestingFragment extends Fragment {
     @ViewById(R.id.rbGroupSelection)
     RadioGroup mRbGroupSelection;
 
-
     public TestingFragment_ newInstance(int numberQuestion, String question, String selectionA, String selectionB,
                                         String selectionC, String selectionD) {
 
@@ -74,7 +73,6 @@ public class TestingFragment extends Fragment {
 
     @AfterViews
     void afterView() {
-
         if (getActivity() instanceof TestingActivity_) {
             isCheckDisable = ((TestingActivity_) getActivity()).isMIsCheckDisable();
         }
@@ -92,7 +90,6 @@ public class TestingFragment extends Fragment {
                     if (mFragmentCurrentDisplay!=mListSelection.size()-1){
                         setTextColorFragment(mFragmentCurrentDisplay + 1);
                     }
-
                 }
             }
         }
@@ -153,8 +150,6 @@ public class TestingFragment extends Fragment {
                 mRbD.setTextColor(Color.RED);
                 break;
             }
-
-
         }
     }
 

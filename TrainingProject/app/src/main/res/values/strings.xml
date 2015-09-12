@@ -46,4 +46,5 @@
     <string name="rating.textview.rank_id">1st</string>
     <string name="ratings.textview.tvName_User">Maniter Jack</string>
     <string name="ratings.textview.tvPoint">100</string>
+    <string name="header.home.questionData">Questions</string>
 </resources>

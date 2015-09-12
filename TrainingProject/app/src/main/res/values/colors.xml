@@ -32,4 +32,5 @@
     <color name="setting.name.profile.color">#FF6699</color>
     <color name="setting.line.color">#bbbbbb</color>
     <color name="setting.line2.color">#bbbbbb</color>
+    <color name="color.questionData">#FFFFFF</color>
 </resources>
