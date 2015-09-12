@@ -1,15 +1,15 @@
 /**
  * Copyright (c) 2014-present, Facebook, Inc. All rights reserved.
- * <p/>
+ *
  * You are hereby granted a non-exclusive, worldwide, royalty-free license to use,
  * copy, modify, and distribute this software in source code or binary form for use
  * in connection with the web services and APIs provided by Facebook.
- * <p/>
+ *
  * As with any software that integrates with the Facebook platform, your use of
  * this software is subject to the Facebook Developer Principles and Policies
  * [http://developers.facebook.com/policy/]. This copyright notice shall be
  * included in all copies or substantial portions of the software.
- * <p/>
+ *
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
  * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
  * FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
@@ -92,7 +92,6 @@ public final class ShareApi {
     /**
      * Returns the message the person has provided through the custom dialog that will accompany the
      * share content.
-     *
      * @return the message.
      */
     public String getMessage() {
@@ -102,7 +101,6 @@ public final class ShareApi {
     /**
      * Sets the message the person has provided through the custom dialog that will accompany the
      * share content.
-     *
      * @param message the message.
      */
     public void setMessage(final String message) {
@@ -111,7 +109,6 @@ public final class ShareApi {
 
     /**
      * Returns the graph node to share to.
-     *
      * @return the graph node.
      */
     public String getGraphNode() {
@@ -121,7 +118,6 @@ public final class ShareApi {
     /**
      * Sets the graph node to share to (this can be a user id, event id, page id, group id, album
      * id, etc).
-     *
      * @param graphNode the graph node to share to.
      */
     public void setGraphNode(final String graphNode) {
@@ -280,7 +276,7 @@ public final class ShareApi {
                 JSONArray images = new JSONArray(imageStr);
                 for (int i = 0; i < images.length(); ++i) {
                     JSONObject jsonImage = images.optJSONObject(i);
-                    if (jsonImage != null) {
+                    if(jsonImage != null) {
                         putImageInBundleWithArrayFormat(parameters, i, jsonImage);
                     } else {
                         // If we don't have jsonImage we probably just have a url
@@ -309,7 +305,7 @@ public final class ShareApi {
     private static void putImageInBundleWithArrayFormat(
             Bundle parameters,
             int index,
-            JSONObject image) throws JSONException {
+            JSONObject image) throws JSONException{
         Iterator<String> keys = image.keys();
         while (keys.hasNext()) {
             String property = keys.next();
@@ -423,8 +419,8 @@ public final class ShareApi {
     }
 
     private void stageArrayList(final ArrayList arrayList,
-                                final CollectionMapper.OnMapValueCompleteListener
-                                        onArrayListStagedListener) {
+                                       final CollectionMapper.OnMapValueCompleteListener
+                                               onArrayListStagedListener) {
         final JSONArray stagedObject = new JSONArray();
         final CollectionMapper.Collection<Integer> collection = new CollectionMapper
                 .Collection<Integer>() {
@@ -485,8 +481,8 @@ public final class ShareApi {
     }
 
     private <T> void stageCollectionValues(final CollectionMapper.Collection<T> collection,
-                                           final CollectionMapper.OnMapperCompleteListener
-                                                   onCollectionValuesStagedListener) {
+                                                  final CollectionMapper.OnMapperCompleteListener
+                                                          onCollectionValuesStagedListener) {
         final CollectionMapper.ValueMapper valueMapper = new CollectionMapper.ValueMapper() {
             @Override
             public void mapValue(Object value,
@@ -509,8 +505,8 @@ public final class ShareApi {
     }
 
     private void stageOpenGraphAction(final Bundle parameters,
-                                      final CollectionMapper.OnMapperCompleteListener
-                                              onOpenGraphActionStagedListener) {
+                                             final CollectionMapper.OnMapperCompleteListener
+                                                     onOpenGraphActionStagedListener) {
         final CollectionMapper.Collection<String> collection = new CollectionMapper
                 .Collection<String>() {
             @Override
@@ -537,8 +533,8 @@ public final class ShareApi {
     }
 
     private void stageOpenGraphObject(final ShareOpenGraphObject object,
-                                      final CollectionMapper.OnMapValueCompleteListener
-                                              onOpenGraphObjectStagedListener) {
+                                             final CollectionMapper.OnMapValueCompleteListener
+                                                     onOpenGraphObjectStagedListener) {
         String type = object.getString("type");
         if (type == null) {
             type = object.getString("og:type");
@@ -642,8 +638,8 @@ public final class ShareApi {
     }
 
     private void stagePhoto(final SharePhoto photo,
-                            final CollectionMapper.OnMapValueCompleteListener
-                                    onPhotoStagedListener) {
+                                   final CollectionMapper.OnMapValueCompleteListener
+                                           onPhotoStagedListener) {
         final Bitmap bitmap = photo.getBitmap();
         final Uri imageUrl = photo.getImageUrl();
         if ((bitmap != null) || (imageUrl != null)) {

@@ -1,15 +1,15 @@
 /**
  * Copyright (c) 2014-present, Facebook, Inc. All rights reserved.
- * <p/>
+ *
  * You are hereby granted a non-exclusive, worldwide, royalty-free license to use,
  * copy, modify, and distribute this software in source code or binary form for use
  * in connection with the web services and APIs provided by Facebook.
- * <p/>
+ *
  * As with any software that integrates with the Facebook platform, your use of
  * this software is subject to the Facebook Developer Principles and Policies
  * [http://developers.facebook.com/policy/]. This copyright notice shall be
  * included in all copies or substantial portions of the software.
- * <p/>
+ *
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
  * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
  * FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
@@ -50,16 +50,16 @@ public class BoltsMeasurementEventListener extends BroadcastReceiver {
     }
 
     private void open() {
-        LocalBroadcastManager broadcastManager =
-                LocalBroadcastManager.getInstance(applicationContext);
-        broadcastManager.registerReceiver(
-                this, new IntentFilter(MEASUREMENT_EVENT_NOTIFICATION_NAME));
+      LocalBroadcastManager broadcastManager =
+              LocalBroadcastManager.getInstance(applicationContext);
+      broadcastManager.registerReceiver(
+              this, new IntentFilter(MEASUREMENT_EVENT_NOTIFICATION_NAME));
     }
 
     private void close() {
-        LocalBroadcastManager broadcastManager =
-                LocalBroadcastManager.getInstance(applicationContext);
-        broadcastManager.unregisterReceiver(this);
+      LocalBroadcastManager broadcastManager =
+              LocalBroadcastManager.getInstance(applicationContext);
+      broadcastManager.unregisterReceiver(this);
     }
 
     public static BoltsMeasurementEventListener getInstance(Context context) {
@@ -86,10 +86,10 @@ public class BoltsMeasurementEventListener extends BroadcastReceiver {
                 intent.getStringExtra(MEASUREMENT_EVENT_NAME_KEY);
         Bundle eventArgs = intent.getBundleExtra(MEASUREMENT_EVENT_ARGS_KEY);
         Bundle logData = new Bundle();
-        for (String key : eventArgs.keySet()) {
-            String safeKey = key.replaceAll(
-                    "[^0-9a-zA-Z _-]", "-").replaceAll("^[ -]*", "").replaceAll("[ -]*$", "");
-            logData.putString(safeKey, (String) eventArgs.get(key));
+        for(String key : eventArgs.keySet()) {
+           String safeKey = key.replaceAll(
+                   "[^0-9a-zA-Z _-]", "-").replaceAll("^[ -]*", "").replaceAll("[ -]*$", "");
+           logData.putString(safeKey, (String)eventArgs.get(key));
         }
         appEventsLogger.logEvent(eventName, logData);
     }

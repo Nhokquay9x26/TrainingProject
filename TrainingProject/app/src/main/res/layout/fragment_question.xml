@@ -4,41 +4,11 @@
     android:layout_height="match_parent"
     android:background="#eafbff"
     >
-    <!--<ImageView
+    <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_centerInParent="true"
         android:padding="50dp"
         android:src="@drawable/loading"
-        />-->
-    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:id="@+id/rlHeaderHomeQuestion"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/header.text.hight"
-        android:background="@color/colorPrimary">
-
-
-        <TextView
-            android:id="@+id/tvHeaderHomeQuestions"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:text="@string/header.home.question"
-            android:textColor="@color/color.white"
-            android:textSize="@dimen/header.textsite" />
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:layout_marginRight="@dimen/header.imgsearch.maginright"
-            android:src="@drawable/icon_search" />
-    </RelativeLayout>
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/recycleQuestion"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@+id/rlHeaderHomeQuestion"
         />
 </RelativeLayout>

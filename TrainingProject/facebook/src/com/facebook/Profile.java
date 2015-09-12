@@ -1,15 +1,15 @@
 /**
  * Copyright (c) 2014-present, Facebook, Inc. All rights reserved.
- * <p/>
+ *
  * You are hereby granted a non-exclusive, worldwide, royalty-free license to use,
  * copy, modify, and distribute this software in source code or binary form for use
  * in connection with the web services and APIs provided by Facebook.
- * <p/>
+ *
  * As with any software that integrates with the Facebook platform, your use of
  * this software is subject to the Facebook Developer Principles and Policies
  * [http://developers.facebook.com/policy/]. This copyright notice shall be
  * included in all copies or substantial portions of the software.
- * <p/>
+ *
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
  * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
  * FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
@@ -53,10 +53,10 @@ public final class Profile implements Parcelable {
 
     /**
      * Getter for the profile that is currently logged in to the application.
-     *
      * @return The profile that is currently logged in to the application.
      */
-    public static Profile getCurrentProfile() {
+    public static Profile getCurrentProfile()
+    {
         return ProfileManager.getInstance().getCurrentProfile();
     }
 
@@ -65,7 +65,6 @@ public final class Profile implements Parcelable {
      * invalidated, the current profile will not be updated. It's only updated when there is an
      * explicit logout, login or when permissions change via the
      * {@link com.facebook.login.LoginManager}.
-     *
      * @param profile The profile that is currently logged in to the application.
      */
     public static void setCurrentProfile(Profile profile) {
@@ -113,7 +112,6 @@ public final class Profile implements Parcelable {
 
     /**
      * Contructor.
-     *
      * @param id         The id of the profile.
      * @param firstName  The first name of the profile. Can be null.
      * @param middleName The middle name of the profile. Can be null.
@@ -158,7 +156,6 @@ public final class Profile implements Parcelable {
 
     /**
      * Getter for the id of the profile.
-     *
      * @return id of the profile.
      */
     public String getId() {
@@ -167,7 +164,6 @@ public final class Profile implements Parcelable {
 
     /**
      * Getter for the first name of the profile.
-     *
      * @return the first name of the profile.
      */
     public String getFirstName() {
@@ -176,7 +172,6 @@ public final class Profile implements Parcelable {
 
     /**
      * Getter for the middle name of the profile.
-     *
      * @return the middle name of the profile.
      */
     public String getMiddleName() {
@@ -185,7 +180,6 @@ public final class Profile implements Parcelable {
 
     /**
      * Getter for the last name of the profile.
-     *
      * @return the last name of the profile.
      */
     public String getLastName() {
@@ -194,7 +188,6 @@ public final class Profile implements Parcelable {
 
     /**
      * Getter for the name of the profile.
-     *
      * @return the name of the profile.
      */
     public String getName() {
@@ -203,7 +196,6 @@ public final class Profile implements Parcelable {
 
     /**
      * Getter for the link of the profile.
-     *
      * @return the link of the profile.
      */
     public Uri getLinkUri() {

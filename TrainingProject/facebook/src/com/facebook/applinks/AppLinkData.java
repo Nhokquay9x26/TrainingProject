@@ -1,15 +1,15 @@
 /**
  * Copyright (c) 2014-present, Facebook, Inc. All rights reserved.
- * <p/>
+ *
  * You are hereby granted a non-exclusive, worldwide, royalty-free license to use,
  * copy, modify, and distribute this software in source code or binary form for use
  * in connection with the web services and APIs provided by Facebook.
- * <p/>
+ *
  * As with any software that integrates with the Facebook platform, your use of
  * this software is subject to the Facebook Developer Principles and Policies
  * [http://developers.facebook.com/policy/]. This copyright notice shall be
  * included in all copies or substantial portions of the software.
- * <p/>
+ *
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
  * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
  * FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
@@ -233,7 +233,6 @@ public class AppLinkData {
 
     /**
      * Parses out any app link data from the Intent of the Activity passed in.
-     *
      * @param activity Activity that was started because of an app link
      * @return AppLinkData if found. null if not.
      */
@@ -282,7 +281,7 @@ public class AppLinkData {
     }
 
     private static AppLinkData createFromJson(String jsonString) {
-        if (jsonString == null) {
+        if (jsonString  == null) {
             return null;
         }
 
@@ -385,7 +384,6 @@ public class AppLinkData {
 
     /**
      * Returns the target uri for this App Link.
-     *
      * @return target uri
      */
     public Uri getTargetUri() {
@@ -394,7 +392,6 @@ public class AppLinkData {
 
     /**
      * Returns the ref for this App Link.
-     *
      * @return ref
      */
     public String getRef() {
@@ -404,7 +401,6 @@ public class AppLinkData {
     /**
      * The full set of arguments for this app link. Properties like target uri & ref are typically
      * picked out of this set of arguments.
-     *
      * @return App link related arguments as a bundle.
      */
     public Bundle getArgumentBundle() {

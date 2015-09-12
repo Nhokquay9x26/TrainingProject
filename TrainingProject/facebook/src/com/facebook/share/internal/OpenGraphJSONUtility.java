@@ -1,15 +1,15 @@
 /**
  * Copyright (c) 2014-present, Facebook, Inc. All rights reserved.
- * <p/>
+ *
  * You are hereby granted a non-exclusive, worldwide, royalty-free license to use,
  * copy, modify, and distribute this software in source code or binary form for use
  * in connection with the web services and APIs provided by Facebook.
- * <p/>
+ *
  * As with any software that integrates with the Facebook platform, your use of
  * this software is subject to the Facebook Developer Principles and Policies
  * [http://developers.facebook.com/policy/]. This copyright notice shall be
  * included in all copies or substantial portions of the software.
- * <p/>
+ *
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
  * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
  * FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
@@ -22,7 +22,6 @@ package com.facebook.share.internal;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-
 import com.facebook.internal.Validate;
 import com.facebook.share.model.ShareOpenGraphAction;
 import com.facebook.share.model.ShareOpenGraphObject;
@@ -38,13 +37,13 @@ import java.util.*;
  * com.facebook.share.internal is solely for the use of other packages within the
  * Facebook SDK for Android. Use of any of the classes in this package is
  * unsupported, and they may be modified or removed without warning at any time.
- * <p/>
+ *
  * Utility methods for JSON representation of Open Graph models.
  */
 public final class OpenGraphJSONUtility {
     /**
      * Converts an action to a JSONObject.
-     * <p/>
+     *
      * NOTE: All images are removed from the JSON representation and must be added to the builder
      * separately.
      *
@@ -111,11 +110,10 @@ public final class OpenGraphJSONUtility {
             return toJSONArray((List) object, photoJSONProcessor);
         }
         throw new IllegalArgumentException(
-                "Invalid object found for JSON serialization: " + object.toString());
+                "Invalid object found for JSON serialization: " +object.toString());
     }
 
-    private OpenGraphJSONUtility() {
-    }
+    private OpenGraphJSONUtility() {}
 
     public interface PhotoJSONProcessor {
         public JSONObject toJSONObject(SharePhoto photo);

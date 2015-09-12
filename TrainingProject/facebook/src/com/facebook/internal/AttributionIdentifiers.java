@@ -1,15 +1,15 @@
 /**
  * Copyright (c) 2014-present, Facebook, Inc. All rights reserved.
- * <p/>
+ *
  * You are hereby granted a non-exclusive, worldwide, royalty-free license to use,
  * copy, modify, and distribute this software in source code or binary form for use
  * in connection with the web services and APIs provided by Facebook.
- * <p/>
+ *
  * As with any software that integrates with the Facebook platform, your use of
  * this software is subject to the Facebook Developer Principles and Policies
  * [http://developers.facebook.com/policy/]. This copyright notice shall be
  * included in all copies or substantial portions of the software.
- * <p/>
+ *
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
  * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
  * FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
@@ -87,7 +87,7 @@ public class AttributionIdentifiers {
             // We can't call getAdvertisingIdInfo on the main thread or the app will potentially
             // freeze, if this is the case throw:
             if (Looper.myLooper() == Looper.getMainLooper()) {
-                throw new FacebookException("getAndroidId cannot be called on the main thread.");
+              throw new FacebookException("getAndroidId cannot be called on the main thread.");
             }
             Method isGooglePlayServicesAvailable = Utility.getMethodQuietly(
                     "com.google.android.gms.common.GooglePlayServicesUtil",
@@ -144,7 +144,7 @@ public class AttributionIdentifiers {
         GoogleAdServiceConnection connection = new GoogleAdServiceConnection();
         Intent intent = new Intent("com.google.android.gms.ads.identifier.service.START");
         intent.setPackage("com.google.android.gms");
-        if (context.bindService(intent, connection, Context.BIND_AUTO_CREATE)) {
+        if(context.bindService(intent, connection, Context.BIND_AUTO_CREATE)) {
             try {
                 GoogleAdInfo adInfo = new GoogleAdInfo(connection.getBinder());
                 AttributionIdentifiers identifiers = new AttributionIdentifiers();
@@ -162,15 +162,15 @@ public class AttributionIdentifiers {
 
     public static AttributionIdentifiers getAttributionIdentifiers(Context context) {
         if (recentlyFetchedIdentifiers != null &&
-                System.currentTimeMillis() - recentlyFetchedIdentifiers.fetchTime <
-                        IDENTIFIER_REFRESH_INTERVAL_MILLIS) {
+            System.currentTimeMillis() - recentlyFetchedIdentifiers.fetchTime <
+                    IDENTIFIER_REFRESH_INTERVAL_MILLIS) {
             return recentlyFetchedIdentifiers;
         }
 
         AttributionIdentifiers identifiers = getAndroidId(context);
         Cursor c = null;
         try {
-            String[] projection = {
+            String [] projection = {
                     ATTRIBUTION_ID_COLUMN_NAME,
                     ANDROID_ID_COLUMN_NAME,
                     LIMIT_TRACKING_COLUMN_NAME};

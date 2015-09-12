@@ -1,15 +1,15 @@
 /**
  * Copyright (c) 2014-present, Facebook, Inc. All rights reserved.
- * <p/>
+ *
  * You are hereby granted a non-exclusive, worldwide, royalty-free license to use,
  * copy, modify, and distribute this software in source code or binary form for use
  * in connection with the web services and APIs provided by Facebook.
- * <p/>
+ *
  * As with any software that integrates with the Facebook platform, your use of
  * this software is subject to the Facebook Developer Principles and Policies
  * [http://developers.facebook.com/policy/]. This copyright notice shall be
  * included in all copies or substantial portions of the software.
- * <p/>
+ *
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
  * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
  * FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
@@ -61,7 +61,6 @@ public class CreateAppGroupDialog
 
         /**
          * Get the ID of the created group.
-         *
          * @return the id of the group.
          */
         public String getId() {
@@ -82,7 +81,7 @@ public class CreateAppGroupDialog
      * Shows an {@link CreateAppGroupDialog} to create a group with the passed in content, using
      * the passed in activity. No callback will be invoked.
      *
-     * @param activity                Activity hosting the dialog
+     * @param activity Activity hosting the dialog
      * @param appGroupCreationContent Content describing the group to be created
      */
     public static void show(
@@ -95,7 +94,7 @@ public class CreateAppGroupDialog
      * Shows an {@link CreateAppGroupDialog} to create a group with the passed in content, using
      * the passed in fragment. No callback will be invoked.
      *
-     * @param fragment                Fragment hosting the dialog
+     * @param fragment Fragment hosting the dialog
      * @param appGroupCreationContent Content describing the group to be created
      */
     public static void show(
@@ -106,7 +105,6 @@ public class CreateAppGroupDialog
 
     /**
      * Constructs a new CreateAppGroupDialog.
-     *
      * @param activity Activity hosting the dialog.
      */
     public CreateAppGroupDialog(final Activity activity) {
@@ -115,7 +113,6 @@ public class CreateAppGroupDialog
 
     /**
      * Constructs a new CreateAppGroupDialog.
-     *
      * @param fragment Fragment hosting the dialog.
      */
     public CreateAppGroupDialog(final Fragment fragment) {

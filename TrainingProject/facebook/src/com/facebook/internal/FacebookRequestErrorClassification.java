@@ -1,15 +1,15 @@
 /**
  * Copyright (c) 2014-present, Facebook, Inc. All rights reserved.
- * <p/>
+ *
  * You are hereby granted a non-exclusive, worldwide, royalty-free license to use,
  * copy, modify, and distribute this software in source code or binary form for use
  * in connection with the web services and APIs provided by Facebook.
- * <p/>
+ *
  * As with any software that integrates with the Facebook platform, your use of
  * this software is subject to the Facebook Developer Principles and Policies
  * [http://developers.facebook.com/policy/]. This copyright notice shall be
  * included in all copies or substantial portions of the software.
- * <p/>
+ *
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
  * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
  * FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
@@ -147,8 +147,8 @@ public final class FacebookRequestErrorClassification {
         }};
 
         Map<Integer, Set<Integer>> loginRecoverableErrors = new HashMap<Integer, Set<Integer>>() {{
-            put(EC_INVALID_SESSION, null);
-            put(EC_INVALID_TOKEN, null);
+            put(EC_INVALID_SESSION,null);
+            put(EC_INVALID_TOKEN,null);
         }};
 
         return new FacebookRequestErrorClassification(
@@ -224,12 +224,12 @@ public final class FacebookRequestErrorClassification {
             }
         }
         return new FacebookRequestErrorClassification(
-                otherErrors,
-                transientErrors,
-                loginRecoverableErrors,
-                otherRecoveryMessage,
-                transientRecoveryMessage,
-                loginRecoverableRecoveryMessage
+            otherErrors,
+            transientErrors,
+            loginRecoverableErrors,
+            otherRecoveryMessage,
+            transientRecoveryMessage,
+            loginRecoverableRecoveryMessage
         );
     }
 }

@@ -1,15 +1,15 @@
 /**
  * Copyright (c) 2014-present, Facebook, Inc. All rights reserved.
- * <p/>
+ *
  * You are hereby granted a non-exclusive, worldwide, royalty-free license to use,
  * copy, modify, and distribute this software in source code or binary form for use
  * in connection with the web services and APIs provided by Facebook.
- * <p/>
+ *
  * As with any software that integrates with the Facebook platform, your use of
  * this software is subject to the Facebook Developer Principles and Policies
  * [http://developers.facebook.com/policy/]. This copyright notice shall be
  * included in all copies or substantial portions of the software.
- * <p/>
+ *
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
  * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
  * FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
@@ -56,17 +56,17 @@ public class LegacyNativeDialogParameters {
 
         Bundle nativeParams = null;
         if (shareContent instanceof ShareLinkContent) {
-            final ShareLinkContent linkContent = (ShareLinkContent) shareContent;
+            final ShareLinkContent linkContent = (ShareLinkContent)shareContent;
             nativeParams = create(linkContent, shouldFailOnDataError);
         } else if (shareContent instanceof SharePhotoContent) {
-            final SharePhotoContent photoContent = (SharePhotoContent) shareContent;
+            final SharePhotoContent photoContent = (SharePhotoContent)shareContent;
             List<String> photoUrls = ShareInternalUtility.getPhotoUrls(
                     photoContent,
                     callId);
 
             nativeParams = create(photoContent, photoUrls, shouldFailOnDataError);
         } else if (shareContent instanceof ShareVideoContent) {
-            final ShareVideoContent videoContent = (ShareVideoContent) shareContent;
+            final ShareVideoContent videoContent = (ShareVideoContent)shareContent;
             nativeParams = create(videoContent, shouldFailOnDataError);
         } else if (shareContent instanceof ShareOpenGraphContent) {
             final ShareOpenGraphContent openGraphContent = (ShareOpenGraphContent) shareContent;

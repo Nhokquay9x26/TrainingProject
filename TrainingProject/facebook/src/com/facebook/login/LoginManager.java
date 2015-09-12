@@ -1,15 +1,15 @@
 /**
  * Copyright (c) 2014-present, Facebook, Inc. All rights reserved.
- * <p/>
+ *
  * You are hereby granted a non-exclusive, worldwide, royalty-free license to use,
  * copy, modify, and distribute this software in source code or binary form for use
  * in connection with the web services and APIs provided by Facebook.
- * <p/>
+ *
  * As with any software that integrates with the Facebook platform, your use of
  * this software is subject to the Facebook Developer Principles and Policies
  * [http://developers.facebook.com/policy/]. This copyright notice shall be
  * included in all copies or substantial portions of the software.
- * <p/>
+ *
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
  * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
  * FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
@@ -71,7 +71,6 @@ public class LoginManager {
 
     /**
      * Getter for the login manager.
-     *
      * @return The login manager.
      */
     public static LoginManager getInstance() {
@@ -122,9 +121,8 @@ public class LoginManager {
 
     /**
      * Registers a login callback to the given callback manager.
-     *
      * @param callbackManager The callback manager that will encapsulate the callback.
-     * @param callback        The login callback that will be called on login completion.
+     * @param callback The login callback that will be called on login completion.
      */
     public void registerCallback(
             final CallbackManager callbackManager,
@@ -151,7 +149,7 @@ public class LoginManager {
         return onActivityResult(resultCode, data, null);
     }
 
-    boolean onActivityResult(int resultCode, Intent data, FacebookCallback<LoginResult> callback) {
+    boolean onActivityResult(int resultCode, Intent data, FacebookCallback<LoginResult>  callback) {
 
         if (pendingLoginRequest == null) {
             return false;
@@ -197,7 +195,6 @@ public class LoginManager {
 
     /**
      * Getter for the login behavior.
-     *
      * @return the login behavior.
      */
     public LoginBehavior getLoginBehavior() {
@@ -206,7 +203,6 @@ public class LoginManager {
 
     /**
      * Setter for the login behavior.
-     *
      * @param loginBehavior The login behavior.
      * @return The login manager.
      */
@@ -217,7 +213,6 @@ public class LoginManager {
 
     /**
      * Getter for the default audience.
-     *
      * @return The default audience.
      */
     public DefaultAudience getDefaultAudience() {
@@ -226,7 +221,6 @@ public class LoginManager {
 
     /**
      * Setter for the default audience.
-     *
      * @param defaultAudience The default audience.
      * @return The login manager.
      */
@@ -245,7 +239,6 @@ public class LoginManager {
 
     /**
      * Logs the user in with the requested read permissions.
-     *
      * @param fragment    The fragment which is starting the login process.
      * @param permissions The requested permissions.
      */
@@ -258,7 +251,6 @@ public class LoginManager {
 
     /**
      * Logs the user in with the requested read permissions.
-     *
      * @param activity    The activity which is starting the login process.
      * @param permissions The requested permissions.
      */
@@ -271,7 +263,6 @@ public class LoginManager {
 
     /**
      * Logs the user in with the requested publish permissions.
-     *
      * @param fragment    The fragment which is starting the login process.
      * @param permissions The requested permissions.
      */
@@ -284,7 +275,6 @@ public class LoginManager {
 
     /**
      * Logs the user in with the requested publish permissions.
-     *
      * @param activity    The activity which is starting the login process.
      * @param permissions The requested permissions.
      */
@@ -306,10 +296,10 @@ public class LoginManager {
         for (String permission : permissions) {
             if (isPublishPermission(permission)) {
                 throw new FacebookException(
-                        String.format(
-                                "Cannot pass a publish or manage permission (%s) to a request for read " +
-                                        "authorization",
-                                permission));
+                    String.format(
+                        "Cannot pass a publish or manage permission (%s) to a request for read " +
+                                "authorization",
+                        permission));
             }
         }
     }
@@ -321,18 +311,18 @@ public class LoginManager {
         for (String permission : permissions) {
             if (!isPublishPermission(permission)) {
                 throw new FacebookException(
-                        String.format(
-                                "Cannot pass a read permission (%s) to a request for publish authorization",
-                                permission));
+                    String.format(
+                        "Cannot pass a read permission (%s) to a request for publish authorization",
+                        permission));
             }
         }
     }
 
     static boolean isPublishPermission(String permission) {
         return permission != null &&
-                (permission.startsWith(PUBLISH_PERMISSION_PREFIX) ||
-                        permission.startsWith(MANAGE_PERMISSION_PREFIX) ||
-                        OTHER_PUBLISH_PERMISSIONS.contains(permission));
+            (permission.startsWith(PUBLISH_PERMISSION_PREFIX) ||
+                permission.startsWith(MANAGE_PERMISSION_PREFIX) ||
+                OTHER_PUBLISH_PERMISSIONS.contains(permission));
     }
 
     private static Set<String> getOtherPublishPermissions() {
@@ -384,7 +374,7 @@ public class LoginManager {
         pendingLoggingExtras.put(
                 LoginLogger.EVENT_EXTRAS_TRY_LOGIN_ACTIVITY,
                 started ?
-                        AppEventsConstants.EVENT_PARAM_VALUE_YES : AppEventsConstants.EVENT_PARAM_VALUE_NO
+                AppEventsConstants.EVENT_PARAM_VALUE_YES : AppEventsConstants.EVENT_PARAM_VALUE_NO
         );
 
         if (!started) {
@@ -460,7 +450,7 @@ public class LoginManager {
 
     private boolean resolveIntent(Intent intent) {
         ResolveInfo resolveInfo = FacebookSdk.getApplicationContext().getPackageManager()
-                .resolveActivity(intent, 0);
+            .resolveActivity(intent, 0);
         if (resolveInfo == null) {
             return false;
         }
@@ -502,7 +492,7 @@ public class LoginManager {
             AccessToken newToken,
             FacebookException exception,
             boolean isCanceled,
-            FacebookCallback<LoginResult> callback) {
+            FacebookCallback<LoginResult>  callback) {
         if (newToken != null) {
             AccessToken.setCurrentAccessToken(newToken);
             Profile.fetchProfileForCurrentAccessToken();
@@ -515,7 +505,7 @@ public class LoginManager {
             // If there are no granted permissions, the operation is treated as cancel.
             if (isCanceled
                     || (loginResult != null
-                    && loginResult.getRecentlyGrantedPermissions().size() == 0)) {
+                           && loginResult.getRecentlyGrantedPermissions().size() == 0)) {
                 callback.onCancel();
             } else if (exception != null) {
                 callback.onError(exception);

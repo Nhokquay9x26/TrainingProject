@@ -1,15 +1,15 @@
 /**
  * Copyright (c) 2014-present, Facebook, Inc. All rights reserved.
- * <p/>
+ *
  * You are hereby granted a non-exclusive, worldwide, royalty-free license to use,
  * copy, modify, and distribute this software in source code or binary form for use
  * in connection with the web services and APIs provided by Facebook.
- * <p/>
+ *
  * As with any software that integrates with the Facebook platform, your use of
  * this software is subject to the Facebook Developer Principles and Policies
  * [http://developers.facebook.com/policy/]. This copyright notice shall be
  * included in all copies or substantial portions of the software.
- * <p/>
+ *
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
  * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
  * FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
@@ -40,9 +40,8 @@ public final class CallbackManagerImpl implements CallbackManager {
      * If there is no explicit callback, but we still need to call the Facebook component,
      * because it's going to update some state, e.g., login, like. Then we should register a
      * static callback that can still handle the response.
-     *
      * @param requestCode The request code.
-     * @param callback    The callback for the feature.
+     * @param callback The callback for the feature.
      */
     public synchronized static void registerStaticCallback(
             int requestCode,
@@ -97,7 +96,8 @@ public final class CallbackManagerImpl implements CallbackManager {
         GameRequest(4),
         AppGroupCreate(5),
         AppGroupJoin(6),
-        AppInvite(7),;
+        AppInvite(7),
+        ;
 
         private final int offset;
 

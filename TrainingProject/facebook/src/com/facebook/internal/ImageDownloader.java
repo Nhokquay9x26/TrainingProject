@@ -1,15 +1,15 @@
 /**
  * Copyright (c) 2014-present, Facebook, Inc. All rights reserved.
- * <p/>
+ *
  * You are hereby granted a non-exclusive, worldwide, royalty-free license to use,
  * copy, modify, and distribute this software in source code or binary form for use
  * in connection with the web services and APIs provided by Facebook.
- * <p/>
+ *
  * As with any software that integrates with the Facebook platform, your use of
  * this software is subject to the Facebook Developer Principles and Policies
  * [http://developers.facebook.com/policy/]. This copyright notice shall be
  * included in all copies or substantial portions of the software.
- * <p/>
+ *
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
  * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
  * FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
@@ -26,7 +26,6 @@ import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Handler;
 import android.os.Looper;
-
 import com.facebook.FacebookException;
 import com.facebook.R;
 
@@ -57,7 +56,6 @@ public class ImageDownloader {
     /**
      * Downloads the image specified in the passed in request.
      * If a callback is specified, it is guaranteed to be invoked on the calling thread.
-     *
      * @param request Request to process
      */
     public static void downloadAsync(ImageRequest request) {
@@ -279,7 +277,7 @@ public class ImageDownloader {
                         Utility.closeQuietly(reader);
                     } else {
                         errorMessageBuilder.append(
-                                context.getString(R.string.com_facebook_image_download_unknown_error));
+                            context.getString(R.string.com_facebook_image_download_unknown_error));
                     }
                     error = new FacebookException(errorMessageBuilder.toString());
                     break;
@@ -336,7 +334,7 @@ public class ImageDownloader {
             boolean isEqual = false;
 
             if (o != null && o instanceof RequestKey) {
-                RequestKey compareTo = (RequestKey) o;
+                RequestKey compareTo = (RequestKey)o;
                 isEqual = compareTo.uri == uri && compareTo.tag == tag;
             }
 

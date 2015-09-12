@@ -1,15 +1,15 @@
 /**
  * Copyright (c) 2014-present, Facebook, Inc. All rights reserved.
- * <p/>
+ *
  * You are hereby granted a non-exclusive, worldwide, royalty-free license to use,
  * copy, modify, and distribute this software in source code or binary form for use
  * in connection with the web services and APIs provided by Facebook.
- * <p/>
+ *
  * As with any software that integrates with the Facebook platform, your use of
  * this software is subject to the Facebook Developer Principles and Policies
  * [http://developers.facebook.com/policy/]. This copyright notice shall be
  * included in all copies or substantial portions of the software.
- * <p/>
+ *
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
  * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
  * FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
@@ -26,9 +26,9 @@ import android.support.annotation.Nullable;
 
 /**
  * Describes link content to be shared.
- * <p/>
+ *
  * Use {@link ShareLinkContent.Builder} to build instances.
- * <p/>
+ *
  * See documentation for <a href="https://developers.facebook.com/docs/sharing/best-practices">best practices</a>.
  */
 public final class ShareLinkContent
@@ -54,7 +54,6 @@ public final class ShareLinkContent
     /**
      * The description of the link.  If not specified, this field is automatically populated by
      * information scraped from the link, typically the title of the page.
-     *
      * @return The description of the link.
      */
     public String getContentDescription() {
@@ -63,7 +62,6 @@ public final class ShareLinkContent
 
     /**
      * The title to display for this link.
-     *
      * @return The link title.
      */
     @Nullable
@@ -73,7 +71,6 @@ public final class ShareLinkContent
 
     /**
      * The URL of a picture to attach to this content.
-     *
      * @return The network URL of an image.
      */
     @Nullable
@@ -95,14 +92,14 @@ public final class ShareLinkContent
     @SuppressWarnings("unused")
     public static final Creator<ShareLinkContent> CREATOR =
             new Creator<ShareLinkContent>() {
-                public ShareLinkContent createFromParcel(final Parcel in) {
-                    return new ShareLinkContent(in);
-                }
+        public ShareLinkContent createFromParcel(final Parcel in) {
+            return new ShareLinkContent(in);
+        }
 
-                public ShareLinkContent[] newArray(final int size) {
-                    return new ShareLinkContent[size];
-                }
-            };
+        public ShareLinkContent[] newArray(final int size) {
+            return new ShareLinkContent[size];
+        }
+    };
 
     /**
      * Builder for the {@link ShareLinkContent} interface.
@@ -115,7 +112,6 @@ public final class ShareLinkContent
 
         /**
          * Set the contentDescription of the link.
-         *
          * @param contentDescription The contentDescription of the link.
          * @return The builder.
          */
@@ -127,7 +123,6 @@ public final class ShareLinkContent
 
         /**
          * Set the contentTitle to display for this link.
-         *
          * @param contentTitle The link contentTitle.
          * @return The builder.
          */
@@ -138,7 +133,6 @@ public final class ShareLinkContent
 
         /**
          * Set the URL of a picture to attach to this content.
-         *
          * @param imageUrl The network URL of an image.
          * @return The builder.
          */

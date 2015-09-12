@@ -1,15 +1,15 @@
 /**
  * Copyright (c) 2014-present, Facebook, Inc. All rights reserved.
- * <p/>
+ *
  * You are hereby granted a non-exclusive, worldwide, royalty-free license to use,
  * copy, modify, and distribute this software in source code or binary form for use
  * in connection with the web services and APIs provided by Facebook.
- * <p/>
+ *
  * As with any software that integrates with the Facebook platform, your use of
  * this software is subject to the Facebook Developer Principles and Policies
  * [http://developers.facebook.com/policy/]. This copyright notice shall be
  * included in all copies or substantial portions of the software.
- * <p/>
+ *
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
  * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
  * FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
@@ -127,8 +127,7 @@ public final class FacebookSdk {
     /**
      * This function initializes the Facebook SDK, the behavior of Facebook SDK functions are
      * undetermined if this function is not called. It should be called as early as possible.
-     *
-     * @param applicationContext        The application context
+     * @param applicationContext The application context
      * @param callbackRequestCodeOffset The request code offset that Facebook activities will be
      *                                  called with. Please do not use the range between the
      *                                  value you set and another 100 entries after it in your
@@ -143,14 +142,13 @@ public final class FacebookSdk {
     /**
      * This function initializes the Facebook SDK, the behavior of Facebook SDK functions are
      * undetermined if this function is not called. It should be called as early as possible.
-     *
-     * @param applicationContext        The application context
+     * @param applicationContext The application context
      * @param callbackRequestCodeOffset The request code offset that Facebook activities will be
      *                                  called with. Please do not use the range between the
      *                                  value you set and another 100 entries after it in your
      *                                  other requests.
-     * @param callback                  A callback called when initialize finishes. This will be called even if the
-     *                                  sdk is already initialized.
+     * @param callback A callback called when initialize finishes. This will be called even if the
+     *                 sdk is already initialized.
      */
     public static synchronized void sdkInitialize(
             Context applicationContext,
@@ -169,7 +167,6 @@ public final class FacebookSdk {
     /**
      * This function initializes the Facebook SDK, the behavior of Facebook SDK functions are
      * undetermined if this function is not called. It should be called as early as possible.
-     *
      * @param applicationContext The application context
      */
     public static synchronized void sdkInitialize(Context applicationContext) {
@@ -179,10 +176,9 @@ public final class FacebookSdk {
     /**
      * This function initializes the Facebook SDK, the behavior of Facebook SDK functions are
      * undetermined if this function is not called. It should be called as early as possible.
-     *
      * @param applicationContext The application context
-     * @param callback           A callback called when initialize finishes. This will be called even if the
-     *                           sdk is already initialized.
+     * @param callback A callback called when initialize finishes. This will be called even if the
+     *                 sdk is already initialized.
      */
     public static synchronized void sdkInitialize(
             Context applicationContext,
@@ -240,7 +236,6 @@ public final class FacebookSdk {
 
     /**
      * Indicates whether the Facebook SDK has been initialized.
-     *
      * @return true if initialized, false if not
      */
     public static synchronized boolean isInitialized() {
@@ -250,7 +245,7 @@ public final class FacebookSdk {
     /**
      * Certain logging behaviors are available for debugging beyond those that should be
      * enabled in production.
-     * <p/>
+     *
      * Returns the types of extended logging that are currently enabled.
      *
      * @return a set containing enabled logging behaviors
@@ -264,10 +259,11 @@ public final class FacebookSdk {
     /**
      * Certain logging behaviors are available for debugging beyond those that should be
      * enabled in production.
-     * <p/>
+     *
      * Enables a particular extended logging in the SDK.
      *
-     * @param behavior The LoggingBehavior to enable
+     * @param behavior
+     *          The LoggingBehavior to enable
      */
     public static void addLoggingBehavior(LoggingBehavior behavior) {
         synchronized (loggingBehaviors) {
@@ -279,10 +275,11 @@ public final class FacebookSdk {
     /**
      * Certain logging behaviors are available for debugging beyond those that should be
      * enabled in production.
-     * <p/>
+     *
      * Disables a particular extended logging behavior in the SDK.
      *
-     * @param behavior The LoggingBehavior to disable
+     * @param behavior
+     *          The LoggingBehavior to disable
      */
     public static void removeLoggingBehavior(LoggingBehavior behavior) {
         synchronized (loggingBehaviors) {
@@ -293,7 +290,7 @@ public final class FacebookSdk {
     /**
      * Certain logging behaviors are available for debugging beyond those that should be
      * enabled in production.
-     * <p/>
+     *
      * Disables all extended logging behaviors.
      */
     public static void clearLoggingBehaviors() {
@@ -305,10 +302,11 @@ public final class FacebookSdk {
     /**
      * Certain logging behaviors are available for debugging beyond those that should be
      * enabled in production.
-     * <p/>
+     *
      * Checks if a particular extended logging behavior is enabled.
      *
-     * @param behavior The LoggingBehavior to check
+     * @param behavior
+     *          The LoggingBehavior to check
      * @return whether behavior is enabled
      */
     public static boolean isLoggingBehaviorEnabled(LoggingBehavior behavior) {
@@ -326,7 +324,6 @@ public final class FacebookSdk {
 
     /**
      * Used to enable or disable logging, and other debug features. Defaults to BuildConfig.DEBUG.
-     *
      * @param enabled Debug features (like logging) are enabled if true, disabled if false.
      */
     public static void setIsDebugEnabled(boolean enabled) {
@@ -336,7 +333,6 @@ public final class FacebookSdk {
     /**
      * Indicates if the SDK should fallback and read the legacy token. This is turned off by default
      * for performance.
-     *
      * @return if the legacy token upgrade is supported.
      */
     public static boolean isLegacyTokenUpgradeSupported() {
@@ -345,14 +341,13 @@ public final class FacebookSdk {
 
     private static void updateGraphDebugBehavior() {
         if (loggingBehaviors.contains(LoggingBehavior.GRAPH_API_DEBUG_INFO)
-                && !loggingBehaviors.contains(LoggingBehavior.GRAPH_API_DEBUG_WARNING)) {
+           && !loggingBehaviors.contains(LoggingBehavior.GRAPH_API_DEBUG_WARNING)) {
             loggingBehaviors.add(LoggingBehavior.GRAPH_API_DEBUG_WARNING);
         }
     }
 
     /**
      * Setter for legacy token upgrade.
-     *
      * @param supported True if upgrade should be supported.
      */
     public static void setLegacyTokenUpgradeSupported(boolean supported) {
@@ -361,7 +356,7 @@ public final class FacebookSdk {
 
     /**
      * Returns the Executor used by the SDK for non-AsyncTask background work.
-     * <p/>
+     *
      * By default this uses AsyncTask Executor via reflection if the API level is high enough.
      * Otherwise this creates a new Executor with defaults similar to those used in AsyncTask.
      *
@@ -385,7 +380,8 @@ public final class FacebookSdk {
     /**
      * Sets the Executor used by the SDK for non-AsyncTask background work.
      *
-     * @param executor the Executor to use; must not be null.
+     * @param executor
+     *          the Executor to use; must not be null.
      */
     public static void setExecutor(Executor executor) {
         Validate.notNull(executor, "executor");
@@ -421,7 +417,6 @@ public final class FacebookSdk {
 
     /**
      * The getter for the context of the current application.
-     *
      * @return The context of the current application.
      */
     public static Context getApplicationContext() {
@@ -457,7 +452,6 @@ public final class FacebookSdk {
 
     /**
      * This method is public in order to be used by app events, please don't use directly.
-     *
      * @param context       The application context.
      * @param applicationId The application id.
      */
@@ -482,8 +476,8 @@ public final class FacebookSdk {
             }
             AttributionIdentifiers identifiers = AttributionIdentifiers.getAttributionIdentifiers(context);
             SharedPreferences preferences = context.getSharedPreferences(ATTRIBUTION_PREFERENCES, Context.MODE_PRIVATE);
-            String pingKey = applicationId + "ping";
-            String jsonKey = applicationId + "json";
+            String pingKey = applicationId+"ping";
+            String jsonKey = applicationId+"json";
             long lastPing = preferences.getLong(pingKey, 0);
             String lastResponseJSON = preferences.getString(jsonKey, null);
 
@@ -508,7 +502,8 @@ public final class FacebookSdk {
                     if (lastResponseJSON != null) {
                         graphObject = new JSONObject(lastResponseJSON);
                     }
-                } catch (JSONException je) {
+                }
+                catch (JSONException je) {
                     // return the default graph object if there is any problem reading the data.
                 }
                 if (graphObject == null) {
@@ -560,7 +555,7 @@ public final class FacebookSdk {
      * as targeting ads to this user.  Defaults to false.  This value is stored on the device and
      * persists across app launches.
      *
-     * @param context Used to read the value.
+     * @param context  Used to read the value.
      */
     public static boolean getLimitEventAndDataUsage(Context context) {
         Validate.sdkInitialized();
@@ -580,9 +575,9 @@ public final class FacebookSdk {
      */
     public static void setLimitEventAndDataUsage(Context context, boolean limitEventUsage) {
         context.getSharedPreferences(AppEventsLogger.APP_EVENT_PREFERENCES, Context.MODE_PRIVATE)
-                .edit()
-                .putBoolean("limitEventUsage", limitEventUsage)
-                .apply();
+            .edit()
+            .putBoolean("limitEventUsage", limitEventUsage)
+            .apply();
     }
 
     /**
@@ -635,7 +630,7 @@ public final class FacebookSdk {
             } else if (appId instanceof Integer) {
                 throw new FacebookException(
                         "App Ids cannot be directly placed in the manfiest." +
-                                "They mut be prexied by 'fb' or be placed in the string resource file.");
+                        "They mut be prexied by 'fb' or be placed in the string resource file.");
             }
         }
 
@@ -654,7 +649,6 @@ public final class FacebookSdk {
 
     /**
      * Internal call please don't use directly.
-     *
      * @param context The application context.
      * @return The application signature.
      */
@@ -689,7 +683,7 @@ public final class FacebookSdk {
         }
 
         md.update(pInfo.signatures[0].toByteArray());
-        return Base64.encodeToString(md.digest(), Base64.URL_SAFE | Base64.NO_PADDING);
+        return Base64.encodeToString(md.digest(),  Base64.URL_SAFE | Base64.NO_PADDING);
     }
 
     /**
@@ -705,7 +699,6 @@ public final class FacebookSdk {
 
     /**
      * Sets the Facebook application ID for the current app.
-     *
      * @param applicationId the application ID
      */
     public static void setApplicationId(String applicationId) {
@@ -725,7 +718,6 @@ public final class FacebookSdk {
 
     /**
      * Sets the Facebook application name for the current app.
-     *
      * @param applicationName the application name
      */
     public static void setApplicationName(String applicationName) {
@@ -735,7 +727,6 @@ public final class FacebookSdk {
     /**
      * Gets the client token for the current app. This will be null unless explicitly set or unless
      * loadDefaultsFromMetadata has been called.
-     *
      * @return the client token
      */
     public static String getClientToken() {
@@ -745,7 +736,6 @@ public final class FacebookSdk {
 
     /**
      * Sets the Facebook client token for the current app.
-     *
      * @param clientToken the client token
      */
     public static void setClientToken(String clientToken) {
@@ -754,7 +744,6 @@ public final class FacebookSdk {
 
     /**
      * Gets the theme used by {@link com.facebook.internal.WebDialog}
-     *
      * @return the theme
      */
     public static int getWebDialogTheme() {
@@ -764,7 +753,6 @@ public final class FacebookSdk {
 
     /**
      * Sets the theme used by {@link com.facebook.internal.WebDialog}
-     *
      * @param theme A theme to use
      */
     public static void setWebDialogTheme(int theme) {
@@ -784,7 +772,6 @@ public final class FacebookSdk {
 
     /**
      * Sets the cache directory to use for caching responses, etc.
-     *
      * @param cacheDir the cache directory
      */
     public static void setCacheDir(File cacheDir) {

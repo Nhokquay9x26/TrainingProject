@@ -1,15 +1,15 @@
 /**
  * Copyright (c) 2014-present, Facebook, Inc. All rights reserved.
- * <p/>
+ *
  * You are hereby granted a non-exclusive, worldwide, royalty-free license to use,
  * copy, modify, and distribute this software in source code or binary form for use
  * in connection with the web services and APIs provided by Facebook.
- * <p/>
+ *
  * As with any software that integrates with the Facebook platform, your use of
  * this software is subject to the Facebook Developer Principles and Policies
  * [http://developers.facebook.com/policy/]. This copyright notice shall be
  * included in all copies or substantial portions of the software.
- * <p/>
+ *
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
  * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
  * FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
@@ -47,18 +47,18 @@ public final class Validate {
 
     private static final String NO_INTERNET_PERMISSION_REASON =
             "No internet permissions granted for the app, please add " +
-                    "<uses-permission android:name=\"android.permission.INTERNET\" /> " +
-                    "to your AndroidManifest.xml.";
+            "<uses-permission android:name=\"android.permission.INTERNET\" /> " +
+            "to your AndroidManifest.xml.";
 
     private static final String FACEBOOK_ACTIVITY_NOT_FOUND_REASON =
             "FacebookActivity is not declared in the AndroidManifest.xml, please add " +
-                    "com.facebook.FacebookActivity to your AndroidManifest.xml file. See " +
-                    "https://developers.facebook.com/docs/android/getting-started for more info.";
+            "com.facebook.FacebookActivity to your AndroidManifest.xml file. See " +
+            "https://developers.facebook.com/docs/android/getting-started for more info.";
 
     private static final String CONTENT_PROVIDER_NOT_FOUND_REASON =
             "A ContentProvider for this app was not set up in the AndroidManifest.xml, please " +
-                    "add %s as a provider to your AndroidManifest.xml file. See " +
-                    "https://developers.facebook.com/docs/sharing/android for more info.";
+            "add %s as a provider to your AndroidManifest.xml file. See " +
+            "https://developers.facebook.com/docs/sharing/android for more info.";
 
     private static final String CONTENT_PROVIDER_BASE = "com.facebook.app.FacebookContentProvider";
 
@@ -135,7 +135,7 @@ public final class Validate {
         if (!FacebookSdk.isInitialized()) {
             throw new FacebookSdkNotInitializedException(
                     "The SDK has not been initialized, make sure to call " +
-                            "FacebookSdk.sdkInitialize() first.");
+                    "FacebookSdk.sdkInitialize() first.");
         }
     }
 

@@ -1,15 +1,15 @@
 /**
  * Copyright (c) 2014-present, Facebook, Inc. All rights reserved.
- * <p/>
+ *
  * You are hereby granted a non-exclusive, worldwide, royalty-free license to use,
  * copy, modify, and distribute this software in source code or binary form for use
  * in connection with the web services and APIs provided by Facebook.
- * <p/>
+ *
  * As with any software that integrates with the Facebook platform, your use of
  * this software is subject to the Facebook Developer Principles and Policies
  * [http://developers.facebook.com/policy/]. This copyright notice shall be
  * included in all copies or substantial portions of the software.
- * <p/>
+ *
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
  * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
  * FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
@@ -66,7 +66,6 @@ public class GameRequestDialog
 
         /**
          * Returns the request ID.
-         *
          * @return the request ID.
          */
         public String getRequestId() {
@@ -75,7 +74,6 @@ public class GameRequestDialog
 
         /**
          * Returns request recipients.
-         *
          * @return request recipients
          */
         public List<String> getRequestRecipients() {
@@ -103,7 +101,7 @@ public class GameRequestDialog
      * Shows a {@link GameRequestDialog} to send a request, using
      * the passed in activity. No callback will be invoked.
      *
-     * @param activity           Activity hosting the dialog.
+     * @param activity Activity hosting the dialog.
      * @param gameRequestContent Content of the request.
      */
     public static void show(final Activity activity, final GameRequestContent gameRequestContent) {
@@ -114,7 +112,7 @@ public class GameRequestDialog
      * Shows a {@link GameRequestDialog} to send a request, using
      * the passed in activity. No callback will be invoked.
      *
-     * @param fragment           Fragment hosting the dialog.
+     * @param fragment Fragment hosting the dialog.
      * @param gameRequestContent Content of the request.
      */
     public static void show(final Fragment fragment, final GameRequestContent gameRequestContent) {
@@ -123,7 +121,6 @@ public class GameRequestDialog
 
     /**
      * Constructs a new RequestDialog.
-     *
      * @param activity Activity hosting the dialog.
      */
     public GameRequestDialog(Activity activity) {
@@ -132,7 +129,6 @@ public class GameRequestDialog
 
     /**
      * Constructs a new RequestDialog.
-     *
      * @param fragment Fragment hosting the dialog.
      */
     public GameRequestDialog(Fragment fragment) {
@@ -156,7 +152,7 @@ public class GameRequestDialog
             }
         };
 
-        callbackManager.registerCallback(
+       callbackManager.registerCallback(
                 getRequestCode(),
                 new CallbackManagerImpl.Callback() {
                     @Override

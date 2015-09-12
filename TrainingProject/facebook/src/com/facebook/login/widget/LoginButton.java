@@ -1,15 +1,15 @@
 /**
  * Copyright (c) 2014-present, Facebook, Inc. All rights reserved.
- * <p/>
+ *
  * You are hereby granted a non-exclusive, worldwide, royalty-free license to use,
  * copy, modify, and distribute this software in source code or binary form for use
  * in connection with the web services and APIs provided by Facebook.
- * <p/>
+ *
  * As with any software that integrates with the Facebook platform, your use of
  * this software is subject to the Facebook Developer Principles and Policies
  * [http://developers.facebook.com/policy/]. This copyright notice shall be
  * included in all copies or substantial portions of the software.
- * <p/>
+ *
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
  * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
  * FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
@@ -30,7 +30,6 @@ import android.graphics.Paint;
 import android.os.Bundle;
 import android.util.AttributeSet;
 import android.view.View;
-
 import com.facebook.*;
 import com.facebook.appevents.AppEventsLogger;
 import com.facebook.internal.AnalyticsEvents;
@@ -92,7 +91,6 @@ public class LoginButton extends FacebookButtonBase {
 
         private String stringValue;
         private int intValue;
-
         ToolTipMode(String stringValue, int value) {
             this.stringValue = stringValue;
             this.intValue = value;
@@ -605,7 +603,7 @@ public class LoginButton extends FacebookButtonBase {
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         Paint.FontMetrics fontMetrics = getPaint().getFontMetrics();
         int height = (getCompoundPaddingTop() +
-                (int) Math.ceil(Math.abs(fontMetrics.top) + Math.abs(fontMetrics.bottom)) +
+                (int)Math.ceil(Math.abs(fontMetrics.top) + Math.abs(fontMetrics.bottom)) +
                 getCompoundPaddingBottom());
 
         final Resources resources = getResources();

@@ -1,15 +1,15 @@
 /**
  * Copyright (c) 2014-present, Facebook, Inc. All rights reserved.
- * <p/>
+ *
  * You are hereby granted a non-exclusive, worldwide, royalty-free license to use,
  * copy, modify, and distribute this software in source code or binary form for use
  * in connection with the web services and APIs provided by Facebook.
- * <p/>
+ *
  * As with any software that integrates with the Facebook platform, your use of
  * this software is subject to the Facebook Developer Principles and Policies
  * [http://developers.facebook.com/policy/]. This copyright notice shall be
  * included in all copies or substantial portions of the software.
- * <p/>
+ *
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
  * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
  * FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
@@ -23,7 +23,6 @@ package com.facebook;
 import com.facebook.internal.FacebookRequestErrorClassification;
 import com.facebook.internal.Logger;
 import com.facebook.internal.Utility;
-
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -183,7 +182,7 @@ public class GraphResponse {
      *
      * @param direction enum indicating whether to page forward or backward
      * @return a Request that will retrieve the next page of results in the desired
-     * direction, or null if no paging information is available
+     *         direction, or null if no paging information is available
      */
     public GraphRequest getRequestForPagedResults(PagingDirection direction) {
         String link = null;
@@ -432,16 +431,16 @@ public class GraphResponse {
                     NON_JSON_RESPONSE_PROPERTY);
 
             if (body instanceof JSONObject) {
-                return new GraphResponse(request, connection, body.toString(), (JSONObject) body);
+                return new GraphResponse(request, connection, body.toString(), (JSONObject)body);
             } else if (body instanceof JSONArray) {
-                return new GraphResponse(request, connection, body.toString(), (JSONArray) body);
+                return new GraphResponse(request, connection, body.toString(), (JSONArray)body);
             }
             // We didn't get a body we understand how to handle, so pretend we got nothing.
             object = JSONObject.NULL;
         }
 
         if (object == JSONObject.NULL) {
-            return new GraphResponse(request, connection, object.toString(), (JSONObject) null);
+            return new GraphResponse(request, connection, object.toString(), (JSONObject)null);
         } else {
             throw new FacebookException("Got unexpected object type in response, class: "
                     + object.getClass().getSimpleName());

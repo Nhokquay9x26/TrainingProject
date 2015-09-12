@@ -1,15 +1,15 @@
 /**
  * Copyright (c) 2014-present, Facebook, Inc. All rights reserved.
- * <p/>
+ *
  * You are hereby granted a non-exclusive, worldwide, royalty-free license to use,
  * copy, modify, and distribute this software in source code or binary form for use
  * in connection with the web services and APIs provided by Facebook.
- * <p/>
+ *
  * As with any software that integrates with the Facebook platform, your use of
  * this software is subject to the Facebook Developer Principles and Policies
  * [http://developers.facebook.com/policy/]. This copyright notice shall be
  * included in all copies or substantial portions of the software.
- * <p/>
+ *
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
  * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
  * FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
@@ -22,7 +22,6 @@ package com.facebook;
 
 import com.facebook.internal.FacebookRequestErrorClassification;
 import com.facebook.internal.Utility;
-
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -42,9 +41,7 @@ import java.util.Set;
  */
 public final class FacebookRequestError {
 
-    /**
-     * Represents an invalid or unknown error code from the server.
-     */
+    /** Represents an invalid or unknown error code from the server. */
     public static final int INVALID_ERROR_CODE = -1;
 
     /**
@@ -128,7 +125,7 @@ public final class FacebookRequestError {
         boolean isLocalException = false;
         if (exception != null) {
             this.exception = exception;
-            isLocalException = true;
+            isLocalException =  true;
         } else {
             this.exception = new FacebookServiceException(this, errorMessage);
         }
@@ -239,7 +236,6 @@ public final class FacebookRequestError {
 
     /**
      * Returns the message that can be displayed to the user before attempting error recovery.
-     *
      * @return the message that can be displayed to the user before attempting error recovery
      */
     public String getErrorRecoveryMessage() {
@@ -368,8 +364,8 @@ public final class FacebookRequestError {
                         errorMessage = error.optString(ERROR_MESSAGE_FIELD_KEY, null);
                         errorCode = error.optInt(ERROR_CODE_FIELD_KEY, INVALID_ERROR_CODE);
                         errorSubCode = error.optInt(ERROR_SUB_CODE_KEY, INVALID_ERROR_CODE);
-                        errorUserMessage = error.optString(ERROR_USER_MSG_KEY, null);
-                        errorUserTitle = error.optString(ERROR_USER_TITLE_KEY, null);
+                        errorUserMessage =  error.optString(ERROR_USER_MSG_KEY, null);
+                        errorUserTitle =  error.optString(ERROR_USER_TITLE_KEY, null);
                         errorIsTransient = error.optBoolean(ERROR_IS_TRANSIENT_KEY, false);
                         hasError = true;
                     } else if (jsonBody.has(ERROR_CODE_KEY) || jsonBody.has(ERROR_MSG_KEY)
@@ -459,7 +455,5 @@ public final class FacebookRequestError {
          * Indicates that the error is transient, the request can be attempted again.
          */
         TRANSIENT,
-    }
-
-    ;
+    };
 }

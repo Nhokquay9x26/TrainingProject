@@ -1,15 +1,15 @@
 /**
  * Copyright (c) 2014-present, Facebook, Inc. All rights reserved.
- * <p/>
+ *
  * You are hereby granted a non-exclusive, worldwide, royalty-free license to use,
  * copy, modify, and distribute this software in source code or binary form for use
  * in connection with the web services and APIs provided by Facebook.
- * <p/>
+ *
  * As with any software that integrates with the Facebook platform, your use of
  * this software is subject to the Facebook Developer Principles and Policies
  * [http://developers.facebook.com/policy/]. This copyright notice shall be
  * included in all copies or substantial portions of the software.
- * <p/>
+ *
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
  * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
  * FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
@@ -23,7 +23,6 @@ package com.facebook.internal;
 import com.facebook.FacebookException;
 import com.facebook.internal.NativeProtocol;
 import com.facebook.internal.Validate;
-
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -42,7 +41,7 @@ import java.util.Locale;
  * This class provides utility methods that are useful in graph API interactions.
  */
 public class GraphUtil {
-    private static final String[] dateFormats = new String[]{
+    private static final String[] dateFormats = new String[] {
             "yyyy-MM-dd'T'HH:mm:ssZ",
             "yyyy-MM-dd'T'HH:mm:ss",
             "yyyy-MM-dd",
@@ -50,7 +49,6 @@ public class GraphUtil {
 
     /**
      * Creates a JSONObject for an open graph action that is suitable for posting.
-     *
      * @param type the Open Graph action type for the object, or null if it will be specified later
      * @return a JSONObject
      */
@@ -71,7 +69,6 @@ public class GraphUtil {
 
     /**
      * Creates a JSONObject for an open graph object that is suitable for posting.
-     *
      * @param type the Open Graph object type for the object, or null if it will be specified later
      * @return a JSONObject
      */
@@ -81,14 +78,13 @@ public class GraphUtil {
 
     /**
      * Creates a JSONObject for an open graph object that is suitable for posting.
-     *
-     * @param type             the Open Graph object type for the object, or null if it will be specified later
-     * @param title            the title of the object, or null if it will be specified later
-     * @param imageUrl         the URL of an image associated with the object, or null
-     * @param url              the URL associated with the object, or null
-     * @param description      the description of the object, or null
+     * @param type the Open Graph object type for the object, or null if it will be specified later
+     * @param title the title of the object, or null if it will be specified later
+     * @param imageUrl the URL of an image associated with the object, or null
+     * @param url the URL associated with the object, or null
+     * @param description the description of the object, or null
      * @param objectProperties the properties of the open graph object
-     * @param id               the id of the object if the post is for update
+     * @param id the id of the object if the post is for update
      * @return a JSONObject
      */
     public static JSONObject createOpenGraphObjectForPost(
@@ -133,7 +129,6 @@ public class GraphUtil {
 
     /**
      * Determines if the open graph object is for posting
-     *
      * @param object The open graph object to check
      * @return True if the open graph object was created for posting
      */

@@ -1,15 +1,15 @@
 /**
  * Copyright (c) 2014-present, Facebook, Inc. All rights reserved.
- * <p/>
+ *
  * You are hereby granted a non-exclusive, worldwide, royalty-free license to use,
  * copy, modify, and distribute this software in source code or binary form for use
  * in connection with the web services and APIs provided by Facebook.
- * <p/>
+ *
  * As with any software that integrates with the Facebook platform, your use of
  * this software is subject to the Facebook Developer Principles and Policies
  * [http://developers.facebook.com/policy/]. This copyright notice shall be
  * included in all copies or substantial portions of the software.
- * <p/>
+ *
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
  * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
  * FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
@@ -55,7 +55,7 @@ import java.util.Map;
 import java.util.Set;
 
 class LoginClient implements Parcelable {
-    LoginMethodHandler[] handlersToTry;
+    LoginMethodHandler [] handlersToTry;
     int currentHandler = -1;
     Fragment fragment;
     OnCompletedListener onCompletedListener;
@@ -153,7 +153,7 @@ class LoginClient implements Parcelable {
         return false;
     }
 
-    private LoginMethodHandler[] getHandlersToTry(Request request) {
+    private LoginMethodHandler [] getHandlersToTry(Request request) {
         ArrayList<LoginMethodHandler> handlers = new ArrayList<LoginMethodHandler>();
 
         final LoginBehavior behavior = request.getLoginBehavior();
@@ -167,7 +167,7 @@ class LoginClient implements Parcelable {
             handlers.add(new WebViewLoginMethodHandler(this));
         }
 
-        LoginMethodHandler[] result = new LoginMethodHandler[handlers.size()];
+        LoginMethodHandler [] result = new LoginMethodHandler[handlers.size()];
         handlers.toArray(result);
         return result;
     }
@@ -235,9 +235,9 @@ class LoginClient implements Parcelable {
         LoginMethodHandler handler = getCurrentHandler();
         if (handler.needsInternetPermission() && !checkInternetPermission()) {
             addLoggingExtra(
-                    LoginLogger.EVENT_EXTRAS_MISSING_INTERNET_PERMISSION,
-                    AppEventsConstants.EVENT_PARAM_VALUE_YES,
-                    false
+                LoginLogger.EVENT_EXTRAS_MISSING_INTERNET_PERMISSION,
+                AppEventsConstants.EVENT_PARAM_VALUE_YES,
+                false
             );
             return false;
         }
@@ -250,9 +250,9 @@ class LoginClient implements Parcelable {
             // We didn't try it, so we don't get any other completion
             // notification -- log that we skipped it.
             addLoggingExtra(
-                    LoginLogger.EVENT_EXTRAS_NOT_TRIED,
+                LoginLogger.EVENT_EXTRAS_NOT_TRIED,
                     handler.getNameForLogging(),
-                    true
+                true
             );
         }
 
@@ -360,7 +360,7 @@ class LoginClient implements Parcelable {
 
     private LoginLogger getLogger() {
         if (loginLogger == null ||
-                !loginLogger.getApplicationId().equals(pendingRequest.getApplicationId())) {
+            !loginLogger.getApplicationId().equals(pendingRequest.getApplicationId())) {
 
             loginLogger = new LoginLogger(getActivity(), pendingRequest.getApplicationId());
         }
@@ -512,7 +512,7 @@ class LoginClient implements Parcelable {
             dest.writeString(defaultAudience != null ? defaultAudience.name() : null);
             dest.writeString(applicationId);
             dest.writeString(authId);
-            dest.writeByte((byte) (isRerequest ? 1 : 0));
+            dest.writeByte((byte)(isRerequest ? 1 : 0));
         }
 
         public static final Parcelable.Creator<Request> CREATOR = new Parcelable.Creator() {
@@ -687,7 +687,7 @@ class LoginClient implements Parcelable {
             if (status == null) {
                 continue;
             }
-            if (status.equals("granted")) {
+            if(status.equals("granted")) {
                 grantedPermissions.add(permission);
             } else if (status.equals("declined")) {
                 declinedPermissions.add(permission);
@@ -700,7 +700,7 @@ class LoginClient implements Parcelable {
     // Parcelable implementation
 
     public LoginClient(Parcel source) {
-        Object[] o = source.readParcelableArray(LoginMethodHandler.class.getClassLoader());
+        Object [] o = source.readParcelableArray(LoginMethodHandler.class.getClassLoader());
         handlersToTry = new LoginMethodHandler[o.length];
         for (int i = 0; i < o.length; ++i) {
             handlersToTry[i] = (LoginMethodHandler) o[i];

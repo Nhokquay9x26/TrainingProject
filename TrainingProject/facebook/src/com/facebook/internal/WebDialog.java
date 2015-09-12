@@ -1,15 +1,15 @@
 /**
  * Copyright (c) 2014-present, Facebook, Inc. All rights reserved.
- * <p/>
+ *
  * You are hereby granted a non-exclusive, worldwide, royalty-free license to use,
  * copy, modify, and distribute this software in source code or binary form for use
  * in connection with the web services and APIs provided by Facebook.
- * <p/>
+ *
  * As with any software that integrates with the Facebook platform, your use of
  * this software is subject to the Facebook Developer Principles and Policies
  * [http://developers.facebook.com/policy/]. This copyright notice shall be
  * included in all copies or substantial portions of the software.
- * <p/>
+ *
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
  * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
  * FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
@@ -41,7 +41,6 @@ import android.webkit.WebViewClient;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-
 import com.facebook.*;
 import com.facebook.R;
 
@@ -51,7 +50,7 @@ import java.util.Locale;
  * com.facebook.internal is solely for the use of other packages within the Facebook SDK for
  * Android. Use of any of the classes in this package is unsupported, and they may be modified or
  * removed without warning at any time.
- * <p/>
+ *
  * This class provides a mechanism for displaying Facebook Web dialogs inside a Dialog. Helper
  * methods are provided to construct commonly-used dialogs, or a caller can specify arbitrary
  * parameters to call other dialogs.
@@ -137,7 +136,7 @@ public class WebDialog extends Dialog {
      * @param action     the portion of the dialog URL following "dialog/"
      * @param parameters parameters which will be included as part of the URL
      * @param theme      identifier of a theme to pass to the Dialog class
-     * @param listener   the listener to notify, or null if no notification is desired
+     * @param listener the listener to notify, or null if no notification is desired
      */
     public WebDialog(Context context, String action, Bundle parameters, int theme, OnCompleteListener listener) {
         super(context, theme == 0 ? DEFAULT_THEME : theme);
@@ -314,10 +313,9 @@ public class WebDialog extends Dialog {
 
     /**
      * Returns a scaled size (either width or height) based on the parameters passed.
-     *
-     * @param screenSize     a pixel dimension of the screen (either width or height)
-     * @param density        density of the screen
-     * @param noPaddingSize  the size at which there's no padding for the dialog
+     * @param screenSize a pixel dimension of the screen (either width or height)
+     * @param density density of the screen
+     * @param noPaddingSize the size at which there's no padding for the dialog
      * @param maxPaddingSize the size at which to apply maximum padding for the dialog
      * @return a scaled size.
      */
@@ -414,7 +412,8 @@ public class WebDialog extends Dialog {
         webView.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
-                if (!v.hasFocus()) {
+                if (!v.hasFocus())
+                {
                     v.requestFocus();
                 }
                 return false;
@@ -487,7 +486,7 @@ public class WebDialog extends Dialog {
 
         @Override
         public void onReceivedError(WebView view, int errorCode,
-                                    String description, String failingUrl) {
+                String description, String failingUrl) {
             super.onReceivedError(view, errorCode, description, failingUrl);
             sendErrorToListener(new FacebookDialogException(description, errorCode, failingUrl));
         }
@@ -543,9 +542,9 @@ public class WebDialog extends Dialog {
          * Constructor that builds a dialog using either the current access token, or the
          * application id specified in the application/meta-data.
          *
-         * @param context    the Context within which the dialog will be shown.
-         * @param action     the portion of the dialog URL following www.facebook.com/dialog/.
-         *                   See https://developers.facebook.com/docs/reference/dialogs/ for details.
+         * @param context the Context within which the dialog will be shown.
+         * @param action the portion of the dialog URL following www.facebook.com/dialog/.
+         *               See https://developers.facebook.com/docs/reference/dialogs/ for details.
          * @param parameters a Bundle containing parameters to pass as part of the URL.
          */
         public Builder(Context context, String action, Bundle parameters) {
@@ -566,11 +565,11 @@ public class WebDialog extends Dialog {
         /**
          * Constructor that builds a dialog without an authenticated user.
          *
-         * @param context       the Context within which the dialog will be shown.
+         * @param context the Context within which the dialog will be shown.
          * @param applicationId the application ID to be included in the dialog URL.
-         * @param action        the portion of the dialog URL following www.facebook.com/dialog/.
-         *                      See https://developers.facebook.com/docs/reference/dialogs/ for details.
-         * @param parameters    a Bundle containing parameters to pass as part of the URL.
+         * @param action the portion of the dialog URL following www.facebook.com/dialog/.
+         *               See https://developers.facebook.com/docs/reference/dialogs/ for details.
+         * @param parameters a Bundle containing parameters to pass as part of the URL.
          */
         public Builder(Context context, String applicationId, String action, Bundle parameters) {
             if (applicationId == null) {

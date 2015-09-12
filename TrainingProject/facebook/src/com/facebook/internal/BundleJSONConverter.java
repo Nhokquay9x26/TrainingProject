@@ -1,15 +1,15 @@
 /**
  * Copyright (c) 2014-present, Facebook, Inc. All rights reserved.
- * <p/>
+ *
  * You are hereby granted a non-exclusive, worldwide, royalty-free license to use,
  * copy, modify, and distribute this software in source code or binary form for use
  * in connection with the web services and APIs provided by Facebook.
- * <p/>
+ *
  * As with any software that integrates with the Facebook platform, your use of
  * this software is subject to the Facebook Developer Principles and Policies
  * [http://developers.facebook.com/policy/]. This copyright notice shall be
  * included in all copies or substantial portions of the software.
- * <p/>
+ *
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
  * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
  * FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
@@ -21,7 +21,6 @@
 package com.facebook.internal;
 
 import android.os.Bundle;
-
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -32,9 +31,9 @@ import java.util.*;
  * com.facebook.internal is solely for the use of other packages within the Facebook SDK for
  * Android. Use of any of the classes in this package is unsupported, and they may be modified or
  * removed without warning at any time.
- * <p/>
+ *
  * A helper class that can round trip between JSON and Bundle objects that contains the types:
- * Boolean, Integer, Long, Double, String
+ *   Boolean, Integer, Long, Double, String
  * If other types are found, an IllegalArgumentException is thrown.
  */
 public class BundleJSONConverter {
@@ -46,7 +45,7 @@ public class BundleJSONConverter {
                 bundle.putBoolean(key, (Boolean) value);
             }
 
-            public void setOnJSON(JSONObject json, String key, Object value) throws JSONException {
+            public void setOnJSON(JSONObject json, String key, Object value)  throws JSONException {
                 json.put(key, value);
             }
         });
@@ -55,7 +54,7 @@ public class BundleJSONConverter {
                 bundle.putInt(key, (Integer) value);
             }
 
-            public void setOnJSON(JSONObject json, String key, Object value) throws JSONException {
+            public void setOnJSON(JSONObject json, String key, Object value)  throws JSONException {
                 json.put(key, value);
             }
         });
@@ -64,7 +63,7 @@ public class BundleJSONConverter {
                 bundle.putLong(key, (Long) value);
             }
 
-            public void setOnJSON(JSONObject json, String key, Object value) throws JSONException {
+            public void setOnJSON(JSONObject json, String key, Object value)  throws JSONException {
                 json.put(key, value);
             }
         });
@@ -73,7 +72,7 @@ public class BundleJSONConverter {
                 bundle.putDouble(key, (Double) value);
             }
 
-            public void setOnJSON(JSONObject json, String key, Object value) throws JSONException {
+            public void setOnJSON(JSONObject json, String key, Object value)  throws JSONException {
                 json.put(key, value);
             }
         });
@@ -82,7 +81,7 @@ public class BundleJSONConverter {
                 bundle.putString(key, (String) value);
             }
 
-            public void setOnJSON(JSONObject json, String key, Object value) throws JSONException {
+            public void setOnJSON(JSONObject json, String key, Object value)  throws JSONException {
                 json.put(key, value);
             }
         });
@@ -91,9 +90,9 @@ public class BundleJSONConverter {
                 throw new IllegalArgumentException("Unexpected type from JSON");
             }
 
-            public void setOnJSON(JSONObject json, String key, Object value) throws JSONException {
+            public void setOnJSON(JSONObject json, String key, Object value)  throws JSONException {
                 JSONArray jsonArray = new JSONArray();
-                for (String stringValue : (String[]) value) {
+                for (String stringValue : (String[])value) {
                     jsonArray.put(stringValue);
                 }
                 json.put(key, jsonArray);
@@ -102,7 +101,7 @@ public class BundleJSONConverter {
 
         SETTERS.put(JSONArray.class, new Setter() {
             public void setOnBundle(Bundle bundle, String key, Object value) throws JSONException {
-                JSONArray jsonArray = (JSONArray) value;
+                JSONArray jsonArray = (JSONArray)value;
                 ArrayList<String> stringArrayList = new ArrayList<String>();
                 // Empty list, can't even figure out the type, assume an ArrayList<String>
                 if (jsonArray.length() == 0) {
@@ -114,7 +113,7 @@ public class BundleJSONConverter {
                 for (int i = 0; i < jsonArray.length(); i++) {
                     Object current = jsonArray.get(i);
                     if (current instanceof String) {
-                        stringArrayList.add((String) current);
+                        stringArrayList.add((String)current);
                     } else {
                         throw new IllegalArgumentException("Unexpected type in an array: " + current.getClass());
                     }
@@ -131,14 +130,13 @@ public class BundleJSONConverter {
 
     public interface Setter {
         public void setOnBundle(Bundle bundle, String key, Object value) throws JSONException;
-
         public void setOnJSON(JSONObject json, String key, Object value) throws JSONException;
     }
 
     public static JSONObject convertToJSON(Bundle bundle) throws JSONException {
         JSONObject json = new JSONObject();
 
-        for (String key : bundle.keySet()) {
+        for(String key : bundle.keySet()) {
             Object value = bundle.get(key);
             if (value == null) {
                 // Null is not supported.
@@ -149,7 +147,7 @@ public class BundleJSONConverter {
             if (value instanceof List<?>) {
                 JSONArray jsonArray = new JSONArray();
                 @SuppressWarnings("unchecked")
-                List<String> listValue = (List<String>) value;
+                List<String> listValue = (List<String>)value;
                 for (String stringValue : listValue) {
                     jsonArray.put(stringValue);
                 }
@@ -159,7 +157,7 @@ public class BundleJSONConverter {
 
             // Special case Bundle as it's one way, on the return it will be JSONObject
             if (value instanceof Bundle) {
-                json.put(key, convertToJSON((Bundle) value));
+                json.put(key, convertToJSON((Bundle)value));
                 continue;
             }
 
@@ -187,7 +185,7 @@ public class BundleJSONConverter {
 
             // Special case JSONObject as it's one way, on the return it would be Bundle.
             if (value instanceof JSONObject) {
-                bundle.putBundle(key, convertToBundle((JSONObject) value));
+                bundle.putBundle(key, convertToBundle((JSONObject)value));
                 continue;
             }
 

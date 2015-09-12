@@ -1,15 +1,15 @@
 /**
  * Copyright (c) 2014-present, Facebook, Inc. All rights reserved.
- * <p/>
+ *
  * You are hereby granted a non-exclusive, worldwide, royalty-free license to use,
  * copy, modify, and distribute this software in source code or binary form for use
  * in connection with the web services and APIs provided by Facebook.
- * <p/>
+ *
  * As with any software that integrates with the Facebook platform, your use of
  * this software is subject to the Facebook Developer Principles and Policies
  * [http://developers.facebook.com/policy/]. This copyright notice shall be
  * included in all copies or substantial portions of the software.
- * <p/>
+ *
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
  * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
  * FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
@@ -83,7 +83,7 @@ public final class ShareDialog
     private static final int DEFAULT_REQUEST_CODE =
             CallbackManagerImpl.RequestCodeOffset.Share.toRequestCode();
 
-    private boolean shouldFailOnDataError = false;
+    private  boolean shouldFailOnDataError = false;
     // Keep track of Mode overrides for logging purposes.
     private boolean isAutomaticMode = true;
 
@@ -91,7 +91,7 @@ public final class ShareDialog
      * Helper to show the provided {@link com.facebook.share.model.ShareContent} using the provided
      * Activity. No callback will be invoked.
      *
-     * @param activity     Activity to use to share the provided content
+     * @param activity Activity to use to share the provided content
      * @param shareContent Content to share
      */
     public static void show(
@@ -104,7 +104,7 @@ public final class ShareDialog
      * Helper to show the provided {@link com.facebook.share.model.ShareContent} using the provided
      * Fragment. No callback will be invoked.
      *
-     * @param fragment     Fragment to use to share the provided content
+     * @param fragment Fragment to use to share the provided content
      * @param shareContent Content to share
      */
     public static void show(
@@ -143,7 +143,6 @@ public final class ShareDialog
 
     /**
      * Constructs a new ShareDialog.
-     *
      * @param activity Activity to use to share the provided content.
      */
     public ShareDialog(Activity activity) {
@@ -154,7 +153,6 @@ public final class ShareDialog
 
     /**
      * Constructs a new ShareDialog.
-     *
      * @param fragment Fragment to use to share the provided content.
      */
     public ShareDialog(Fragment fragment) {
@@ -207,7 +205,6 @@ public final class ShareDialog
 
     /**
      * Call this to show the Share Dialog in a specific mode
-     *
      * @param mode Mode of the Share Dialog
      */
     public void show(ShareContent content, Mode mode) {
@@ -297,9 +294,9 @@ public final class ShareDialog
 
             Bundle params;
             if (content instanceof ShareLinkContent) {
-                params = WebDialogParameters.create((ShareLinkContent) content);
+                params = WebDialogParameters.create((ShareLinkContent)content);
             } else {
-                params = WebDialogParameters.create((ShareOpenGraphContent) content);
+                params = WebDialogParameters.create((ShareOpenGraphContent)content);
             }
 
             DialogPresenter.setupAppCallForWebDialog(
@@ -339,11 +336,11 @@ public final class ShareDialog
             AppCall appCall = createBaseAppCall();
             Bundle params;
             if (content instanceof ShareLinkContent) {
-                ShareLinkContent linkContent = (ShareLinkContent) content;
+                ShareLinkContent linkContent = (ShareLinkContent)content;
                 ShareContentValidation.validateForWebShare(linkContent);
                 params = WebDialogParameters.createForFeed(linkContent);
             } else {
-                ShareFeedContent feedContent = (ShareFeedContent) content;
+                ShareFeedContent feedContent = (ShareFeedContent)content;
                 params = WebDialogParameters.createForFeed(feedContent);
             }
 

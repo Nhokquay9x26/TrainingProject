@@ -1,40 +1,33 @@
 package vn.asiantech.LearingEnglish.fragments;
 
 /**
- * @Author xuanphu
  * Created by xuanphu on 31/08/2015.
  */
 
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.view.View;
-import android.widget.ImageView;
 
-import org.androidannotations.annotations.*;
+import org.androidannotations.annotations.AfterViews;
+import org.androidannotations.annotations.EFragment;
+import org.androidannotations.annotations.ViewById;
 
 import java.util.ArrayList;
 
 import vn.asiantech.LearingEnglish.R;
 import vn.asiantech.LearingEnglish.adapter.HomeAdapter;
 import vn.asiantech.LearingEnglish.models.HomeCategory;
-import vn.asiantech.LearingEnglish.utils.IsCallTop;
 
-@EFragment(R.layout.fragment_home)
-public class HomeFragment extends BaseFragment implements IsCallTop {
-    @ViewById(R.id.imgBackHeaderHome)
-    ImageView mImgBackHeaderHome;
+@EFragment(R.layout.fragment_top)
+public class TopFragment extends BaseFragment {
     @ViewById(R.id.recyclerHome)
     RecyclerView mRecyclerHome;
     HomeAdapter mHomeAdapter;
-    ArrayList<HomeCategory> mArraylists = new ArrayList<>();
+    ArrayList<HomeCategory> mArraylist = new ArrayList<>();
 
-    public HomeFragment() {
-        fakedata();
-    }
     @AfterViews
     void afterViews() {
-        mImgBackHeaderHome.setVisibility(View.INVISIBLE);
-        mHomeAdapter = new HomeAdapter(getActivity(), mArraylists, this);
+        fakedata();
+        mHomeAdapter = new HomeAdapter(getActivity(), mArraylist);
         mRecyclerHome.setLayoutManager(new LinearLayoutManager(getActivity().getBaseContext()));
         mRecyclerHome.setAdapter(mHomeAdapter);
     }
@@ -46,32 +39,21 @@ public class HomeFragment extends BaseFragment implements IsCallTop {
         HomeCategory homeCategory = new HomeCategory();
         homeCategory.setMAvataHome(R.drawable.img_animal);
         homeCategory.setMNameHome("Animal");
-        mArraylists.add(homeCategory);
+        mArraylist.add(homeCategory);
 
         HomeCategory homeCategory1 = new HomeCategory();
         homeCategory1.setMAvataHome(R.drawable.img_vegetables);
         homeCategory1.setMNameHome("Vegetables");
-        mArraylists.add(homeCategory1);
+        mArraylist.add(homeCategory1);
 
         HomeCategory homeCategory2 = new HomeCategory();
         homeCategory2.setMAvataHome(R.drawable.img_transport);
         homeCategory2.setMNameHome("Transport");
-        mArraylists.add(homeCategory2);
+        mArraylist.add(homeCategory2);
 
         HomeCategory homeCategory3 = new HomeCategory();
         homeCategory3.setMAvataHome(R.drawable.img_vegetables);
         homeCategory3.setMNameHome("Vegetables");
-        mArraylists.add(homeCategory3);
+        mArraylist.add(homeCategory3);
     }
-
-    @Override
-    public void callFragmentAnimal() {
-        AnimalFragment_ mFragment = new AnimalFragment_();
-        android.support.v4.app.FragmentManager fragmentManager = getFragmentManager();
-        android.support.v4.app.FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction().addToBackStack(null);
-        fragmentTransaction.replace(R.id.framlayoutTop, mFragment);
-        fragmentTransaction.commit();
-
-    }
-
 }

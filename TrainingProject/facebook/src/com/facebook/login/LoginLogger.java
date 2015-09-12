@@ -1,15 +1,15 @@
 /**
  * Copyright (c) 2014-present, Facebook, Inc. All rights reserved.
- * <p/>
+ *
  * You are hereby granted a non-exclusive, worldwide, royalty-free license to use,
  * copy, modify, and distribute this software in source code or binary form for use
  * in connection with the web services and APIs provided by Facebook.
- * <p/>
+ *
  * As with any software that integrates with the Facebook platform, your use of
  * this software is subject to the Facebook Developer Principles and Policies
  * [http://developers.facebook.com/policy/]. This copyright notice shall be
  * included in all copies or substantial portions of the software.
- * <p/>
+ *
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
  * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
  * FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
@@ -129,7 +129,7 @@ class LoginLogger {
     }
 
     public void logCompleteLogin(String loginRequestId, Map<String, String> loggingExtras,
-                                 LoginClient.Result.Code result, Map<String, String> resultExtras, Exception exception) {
+        LoginClient.Result.Code result, Map<String, String> resultExtras, Exception exception) {
 
         Bundle bundle = newAuthorizationLoggingBundle(loginRequestId);
         if (result != null) {
@@ -170,7 +170,7 @@ class LoginLogger {
     }
 
     public void logAuthorizationMethodComplete(String authId, String method, String result,
-                                               String errorMessage, String errorCode, Map<String, String> loggingExtras) {
+        String errorMessage, String errorCode, Map<String, String> loggingExtras) {
 
         Bundle bundle;
         bundle = LoginLogger.newAuthorizationLoggingBundle(authId);

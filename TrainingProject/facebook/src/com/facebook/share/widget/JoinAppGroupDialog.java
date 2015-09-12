@@ -1,15 +1,15 @@
 /**
  * Copyright (c) 2014-present, Facebook, Inc. All rights reserved.
- * <p/>
+ *
  * You are hereby granted a non-exclusive, worldwide, royalty-free license to use,
  * copy, modify, and distribute this software in source code or binary form for use
  * in connection with the web services and APIs provided by Facebook.
- * <p/>
+ *
  * As with any software that integrates with the Facebook platform, your use of
  * this software is subject to the Facebook Developer Principles and Policies
  * [http://developers.facebook.com/policy/]. This copyright notice shall be
  * included in all copies or substantial portions of the software.
- * <p/>
+ *
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
  * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
  * FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
@@ -60,7 +60,6 @@ public class JoinAppGroupDialog extends FacebookDialogBase<String, JoinAppGroupD
 
         /**
          * Returns the result data from the dialog;
-         *
          * @return the result data.
          */
         public Bundle getData() {
@@ -82,7 +81,7 @@ public class JoinAppGroupDialog extends FacebookDialogBase<String, JoinAppGroupD
      * the passed in activity. No callback will be invoked.
      *
      * @param activity Activity hosting the dialog
-     * @param groupId  Id of the group to join
+     * @param groupId Id of the group to join
      */
     public static void show(
             final Activity activity,
@@ -95,7 +94,7 @@ public class JoinAppGroupDialog extends FacebookDialogBase<String, JoinAppGroupD
      * the passed in fragment. No callback will be invoked.
      *
      * @param fragment Fragment hosting the dialog
-     * @param groupId  Id of the group to join
+     * @param groupId Id of the group to join
      */
     public static void show(
             final Fragment fragment,
@@ -105,7 +104,6 @@ public class JoinAppGroupDialog extends FacebookDialogBase<String, JoinAppGroupD
 
     /**
      * Constructs a JoinAppGroupDialog.
-     *
      * @param activity Activity hosting the dialog.
      */
     public JoinAppGroupDialog(final Activity activity) {
@@ -114,7 +112,6 @@ public class JoinAppGroupDialog extends FacebookDialogBase<String, JoinAppGroupD
 
     /**
      * Constructs a JoinAppGroupDialog.
-     *
      * @param fragment Fragment hosting the dialog.
      */
     public JoinAppGroupDialog(final Fragment fragment) {
@@ -122,7 +119,7 @@ public class JoinAppGroupDialog extends FacebookDialogBase<String, JoinAppGroupD
     }
 
     @Override
-    protected void registerCallbackImpl(
+    protected void registerCallbackImpl (
             final CallbackManagerImpl callbackManager,
             final FacebookCallback<Result> callback) {
         final ResultProcessor resultProcessor = (callback == null)

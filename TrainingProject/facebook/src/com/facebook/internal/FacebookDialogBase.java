@@ -1,15 +1,15 @@
 /**
  * Copyright (c) 2014-present, Facebook, Inc. All rights reserved.
- * <p/>
+ *
  * You are hereby granted a non-exclusive, worldwide, royalty-free license to use,
  * copy, modify, and distribute this software in source code or binary form for use
  * in connection with the web services and APIs provided by Facebook.
- * <p/>
+ *
  * As with any software that integrates with the Facebook platform, your use of
  * this software is subject to the Facebook Developer Principles and Policies
  * [http://developers.facebook.com/policy/]. This copyright notice shall be
  * included in all copies or substantial portions of the software.
- * <p/>
+ *
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
  * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
  * FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
@@ -76,7 +76,7 @@ public abstract class FacebookDialogBase<CONTENT, RESULT>
             throw new FacebookException("Unexpected CallbackManager, " +
                     "please use the provided Factory.");
         }
-        registerCallbackImpl((CallbackManagerImpl) callbackManager, callback);
+        registerCallbackImpl((CallbackManagerImpl)callbackManager, callback);
     }
 
     @Override
@@ -99,13 +99,13 @@ public abstract class FacebookDialogBase<CONTENT, RESULT>
      *
      * @param requestCode the request code to use.
      */
-    protected void setRequestCode(int requestCode) {
-        if (FacebookSdk.isFacebookRequestCode(requestCode)) {
-            throw new IllegalArgumentException("Request code " + requestCode +
-                    " cannot be within the range reserved by the Facebook SDK.");
-        }
-        this.requestCode = requestCode;
-    }
+     protected void setRequestCode(int requestCode) {
+         if (FacebookSdk.isFacebookRequestCode(requestCode)) {
+             throw new IllegalArgumentException("Request code " + requestCode +
+                     " cannot be within the range reserved by the Facebook SDK.");
+         }
+         this.requestCode = requestCode;
+     }
 
     /**
      * Returns the request code used for this dialog.
@@ -116,7 +116,7 @@ public abstract class FacebookDialogBase<CONTENT, RESULT>
         return requestCode;
     }
 
-    @Override
+     @Override
     public boolean canShow(CONTENT content) {
         return canShowImpl(content, BASE_AUTOMATIC_MODE);
     }

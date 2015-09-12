@@ -1,15 +1,15 @@
 /**
  * Copyright (c) 2014-present, Facebook, Inc. All rights reserved.
- * <p/>
+ *
  * You are hereby granted a non-exclusive, worldwide, royalty-free license to use,
  * copy, modify, and distribute this software in source code or binary form for use
  * in connection with the web services and APIs provided by Facebook.
- * <p/>
+ *
  * As with any software that integrates with the Facebook platform, your use of
  * this software is subject to the Facebook Developer Principles and Policies
  * [http://developers.facebook.com/policy/]. This copyright notice shall be
  * included in all copies or substantial portions of the software.
- * <p/>
+ *
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
  * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
  * FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
@@ -25,7 +25,7 @@ import android.support.annotation.Nullable;
 
 /**
  * Provides the interface for video content to be shared.
- * <p/>
+ *
  * A general use builder is available in
  * {@link ShareVideoContent.Builder}.
  */
@@ -61,7 +61,6 @@ public final class ShareVideoContent
 
     /**
      * The description of the video.
-     *
      * @return The description of the video.
      */
     @Nullable
@@ -71,7 +70,6 @@ public final class ShareVideoContent
 
     /**
      * The title to display for this video.
-     *
      * @return The video title.
      */
     @Nullable
@@ -81,7 +79,6 @@ public final class ShareVideoContent
 
     /**
      * Photo to be used as a preview for the video.
-     *
      * @return Preview {@link SharePhoto} for the content.
      */
     @Nullable
@@ -91,7 +88,6 @@ public final class ShareVideoContent
 
     /**
      * Video to be shared.
-     *
      * @return {@link ShareVideo}
      */
     @Nullable
@@ -133,7 +129,6 @@ public final class ShareVideoContent
 
         /**
          * Sets the description of the video.
-         *
          * @param contentDescription The description of the video.
          * @return The builder.
          */
@@ -145,7 +140,6 @@ public final class ShareVideoContent
 
         /**
          * Sets the title to display for this video.
-         *
          * @param contentTitle The video title.
          * @return The builder.
          */
@@ -156,21 +150,19 @@ public final class ShareVideoContent
 
         /**
          * Sets the photo to be used as a preview for the video.
-         *
          * @param previewPhoto Preview {@link com.facebook.share.model.SharePhoto} for the content.
          * @return The builder.
          */
         public Builder setPreviewPhoto(@Nullable final SharePhoto previewPhoto) {
             this.previewPhoto = (
                     previewPhoto == null ?
-                            null :
-                            new SharePhoto.Builder().readFrom(previewPhoto).build());
+                    null :
+                    new SharePhoto.Builder().readFrom(previewPhoto).build());
             return this;
         }
 
         /**
          * Sets the video to be shared.
-         *
          * @param video {@link com.facebook.share.model.ShareVideo}
          * @return The builder.
          */
@@ -204,7 +196,7 @@ public final class ShareVideoContent
 
         @Override
         public Builder readFrom(final Parcel parcel) {
-            return this.readFrom((ShareVideoContent) parcel.readParcelable(
+            return this.readFrom((ShareVideoContent)parcel.readParcelable(
                     ShareVideoContent.class.getClassLoader()));
         }
 

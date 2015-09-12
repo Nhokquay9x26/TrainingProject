@@ -3,7 +3,6 @@ package vn.asiantech.LearingEnglish.models;
 import android.util.Log;
 
 import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Created by tantv on 28/08/2015.
@@ -25,19 +24,23 @@ public class ApplicationData {
     static String questionD[] = {"of", "timely", "allocated", "No, He is wonderful", "any", "under", "unnecessary"};
     static String selectionTrue[] = {"A", "C", "B", "D", "D", "C", "B"};
 
-    public static void getDataQuestion(ArrayList<Question> questionData) {
+    public static ArrayList<Question> getDataQuestion() {
+        ArrayList<Question> questions = new ArrayList<>();
         Question question;
         for (int i = 0; i < dataQuestion.length; i++) {
             question = new Question(dataQuestion[i], questionA[i], questionB[i], questionC[i], questionD[i], 0);
-            questionData.add(question);
+            questions.add(question);
             Log.d("Size1", i + "");
         }
+        return questions;
     }
 
-    public static void getSelectionTrue(ArrayList<String> listSelection) {
+    public static ArrayList<String> getSelectionTrue() {
+        ArrayList<String> listSelection = new ArrayList<>();
         for (int i = 0; i < selectionTrue.length; i++) {
             listSelection.add(selectionTrue[i]);
         }
+        return listSelection;
     }
 
     static int rankID[] = {1, 2, 3, 4, 5};
@@ -55,7 +58,6 @@ public class ApplicationData {
         return rankings;
     }
 
-
     public static ArrayList<NumberTesting> getNumberTestings() {
         ArrayList<NumberTesting> numberTestings = new ArrayList<>();
         NumberTesting numberTesting;
@@ -66,4 +68,3 @@ public class ApplicationData {
         return numberTestings;
     }
 }
-

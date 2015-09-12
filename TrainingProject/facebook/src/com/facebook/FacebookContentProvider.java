@@ -1,15 +1,15 @@
 /**
  * Copyright (c) 2014-present, Facebook, Inc. All rights reserved.
- * <p/>
+ *
  * You are hereby granted a non-exclusive, worldwide, royalty-free license to use,
  * copy, modify, and distribute this software in source code or binary form for use
  * in connection with the web services and APIs provided by Facebook.
- * <p/>
+ *
  * As with any software that integrates with the Facebook platform, your use of
  * this software is subject to the Facebook Developer Principles and Policies
  * [http://developers.facebook.com/policy/]. This copyright notice shall be
  * included in all copies or substantial portions of the software.
- * <p/>
+ *
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
  * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
  * FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
@@ -62,7 +62,6 @@ public class FacebookContentProvider extends ContentProvider {
 
     /**
      * Returns the name of the content provider formatted correctly for constructing URLs.
-     *
      * @param applicationId the Facebook application ID of the application
      * @return the String to use as the authority portion of a content URI.
      */
@@ -135,7 +134,7 @@ public class FacebookContentProvider extends ContentProvider {
             // NullPointerExceptions or array bounds exceptions, which we'll catch and return null.
             // All of these will result in a FileNotFoundException being thrown in openFile.
             String callIdAndAttachmentName = uri.getPath().substring(1);
-            String[] parts = callIdAndAttachmentName.split("/");
+            String [] parts = callIdAndAttachmentName.split("/");
 
             String callIdString = parts[0];
             String attachmentName = parts[1];

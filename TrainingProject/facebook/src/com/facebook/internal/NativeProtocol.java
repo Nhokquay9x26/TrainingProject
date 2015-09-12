@@ -1,15 +1,15 @@
 /**
  * Copyright (c) 2014-present, Facebook, Inc. All rights reserved.
- * <p/>
+ *
  * You are hereby granted a non-exclusive, worldwide, royalty-free license to use,
  * copy, modify, and distribute this software in source code or binary form for use
  * in connection with the web services and APIs provided by Facebook.
- * <p/>
+ *
  * As with any software that integrates with the Facebook platform, your use of
  * this software is subject to the Facebook Developer Principles and Policies
  * [http://developers.facebook.com/policy/]. This copyright notice shall be
  * included in all copies or substantial portions of the software.
- * <p/>
+ *
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
  * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
  * FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
@@ -29,7 +29,6 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.text.TextUtils;
-
 import com.facebook.FacebookException;
 import com.facebook.FacebookOperationCanceledException;
 import com.facebook.FacebookSdk;
@@ -108,14 +107,14 @@ public final class NativeProtocol {
     public static final String RESULT_ARGS_DIALOG_COMPLETION_GESTURE_KEY = "completionGesture";
 
     // Messages supported by PlatformService:
-    public static final int MESSAGE_GET_ACCESS_TOKEN_REQUEST = 0x10000;
-    public static final int MESSAGE_GET_ACCESS_TOKEN_REPLY = 0x10001;
-    static final int MESSAGE_GET_PROTOCOL_VERSIONS_REQUEST = 0x10002;
-    static final int MESSAGE_GET_PROTOCOL_VERSIONS_REPLY = 0x10003;
-    public static final int MESSAGE_GET_INSTALL_DATA_REQUEST = 0x10004;
-    public static final int MESSAGE_GET_INSTALL_DATA_REPLY = 0x10005;
-    public static final int MESSAGE_GET_LIKE_STATUS_REQUEST = 0x10006;
-    public static final int MESSAGE_GET_LIKE_STATUS_REPLY = 0x10007;
+    public static final int MESSAGE_GET_ACCESS_TOKEN_REQUEST    = 0x10000;
+    public static final int MESSAGE_GET_ACCESS_TOKEN_REPLY      = 0x10001;
+    static final int MESSAGE_GET_PROTOCOL_VERSIONS_REQUEST      = 0x10002;
+    static final int MESSAGE_GET_PROTOCOL_VERSIONS_REPLY        = 0x10003;
+    public static final int MESSAGE_GET_INSTALL_DATA_REQUEST    = 0x10004;
+    public static final int MESSAGE_GET_INSTALL_DATA_REPLY      = 0x10005;
+    public static final int MESSAGE_GET_LIKE_STATUS_REQUEST     = 0x10006;
+    public static final int MESSAGE_GET_LIKE_STATUS_REPLY       = 0x10007;
 
     // MESSAGE_ERROR_REPLY data keys:
     // See STATUS_*
@@ -775,7 +774,7 @@ public final class NativeProtocol {
         Context appContext = FacebookSdk.getApplicationContext();
         ContentResolver contentResolver = appContext.getContentResolver();
 
-        String[] projection = new String[]{PLATFORM_PROVIDER_VERSION_COLUMN};
+        String [] projection = new String[]{ PLATFORM_PROVIDER_VERSION_COLUMN };
         Uri uri = buildPlatformProviderVersionURI(appInfo);
         Cursor c = null;
         try {

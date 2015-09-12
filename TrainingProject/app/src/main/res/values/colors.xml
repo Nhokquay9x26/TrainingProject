@@ -1,11 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="main">#377EB0</color>
-    <color name="TextView.background_get_pass_color">#00F5FF</color>
-    <color name="EditText.text_email_color">#00F5FF</color>
-    <color name="Button.background_forgot_pass_color">#00F5FF</color>
-
-
     <color name="background_header_login">#00b9e6</color>
     <color name="text_signin">#ffffff</color>
     <color name="text_forgotPassword">#00b9e6</color>
@@ -37,5 +32,4 @@
     <color name="setting.name.profile.color">#FF6699</color>
     <color name="setting.line.color">#bbbbbb</color>
     <color name="setting.line2.color">#bbbbbb</color>
-    <color name="color.question">#FFFFFF</color>
 </resources>

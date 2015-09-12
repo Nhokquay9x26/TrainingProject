@@ -1,15 +1,15 @@
 /**
  * Copyright (c) 2014-present, Facebook, Inc. All rights reserved.
- * <p/>
+ *
  * You are hereby granted a non-exclusive, worldwide, royalty-free license to use,
  * copy, modify, and distribute this software in source code or binary form for use
  * in connection with the web services and APIs provided by Facebook.
- * <p/>
+ *
  * As with any software that integrates with the Facebook platform, your use of
  * this software is subject to the Facebook Developer Principles and Policies
  * [http://developers.facebook.com/policy/]. This copyright notice shall be
  * included in all copies or substantial portions of the software.
- * <p/>
+ *
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
  * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
  * FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
@@ -28,7 +28,6 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v4.content.LocalBroadcastManager;
 import android.util.Log;
-
 import bolts.AppLinks;
 
 import com.facebook.AccessToken;
@@ -284,11 +283,11 @@ public class AppEventsLogger {
         if ((context instanceof Activity)) {
             setSourceApplication((Activity) context);
         } else {
-            // If context is not an Activity, we cannot get intent nor calling activity.
-            resetSourceApplication();
-            Log.d(AppEventsLogger.class.getName(),
-                    "To set source application the context of activateApp must be an instance of" +
-                            " Activity");
+          // If context is not an Activity, we cannot get intent nor calling activity.
+          resetSourceApplication();
+          Log.d(AppEventsLogger.class.getName(),
+              "To set source application the context of activateApp must be an instance of" +
+                      " Activity");
         }
 
         // activateApp supersedes publishInstall in the public API, so we need to explicitly invoke
@@ -311,7 +310,7 @@ public class AppEventsLogger {
      * Notifies the events system that the app has been deactivated (put in the background) and
      * tracks the application session information. Should be called whenever your app becomes
      * inactive, typically in the onPause() method of each long-running Activity of your app.
-     * <p/>
+     *
      * Use this method if your application ID is stored in application metadata, otherwise see
      * {@link AppEventsLogger#deactivateApp(android.content.Context, String)}.
      *
@@ -376,7 +375,7 @@ public class AppEventsLogger {
     /**
      * Build an AppEventsLogger instance to log events through.
      *
-     * @param context     Used to access the attributionId for non-authenticated users.
+     * @param context Used to access the attributionId for non-authenticated users.
      * @param accessToken Access token to use for logging events. If null, the active access token
      *                    will be used, if any; if not the logging will happen against the default
      *                    app ID specified in the package metadata.
@@ -599,7 +598,6 @@ public class AppEventsLogger {
 
     /**
      * Determines if the logger is valid for the given access token.
-     *
      * @param accessToken The access token to check.
      * @return True if the access token is valid for this logger.
      */
@@ -1113,7 +1111,6 @@ public class AppEventsLogger {
     /**
      * Each app/device pair gets an GUID that is sent back with App Events and persisted with this
      * app/device pair.
-     *
      * @param context The application context.
      * @return The GUID for this app/device pair.
      */
@@ -1389,11 +1386,11 @@ public class AppEventsLogger {
                     identifier = "<None Provided>";
                 }
                 throw new FacebookException(
-                        String.format(
-                                Locale.ROOT,
-                                "Identifier '%s' must be less than %d characters",
-                                identifier,
-                                MAX_IDENTIFIER_LENGTH)
+                    String.format(
+                            Locale.ROOT,
+                            "Identifier '%s' must be less than %d characters",
+                            identifier,
+                            MAX_IDENTIFIER_LENGTH)
                 );
             }
 

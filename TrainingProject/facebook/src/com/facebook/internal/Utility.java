@@ -1,15 +1,15 @@
 /**
  * Copyright (c) 2014-present, Facebook, Inc. All rights reserved.
- * <p/>
+ *
  * You are hereby granted a non-exclusive, worldwide, royalty-free license to use,
  * copy, modify, and distribute this software in source code or binary form for use
  * in connection with the web services and APIs provided by Facebook.
- * <p/>
+ *
  * As with any software that integrates with the Facebook platform, your use of
  * this software is subject to the Facebook Developer Principles and Policies
  * [http://developers.facebook.com/policy/]. This copyright notice shall be
  * included in all copies or substantial portions of the software.
- * <p/>
+ *
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
  * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
  * FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
@@ -1316,7 +1316,6 @@ public final class Utility {
 
     /**
      * Return our best guess at the available number of cores. Will always return at least 1.
-     *
      * @return The minimum number of CPU cores
      */
     private static int refreshBestGuessNumberOfCPUCores() {
@@ -1377,7 +1376,6 @@ public final class Utility {
 
     /**
      * Get and cache the carrier name since this won't change during the lifetime of the app.
-     *
      * @return The carrier name
      */
     private static void refreshCarrierName(Context appContext) {
@@ -1406,7 +1404,7 @@ public final class Utility {
                 File path = Environment.getExternalStorageDirectory();
                 StatFs stat = new StatFs(path.getPath());
                 availableExternalStorageGB =
-                        (long) stat.getAvailableBlocks() * (long) stat.getBlockSize();
+                        (long)stat.getAvailableBlocks() * (long)stat.getBlockSize();
             }
             availableExternalStorageGB =
                     Utility.convertBytesToGB(availableExternalStorageGB);
@@ -1422,7 +1420,7 @@ public final class Utility {
             if (externalStorageExists()) {
                 File path = Environment.getExternalStorageDirectory();
                 StatFs stat = new StatFs(path.getPath());
-                totalExternalStorageGB = (long) stat.getBlockCount() * (long) stat.getBlockSize();
+                totalExternalStorageGB = (long)stat.getBlockCount() * (long)stat.getBlockSize();
             }
             totalExternalStorageGB = Utility.convertBytesToGB(totalExternalStorageGB);
         } catch (Exception e) {

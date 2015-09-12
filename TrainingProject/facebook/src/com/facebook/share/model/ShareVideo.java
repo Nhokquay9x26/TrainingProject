@@ -1,15 +1,15 @@
 /**
  * Copyright (c) 2014-present, Facebook, Inc. All rights reserved.
- * <p/>
+ *
  * You are hereby granted a non-exclusive, worldwide, royalty-free license to use,
  * copy, modify, and distribute this software in source code or binary form for use
  * in connection with the web services and APIs provided by Facebook.
- * <p/>
+ *
  * As with any software that integrates with the Facebook platform, your use of
  * this software is subject to the Facebook Developer Principles and Policies
  * [http://developers.facebook.com/policy/]. This copyright notice shall be
  * included in all copies or substantial portions of the software.
- * <p/>
+ *
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
  * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
  * FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
@@ -26,7 +26,7 @@ import android.support.annotation.Nullable;
 
 /**
  * Describes a video for sharing.
- * <p/>
+ *
  * Use {@link ShareVideo.Builder} to create instances
  */
 public final class ShareVideo extends ShareMedia {
@@ -44,7 +44,6 @@ public final class ShareVideo extends ShareMedia {
 
     /**
      * This method supplies the URL to locate the video.
-     *
      * @return {@link android.net.Uri} that points to the location of the video on disk.
      */
     @Nullable
@@ -80,7 +79,6 @@ public final class ShareVideo extends ShareMedia {
 
         /**
          * Sets the URL to locate the video.
-         *
          * @param localUrl {@link android.net.Uri} that points to the location of the video on disk.
          * @return The builder.
          */

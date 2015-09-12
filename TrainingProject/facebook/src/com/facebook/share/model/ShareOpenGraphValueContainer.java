@@ -1,15 +1,15 @@
 /**
  * Copyright (c) 2014-present, Facebook, Inc. All rights reserved.
- * <p/>
+ *
  * You are hereby granted a non-exclusive, worldwide, royalty-free license to use,
  * copy, modify, and distribute this software in source code or binary form for use
  * in connection with the web services and APIs provided by Facebook.
- * <p/>
+ *
  * As with any software that integrates with the Facebook platform, your use of
  * this software is subject to the Facebook Developer Principles and Policies
  * [http://developers.facebook.com/policy/]. This copyright notice shall be
  * included in all copies or substantial portions of the software.
- * <p/>
+ *
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
  * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
  * FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
@@ -30,7 +30,7 @@ import java.util.Set;
 
 /**
  * Provides an abstract class to contain Open Graph values.
- * <p/>
+ *
  * Use {@link ShareOpenGraphValueContainer.Builder} to create instances
  */
 public abstract class ShareOpenGraphValueContainer
@@ -41,7 +41,7 @@ public abstract class ShareOpenGraphValueContainer
     protected ShareOpenGraphValueContainer(
             final Builder<P, E> builder) {
         super();
-        this.bundle = (Bundle) builder.bundle.clone();
+        this.bundle = (Bundle)builder.bundle.clone();
     }
 
     ShareOpenGraphValueContainer(final Parcel in) {
@@ -50,7 +50,6 @@ public abstract class ShareOpenGraphValueContainer
 
     /**
      * Gets a value out of the object.
-     *
      * @param key The key for the value.
      * @return The boolean value.
      */
@@ -61,8 +60,7 @@ public abstract class ShareOpenGraphValueContainer
 
     /**
      * Gets a boolean value out of the object.
-     *
-     * @param key          The key for the value.
+     * @param key The key for the value.
      * @param defaultValue The value to return if no value is found for the specified key.
      * @return The boolean value.
      */
@@ -72,7 +70,6 @@ public abstract class ShareOpenGraphValueContainer
 
     /**
      * Gets an array of boolean values out of the object.
-     *
      * @param key The key for the value.
      * @return The boolean values.
      */
@@ -83,8 +80,7 @@ public abstract class ShareOpenGraphValueContainer
 
     /**
      * Gets a double value out of the object.
-     *
-     * @param key          The key for the value.
+     * @param key The key for the value.
      * @param defaultValue The value to return if no value is found for the specified key.
      * @return The double value.
      */
@@ -94,7 +90,6 @@ public abstract class ShareOpenGraphValueContainer
 
     /**
      * Gets an array of double values out of the object.
-     *
      * @param key The key for the value.
      * @return The double values.
      */
@@ -105,8 +100,7 @@ public abstract class ShareOpenGraphValueContainer
 
     /**
      * Gets an int value out of the object.
-     *
-     * @param key          The key for the value.
+     * @param key The key for the value.
      * @param defaultValue The value to return if no value is found for the specified key.
      * @return The int value.
      */
@@ -116,7 +110,6 @@ public abstract class ShareOpenGraphValueContainer
 
     /**
      * Gets an array of int values out of the object.
-     *
      * @param key The key for the value.
      * @return The int values.
      */
@@ -127,8 +120,7 @@ public abstract class ShareOpenGraphValueContainer
 
     /**
      * Gets an long value out of the object.
-     *
-     * @param key          The key for the value.
+     * @param key The key for the value.
      * @param defaultValue The value to return if no value is found for the specified key.
      * @return The long value.
      */
@@ -138,7 +130,6 @@ public abstract class ShareOpenGraphValueContainer
 
     /**
      * Gets an array of long values out of the object.
-     *
      * @param key The key for the value.
      * @return The long values.
      */
@@ -149,18 +140,16 @@ public abstract class ShareOpenGraphValueContainer
 
     /**
      * Gets an object value out of the object.
-     *
      * @param key The key for the value.
      * @return The object value.
      */
     public ShareOpenGraphObject getObject(final String key) {
         final Object value = this.bundle.get(key);
-        return (value instanceof ShareOpenGraphObject ? (ShareOpenGraphObject) value : null);
+        return (value instanceof ShareOpenGraphObject ? (ShareOpenGraphObject)value : null);
     }
 
     /**
      * Gets an array of object values out of the object.
-     *
      * @param key The key for the value.
      * @return The object values.
      */
@@ -173,7 +162,7 @@ public abstract class ShareOpenGraphValueContainer
         final ArrayList<ShareOpenGraphObject> list = new ArrayList<ShareOpenGraphObject>();
         for (Parcelable item : items) {
             if (item instanceof ShareOpenGraphObject) {
-                list.add((ShareOpenGraphObject) item);
+                list.add((ShareOpenGraphObject)item);
             }
         }
         return list;
@@ -181,19 +170,17 @@ public abstract class ShareOpenGraphValueContainer
 
     /**
      * Gets a photo value out of the object.
-     *
      * @param key The key for the value.
      * @return The photo value.
      */
     @Nullable
     public SharePhoto getPhoto(final String key) {
         final Object value = this.bundle.getParcelable(key);
-        return (value instanceof SharePhoto ? (SharePhoto) value : null);
+        return (value instanceof SharePhoto ? (SharePhoto)value : null);
     }
 
     /**
      * Gets an array of photo values out of the object.
-     *
      * @param key The key for the value.
      * @return The photo values.
      */
@@ -206,7 +193,7 @@ public abstract class ShareOpenGraphValueContainer
         final ArrayList<SharePhoto> list = new ArrayList<SharePhoto>();
         for (Parcelable item : items) {
             if (item instanceof SharePhoto) {
-                list.add((SharePhoto) item);
+                list.add((SharePhoto)item);
             }
         }
         return list;
@@ -214,7 +201,6 @@ public abstract class ShareOpenGraphValueContainer
 
     /**
      * Gets a string value out of the object.
-     *
      * @param key The key for the value.
      * @return The string value.
      */
@@ -225,7 +211,6 @@ public abstract class ShareOpenGraphValueContainer
 
     /**
      * Gets an array of string values out of the object.
-     *
      * @param key The key for the value.
      * @return The string values.
      */
@@ -236,16 +221,14 @@ public abstract class ShareOpenGraphValueContainer
 
     /**
      * Returns the values in the container packaged in a bundle.
-     *
      * @return A bundle with the values.
      */
     public Bundle getBundle() {
-        return (Bundle) this.bundle.clone();
+        return (Bundle)this.bundle.clone();
     }
 
     /**
      * Returns a set of the keys contained in this object.
-     *
      * @return A set of the keys.
      */
     public Set<String> keySet() {
@@ -270,116 +253,106 @@ public abstract class ShareOpenGraphValueContainer
 
         /**
          * Sets a boolean value in the object.
-         *
-         * @param key   The key for the value.
+         * @param key The key for the value.
          * @param value The value.
          * @return The builder.
          */
         public E putBoolean(final String key, final boolean value) {
             this.bundle.putBoolean(key, value);
-            return (E) this;
+            return (E)this;
         }
 
         /**
          * Sets an array of boolean values in the object.
-         *
-         * @param key   The key for the value.
+         * @param key The key for the value.
          * @param value The value.
          * @return The builder.
          */
         public E putBooleanArray(final String key, @Nullable final boolean[] value) {
             this.bundle.putBooleanArray(key, value);
-            return (E) this;
+            return (E)this;
         }
 
         /**
          * Sets a double value in the object.
-         *
-         * @param key   The key for the value.
+         * @param key The key for the value.
          * @param value The value.
          * @return The builder.
          */
         public E putDouble(final String key, final double value) {
             this.bundle.putDouble(key, value);
-            return (E) this;
+            return (E)this;
         }
 
         /**
          * Sets an array of double values in the object.
-         *
-         * @param key   The key for the value.
+         * @param key The key for the value.
          * @param value The value.
          * @return The builder.
          */
         public E putDoubleArray(final String key, @Nullable final double[] value) {
             this.bundle.putDoubleArray(key, value);
-            return (E) this;
+            return (E)this;
         }
 
         /**
          * Sets an int value in the object.
-         *
-         * @param key   The key for the value.
+         * @param key The key for the value.
          * @param value The value.
          * @return The builder.
          */
         public E putInt(final String key, final int value) {
             this.bundle.putInt(key, value);
-            return (E) this;
+            return (E)this;
         }
 
         /**
          * Sets an array of int values in the object.
-         *
-         * @param key   The key for the value.
+         * @param key The key for the value.
          * @param value The value.
          * @return The builder.
          */
         public E putIntArray(final String key, @Nullable final int[] value) {
             this.bundle.putIntArray(key, value);
-            return (E) this;
+            return (E)this;
         }
 
         /**
          * Sets a long value in the object.
-         *
-         * @param key   The key for the value.
+         * @param key The key for the value.
          * @param value The value.
          * @return The builder.
          */
         public E putLong(final String key, final long value) {
             this.bundle.putLong(key, value);
-            return (E) this;
+            return (E)this;
         }
 
         /**
          * Sets an array of long values in the object.
-         *
-         * @param key   The key for the value.
+         * @param key The key for the value.
          * @param value The value.
          * @return The builder.
          */
         public E putLongArray(final String key, @Nullable final long[] value) {
             this.bundle.putLongArray(key, value);
-            return (E) this;
+            return (E)this;
         }
 
         /**
          * Sets an object value in the object.
-         *
-         * @param key   The key for the value.
+         * @param key The key for the value.
          * @param value The value.
          * @return The builder.
          */
         public E putObject(final String key, @Nullable final ShareOpenGraphObject value) {
             this.bundle.putParcelable(key, value);
-            return (E) this;
+            return (E)this;
         }
 
         /**
          * Sets an array of object values in the object.
-         *
-         * @param key   The key for the value.
+         * @param key The key for the value.
          * @param value The value.
          * @return The builder.
          */
@@ -387,25 +360,23 @@ public abstract class ShareOpenGraphValueContainer
                 final String key,
                 @Nullable final ArrayList<ShareOpenGraphObject> value) {
             this.bundle.putParcelableArrayList(key, value);
-            return (E) this;
+            return (E)this;
         }
 
         /**
          * Sets a photo value in the object.
-         *
-         * @param key   The key for the value.
+         * @param key The key for the value.
          * @param value The value.
          * @return The builder.
          */
         public E putPhoto(final String key, @Nullable final SharePhoto value) {
             this.bundle.putParcelable(key, value);
-            return (E) this;
+            return (E)this;
         }
 
         /**
          * Sets an array of photo values in the object.
-         *
-         * @param key   The key for the value.
+         * @param key The key for the value.
          * @param value The value.
          * @return The builder.
          */
@@ -416,8 +387,7 @@ public abstract class ShareOpenGraphValueContainer
 
         /**
          * Sets a string value in the object.
-         *
-         * @param key   The key for the value.
+         * @param key The key for the value.
          * @param value The value.
          * @return The builder.
          */
@@ -428,8 +398,7 @@ public abstract class ShareOpenGraphValueContainer
 
         /**
          * Sets an array of string values in the object.
-         *
-         * @param key   The key for the value.
+         * @param key The key for the value.
          * @param value The value.
          * @return The builder.
          */
@@ -443,7 +412,7 @@ public abstract class ShareOpenGraphValueContainer
             if (model != null) {
                 this.bundle.putAll(model.getBundle());
             }
-            return (E) this;
+            return (E)this;
         }
     }
 }

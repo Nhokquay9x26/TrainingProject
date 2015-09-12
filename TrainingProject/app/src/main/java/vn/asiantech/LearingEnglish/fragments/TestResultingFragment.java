@@ -20,7 +20,7 @@ import vn.asiantech.LearingEnglish.activities.TestingActivity_;
 import vn.asiantech.LearingEnglish.adapter.TestResultingAdapter;
 import vn.asiantech.LearingEnglish.models.ApplicationData;
 import vn.asiantech.LearingEnglish.models.Question;
-import vn.asiantech.LearingEnglish.models.SomeOtherFunction;
+import vn.asiantech.LearingEnglish.models.FunctionModel;
 
 /**
  * Created by tantv on 01/09/2015.
@@ -50,12 +50,12 @@ public class TestResultingFragment extends Fragment {
         configRecycleView();
         mQuestionDatas = new ArrayList<Question>();
         mListSelections = new ArrayList<>();
-        ApplicationData.getSelectionTrue(mListSelections);
         if (getActivity() instanceof TestingActivity_) {
             mQuestionDatas = ((TestingActivity_) getActivity()).getMQuestionDatas();
+            mListSelections = ((TestingActivity_) getActivity()).getMListSelections();
         }
-        resultUser();
-        SomeOtherFunction.changeTextViewToTwoColor(mTvTotalResult,"Total: ",totalSelectionTrueUser() + "/" + mIsResultUser.size(), Color.RED,Color.BLACK);
+        FunctionModel.resultUser(mQuestionDatas,mListSelections);
+        FunctionModel.changeTextViewToTwoColor(mTvTotalResult, "Total: ", totalSelectionTrueUser() + "/" + mIsResultUser.size(), Color.RED, Color.BLACK);
         mRecycleViewResult.setHasFixedSize(true);
         // use a linear layout manager
         mLayoutManager = new LinearLayoutManager(getActivity());
@@ -67,49 +67,10 @@ public class TestResultingFragment extends Fragment {
 
     @Click(R.id.imgShare)
     void imgShareClicked() {
-
         if (getActivity() instanceof TestingActivity_) {
             ((TestingActivity_) getActivity()).shareFaceBook();
         }
     }
-
-    /**
-     * Calculate return result for user
-     */
-    private void resultUser() {
-        mIsResultUser = new ArrayList<Boolean>();
-        for (int id = 0; id < mQuestionDatas.size(); id++) {
-            String selection;
-            switch (mQuestionDatas.get(id).getSelectionUser()) {
-                case 1: {
-                    selection = "A";
-                    break;
-                }
-                case 2: {
-                    selection = "B";
-                    break;
-                }
-                case 3: {
-                    selection = "C";
-                    break;
-                }
-                case 4: {
-                    selection = "D";
-                    break;
-                }
-                default:
-                    selection = "";
-            }
-            if (selection.equals(mListSelections.get(id))) {
-                mIsResultUser.add(true);
-            } else {
-                mIsResultUser.add(false);
-            }
-            Log.d("Ketqua " + id + ": ", mIsResultUser.get(id) + "");
-        }
-
-    }
-
 
     /**
      * Config recyclerView
@@ -134,7 +95,4 @@ public class TestResultingFragment extends Fragment {
         }
         return count;
     }
-
-
 }
-

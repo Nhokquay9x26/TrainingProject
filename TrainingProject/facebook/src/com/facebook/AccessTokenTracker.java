@@ -1,15 +1,15 @@
 /**
  * Copyright (c) 2014-present, Facebook, Inc. All rights reserved.
- * <p/>
+ *
  * You are hereby granted a non-exclusive, worldwide, royalty-free license to use,
  * copy, modify, and distribute this software in source code or binary form for use
  * in connection with the web services and APIs provided by Facebook.
- * <p/>
+ *
  * As with any software that integrates with the Facebook platform, your use of
  * this software is subject to the Facebook Developer Principles and Policies
  * [http://developers.facebook.com/policy/]. This copyright notice shall be
  * included in all copies or substantial portions of the software.
- * <p/>
+ *
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
  * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
  * FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
@@ -42,8 +42,7 @@ public abstract class AccessTokenTracker {
 
     /**
      * The method that will be called with the access token changes.
-     *
-     * @param oldAccessToken     The access token before the change.
+     * @param oldAccessToken The access token before the change.
      * @param currentAccessToken The new access token.
      */
     protected abstract void onCurrentAccessTokenChanged(AccessToken oldAccessToken,
@@ -89,7 +88,6 @@ public abstract class AccessTokenTracker {
 
     /**
      * Gets whether the tracker is tracking the current access token.
-     *
      * @return true if the tracker is tracking the current access token, false if not
      */
     public boolean isTracking() {

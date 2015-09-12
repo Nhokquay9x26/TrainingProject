@@ -1,15 +1,15 @@
 /**
  * Copyright (c) 2014-present, Facebook, Inc. All rights reserved.
- * <p/>
+ *
  * You are hereby granted a non-exclusive, worldwide, royalty-free license to use,
  * copy, modify, and distribute this software in source code or binary form for use
  * in connection with the web services and APIs provided by Facebook.
- * <p/>
+ *
  * As with any software that integrates with the Facebook platform, your use of
  * this software is subject to the Facebook Developer Principles and Policies
  * [http://developers.facebook.com/policy/]. This copyright notice shall be
  * included in all copies or substantial portions of the software.
- * <p/>
+ *
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
  * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
  * FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
@@ -156,7 +156,7 @@ public final class AccessToken implements Parcelable {
     /**
      * Updates the current access token with up to date permissions,
      * and extends the expiration date, if extension is possible.
-     * <p/>
+     *
      * This function must be run from the UI thread.
      */
     public static void refreshCurrentAccessTokenAsync() {
@@ -289,31 +289,31 @@ public final class AccessToken implements Parcelable {
         // Old versions of facebook for android don't provide the UserId. Obtain the id if missing
         if (userId == null || userId.isEmpty()) {
             Utility.getGraphMeRequestWithCacheAsync(accessToken,
-                    new Utility.GraphMeRequestWithCacheCallback() {
-                        @Override
-                        public void onSuccess(JSONObject userInfo) {
-                            try {
-                                String userId = userInfo.getString("id");
-                                extras.putString(USER_ID_KEY, userId);
-                                accessTokenCallback.onSuccess(createFromBundle(
-                                        null,
-                                        extras,
-                                        AccessTokenSource.FACEBOOK_APPLICATION_WEB,
-                                        new Date(),
-                                        applicationId));
-                            } catch (JSONException ex) {
-                                accessTokenCallback.onError(
-                                        new FacebookException(
-                                                "Unable to generate access token due to missing user id"));
-                            }
-
+                new Utility.GraphMeRequestWithCacheCallback() {
+                    @Override
+                    public void onSuccess(JSONObject userInfo) {
+                        try {
+                            String userId = userInfo.getString("id");
+                            extras.putString(USER_ID_KEY, userId);
+                            accessTokenCallback.onSuccess(createFromBundle(
+                                    null,
+                                    extras,
+                                    AccessTokenSource.FACEBOOK_APPLICATION_WEB,
+                                    new Date(),
+                                    applicationId));
+                        } catch (JSONException ex) {
+                            accessTokenCallback.onError(
+                                    new FacebookException(
+                                        "Unable to generate access token due to missing user id"));
                         }
 
-                        @Override
-                        public void onFailure(FacebookException error) {
-                            accessTokenCallback.onError(error);
-                        }
-                    });
+                    }
+
+                    @Override
+                    public void onFailure(FacebookException error) {
+                        accessTokenCallback.onError(error);
+                    }
+                });
         } else {
             accessTokenCallback.onSuccess(createFromBundle(
                     null,

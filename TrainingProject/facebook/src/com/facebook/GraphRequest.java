@@ -1,15 +1,15 @@
 /**
  * Copyright (c) 2014-present, Facebook, Inc. All rights reserved.
- * <p/>
+ *
  * You are hereby granted a non-exclusive, worldwide, royalty-free license to use,
  * copy, modify, and distribute this software in source code or binary form for use
  * in connection with the web services and APIs provided by Facebook.
- * <p/>
+ *
  * As with any software that integrates with the Facebook platform, your use of
  * this software is subject to the Facebook Developer Principles and Policies
  * [http://developers.facebook.com/policy/]. This copyright notice shall be
  * included in all copies or substantial portions of the software.
- * <p/>
+ *
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
  * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
  * FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
@@ -966,7 +966,7 @@ public class GraphRequest {
      *
      * @return the Response object representing the results of the request
      * @throws FacebookException        If there was an error in the protocol used to communicate
-     *                                  with the service
+     * with the service
      * @throws IllegalArgumentException
      */
     public final GraphResponse executeAndWait() {
@@ -1625,12 +1625,12 @@ public class GraphRequest {
         if (version.startsWith("v")) {
             version = version.substring(1);
         }
-        String[] versionParts = version.split("\\.");
+        String [] versionParts = version.split("\\.");
         // We should warn on missing "fields" params for API 2.4 and above
         return versionParts.length >= 2
                 && Integer.parseInt(versionParts[0]) > 2
                 || (Integer.parseInt(versionParts[0]) >= 2
-                && Integer.parseInt(versionParts[1]) >= 4);
+                    && Integer.parseInt(versionParts[1]) >= 4);
     }
 
     final static void validateFieldsParamForGetRequests(GraphRequestBatch requests) {
@@ -1646,7 +1646,7 @@ public class GraphRequest {
                             Log.WARN,
                             "Request",
                             "starting with Graph API v2.4, GET requests for /%s should contain an" +
-                                    " explicit \"fields\" parameter.",
+                            " explicit \"fields\" parameter.",
                             request.getGraphPath()
                     );
                 }
@@ -2274,7 +2274,6 @@ public class GraphRequest {
 
     /**
      * Used during serialization for the graph request.
-     *
      * @param <RESOURCE> The Parcelable type parameter.
      */
     public static class ParcelableResourceWithMimeType<RESOURCE extends Parcelable>
@@ -2313,7 +2312,6 @@ public class GraphRequest {
 
         /**
          * The constructor.
-         *
          * @param resource The resource to parcel.
          * @param mimeType The mime type.
          */

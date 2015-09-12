@@ -1,15 +1,15 @@
 /**
  * Copyright (c) 2014-present, Facebook, Inc. All rights reserved.
- * <p/>
+ *
  * You are hereby granted a non-exclusive, worldwide, royalty-free license to use,
  * copy, modify, and distribute this software in source code or binary form for use
  * in connection with the web services and APIs provided by Facebook.
- * <p/>
+ *
  * As with any software that integrates with the Facebook platform, your use of
  * this software is subject to the Facebook Developer Principles and Policies
  * [http://developers.facebook.com/policy/]. This copyright notice shall be
  * included in all copies or substantial portions of the software.
- * <p/>
+ *
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
  * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
  * FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
@@ -29,7 +29,7 @@ import com.facebook.share.model.ShareModelBuilder;
  * com.facebook.share.internal is solely for the use of other packages within the
  * Facebook SDK for Android. Use of any of the classes in this package is
  * unsupported, and they may be modified or removed without warning at any time.
- * <p/>
+ *
  * Represents content that is set on a LikeView to allow users to like and unlike it.
  */
 public class LikeContent implements ShareModel {
@@ -84,7 +84,6 @@ public class LikeContent implements ShareModel {
 
         /**
          * Sets the object Id for the LikeView
-         *
          * @param objectId the object Id
          */
         public Builder setObjectId(final String objectId) {
@@ -94,7 +93,6 @@ public class LikeContent implements ShareModel {
 
         /**
          * Sets the type of the object for the LikeView
-         *
          * @param objectType the type of the object
          */
         public Builder setObjectType(final String objectType) {

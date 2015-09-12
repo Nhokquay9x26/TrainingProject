@@ -17,7 +17,7 @@ import java.util.ArrayList;
 import vn.asiantech.LearingEnglish.R;
 import vn.asiantech.LearingEnglish.activities.TestingActivity_;
 import vn.asiantech.LearingEnglish.models.Question;
-import vn.asiantech.LearingEnglish.models.SomeOtherFunction;
+import vn.asiantech.LearingEnglish.models.FunctionModel;
 
 /**
  * Created by tantv on 28/08/2015.
@@ -82,7 +82,7 @@ public class TestingFragment extends Fragment {
         if (isCheckDisable) {
             disableRadioButtonGroup();
             if (getActivity() instanceof TestingActivity_) {
-                mListSelection = ((TestingActivity_) getActivity()).getMListSelection();
+                mListSelection = ((TestingActivity_) getActivity()).getMListSelections();
                 mFragmentCurrentDisplay = ((TestingActivity_) getActivity()).getMFragmentCurrentDisplay();
                 Log.d("setText LR:  ", "NEW FRAGMENT"+mFragmentCurrentDisplay);
                 mLeftRight = ((TestingActivity_) getActivity()).getMLeftRight();
@@ -110,7 +110,7 @@ public class TestingFragment extends Fragment {
         String selectionB = getArguments().getString(EXTRA_MESSAGE_SELECTIONB);
         String selectionC = getArguments().getString(EXTRA_MESSAGE_SELECTIONC);
         String selectionD = getArguments().getString(EXTRA_MESSAGE_SELECTIOND);
-        SomeOtherFunction.changeTextViewToTwoColor(mTvDetailQuestion, "Question " + numberQuestion + ": ", question, Color.RED, Color.BLACK);
+        FunctionModel.changeTextViewToTwoColor(mTvDetailQuestion, "Question " + numberQuestion + ": ", question, Color.RED, Color.BLACK);
         mRbA.setText(selectionA);
         mRbB.setText(selectionB);
         mRbC.setText(selectionC);
@@ -126,7 +126,7 @@ public class TestingFragment extends Fragment {
      */
     public void setTextColorFragment(int i) {
         if (getActivity() instanceof TestingActivity_) {
-            mListSelection = ((TestingActivity_) getActivity()).getMListSelection();
+            mListSelection = ((TestingActivity_) getActivity()).getMListSelections();
             setTextColorRadioButtonTrue(mListSelection.get(i));
         }
 

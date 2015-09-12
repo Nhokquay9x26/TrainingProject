@@ -1,15 +1,15 @@
 /**
  * Copyright (c) 2014-present, Facebook, Inc. All rights reserved.
- * <p/>
+ *
  * You are hereby granted a non-exclusive, worldwide, royalty-free license to use,
  * copy, modify, and distribute this software in source code or binary form for use
  * in connection with the web services and APIs provided by Facebook.
- * <p/>
+ *
  * As with any software that integrates with the Facebook platform, your use of
  * this software is subject to the Facebook Developer Principles and Policies
  * [http://developers.facebook.com/policy/]. This copyright notice shall be
  * included in all copies or substantial portions of the software.
- * <p/>
+ *
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
  * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
  * FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
@@ -39,7 +39,7 @@ import java.util.UUID;
  * com.facebook.internal is solely for the use of other packages within the Facebook SDK for
  * Android. Use of any of the classes in this package is unsupported, and they may be modified or
  * removed without warning at any time.
- * <p/>
+ *
  * <p>This class works in conjunction with {@link com.facebook.FacebookContentProvider} to allow
  * apps to attach binary attachments (e.g., images) to native dialogs launched via the sdk.It stores
  * attachments in temporary files and allows the Facebook application to retrieve them via the
@@ -50,8 +50,7 @@ public final class NativeAppCallAttachmentStore {
     static final String ATTACHMENTS_DIR_NAME = "com.facebook.NativeAppCallAttachmentStore.files";
     private static File attachmentsDirectory;
 
-    private NativeAppCallAttachmentStore() {
-    }
+    private NativeAppCallAttachmentStore() {}
 
     public static Attachment createAttachment(UUID callId, Bitmap attachmentBitmap) {
         Validate.notNull(callId, "callId");
@@ -262,9 +261,9 @@ public final class NativeAppCallAttachmentStore {
             attachmentUrl = !shouldCreateFile
                     ? this.originalUri.toString()
                     : FacebookContentProvider.getAttachmentUrl(
-                    FacebookSdk.getApplicationId(),
-                    callId,
-                    attachmentName);
+                            FacebookSdk.getApplicationId(),
+                            callId,
+                            attachmentName);
         }
 
         public String getAttachmentUrl() {

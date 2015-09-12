@@ -1,15 +1,15 @@
 /**
  * Copyright (c) 2014-present, Facebook, Inc. All rights reserved.
- * <p/>
+ *
  * You are hereby granted a non-exclusive, worldwide, royalty-free license to use,
  * copy, modify, and distribute this software in source code or binary form for use
  * in connection with the web services and APIs provided by Facebook.
- * <p/>
+ *
  * As with any software that integrates with the Facebook platform, your use of
  * this software is subject to the Facebook Developer Principles and Policies
  * [http://developers.facebook.com/policy/]. This copyright notice shall be
  * included in all copies or substantial portions of the software.
- * <p/>
+ *
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
  * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
  * FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
@@ -31,7 +31,6 @@ import android.util.Log;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
-
 import com.facebook.FacebookException;
 import com.facebook.LoggingBehavior;
 import com.facebook.R;
@@ -50,8 +49,7 @@ public class ProfilePictureView extends FrameLayout {
     public interface OnErrorListener {
         /**
          * Called when a network or other error is encountered.
-         *
-         * @param error a FacebookException representing the error that was encountered.
+         * @param error     a FacebookException representing the error that was encountered.
          */
         void onError(FacebookException error);
     }
@@ -217,7 +215,7 @@ public class ProfilePictureView extends FrameLayout {
      * Sets the profile Id for this profile photo
      *
      * @param profileId The profileId
-     *                  NULL/Empty String will show the blank profile photo
+     *               NULL/Empty String will show the blank profile photo
      */
     public final void setProfileId(String profileId) {
         boolean force = false;
@@ -247,7 +245,7 @@ public class ProfilePictureView extends FrameLayout {
      * @param onErrorListener The Listener object to set
      */
     public final void setOnErrorListener(OnErrorListener onErrorListener) {
-        this.onErrorListener = onErrorListener;
+      this.onErrorListener = onErrorListener;
     }
 
     /**
@@ -314,7 +312,6 @@ public class ProfilePictureView extends FrameLayout {
     /**
      * Some of the current state is returned as a Bundle to allow quick restoration
      * of the ProfilePictureView object in scenarios like orientation changes.
-     *
      * @return a Parcelable containing the current state
      */
     @Override
@@ -335,7 +332,6 @@ public class ProfilePictureView extends FrameLayout {
 
     /**
      * If the passed in state is a Bundle, an attempt is made to restore from it.
-     *
      * @param state a Parcelable containing the current state
      */
     @Override
@@ -343,7 +339,7 @@ public class ProfilePictureView extends FrameLayout {
         if (state.getClass() != Bundle.class) {
             super.onRestoreInstanceState(state);
         } else {
-            Bundle instanceState = (Bundle) state;
+            Bundle instanceState = (Bundle)state;
             super.onRestoreInstanceState(instanceState.getParcelable(SUPER_STATE_KEY));
 
             profileId = instanceState.getString(PROFILE_ID_KEY);
@@ -352,7 +348,7 @@ public class ProfilePictureView extends FrameLayout {
             queryWidth = instanceState.getInt(BITMAP_WIDTH_KEY);
             queryHeight = instanceState.getInt(BITMAP_HEIGHT_KEY);
 
-            setImageBitmap((Bitmap) instanceState.getParcelable(BITMAP_KEY));
+            setImageBitmap((Bitmap)instanceState.getParcelable(BITMAP_KEY));
 
             if (instanceState.getBoolean(PENDING_REFRESH_KEY)) {
                 refreshImage(true);
@@ -445,12 +441,12 @@ public class ProfilePictureView extends FrameLayout {
         ImageRequest request = requestBuilder.setAllowCachedRedirects(allowCachedResponse)
                 .setCallerTag(this)
                 .setCallback(
-                        new ImageRequest.Callback() {
-                            @Override
-                            public void onCompleted(ImageResponse response) {
-                                processResponse(response);
-                            }
-                        })
+                new ImageRequest.Callback() {
+                    @Override
+                    public void onCompleted(ImageResponse response) {
+                        processResponse(response);
+                    }
+                })
                 .build();
 
         // Make sure to cancel the old request before sending the new one to prevent

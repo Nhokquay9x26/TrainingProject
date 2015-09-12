@@ -1,15 +1,15 @@
 /**
  * Copyright (c) 2014-present, Facebook, Inc. All rights reserved.
- * <p/>
+ *
  * You are hereby granted a non-exclusive, worldwide, royalty-free license to use,
  * copy, modify, and distribute this software in source code or binary form for use
  * in connection with the web services and APIs provided by Facebook.
- * <p/>
+ *
  * As with any software that integrates with the Facebook platform, your use of
  * this software is subject to the Facebook Developer Principles and Policies
  * [http://developers.facebook.com/policy/]. This copyright notice shall be
  * included in all copies or substantial portions of the software.
- * <p/>
+ *
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
  * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
  * FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
@@ -134,7 +134,7 @@ final class AccessTokenManager {
     }
 
     private void sendCurrentAccessTokenChangedBroadcast(AccessToken oldAccessToken,
-                                                        AccessToken currentAccessToken) {
+        AccessToken currentAccessToken) {
         Intent intent = new Intent(ACTION_CURRENT_ACCESS_TOKEN_CHANGED);
 
         intent.putExtra(EXTRA_OLD_ACCESS_TOKEN, oldAccessToken);
@@ -159,7 +159,7 @@ final class AccessTokenManager {
         return currentAccessToken.getSource().canExtendToken()
                 && now - lastAttemptedTokenExtendDate.getTime() > TOKEN_EXTEND_RETRY_SECONDS * 1000
                 && now - currentAccessToken.getLastRefresh().getTime() >
-                TOKEN_EXTEND_THRESHOLD_SECONDS * 1000;
+                    TOKEN_EXTEND_THRESHOLD_SECONDS * 1000;
     }
 
     private static GraphRequest createGrantedPermissionsRequest(

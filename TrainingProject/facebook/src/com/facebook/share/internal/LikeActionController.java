@@ -1,15 +1,15 @@
 /**
  * Copyright (c) 2014-present, Facebook, Inc. All rights reserved.
- * <p/>
+ *
  * You are hereby granted a non-exclusive, worldwide, royalty-free license to use,
  * copy, modify, and distribute this software in source code or binary form for use
  * in connection with the web services and APIs provided by Facebook.
- * <p/>
+ *
  * As with any software that integrates with the Facebook platform, your use of
  * this software is subject to the Facebook Developer Principles and Policies
  * [http://developers.facebook.com/policy/]. This copyright notice shall be
  * included in all copies or substantial portions of the software.
- * <p/>
+ *
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
  * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
  * FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
@@ -1447,7 +1447,6 @@ public class LikeActionController {
 
     private interface LikeRequestWrapper extends RequestWrapper {
         boolean isObjectLiked();
-
         String getUnlikeToken();
     }
 
@@ -1576,6 +1575,7 @@ public class LikeActionController {
     }
 
 
+
     private class GetEngagementRequestWrapper extends AbstractRequestWrapper {
         // Initialize the like status to what we currently have. This way, empty/error responses
         // don't end up clearing out the state.
@@ -1647,11 +1647,10 @@ public class LikeActionController {
 
     private interface RequestWrapper {
         FacebookRequestError getError();
-
         void addToBatch(GraphRequestBatch batch);
     }
 
-    private abstract class AbstractRequestWrapper implements RequestWrapper {
+    private abstract class AbstractRequestWrapper implements RequestWrapper{
         private GraphRequest request;
         protected String objectId;
         protected LikeView.ObjectType objectType;

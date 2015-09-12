@@ -1,15 +1,15 @@
 /**
  * Copyright (c) 2014-present, Facebook, Inc. All rights reserved.
- * <p/>
+ *
  * You are hereby granted a non-exclusive, worldwide, royalty-free license to use,
  * copy, modify, and distribute this software in source code or binary form for use
  * in connection with the web services and APIs provided by Facebook.
- * <p/>
+ *
  * As with any software that integrates with the Facebook platform, your use of
  * this software is subject to the Facebook Developer Principles and Policies
  * [http://developers.facebook.com/policy/]. This copyright notice shall be
  * included in all copies or substantial portions of the software.
- * <p/>
+ *
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
  * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
  * FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
@@ -88,7 +88,6 @@ public class LikeView extends FrameLayout {
 
         private String stringValue;
         private int intValue;
-
         private ObjectType(String stringValue, int value) {
             this.stringValue = stringValue;
             this.intValue = value;
@@ -142,7 +141,6 @@ public class LikeView extends FrameLayout {
 
         private String stringValue;
         private int intValue;
-
         private Style(String stringValue, int value) {
             this.stringValue = stringValue;
             this.intValue = value;
@@ -197,7 +195,6 @@ public class LikeView extends FrameLayout {
 
         private String stringValue;
         private int intValue;
-
         private HorizontalAlignment(String stringValue, int value) {
             this.stringValue = stringValue;
             this.intValue = value;
@@ -254,7 +251,6 @@ public class LikeView extends FrameLayout {
 
         private String stringValue;
         private int intValue;
-
         private AuxiliaryViewPosition(String stringValue, int value) {
             this.stringValue = stringValue;
             this.intValue = value;
@@ -319,7 +315,6 @@ public class LikeView extends FrameLayout {
 
     /**
      * Sets the associated object ID for this LikeView. Can be changed during runtime.
-     *
      * @param objectId The object ID, this can be a URL or a Facebook ID.
      */
     public void setObjectIdAndType(String objectId, ObjectType objectType) {
@@ -679,9 +674,9 @@ public class LikeView extends FrameLayout {
 
     private void updateLayout() {
         // Make sure the container is horizontally aligned according to specifications.
-        LayoutParams containerViewLayoutParams = (LayoutParams) containerView.getLayoutParams();
+        LayoutParams containerViewLayoutParams = (LayoutParams)containerView.getLayoutParams();
         LinearLayout.LayoutParams buttonLayoutParams =
-                (LinearLayout.LayoutParams) likeButton.getLayoutParams();
+                (LinearLayout.LayoutParams)likeButton.getLayoutParams();
         int viewGravity =
                 horizontalAlignment == HorizontalAlignment.LEFT ? Gravity.LEFT :
                         horizontalAlignment == HorizontalAlignment.CENTER
@@ -712,7 +707,7 @@ public class LikeView extends FrameLayout {
 
         // Now position the auxiliary view properly
         LinearLayout.LayoutParams auxViewLayoutParams =
-                (LinearLayout.LayoutParams) auxView.getLayoutParams();
+                (LinearLayout.LayoutParams)auxView.getLayoutParams();
         auxViewLayoutParams.gravity = viewGravity;
 
         containerView.setOrientation(
@@ -775,7 +770,6 @@ public class LikeView extends FrameLayout {
     public interface OnErrorListener {
         /**
          * Called when the share action encounters an error.
-         *
          * @param error The error that occurred
          */
         public void onError(FacebookException error);

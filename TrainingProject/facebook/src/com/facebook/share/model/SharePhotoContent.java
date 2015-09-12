@@ -1,15 +1,15 @@
 /**
  * Copyright (c) 2014-present, Facebook, Inc. All rights reserved.
- * <p/>
+ *
  * You are hereby granted a non-exclusive, worldwide, royalty-free license to use,
  * copy, modify, and distribute this software in source code or binary form for use
  * in connection with the web services and APIs provided by Facebook.
- * <p/>
+ *
  * As with any software that integrates with the Facebook platform, your use of
  * this software is subject to the Facebook Developer Principles and Policies
  * [http://developers.facebook.com/policy/]. This copyright notice shall be
  * included in all copies or substantial portions of the software.
- * <p/>
+ *
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
  * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
  * FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
@@ -31,7 +31,7 @@ import java.util.List;
 
 /**
  * Describes photo content to be shared.
- * <p/>
+ *
  * Use {@link SharePhotoContent.Builder} to create instances
  */
 public final class SharePhotoContent
@@ -50,7 +50,6 @@ public final class SharePhotoContent
 
     /**
      * Photos to be shared.
-     *
      * @return {@link java.util.List} of {@link SharePhoto}s.
      */
     @Nullable
@@ -86,7 +85,6 @@ public final class SharePhotoContent
 
         /**
          * Adds a photo to the content.
-         *
          * @param photo {@link com.facebook.share.model.SharePhoto} to add.
          * @return The builder.
          */
@@ -99,9 +97,8 @@ public final class SharePhotoContent
 
         /**
          * Adds multiple photos to the content.
-         *
          * @param photos {@link java.util.List} of {@link com.facebook.share.model.SharePhoto}s
-         *               to add.
+         *                                      to add.
          * @return The builder.
          */
         public Builder addPhotos(@Nullable final List<SharePhoto> photos) {
@@ -137,7 +134,6 @@ public final class SharePhotoContent
 
         /**
          * Replaces the photos for the builder.
-         *
          * @param photos {@link java.util.List} of {@link com.facebook.share.model.SharePhoto}s to add.
          * @return The builder.
          */
