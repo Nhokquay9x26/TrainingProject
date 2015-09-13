@@ -2,27 +2,27 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="250dp"
-    android:background="#6dc066"
+    android:background="@color/color.dialog.alarm_top"
     android:orientation="vertical">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#9acd32"
+        android:background="@color/color.dialog.alarm_under_top"
         android:orientation="horizontal">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="#9acd32"
+            android:background="@color/color.dialog.alarm_ll"
             android:orientation="vertical">
 
             <ImageView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
+                android:layout_width="@dimen/dialog.imageview.dialog_clock"
+                android:layout_height="@dimen/dialog.imageview.dialog_clock"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="@dimen/dialog.imageview.margin_top_clock"
                 android:background="@color/color.no.color"
                 android:src="@drawable/ico_alarm_setting" />
 
@@ -32,7 +32,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginBottom="10dp"
-                android:text="09:38:20 PM" />
+                android:text="@string/dialog.textview.time_text" />
 
         </LinearLayout>
 
@@ -46,26 +46,26 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="10dp"
-                android:text="Sound" />
+                android:layout_marginLeft="@dimen/dialog.textview.margin_left"
+                android:layout_marginTop="@dimen/dialog.textview.margin_top"
+                android:text="@string/dialog.textview.text_sound" />
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="30dp"
-                android:layout_marginLeft="10dp">
+                android:layout_height="@dimen/dialog.rl.spinner"
+                android:layout_marginLeft="@dimen/dialog.rl.margin_left_spinner">
 
                 <Spinner
                     android:id="@+id/spinnerListTone"
                     android:layout_width="match_parent"
-                    android:layout_height="30dp"
+                    android:layout_height="@dimen/dialog.spinner.height"
                     android:layout_alignParentLeft="true"
-                    android:layout_marginRight="45dp" />
+                    android:layout_marginRight="@dimen/dialog.spinner.margin_right" />
 
                 <ImageView
                     android:id="@+id/btnPlayRingTone"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
+                    android:layout_width="@dimen/dialog.imagview.play_width_height"
+                    android:layout_height="@dimen/dialog.imagview.play_width_height"
                     android:layout_alignParentRight="true"
                     android:layout_marginRight="10dp"
                     android:background="@color/color.no.color"
@@ -73,18 +73,25 @@
             </RelativeLayout>
 
             <TextView
-                android:layout_marginTop="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
+                android:layout_marginLeft="@dimen/dialog.textview.margin_left"
+                android:layout_marginTop="@dimen/dialog.textview.margin_top"
                 android:text="Message" />
 
-            <EditText
+            <ScrollView
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginBottom="10dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="5dp" />
+                android:layout_height="match_parent">
+
+                <EditText
+                    android:id="@+id/edtMessage"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="@dimen/dialog.edittext.margin_bottom"
+                    android:layout_marginLeft="@dimen/dialog.edittext.margin_left"
+                    android:layout_marginTop="@dimen/dialog.edittext.margin_top"
+                    android:textSize="@dimen/dialog.edittext.text_size" />
+            </ScrollView>
         </LinearLayout>
 
 
@@ -101,6 +108,7 @@
             android:layout_weight="1">
 
             <TimePicker
+                android:id="@+id/timePicker"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" />
         </RelativeLayout>
@@ -113,10 +121,10 @@
             <ImageView
                 android:id="@+id/imgOnOffAlarm"
                 android:layout_width="match_parent"
-                android:layout_height="30dp"
+                android:layout_height="@dimen/dialog.imageview.height_on_off"
                 android:layout_centerInParent="true"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
+                android:layout_marginLeft="@dimen/dialog.imageview.dialog_margin_lr"
+                android:layout_marginRight="@dimen/dialog.imageview.dialog_margin_lr"
                 android:src="@drawable/ico_btn_alarm_off"
 
                 />

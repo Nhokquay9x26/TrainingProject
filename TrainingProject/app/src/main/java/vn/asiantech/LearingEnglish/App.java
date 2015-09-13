@@ -8,6 +8,7 @@ import android.util.DisplayMetrics;
 import com.nostra13.universalimageloader.cache.memory.impl.WeakMemoryCache;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
+import com.orm.SugarApp;
 
 import java.util.Locale;
 
@@ -18,7 +19,7 @@ import vn.asiantech.LearingEnglish.network.core.ApiConfig;
 /**
  * Created by tientun on 3/4/15.
  */
-public class App extends Application {
+public class App extends SugarApp {
     private static App instance = null;
 
 

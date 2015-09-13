@@ -47,4 +47,6 @@
     <string name="ratings.textview.tvName_User">Maniter Jack</string>
     <string name="ratings.textview.tvPoint">100</string>
     <string name="header.home.questionData">Questions</string>
+    <string name="dialog.textview.time_text">09:38:20 PM</string>
+    <string name="dialog.textview.text_sound">Sound</string>
 </resources>

@@ -155,6 +155,21 @@
     <dimen name="header.textsite">20sp</dimen>
     <dimen name="questionData.rl.height">60dp</dimen>
     <dimen name="questionData.textview.size">15sp</dimen>
+    <dimen name="dialog.imageview.dialog_clock">100dp</dimen>
+    <dimen name="dialog.imageview.margin_top_clock">10dp</dimen>
+    <dimen name="dialog.textview.margin_left">10dp</dimen>
+    <dimen name="dialog.textview.margin_top">10dp</dimen>
+    <dimen name="dialog.rl.spinner">30dp</dimen>
+    <dimen name="dialog.rl.margin_left_spinner">10dp</dimen>
+    <dimen name="dialog.spinner.height">30dp</dimen>
+    <dimen name="dialog.spinner.margin_right">45dp</dimen>
+    <dimen name="dialog.imagview.play_width_height">30dp</dimen>
+    <dimen name="dialog.edittext.margin_left">10dp</dimen>
+    <dimen name="dialog.edittext.margin_top">5dp</dimen>
+    <dimen name="dialog.edittext.margin_bottom">10dp</dimen>
+    <dimen name="dialog.edittext.text_size">14sp</dimen>
+    <dimen name="dialog.imageview.height_on_off">30dp</dimen>
+    <dimen name="dialog.imageview.dialog_margin_lr">20dp</dimen>
 
 
 </resources>

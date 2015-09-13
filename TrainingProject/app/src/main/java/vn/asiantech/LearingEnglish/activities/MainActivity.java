@@ -1,7 +1,10 @@
 package vn.asiantech.LearingEnglish.activities;
 
 import android.annotation.TargetApi;
+import android.content.ComponentName;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Handler;
 import android.support.v4.app.Fragment;
@@ -24,7 +27,9 @@ import vn.asiantech.LearingEnglish.fragments.FavoriteFragment_;
 import vn.asiantech.LearingEnglish.fragments.QuestionFragment_;
 import vn.asiantech.LearingEnglish.fragments.SettingFragment_;
 import vn.asiantech.LearingEnglish.fragments.TopFragment_;
+import vn.asiantech.LearingEnglish.models.AlarmReceiver;
 import vn.asiantech.LearingEnglish.models.ApplicationData;
+import vn.asiantech.LearingEnglish.models.FunctionModel;
 import vn.asiantech.LearingEnglish.models.Ranking;
 import vn.asiantech.LearingEnglish.utils.TabBar;
 
@@ -35,7 +40,8 @@ import vn.asiantech.LearingEnglish.utils.TabBar;
 @SuppressWarnings("ALL")
 @EActivity(R.layout.activity_main)
 public class MainActivity extends FragmentActivity {
-
+    @Getter
+    private ArrayList<Uri> mListUriRingTones;
     @Getter
     private ArrayList<Ranking> mRankings;
 
@@ -56,7 +62,8 @@ public class MainActivity extends FragmentActivity {
 
     @AfterViews
     void afterViews() {
-
+        mListUriRingTones = new ArrayList<>();
+        mListUriRingTones = FunctionModel.getRingtones(this);
         getRankUser();
         mAdapter = new ViewPagerAdapter(getSupportFragmentManager());
         ViewPagerAdapter mAdapter = new ViewPagerAdapter(getSupportFragmentManager());

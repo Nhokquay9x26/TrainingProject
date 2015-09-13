@@ -30,6 +30,8 @@ public class LoginActivity extends BaseActionBarActivity{
     void btnSignIn(){
         String username = "admin";
         String password = "admin";
+        edtUsername.setText("admin");
+        edtPassword.setText("admin");
         if (edtUsername.getText().toString().equals(username)  && edtPassword.getText().toString().equals(password)){
             Toast toast = Toast.makeText(this, "Successful ...", Toast.LENGTH_SHORT);
             toast.show();

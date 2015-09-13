@@ -1,5 +1,9 @@
 package vn.asiantech.LearingEnglish.models;
 
+import android.content.Context;
+import android.database.Cursor;
+import android.media.RingtoneManager;
+import android.net.Uri;
 import android.text.Spannable;
 import android.text.SpannableString;
 import android.text.style.ForegroundColorSpan;
@@ -80,5 +84,20 @@ public class FunctionModel {
             return (min + ":" + sec);
         }
     }
-
+    public static ArrayList<Uri> getRingtones(Context context) {
+        RingtoneManager ringtoneMgr = new RingtoneManager(context);
+        ringtoneMgr.setType(RingtoneManager.TYPE_ALARM);
+        Cursor alarmsCursor = ringtoneMgr.getCursor();
+        int alarmsCount = alarmsCursor.getCount();
+        if (alarmsCount == 0 && !alarmsCursor.moveToFirst()) {
+            return null;
+        }
+        ArrayList<Uri> alarms = new ArrayList<>();
+        while (!alarmsCursor.isAfterLast() && alarmsCursor.moveToNext()) {
+            int currentPosition = alarmsCursor.getPosition();
+            alarms.add(ringtoneMgr.getRingtoneUri(currentPosition));
+        }
+        alarmsCursor.close();
+        return alarms;
+    }
 }

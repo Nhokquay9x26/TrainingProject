@@ -1,33 +1,41 @@
 package vn.asiantech.LearingEnglish.fragments;
 
 import android.annotation.SuppressLint;
+import android.app.AlarmManager;
 import android.app.Dialog;
-import android.database.Cursor;
+import android.app.PendingIntent;
+import android.content.Context;
+import android.content.Intent;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.media.Ringtone;
 import android.media.RingtoneManager;
 import android.net.Uri;
 import android.os.CountDownTimer;
+import android.os.SystemClock;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.TimePicker;
 import android.widget.Toast;
 
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.Click;
 import org.androidannotations.annotations.EFragment;
-import org.androidannotations.annotations.ViewById;
 
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Calendar;
 
 import vn.asiantech.LearingEnglish.R;
+import vn.asiantech.LearingEnglish.activities.MainActivity_;
+import vn.asiantech.LearingEnglish.models.AlarmDB;
+import vn.asiantech.LearingEnglish.models.AlarmReceiver;
 
 
 /**
@@ -37,12 +45,15 @@ import vn.asiantech.LearingEnglish.R;
 
 @EFragment(R.layout.fragment_setting)
 public class SettingFragment extends BaseFragment {
-    private static boolean mIsStatusAlarm;
     private CountDownTimer mNewtimer;
     private ArrayList<Uri> mListUriRingTones;
     private int mPositionRingToneSelection;
-
-
+    private PendingIntent mPendingIntent;
+    private TimePicker mTimePicker;
+    private EditText mEdtMessage;
+    AlarmManager mAlarmManager;
+    String[] listRingTones;//= new String[mListUriRingTones.size()];
+    private Dialog mDialog;
 
     @Click(R.id.imgSettingProfile)
     void imgSettingProfile() {
@@ -68,56 +79,48 @@ public class SettingFragment extends BaseFragment {
         Toast.makeText(getActivity(), "Click logout setting", Toast.LENGTH_SHORT).show();
         showDialogAlarm();
     }
+
     @AfterViews
-    void afterView(){
+    void afterView() {
 
-    }
-
-    private void playRingTone(){
-        Log.d("Tag","CLick Play");
-        MediaPlayer mPlayer = new MediaPlayer();
-        mPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC);
-
-        try {
-            mPlayer.setDataSource(getActivity(), mListUriRingTones.get(mPositionRingToneSelection));
-        } catch (IllegalArgumentException e) {
-            Toast.makeText(getActivity(), "You might not set the URI correctly!", Toast.LENGTH_LONG).show();
-        } catch (SecurityException e) {
-            Toast.makeText(getActivity(), "You might not set the URI correctly!", Toast.LENGTH_LONG).show();
-        } catch (IllegalStateException e) {
-            Toast.makeText(getActivity(), "You might not set the URI correctly!", Toast.LENGTH_LONG).show();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-        try {
-            mPlayer.prepare();
-        } catch (IllegalStateException e) {
-            Toast.makeText(getActivity(), "You might not set the URI correctly!", Toast.LENGTH_LONG).show();
-        } catch (IOException e) {
-            Toast.makeText(getActivity(), "You might not set the URI correctly!", Toast.LENGTH_LONG).show();
-        }
-
-        mPlayer.start();
+        Intent lauchIntent = new Intent(getActivity(), AlarmReceiver.class);
+        mPendingIntent = PendingIntent.getBroadcast(getActivity(), 0, lauchIntent, 0);
+        mDialog = new Dialog(getActivity());
+        mDialog.setContentView(R.layout.dialog_alarm);
+        mDialog.setTitle("Alarm Setting");
     }
 
 
-    private ArrayList<Uri> getRingtones() {
-        RingtoneManager ringtoneMgr = new RingtoneManager(getActivity());
-        ringtoneMgr.setType(RingtoneManager.TYPE_ALARM);
-        Cursor alarmsCursor = ringtoneMgr.getCursor();
-        int alarmsCount = alarmsCursor.getCount();
-        if (alarmsCount == 0 && !alarmsCursor.moveToFirst()) {
-            return null;
+    private void playRingTone() {
+        if (mListUriRingTones.size() > 0) {
+            Log.d("Tag", "CLick Play");
+            MediaPlayer mPlayer = new MediaPlayer();
+            mPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC);
+
+            try {
+                mPlayer.setDataSource(getActivity(), mListUriRingTones.get(mPositionRingToneSelection));
+            } catch (IllegalArgumentException e) {
+                Toast.makeText(getActivity(), "You might not set the URI correctly!", Toast.LENGTH_LONG).show();
+            } catch (SecurityException e) {
+                Toast.makeText(getActivity(), "You might not set the URI correctly!", Toast.LENGTH_LONG).show();
+            } catch (IllegalStateException e) {
+                Toast.makeText(getActivity(), "You might not set the URI correctly!", Toast.LENGTH_LONG).show();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+            try {
+                mPlayer.prepare();
+            } catch (IllegalStateException e) {
+                Toast.makeText(getActivity(), "You might not set the URI correctly!", Toast.LENGTH_LONG).show();
+            } catch (IOException e) {
+                Toast.makeText(getActivity(), "You might not set the URI correctly!", Toast.LENGTH_LONG).show();
+            }
+
+            mPlayer.start();
         }
-        ArrayList<Uri> alarms = new ArrayList<>();
-        while (!alarmsCursor.isAfterLast() && alarmsCursor.moveToNext()) {
-            int currentPosition = alarmsCursor.getPosition();
-            alarms.add(ringtoneMgr.getRingtoneUri(currentPosition));
-        }
-        alarmsCursor.close();
-        return alarms;
     }
+
 
     private String[] getTitleRingTone(ArrayList<Uri> listTones) {
         String[] listRingTones = new String[listTones.size()];
@@ -139,16 +142,18 @@ public class SettingFragment extends BaseFragment {
 
     private void showDialogAlarm() {
         mListUriRingTones = new ArrayList<>();
-        mListUriRingTones = getRingtones();
-        String[] listRingTones ;//= new String[mListUriRingTones.size()];
+        if (getActivity() instanceof MainActivity_) {
+            mListUriRingTones = ((MainActivity_) getActivity()).getMListUriRingTones();
+        }
         listRingTones = getTitleRingTone(mListUriRingTones);
-        final Dialog dialog = new Dialog(getActivity());
-        dialog.setContentView(R.layout.dialog_alarm);
-        dialog.setTitle("Alarm Setting");
-        final Spinner spinnerListTone = (Spinner) dialog.findViewById(R.id.spinnerListTone);
+
+        final Spinner spinnerListTone = (Spinner) mDialog.findViewById(R.id.spinnerListTone);
         showListOnSpinner(spinnerListTone, listRingTones);
-        final TextView tvTimeCurrent = (TextView) dialog.findViewById(R.id.tvTimeCurrent);
-        final ImageView mBtnPlayRingTone = (ImageView)dialog.findViewById(R.id.btnPlayRingTone);
+        mEdtMessage = (EditText) mDialog.findViewById(R.id.edtMessage);
+        mTimePicker = (TimePicker) mDialog.findViewById(R.id.timePicker);
+        mTimePicker.setIs24HourView(true);
+        final TextView tvTimeCurrent = (TextView) mDialog.findViewById(R.id.tvTimeCurrent);
+        final ImageView mBtnPlayRingTone = (ImageView) mDialog.findViewById(R.id.btnPlayRingTone);
         mBtnPlayRingTone.setOnClickListener(new OnClickImgRingTone());
         mNewtimer = new CountDownTimer(1000000000, 1000) {
 
@@ -161,16 +166,23 @@ public class SettingFragment extends BaseFragment {
             }
         };
         mNewtimer.start();
-        final ImageView imgOnOffAlarm = (ImageView) dialog.findViewById(R.id.imgOnOffAlarm);
-        if (!mIsStatusAlarm) {
-            imgOnOffAlarm.setImageResource(R.drawable.ico_btn_alarm_off);
+        final ImageView imgOnOffAlarm = (ImageView) mDialog.findViewById(R.id.imgOnOffAlarm);
+        if (AlarmDB.first(AlarmDB.class)!=null) {
+            if (AlarmDB.first(AlarmDB.class).getStatus()==0){
+                imgOnOffAlarm.setImageResource(R.drawable.ico_btn_alarm_off);
+            } else {
+                imgOnOffAlarm.setImageResource(R.drawable.ico_btn_alarm_on);
+            }
         } else {
-            imgOnOffAlarm.setImageResource(R.drawable.ico_btn_alarm_on);
+            imgOnOffAlarm.setImageResource(R.drawable.ico_btn_alarm_off);
+
         }
         imgOnOffAlarm.setOnClickListener(new ClickImageViewOnOff());
-        dialog.show();
+        if (!mDialog.isShowing()) mDialog.show();
+
     }
-    private void showTimeCurrentToTextView(TextView textView){
+
+    private void showTimeCurrentToTextView(TextView textView) {
         Calendar c = Calendar.getInstance();
         int AM_orPM = c.get(Calendar.AM_PM);
         int hour = c.get(Calendar.HOUR);
@@ -198,23 +210,67 @@ public class SettingFragment extends BaseFragment {
             textView.setText("PM " + hourStr + ":" + minuteStr + ":" + secondStr);
         }
     }
+
     private class ClickImageViewOnOff implements View.OnClickListener {
 
         @Override
         public void onClick(View v) {
             ImageView imgOnOffAlarm = (ImageView) v.findViewById(R.id.imgOnOffAlarm);
-            if (!mIsStatusAlarm) {
-                imgOnOffAlarm.setImageResource(R.drawable.ico_btn_alarm_on);
-                mIsStatusAlarm = true;
+            int numberTimePicker = mTimePicker.getCurrentHour() * 60 + mTimePicker.getCurrentMinute();
+            Calendar c = Calendar.getInstance();
+            int AM_orPM = c.get(Calendar.AM_PM);
+            int hourRealTime = c.get(Calendar.HOUR);
+            int minuteRealTime = c.get(Calendar.MINUTE);
+            int secondRealTime = c.get(Calendar.SECOND);
+            if (AM_orPM != 0) {
+                hourRealTime += 12;
+            }
+            int numberTimeCurrent = hourRealTime * 60 + minuteRealTime;
+            long interval;
+            int argDetect = numberTimePicker - numberTimeCurrent;
+            if (argDetect > 0) {
+                interval = argDetect * 1000 * 60 - secondRealTime * 1000;
             } else {
-                imgOnOffAlarm.setImageResource(R.drawable.ico_btn_alarm_off);
-                mIsStatusAlarm = false;
+                interval = (24 * 60 - argDetect) * 1000 * 60 - secondRealTime * 1000;
+            }
+
+
+            AlarmDB alarmDB;
+
+            mAlarmManager = (AlarmManager) getActivity().getSystemService(Context.ALARM_SERVICE);
+            if (AlarmDB.first(AlarmDB.class) != null) {
+                if (AlarmDB.first(AlarmDB.class).getStatus() == 0) {
+                    alarmDB = new AlarmDB(mTimePicker.getCurrentHour(), mTimePicker.getCurrentMinute(), mEdtMessage.getText().toString(), 1, mPositionRingToneSelection);
+                    //On Alarm
+                    AlarmDB.deleteAll(AlarmDB.class);
+                    alarmDB.setId(1l);
+                    alarmDB.save();
+                    Toast.makeText(getActivity(), "Scheduled: " + (interval/1000000)+"s", Toast.LENGTH_SHORT).show();
+                    mAlarmManager.setRepeating(AlarmManager.ELAPSED_REALTIME, SystemClock.elapsedRealtime() + interval, interval, mPendingIntent);
+                    imgOnOffAlarm.setImageResource(R.drawable.ico_btn_alarm_on);
+                } else {
+
+                    //Off Alarm
+                    AlarmDB.deleteAll(AlarmDB.class);
+                    Toast.makeText(getActivity(), "Canceled", Toast.LENGTH_SHORT).show();
+                    mAlarmManager.cancel(mPendingIntent);
+                    imgOnOffAlarm.setImageResource(R.drawable.ico_btn_alarm_off);
+                }
+            } else {
+                alarmDB = new AlarmDB(mTimePicker.getCurrentHour(), mTimePicker.getCurrentMinute(), mEdtMessage.getText().toString(), 1, mPositionRingToneSelection);
+                //On Alarm
+                AlarmDB.deleteAll(AlarmDB.class);
+                alarmDB.setId(1l);
+                alarmDB.save();
+                Toast.makeText(getActivity(), "Scheduled: " + interval, Toast.LENGTH_SHORT).show();
+                mAlarmManager.setRepeating(AlarmManager.ELAPSED_REALTIME, SystemClock.elapsedRealtime() + interval, interval, mPendingIntent);
+                imgOnOffAlarm.setImageResource(R.drawable.ico_btn_alarm_on);
             }
 
         }
     }
 
-    private class OnClickImgRingTone implements View.OnClickListener{
+    private class OnClickImgRingTone implements View.OnClickListener {
 
         @Override
         public void onClick(View v) {
@@ -228,8 +284,6 @@ public class SettingFragment extends BaseFragment {
                                    View arg1,
                                    int arg2,
                                    long arg3) {
-            Log.d("Pos Int",arg2+"");
-            Log.d("Pos Long",arg3+"");
             mPositionRingToneSelection = arg2;
         }
 
