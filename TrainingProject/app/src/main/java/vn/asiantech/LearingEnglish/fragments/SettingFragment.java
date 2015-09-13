@@ -70,6 +70,7 @@ public class SettingFragment extends BaseFragment {
     @Click(R.id.imgAlert)
     void alertSettingClick() {
         Toast.makeText(getActivity(), "Click alert setting", Toast.LENGTH_SHORT).show();
+        showDialogAlarm();
     }
 
     @SuppressWarnings("unused")
@@ -77,12 +78,25 @@ public class SettingFragment extends BaseFragment {
     @Click(R.id.imgLogout)
     void logOutClick() {
         Toast.makeText(getActivity(), "Click logout setting", Toast.LENGTH_SHORT).show();
-        showDialogAlarm();
+
     }
+
+
+    @SuppressLint("ShowToast")
+    @Click(R.id.imgTopSettingRight)
+    void imgTopSettingRight() {
+        Toast.makeText(getActivity(), "Click top setting right", Toast.LENGTH_SHORT).show();
+    }
+
+    @SuppressLint("ShowToast")
+    @Click(R.id.imgLogoutSetting)
+    void setLogoutSettingRight() {
+        Toast.makeText(getActivity(), "Click Logout setting", Toast.LENGTH_SHORT).show();
+    }
+
 
     @AfterViews
     void afterView() {
-
         Intent lauchIntent = new Intent(getActivity(), AlarmReceiver.class);
         mPendingIntent = PendingIntent.getBroadcast(getActivity(), 0, lauchIntent, 0);
         mDialog = new Dialog(getActivity());
@@ -90,7 +104,71 @@ public class SettingFragment extends BaseFragment {
         mDialog.setTitle("Alarm Setting");
     }
 
+    /**
+     * Show dialog Alarm
+     */
+    private void showDialogAlarm() {
+        mListUriRingTones = new ArrayList<>();
+        if (getActivity() instanceof MainActivity_) {
+            mListUriRingTones = ((MainActivity_) getActivity()).getMListUriRingTones();
+        }
+        listRingTones = getTitleRingTone(mListUriRingTones);
 
+        final Spinner spinnerListTone = (Spinner) mDialog.findViewById(R.id.spinnerListTone);
+        showListOnSpinner(spinnerListTone, listRingTones);
+        mEdtMessage = (EditText) mDialog.findViewById(R.id.edtMessage);
+        mTimePicker = (TimePicker) mDialog.findViewById(R.id.timePicker);
+        mTimePicker.setIs24HourView(true);
+        final TextView tvTimeCurrent = (TextView) mDialog.findViewById(R.id.tvTimeCurrent);
+        final ImageView mBtnPlayRingTone = (ImageView) mDialog.findViewById(R.id.btnPlayRingTone);
+        mBtnPlayRingTone.setOnClickListener(new OnClickImgRingTone());
+        mNewtimer = new CountDownTimer(1000000000, 1000) {
+
+            public void onTick(long millisUntilFinished) {
+                showTimeCurrentToTextView(tvTimeCurrent);
+            }
+
+            public void onFinish() {
+
+            }
+        };
+        mNewtimer.start();
+        final ImageView imgOnOffAlarm = (ImageView) mDialog.findViewById(R.id.imgOnOffAlarm);
+        if (AlarmDB.first(AlarmDB.class) != null) {
+            if (AlarmDB.first(AlarmDB.class).getStatus() == 0) {
+                imgOnOffAlarm.setImageResource(R.drawable.ico_btn_alarm_off);
+            } else {
+                imgOnOffAlarm.setImageResource(R.drawable.ico_btn_alarm_on);
+            }
+        } else {
+            imgOnOffAlarm.setImageResource(R.drawable.ico_btn_alarm_off);
+
+        }
+        imgOnOffAlarm.setOnClickListener(new ClickImageViewOnOff());
+        if (!mDialog.isShowing()) mDialog.show();
+
+    }
+
+    /**
+     * Get Title from Uri
+     *
+     * @param listTones
+     * @return
+     */
+
+    private String[] getTitleRingTone(ArrayList<Uri> listTones) {
+        String[] listRingTones = new String[listTones.size()];
+        for (int i = 0; i < listTones.size(); i++) {
+            Ringtone ringtone = RingtoneManager.getRingtone(getActivity(), listTones.get(i));
+            String name = ringtone.getTitle(getActivity());
+            listRingTones[i] = name;
+        }
+        return listRingTones;
+    }
+
+    /**
+     * PLay ring tone
+     */
     private void playRingTone() {
         if (mListUriRingTones.size() > 0) {
             Log.d("Tag", "CLick Play");
@@ -122,16 +200,12 @@ public class SettingFragment extends BaseFragment {
     }
 
 
-    private String[] getTitleRingTone(ArrayList<Uri> listTones) {
-        String[] listRingTones = new String[listTones.size()];
-        for (int i = 0; i < listTones.size(); i++) {
-            Ringtone ringtone = RingtoneManager.getRingtone(getActivity(), listTones.get(i));
-            String name = ringtone.getTitle(getActivity());
-            listRingTones[i] = name;
-        }
-        return listRingTones;
-    }
-
+    /**
+     * Show List Ring Tone To Spinner
+     *
+     * @param spinner
+     * @param listRingtones
+     */
     private void showListOnSpinner(Spinner spinner, String[] listRingtones) {
         ArrayAdapter<String> adapter = new ArrayAdapter<>(getActivity(), android.R.layout.simple_spinner_item, listRingtones);
         adapter.setDropDownViewResource
@@ -140,48 +214,12 @@ public class SettingFragment extends BaseFragment {
         spinner.setOnItemSelectedListener(new OnClickSpinner());
     }
 
-    private void showDialogAlarm() {
-        mListUriRingTones = new ArrayList<>();
-        if (getActivity() instanceof MainActivity_) {
-            mListUriRingTones = ((MainActivity_) getActivity()).getMListUriRingTones();
-        }
-        listRingTones = getTitleRingTone(mListUriRingTones);
 
-        final Spinner spinnerListTone = (Spinner) mDialog.findViewById(R.id.spinnerListTone);
-        showListOnSpinner(spinnerListTone, listRingTones);
-        mEdtMessage = (EditText) mDialog.findViewById(R.id.edtMessage);
-        mTimePicker = (TimePicker) mDialog.findViewById(R.id.timePicker);
-        mTimePicker.setIs24HourView(true);
-        final TextView tvTimeCurrent = (TextView) mDialog.findViewById(R.id.tvTimeCurrent);
-        final ImageView mBtnPlayRingTone = (ImageView) mDialog.findViewById(R.id.btnPlayRingTone);
-        mBtnPlayRingTone.setOnClickListener(new OnClickImgRingTone());
-        mNewtimer = new CountDownTimer(1000000000, 1000) {
-
-            public void onTick(long millisUntilFinished) {
-                showTimeCurrentToTextView(tvTimeCurrent);
-            }
-
-            public void onFinish() {
-
-            }
-        };
-        mNewtimer.start();
-        final ImageView imgOnOffAlarm = (ImageView) mDialog.findViewById(R.id.imgOnOffAlarm);
-        if (AlarmDB.first(AlarmDB.class)!=null) {
-            if (AlarmDB.first(AlarmDB.class).getStatus()==0){
-                imgOnOffAlarm.setImageResource(R.drawable.ico_btn_alarm_off);
-            } else {
-                imgOnOffAlarm.setImageResource(R.drawable.ico_btn_alarm_on);
-            }
-        } else {
-            imgOnOffAlarm.setImageResource(R.drawable.ico_btn_alarm_off);
-
-        }
-        imgOnOffAlarm.setOnClickListener(new ClickImageViewOnOff());
-        if (!mDialog.isShowing()) mDialog.show();
-
-    }
-
+    /**
+     * Show Time curent to textview
+     *
+     * @param textView
+     */
     private void showTimeCurrentToTextView(TextView textView) {
         Calendar c = Calendar.getInstance();
         int AM_orPM = c.get(Calendar.AM_PM);
@@ -211,6 +249,10 @@ public class SettingFragment extends BaseFragment {
         }
     }
 
+
+    /***
+     * Event when click Image On Off Alarm
+     */
     private class ClickImageViewOnOff implements View.OnClickListener {
 
         @Override
@@ -245,7 +287,7 @@ public class SettingFragment extends BaseFragment {
                     AlarmDB.deleteAll(AlarmDB.class);
                     alarmDB.setId(1l);
                     alarmDB.save();
-                    Toast.makeText(getActivity(), "Scheduled: " + (interval/1000000)+"s", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getActivity(), "Scheduled: " + (interval / 1000000) + "s", Toast.LENGTH_SHORT).show();
                     mAlarmManager.setRepeating(AlarmManager.ELAPSED_REALTIME, SystemClock.elapsedRealtime() + interval, interval, mPendingIntent);
                     imgOnOffAlarm.setImageResource(R.drawable.ico_btn_alarm_on);
                 } else {
@@ -270,6 +312,9 @@ public class SettingFragment extends BaseFragment {
         }
     }
 
+    /**
+     * Event When Click Button Play Audio
+     */
     private class OnClickImgRingTone implements View.OnClickListener {
 
         @Override
@@ -278,6 +323,9 @@ public class SettingFragment extends BaseFragment {
         }
     }
 
+    /**
+     * Get position ring tone from spinner
+     */
     private class OnClickSpinner implements
             AdapterView.OnItemSelectedListener {
         public void onItemSelected(AdapterView<?> arg0,
@@ -290,18 +338,6 @@ public class SettingFragment extends BaseFragment {
         public void onNothingSelected(AdapterView<?> arg0) {
 
         }
-    }
-
-    @SuppressLint("ShowToast")
-    @Click(R.id.imgTopSettingRight)
-    void imgTopSettingRight() {
-        Toast.makeText(getActivity(), "Click top setting right", Toast.LENGTH_SHORT).show();
-    }
-
-    @SuppressLint("ShowToast")
-    @Click(R.id.imgLogoutSetting)
-    void setLogoutSettingRight() {
-        Toast.makeText(getActivity(), "Click Logout setting", Toast.LENGTH_SHORT).show();
     }
 
 

@@ -87,7 +87,7 @@ public class AlarmReceiver extends BroadcastReceiver {
                         }
                 )
                 .create();
-        mCountDownTimer = new CountDownTimer(20000, 1000) {
+        mCountDownTimer = new CountDownTimer(10000, 1000) {
 
             @Override
             public void onTick(long millisUntilFinished) {
