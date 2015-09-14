@@ -11,15 +11,15 @@
         android:layout_height="@dimen/rating.rl.height"
         android:background="@color/rating.rl.color"
         android:gravity="center"
-        android:orientation="vertical"
-        >
+        android:orientation="vertical">
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:text="@string/setting.title.text"
             android:textColor="@color/rating.rl.title.color"
             android:textSize="@dimen/rating.rl.title.size"
             android:textStyle="bold"
-            android:text="@string/setting.title.text"
             tools:ignore="HardcodedText" />
 
     </LinearLayout>
@@ -162,10 +162,47 @@
             android:background="@color/setting.line2.color" />
 
         <RelativeLayout
-            android:id="@+id/rlLogout"
+            android:id="@+id/rlChangePass"
             android:layout_width="match_parent"
             android:layout_height="@dimen/setting.rl.top.height"
             android:layout_below="@+id/line2"
+            android:gravity="center"
+            tools:ignore="RtlHardcoded">
+
+            <ImageView
+                android:id="@+id/imgChangePass"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/setting.item.profile.height"
+                android:paddingLeft="@dimen/setting.top.setting.padding"
+                android:src="@drawable/ic_logout_setting"
+                tools:ignore="ContentDescription,RtlSymmetry" />
+
+            <TextView
+                android:id="@+id/tvChangePass"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/setting.item.profile.height"
+                android:layout_toRightOf="@id/imgChangePass"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/setting.rllayout.nameprofile.paddingleft"
+                android:text="@string/fragment.setting.text.change.pass"
+                tools:ignore="HardcodedText,RtlHardcoded,RtlSymmetry" />
+
+            <ImageView
+                android:id="@+id/imgChangePassSetting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:paddingRight="@dimen/setting.top.setting.padding"
+                android:src="@drawable/ic_setting_right"
+                tools:ignore="ContentDescription,RtlSymmetry" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlLogout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/setting.rl.top.height"
+            android:layout_below="@+id/rlChangePass"
             android:gravity="center"
             tools:ignore="RtlHardcoded">
 

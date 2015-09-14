@@ -74,4 +74,8 @@
     <string name="alert_get_new_pass_fail">Get new password fail</string>
     <string name="error">Error</string>
     <string name="please_wait">Please wait...</string>
+    <string name="toast.change.pass.text.confirm.not.match">Confirm password does not match</string>
+    <string name="toast.change.pass.text.success.text">Change password successful</string>
+    <string name="toast.change.pass.text.faild">Change password Faild</string>
+    <string name="fragment.setting.text.change.pass">Change password</string>
 </resources>
